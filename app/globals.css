@@ -1571,3 +1571,71 @@ input:focus {
 .pregunta-faq p {
   margin: 10px 0 0;
 }
+
+/* Cuestionario paso a paso */
+.paso-pregunta {
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.paso-opciones {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.paso-opcion {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  font: inherit;
+  font-size: 1.02rem;
+  width: 100%;
+  background: var(--blanco);
+  color: var(--tinta);
+  border: 2px solid var(--linea);
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  min-height: 52px;
+}
+
+.paso-opcion:hover {
+  border-color: var(--tinta);
+}
+
+.paso-opcion.elegida,
+.paso-opcion:has(input:checked) {
+  border-color: var(--tinta);
+  background: var(--papel);
+}
+
+.paso-opcion input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--tinta);
+  flex: none;
+}
+
+.paso-opcion small {
+  display: block;
+  color: var(--tinta-suave);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .paso {
+    animation: aparece 240ms ease-out;
+  }
+}
+
+.pie-redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 28px;
+}

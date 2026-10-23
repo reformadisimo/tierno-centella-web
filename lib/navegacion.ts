@@ -41,6 +41,9 @@ export const MENU: Grupo[] = [
     enlaces: [
       { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },
       { href: '/herramientas/mapa-de-pruebas', texto: 'Mapa de pruebas del acoso' },
+      { href: '/herramientas/test-nulidad', texto: '¿Mi despido puede ser nulo?' },
+      { href: '/herramientas/test-extincion', texto: '¿Puedo irme con indemnización?' },
+      { href: '/herramientas/test-baja-laboral', texto: '¿Mi baja es accidente de trabajo?' },
       { href: '/calculadora-indemnizacion', texto: 'Calculadora de indemnización' },
       { href: '/herramientas/revisa-tu-carta-de-despido', texto: 'Revisa tu carta de despido' },
       { href: '/herramientas/plazos', texto: 'Plazos para reclamar' },

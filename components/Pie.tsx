@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { DESPACHO } from '@/lib/despacho';
+import { REDES } from '@/lib/seo';
 
 export default function Pie() {
   return (
@@ -36,7 +37,16 @@ export default function Pie() {
                 <Link href="/calculadora-indemnizacion">Calculadora de indemnización</Link>
               </li>
               <li>
-                <Link href="/#plazo">Plazo para reclamar un despido</Link>
+                <Link href="/herramientas/test-acoso">Test de acoso laboral</Link>
+              </li>
+              <li>
+                <Link href="/herramientas">Todas las herramientas</Link>
+              </li>
+              <li>
+                <Link href="/glosario">Glosario laboral</Link>
+              </li>
+              <li>
+                <Link href="/preguntas-frecuentes">Preguntas frecuentes</Link>
               </li>
               <li>
                 <Link href="/contacto">Pedir cita</Link>
@@ -44,6 +54,13 @@ export default function Pie() {
             </ul>
           </div>
         </div>
+        <nav className="pie-redes" aria-label="Redes sociales">
+          <a href={REDES.instagram} rel="me noopener" target="_blank">Instagram</a>
+          <a href={REDES.youtube} rel="me noopener" target="_blank">YouTube</a>
+          <a href={REDES.facebook} rel="me noopener" target="_blank">Facebook</a>
+          <a href={REDES.x} rel="me noopener" target="_blank">X</a>
+          <a href={REDES.linkedin} rel="me noopener" target="_blank">LinkedIn de Jesús Tierno</a>
+        </nav>
         <p className="pie-legal">
           La información de esta web es orientativa y no sustituye el consejo de un abogado sobre tu caso concreto.
         </p>
