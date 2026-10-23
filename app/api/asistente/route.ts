@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { promptAsistente, conocimientoWeb } from '@/lib/prompt-asistente';
+import { guardarConversacion } from '@/lib/conversaciones';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -28,8 +29,12 @@ export async function POST(req: Request) {
 
   let mensajes: Mensaje[] = [];
   let ingles = false;
+  let conversacion: unknown = null;
+  let pagina = '';
   try {
     const cuerpo = await req.json();
+    conversacion = cuerpo?.conversacion;
+    pagina = typeof cuerpo?.pagina === 'string' ? cuerpo.pagina : '';
     mensajes = Array.isArray(cuerpo?.mensajes) ? cuerpo.mensajes : [];
     ingles = cuerpo?.idioma === 'en';
   } catch {
@@ -50,6 +55,7 @@ export async function POST(req: Request) {
   const codificador = new TextEncoder();
   const flujo = new ReadableStream({
     async start(controlador) {
+      let respuesta = '';
       // Modelo principal y otro de reserva por si el principal no está disponible para esta clave.
       const modelos = [process.env.ASISTENTE_MODELO || 'claude-sonnet-5-5', 'claude-sonnet-4-5'];
       try {
@@ -68,6 +74,7 @@ export async function POST(req: Request) {
             for await (const evento of stream) {
               if (evento.type === 'content_block_delta' && evento.delta.type === 'text_delta') {
                 enviado = true;
+                respuesta += evento.delta.text;
                 controlador.enqueue(codificador.encode(evento.delta.text));
               }
             }
@@ -84,6 +91,9 @@ export async function POST(req: Request) {
           codificador.encode('\n\nAhora mismo no puedo responder. Llámanos al 913 24 97 97 o escríbenos por WhatsApp al 608 13 93 37.'),
         );
       } finally {
+        // Se guarda la conversación completa (con esta respuesta) en la base de datos del despacho, si está configurada.
+        // Antes de cerrar: en el servidor, lo que va después de cerrar la respuesta puede no llegar a ejecutarse.
+        if (respuesta) await guardarConversacion({ id: conversacion, idioma: ingles ? 'en' : 'es', pagina, mensajes: [...mensajes, { role: 'assistant', content: respuesta }] });
         controlador.close();
       }
     },

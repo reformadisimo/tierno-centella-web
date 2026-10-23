@@ -27,6 +27,11 @@ export default function Pagina() {
             Lo que escribes en el asistente se envía a un proveedor de inteligencia artificial para generar la respuesta. No escribas datos que no
             sean necesarios para tu consulta.
           </p>
+          <p>
+            El despacho guarda las conversaciones del asistente en su base de datos, alojada en la Unión Europea, para poder atenderte si después
+            nos llamas o nos pides que te llamemos, y para mejorar las respuestas. Solo las ve el despacho. Si dejas tu nombre y tu teléfono en el
+            chat, los usamos únicamente para llamarte. Puedes pedir que borremos tu conversación escribiendo a {DESPACHO.email}.
+          </p>
           <h2>Tus derechos</h2>
           <p>
             Puedes pedir acceso, rectificación o supresión de tus datos escribiendo a {DESPACHO.email}. También puedes reclamar ante la Agencia

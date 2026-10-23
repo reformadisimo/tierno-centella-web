@@ -1,4 +1,5 @@
 import { entrarEnJourney } from '@/lib/journey';
+import { marcarLlamada } from '@/lib/conversaciones';
 
 // Envía la consulta del formulario por correo con Resend. Sin claves configuradas,
 // responde 503 y el formulario ofrece WhatsApp: nunca se pierde un contacto en silencio.
@@ -55,6 +56,8 @@ export async function POST(req: Request) {
     console.error('Error de Resend:', r.status, await r.text().catch(() => ''));
     return Response.json({ error: 'No se pudo enviar ahora mismo.' }, { status: 502 });
   }
+  // Si viene del chat, la conversación guardada queda marcada como "pidió llamada", con su nombre y teléfono.
+  if (datos.conversacion) await marcarLlamada({ id: datos.conversacion, nombre, telefono, origen });
   // Si dejó su correo y aceptó el seguimiento, entra en el journey de su tema.
   if (email && datos.seguimiento) await entrarEnJourney('consulta.web', { email, nombre, tema, origen });
   return Response.json({ ok: true });

@@ -33,7 +33,7 @@ const TEXTOS = {
     placeholder: 'Escribe aquí tu pregunta',
     enviar: 'Enviar',
     tuMensaje: 'Tu mensaje',
-    aviso: 'Es una inteligencia artificial y puede equivocarse; no sustituye a un abogado. No escribas datos personales que no sean necesarios.',
+    aviso: 'Es una inteligencia artificial y puede equivocarse; no sustituye a un abogado. Guardamos la conversación para atenderte mejor; no escribas datos personales que no sean necesarios.',
     errorBase: 'No he podido responder.',
     errorContacto: (t: string, w: string) => `Puedes llamarnos al ${t} o escribir por WhatsApp al ${w}.`,
     waBase: 'Hola, vengo del chat de la web y quiero consultar mi caso.',
@@ -72,7 +72,7 @@ const TEXTOS = {
     placeholder: 'Type your question here',
     enviar: 'Send',
     tuMensaje: 'Your message',
-    aviso: 'This is an AI and it can make mistakes; it does not replace a lawyer. Please do not share personal data you do not need to.',
+    aviso: 'This is an AI and it can make mistakes; it does not replace a lawyer. We keep the conversation to help you better; please do not share personal data you do not need to.',
     errorBase: "I couldn't answer.",
     errorContacto: (t: string, w: string) => `You can call us on +34 ${t} or message us on WhatsApp at +34 ${w}.`,
     waBase: 'Hello, I come from the website chat and I would like to ask about my case.',
@@ -155,7 +155,13 @@ function resumenConversacion(mensajes: Mensaje[]) {
   return texto;
 }
 
-type Guardado = { mensajes: Mensaje[]; abierto: boolean };
+type Guardado = { mensajes: Mensaje[]; abierto: boolean; id?: string };
+
+const nuevoId = () => {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) return crypto.randomUUID();
+  const h = () => Math.floor(Math.random() * 0x10000).toString(16).padStart(4, '0');
+  return `${h()}${h()}-${h()}-4${h().slice(1)}-8${h().slice(1)}-${h()}${h()}${h()}`;
+};
 
 function leerGuardado(): Guardado | null {
   try {
@@ -175,6 +181,7 @@ export default function Asistente() {
   const [texto, setTexto] = useState('');
   const [escribiendo, setEscribiendo] = useState(false);
   const [cargado, setCargado] = useState(false);
+  const [conversacion, setConversacion] = useState('');
   const [llamada, setLlamada] = useState(false);
   const [nombre, setNombre] = useState('');
   const [telefono, setTelefono] = useState('');
@@ -187,6 +194,7 @@ export default function Asistente() {
   // Recupera la conversación de esta visita.
   useEffect(() => {
     const g = leerGuardado();
+    setConversacion(g?.id || nuevoId());
     if (g?.mensajes?.length) {
       setMensajes(g.mensajes.filter((m) => m.content));
       if (g.abierto) setAbierto(true);
@@ -197,9 +205,9 @@ export default function Asistente() {
   useEffect(() => {
     if (!cargado || escribiendo) return;
     try {
-      sessionStorage.setItem(CLAVE, JSON.stringify({ mensajes, abierto }));
+      sessionStorage.setItem(CLAVE, JSON.stringify({ mensajes, abierto, id: conversacion }));
     } catch {}
-  }, [mensajes, abierto, cargado, escribiendo]);
+  }, [mensajes, abierto, cargado, escribiendo, conversacion]);
 
   useEffect(() => {
     const abrir = () => setAbierto(true);
@@ -228,7 +236,7 @@ export default function Asistente() {
       const r = await fetch('/api/asistente', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mensajes: historial, idioma }),
+        body: JSON.stringify({ mensajes: historial, idioma, conversacion, pagina: ruta }),
       });
       if (!r.ok || !r.body) {
         const datos = await r.json().catch(() => ({}));
@@ -270,6 +278,7 @@ export default function Asistente() {
           tema: idioma === 'en' ? 'Chat (en inglés)' : 'Chat',
           mensaje: `Conversación en el chat de la web:\n\n${resumenConversacion(mensajes)}`,
           origen: `chat en ${ruta}`,
+          conversacion,
         }),
       });
       if (!r.ok) throw new Error();
@@ -407,6 +416,7 @@ export default function Asistente() {
                 type="button"
                 onClick={() => {
                   setMensajes([]);
+                  setConversacion(nuevoId());
                   setLlamada(false);
                   setEstadoLlamada('');
                 }}
