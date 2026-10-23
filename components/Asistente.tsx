@@ -50,7 +50,8 @@ export default function Asistente() {
   }, []);
 
   useEffect(() => {
-    lista.current?.scrollTo({ top: lista.current.scrollHeight });
+    // Al abrir sin conversación, se ve el principio (la foto del equipo); después, siempre lo último.
+    if (mensajes.length) lista.current?.scrollTo({ top: lista.current.scrollHeight });
   }, [mensajes, abierto]);
 
   useEffect(() => {
@@ -126,15 +127,26 @@ export default function Asistente() {
       {abierto && (
         <div className="asistente-panel" role="dialog" aria-label="Asistente del despacho">
           <div className="asistente-cabeza">
+            <span className="asistente-cabeza-foto">
+              <img src="/img/jesus-avatar.webp" alt="" width={44} height={44} />
+              <span className="asistente-punto" aria-hidden="true" />
+            </span>
             <div>
-              <strong>Asistente del despacho</strong>
-              <small>Inteligencia artificial. Puede equivocarse. Orientación general, no asesoramiento.</small>
+              <strong>Asistente de Tierno Centella</strong>
+              <small>Inteligencia artificial · orientación general, no asesoramiento</small>
             </div>
             <button type="button" onClick={() => setAbierto(false)}>
               Cerrar
             </button>
           </div>
           <div className="asistente-mensajes" ref={lista} aria-live="polite">
+            <figure className="asistente-equipo">
+              <img src="/img/equipo-640.webp" alt="Jesús Tierno Centella con el equipo del despacho" width={640} height={360} />
+              <figcaption>
+                <strong>Jesús Tierno y su equipo</strong>
+                <span>Abogados laboralistas en Jorge Juan, 78 (Madrid). Si tu caso lo necesita, te atiende una persona del despacho.</span>
+              </figcaption>
+            </figure>
             <div className="burbuja burbuja-asistente">
               <p>{BIENVENIDA}</p>
             </div>
@@ -201,7 +213,7 @@ export default function Asistente() {
               Enviar
             </button>
           </form>
-          <p className="asistente-aviso">No sustituye a un abogado. No escribas datos personales que no sean necesarios.</p>
+          <p className="asistente-aviso">Es una inteligencia artificial y puede equivocarse; no sustituye a un abogado. No escribas datos personales que no sean necesarios.</p>
         </div>
       )}
     </>
