@@ -14,12 +14,36 @@ export default function Incapacidad() {
   return (
     <>
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <h1>Te han denegado la incapacidad. Se puede recurrir.</h1>
-          <p className="entradilla">
-            Muchas incapacidades que la Seguridad Social deniega se acaban reconociendo en el juzgado. Revisamos tu expediente y te
-            decimos qué grado te puede corresponder.
-          </p>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <nav className="migas" aria-label="Estás en">
+              <Link href="/">Inicio</Link> / Incapacidad permanente
+            </nav>
+            <h1>Te han denegado la incapacidad. Se puede recurrir.</h1>
+            <p className="entradilla">
+              Muchas incapacidades que la Seguridad Social deniega se acaban reconociendo en el juzgado. Revisamos tu expediente y te
+              decimos qué grado te puede corresponder.
+            </p>
+            <div className="acciones">
+              <Link className="boton boton-marcador" href="/herramientas/comprobador-incapacidad">
+                Comprobar mi caso
+              </Link>
+              <Link className="boton boton-claro" href="/incapacidad-permanente/reclamacion-previa-y-demanda">
+                Si te la han denegado
+              </Link>
+            </div>
+          </div>
+          <div>
+            <img
+              className="foto"
+              src="/img/incapacidad-ventana.webp"
+              alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra"
+              width={1000}
+              height={676}
+              fetchPriority="high"
+            />
+            <p className="foto-pie">Imagen ilustrativa.</p>
+          </div>
         </div>
       </header>
 
