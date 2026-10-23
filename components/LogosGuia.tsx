@@ -18,6 +18,7 @@ const FICHERO: Record<string, string> = {
   Facebook: 'facebook.png',
   X: 'x.svg',
   YouTube: 'youtube.svg',
+  TikTok: 'tiktok.png',
   ChatGPT: 'openai.svg',
   Gemini: 'googlegemini.svg',
 };
@@ -33,6 +34,7 @@ const REDES: { red: string; cifra: string; hoy: string; luego: string; tono: 'bi
   { red: 'LinkedIn', cifra: '2.371 seguidores', hoy: 'Publicas muy poco y hay dos páginas de empresa.', luego: 'Una sola página y el canal para colegios, empresas e instituciones.', tono: 'medio' },
   { red: 'Facebook', cifra: '285 seguidores', hoy: 'Repite Instagram y no tiene anuncios.', luego: 'Anuncios sencillos para quien lo está pasando mal en el trabajo.', tono: 'mal' },
   { red: 'YouTube', cifra: 'Canal con entrevistas', hoy: 'La entrevista a Iñaki Piñuel y casos ganados, poco visibles.', luego: 'Cada vídeo, dentro de la guía de la web que le toca.', tono: 'medio' },
+  { red: 'TikTok', cifra: 'Sin cuenta del despacho', hoy: 'No hemos encontrado ninguna cuenta del despacho.', luego: 'Vídeos de un minuto que responden una duda ("¿me pueden despedir estando de baja?"). Se aprovechan los reels de Instagram.', tono: 'mal' },
   { red: 'X', cifra: 'Dos cuentas', hoy: 'Abandonadas.', luego: 'O se reactiva una, o se deja de enlazar.', tono: 'mal' },
 ];
 
