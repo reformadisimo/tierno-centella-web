@@ -127,6 +127,14 @@ export default function Pagina() {
             que ya hemos hecho y todo lo que podemos mejorar juntos.
           </p>
           <p>Para Jesús Tierno Centella, con cariño. Octubre de 2026.</p>
+          <div className="gj-portada-botones">
+            <a className="boton boton-marcador" href="#indice">
+              Ver el índice de la guía
+            </a>
+            <a className="boton gj-boton-claro" href="#empieza-aqui-tu-guia-en-5-minutos">
+              Empezar a leer
+            </a>
+          </div>
           <ul className="gj-portada-cifras">
             <li>
               <strong>94</strong> de velocidad en móvil (antes 49)

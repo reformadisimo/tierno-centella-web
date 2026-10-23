@@ -443,8 +443,8 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
   const hechos = secciones.filter((x) => vistos.has(x.id)).length;
   const preguntas = secciones.find((x) => /preguntas para ti/i.test(x.titulo))?.id;
   const abrirIndice = () => {
-    setIndice(true);
-    setTimeout(() => document.getElementById('gj-indice')?.scrollIntoView({ block: 'start' }), 30);
+    if (q) setQ('');
+    setTimeout(() => document.getElementById('indice')?.scrollIntoView({ block: 'start' }), 30);
   };
   return (
     <div className="guia-jesus">
@@ -496,6 +496,40 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
         </div>
       </aside>
       <div className="gj-cuerpo">
+        {busca.length < 2 && (
+          <section className="gj-mapa" id="indice" aria-labelledby="gj-mapa-titulo">
+            <div className="gj-mapa-cabeza">
+              <h2 id="gj-mapa-titulo">Índice de la guía</h2>
+              <p>
+                {total} apartados en seis bloques. Empieza por el primero y salta a lo que más te interese; los que ya has visto se marcan en verde.
+              </p>
+            </div>
+            <div className="gj-mapa-rejilla">
+              {[...new Set(secciones.map((x) => x.claveGrupo))].map((g, n) => {
+                const del = secciones.filter((x) => x.claveGrupo === g);
+                const vistosG = del.filter((x) => vistos.has(x.id)).length;
+                return (
+                  <div key={g} className={`gj-mapa-grupo gj-g-${g}`}>
+                    <div className="gj-mapa-grupo-cabeza">
+                      <span className="gj-mapa-num">{n + 1}</span>
+                      <strong>{del[0].grupo}</strong>
+                      <small>
+                        {vistosG}/{del.length}
+                      </small>
+                    </div>
+                    <ol>
+                      {del.map((x) => (
+                        <li key={x.id} className={vistos.has(x.id) ? 'visto' : ''}>
+                          <a href={`#${x.id}`}>{x.titulo}</a>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
         {visibles.map((s) => (
           <section key={s.id} id={s.id} className={`gj-seccion gj-g-${s.claveGrupo}`}>
             <span className="gj-etiqueta">{s.grupo}</span>
@@ -512,8 +546,8 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
               <Contenido html={s.html} />
             </details>
             <Reaccion id={s.id} seccion={s.titulo} />
-            <a className="gj-arriba" href="#indice-guia">
-              Volver arriba
+            <a className="gj-arriba" href="#indice">
+              Volver al índice
             </a>
           </section>
         ))}

@@ -4508,3 +4508,118 @@ body:has(.guia-jesus) .barra-movil {
     display: block;
   }
 }
+
+/* Índice dentro del texto de la guía */
+.gj-mapa {
+  margin: 0 0 12px;
+  padding: 26px 24px 28px;
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-top: 5px solid var(--tinta);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(13, 44, 72, 0.08);
+  scroll-margin-top: 90px;
+}
+.gj-mapa-cabeza h2 {
+  margin: 0 0 6px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+.gj-mapa-cabeza p {
+  margin: 0 0 20px;
+  color: var(--tinta-suave);
+}
+.gj-mapa-rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+.gj-mapa-grupo {
+  padding: 14px 16px 10px;
+  border-radius: 12px;
+  background: var(--papel);
+  border-top: 4px solid var(--gj-color);
+}
+.gj-mapa-grupo-cabeza {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.gj-mapa-num {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gj-color);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex: none;
+}
+.gj-mapa-grupo-cabeza strong {
+  color: var(--gj-color);
+  font-size: 1.05rem;
+  flex: 1;
+}
+.gj-mapa-grupo-cabeza small {
+  color: var(--tinta-suave);
+  font-weight: 700;
+}
+.gj-mapa ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gj-mapa li a {
+  display: block;
+  padding: 7px 0;
+  color: var(--tinta);
+  text-decoration: none;
+  border-bottom: 1px solid var(--linea);
+  font-size: 0.97rem;
+  line-height: 1.35;
+}
+.gj-mapa li:last-child a {
+  border-bottom: 0;
+}
+.gj-mapa li a:hover {
+  color: var(--gj-color);
+  text-decoration: underline;
+}
+.gj-mapa li.visto a::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  margin: 0 9px 2px 2px;
+  border: solid #17773f;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+.gj-portada-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 8px;
+}
+.gj-boton-claro {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+.gj-arriba {
+  font-weight: 700;
+}
+@media (max-width: 999px) {
+  .gj-indice-boton,
+  .gj-lateral nav {
+    display: none;
+  }
+  .gj-indice-caja {
+    display: block;
+  }
+  .gj-mapa {
+    padding: 20px 16px 22px;
+  }
+}
