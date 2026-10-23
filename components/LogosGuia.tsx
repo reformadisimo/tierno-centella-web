@@ -113,3 +113,48 @@ export function BloqueAccesos() {
     </div>
   );
 }
+
+// Las 15 preguntas que vigilamos cada día en ChatGPT (Semrush, rastreo de prompts desde el 23 de octubre de 2026).
+const PROMPTS: [string, string][] = [
+  ['Acoso', '¿Qué abogado de acoso laboral me recomiendas en Madrid?'],
+  ['Acoso', 'Mejor abogado laboralista en Madrid para un caso de mobbing'],
+  ['Acoso', '¿Qué despacho de abogados laboralistas de Madrid tiene experiencia en acoso laboral?'],
+  ['Acoso', '¿Cómo demuestro que sufro acoso laboral y a qué abogado acudo en Madrid?'],
+  ['Acoso', 'Abogado para acoso laboral en la administración pública o en un colegio en Madrid'],
+  ['Acoso', '¿Puedo dejar la empresa con indemnización por acoso? Abogado en Madrid'],
+  ['Incapacidad', 'Abogado para reclamar una incapacidad permanente denegada en Madrid'],
+  ['Incapacidad', 'Abogado en Madrid para que mi baja por ansiedad se reconozca como accidente de trabajo'],
+  ['Despido', 'Me han despedido estando embarazada en Madrid: ¿qué abogado me puede ayudar?'],
+  ['Despido', 'Abogado laboralista en Madrid para un despido improcedente'],
+  ['Despido', 'Abogado de despidos en Madrid con precio claro de la primera consulta'],
+  ['Empresas', 'Abogados para protocolos de acoso laboral en empresas y colegios de Madrid'],
+  ['Tu marca', '¿Quién es Jesús Tierno Centella?'],
+  ['Tu marca', 'Opiniones sobre Tierno Centella Abogados'],
+  ['Inglés', 'English-speaking employment lawyer in Madrid for workplace harassment'],
+];
+
+export function BloquePrompts() {
+  return (
+    <div className="lg-prompts">
+      <div className="lg-prompts-cabeza">
+        <span className="lg-barra">
+          <Logo nombre="ChatGPT" tam={28} />
+          <Logo nombre="Gemini" tam={28} />
+          <Logo nombre="Semrush" tam={28} />
+        </span>
+        <span>
+          <strong>Las 15 preguntas que vigilamos cada día</strong>
+          <small>Desde el 23 de octubre de 2026, en ChatGPT y desde Madrid. Así sabremos si te nombra hoy y cómo cambia cada semana.</small>
+        </span>
+      </div>
+      <ol className="lg-prompts-lista">
+        {PROMPTS.map(([tema, p]) => (
+          <li key={p}>
+            <span className={`lg-tema lg-tema-${tema.replace(' ', '-').toLowerCase()}`}>{tema}</span>
+            <span className="lg-pregunta">{p}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}

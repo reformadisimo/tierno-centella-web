@@ -5802,3 +5802,18 @@ dl .prosa-foto { margin: 28px 0; }
 .lg-dominio { width: 32px; height: 32px; border-radius: 8px; background: var(--tinta); color: #fff; display: grid; place-items: center; font-size: 0.6rem; font-weight: 800; }
 @media (max-width: 520px) { .lg-acceso { grid-template-columns: auto minmax(0, 1fr); } .lg-permiso { grid-column: 2; justify-self: start; } }
 @media print { .lg-redes { grid-template-columns: repeat(3, 1fr); } .lg-red, .lg-acceso { break-inside: avoid; } }
+
+/* Guía: preguntas que vigilamos en las IA */
+.lg-prompts { margin: 20px 0 28px; background: var(--blanco); border: 1px solid var(--linea); border-radius: 16px; padding: 18px; }
+.lg-prompts-cabeza { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+.lg-prompts-cabeza strong { display: block; font-size: 1.05rem; }
+.lg-prompts-cabeza small { display: block; color: var(--tinta-suave); font-size: 0.88rem; line-height: 1.4; }
+.lg-prompts-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.lg-prompts-lista li { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 12px; background: var(--papel); }
+.lg-tema { flex: none; font-size: 0.72rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--cielo); color: var(--tinta); margin-top: 2px; }
+.lg-tema-acoso { background: var(--coral-suave); color: var(--coral-texto); }
+.lg-tema-incapacidad { background: #ece6f6; color: #5b3b93; }
+.lg-tema-despido { background: var(--marcador-suave); color: #7a5600; }
+.lg-tema-tu-marca { background: #e7f4ec; color: #17602f; }
+.lg-pregunta { font-size: 0.95rem; line-height: 1.4; }
+.lg-pregunta::before { content: '“'; } .lg-pregunta::after { content: '”'; }

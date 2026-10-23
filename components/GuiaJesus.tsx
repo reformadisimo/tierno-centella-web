@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
 import OficiosGuia from './OficiosGuia';
-import { BloqueAccesos, BloqueConexiones, BloqueRedes } from './LogosGuia';
+import { BloqueAccesos, BloqueConexiones, BloquePrompts, BloqueRedes } from './LogosGuia';
 import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
@@ -416,6 +416,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   redes: BloqueRedes,
   conexiones: BloqueConexiones,
   accesos: BloqueAccesos,
+  prompts: BloquePrompts,
   'mock-ficha': MockupFicha,
   'mock-ia': MockupIA,
   'mock-velocidad': MockupVelocidad,

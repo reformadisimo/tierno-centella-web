@@ -182,6 +182,10 @@ Cada vez más gente no busca en Google: le pregunta a ChatGPT, a Gemini o a la p
 
 [[mock-ia]]
 
+**Lo medimos, no lo suponemos**: desde hoy, Semrush pregunta cada día a ChatGPT, desde Madrid, lo mismo que preguntaría alguien que te necesita. Es tu punto de partida: cuando la web nueva esté publicada, veremos semana a semana si la IA empieza a nombrarte.
+
+[[prompts]]
+
 **Cómo eligen las IA a quién recomendar**: lo explicamos, con lo que ya hemos hecho y lo que haremos, un poco más abajo en este mismo apartado ("Cómo vamos a mejorar en ChatGPT, Claude, Gemini y Google").
 
 **Cómo lo mediremos**: Semrush registra cada mes en cuántas respuestas de IA apareces. Nuestro objetivo a seis meses, sin poder garantizarlo porque depende de Google: pasar de 10 a más de 50 y acercarnos al top 5 de "abogados acoso laboral madrid".
