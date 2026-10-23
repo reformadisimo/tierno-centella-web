@@ -54,7 +54,7 @@ export default function Glosario() {
             </nav>
             <h1>Glosario laboral</h1>
             <p className="entradilla">Las palabras que vas a oír en tu caso, explicadas como te las explicaríamos en el despacho.</p>
-            <nav aria-label="Letras" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 16 }}>
+            <nav aria-label="Letras" className="glosario-letras">
               {letras.map((l) => (
                 <a key={l} href={`#letra-${l}`}>
                   {l}
@@ -67,7 +67,7 @@ export default function Glosario() {
       </header>
       <section className="seccion">
         <div className="contenedor">
-          <dl className="prosa" style={{ maxWidth: '72ch' }}>
+          <div className="prosa" style={{ maxWidth: '72ch' }}>
             {GLOSARIO.map((t, i) => {
               const nuevaLetra = i === 0 || GLOSARIO[i - 1].termino[0].toUpperCase() !== t.termino[0].toUpperCase();
               const foto = i > 0 && i % 12 === 0 ? FOTOS_GLOSARIO[(i / 12 - 1) % FOTOS_GLOSARIO.length] : null;
@@ -78,17 +78,21 @@ export default function Glosario() {
                     <img src={`/img/${foto[0]}-640.webp`} srcSet={`/img/${foto[0]}-640.webp 640w, /img/${foto[0]}.webp 1200w`} sizes="(max-width: 1000px) 100vw, 720px" alt={foto[1]} width={1200} height={514} loading="lazy" decoding="async" />
                   </figure>
                 )}
-                <div id={slug(t.termino)} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)' }}>
-                  {nuevaLetra && <span id={`letra-${t.termino[0].toUpperCase()}`} />}
+                {nuevaLetra && (
+                  <h2 className="glosario-letra" id={`letra-${t.termino[0].toUpperCase()}`}>
+                    {t.termino[0].toUpperCase()}
+                  </h2>
+                )}
+                <dl id={slug(t.termino)} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)', margin: 0 }}>
                   <dt style={{ fontWeight: 700, fontSize: '1.1rem' }}>{t.termino}</dt>
                   <dd style={{ margin: '4px 0 0' }}>
                     {t.definicion} {t.enlace && <Link href={t.enlace}>Saber más</Link>}
                   </dd>
-                </div>
+                </dl>
                 </Fragment>
               );
             })}
-          </dl>
+          </div>
         </div>
       </section>
     </>

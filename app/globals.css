@@ -418,7 +418,7 @@ input:focus {
 
 .letra-pequena {
   font-size: 0.82rem;
-  color: var(--tinta-suave);
+  color: var(--tinta-media);
   margin: 14px 0 0;
 }
 
@@ -5597,3 +5597,14 @@ dl .prosa-foto { margin: 28px 0; }
 @media print { .ventana-contexto { display: none; } }
 .salida-propio a:first-child { background: var(--marcador); border-color: var(--marcador); color: var(--tinta); }
 .ventana-pie a, .ventana-pie .boton-enlace { white-space: nowrap; }
+.glosario-letras { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.glosario-letras a { min-width: 40px; min-height: 40px; display: inline-grid; place-items: center; border-radius: 10px; background: var(--blanco); border: 1px solid var(--linea); font-weight: 700; text-decoration: none; color: var(--tinta); }
+.glosario-letras a:hover { background: var(--marcador-suave); }
+.prosa h2.glosario-letra { margin: 36px 0 4px; font-size: 2.2rem; color: var(--coral-texto); border-bottom: 3px solid var(--coral); display: inline-block; padding-right: 12px; scroll-margin-top: 90px; }
+
+/* Móvil estrecho (320 px): la rejilla de la guía no crece con tablas anchas; las tablas se desplazan dentro */
+@media (max-width: 999px) { .guia { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .prosa table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .prosa .prosa-foto { margin-left: 0; margin-right: 0; }
+}

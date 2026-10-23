@@ -208,5 +208,5 @@ export function IdiomaHtml() {
 
 export function AvisoDemo() {
   const en = idiomaDe(usePathname()) === 'en';
-  return <div className="aviso-demo">{en ? "Demo version. This is not the firm's official website." : 'Versión de demostración. No es la web oficial del despacho.'}</div>;
+  return <div className="aviso-demo" role="region" aria-label={en ? 'Notice' : 'Aviso'}>{en ? "Demo version. This is not the firm's official website." : 'Versión de demostración. No es la web oficial del despacho.'}</div>;
 }

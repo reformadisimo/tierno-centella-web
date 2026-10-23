@@ -129,7 +129,7 @@ export default async function Sentencia({ params }: { params: Promise<{ slug: st
             </p>
             <Compartir titulo={c.titulo} />
           </div>
-          <aside className="guia-lateral">
+          <div className="guia-lateral">
             {herramienta && (
               <div className="lateral-caja">
                 <h2>Herramienta gratuita</h2>
@@ -149,7 +149,7 @@ export default async function Sentencia({ params }: { params: Promise<{ slug: st
                 <Link href="/sentencias">Ver todos los casos</Link>
               </p>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
       <Llamada asunto={c.materia.toLowerCase()} />

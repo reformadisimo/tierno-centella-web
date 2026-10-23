@@ -29,7 +29,7 @@ Anxiety or depression caused by harassment are not on the official list of occup
 
 The difference in what you are paid is real:
 
-| | Work accident | Common illness |
+| What changes | Work accident | Common illness |
 | --- | --- | --- |
 | Day the leave begins | Salary paid by the company | Salary paid by the company |
 | Days 2 and 3 | 75 % | Nothing by law (unless improved by the collective agreement) |

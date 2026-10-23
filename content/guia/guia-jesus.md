@@ -41,7 +41,7 @@ Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada d
 
 Son objetivos de trabajo, no promesas: dependen de Google y de la constancia.
 
-| | Hoy | Objetivo a 12 meses |
+| Dato | Hoy | Objetivo a 12 meses |
 | --- | --- | --- |
 | Visitas al mes desde Google | 239 | Acercarnos a las de Abogados Durán (unas 2.500) |
 | "abogado laboralista madrid" (1.900 búsquedas al mes) | Puesto 18, segunda página | Primera página |
@@ -243,7 +243,7 @@ Hemos leído enteras las 59 reseñas de Google y hemos buscado en otras webs. Pa
 
 ### El resumen, en cifras
 
-| | Cuántas |
+| Reseñas | Cuántas |
 | --- | --- |
 | Cinco estrellas | 44 |
 | Cuatro estrellas | 3 |

@@ -77,7 +77,7 @@ export default async function RulingEn({ params }: { params: Promise<{ slug: str
             <p className="lp-nota">Every case is different and the outcome depends on the evidence and the court. We tell these cases without details that could identify anyone.</p>
             <Compartir titulo={e.titulo} />
           </div>
-          <aside className="guia-lateral">
+          <div className="guia-lateral">
             <div className="lateral-caja">
               <h2>Talk to us</h2>
               <div style={{ display: 'grid', gap: 8 }}>
@@ -99,7 +99,7 @@ export default async function RulingEn({ params }: { params: Promise<{ slug: str
                 ))}
               </ul>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
     </>

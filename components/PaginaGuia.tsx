@@ -96,13 +96,13 @@ export default function PaginaGuia({
   const foto = fotoDePieza(pieza);
   const ruta = migas[migas.length - 1].href + '/' + pieza.slug;
   const wa = enlaceWhatsapp(en ? `Hello, I have read "${pieza.titulo}" and I would like to ask about my case.` : `Hola, he leído "${pieza.titulo}" y quiero consultar mi caso.`);
-  const tarjeta = `<aside class="prosa-jesus"><img src="/img/jesus-mesa-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="${en ? 'Jesús Tierno Centella at his desk' : 'Jesús Tierno Centella en su mesa del despacho'}"><div><p class="prosa-jesus-titulo">${
+  const tarjeta = `<div class="prosa-jesus"><img src="/img/jesus-mesa-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="${en ? 'Jesús Tierno Centella at his desk' : 'Jesús Tierno Centella en su mesa del despacho'}"><div><p class="prosa-jesus-titulo">${
     en ? 'Does your case sound like this?' : '¿Tu caso se parece a esto?'
   }</p><p>${
     en
       ? 'Jesús Tierno and his team have been defending workers for more than 25 years. Tell us what is happening and we will tell you which deadlines apply.'
       : 'Jesús Tierno y su equipo llevan más de 25 años defendiendo a trabajadoras y trabajadores. Cuéntanos qué te pasa y te decimos qué plazos corren.'
-  }</p><div class="prosa-jesus-botones"><a class="boton" href="${escapar(wa)}">${en ? 'Write on WhatsApp' : 'Escribir por WhatsApp'}</a><a class="boton boton-claro" href="${DESPACHO.telefonoHref}">${DESPACHO.telefono}</a></div></div></aside>`;
+  }</p><div class="prosa-jesus-botones"><a class="boton" href="${escapar(wa)}">${en ? 'Write on WhatsApp' : 'Escribir por WhatsApp'}</a><a class="boton boton-claro" href="${DESPACHO.telefonoHref}">${DESPACHO.telefono}</a></div></div></div>`;
   const htmlConFotos = conImagenes(pieza.html, fotosParaTexto(temaDe(ruta, pieza.categoria), pieza.slug, foto.src + (video ? '' : '')), en, tarjeta);
   const datos = {
     '@context': 'https://schema.org',
@@ -180,7 +180,7 @@ export default function PaginaGuia({
             <div className="prosa" dangerouslySetInnerHTML={{ __html: htmlConFotos }} />
             <Compartir titulo={pieza.titulo} />
           </article>
-          <aside className="guia-lateral">
+          <div className="guia-lateral">
             <div className="lateral-caja lateral-humana">
               {foto.src.includes('abogada-escucha') ? (
                 <img src="/img/abogada-sonrie-640.webp" alt={en ? "A lawyer from the firm smiles during a consultation" : "Una abogada del despacho sonríe durante una consulta"} loading="lazy" />
@@ -218,7 +218,7 @@ export default function PaginaGuia({
                 </ul>
               </div>
             )}
-          </aside>
+          </div>
         </div>
       </section>
     </>

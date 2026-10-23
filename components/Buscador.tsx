@@ -10,9 +10,27 @@ const normal = (s: string) =>
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase();
 
+// Raíz sencilla para que "despedido", "despidieron" y "despido", o "embarazada" y "embarazo", se encuentren entre sí.
+const SINONIMOS: [RegExp, string][] = [
+  [/^desp[ei]d/, 'despid'],
+  [/^embaraz/, 'embaraz'],
+  [/^acos/, 'acos'],
+  [/^indemniz/, 'indemniz'],
+  [/^incapacid/, 'incapacid'],
+  [/^mobbing$/, 'acos'],
+  [/^echa(do|da|ron|n)?$/, 'despid'],
+  [/^fired$/, 'dismiss'],
+  [/^sacked$/, 'dismiss'],
+];
+function raizDe(w: string) {
+  for (const [re, r] of SINONIMOS) if (re.test(w)) return r;
+  if (w.length <= 5) return w;
+  return w.replace(/(aciones|iciones|ciones|cion|mente|ados|adas|idos|idas|ado|ada|ido|ida|ar|er|ir|es|s)$/, '').slice(0, Math.max(5, w.length - 3)) || w;
+}
+
 // Palabras vacías que no ayudan a buscar.
 const VACIAS = new Set(
-  'a al ante con de del el en la las lo los me mi mis o para por que se si sin su sus te tu un una y es como cuando cual donde qué the of to and in on for my is it at an or be do i what how can'.split(' '),
+  'a al ante con de del el en la las lo los me mi mis o para por que se si sin su sus te tu un una y es como cuando cual donde qué ha han has he hemos estoy esta estan soy tengo tiene puedo puede quiero hacer hago hace muy mucho pero ya le les nos ser fue era hay algo the of to and in on for my is it at an or be do i what how can have has was am are with'.split(' '),
 );
 
 export default function Buscador({ indice, idioma = 'es' }: { indice: Resultado[]; idioma?: 'es' | 'en' }) {
@@ -46,25 +64,26 @@ export default function Buscador({ indice, idioma = 'es' }: { indice: Resultado[
 
   const resultados = useMemo(() => {
     if (!palabras.length) return [];
-    return preparados
+    const puntuados = preparados
       .map((p) => {
         let puntos = 0;
         let faltan = 0;
         for (const w of palabras) {
-          const raiz = w.length > 5 ? w.slice(0, w.length - 2) : w;
+          const raiz = raizDe(w);
           if (p.titulo.includes(raiz)) puntos += 10;
           if (p.resumen.includes(raiz)) puntos += 4;
           if (p.tipo.includes(raiz)) puntos += 2;
           if (p.texto.includes(raiz)) puntos += 1;
           else if (!p.titulo.includes(raiz) && !p.resumen.includes(raiz) && !p.tipo.includes(raiz)) faltan += 1;
         }
-        // Todas las palabras tienen que aparecer; si son muchas, se tolera que falte una.
-        if (faltan > (palabras.length >= 4 ? 1 : 0)) puntos = 0;
-        return { r: p.r, puntos };
-      })
-      .filter((x) => x.puntos > 0)
-      .sort((a, b) => b.puntos - a.puntos)
-      .slice(0, 30);
+        return { r: p.r, puntos, faltan };
+      });
+    // Primero, lo que contiene todas las palabras (si son muchas, se tolera que falte una).
+    // Si nada las contiene todas, se enseña lo que más se parece, para no dejar a nadie con las manos vacías.
+    const tolerancia = palabras.length >= 4 ? 1 : 0;
+    const completos = puntuados.filter((x) => x.puntos > 0 && x.faltan <= tolerancia);
+    const lista = completos.length ? completos : puntuados.filter((x) => x.puntos > 0 && x.faltan < palabras.length);
+    return lista.sort((a, b) => a.faltan - b.faltan || b.puntos - a.puntos).slice(0, 30);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [palabras.join(' '), preparados]);
 

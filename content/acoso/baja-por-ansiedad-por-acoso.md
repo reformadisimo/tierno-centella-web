@@ -27,7 +27,7 @@ La ansiedad o la depresión por acoso no figuran en la lista oficial de enfermed
 
 La diferencia en lo que cobras es real:
 
-| | Accidente de trabajo | Enfermedad común |
+| Qué cambia | Accidente de trabajo | Enfermedad común |
 | --- | --- | --- |
 | Día de la baja | Salario a cargo de la empresa | Salario a cargo de la empresa |
 | Días 2 y 3 | 75 % | Nada por ley (salvo mejora del convenio) |

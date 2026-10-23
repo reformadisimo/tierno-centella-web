@@ -91,7 +91,7 @@ export default function VentanaContextual() {
   const conSalida = SALIDA_RAPIDA.some((r) => ruta.startsWith(r));
 
   return (
-    <aside className={`ventana-contexto${conSalida ? ' ventana-alta' : ''}`} role="dialog" aria-labelledby="ventana-titulo" aria-modal="false">
+    <div className={`ventana-contexto${conSalida ? ' ventana-alta' : ''}`} role="dialog" aria-labelledby="ventana-titulo" aria-modal="false">
       <button type="button" className="ventana-cerrar" onClick={() => cerrar('cerrar')} aria-label={en ? 'Close' : 'Cerrar'}>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18" />
@@ -127,6 +127,6 @@ export default function VentanaContextual() {
           {en ? 'Ask the chat' : 'Preguntar al chat'}
         </button>
       </div>
-    </aside>
+    </div>
   );
 }

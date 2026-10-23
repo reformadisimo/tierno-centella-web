@@ -23,6 +23,12 @@ export default function FormularioContacto() {
       document.getElementById('f-tema')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
+    if (!datos.telefono.trim() && !datos.email.trim()) {
+      setError('Déjanos un teléfono o un correo para poder contestarte.');
+      setEstado('error');
+      document.getElementById('f-tel')?.focus();
+      return;
+    }
     setEstado('enviando');
     setError('');
     try {

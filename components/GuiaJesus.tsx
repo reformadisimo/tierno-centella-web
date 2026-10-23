@@ -366,7 +366,7 @@ function BloqueSemaforo() {
     <div className="gj-semaforo">
       {SEMAFORO.map((f) => (
         <div key={f.area} className={`gj-sem-fila gj-sem-${f.color}`}>
-          <span className="gj-sem-luz" aria-label={f.color === 'rojo' ? 'Mal' : f.color === 'ambar' ? 'Mejorable' : 'Bien'} />
+          <span className="gj-sem-luz" role="img" aria-label={f.color === 'rojo' ? 'Mal' : f.color === 'ambar' ? 'Mejorable' : 'Bien'} />
           <div>
             <strong>{f.area}</strong>
             <p>
