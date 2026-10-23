@@ -43,7 +43,7 @@ type Extra = { foto: string; frase: string; grupo: string; abierta?: boolean };
 // Dónde estás hoy y dónde podemos estar, en una línea, para los apartados donde hay algo que mejorar.
 const FRANJAS: Record<string, { hoy: string; luego: string }> = {
   '4': { hoy: '18,3 segundos en cargar en el móvil, 49 sobre 100 y "consulta gratuita" que no lo es', luego: '3,2 segundos, 94 sobre 100 y el precio claro desde el principio' },
-  '4 bis': { hoy: '239 visitas al mes desde Google (un 38 % menos que en julio) y 14 sobre 100 en las IA', luego: 'Objetivo a un año: unas 2.500 visitas al mes y más de 30 en las IA' },
+  '4 bis': { hoy: '239 visitas al mes desde Google (un 38 % menos que en julio) y 14 sobre 100 en las IA', luego: 'Objetivo a un año: unas 2.500 visitas al mes y más de 30 en las IA' },
   '5': { hoy: '4,2 estrellas y 11 reseñas de una estrella sin contestar', luego: 'Todas respondidas y hacia el 4,5 en un año' },
   '6': { hoy: 'Instagram con un parón de 2021 a 2024 y dos cuentas de X abandonadas', luego: 'Un ritmo constante: reels con tus casos, LinkedIn para colegios e instituciones' },
   '7': { hoy: 'García de la Santa recibe 38 veces más visitas que tú', luego: 'Ser el despacho de referencia en acoso laboral en Madrid' },
@@ -94,10 +94,10 @@ const EXTRA: Record<string, Extra> = {
   '18 ter': { foto: 'firma-contrato', frase: 'Páginas hechas para que quien llega, llame.', grupo: 'clientes' },
   '19': { foto: 'jesus-con-abogada', frase: 'Todo medido, para mejorar un poco cada semana.', grupo: 'clientes' },
   '19 bis': { foto: 'jesus-camisa', frase: 'Tu web nunca se queda quieta: cada semana, un poco mejor.', grupo: 'clientes' },
-  '20': { foto: 'empresas-firma', frase: 'Tu logo de siempre, un poco más fino.', grupo: 'web' },
+  '20': { foto: 'empresas-firma', frase: 'Tu logo de siempre, un poco más fino.', grupo: 'clientes' },
   '21': { foto: 'documento-pluma', frase: 'Un cambio sin sustos: tus clientes y Google ni lo notan.', grupo: 'seguir' },
   '22': { foto: 'manos-unidas', frase: 'Lo que pasará en los próximos meses, sin promesas vacías.', grupo: 'seguir' },
-  '23': { foto: 'reunion-cliente', frase: 'Cinco minutos tuyos, y nosotros hacemos el resto.', grupo: 'seguir' },
+  '23': { foto: 'reunion-cliente', frase: 'Un cuarto de hora tuyo, y nosotros hacemos el resto.', grupo: 'seguir' },
   '24': { foto: 'abogada-escucha', frase: 'Unas preguntas cortas para afinar. Contesta solo las que quieras.', grupo: 'seguir', abierta: true },
   '24 bis': { foto: 'abogada-sonrie', frase: 'Tus preguntas y nuestras respuestas, todo en un mismo sitio.', grupo: 'seguir', abierta: true },
   '25': { foto: 'jesus-retrato', frase: 'La web es tuya. Lo demás, cuando quieras.', grupo: 'seguir', abierta: true },

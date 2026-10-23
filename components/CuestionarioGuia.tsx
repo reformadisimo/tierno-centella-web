@@ -33,6 +33,10 @@ export default function CuestionarioGuia() {
   async function enviar() {
     setMsg('Enviando...');
     try {
+      if (localStorage.getItem('tc-guia-yo')) {
+        setMsg('Modo prueba (?yo=1): no se envía nada. Jesús sí te las mandará.');
+        return;
+      }
       const res = await fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ tipo: 'respuestas', texto: texto() }) });
       const j = await res.json().catch(() => ({ ok: false }));
       setMsg(j.ok ? 'Enviado. Gracias, Jesús: ya lo tenemos. Puedes seguir editando y volver a enviar.' : 'No se ha podido enviar desde aquí. Usa "Copiar respuestas" y mándalas por WhatsApp o correo.');
@@ -95,9 +99,6 @@ export default function CuestionarioGuia() {
         <button type="button" className="boton boton-claro" onClick={copiar}>
           Copiar respuestas
         </button>
-        <a className="boton boton-claro" href={`mailto:?subject=${encodeURIComponent('Respuestas a la guía de la web')}&body=${encodeURIComponent(texto())}`}>
-          Enviar por correo
-        </a>
       </div>
       {msg && (
         <p role="status" className="letra-pequena" style={{ fontSize: '0.95rem' }}>

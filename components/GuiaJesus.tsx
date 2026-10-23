@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 
 export type SeccionGuia = {
@@ -199,12 +199,12 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     titulo: 'Google casi no te enseña',
     icono: 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3',
     hoyDato: '239',
-    hoy: 'visitas al mes desde Google, un 38 % menos que en julio',
+    hoy: 'visitas al mes desde Google, un 38 % menos que en julio',
     luegoDato: '2.500',
     luego: 'nuestro objetivo a 12 meses (el nivel de Abogados Durán)',
     visto: 'García de la Santa recibe 9.164 visitas al mes y Campmany casi 70.000. Tú estás en la segunda página para "abogado laboralista madrid".',
     cuesta: 'Cada mes, miles de personas que buscan justo lo que tú haces encuentran antes a otro despacho. No porque sea mejor: porque Google le conoce más.',
-    ayudamos: '45 guías nuevas, tres artículos a la semana, las 220 direcciones antiguas redirigidas y un trabajo constante de SEO medido cada mes.',
+    ayudamos: '47 guías y artículos nuevos, tres artículos a la semana, las 220 direcciones antiguas redirigidas y un trabajo constante de SEO medido cada mes.',
     ancla: '4 bis',
   },
   {
@@ -213,7 +213,7 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     hoyDato: '14',
     hoy: 'sobre 100 de visibilidad en ChatGPT, Gemini y Google',
     luegoDato: '+30',
-    luego: 'nuestro objetivo, el nivel de los que más salen',
+    luego: 'nuestro objetivo a un año, el nivel de Abogados Durán',
     visto: 'Cuando alguien pregunta a ChatGPT por un abogado de acoso laboral en Madrid, casi nunca te nombra. A Campmany o a Bufete Toro, sí.',
     cuesta: 'Cada vez más gente pregunta a la IA antes que a Google. Si la IA no te conoce, para esa persona no existes.',
     ayudamos: 'Textos que las IA pueden citar, los mismos datos en todas partes, alta en Bing y en directorios jurídicos, y medición mensual.',
@@ -272,7 +272,7 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     icono: 'M12 20V10M18 20V4M6 20v-4',
     hoyDato: 'Sin medir',
     hoy: 'llamadas y WhatsApp que llegan desde la web',
-    luegoDato: '100 %',
+    luegoDato: '100 %',
     luego: 'de llamadas, WhatsApp y formularios con su origen',
     visto: 'Tu web actual tiene Analytics, pero no vemos que cuente las llamadas ni los WhatsApp, ni desde qué página o anuncio llegan.',
     cuesta: 'Sin datos, las decisiones se toman a ciegas: se paga lo que no funciona y se deja de hacer lo que sí.',
@@ -296,7 +296,7 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     icono: 'M15 7a4 4 0 1 1-3.9 5H9v2H7v2H4v-3l5.1-5.1A4 4 0 0 1 15 7z',
     hoyDato: '¿?',
     hoy: '¿tienes a tu nombre la web, el dominio, Analytics, Google Ads y tus redes?',
-    luegoDato: '100 %',
+    luegoDato: '100 %',
     luego: 'todo a tu nombre, con acceso total y desde el primer día',
     visto: 'No lo sabemos, y por eso te lo preguntamos. Es muy habitual que la web, el dominio o las cuentas de anuncios estén a nombre del proveedor de turno, y que el despacho no pueda entrar sin pedir permiso.',
     cuesta: 'Si quien tiene las claves es otro, cambiar de proveedor se convierte en pedir favores: claves, accesos, historiales que se pierden. Y mientras, no ves lo que se hace con tu dinero.',
@@ -342,6 +342,20 @@ function BloqueDolor() {
             <dt>Cómo te ayudamos</dt>
             <dd>{d.ayudamos}</dd>
           </dl>
+          {d.ancla && (
+            <a
+              className="gj-dolor-ir"
+              href="#indice"
+              onClick={(e) => {
+                const destino = document.querySelector(`[id^="${d.ancla!.replace(' ', '-')}-"]`);
+                if (!destino) return;
+                e.preventDefault();
+                destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
+              Verlo en detalle: apartado {d.ancla}
+            </a>
+          )}
         </article>
       ))}
     </div>
@@ -350,7 +364,7 @@ function BloqueDolor() {
 
 // Semáforo de la situación de hoy, área por área.
 const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; haremos: string }[] = [
-  { area: 'Google', color: 'rojo', hoy: '239 visitas al mes, un 38 % menos que en julio (384). Puesto 18 en "abogado laboralista madrid".', haremos: '45 guías nuevas, 39 artículos en 13 semanas y las 220 direcciones antiguas redirigidas.' },
+  { area: 'Google', color: 'rojo', hoy: '239 visitas al mes, un 38 % menos que en julio (384). Puesto 18 en "abogado laboralista madrid".', haremos: '47 guías y artículos nuevos, 39 artículos en 13 semanas y las 220 direcciones antiguas redirigidas.' },
   { area: 'Inteligencia artificial', color: 'rojo', hoy: '14 sobre 100. ChatGPT y Gemini casi nunca te nombran.', haremos: 'Respuestas que las IA puedan citar, datos iguales en todas partes, alta en Bing y medición mensual.' },
   { area: 'Autoridad (quién te enlaza)', color: 'rojo', hoy: '8 sobre 100. García de la Santa tiene 30 y Bufete Toro, 37.', haremos: 'Enlaces de medios, universidades y colegios profesionales, donde ya tienes relación.' },
   { area: 'Tu web', color: 'rojo', hoy: '18 segundos en cargar en el móvil, 49 sobre 100 de velocidad, "consulta gratuita" que no lo es.', haremos: 'Hecho: 94 de velocidad, 14 herramientas, asistente, precio claro.' },
@@ -428,12 +442,20 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
       localStorage.setItem('tc-guia-version', String(VERSION));
     } catch {}
   }, []);
+  const caja = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!modo) return;
+    caja.current?.focus();
+    const tecla = (e: KeyboardEvent) => e.key === 'Escape' && setModo('');
+    window.addEventListener('keydown', tecla);
+    return () => window.removeEventListener('keydown', tecla);
+  }, [modo]);
   if (!modo) return null;
   const cerrar = () => setModo('');
   const idDe = (clave: string) => secciones.find((s) => s.titulo.startsWith(clave + '.'))?.id;
   return (
     <div className="salida-fondo" onClick={cerrar}>
-      <div className="salida gj-aviso" role="dialog" aria-modal="true" aria-labelledby="gj-aviso-titulo" onClick={(e) => e.stopPropagation()}>
+      <div className="salida gj-aviso" role="dialog" aria-modal="true" aria-labelledby="gj-aviso-titulo" tabIndex={-1} ref={caja} onClick={(e) => e.stopPropagation()}>
         <button type="button" className="salida-cerrar" onClick={cerrar} aria-label="Cerrar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
             <path d="M6 6l12 12M18 6L6 18" />
@@ -444,7 +466,7 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
             <p className="etiqueta-calida">Hola, Jesús</p>
             <h2 id="gj-aviso-titulo">Bienvenido a tu guía</h2>
             <p>
-              Aquí te contamos tu web nueva sin tecnicismos. Arriba tienes el <strong>índice</strong>; cada apartado empieza con una foto y una
+              Aquí te contamos tu web nueva sin tecnicismos. Justo debajo de la portada tienes el <strong>índice</strong>; cada apartado empieza con una foto y una
               frase, y si quieres más, pulsas &quot;Ver el detalle&quot;.
             </p>
             <ul className="gj-bienvenida-lista">
@@ -488,8 +510,18 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
 
 const normal = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+// Si quien prueba la guía es Ignacio (?yo=1), no se envía nada: así sus pruebas no llegan como si fueran de Jesús.
+const esYo = () => {
+  try {
+    return !!localStorage.getItem('tc-guia-yo');
+  } catch {
+    return false;
+  }
+};
 const avisar = (datos: Record<string, string>) =>
-  fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), keepalive: true })
+  esYo()
+    ? Promise.resolve(true)
+    : fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), keepalive: true })
     .then((r) => r.ok)
     .catch(() => false);
 
@@ -614,7 +646,7 @@ function Reaccion({ id, seccion }: { id: string; seccion: string }) {
 }
 
 // Apartados ya vistos: se marcan en el índice y alimentan la barra de progreso (solo en este navegador).
-function useVistos(ids: string[]) {
+function useVistos(ids: string[], version: string) {
   const [vistos, setVistos] = useState<Set<string>>(new Set());
   useEffect(() => {
     let guardados: string[] = [];
@@ -623,20 +655,25 @@ function useVistos(ids: string[]) {
     } catch {}
     const v = new Set(guardados);
     setVistos(new Set(v));
+    // Un apartado cuenta como visto si se queda a la vista unos segundos, no si solo pasa de largo.
+    const relojes = new Map<string, number>();
+    const marcar = (id: string) => {
+      if (v.has(id)) return;
+      v.add(id);
+      setVistos(new Set(v));
+      try {
+        localStorage.setItem('tc-guia-vistos', JSON.stringify([...v]));
+      } catch {}
+    };
     const obs = new IntersectionObserver(
       (entradas) => {
-        let cambio = false;
         for (const e of entradas) {
-          if (e.isIntersecting && !v.has(e.target.id)) {
-            v.add(e.target.id);
-            cambio = true;
+          const id = e.target.id;
+          if (e.isIntersecting && !v.has(id) && !relojes.has(id)) relojes.set(id, window.setTimeout(() => marcar(id), 2500));
+          if (!e.isIntersecting && relojes.has(id)) {
+            clearTimeout(relojes.get(id));
+            relojes.delete(id);
           }
-        }
-        if (cambio) {
-          setVistos(new Set(v));
-          try {
-            localStorage.setItem('tc-guia-vistos', JSON.stringify([...v]));
-          } catch {}
         }
       },
       { rootMargin: '0px 0px -40% 0px', threshold: 0 },
@@ -645,8 +682,11 @@ function useVistos(ids: string[]) {
       const el = document.getElementById(id)?.querySelector('h2');
       if (el) obs.observe(el.closest('section')!);
     });
-    return () => obs.disconnect();
-  }, [ids]);
+    return () => {
+      obs.disconnect();
+      relojes.forEach((t) => clearTimeout(t));
+    };
+  }, [ids, version]);
   return vistos;
 }
 
@@ -659,7 +699,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
     [busca, secciones],
   );
   const ids = useMemo(() => secciones.map((x) => x.id), [secciones]);
-  const vistos = useVistos(ids);
+  const vistos = useVistos(ids, busca);
   const [indice, setIndice] = useState(false);
   const total = secciones.length;
   const hechos = secciones.filter((x) => vistos.has(x.id)).length;
@@ -731,6 +771,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
         </div>
       </aside>
       <div className="gj-cuerpo">
+        {busca.length >= 2 && <span id="indice" />}
         {busca.length < 2 && (
           <section className="gj-mapa" id="indice" aria-labelledby="gj-mapa-titulo">
             <div className="gj-mapa-cabeza">
@@ -803,7 +844,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
           </section>
         ))}
       </div>
-      <nav className="gj-barra" aria-label="Moverse por la guía">
+      <nav className="gj-barra-inferior" aria-label="Moverse por la guía">
         <button type="button" onClick={abrirIndice}>
           Índice
           <small>

@@ -27,9 +27,12 @@ export function BotonImprimir({ texto }: { texto?: string }) {
 
 // Cabecera que solo aparece al imprimir.
 export function CabeceraImpresion() {
-  const en = idiomaDe(usePathname()) === 'en';
+  const ruta = usePathname();
+  const en = idiomaDe(ruta) === 'en';
   const [fecha, setFecha] = useState('');
   useEffect(() => setFecha(new Intl.DateTimeFormat(en ? 'en-GB' : 'es-ES', { dateStyle: 'long' }).format(new Date())), [en]);
+  // La guía privada para Jesús no lleva el aviso para clientes al imprimirla.
+  if (ruta.startsWith('/guia-jesus')) return null;
   return (
     <div className="solo-impresion cabecera-impresion" aria-hidden="true">
       <img src="/img/logo-tc.webp" alt="" width={168} height={40} />

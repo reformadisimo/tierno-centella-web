@@ -2,7 +2,7 @@
 
 Jesús, qué ilusión enseñarte esto. En cinco minutos vas a ver **dónde estás hoy, lo que ya te hemos hecho y adónde te podemos llevar**. Cada apartado de la guía empieza con una foto y una frase; si quieres más, pulsa "Ver el detalle".
 
-### 1. Dónde estás hoy
+###  Dónde estás hoy
 
 Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Semrush, octubre de 2026):
 
@@ -10,11 +10,11 @@ Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Se
 
 García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú. Le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 12.700 euros al mes. Tú tienes lo que ellos no tienen (la primera condena en España a empresa y acosador, en 2005, y años siendo la referencia en acoso), pero hoy **Google y las IA no lo saben**.
 
-Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 en julio a 239 en septiembre).
+Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 en julio a 239 en septiembre).
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son nueve cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son diez cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -22,7 +22,7 @@ Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada d
 
 [[semaforo]]
 
-### 2. Lo que ya te hemos hecho (y es tuyo)
+###  Lo que ya te hemos hecho (y es tuyo)
 
 | Qué | Web actual | Web nueva |
 | --- | --- | --- |
@@ -30,14 +30,14 @@ Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada d
 | Tiempo hasta ver el contenido en móvil | 18,3 segundos | **3,2 segundos** |
 | Accesibilidad | 84 | **100** |
 | Herramientas gratuitas para el cliente | 3 tests | **14** (calculadoras, tests y autodiagnóstico para colegios) |
-| Guías y artículos actualizados a 2026 | Blog parado en 2022 | **45 páginas** escritas para quien lo está viviendo |
+| Guías y artículos actualizados a 2026 | Blog parado en 2022 | **47 páginas** escritas para quien lo está viviendo |
 | Asistente que responde a cualquier hora | No | **Sí**, con todo el contenido de la web |
 | Sección para trabajadoras: embarazo, conciliación, acoso sexual | No | **Sí** |
 | Direcciones antiguas del blog redirigidas | | **Las 220**, una a una |
 | Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 páginas** hechas para convertir: incapacidad, acoso y despido (apartado 18 ter) |
 | Medición | Analytics instalado | **Preparada para contar** cada llamada, WhatsApp, formulario y chat, con mapas de calor y grabaciones en cuanto des el visto bueno (apartado 19) |
 
-### 3. Adónde te podemos llevar en un año
+###  Adónde te podemos llevar en un año
 
 Son objetivos de trabajo, no promesas: dependen de Google y de la constancia.
 
@@ -55,14 +55,14 @@ Son objetivos de trabajo, no promesas: dependen de Google y de la constancia.
 
 **Lo que ya está hecho no te cuesta nada.** Lo que queda es trabajo de todos los meses (escribir, medir, responder, ajustar los anuncios), y es justo lo que marca la diferencia entre 239 visitas y 2.500.
 
-### 4. Lo que necesitamos de ti
+###  Lo que necesitamos de ti
 
 1. Que revises los textos (sobre todo los casos y las guías) y nos digas qué cambiarías.
 2. Que contestes las preguntas del apartado 24. Son cortas.
 3. Si te convence, los accesos del apartado 23 para medir y seguir mejorando.
 4. **Tu tiempo**: unas 3 o 4 horas repartidas en dos semanas para revisar las guías (te las podemos ir pasando por bloques), 15 minutos para los accesos y, si seguimos, unos 30 minutos a la semana para leer los artículos antes de publicarlos.
 
-> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online y por escrito: nos escribes cuando te venga bien y te contestamos rápido, sin reuniones ni llamadas que no hagan falta. Las novedades de la guía te las contamos aquí mismo, y las respuestas a tus dudas quedan en el apartado 24 bis. Y si algún día algo se explica mejor hablando, diez minutos y listo. **Nuestro objetivo es ese: que tengas la máxima visibilidad y el máximo trabajo, ocupándote de nosotros lo menos posible.**
+> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online y por escrito: nos escribes cuando te venga bien y te contestamos rápido, sin reuniones ni llamadas que no hagan falta. Las novedades de la guía te las contamos aquí mismo, y las respuestas a tus dudas quedan en el apartado 24 bis. Y si algún día algo se explica mejor hablando, diez minutos y listo. **Nuestro objetivo es ese: que tengas la máxima visibilidad y el máximo trabajo, ocupándote de nosotros lo menos posible.**
 
 > **Y trabajamos al momento.** Con una agencia normal, lo sabemos todos, cualquier cambio tarda días, semanas y a veces meses: un ajuste en una campaña, un cambio en la imagen, un formulario nuevo. Nosotros no trabajamos así. Lo normal es que lo que nos pidas esté hecho **el mismo día**, muchas veces **en las tres o cuatro horas siguientes**. Lo más tarde, **24 a 48 horas**, y para nosotros eso ya sería tarde. Vale para todo: la web, los textos, las campañas, los formularios, las fotos, el chat. Y nada se queda quieto: medimos cada visita y mejoramos cada página y cada campaña de forma continua (apartado 19 bis). Para hacer todo esto harían falta 25 oficios distintos; nosotros lo hacemos con un solo equipo (apartado 8 bis).
 
@@ -143,7 +143,7 @@ Hemos analizado tu web con **Semrush Pro**, la herramienta de referencia para me
 | --- | --- |
 | Búsquedas en las que apareces (top 100 de Google) | 710 |
 | En las 3 primeras posiciones | 6 |
-| En la primera página (posiciones 4 a 10) | 45 |
+| En el resto de la primera página (posiciones 4 a 10) | 45 |
 | Visitas desde Google, estimadas | unas 239 al mes |
 | Autoridad del dominio (de 0 a 100) | 8 |
 | Respuestas de la IA de Google en las que te citan | 10 de 579 posibles |
@@ -172,7 +172,8 @@ En "abogados acoso laboral madrid", por delante de ti salen García de la Santa,
 | Abogados Durán | 1.387 | 2.457 | 18 | |
 | Pedraza Laboral | 320 | 1.412 | 16 | |
 | Labormind | 699 | 1.013 | 10 | |
-| Bufete Toro | | | 37 | |
+| Bufete Toro | | 47.134 | 37 | |
+| Campmany | | 69.866 | | |
 | **Tierno Centella** | **710** | **239** | **8** | **10** |
 
 ### Que te recomiende la inteligencia artificial
@@ -255,7 +256,7 @@ En el último año y medio hay unas 35 reseñas de cinco estrellas y 8 de una. L
 
 ### Fuera de Google
 
-- **Facebook**: recomendado por el 100 % (5 opiniones).
+- **Facebook**: recomendado por el 100 % (5 opiniones).
 - **elAbogado.com**: una opinión, de cinco estrellas ("gracias a él he tenido un resultado justo").
 - **Infobel** repite las 59 de Google. En portales de empleo no hay opiniones reales.
 
@@ -353,7 +354,7 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 > Hola, [nombre]. Sentimos de verdad que te hayas llevado esta impresión. Por secreto profesional no podemos confirmar ni comentar ningún asunto en público, pero si quieres hablarlo con nosotros, llámanos al 913 24 97 97 y lo vemos con calma.
 
-**A quien contrató contigo y sintió que le llevaba otra persona**
+**A quien te contrató a ti y sintió que su caso lo llevaba otra persona**
 
 > Hola, [nombre]. Gracias por contarlo con tanto detalle. En el despacho trabajamos en equipo y yo superviso cada asunto, y entendemos que eso hay que explicarlo bien desde el primer día; lo estamos haciendo. Siento que te hayas llevado esa impresión. Mi teléfono es el 913 24 97 97: me gustaría hablarlo contigo personalmente. Jesús Tierno.
 
@@ -371,7 +372,7 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 **LinkedIn.** Tu perfil tiene 2.371 seguidores, pero publicas muy poco. Es donde están directores de colegios, recursos humanos, sindicatos y otros abogados: el canal para las campañas a instituciones. Hay que fusionar las dos páginas de empresa.
 
-**Facebook** (285 seguidores, "recomendado por el 100 %" con 5 opiniones) repite Instagram. **X**: dos cuentas abandonadas; o se reactivan o se dejan de enlazar.
+**Facebook** (285 seguidores, "recomendado por el 100 %" con 5 opiniones) repite Instagram. **X**: dos cuentas abandonadas; o se reactivan o se dejan de enlazar.
 
 **Notas de prensa.** Que.es, Merca2, Moncloa.com y Majadahonda Magazin (2022-2023). Tienen pinta de ser de pago y aportan poco prestigio. Valen más una entrevista real (Onda Cero, El Español) o una ponencia.
 
@@ -402,18 +403,18 @@ Hemos repasado una a una las webs de los despachos que salen cuando alguien busc
 | Ayala & González (acoso-laboral.es) | Primera consulta gratis y "solo cobramos si tú cobras" |
 | Arpa Legal | Consulta gratuita y "solo cobramos si ganamos" |
 
-**Tú cobras 150 € más IVA por la primera consulta. Y está bien**: es una hora de un especialista estudiando tu caso. Pero quien compara en el móvil ve "gratis" en cinco pestañas y "150 €" en la tuya. Si no le explicamos por qué merece la pena, se va. Y eso con los anuncios es peor, porque **pagas el clic y se lo lleva otro**.
+**Tú cobras 150 € más IVA por la primera consulta. Y está bien**: es una hora de un especialista estudiando tu caso. Pero quien compara en el móvil ve "gratis" en seis pestañas y "150 €" en la tuya. Si no le explicamos por qué merece la pena, se va. Y eso con los anuncios es peor, porque **pagas el clic y se lo lleva otro**.
 
 **Lo que proponemos** (lo decides tú):
 
 1. **Explicar muy bien qué incluye la consulta**: una hora, revisamos tus documentos, te decimos con sinceridad si tienes caso y te damos la hoja de ruta por escrito. Y si se descuenta de los honorarios cuando te contratan, decirlo bien grande (pregunta del apartado 24).
 2. **Una primera llamada corta sin coste**, de 5 a 10 minutos, solo para saber si el caso es de los vuestros y qué plazo corre. Sin estudiar documentos: eso ya es la consulta. Así competimos con el "gratis" sin regalar tu trabajo. La web nueva ya lo dice con cuidado ("antes de reservar te decimos por teléfono o WhatsApp si tu caso la necesita"), sin la palabra "gratis". Confírmanos que es así como trabajáis y, si quieres, lo destacamos más.
-3. **Ser el despacho del acoso laboral en Madrid**. En incapacidad, Campmany y Bufete Toro llevan años con su modelo de cobrar al ganar y estás en el puesto 27; en acoso estás en el 9, a un paso de la primera página, y nadie tiene tu historia. Ahí es donde más rápido podemos ganar. La incapacidad la trabajamos sobre todo cuando viene del acoso (bajas por ansiedad, depresión), salvo que quieras ofrecer también una parte a resultado.
+3. **Ser el despacho del acoso laboral en Madrid**. En incapacidad, Campmany y Bufete Toro llevan años con su modelo de cobrar al ganar y estás en el puesto 27; en acoso estás en el 9, ya en la primera página pero abajo del todo, y nadie tiene tu historia. Ahí es donde más rápido podemos ganar. La incapacidad la trabajamos sobre todo cuando viene del acoso (bajas por ansiedad, depresión), salvo que quieras ofrecer también una parte a resultado.
 
 **Lo que nunca copiaremos**, porque el Estatuto General de la Abogacía y el Código Deontológico no lo permiten y porque no te hace falta:
 
 - Prometer resultados: "ganamos tu caso", "conseguimos la máxima indemnización".
-- Superlativos y porcentajes sin base: "Nº 1", "el mejor", "95 % de éxito". Los hemos visto en webs del sector.
+- Superlativos y porcentajes sin base: "Nº 1", "el mejor", "95 % de éxito". Los hemos visto en webs del sector.
 - Hablar de clientes o empresas sin su autorización por escrito.
 - Presionar a quien lo está pasando mal ("¡denuncia ya!").
 - Artículos pagados en medios que no digan que son publicidad.
@@ -453,7 +454,7 @@ Salen del estudio de cómo trabajan los despachos que más clientes captan y de 
 - **WhatsApp también desde el ordenador**: quien pulsa WhatsApp en el ordenador ve un código para escanearlo con el móvil, o puede abrir WhatsApp Web. Antes, muchos se quedaban ahí.
 - **Una ventana que sabe qué busca cada persona**: la web se fija en lo que está leyendo quien entra y, tras un rato, le ofrece justo lo suyo. A quien lee sobre despidos le recuerda que tiene 20 días hábiles y le lleva a calcular su plazo. A quien lee sobre acoso, el test y el mapa de pruebas. Incapacidad, Mujer y trabajo, sentencias o empresas tienen también su propia ventana, y la versión en inglés va en inglés. Sale una sola vez por visita, nunca encima del chat ni a quien ya ha llamado o escrito. El aviso de "antes de irte" también se adapta al tema.
 - **Fotos a lo largo de todo el texto**: en el móvil, una guía larga sin imágenes son ocho pantallas seguidas de letra, y la gente se cansa. Por eso cada pocas pantallas hay una foto del tema, y a mitad de cada guía una tarjeta tuya ("¿Tu caso se parece a esto?") con el WhatsApp y el teléfono. Los listados de guías llevan su miniatura, y el glosario y las preguntas frecuentes también tienen fotos.
-- **Rápida también en el móvil**: el chat y las ventanas se cargan cuando la página ya está pintada, para que lo primero que se vea llegue antes. En la portada, en el móvil, la foto principal aparece en unos 2,4 segundos.
+- **Rápida también en el móvil**: el chat y las ventanas se cargan cuando la página ya está pintada, para que lo primero que se vea llegue antes. En la portada, en el móvil, lo primero que se ve aparece en unos 3 segundos.
 - **Cookies de publicidad aparte**: quien acepta, nos deja saber si llegó desde un anuncio y si contactó, que es lo que necesita Google Ads para aprender. Con el modo de consentimiento de Google, que es obligatorio en Europa para medir los anuncios.
 
 **Lo que dejamos para más adelante, a propósito**:
@@ -533,7 +534,7 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **Lo que sabe**:
 
-- **Toda tu web**: el texto completo de las 45 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 14 herramientas, para enlazar la que encaja con cada persona.
+- **Toda tu web**: el texto completo de las 47 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 14 herramientas, para enlazar la que encaja con cada persona.
 - **Tu despacho**: quién eres, tu equipo, tu dirección, teléfono, WhatsApp y correo, cuánto cuesta la consulta y cómo se reserva.
 - **El derecho laboral vigente en octubre de 2026**: plazos, indemnizaciones, despido nulo, permisos, incapacidad, paro.
 
@@ -549,17 +550,13 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **Al principio tendrá pocas conversaciones, y es normal.** Nos encantaría que este chat, que creemos que es estupendo, tuviera ya miles de conversaciones. Pero hay que darlo a conocer: que el SEO empiece a traer visitas, que las campañas de Google Ads y de Instagram lleven gente a la web. Poco a poco irá teniendo más, y esas conversaciones son de lo más valioso que vas a tener: **es cuando el cliente te cuenta su caso sin miedo**, con sus palabras, a cualquier hora, antes de atreverse a llamar.
 
-**Al principio tendrá pocas conversaciones, y es normal.** Nos encantaría que este chat, que creemos que es estupendo, tuviera ya miles de conversaciones. Pero hay que darlo a conocer: que el SEO empiece a traer visitas, que las campañas de Google Ads y de Instagram lleven gente a la web. Poco a poco irá teniendo más, y esas conversaciones son de lo más valioso que vas a tener: **es cuando el cliente te cuenta su caso sin miedo**, con sus palabras, a cualquier hora, antes de atreverse a llamar.
-
-**Cada conversación, guardada y aprovechada**: todas las conversaciones del chat se guardan en la base de datos de tu despacho, solo para vosotros y avisando a quien escribe. Las vemos como una hoja de cálculo: qué pregunta la gente, a qué hora, desde qué página, quién pidió que le llamarais. Eso nos sirve para tres cosas:
+**Cada conversación, guardada y aprovechada**: todas las conversaciones del chat se guardan en una base de datos privada, solo para vosotros y avisando a quien escribe (hoy está en una cuenta de prueba nuestra; con la web oficial la pasamos a una a tu nombre). Las vemos como una hoja de cálculo: qué pregunta la gente, a qué hora, desde qué página, quién pidió que le llamarais. Eso nos sirve para tres cosas:
 
 - **Llamar sabiendo de qué va**: cuando alguien pide que le llaméis, ya tenéis su conversación delante.
 - **Hacerle seguimiento**: con su permiso, un correo al día siguiente, otro a la semana, como hacen las grandes herramientas de seguimiento de clientes (apartado 17). Nada de boletines que nadie lee: mensajes útiles a la persona adecuada.
 - **Mejorar cada día**: si muchos preguntan por bajas por ansiedad, escribimos esa guía; si el asistente contesta algo flojo, lo corregimos ese mismo día.
 
 **Y las puedes ver tú cuando quieras**: [aquí tienes todas las conversaciones del chat](/conversaciones?clave=HXq4Htivnx6V). Es una página privada, solo para ti: ves cada conversación con su fecha, la página desde la que escribieron y si pidieron que les llamarais, y puedes descargarlas en Excel.
-
-**Y las puedes ver tú cuando quieras**, en una página privada: [tus conversaciones del chat](/conversaciones). Entras con una contraseña que te damos aparte, ves cada conversación con su fecha, la página desde la que escribieron y si pidieron que les llamarais, y puedes descargarlas en Excel.
 
 **Acompaña sin presionar**: primero ayuda de verdad; después propone el siguiente paso que encaja (una herramienta si solo se está informando, llamar hoy si tiene un plazo corriendo). Una sola invitación por mensaje. Dentro del chat hay además botones fijos para llamar, escribir por WhatsApp o pedir que le llaméis.
 
@@ -603,7 +600,7 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 
 **En resumen**: la web nueva carga en la mitad de tiempo, pesa bastante menos (1,0 MB frente a 1,8) y hace un tercio de las peticiones.
 
-**¿Por qué 18 segundos en un sitio y 3 en otro?** PageSpeed simula un móvil normal con una conexión normal; Pingdom mide desde un ordenador con una conexión muy rápida. Las dos dicen lo mismo: la nueva va el doble de rápido. En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
+**¿Por qué 18 segundos en un sitio y 3 en otro?** PageSpeed simula un móvil normal con una conexión normal; Pingdom mide desde un ordenador con una conexión muy rápida. Las dos dicen lo mismo: la nueva va mucho más rápida (casi seis veces en PageSpeed, el doble en Pingdom). En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
 
 **Y lo que queda por pulir**: al publicarla en tu dominio, el SEO sube a 100. Las fotos y el vídeo ya se guardan en el navegador de cada visita, así que la segunda vez va todavía más rápida.
 
@@ -639,7 +636,7 @@ Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas vece
 | "Me han denunciado por acoso laboral y es mentira": búsqueda casi sin competencia, y tú tienes un caso así | Artículo nuevo con tu caso de acusaciones falsas desmontadas |
 | Mucha gente busca qué significa el aviso "tiene iniciado un expediente de incapacidad permanente" (unas 570 búsquedas al mes) | Artículo nuevo que lo explica y prepara para el tribunal médico |
 | "¿Te pueden despedir estando de baja?" se busca 2.900 veces al mes | Hemos ajustado el título del artículo a esa pregunta exacta |
-| "¿Se cobra el 100 % estando de baja por enfermedad común?", 1.900 al mes | Respuesta añadida en el artículo de la baja |
+| "¿Se cobra el 100 % estando de baja por enfermedad común?", 1.900 al mes | Respuesta añadida en el artículo de la baja |
 | "¿Es obligatorio ir al SMAC en caso de despido?", 170 al mes | Respuesta añadida en el artículo de la papeleta |
 | Las calculadoras de indemnización suman más de 20.000 búsquedas al mes (muchas buscan la del Poder Judicial) | Título y descripción de tu calculadora reescritos para esas búsquedas |
 
@@ -654,7 +651,7 @@ Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas vece
 | abogado incapacidad permanente madrid | 170 | 2,46 € | Ídem, con "en Madrid" |
 | me han denegado la incapacidad permanente (y no puedo trabajar) | 320 | - | Frase exacta encima del titular y primera pregunta frecuente |
 | mejor abogado para incapacidad permanente | 320 | 1,07 € | Experiencia y quién te defiende, bien visibles |
-| abogados incapacidad solo cobran si ganan | 390 | 0,94 € | Te lo preguntamos (pregunta 29): si lo ofreces, va en la landing |
+| abogados incapacidad solo cobran si ganan | 390 | 0,94 € | Te lo preguntamos (pregunta 33): si lo ofreces, va en la landing |
 | abogado laboralista madrid | 1.900 | 3,56 € | La búsqueda más cara: solo merece la pena con una página que convierta |
 | abogado acoso laboral madrid | 140 | 1,66 € | Landing de acoso |
 
@@ -713,8 +710,8 @@ Tres artículos por semana (lunes, miércoles y viernes; en Navidad y Reyes se m
 | 4 | mié 18 nov | ¿Qué es mejor, jubilarse o la incapacidad permanente total? | qué es mejor jubilarse o incapacidad permanente total | 170 | Incapacidad |
 | 4 | vie 20 nov | Despedida por pedir un permiso para la función escolar de su hija: nuestro caso | garantía de indemnidad | - | Caso del despacho |
 | 5 | lun 23 nov | Acoso laboral a docentes: qué hacer si eres profesor o profesora | acoso laboral docentes | - | Acoso / colegios |
-| 5 | mié 25 nov | Dónde y cómo denunciar el acoso laboral en Madrid | dónde denunciar acoso laboral | 50 | Acoso local |
-| 5 | vie 27 nov | 25N: el acoso sexual en el trabajo también es violencia contra las mujeres | acoso sexual en el trabajo | 260 | Mujer y trabajo (25 de noviembre) |
+| 5 | mié 25 nov | 25N: el acoso sexual en el trabajo también es violencia contra las mujeres | acoso sexual en el trabajo | 260 | Mujer y trabajo (25 de noviembre) |
+| 5 | vie 27 nov | Dónde y cómo denunciar el acoso laboral en Madrid | dónde denunciar acoso laboral | 50 | Acoso local |
 | 6 | lun 30 nov | ¿Es obligatorio el protocolo de acoso laboral en mi empresa? | protocolo acoso laboral | 720 | Empresas y colegios |
 | 6 | mié 2 dic | Cuánto es la indemnización por acoso laboral | indemnización por acoso laboral | 110 | Acoso |
 | 6 | vie 4 dic | Te cobran menos por el mismo trabajo: así se reclama la brecha salarial | brecha salarial | 1.600 | Mujer y trabajo |
@@ -944,7 +941,7 @@ Lo normal es que una agencia haga una web o una página para anuncios, la entreg
 
 **Y así con todo**: las páginas de tus anuncios, las campañas de Google Ads, el SEO, el blog, el asistente, la ficha de Google y las redes. En cuanto nos des los accesos (apartado 23), trabajamos conectados a todas las herramientas, y cada mejora queda demostrada.
 
-**Informes cuando los quieras**: un vistazo diario si hay campaña activa, el informe semanal sencillo del apartado 19 y un resumen mensual con lo que hemos cambiado y lo que ha mejorado.
+**Informes diarios, semanales y mensuales**: cada día, un vistazo a lo importante (contactos, campañas, conversaciones del chat); cada semana, el informe sencillo del apartado 19; y cada mes, un resumen con lo que hemos cambiado, lo que ha mejorado y dónde ha ido cada euro.
 
 **Todo conectado, también lo que se habla**: además de los mapas de calor, las campañas y el SEO, tenemos **cada conversación del chat** guardada en tu base de datos. Sabemos qué preocupa a la gente con sus propias palabras, y lo usamos para mejorar la web, los anuncios y el seguimiento. No semana a semana: **cada día**. Es un servicio que no hemos visto en ninguna otra agencia, y te lo ofrecemos con cariño, porque es la única forma que conocemos de avanzar de verdad.
 
@@ -952,7 +949,7 @@ Lo normal es que una agencia haga una web o una página para anuncios, la entreg
 
 ## 20. El logo, refinado (no sustituido)
 
-Hemos actualizado el logotipo **respetando su identidad, no sustituyéndola**. Conservamos el círculo azul con las iniciales TC, el nombre completo y la composición horizontal, para que siga siendo reconocible.
+Hemos refinado el logotipo **respetando su identidad, no sustituyéndola**. Conservamos el círculo azul con las iniciales TC, el nombre completo y la composición horizontal, para que siga siendo reconocible.
 
 El cambio principal está en la tipografía: el nombre y las iniciales llevan letras con remates, con más presencia y un carácter clásico. Buscamos transmitir solidez y elegancia sin alejarnos del estilo tradicional del despacho.
 

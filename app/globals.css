@@ -4460,7 +4460,7 @@ body:has(.landing) .pie {
   background: transparent !important;
   border-style: dashed !important;
 }
-.gj-barra {
+.gj-barra-inferior {
   position: fixed;
   left: 0;
   right: 0;
@@ -4471,8 +4471,8 @@ body:has(.landing) .pie {
   background: var(--tinta);
   padding-bottom: env(safe-area-inset-bottom);
 }
-.gj-barra a,
-.gj-barra button {
+.gj-barra-inferior a,
+.gj-barra-inferior button {
   font: inherit;
   font-weight: 700;
   font-size: 0.9rem;
@@ -4484,11 +4484,11 @@ body:has(.landing) .pie {
   padding: 14px 4px;
   cursor: pointer;
 }
-.gj-barra a + *,
-.gj-barra button + * {
+.gj-barra-inferior a + *,
+.gj-barra-inferior button + * {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
-.gj-barra small {
+.gj-barra-inferior small {
   display: inline-block;
   margin-left: 6px;
   padding: 1px 7px;
@@ -4501,7 +4501,7 @@ body:has(.guia-jesus) .barra-movil {
 }
 @media (min-width: 1000px) {
   .gj-indice-boton,
-  .gj-barra {
+  .gj-barra-inferior {
     display: none;
   }
   .gj-indice-caja {
@@ -4932,7 +4932,7 @@ body:has(.guia-jesus) .barra-movil {
   .cabecera,
   .pie,
   .barra-movil,
-  .gj-barra,
+  .gj-barra-inferior,
   .asistente-boton,
   .asistente-panel,
   .cookies,
@@ -5045,7 +5045,7 @@ body:has(.guia-jesus) .barra-movil {
 @media print {
   .gj-pdf,
   .gj-progreso,
-  .gj-barra {
+  .gj-barra-inferior {
     display: none !important;
   }
   .gj-detalle > summary {
@@ -5607,4 +5607,29 @@ dl .prosa-foto { margin: 28px 0; }
 @media (max-width: 640px) {
   .prosa table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .prosa .prosa-foto { margin-left: 0; margin-right: 0; }
+}
+
+/* Guía: enlaces de las tarjetas de dolor, zonas táctiles y tablas que se deslizan */
+.gj-dolor-ir { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-weight: 700; color: var(--tinta); }
+.gj-dolor-ir::after { content: '→'; margin-left: 6px; color: var(--coral); }
+.gj-reaccion button, .gj-escribir { min-height: 44px; }
+.gj-mapa a { min-height: 44px; display: flex; align-items: center; }
+@media (max-width: 760px) {
+  .gj-seccion .prosa table {
+    display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    background:
+      linear-gradient(to right, var(--blanco) 30%, rgba(255, 255, 255, 0)) left center / 40px 100% no-repeat local,
+      linear-gradient(to left, var(--blanco) 30%, rgba(255, 255, 255, 0)) right center / 40px 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, rgba(13, 44, 72, 0.22), rgba(13, 44, 72, 0)) left center / 14px 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, rgba(13, 44, 72, 0.22), rgba(13, 44, 72, 0)) right center / 14px 100% no-repeat scroll,
+      var(--blanco);
+  }
+  .gj-seccion .prosa table td, .gj-seccion .prosa table th { min-width: 120px; }
+}
+@media print {
+  .gj-portada { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* PDF más ligero: las fotos de cabecera de cada apartado no se imprimen (sí los gráficos y las tablas). */
+  .gj-banner img { display: none !important; }
+  .gj-banner { min-height: 0 !important; height: auto !important; background: none !important; }
+  .gj-banner figcaption { position: static !important; color: var(--tinta) !important; background: none !important; padding: 0 0 8px !important; font-style: italic; }
 }
