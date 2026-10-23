@@ -5842,3 +5842,7 @@ dl .prosa-foto { margin: 28px 0; }
 .ew-boton{margin-top:8px;align-self:flex-start;background:#a8442c;color:#fff;border-radius:999px;padding:7px 14px;font-size:.88rem}
 @media (max-width:420px){.ew-rejilla{grid-template-columns:1fr 1fr}.ew-tarjeta img{height:76px}}
 @media print{.ew img{display:none}}
+
+/* Guía clicable */
+a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+.lg-red-cabeza a { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }

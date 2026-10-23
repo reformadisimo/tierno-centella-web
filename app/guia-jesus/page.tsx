@@ -1,3 +1,4 @@
+import { enlazarGuia } from '@/lib/enlaces-guia';
 import type { Metadata } from 'next';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -107,9 +108,21 @@ const EXTRA: Record<string, Extra> = {
 function secciones(): SeccionGuia[] {
   let md = fs.readFileSync(path.join(process.cwd(), 'content/guia/guia-jesus.md'), 'utf8');
   md = md.replace('FUENTES', FUENTES.map(([t, u]) => `- [${t}](${u})`).join('\n'));
-  return md
-    .split(/^## /m)
-    .filter((b) => b.trim())
+  const bloques = md.split(/^## /m).filter((b) => b.trim());
+  const idDe = (t: string) =>
+    t
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  const claves: Record<string, string> = {};
+  for (const b of bloques) {
+    const t = b.split('\n')[0];
+    const c = t.match(/^(\d+(?: bis| ter)?)\./)?.[1];
+    if (c) claves[c] = idDe(t);
+  }
+  return bloques
     .map((b) => {
       const [titulo, ...resto] = b.split('\n');
       const cuerpo = resto.join('\n');
@@ -119,7 +132,11 @@ function secciones(): SeccionGuia[] {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
-      const html = (marked.parse(cuerpo, { async: false }) as string).replace(/<a href="http/g, '<a target="_blank" rel="noopener" href="http');
+      const html = enlazarGuia(
+        (marked.parse(cuerpo, { async: false }) as string).replace(/<a href="(http|\/)/g, '<a target="_blank" rel="noopener" href="$1'),
+        claves,
+        id,
+      );
       const clave = titulo.match(/^(\d+(?: bis| ter)?)\./)?.[1] ?? 'inicio';
       const extra = EXTRA[clave] ?? { foto: 'biblioteca', frase: '', grupo: 'seguir' };
       return {

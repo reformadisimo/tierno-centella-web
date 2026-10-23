@@ -163,12 +163,12 @@ function BloqueIA() {
 }
 
 // Visitas al mes desde Google (Semrush, España, octubre de 2026).
-const VISITAS: { nombre: string; visitas: number; tu?: boolean }[] = [
-  { nombre: 'Campmany Abogados', visitas: 69866 },
-  { nombre: 'Bufete Toro', visitas: 47134 },
-  { nombre: 'García de la Santa', visitas: 9164 },
-  { nombre: 'Abogados Durán', visitas: 2457 },
-  { nombre: 'Tierno Centella', visitas: 239, tu: true },
+const VISITAS: { nombre: string; visitas: number; tu?: boolean; web: string }[] = [
+  { nombre: 'Campmany Abogados', visitas: 69866, web: 'https://campmanyabogados.com/' },
+  { nombre: 'Bufete Toro', visitas: 47134, web: 'https://www.bufetetoro.com/' },
+  { nombre: 'García de la Santa', visitas: 9164, web: 'https://garciadelasantaabogados.es/' },
+  { nombre: 'Abogados Durán', visitas: 2457, web: 'https://abogadosduran.com/' },
+  { nombre: 'Tierno Centella', visitas: 239, tu: true, web: 'https://tiernocentella.es/' },
 ];
 
 function BloqueCompetencia() {
@@ -177,7 +177,9 @@ function BloqueCompetencia() {
     <div className="gj-barras" role="img" aria-label="Visitas al mes desde Google: Campmany 69.866, Bufete Toro 47.134, García de la Santa 9.164, Abogados Durán 2.457, Tierno Centella 239">
       {VISITAS.map((v) => (
         <div key={v.nombre} className={`gj-barra${v.tu ? ' tu' : ''}`}>
-          <span className="gj-barra-nombre">{v.nombre}</span>
+          <a className="gj-barra-nombre" href={v.web} target="_blank" rel="noopener">
+            {v.nombre}
+          </a>
           <span className="gj-barra-pista">
             <span className="gj-barra-relleno" style={{ width: `${Math.max(0.8, (v.visitas / max) * 100)}%` }} />
             <b>{v.visitas.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</b>
@@ -714,6 +716,25 @@ function useVistos(ids: string[], version: string) {
 
 export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
   useAvisoVisita();
+  // Los enlaces internos de la guía ("apartado 17", "pregunta 34") abren el detalle plegado antes de llevar al sitio.
+  useEffect(() => {
+    const abrir = () => {
+      const id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.querySelector<HTMLDetailsElement>(':scope > details.gj-detalle')?.setAttribute('open', '');
+      let a: HTMLElement | null = el;
+      while (a) {
+        if (a.tagName === 'DETAILS') (a as HTMLDetailsElement).open = true;
+        a = a.parentElement;
+      }
+      setTimeout(() => el.scrollIntoView({ block: 'start' }), 30);
+    };
+    abrir();
+    window.addEventListener('hashchange', abrir);
+    return () => window.removeEventListener('hashchange', abrir);
+  }, []);
   const [q, setQ] = useState('');
   const busca = normal(q.trim());
   const visibles = useMemo(

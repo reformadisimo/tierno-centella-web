@@ -437,16 +437,16 @@ Pulsa cualquier tarjeta para verla: se abre en otra pestaña y no pierdes la gu�
 
 [[web]]
 
-- **Portada**: vídeo luminoso, tu especialidad en una frase, "¿Qué te está pasando?" con el contador de plazo, la sección Mujer y trabajo, tus casos, el equipo, las herramientas, los vídeos de Instagram y el blog.
-- **Acoso laboral**: 9 guías (cómo saber si es acoso, cómo demostrarlo, qué reclamar, baja por ansiedad, Administración y educación, vía penal...).
-- **Despido**: 4 guías y la calculadora.
-- **Incapacidad permanente**: 3 guías con la Ley 2/2025 y la foto de la ventana que tanto nos gusta de tu web.
-- **Mujer y trabajo** (nueva): embarazo, conciliación, permisos, acoso sexual y brecha salarial.
-- **Herramientas**: 14, sin pedir datos.
-- **Sentencias**: cada caso tiene su propia página, con tribunal, fecha, qué pasó, qué se decidió, por qué importa y la fuente. Una página por sentencia es lo que mejor demuestra experiencia ante Google y lo que más citan las IA. Lo que no está confirmado aparece como pendiente.
-- **Jesús Tierno**: tu ficha, con el libro y los vídeos con Piñuel.
-- **Redes y medios**, **Vídeos**, **Blog** (con buscador), **Preguntas frecuentes**, **Glosario** (más de 60 términos), **Empresas y colegios**, **Contacto** (formulario, WhatsApp, mapa y precios claros).
-- **Cookies, aviso legal y privacidad**, con un aviso de cookies que deja rechazar con un clic.
+- **[Portada](/)**: vídeo luminoso, tu especialidad en una frase, "¿Qué te está pasando?" con el contador de plazo, la sección Mujer y trabajo, tus casos, el equipo, las herramientas, los vídeos de Instagram y el blog.
+- **[Acoso laboral](/acoso-laboral)**: 9 guías (cómo saber si es acoso, cómo demostrarlo, qué reclamar, baja por ansiedad, Administración y educación, vía penal...).
+- **[Despido](/despido)**: 4 guías y la calculadora.
+- **[Incapacidad permanente](/incapacidad-permanente)**: 3 guías con la Ley 2/2025 y la foto de la ventana que tanto nos gusta de tu web.
+- **[Mujer y trabajo](/mujer-y-trabajo)** (nueva): embarazo, conciliación, permisos, acoso sexual y brecha salarial.
+- **[Herramientas](/herramientas)**: 14, sin pedir datos.
+- **[Sentencias](/sentencias)**: cada caso tiene su propia página, con tribunal, fecha, qué pasó, qué se decidió, por qué importa y la fuente. Una página por sentencia es lo que mejor demuestra experiencia ante Google y lo que más citan las IA. Lo que no está confirmado aparece como pendiente.
+- **[Jesús Tierno](/jesus-tierno)**: tu ficha, con el libro y los vídeos con Piñuel.
+- **[Redes y medios](/redes-y-medios)**, **[Vídeos](/videos)**, **[Blog](/blog)** (con buscador), **[Preguntas frecuentes](/preguntas-frecuentes)**, **[Glosario](/glosario)** (más de 60 términos), **[Empresas y colegios](/empresas)**, **[Contacto](/contacto)** (formulario, WhatsApp, mapa y precios claros).
+- **[Cookies](/cookies), [aviso legal](/aviso-legal) y [privacidad](/privacidad)**, con un aviso de cookies que deja rechazar con un clic.
 
 > Todas las guías llevan la firma "Pendiente de revisión por Jesús Tierno Centella". Cuando las revises, pasará a "Revisado por".
 
@@ -677,7 +677,7 @@ Hemos revisado los 220 artículos de tu blog uno a uno:
 - **Guías** (las secciones de Acoso, Despido, Incapacidad y Mujer y trabajo): contenido de fondo que no caduca. Son las páginas que deben salir en Google.
 - **Blog**: actualidad (sentencias, cambios de ley) y respuestas a dudas concretas. Cada artículo enlaza a su guía y a su herramienta, para que la persona avance.
 
-**Ya hay 26 artículos en el blog**, 18 de ellos escritos en octubre de 2026. Entre ellos: despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, denunciar el acoso sin pruebas, cómo es un juicio por acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso, canal de denuncias, qué despidos dan derecho a paro y me han denunciado por acoso y es mentira. Los dos de acoso sin pruebas y del juicio responden a búsquedas con muy poca competencia en Google (dificultad 14 y 6 sobre 100, según Semrush). **Necesitamos que los revises**.
+**Ya hay 26 artículos en el blog**, 18 de ellos escritos en octubre de 2026. Entre ellos: [despido disciplinario](/blog/despido-disciplinario-que-hacer), [papeleta de conciliación](/blog/papeleta-de-conciliacion-smac-despido), [periodo de prueba](/blog/despido-en-periodo-de-prueba), [cuánto se cobra de baja](/blog/cuanto-cobras-de-baja-y-cuanto-dura), [cómo denunciar el acoso](/blog/como-denunciar-acoso-laboral), [denunciar el acoso sin pruebas](/blog/denunciar-acoso-laboral-sin-pruebas), [cómo es un juicio por acoso](/blog/juicio-por-acoso-laboral), [artículo 50](/blog/extincion-del-contrato-articulo-50), [cómo pedir la incapacidad](/blog/como-solicitar-la-incapacidad-permanente), [tipos de acoso](/blog/tipos-de-acoso-laboral), [canal de denuncias](/blog/canal-de-denuncias-obligatorio-empresas), [qué despidos dan derecho a paro](/blog/que-despidos-dan-derecho-a-paro) y [me han denunciado por acoso y es mentira](/blog/me-han-denunciado-por-acoso-laboral-y-es-mentira). Los dos de acoso sin pruebas y del juicio responden a búsquedas con muy poca competencia en Google (dificultad 14 y 6 sobre 100, según Semrush). **Necesitamos que los revises**.
 
 > Una advertencia honesta: no tenemos acceso a Analytics ni a Search Console, así que no sabemos qué artículos antiguos te traen visitas hoy. Con esos datos afinaríamos las redirecciones y el orden del calendario.
 
@@ -748,14 +748,14 @@ Las sentencias son lo que más autoridad da a una web de abogados, ante Google, 
 | STS 159/2026 | La empresa puede reducir la prima por objetivos durante una baja si reduce también los objetivos, pero es discriminatorio exigir una permanencia que excluya a quien estuvo de baja | Trabajadores con salario variable |
 | STS 169/2026 | Una práctica que la empresa mantiene años puede convertirse en un derecho, y retirarla exige comunicarlo por escrito | Cualquier trabajador al que le quitan "lo de siempre" |
 
-**Otras que ya están en la web**: la del Supremo de 18 de noviembre de 2024 (audiencia previa antes del despido disciplinario), la Ley 2/2025 (la incapacidad ya no extingue el contrato) y el Real Decreto-ley 9/2025 (19 semanas por nacimiento).
+**Otras que ya están en la web**: la del Supremo de 18 de noviembre de 2024 (audiencia previa antes del despido disciplinario), la Ley 2/2025 (la incapacidad ya no extingue el contrato) y el [Real Decreto-ley 9/2025](/mujer-y-trabajo) (19 semanas por nacimiento).
 
 **Las tuyas, contadas por ti en Instagram** (falta que nos confirmes juzgado, fecha y cuantía):
 
-- 2025: despido declarado represalia porque la trabajadora pidió un permiso para una actividad escolar de su hija.
-- 2025: extinción con indemnización de una responsable degradada por pedir permisos para cuidar de su pareja.
-- 2025: despido "objetivo" declarado nulo por ser represalia por denunciar irregularidades.
-- 2025: sentencia por falta de prevención para una docente con discapacidad a la que no adaptaron el puesto.
+- [2025: despido declarado represalia](/sentencias/despido-represalia-permiso-hija-2025) porque la trabajadora pidió un permiso para una actividad escolar de su hija.
+- [2025: extinción con indemnización](/sentencias/degradada-tras-pedir-permisos-2025) de una responsable degradada por pedir permisos para cuidar de su pareja.
+- [2025: despido "objetivo" declarado nulo](/sentencias/despido-nulo-represalia-denuncia-interna-2025) por ser represalia por denunciar irregularidades.
+- [2025: sentencia por falta de prevención](/sentencias/prevencion-riesgos-centro-educativo-2025) para una docente con discapacidad a la que no adaptaron el puesto.
 
 > Estamos completando esta lista con sentencias recientes del Tribunal Supremo y de los tribunales de Madrid sobre acoso, despido nulo e incapacidad, cada una con su fuente. Las iremos añadiendo aquí y al calendario.
 

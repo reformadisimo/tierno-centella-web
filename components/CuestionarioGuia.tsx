@@ -67,7 +67,7 @@ export default function CuestionarioGuia() {
         return (
           <div key={p.n}>
             {titulo && <h3 className="cg-bloque">{titulo}</h3>}
-            <div className="cg-pregunta">
+            <div className="cg-pregunta" id={`pregunta-${p.n}`}>
               <div className="cg-cabeza">
                 <span className="cg-n">{p.n}</span>
                 <strong>{p.pregunta}</strong>
