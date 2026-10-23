@@ -140,7 +140,7 @@ export default function InicioEn() {
           </div>
           <div>
             <h2>Free tools</h2>
-            <p>Compensation, deadlines, harassment test, disability checker and ten more. In Spanish for now; the assistant can explain any result in English.</p>
+            <p>Compensation, deadlines, harassment test, disability checker and ten more, all in English. Free, instant and without leaving your details.</p>
             <Link className="boton boton-claro" href="/en/tools">
               See the tools
             </Link>

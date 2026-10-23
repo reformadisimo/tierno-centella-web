@@ -37,13 +37,13 @@ export default function Pie() {
             </ul>
           </div>
           <div>
-            <h2>{en ? 'Tools (in Spanish)' : 'Herramientas'}</h2>
+            <h2>{en ? 'Tools' : 'Herramientas'}</h2>
             <ul>
               <li>
-                <Link href="/calculadora-indemnizacion">{en ? 'Compensation calculator' : 'Calculadora de indemnización'}</Link>
+                <Link href={en ? '/en/tools/compensation-calculator' : '/calculadora-indemnizacion'}>{en ? 'Compensation calculator' : 'Calculadora de indemnización'}</Link>
               </li>
               <li>
-                <Link href="/herramientas/test-acoso">{en ? 'Harassment test' : 'Test de acoso laboral'}</Link>
+                <Link href={en ? '/en/tools/harassment-test' : '/herramientas/test-acoso'}>{en ? 'Harassment test' : 'Test de acoso laboral'}</Link>
               </li>
               <li>
                 <Link href={en ? '/en/tools' : '/herramientas'}>{en ? 'All tools' : 'Todas las herramientas'}</Link>

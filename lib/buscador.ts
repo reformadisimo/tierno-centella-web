@@ -4,6 +4,7 @@ import { GLOSARIO } from './glosario';
 import { FAQ } from './faq';
 import { HERRAMIENTAS } from './herramientas';
 import { CASOS_EN } from './casos-en';
+import { HERRAMIENTAS_EN } from './herramientas-en';
 
 // Índice del buscador, generado al construir la web: título, tipo, resumen y palabras de cada página.
 export type Resultado = { href: string; titulo: string; tipo: string; resumen: string; texto: string };
@@ -57,9 +58,12 @@ export function indiceEn(): Resultado[] {
     ['/en/contact', 'Contact and appointments', 'Phone, WhatsApp, address at Jorge Juan 78 (Madrid), consultation fee and form.'],
     ['/en/jesus-tierno', 'Jesús Tierno Centella', 'Employment lawyer and managing partner: background, book and interviews.'],
     ['/en/rulings', 'Rulings and cases', "Cases handled by the firm and useful case law."],
-    ['/en/tools', 'Free tools', 'Calculators and tests (in Spanish): compensation, deadlines, harassment test, disability.'],
+    ['/en/tools', 'Free tools', 'Calculators and tests: compensation, deadlines, harassment test, disability.'],
+    ['/en/blog', 'Blog', 'Practical articles on dismissal, harassment, sick leave and disability in Spain.'],
   ];
   for (const [href, titulo, resumen] of fijas) r.push({ href, titulo, tipo: 'Page', resumen, texto: '' });
+  for (const h of HERRAMIENTAS_EN) r.push({ href: h.href, titulo: h.titulo, tipo: 'Tool', resumen: h.texto, texto: '' });
+  for (const p of leerColeccion('en/blog')) r.push({ href: `/en/blog/${p.slug}`, titulo: p.titulo, tipo: 'Blog', resumen: p.descripcion, texto: plano(p.html).slice(0, 2500) });
   for (const c of CASOS) {
     const e = CASOS_EN[c.slug];
     if (e) r.push({ href: `/en/rulings/${c.slug}`, titulo: e.titulo, tipo: `Ruling · ${e.materia}`, resumen: e.resumen, texto: [e.resultado, e.porQueImporta, ...e.hechos].join(' ') });

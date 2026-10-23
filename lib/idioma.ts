@@ -1,4 +1,5 @@
 import { GUIAS_TRADUCIDAS } from './traducciones.generado';
+import { HERRAMIENTAS_ES_EN } from './herramientas-en';
 // Idioma de la página según la ruta: todo lo que cuelga de /en es la versión inglesa.
 export type Idioma = 'es' | 'en';
 export const idiomaDe = (ruta: string | null | undefined): Idioma => (ruta === '/en' || ruta?.startsWith('/en/') ? 'en' : 'es');
@@ -15,6 +16,7 @@ export const RUTAS_ES_EN: Record<string, string> = {
   '/sentencias': '/en/rulings',
   '/herramientas': '/en/tools',
   '/buscar': '/en/search',
+  '/blog': '/en/blog',
 };
 
 export const AREAS_ES_EN: Record<string, { en: string; carpeta: string }> = {
@@ -25,7 +27,7 @@ export const AREAS_ES_EN: Record<string, { en: string; carpeta: string }> = {
 };
 
 // Guías traducidas: ruta española -> ruta inglesa. Solo las que ya existen (lo genera scripts/traducciones.mjs).
-export const GUIAS_ES_EN: Record<string, string> = GUIAS_TRADUCIDAS;
+export const GUIAS_ES_EN: Record<string, string> = { ...GUIAS_TRADUCIDAS, ...HERRAMIENTAS_ES_EN };
 
 // Ruta equivalente en el otro idioma; si no hay traducción, la portada de ese idioma.
 export function rutaEnOtroIdioma(ruta: string): string {

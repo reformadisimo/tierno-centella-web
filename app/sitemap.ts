@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { leerColeccion } from '@/lib/contenido';
 import { CASOS } from '@/lib/casos';
 import { AREAS_EN } from '@/lib/areas-en';
+import { HERRAMIENTAS_EN } from '@/lib/herramientas-en';
 
 const BASE = 'https://tiernocentella.es';
 
@@ -39,7 +40,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((r) => ({ url: BASE + r }));
   const guias = [
     ...CASOS.map((c) => ({ url: `${BASE}/sentencias/${c.slug}` })),
-    ...['/en', '/en/contact', '/en/jesus-tierno', '/en/rulings', '/en/tools'].map((r) => ({ url: BASE + r })),
+    ...['/en', '/en/contact', '/en/jesus-tierno', '/en/rulings', '/en/tools', '/en/blog'].map((r) => ({ url: BASE + r })),
+    ...HERRAMIENTAS_EN.map((h) => ({ url: BASE + h.href })),
+    ...leerColeccion('en/blog').map((p) => ({ url: `${BASE}/en/blog/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...CASOS.map((c) => ({ url: `${BASE}/en/rulings/${c.slug}` })),
     ...AREAS_EN.flatMap((a) => [{ url: `${BASE}/en/${a.slug}` }, ...leerColeccion(`en/${a.carpeta}`).map((p) => ({ url: `${BASE}/en/${a.slug}/${p.slug}`, lastModified: p.actualizado ?? p.fecha }))]),
     ...leerColeccion('acoso').map((p) => ({ url: `${BASE}/acoso-laboral/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),

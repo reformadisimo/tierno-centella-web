@@ -123,7 +123,7 @@ export const MENU_EN: Grupo[] = [
       { href: '/en/dismissal/types-of-dismissal', texto: 'Types of dismissal' },
       { href: '/en/dismissal/when-is-a-dismissal-void', texto: 'When it is void' },
       { href: '/en/dismissal/deadline-to-challenge-a-dismissal', texto: 'Deadline to challenge it' },
-      { href: '/calculadora-indemnizacion', texto: 'Compensation calculator (in Spanish)' },
+      { href: '/en/tools/compensation-calculator', texto: 'Compensation calculator' },
     ],
   },
   {
@@ -156,13 +156,13 @@ export const MENU_EN: Grupo[] = [
     titulo: 'Tools',
     href: '/en/tools',
     foto: 'calculadora-papeles',
-    sub: '14 calculators and tests (in Spanish for now)',
+    sub: '14 free calculators and tests',
     enlaces: [
       { href: '/en/tools', texto: 'All tools' },
-      { href: '/herramientas/test-acoso', texto: 'Harassment test (ES)' },
-      { href: '/calculadora-indemnizacion', texto: 'Compensation calculator (ES)' },
-      { href: '/herramientas/plazos', texto: 'Deadlines (ES)' },
-      { href: '/herramientas/comprobador-incapacidad', texto: 'Disability checker (ES)' },
+      { href: '/en/tools/harassment-test', texto: 'Harassment test' },
+      { href: '/en/tools/compensation-calculator', texto: 'Compensation calculator' },
+      { href: '/en/tools/deadlines', texto: 'Deadlines' },
+      { href: '/en/tools/permanent-disability-checker', texto: 'Disability checker' },
     ],
   },
   {
@@ -173,6 +173,7 @@ export const MENU_EN: Grupo[] = [
     enlaces: [
       { href: '/en/jesus-tierno', texto: 'Jesús Tierno' },
       { href: '/en/rulings', texto: 'Rulings won' },
+      { href: '/en/blog', texto: 'Blog' },
       { href: '/en/contact', texto: 'Contact' },
     ],
   },

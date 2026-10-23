@@ -101,7 +101,7 @@ export default async function Area({ params }: { params: Promise<{ area: string 
       <section className="seccion">
         <div className="contenedor">
           <h2>Free tools</h2>
-          <p>Our calculators and tests are in Spanish for now. The assistant can explain any result to you in English.</p>
+          <p>Free, instant and without leaving your details. If you have any doubt about a result, ask our assistant.</p>
           <div className="acciones">
             {a.herramientas.map((h) => (
               <Link key={h.href} className="boton boton-claro" href={h.href}>

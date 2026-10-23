@@ -14,10 +14,10 @@ const SEGUN_TEMA: { ruta: string; tema: string; boton: string; href: string }[] 
   { ruta: '/mujer-y-trabajo', tema: 'embarazo o conciliación', boton: 'Permisos', href: '/herramientas/calendario-permisos' },
   { ruta: '/despido', tema: 'despido', boton: 'Calcular', href: '/calculadora-indemnizacion' },
   { ruta: '/consulta/despido', tema: 'despido', boton: '', href: '' },
-  { ruta: '/en/workplace-harassment', tema: 'workplace harassment', boton: 'Test (ES)', href: '/herramientas/test-acoso' },
-  { ruta: '/en/permanent-disability', tema: 'permanent disability', boton: 'Check (ES)', href: '/herramientas/comprobador-incapacidad' },
-  { ruta: '/en/women-at-work', tema: 'pregnancy or work-life balance', boton: 'Leave (ES)', href: '/herramientas/calendario-permisos' },
-  { ruta: '/en/dismissal', tema: 'dismissal', boton: 'Calculate', href: '/calculadora-indemnizacion' },
+  { ruta: '/en/workplace-harassment', tema: 'workplace harassment', boton: 'Test', href: '/en/tools/harassment-test' },
+  { ruta: '/en/permanent-disability', tema: 'permanent disability', boton: 'Check', href: '/en/tools/permanent-disability-checker' },
+  { ruta: '/en/women-at-work', tema: 'pregnancy or work-life balance', boton: 'Leave', href: '/en/tools/birth-leave-calendar' },
+  { ruta: '/en/dismissal', tema: 'dismissal', boton: 'Calculate', href: '/en/tools/compensation-calculator' },
 ];
 
 export default function BarraMovil() {

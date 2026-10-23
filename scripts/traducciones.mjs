@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const AREAS = { acoso: ['/acoso-laboral', '/en/workplace-harassment'], despido: ['/despido', '/en/dismissal'], incapacidad: ['/incapacidad-permanente', '/en/permanent-disability'], mujer: ['/mujer-y-trabajo', '/en/women-at-work'] };
+const AREAS = { acoso: ['/acoso-laboral', '/en/workplace-harassment'], despido: ['/despido', '/en/dismissal'], incapacidad: ['/incapacidad-permanente', '/en/permanent-disability'], mujer: ['/mujer-y-trabajo', '/en/women-at-work'], blog: ['/blog', '/en/blog'] };
 const pares = {};
 for (const [carpeta, [es, en]] of Object.entries(AREAS)) {
   const dir = path.join(process.cwd(), 'content', 'en', carpeta);

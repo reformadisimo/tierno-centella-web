@@ -19,7 +19,7 @@ export default function SearchEn() {
           </nav>
           <h1>Search the website</h1>
           <p className="entradilla">
-            English guides and pages. For everything in Spanish (tools, blog, glossary), use the <Link href="/buscar">Spanish search</Link>.
+            Guides, tools, blog articles and rulings in English. For the glossary and FAQs in Spanish, use the <Link href="/buscar">Spanish search</Link>.
           </p>
         </div>
       </header>

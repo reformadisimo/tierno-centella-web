@@ -1,4 +1,4 @@
-// Las cuatro áreas de la versión inglesa: textos de cabecera, plazos clave y herramientas (en español por ahora).
+// Las cuatro áreas de la versión inglesa: textos de cabecera, plazos clave y herramientas en inglés.
 export type AreaEn = {
   slug: string;
   carpeta: string;
@@ -38,8 +38,8 @@ export const AREAS_EN: AreaEn[] = [
       'You can claim against the company and against the harasser, and in some cases end your contract with compensation.',
     ],
     herramientas: [
-      { href: '/herramientas/test-acoso', texto: 'Is it harassment? Take the test (in Spanish)' },
-      { href: '/herramientas/mapa-de-pruebas', texto: 'Evidence map (in Spanish)' },
+      { href: '/en/tools/harassment-test', texto: 'Is it harassment? Take the test' },
+      { href: '/en/tools/harassment-evidence-map', texto: 'Evidence map' },
     ],
   },
   {
@@ -63,9 +63,9 @@ export const AREAS_EN: AreaEn[] = [
       'Do not sign anything without reading it: you can sign the settlement "no conforme" (not in agreement).',
     ],
     herramientas: [
-      { href: '/calculadora-indemnizacion', texto: 'Compensation calculator (in Spanish)' },
-      { href: '/herramientas/plazos', texto: 'Deadline calculator (in Spanish)' },
-      { href: '/herramientas/revisa-tu-carta-de-despido', texto: 'Check your dismissal letter (in Spanish)' },
+      { href: '/en/tools/compensation-calculator', texto: 'Compensation calculator' },
+      { href: '/en/tools/deadlines', texto: 'Deadline calculator' },
+      { href: '/en/tools/check-your-dismissal-letter', texto: 'Check your dismissal letter' },
     ],
   },
   {
@@ -88,7 +88,7 @@ export const AREAS_EN: AreaEn[] = [
       'What decides the degree is your medical condition and your usual job, not only the diagnosis.',
       'Since Law 2/2025, a permanent disability no longer ends your contract automatically.',
     ],
-    herramientas: [{ href: '/herramientas/comprobador-incapacidad', texto: 'Disability checker (in Spanish)' }],
+    herramientas: [{ href: '/en/tools/permanent-disability-checker', texto: 'Disability checker' }],
   },
   {
     slug: 'women-at-work',
@@ -111,8 +111,8 @@ export const AREAS_EN: AreaEn[] = [
       'Equal pay for equal work is the law, and companies must keep a pay register.',
     ],
     herramientas: [
-      { href: '/herramientas/calendario-permisos', texto: 'Birth leave calendar (in Spanish)' },
-      { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Reduced hours calculator (in Spanish)' },
+      { href: '/en/tools/birth-leave-calendar', texto: 'Birth leave calendar' },
+      { href: '/en/tools/reduced-hours-calculator', texto: 'Reduced hours calculator' },
     ],
   },
 ];

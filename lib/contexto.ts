@@ -7,11 +7,11 @@ const CLAVE = 'tc-recorrido';
 
 export function temaDeRuta(ruta: string): Tema | null {
   const r = ruta.toLowerCase();
-  if (/empresa|autodiagnostico|canal-de-denuncias|protocolo/.test(r)) return 'empresas';
+  if (/empresa|autodiagnostico|canal-de-denuncias|protocolo|company|whistleblowing/.test(r)) return 'empresas';
   if (/sentencias|rulings/.test(r)) return 'sentencias';
   if (/mujer|women|embaraz|pregnan|lactancia|nacimiento|birth|reduccion|reduced|calendario-permisos|brecha|pay-gap/.test(r)) return 'mujer';
   if (/acoso|harass|mobbing|mapa-de-pruebas|piñuel|convenio-190/.test(r)) return 'acoso';
-  if (/despid|dismiss|finiquito|indemnizacion|paro|smac|conciliacion|periodo-de-prueba|audiencia-previa|plazos|carta|extincion|articulo-50/.test(r)) return 'despido';
+  if (/despid|dismiss|finiquito|indemnizacion|paro|smac|conciliacion|periodo-de-prueba|audiencia-previa|plazos|carta|extincion|articulo-50|compensation|settlement|unemployment|deadlines|article-50/.test(r)) return 'despido';
   if (/incapacidad|disability|inss|baja|sick-leave|comprobador/.test(r)) return 'incapacidad';
   if (/herramientas|tools/.test(r)) return 'herramientas';
   return null;
@@ -127,29 +127,31 @@ export const VENTANAS_EN: Partial<Record<Tema, Ventana>> & { general: Ventana } 
     titulo: 'The clock is ticking: 20 working days',
     texto: 'In Spain you have 20 working days to challenge a dismissal. Tell us the date and we will tell you your last day.',
     principal: { href: '/en/dismissal', texto: 'What to do now' },
-    secundaria: { href: '/herramientas/plazos', texto: 'Deadline tool (Spanish)' },
+    secundaria: { href: '/en/tools/deadlines', texto: 'My deadline' },
     whatsapp: 'Hello, I have been dismissed and I would like to know my deadline.',
   },
   acoso: {
     etiqueta: 'If you are going through it',
     titulo: 'Is it workplace harassment?',
     texto: 'Read how to tell, and what evidence helps. We have been focused on harassment cases for more than 25 years.',
-    principal: { href: '/en/workplace-harassment/am-i-being-harassed-at-work', texto: 'How to tell' },
-    secundaria: { href: '/en/workplace-harassment/how-to-prove-workplace-harassment', texto: 'Evidence' },
+    principal: { href: '/en/tools/harassment-test', texto: 'Take the test' },
+    secundaria: { href: '/en/tools/harassment-evidence-map', texto: 'My evidence' },
     whatsapp: 'Hello, I think I am being harassed at work and would like to ask about it.',
   },
   incapacidad: {
     etiqueta: 'Permanent disability',
     titulo: 'Which degree could apply to you?',
     texto: 'The four degrees, what each one pays, and what to do if the social security office turns you down.',
-    principal: { href: '/en/permanent-disability/degrees-of-permanent-disability', texto: 'See the degrees' },
+    principal: { href: '/en/tools/permanent-disability-checker', texto: 'Check it' },
+    secundaria: { href: '/en/permanent-disability/degrees-of-permanent-disability', texto: 'The degrees' },
     whatsapp: 'Hello, I would like to ask about a permanent disability case.',
   },
   mujer: {
     etiqueta: 'Pregnancy and family',
     titulo: 'Know your leave and your protection',
     texto: 'Birth leave, breastfeeding and when a dismissal is void. We explain it in English.',
-    principal: { href: '/en/women-at-work', texto: 'Read more' },
+    principal: { href: '/en/tools/birth-leave-calendar', texto: 'My leave dates' },
+    secundaria: { href: '/en/women-at-work', texto: 'Read more' },
     whatsapp: 'Hello, I would like to ask about pregnancy or family leave at work.',
   },
   sentencias: {
