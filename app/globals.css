@@ -1639,3 +1639,18 @@ input:focus {
   gap: 8px 20px;
   margin-top: 28px;
 }
+
+.video-ambiente video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  background: var(--tinta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-ambiente video {
+    animation: none;
+  }
+}

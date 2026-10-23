@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import VideoAmbiente from '@/components/VideoAmbiente';
 
 export const metadata: Metadata = meta({
   titulo: 'Contacto y citas',
@@ -45,7 +46,8 @@ export default function Contacto() {
             </p>
           </div>
           <div className="texto">
-            <h2 style={{ marginTop: 0 }}>Consulta de una hora</h2>
+            <VideoAmbiente src="/video/consulta.webm" poster="/img/consulta-poster.webp" alt="Jesús Tierno reunido con una clienta en el despacho" />
+            <h2>Consulta de una hora</h2>
             <p>
               Estudiamos tus documentos y te damos un plan de acción. Presencial en el despacho o por videollamada; eliges día y
               hora al reservar.
