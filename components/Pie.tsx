@@ -10,7 +10,7 @@ export default function Pie() {
       <div className="contenedor">
         <div className="pie-rejilla">
           <div>
-            <img className="pie-logo" src="/img/logo-blanco.png" alt={DESPACHO.nombre} width={176} height={52} loading="lazy" />
+            <img className="pie-logo" src="/img/logo-tc-blanco.webp" alt={DESPACHO.nombre} width={230} height={55} loading="lazy" />
             <p>
               Despacho especializado en derecho laboral. Defendemos a trabajadores en despidos, acoso laboral e incapacidad
               permanente, y asesoramos a empresas.

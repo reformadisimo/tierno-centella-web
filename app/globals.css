@@ -1671,7 +1671,7 @@ input:focus {
 
 /* Logo */
 .marca img {
-  height: 44px;
+  height: 46px;
   width: auto;
   display: block;
 }
@@ -2244,4 +2244,7 @@ textarea {
   font-weight: 700;
   color: var(--coral-texto);
   margin-bottom: 6px;
+}
+.boton-telefono {
+  white-space: nowrap;
 }
