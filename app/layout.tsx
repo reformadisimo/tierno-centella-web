@@ -4,6 +4,7 @@ import './globals.css';
 import Cabecera from '@/components/Cabecera';
 import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';
+import Asistente from '@/components/Asistente';
 
 const fuente = localFont({
   src: './fonts/schibsted.woff2',
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="contenido">{children}</main>
         <Pie />
         <BarraMovil />
+        <Asistente />
       </body>
     </html>
   );

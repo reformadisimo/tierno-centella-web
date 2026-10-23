@@ -1,65 +1,77 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Llamada from '@/components/Llamada';
+import { CASOS, JURISPRUDENCIA } from '@/lib/casos';
 
 export const metadata: Metadata = {
   title: 'Sentencias y casos ganados',
-  description: 'Sentencias pioneras del despacho en acoso laboral, despidos e incapacidad permanente.',
+  description:
+    'Fichas de los casos del despacho: la primera condena en España a la empresa y al acosador (2005), Castilla y León (2011) y la URJC (2024).',
 };
-
-const CASOS = [
-  {
-    materia: 'Acoso laboral',
-    titulo: 'Primera condena en España a la empresa y al acosador a la vez',
-    texto:
-      'La empresa y el acosador fueron condenados de forma solidaria a indemnizar a la víctima por los daños y perjuicios del acoso. Hasta entonces la responsabilidad recaía solo en la empresa.',
-  },
-  {
-    materia: 'Acoso laboral',
-    titulo: 'La Universidad Rey Juan Carlos, condenada a pagar 123.000 € a una docente',
-    texto: 'La universidad no evitó el hostigamiento que sufría una profesora y tuvo que indemnizarla.',
-    fuente: {
-      nombre: 'El Español, 2 de abril de 2024',
-      url: 'https://www.elespanol.com/reportajes/20240402/universidad-rey-juan-carlos-condenada-pagar-eur-docente-no-evitar-acoso-laboral/844415900_0.html',
-    },
-  },
-  {
-    materia: 'Acoso laboral',
-    titulo: 'Primera condena por acoso en la administración educativa de Castilla y León',
-    texto: 'Un precedente para el profesorado de la enseñanza pública frente a la propia administración.',
-  },
-];
 
 export default function Sentencias() {
   return (
     <>
       <header className="cabeza-pagina">
         <div className="contenedor">
-          <h1>Sentencias que hemos ganado</h1>
-          <p className="entradilla">Algunos de los casos que han marcado el camino a otros trabajadores.</p>
+          <nav className="migas" aria-label="Estás en">
+            <Link href="/">Inicio</Link> / Sentencias
+          </nav>
+          <h1>Casos que han abierto camino</h1>
+          <p className="entradilla">
+            Cada ficha cuenta qué pasó, qué decidió el tribunal y por qué importa a quien hoy está en una situación parecida. Sin nombres de
+            clientes que no hayan dado su permiso.
+          </p>
         </div>
       </header>
       <section className="seccion">
+        <div className="contenedor fichas">
+          {CASOS.map((c) => (
+            <article className="ficha" key={c.slug} id={c.slug}>
+              <div className="ficha-anio">{c.anio || '—'}</div>
+              <span className="campo-ayuda">{c.materia}</span>
+              <h3>{c.titulo}</h3>
+              <span className="ficha-organo">
+                {c.organo}. {c.fecha}.
+              </span>
+              <p style={{ margin: 0 }}>{c.resumen}</p>
+              <div>
+                <strong>Qué pasó</strong>
+                <ul style={{ margin: '6px 0 0', paddingLeft: '1.2em' }}>
+                  {c.hechos.map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+              </div>
+              <p style={{ margin: 0 }}>
+                <strong>Resultado.</strong> {c.resultado}
+              </p>
+              <p style={{ margin: 0 }}>
+                <strong>Por qué importa.</strong> {c.porQueImporta}
+              </p>
+              {c.fuente && (
+                <a href={c.fuente.url} style={{ fontSize: '0.93rem' }}>
+                  {c.fuente.nombre}
+                </a>
+              )}
+              {c.pendiente && <span className="ficha-pendiente">Pendiente: {c.pendiente}</span>}
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="seccion seccion-blanca">
         <div className="contenedor">
-          <ul className="servicios">
-            {CASOS.map((c) => (
-              <li key={c.titulo}>
-                <div style={{ display: 'grid', gap: 6, padding: '20px 0' }}>
-                  <span className="campo-ayuda">{c.materia}</span>
-                  <strong style={{ fontSize: '1.3rem' }}>{c.titulo}</strong>
-                  <span>{c.texto}</span>
-                  {c.fuente && (
-                    <a href={c.fuente.url} style={{ fontSize: '0.95rem' }}>
-                      {c.fuente.nombre}
-                    </a>
-                  )}
-                </div>
-              </li>
+          <h2>Jurisprudencia que conviene conocer</h2>
+          <p>Sentencias de otros tribunales que explican bien cómo funciona la ley. No son casos del despacho.</p>
+          <div className="rejilla-guias">
+            {JURISPRUDENCIA.map((j) => (
+              <Link key={j.titulo} href={j.enlace}>
+                <span className="campo-ayuda">{j.organo}</span>
+                <strong>{j.titulo}</strong>
+                <span>{j.texto}</span>
+              </Link>
             ))}
-          </ul>
-          <p className="letra-pequena">
-            En la versión definitiva, cada sentencia tendrá su ficha: tribunal, fecha, problema, resultado y cuantía, con los datos
-            personales anonimizados.
-          </p>
+          </div>
         </div>
       </section>
       <Llamada asunto="laboral" />

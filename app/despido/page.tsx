@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
+import { leerColeccion } from '@/lib/contenido';
+import VideoYoutube from '@/components/VideoYoutube';
 
 export const metadata: Metadata = {
   title: 'Abogados de despido en Madrid',
@@ -101,6 +103,31 @@ export default function Despido() {
             <li>No firmes el finiquito como conforme sin que lo revise un abogado.</li>
             <li>Llámanos o calcula tu indemnización para saber cuánto está en juego.</li>
           </ol>
+        </div>
+      </section>
+      <section className="seccion seccion-blanca">
+        <div className="contenedor">
+          <h2>Guías para tu caso</h2>
+          <div className="rejilla-guias">
+            {leerColeccion('despido').map((g) => (
+              <Link key={g.slug} href={`/despido/${g.slug}`}>
+                <strong>{g.titulo}</strong>
+                <span>{g.descripcion}</span>
+              </Link>
+            ))}
+            {leerColeccion('blog')
+              .filter((g) => g.categoria === 'despido')
+              .map((g) => (
+                <Link key={g.slug} href={`/blog/${g.slug}`}>
+                  <strong>{g.titulo}</strong>
+                  <span>{g.descripcion}</span>
+                </Link>
+              ))}
+          </div>
+          <div style={{ marginTop: 40 }}>
+            <h2>Un caso del despacho en vídeo</h2>
+            <VideoYoutube id="IoBEF41_SCI" titulo="Sentencia ganada: la prueba del GPS en un despido" />
+          </div>
         </div>
       </section>
       <Llamada asunto="despido" />

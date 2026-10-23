@@ -1,3 +1,6 @@
+// Mientras sea una demo sin revisar por el despacho, los textos lo dicen.
+export const DEMO = true;
+
 // Datos del despacho tal y como aparecen hoy en tiernocentella.es (octubre de 2026).
 export const DESPACHO = {
   nombre: 'Tierno Centella Abogados',

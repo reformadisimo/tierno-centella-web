@@ -107,3 +107,21 @@ export function diasHabilesRestantes(hoyIso: string, ultimoIso: string): number 
   }
   return n;
 }
+
+// Suma n días hábiles a partir del día siguiente a la fecha dada.
+export function sumarHabiles(desdeIso: string, n: number): string {
+  const f = aFecha(desdeIso);
+  let contados = 0;
+  while (contados < n) {
+    f.setUTCDate(f.getUTCDate() + 1);
+    if (esHabil(f)) contados += 1;
+  }
+  return aIso(f);
+}
+
+// Mismo día del año siguiente (o del mes siguiente si se pide), para plazos de prescripción.
+export function sumarAnios(desdeIso: string, anios: number): string {
+  const f = aFecha(desdeIso);
+  f.setUTCFullYear(f.getUTCFullYear() + anios);
+  return aIso(f);
+}

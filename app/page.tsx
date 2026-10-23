@@ -1,62 +1,92 @@
 import Link from 'next/link';
 import Plazo from '@/components/Plazo';
+import VideoYoutube from '@/components/VideoYoutube';
 import { DESPACHO } from '@/lib/despacho';
+import { CASOS } from '@/lib/casos';
+import { leerColeccion } from '@/lib/contenido';
 
 export default function Inicio() {
+  const hitos = CASOS.filter((c) => c.materia === 'Acoso laboral');
+  const ultimos = leerColeccion('blog')
+    .sort((a, b) => b.fecha.localeCompare(a.fecha))
+    .slice(0, 3);
+  const despacho = {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    name: DESPACHO.nombre,
+    telephone: '+34913249797',
+    email: DESPACHO.email,
+    address: { '@type': 'PostalAddress', streetAddress: 'Calle de Jorge Juan, 78, 5.º C', postalCode: '28009', addressLocality: 'Madrid', addressCountry: 'ES' },
+    areaServed: 'España',
+    knowsAbout: ['Acoso laboral', 'Despido', 'Incapacidad permanente', 'Derecho laboral'],
+    founder: { '@type': 'Person', name: 'Jesús Tierno Centella' },
+  };
+
   return (
     <>
-      <section className="portada">
-        <div className="contenedor portada-rejilla">
-          <h1 className="portada-titulo">Si te han despedido, tienes 20 días hábiles para reclamar.</h1>
-          <div className="portada-plazo">
-            <Plazo />
-          </div>
-          <div className="portada-texto">
-            <p className="entradilla">
-              Somos un despacho de abogados laboralistas en Madrid. Desde hace más de 25 años defendemos a trabajadores frente a
-              despidos, acoso laboral e incapacidades denegadas.
-            </p>
-            <div className="acciones">
-              <Link className="boton boton-marcador" href="/calculadora-indemnizacion">
-                Calcular mi indemnización
-              </Link>
-              <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
-                Llamar al {DESPACHO.telefono}
-              </a>
-            </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(despacho) }} />
+      <section className="portada-video">
+        <picture>
+          <source media="(max-width: 700px)" srcSet="/img/portada-poster-movil.webp" />
+          <img className="poster" src="/img/portada-poster.webp" alt="" />
+        </picture>
+        <video autoPlay muted loop playsInline poster="/img/portada-poster.webp" aria-hidden="true">
+          <source media="(max-width: 700px)" src="/video/portada-movil.webm" type="video/webm" />
+          <source src="/video/portada.webm" type="video/webm" />
+        </video>
+        <div className="contenedor">
+          <h1>Abogados laboralistas en Madrid, especialistas en acoso laboral.</h1>
+          <p className="entradilla">
+            Más de 25 años con despidos, acoso e incapacidad permanente. En 2005 conseguimos la primera condena en España al propio acosador. Hoy seguimos
+            defendiendo a trabajadores de toda España, en nuestro despacho de Jorge Juan o por videollamada.
+          </p>
+          <div className="acciones">
+            <Link className="boton boton-marcador" href="/herramientas/test-acoso">
+              ¿Es acoso lo que me pasa?
+            </Link>
+            <Link className="boton boton-claro" href="/calculadora-indemnizacion">
+              Calcular mi indemnización
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="seccion">
         <div className="contenedor">
-          <h2>En qué te ayudamos</h2>
-          <ul className="servicios">
-            <li>
-              <Link href="/despido">
-                <strong>Despido</strong>
-                <span>Revisamos tu carta y calculamos lo que te deben. Si el despido es improcedente o nulo, lo reclamamos.</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/acoso-laboral">
-                <strong>Acoso laboral</strong>
-                <span>Te ayudamos a reunir las pruebas, a protegerte mientras sigues trabajando y a reclamar a la empresa y al acosador.</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/incapacidad-permanente">
-                <strong>Incapacidad permanente</strong>
-                <span>Si la Seguridad Social te la ha denegado o te ha dado un grado menor del que te corresponde, la recurrimos.</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contacto">
-                <strong>Empresas</strong>
-                <span>Asesoramiento laboral a pymes y centros educativos, protocolos de acoso e investigaciones internas.</span>
-              </Link>
-            </li>
-          </ul>
+          <h2>¿Qué te está pasando?</h2>
+          <div className="dos-columnas" style={{ marginTop: 24 }}>
+            <div>
+              <h3 style={{ fontSize: '1.35rem', marginBottom: 10 }}>Me han despedido</h3>
+              <p>Tienes 20 días hábiles para reclamar. Pon la fecha de tu carta y te decimos cuántos te quedan.</p>
+              <Plazo />
+            </div>
+            <div style={{ display: 'grid', gap: 28, alignContent: 'start' }}>
+              <div>
+                <h3 style={{ fontSize: '1.35rem', marginBottom: 10 }}>Sufro acoso en el trabajo</h3>
+                <p>No es un mal día ni un mal jefe: es un trato hostil que se repite. Se puede demostrar, y aquí te enseñamos cómo.</p>
+                <div className="acciones" style={{ marginTop: 12 }}>
+                  <Link className="boton" href="/herramientas/test-acoso">
+                    Hacer el test
+                  </Link>
+                  <Link className="boton boton-claro" href="/acoso-laboral">
+                    Guía del acoso laboral
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '1.35rem', marginBottom: 10 }}>Me han denegado la incapacidad</h3>
+                <p>Tienes 30 días hábiles para la reclamación previa. Muchas incapacidades denegadas se ganan después en el juzgado.</p>
+                <div className="acciones" style={{ marginTop: 12 }}>
+                  <Link className="boton" href="/herramientas/comprobador-incapacidad">
+                    Comprobar mi caso
+                  </Link>
+                  <Link className="boton boton-claro" href="/incapacidad-permanente">
+                    Guía de incapacidad
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -64,28 +94,18 @@ export default function Inicio() {
         <div className="contenedor">
           <h2>Casos que han abierto camino</h2>
           <ul className="hitos">
-            <li>
-              <strong>Primera condena en España a la empresa y al acosador a la vez</strong>
-              <span>Los dos fueron condenados a pagar los daños de forma solidaria a la víctima de acoso laboral.</span>
-            </li>
-            <li>
-              <strong>123.000 € para una docente acosada</strong>
-              <span>
-                La Universidad Rey Juan Carlos, condenada por no evitar el acoso que sufría una profesora.{' '}
-                <a href="https://www.elespanol.com/reportajes/20240402/universidad-rey-juan-carlos-condenada-pagar-eur-docente-no-evitar-acoso-laboral/844415900_0.html">
-                  Lo contó El Español
-                </a>
-                .
-              </span>
-            </li>
-            <li>
-              <strong>Primera condena por acoso en la administración educativa de Castilla y León</strong>
-              <span>Un precedente para el profesorado de la enseñanza pública.</span>
-            </li>
+            {hitos.map((c) => (
+              <li key={c.slug}>
+                <strong>
+                  {c.anio}. {c.titulo}
+                </strong>
+                <span>{c.resumen}</span>
+              </li>
+            ))}
           </ul>
           <div className="acciones">
             <Link className="boton boton-claro" href="/sentencias">
-              Ver más sentencias
+              Ver las fichas de cada caso
             </Link>
           </div>
         </div>
@@ -94,24 +114,88 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor dos-columnas">
           <div>
-            <h2>Hablas con un abogado desde el primer día</h2>
-            <p>
-              Cuéntanos tu caso por teléfono o WhatsApp y te diremos si tiene recorrido. Si quieres que lo estudiemos a fondo, con tus
-              documentos, reservas una consulta de una hora, presencial en Jorge Juan o por videollamada.
-            </p>
+            <img className="foto" src="/img/jesus-retrato.webp" alt="Jesús Tierno Centella" style={{ aspectRatio: '4 / 5', objectPosition: 'top', maxWidth: 440 }} />
           </div>
           <div>
+            <h2>Te atiende un especialista, no una centralita</h2>
             <p>
-              <strong>Consulta con un abogado del despacho:</strong> {DESPACHO.precioCita} €.
-              <br />
-              <strong>Consulta con Jesús Tierno:</strong> {DESPACHO.precioCitaJesus} €.
+              Jesús Tierno dirige el despacho y lleva personalmente los casos más complejos. Es coautor, con el psicólogo Bernabé Tierno, de{' '}
+              <em>Valores en el trabajo</em>, y ha conversado en dos entrevistas con Iñaki Piñuel, uno de los mayores expertos en mobbing.
+            </p>
+            <VideoYoutube id="TwKRGi1LISY" titulo="Si te acosan en tu trabajo: entrevista a Jesús Tierno" />
+            <p style={{ marginTop: 16 }}>
+              <Link href="/jesus-tierno">Conoce a Jesús Tierno</Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="seccion seccion-blanca">
+        <div className="contenedor">
+          <h2>Herramientas gratuitas, sin dejar tu teléfono</h2>
+          <ul className="servicios">
+            <li>
+              <Link href="/herramientas/mapa-de-pruebas">
+                <strong>Mapa de pruebas</strong>
+                <span>Qué pruebas de acoso tienes ya y cuáles te faltan.</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/herramientas/revisa-tu-carta-de-despido">
+                <strong>Revisa tu carta</strong>
+                <span>Los defectos de forma que pueden hacer improcedente tu despido.</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/calculadora-indemnizacion">
+                <strong>Calculadora</strong>
+                <span>Tu indemnización por despido objetivo o improcedente, al momento.</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/herramientas/plazos">
+                <strong>Plazos</strong>
+                <span>El último día para reclamar un despido, una sanción, una deuda o una incapacidad.</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {ultimos.length > 0 && (
+        <section className="seccion">
+          <div className="contenedor">
+            <h2>Lo último en el blog</h2>
+            <div className="rejilla-guias">
+              {ultimos.map((p) => (
+                <Link key={p.slug} href={`/blog/${p.slug}`}>
+                  <strong>{p.titulo}</strong>
+                  <span>{p.descripcion}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="seccion seccion-blanca">
+        <div className="contenedor dos-columnas">
+          <div>
+            <h2>En Jorge Juan, en el centro de Madrid</h2>
+            <p>
+              Consulta de una hora con documentos, presencial o por videollamada: {DESPACHO.precioCita} € con un abogado del despacho o{' '}
+              {DESPACHO.precioCitaJesus} € con Jesús Tierno. La primera orientación por teléfono o WhatsApp no tiene coste.
             </p>
             <div className="acciones">
               <Link className="boton" href="/contacto">
                 Pedir cita
               </Link>
+              <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
+                {DESPACHO.telefono}
+              </a>
             </div>
           </div>
+          <img className="foto" src="/img/fachada.webp" alt="Edificios del centro de Madrid" loading="lazy" />
         </div>
       </section>
     </>

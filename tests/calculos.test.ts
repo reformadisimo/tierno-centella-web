@@ -1,5 +1,5 @@
 // Casos calculados a mano antes de escribir el código. Ejecutar: npm test
-import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes, mesesTrabajados } from '../lib/calculos.ts';
+import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes, mesesTrabajados, sumarHabiles, sumarAnios } from '../lib/calculos.ts';
 
 let fallos = 0;
 function igual(nombre: string, real: unknown, esperado: unknown) {
@@ -38,6 +38,11 @@ igual('plazo navidad', ultimoDiaParaReclamar('2026-12-15'), '2027-01-19');
 // El lunes 26/10, primer día del plazo, quedan los 20 hábiles enteros: ese mismo día ya cuenta.
 igual('restantes el lunes 26/10', diasHabilesRestantes('2026-10-26', '2026-11-20'), 20);
 igual('restantes tras el plazo', diasHabilesRestantes('2026-11-21', '2026-11-20'), -1);
+
+// 30 hábiles desde el lunes 2/11/2026: del 3/11 al 30/11 son 20; 1-4/12 y 7/12 suman 25; el 8/12 es festivo; 9, 10, 11, 14 y 15/12 -> 30.
+igual('30 habiles incapacidad', sumarHabiles('2026-11-02', 30), '2026-12-15');
+igual('20 habiles = ultimo dia despido', sumarHabiles('2026-10-23', 20), ultimoDiaParaReclamar('2026-10-23'));
+igual('un año', sumarAnios('2026-03-15', 1), '2027-03-15');
 
 if (fallos) {
   console.log(`\n${fallos} fallo(s)`);

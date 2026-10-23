@@ -1,3 +1,5 @@
+'use client';
+
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 
 export default function BarraMovil() {
@@ -6,6 +8,9 @@ export default function BarraMovil() {
       <a href={DESPACHO.telefonoHref}>Llamar</a>
       <a href={enlaceWhatsapp('Hola, quiero consultar un caso laboral.')}>WhatsApp</a>
       <a href="/calculadora-indemnizacion">Calcular</a>
+      <button type="button" onClick={() => window.dispatchEvent(new Event('abrir-asistente'))}>
+        Preguntar
+      </button>
     </nav>
   );
 }

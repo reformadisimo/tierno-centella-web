@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Llamada from '@/components/Llamada';
+import { leerColeccion } from '@/lib/contenido';
 
 export const metadata: Metadata = {
   title: 'Abogados de incapacidad permanente en Madrid',
@@ -25,6 +27,13 @@ export default function Incapacidad() {
             <p>
               <strong>Tienes 30 días hábiles para la reclamación previa</strong> desde que te notifican la resolución. Es el primer
               paso obligatorio antes de ir a juicio.
+            </p>
+          </div>
+
+          <div className="recuadro">
+            <p>
+              <strong>Novedad de 2025.</strong> Desde la Ley 2/2025, la incapacidad permanente ya no extingue automáticamente tu contrato. Puedes
+              pedir seguir en la empresa, y esta debe intentar adaptar tu puesto o recolocarte.
             </p>
           </div>
 
@@ -68,6 +77,27 @@ export default function Incapacidad() {
             <li>Presentamos la reclamación previa dentro de plazo.</li>
             <li>Si la deniegan, presentamos la demanda y te defendemos en el juicio.</li>
           </ol>
+        </div>
+      </section>
+      <section className="seccion seccion-blanca">
+        <div className="contenedor">
+          <h2>Guías para tu caso</h2>
+          <div className="rejilla-guias">
+            {leerColeccion('incapacidad').map((g) => (
+              <Link key={g.slug} href={`/incapacidad-permanente/${g.slug}`}>
+                <strong>{g.titulo}</strong>
+                <span>{g.descripcion}</span>
+              </Link>
+            ))}
+            {leerColeccion('blog')
+              .filter((g) => g.categoria === 'incapacidad')
+              .map((g) => (
+                <Link key={g.slug} href={`/blog/${g.slug}`}>
+                  <strong>{g.titulo}</strong>
+                  <span>{g.descripcion}</span>
+                </Link>
+              ))}
+          </div>
         </div>
       </section>
       <Llamada asunto="incapacidad permanente" />
