@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
+import OficiosGuia from './OficiosGuia';
 import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
@@ -406,6 +407,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   semaforo: BloqueSemaforo,
   dolor: BloqueDolor,
   anuncios: AnunciosGuia,
+  oficios: OficiosGuia,
   'mock-ficha': MockupFicha,
   'mock-ia': MockupIA,
   'mock-velocidad': MockupVelocidad,

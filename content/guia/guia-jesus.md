@@ -470,33 +470,7 @@ Salen del estudio de cómo trabajan los despachos que más clientes captan y de 
 
 Una web como la tuya, y todo lo que la rodea, no lo hace una persona. Si lo encargaras como se hace normalmente, tendrías que contratar y coordinar a todos estos profesionales, cada uno por su lado:
 
-| # | Oficio | Qué ha hecho en tu web |
-| --- | --- | --- |
-| 1 | Diseño gráfico | La imagen, los colores, las fotos y el logo refinado |
-| 2 | Experiencia de usuario | Que quien llega angustiado encuentre en dos toques qué hacer y cómo hablar contigo |
-| 3 | Programación web | Una web rápida, segura y que funciona igual en cualquier móvil u ordenador |
-| 4 | Herramientas a medida | Las 14 calculadoras y tests |
-| 5 | Inteligencia artificial | El asistente que conoce toda tu web y atiende a cualquier hora |
-| 6 | Redacción jurídica divulgativa | Guías y artículos claros, con plazos y fuentes, sin jerga |
-| 7 | SEO de contenidos | Qué busca la gente y cómo lo busca, para escribir lo que de verdad se lee |
-| 8 | SEO técnico | Datos para Google, mapa de la web y las 220 direcciones antiguas redirigidas |
-| 9 | SEO local | Tu ficha de Google, los directorios y las reseñas |
-| 10 | Visibilidad en IA | Que ChatGPT, Gemini y Google te citen cuando alguien pregunta |
-| 11 | Campañas de Google Ads | Tus anuncios, sus palabras y lo que cuesta cada consulta |
-| 12 | Páginas de conversión | Las tres páginas para tus anuncios, pensadas para que llamen |
-| 13 | Fotografía y vídeo | Elegir, recortar y tratar tus fotos y vídeos para que luzcan y carguen rápido |
-| 14 | Análisis y medición | Contar cada llamada, WhatsApp y formulario, y saber de dónde viene |
-| 15 | Automatización | El seguimiento por correo de cada consulta |
-| 16 | Estudio de la competencia | Qué hacen y qué prometen los despachos que compiten contigo |
-| 17 | Legal y cumplimiento | Cookies, privacidad, la norma europea de IA y las reglas de publicidad de la Abogacía |
-| 18 | Redes sociales | Instagram, LinkedIn y Facebook con un mismo mensaje |
-| 19 | Pruebas y calidad | Velocidad, accesibilidad y pruebas en móvil, tableta y ordenador |
-| 20 | Dirección del proyecto | Que todo encaje y salga a tiempo |
-| 21 | Seguridad y mantenimiento | Alojamiento, copias de seguridad y versiones guardadas |
-| 22 | Traducción | La versión en inglés de la web y del asistente, para clientes extranjeros |
-| 23 | Gestión de reseñas | Responder cada opinión y pedirlas a cada cliente, sin saltarse las normas de Google ni el secreto profesional |
-| 24 | Publicidad en redes | Campañas en Instagram, Facebook y LinkedIn, también para colegios e instituciones |
-| 25 | Optimización de la conversión | Probar versiones de páginas, botones y formularios y quedarse con la que trae más consultas |
+[[oficios]]
 
 **Normalmente serían varias empresas**: una agencia de diseño, un programador, una agencia de SEO, otra de anuncios, alguien para redes, un redactor... Cada una con sus plazos, sus reuniones y sus facturas, y tú en medio coordinando. **Nosotros lo hemos hecho todo con nuestro propio equipo**, más rápido y con todas las piezas hablando entre sí: lo que aprendamos en los anuncios mejora la web, lo que pregunte la gente al asistente se convierte en un artículo, y lo que veamos en los mapas de calor cambia la página al día siguiente.
 

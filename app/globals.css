@@ -5765,3 +5765,13 @@ dl .prosa-foto { margin: 28px 0; }
 .mk-grafico span { flex: 1; background: linear-gradient(#f2c14e, #e0a82e); border-radius: 4px 4px 0 0; }
 .mk-informe-nota { font-size: 0.7rem; line-height: 1.4; background: #e7f4ec; border-radius: 8px; padding: 8px; margin: 0; }
 .gm-movil { aspect-ratio: auto; } .gm-pantalla { height: auto; min-height: 440px; } .mk-whatsapp { height: auto; min-height: 470px; }
+
+/* Guía: los 25 oficios en tarjetas */
+.ofi { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 20px 0 28px; }
+.ofi-tarjeta { position: relative; background: var(--blanco); border: 1px solid var(--linea); border-radius: 14px; padding: 16px 14px 14px; display: flex; flex-direction: column; gap: 6px; }
+.ofi-icono { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; }
+.ofi-num { position: absolute; top: 12px; right: 14px; font-size: 0.8rem; font-weight: 800; color: var(--tinta-suave); }
+.ofi-tarjeta strong { font-size: 1rem; line-height: 1.25; }
+.ofi-texto { font-size: 0.88rem; color: var(--tinta-media); line-height: 1.4; }
+@media (max-width: 480px) { .ofi { grid-template-columns: 1fr 1fr; } .ofi-texto { font-size: 0.82rem; } }
+@media print { .ofi { grid-template-columns: repeat(4, 1fr); } .ofi-tarjeta { break-inside: avoid; } }
