@@ -19,8 +19,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const e = CASOS_EN[slug];
   const i = CASOS.findIndex((c) => c.slug === slug);
   if (!e) return {};
-  return meta({ titulo: e.titulo, descripcion: e.resumen, ruta: `/en/rulings/${slug}`, tipo: 'article', imagen: `/img/${FOTOS_JESUS[i % FOTOS_JESUS.length]}.webp` });
+  return meta({ titulo: e.titulo, tituloSeo: TITULO_SEO_EN[slug], descripcion: e.resumen, ruta: `/en/rulings/${slug}`, tipo: 'article', imagen: `/img/${FOTOS_JESUS[i % FOTOS_JESUS.length]}.webp` });
 }
+
+const TITULO_SEO_EN: Record<string, string> = {
+  'primera-condena-al-acosador-2005': 'First ruling against a harasser in Spain (2005)',
+  'acoso-administracion-educativa-castilla-y-leon-2011': 'Harassment in education: the region held liable',
+  'urjc-123000-euros-docente-2024': '123,000 euros for a harassed professor (2024)',
+  'despido-represalia-permiso-hija-2025': "Dismissed for taking leave for her daughter",
+  'despido-nulo-represalia-denuncia-interna-2025': 'Retaliatory dismissal declared null and void',
+};
 
 export default async function RulingEn({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

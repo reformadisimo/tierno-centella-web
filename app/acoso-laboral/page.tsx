@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
+import { Miniatura } from '@/components/PaginaGuia';
 import Llamada from '@/components/Llamada';
 import VideoYoutube from '@/components/VideoYoutube';
 import { leerColeccion } from '@/lib/contenido';
@@ -62,6 +63,9 @@ export default function Acoso() {
               Ver las fichas de cada caso
             </Link>
           </div>
+          <figure className="prosa-foto prosa-foto-ancha" style={{ maxWidth: 820 }}>
+            <img src="/img/mazo-640.webp" srcSet="/img/mazo-640.webp 640w, /img/mazo.webp 1200w" sizes="(max-width: 1000px) 100vw, 820px" alt="Un mazo de juez" width={1200} height={514} loading="lazy" decoding="async" />
+          </figure>
         </div>
       </section>
 
@@ -69,11 +73,12 @@ export default function Acoso() {
         <div className="contenedor">
           <h2>Todo lo que necesitas saber</h2>
           <p>Guías escritas para quien lo está viviendo, con la experiencia de más de 25 años del despacho.</p>
-          <div className="rejilla-guias">
+          <div className="rejilla-guias con-miniatura">
             {guias.map((g) => (
               <Link key={g.slug} href={`/acoso-laboral/${g.slug}`}>
-                <strong>{g.titulo}</strong>
-                <span>{g.descripcion}</span>
+                <Miniatura pieza={g} />
+                <div><strong>{g.titulo}</strong>
+                <span>{g.descripcion}</span></div>
               </Link>
             ))}
           </div>

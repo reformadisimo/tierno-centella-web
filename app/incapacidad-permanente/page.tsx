@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Miniatura } from '@/components/PaginaGuia';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Llamada from '@/components/Llamada';
@@ -98,6 +99,9 @@ export default function Incapacidad() {
             </tbody>
           </table>
 
+          <figure className="prosa-foto">
+            <img src="/img/medico-informe-640.webp" srcSet="/img/medico-informe-640.webp 640w, /img/medico-informe.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Un médico rellena un informe" width={1200} height={800} loading="lazy" decoding="async" />
+          </figure>
           <h2>Cómo trabajamos un caso de incapacidad</h2>
           <ol>
             <li>Estudiamos la resolución del INSS y tus informes médicos.</li>
@@ -112,19 +116,21 @@ export default function Incapacidad() {
       <section className="seccion seccion-blanca">
         <div className="contenedor">
           <h2>Guías para tu caso</h2>
-          <div className="rejilla-guias">
+          <div className="rejilla-guias con-miniatura">
             {leerColeccion('incapacidad').map((g) => (
               <Link key={g.slug} href={`/incapacidad-permanente/${g.slug}`}>
-                <strong>{g.titulo}</strong>
-                <span>{g.descripcion}</span>
+                <Miniatura pieza={g} />
+                <div><strong>{g.titulo}</strong>
+                <span>{g.descripcion}</span></div>
               </Link>
             ))}
             {leerColeccion('blog')
               .filter((g) => g.categoria === 'incapacidad')
               .map((g) => (
                 <Link key={g.slug} href={`/blog/${g.slug}`}>
-                  <strong>{g.titulo}</strong>
-                  <span>{g.descripcion}</span>
+                  <Miniatura pieza={g} />
+                  <div><strong>{g.titulo}</strong>
+                  <span>{g.descripcion}</span></div>
                 </Link>
               ))}
           </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Miniatura } from '@/components/PaginaGuia';
 import { notFound } from 'next/navigation';
 import { meta } from '@/lib/seo';
 import { leerColeccion } from '@/lib/contenido';
@@ -18,6 +19,13 @@ export async function generateMetadata({ params }: { params: Promise<{ area: str
   if (!a) return {};
   return meta({ titulo: a.titulo, tituloSeo: a.tituloSeo, descripcion: a.descripcion, ruta: `/en/${a.slug}`, imagen: `/img/${a.foto}.webp` });
 }
+
+const FOTO_MEDIO: Record<string, [string, string]> = {
+  'workplace-harassment': ['abogada-escucha', 'A lawyer from the firm listens to a client'],
+  dismissal: ['firma-contrato', 'A person signs a document'],
+  'permanent-disability': ['medico-informe', 'A doctor fills in a report'],
+  'women-at-work': ['igualdad', 'Hands holding the symbol of equality between women and men'],
+};
 
 export default async function Area({ params }: { params: Promise<{ area: string }> }) {
   const { area } = await params;
@@ -62,6 +70,9 @@ export default async function Area({ params }: { params: Promise<{ area: string 
               </li>
             ))}
           </ul>
+          <figure className="prosa-foto prosa-foto-ancha" style={{ maxWidth: 820 }}>
+            <img src={`/img/${FOTO_MEDIO[a.slug][0]}-640.webp`} srcSet={`/img/${FOTO_MEDIO[a.slug][0]}-640.webp 640w, /img/${FOTO_MEDIO[a.slug][0]}.webp 1200w`} sizes="(max-width: 1000px) 100vw, 820px" alt={FOTO_MEDIO[a.slug][1]} width={1200} height={514} loading="lazy" decoding="async" />
+          </figure>
         </div>
       </section>
 
@@ -70,11 +81,12 @@ export default async function Area({ params }: { params: Promise<{ area: string 
           <h2>Guides in English</h2>
           <p>Written for people going through it, with the firm&apos;s experience of over 25 years.</p>
           {guias.length ? (
-            <div className="rejilla-guias">
+            <div className="rejilla-guias con-miniatura">
               {guias.map((g) => (
                 <Link key={g.slug} href={`/en/${a.slug}/${g.slug}`}>
-                  <strong>{g.titulo}</strong>
-                  <span>{g.descripcion}</span>
+                  <Miniatura pieza={g} />
+                  <div><strong>{g.titulo}</strong>
+                  <span>{g.descripcion}</span></div>
                 </Link>
               ))}
             </div>

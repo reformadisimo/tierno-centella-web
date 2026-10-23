@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
+import { temaActual, VENTANAS } from '@/lib/contexto';
 
 // Aviso de salida: cuando alguien se va sin haber hecho nada, le ofrecemos un último paso útil
 // (su tema, una calculadora, el chat, una llamada o los pasos de su caso por correo).
@@ -112,6 +113,8 @@ export default function AvisoSalida() {
   }, [visible]);
 
   if (!visible) return null;
+  const temaLeido = temaActual(ruta);
+  const propio = ['despido', 'acoso', 'incapacidad', 'mujer', 'sentencias', 'empresas'].includes(temaLeido) ? VENTANAS[temaLeido] : null;
 
   const elegir = (opcion: string) => {
     medir('salida_opcion', { opcion });
@@ -154,8 +157,8 @@ export default function AvisoSalida() {
             <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
-        <p className="etiqueta-calida">Antes de irte</p>
-        <h2 id="salida-titulo">¿Te ayudamos con tu caso?</h2>
+        <p className="etiqueta-calida">{propio ? `Antes de irte · ${propio.etiqueta}` : 'Antes de irte'}</p>
+        <h2 id="salida-titulo">{!enLanding && propio ? propio.titulo : '¿Te ayudamos con tu caso?'}</h2>
         {enLanding ? (
           <>
             <p className="salida-intro">Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.</p>
@@ -197,10 +200,30 @@ export default function AvisoSalida() {
           </>
         ) : (
           <>
-        <p className="salida-intro">Elige lo que más se parece a lo tuyo y te llevamos directo.</p>
+        {propio ? (
+          <>
+            <p className="salida-intro">{propio.texto}</p>
+            <div className="salida-temas salida-propio">
+              <Link href={propio.principal.href} onClick={() => elegir(propio.principal.texto)}>
+                {propio.principal.texto}
+              </Link>
+              {propio.secundaria && (
+                <Link href={propio.secundaria.href} onClick={() => elegir(propio.secundaria!.texto)}>
+                  {propio.secundaria.texto}
+                </Link>
+              )}
+              <a href={enlaceWhatsapp(propio.whatsapp)} onClick={() => elegir('whatsapp')}>
+                Escribir por WhatsApp
+              </a>
+            </div>
+            <p className="salida-intro" style={{ marginTop: 18 }}>¿Es otra cosa?</p>
+          </>
+        ) : (
+          <p className="salida-intro">Elige lo que más se parece a lo tuyo y te llevamos directo.</p>
+        )}
 
             <div className="salida-temas">
-              {TEMAS.map((t) => (
+              {TEMAS.filter((t) => !propio || !ruta.startsWith(t.href)).map((t) => (
                 <Link key={t.href} href={t.href} onClick={() => elegir(t.texto)}>
                   {t.texto}
                 </Link>

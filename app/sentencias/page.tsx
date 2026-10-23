@@ -44,7 +44,7 @@ export default function Sentencias() {
             return (
               <article className="ficha" key={c.slug} id={c.slug}>
                 <div className="ficha-lado">
-                  <img src={`/img/${foto}-640.webp`} alt="Jesús Tierno Centella, socio director del despacho" width={640} height={480} loading="lazy" />
+                  <img src={`/img/${foto}-640.webp`} alt="Jesús Tierno Centella, socio director del despacho" width={640} height={480} loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} sizes="(max-width: 700px) 100vw, 300px" />
                   <div className="ficha-sello">
                     <span>{c.anio || 'Caso'}</span>
                     <small>{c.materia}</small>

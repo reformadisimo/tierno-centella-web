@@ -3,6 +3,20 @@ import FotoCabeza from '@/components/FotoCabeza';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import { GLOSARIO } from '@/lib/glosario';
+import { Fragment } from 'react';
+
+const FOTOS_GLOSARIO: [string, string][] = [
+  ['abogada-escucha', 'Una abogada del despacho escucha a una clienta'],
+  ['despido-caja', 'Una persona recoge sus cosas en una caja tras un despido'],
+  ['medico-informe', 'Un médico rellena un informe'],
+  ['mazo', 'Un mazo de juez'],
+  ['madre-hijo', 'Una madre juega con su hijo pequeño'],
+  ['firma-contrato', 'Una persona firma un documento'],
+  ['acoso-tension', 'Un superior señala a una trabajadora que se lleva la mano a la cabeza'],
+  ['biblioteca', 'Reunión en la biblioteca del despacho'],
+  ['calculadora-papeles', 'Cuentas con calculadora, cuaderno y portátil'],
+  ['reunion-equipo', 'El equipo del despacho reunido'],
+];
 import { BASE, esquemaMigas, meta } from '@/lib/seo';
 
 export const metadata: Metadata = meta({
@@ -56,14 +70,22 @@ export default function Glosario() {
           <dl className="prosa" style={{ maxWidth: '72ch' }}>
             {GLOSARIO.map((t, i) => {
               const nuevaLetra = i === 0 || GLOSARIO[i - 1].termino[0].toUpperCase() !== t.termino[0].toUpperCase();
+              const foto = i > 0 && i % 12 === 0 ? FOTOS_GLOSARIO[(i / 12 - 1) % FOTOS_GLOSARIO.length] : null;
               return (
-                <div key={t.termino} id={slug(t.termino)} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)' }}>
+                <Fragment key={t.termino}>
+                {foto && (
+                  <figure className="prosa-foto prosa-foto-ancha">
+                    <img src={`/img/${foto[0]}-640.webp`} srcSet={`/img/${foto[0]}-640.webp 640w, /img/${foto[0]}.webp 1200w`} sizes="(max-width: 1000px) 100vw, 720px" alt={foto[1]} width={1200} height={514} loading="lazy" decoding="async" />
+                  </figure>
+                )}
+                <div id={slug(t.termino)} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)' }}>
                   {nuevaLetra && <span id={`letra-${t.termino[0].toUpperCase()}`} />}
                   <dt style={{ fontWeight: 700, fontSize: '1.1rem' }}>{t.termino}</dt>
                   <dd style={{ margin: '4px 0 0' }}>
                     {t.definicion} {t.enlace && <Link href={t.enlace}>Saber más</Link>}
                   </dd>
                 </div>
+                </Fragment>
               );
             })}
           </dl>

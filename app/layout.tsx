@@ -4,10 +4,9 @@ import './globals.css';
 import Cabecera from '@/components/Cabecera';
 import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';
-import Asistente from '@/components/Asistente';
 import AvisoCookies from '@/components/AvisoCookies';
-import AvisoSalida from '@/components/AvisoSalida';
 import Medicion from '@/components/Medicion';
+import Diferidos from '@/components/Diferidos';
 import SalidaRapida from '@/components/SalidaRapida';
 import { AvisoDemo, CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
 import JsonLd from '@/components/JsonLd';
@@ -48,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={fuente.variable}>
       <body>
+        {/* Las miniaturas de los vídeos vienen de YouTube: abrir la conexión antes acelera la primera imagen de muchas guías. */}
+        <link rel="preconnect" href="https://i.ytimg.com" />
         <JsonLd datos={esquemaDespacho()} />
         <a className="salta" href="#contenido">
           Saltar al contenido
@@ -58,9 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="contenido">{children}</main>
         <Pie />
         <BarraMovil />
-        <Asistente />
         <AvisoCookies />
-        <AvisoSalida />
+        <Diferidos />
         <SalidaRapida />
         <WhatsappQR />
         <IdiomaHtml />

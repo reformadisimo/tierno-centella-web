@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
+import { Miniatura } from '@/components/PaginaGuia';
 import Llamada from '@/components/Llamada';
 import LateralHub from '@/components/LateralHub';
 import { leerColeccion } from '@/lib/contenido';
@@ -64,6 +65,9 @@ export default function Despido() {
             despedirte.
           </p>
 
+          <figure className="prosa-foto">
+            <img src="/img/firma-contrato-640.webp" srcSet="/img/firma-contrato-640.webp 640w, /img/firma-contrato.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona firma un documento" width={1200} height={800} loading="lazy" decoding="async" />
+          </figure>
           <h2>Qué puede decidir el juez</h2>
           <table className="tabla">
             <thead>
@@ -94,6 +98,9 @@ export default function Despido() {
             </tbody>
           </table>
 
+          <figure className="prosa-foto">
+            <img src="/img/despido-caja-640.webp" srcSet="/img/despido-caja-640.webp 640w, /img/despido-caja.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona recoge sus cosas en una caja tras un despido" width={1200} height={800} loading="lazy" decoding="async" />
+          </figure>
           <h2>Cuándo un despido puede ser nulo</h2>
           <p>La ley protege especialmente a quien estaba en alguna de estas situaciones al ser despedido:</p>
           <ul>
@@ -118,19 +125,21 @@ export default function Despido() {
       <section className="seccion seccion-blanca">
         <div className="contenedor">
           <h2>Guías para tu caso</h2>
-          <div className="rejilla-guias">
+          <div className="rejilla-guias con-miniatura">
             {leerColeccion('despido').map((g) => (
               <Link key={g.slug} href={`/despido/${g.slug}`}>
-                <strong>{g.titulo}</strong>
-                <span>{g.descripcion}</span>
+                <Miniatura pieza={g} />
+                <div><strong>{g.titulo}</strong>
+                <span>{g.descripcion}</span></div>
               </Link>
             ))}
             {leerColeccion('blog')
               .filter((g) => g.categoria === 'despido')
               .map((g) => (
                 <Link key={g.slug} href={`/blog/${g.slug}`}>
-                  <strong>{g.titulo}</strong>
-                  <span>{g.descripcion}</span>
+                  <Miniatura pieza={g} />
+                  <div><strong>{g.titulo}</strong>
+                  <span>{g.descripcion}</span></div>
                 </Link>
               ))}
           </div>

@@ -13,10 +13,10 @@ export const metadata: Metadata = meta({
 });
 
 const TEMAS = [
-  { id: 'acoso', nombre: 'Acoso laboral' },
-  { id: 'despido', nombre: 'Despido' },
-  { id: 'incapacidad', nombre: 'Incapacidad permanente' },
-  { id: 'despacho', nombre: 'El despacho y la consulta' },
+  { id: 'acoso', nombre: 'Acoso laboral', foto: 'acoso-tension', alt: 'Un superior señala a una trabajadora que se lleva la mano a la cabeza' },
+  { id: 'despido', nombre: 'Despido', foto: 'despido-caja', alt: 'Una persona recoge sus cosas en una caja tras un despido' },
+  { id: 'incapacidad', nombre: 'Incapacidad permanente', foto: 'medico-informe', alt: 'Un médico rellena un informe' },
+  { id: 'despacho', nombre: 'El despacho y la consulta', foto: 'recepcion', alt: 'La recepción del despacho Tierno Centella' },
 ] as const;
 
 export default function Preguntas() {
@@ -41,6 +41,9 @@ export default function Preguntas() {
           {TEMAS.map((t) => (
             <section key={t.id} id={t.id}>
               <h2>{t.nombre}</h2>
+              <figure className="prosa-foto prosa-foto-ancha">
+                <img src={`/img/${t.foto}-640.webp`} srcSet={`/img/${t.foto}-640.webp 640w, /img/${t.foto}.webp 1200w`} sizes="(max-width: 1000px) 100vw, 720px" alt={t.alt} width={1200} height={514} loading="lazy" decoding="async" />
+              </figure>
               {FAQ.filter((f) => f.tema === t.id).map((f) => (
                 <details key={f.pregunta} className="pregunta-faq">
                   <summary>{f.pregunta}</summary>

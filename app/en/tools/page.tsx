@@ -29,7 +29,8 @@ export default function ToolsEn() {
   return (
     <>
       <header className="cabeza-pagina">
-        <div className="contenedor">
+        <div className="contenedor cabeza-con-foto">
+          <div>
           <nav className="migas" aria-label="You are here">
             <Link href="/en">Home</Link> / Tools
           </nav>
@@ -38,6 +39,10 @@ export default function ToolsEn() {
             Fourteen calculators and tests, free and without leaving your details. They are in Spanish for now; if you have any doubt about a result, our assistant
             will explain it to you in English.
           </p>
+          </div>
+          <div>
+            <img className="foto" src="/img/portatil-manos.webp" srcSet="/img/portatil-manos-640.webp 640w, /img/portatil-manos.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="A person checks their papers next to a laptop" />
+          </div>
         </div>
       </header>
       <section className="seccion">

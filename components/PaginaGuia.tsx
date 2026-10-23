@@ -7,6 +7,45 @@ import JsonLd from './JsonLd';
 import { Compartir } from './BotonesAccion';
 import { Escuchar } from './Utiles';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
+import { fotosParaTexto, temaDe } from '@/lib/fotos-texto';
+
+const escapar = (t: string) => t.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+// Intercala fotos (y, una vez, la tarjeta de Jesús) dentro del texto, aproximadamente cada tres pantallas de móvil.
+function conImagenes(html: string, fotos: { src: string; es: string; en: string }[], en: boolean, tarjeta: string) {
+  const trozos = html.split(/(?=<h2[ >]|<h3[ >])/);
+  const bloques: string[] = [];
+  for (const t of trozos) {
+    if (t.length < 2600) { bloques.push(t); continue; }
+    // Secciones muy largas: se pueden cortar también entre párrafos o listas.
+    const partes = t.split(/(?<=<\/p>\n|<\/ul>\n|<\/ol>\n|<\/table>\n|<\/blockquote>\n)/);
+    bloques.push(...partes);
+  }
+  const total = bloques.reduce((n, b) => n + b.replace(/<[^>]+>/g, '').length, 0);
+  let acumulado = 0, recorrido = 0, i = 0, puesta = false;
+  let salida = '';
+  for (const b of bloques) {
+    const largo = b.replace(/<[^>]+>/g, '').length;
+    const esCabecera = /^<h[23][ >]/.test(b);
+    const puedeCortar = esCabecera || /^<p[ >]|^<ul|^<ol|^<blockquote|^<table/.test(b);
+    if (acumulado > (i === 0 && !puesta ? 900 : 1400) && puedeCortar && total - recorrido > 700) {
+      if (!puesta && i >= 1 && tarjeta) {
+        salida += tarjeta;
+        puesta = true;
+      } else if (fotos.length) {
+        const f = fotos[i % fotos.length];
+        const alt = escapar(en ? f.en : f.es);
+        salida += `<figure class="prosa-foto"><img src="/img/${f.src}-640.webp" srcset="/img/${f.src}-640.webp 640w, /img/${f.src}.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="${alt}"></figure>`;
+        i++;
+      }
+      acumulado = 0;
+    }
+    salida += b;
+    acumulado += largo;
+    recorrido += largo;
+  }
+  return salida;
+}
 
 // Fotos reales del despacho. Cada pieza sin foto propia recibe una fija según su nombre, para que no se repitan todas.
 const FOTOS: { src: string; alt: string }[] = [
@@ -56,6 +95,15 @@ export default function PaginaGuia({
   const video = videoPorId(pieza.video);
   const foto = fotoDePieza(pieza);
   const ruta = migas[migas.length - 1].href + '/' + pieza.slug;
+  const wa = enlaceWhatsapp(en ? `Hello, I have read "${pieza.titulo}" and I would like to ask about my case.` : `Hola, he leído "${pieza.titulo}" y quiero consultar mi caso.`);
+  const tarjeta = `<aside class="prosa-jesus"><img src="/img/jesus-mesa-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="${en ? 'Jesús Tierno Centella at his desk' : 'Jesús Tierno Centella en su mesa del despacho'}"><div><p class="prosa-jesus-titulo">${
+    en ? 'Does your case sound like this?' : '¿Tu caso se parece a esto?'
+  }</p><p>${
+    en
+      ? 'Jesús Tierno and his team have been defending workers for more than 25 years. Tell us what is happening and we will tell you which deadlines apply.'
+      : 'Jesús Tierno y su equipo llevan más de 25 años defendiendo a trabajadoras y trabajadores. Cuéntanos qué te pasa y te decimos qué plazos corren.'
+  }</p><div class="prosa-jesus-botones"><a class="boton" href="${escapar(wa)}">${en ? 'Write on WhatsApp' : 'Escribir por WhatsApp'}</a><a class="boton boton-claro" href="${DESPACHO.telefonoHref}">${DESPACHO.telefono}</a></div></div></aside>`;
+  const htmlConFotos = conImagenes(pieza.html, fotosParaTexto(temaDe(ruta, pieza.categoria), pieza.slug, foto.src + (video ? '' : '')), en, tarjeta);
   const datos = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -90,7 +138,7 @@ export default function PaginaGuia({
           <h1>{pieza.titulo}</h1>
           <p className="entradilla">{pieza.descripcion}</p>
           <div className="firma">
-            <img src="/img/jesus-retrato.webp" srcSet="/img/jesus-retrato-640.webp 640w, /img/jesus-retrato.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="" />
+            <img src="/img/jesus-avatar.webp" alt="" width={48} height={48} />
             <span>
               {en
                 ? DEMO
@@ -129,7 +177,7 @@ export default function PaginaGuia({
                 </ul>
               </nav>
             )}
-            <div className="prosa" dangerouslySetInnerHTML={{ __html: pieza.html }} />
+            <div className="prosa" dangerouslySetInnerHTML={{ __html: htmlConFotos }} />
             <Compartir titulo={pieza.titulo} />
           </article>
           <aside className="guia-lateral">
@@ -175,4 +223,10 @@ export default function PaginaGuia({
       </section>
     </>
   );
+}
+
+// Miniatura de una guía o artículo para los listados: la misma foto que abre la pieza.
+export function Miniatura({ pieza }: { pieza: Pieza }) {
+  const f = fotoDePieza(pieza);
+  return <img className="miniatura" src={f.src.replace('.webp', '-640.webp')} alt="" width={640} height={427} loading="lazy" decoding="async" />;
 }
