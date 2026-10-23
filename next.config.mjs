@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
+import { REDIRECCIONES_BLOG } from './lib/redirecciones-blog.mjs';
 
 // Direcciones de la web actual (WordPress) que deben llevar a su equivalente en la nueva,
-// para no perder visitas ni posicionamiento el día de la migración. El mapa completo de los
-// casi 200 artículos del blog se hará con los datos de Search Console.
+// para no perder visitas ni posicionamiento el día de la migración. Los 220 artículos del blog
+// antiguo están en lib/redirecciones-blog.mjs (ver docs/auditoria-blog-antiguo.md).
 const ANTIGUAS = [
   ['/acoso-laboral-mobbing', '/acoso-laboral'],
   ['/acoso-laboral-mobbing/test-viabilidad-acoso-laboral', '/herramientas/test-acoso'],
@@ -41,7 +42,10 @@ const nextConfig = {
     return [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }];
   },
   async redirects() {
-    return ANTIGUAS.map(([source, destination]) => ({ source, destination, permanent: true }));
+    const vistas = new Set();
+    return [...ANTIGUAS, ...REDIRECCIONES_BLOG]
+      .filter(([source]) => !vistas.has(source) && vistas.add(source))
+      .map(([source, destination]) => ({ source, destination, permanent: true }));
   },
 };
 export default nextConfig;
