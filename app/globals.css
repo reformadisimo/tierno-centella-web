@@ -5817,3 +5817,6 @@ dl .prosa-foto { margin: 28px 0; }
 .lg-tema-tu-marca { background: #e7f4ec; color: #17602f; }
 .lg-pregunta { font-size: 0.95rem; line-height: 1.4; }
 .lg-pregunta::before { content: '“'; } .lg-pregunta::after { content: '”'; }
+
+.lg-por{margin:8px 0 0;padding:8px 10px;border-radius:8px;background:#eef3fa;color:#0d2c48;font-size:.92rem;line-height:1.45}
+.lg-por b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}

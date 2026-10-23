@@ -29,12 +29,12 @@ export function Logo({ nombre, tam = 28 }: { nombre: string; tam?: number }) {
   return <img className="lg-logo" src={`/img/guia/${f}`} alt={`Logotipo de ${nombre}`} width={tam} height={tam} loading="lazy" />;
 }
 
-const REDES: { red: string; cifra: string; hoy: string; luego: string; tono: 'bien' | 'medio' | 'mal' }[] = [
+const REDES: { red: string; cifra: string; hoy: string; luego: string; por?: string; tono: 'bien' | 'medio' | 'mal' }[] = [
   { red: 'Instagram', cifra: '4.007 seguidores', hoy: 'Tus reels con Irene son lo mejor que tienes, pero hubo tres años de silencio.', luego: 'Un reel por semana y campañas con el test de acoso.', tono: 'medio' },
   { red: 'LinkedIn', cifra: '2.371 seguidores', hoy: 'Publicas muy poco y hay dos páginas de empresa.', luego: 'Una sola página y el canal para colegios, empresas e instituciones.', tono: 'medio' },
   { red: 'Facebook', cifra: '285 seguidores', hoy: 'Repite Instagram y no tiene anuncios.', luego: 'Anuncios sencillos para quien lo está pasando mal en el trabajo.', tono: 'mal' },
   { red: 'YouTube', cifra: 'Canal con entrevistas', hoy: 'La entrevista a Iñaki Piñuel y casos ganados, poco visibles.', luego: 'Cada vídeo, dentro de la guía de la web que le toca.', tono: 'medio' },
-  { red: 'TikTok', cifra: 'Sin cuenta del despacho', hoy: 'No hemos encontrado ninguna cuenta del despacho.', luego: 'Vídeos de un minuto que responden una duda ("¿me pueden despedir estando de baja?"). Se aprovechan los reels de Instagram.', tono: 'mal' },
+  { red: 'TikTok', cifra: 'Sin cuenta del despacho', hoy: 'No hemos encontrado ninguna cuenta del despacho.', luego: 'Vídeos de un minuto que responden una duda ("¿me pueden despedir estando de baja?"). Se aprovechan los reels de Instagram.', por: 'Ahí está quien empieza a trabajar: primer empleo, periodo de prueba, contratos temporales y, a veces, acoso. El 61 % de los españoles de 18 a 30 años usa TikTok cada mes. Y no es solo cosa de jóvenes: ya lo usa el 41 % de los internautas, 6 puntos más que hace un año. Facebook va al revés: el 62 % de quien entra cada mes tiene más de 45 años. Es un público que crece y se hace mayor cada año: quien empiece ahora llegará antes a esa gente. (IAB Spain, Estudio de Redes Sociales 2026.)', tono: 'mal' },
   { red: 'X', cifra: 'Dos cuentas', hoy: 'Abandonadas.', luego: 'O se reactiva una, o se deja de enlazar.', tono: 'mal' },
 ];
 
@@ -56,6 +56,11 @@ export function BloqueRedes() {
           <p className="lg-luego">
             <b>Con nosotros</b> {r.luego}
           </p>
+          {r.por && (
+            <p className="lg-por">
+              <b>Por qué</b> {r.por}
+            </p>
+          )}
         </div>
       ))}
     </div>
