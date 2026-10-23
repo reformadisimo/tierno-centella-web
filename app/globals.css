@@ -3867,3 +3867,34 @@ body:has(.landing) .pie {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* Texto de la cabecera de las landings: nítido sobre el vídeo, sin apagar el vídeo */
+.lp-heroe-texto {
+  background: rgba(4, 30, 52, 0.74);
+  -webkit-backdrop-filter: blur(8px) saturate(1.1);
+  backdrop-filter: blur(8px) saturate(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: clamp(22px, 3.2vw, 36px);
+  box-shadow: 0 20px 50px rgba(0, 20, 40, 0.28);
+  text-shadow: none;
+}
+
+.lp-heroe::after {
+  background: linear-gradient(90deg, rgba(0, 38, 64, 0.28) 0%, rgba(0, 38, 64, 0.12) 55%, rgba(0, 38, 64, 0.04) 100%);
+}
+
+.lp-heroe .lp-plazo {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lp-heroe .lp-sub,
+.lp-heroe .lp-ventajas li {
+  color: #fff;
+}
+
+@media (max-width: 939px) {
+  .lp-heroe::after {
+    background: rgba(0, 38, 64, 0.25);
+  }
+}
