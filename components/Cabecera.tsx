@@ -1,22 +1,33 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { DESPACHO } from '@/lib/despacho';
+import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { MENU } from '@/lib/navegacion';
 
 export default function Cabecera() {
   const ruta = usePathname();
   const [abierto, setAbierto] = useState(false);
+  const cabecera = useRef<HTMLElement>(null);
 
   useEffect(() => setAbierto(false), [ruta]);
   useEffect(() => {
     document.body.style.overflow = abierto ? 'hidden' : '';
+    // El menú empieza justo debajo de la cabecera, esté donde esté (con o sin la franja de demo encima).
+    if (abierto && cabecera.current) {
+      document.documentElement.style.setProperty('--menu-arriba', `${Math.round(cabecera.current.getBoundingClientRect().bottom)}px`);
+    }
+    if (!abierto) return;
+    const tecla = (e: KeyboardEvent) => e.key === 'Escape' && setAbierto(false);
+    window.addEventListener('keydown', tecla);
+    return () => window.removeEventListener('keydown', tecla);
   }, [abierto]);
 
+  const grupoActual = MENU.find((g) => g.enlaces.some((e) => e.href !== '/' && ruta.startsWith(e.href)))?.titulo;
+
   return (
-    <header className="cabecera">
+    <header className="cabecera" ref={cabecera}>
       <div className="contenedor cabecera-fila">
         <Link href="/" className="marca" aria-label="Tierno Centella Abogados, inicio">
           <img src="/img/logo-tc.webp" alt="Tierno Centella Abogados" width={192} height={46} />
@@ -64,29 +75,58 @@ export default function Cabecera() {
       {abierto && (
         <div id="menu-movil" className="menu-movil">
           <div className="contenedor">
-            {MENU.map((g) => (
-              <section key={g.titulo}>
-                <h2>{g.titulo}</h2>
-                <ul>
-                  {g.enlaces.map((e) => (
-                    <li key={e.href + e.texto}>
-                      <Link href={e.href}>{e.texto}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-            <section>
-              <h2>Contacto</h2>
-              <ul>
-                <li>
-                  <Link href="/contacto">Pedir cita</Link>
-                </li>
-                <li>
-                  <a href={DESPACHO.telefonoHref}>Llamar al {DESPACHO.telefono}</a>
-                </li>
-              </ul>
-            </section>
+            <p className="mm-intro">¿Qué te está pasando?</p>
+            <div className="mm-grupos">
+              {MENU.map((g) => (
+                <details key={g.titulo} className="mm-grupo" open={g.titulo === grupoActual}>
+                  <summary>
+                    <img src={`/img/${g.foto}-640.webp`} alt="" width={64} height={64} loading="lazy" />
+                    <span className="mm-texto">
+                      <strong>{g.titulo}</strong>
+                      <small>{g.sub}</small>
+                    </span>
+                    <svg className="mm-flecha" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </summary>
+                  <ul>
+                    {g.enlaces.map((e) => (
+                      <li key={e.href + e.texto}>
+                        <Link href={e.href} aria-current={ruta === e.href ? 'page' : undefined}>
+                          {e.texto}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ))}
+            </div>
+
+            <Link href="/jesus-tierno" className="mm-jesus">
+              <img src="/img/jesus-avatar.webp" alt="" width={56} height={56} loading="lazy" />
+              <span>
+                <strong>Jesús Tierno Centella</strong>
+                <small>Más de 25 años defendiendo a trabajadores</small>
+              </span>
+            </Link>
+
+            <div className="mm-contacto">
+              <strong>¿Hablamos de tu caso?</strong>
+              <p>
+                Primera consulta de una hora: {DESPACHO.precioCita} €{DESPACHO.iva}. {DESPACHO.direccion}, Madrid, o por videollamada.
+              </p>
+              <div className="mm-botones">
+                <a className="boton boton-marcador" href={DESPACHO.telefonoHref}>
+                  Llamar
+                </a>
+                <a className="boton mm-wa" href={enlaceWhatsapp('Hola, quiero consultar mi caso.')}>
+                  WhatsApp
+                </a>
+                <Link className="boton mm-cita" href="/contacto">
+                  Pedir cita
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}

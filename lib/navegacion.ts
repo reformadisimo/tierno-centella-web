@@ -1,8 +1,10 @@
-export type Grupo = { titulo: string; href: string; enlaces: { href: string; texto: string }[] };
+export type Grupo = { titulo: string; href: string; foto: string; sub: string; enlaces: { href: string; texto: string }[] };
 
 export const MENU: Grupo[] = [
   {
     titulo: 'Acoso laboral',
+    foto: 'acoso-tension',
+    sub: 'Cómo saberlo, demostrarlo y reclamar',
     href: '/acoso-laboral',
     enlaces: [
       { href: '/acoso-laboral', texto: 'Todo sobre el acoso laboral' },
@@ -16,6 +18,8 @@ export const MENU: Grupo[] = [
   },
   {
     titulo: 'Despido',
+    foto: 'despido-caja',
+    sub: 'Plazos, tipos y cuánto te corresponde',
     href: '/despido',
     enlaces: [
       { href: '/despido', texto: 'Qué hacer si te despiden' },
@@ -27,6 +31,8 @@ export const MENU: Grupo[] = [
   },
   {
     titulo: 'Incapacidad',
+    foto: 'incapacidad-ventana',
+    sub: 'Grados, cuantías y si te la deniegan',
     href: '/incapacidad-permanente',
     enlaces: [
       { href: '/incapacidad-permanente', texto: 'Incapacidad permanente' },
@@ -37,6 +43,8 @@ export const MENU: Grupo[] = [
   },
   {
     titulo: 'Mujer y trabajo',
+    foto: 'madre-hijo',
+    sub: 'Embarazo, jornada, permisos y acoso sexual',
     href: '/mujer-y-trabajo',
     enlaces: [
       { href: '/mujer-y-trabajo', texto: 'Tus derechos como trabajadora' },
@@ -50,6 +58,8 @@ export const MENU: Grupo[] = [
   },
   {
     titulo: 'Herramientas',
+    foto: 'calculadora-papeles',
+    sub: '14 calculadoras y tests para tu caso',
     href: '/herramientas',
     enlaces: [
       { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },
@@ -70,6 +80,8 @@ export const MENU: Grupo[] = [
   },
   {
     titulo: 'El despacho',
+    foto: 'fachada',
+    sub: 'Jesús Tierno, sentencias, vídeos y blog',
     href: '/jesus-tierno',
     enlaces: [
       { href: '/jesus-tierno', texto: 'Jesús Tierno' },
