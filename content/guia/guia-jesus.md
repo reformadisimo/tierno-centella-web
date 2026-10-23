@@ -83,6 +83,60 @@ Lo hemos medido todo el mismo día con las herramientas de Google y de Pingdom. 
 
 **Lo que sí está bien.** El SEO técnico básico marca 100 y Google te conoce: apareces en búsquedas como "abogados mobbing especialistas". La base existe.
 
+## 4 bis. Dónde estás hoy en Google y en la IA (datos de Semrush)
+
+Hemos analizado tu web con **Semrush Pro**, la herramienta de referencia para medir el posicionamiento. Datos de España, octubre de 2026.
+
+| Dato | Tu web hoy |
+| --- | --- |
+| Búsquedas en las que apareces (top 100 de Google) | 710 |
+| En las 3 primeras posiciones | 6 |
+| En la primera página (posiciones 4 a 10) | 45 |
+| Visitas desde Google, estimadas | unas 239 al mes |
+| Autoridad del dominio (de 0 a 100) | 8 |
+| Respuestas de la IA de Google en las que te citan | 10 de 579 posibles |
+
+**La buena noticia**: la web crece sola. Hace un año aparecías en 358 búsquedas; hoy, en 710. Google te conoce y te respeta.
+
+**La mala**: casi todo ese tráfico viene de tu nombre ("Tierno Centella abogados") y de **artículos viejos que no son tuyos**: el Real Decreto-ley 8/2019, "fraude de ley", "contrato indefinido", la ley de secretos empresariales. Son lectores que nunca serán clientes. De cada 100 búsquedas en las que sales, 84 son de gente que solo quiere información.
+
+**Donde de verdad se juegan los clientes** estás a mitad de tabla:
+
+| Búsqueda | Búsquedas al mes | Tu posición |
+| --- | --- | --- |
+| abogados acoso laboral | 480 | 9 |
+| abogado acoso laboral | 320 | 10 |
+| abogados acoso laboral madrid | 260 | 10 |
+| test de acoso laboral | 720 | 12 |
+| abogado laboralista madrid | 1.900 | 18 |
+| abogados laboralistas madrid | 1.300 | 18 |
+| despido disciplinario | 8.100 | 36 |
+
+En "abogados acoso laboral madrid", por delante de ti salen García de la Santa, Abogados Durán, Madrid-Laboral, Labormind, Bufete Toro, abogadolaboralmadrid.com, Sánchez Abogados, AE Abogados y Pedraza Laboral. **Tú eres el especialista de verdad y sales el décimo.**
+
+| Despacho | Búsquedas en las que aparece | Visitas al mes | Autoridad | Citas en la IA de Google |
+| --- | --- | --- | --- | --- |
+| García de la Santa | 2.503 | 9.164 | 30 | 127 |
+| Abogados Durán | 1.387 | 2.457 | 18 | |
+| Pedraza Laboral | 320 | 1.412 | 16 | |
+| Labormind | 699 | 1.013 | 10 | |
+| Bufete Toro | | | 37 | |
+| **Tierno Centella** | **710** | **239** | **8** | **10** |
+
+### Que te recomiende la inteligencia artificial
+
+Cada vez más gente no busca en Google: le pregunta a ChatGPT, a Gemini o a la propia IA de Google "¿qué abogado de acoso laboral me recomiendas en Madrid?". De las 710 búsquedas en las que apareces, **579 ya muestran una respuesta de IA arriba del todo**, y solo te citan en 10 (entre ellas, "abogado laboral en Madrid", "preaviso en despido improcedente" y "te pueden despedir después de una excedencia"). García de la Santa sale en 127.
+
+**Cómo eligen las IA a quién recomendar**, y qué hemos hecho para ello:
+
+1. **Respuestas claras y completas a preguntas concretas.** Las IA citan a quien responde mejor. Cada guía nueva empieza respondiendo en dos frases y sigue con detalle, preguntas frecuentes y fuentes.
+2. **Datos estructurados y llms.txt.** Le dicen a la IA quién eres, qué haces, dónde estás y quién firma cada texto. Ya están en la web nueva.
+3. **Autoridad verificable.** Sentencias con tribunal y fecha, el libro, Piñuel, Onda Cero, Comillas. Las IA dan más peso a lo que pueden comprobar.
+4. **Menciones en otros sitios.** Reseñas en Google, LinkedIn activo, entrevistas y enlaces desde universidades, sindicatos y colegios profesionales. Hoy tu autoridad es 8; la de Bufete Toro, 37.
+5. **Coherencia.** Mismo nombre, dirección y teléfono en todas partes; fuera webs duplicadas (acosomoral.es) y cuentas abandonadas.
+
+**Cómo lo mediremos**: Semrush registra cada mes en cuántas respuestas de IA apareces. El objetivo razonable a seis meses es pasar de 10 a más de 50, y entrar en el top 5 de "abogados acoso laboral madrid".
+
 ## 5. Tu ficha de Google: 4,2 con 59 reseñas
 
 Hemos leído las 59. Reparto: 44 de cinco estrellas, 3 de cuatro, 1 de tres y **11 de una**. **Ninguna tiene respuesta del despacho.**
