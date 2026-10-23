@@ -342,49 +342,97 @@ function Reaccion({ id, seccion }: { id: string; seccion: string }) {
   const [msg, setMsg] = useState('');
   const [texto, setTexto] = useState('');
   const [msgTexto, setMsgTexto] = useState('');
+  const [escribir, setEscribir] = useState(false);
   return (
     <div className="gj-reaccion">
-      <span>¿Qué te ha parecido esta parte?</span>
+      <span>¿Qué te ha parecido?</span>
       {['Me encanta', 'Me gusta', 'Tengo una duda', 'No lo veo claro'].map((r) => (
         <button
           key={r}
           type="button"
           className={elegida === r ? 'activo' : ''}
+          aria-pressed={elegida === r}
           onClick={async () => {
             setElegida(r);
+            if (r === 'Tengo una duda' || r === 'No lo veo claro') setEscribir(true);
             setMsg('Enviando...');
             const ok = await avisar({ tipo: 'reaccion', id, seccion, reaccion: r });
-            setMsg(ok ? 'Gracias. Lo vemos enseguida.' : 'Apuntado. Si quieres, cuéntaselo por WhatsApp.');
+            setMsg(ok ? 'Gracias. Lo vemos enseguida.' : 'Apuntado. Si quieres, cuéntanoslo por WhatsApp.');
           }}
         >
           {r}
         </button>
       ))}
-      {msg && <em role="status">{msg}</em>}
-      <div className="gj-comentario">
-        <textarea
-          rows={2}
-          value={texto}
-          onChange={(e) => setTexto(e.target.value)}
-          placeholder="Si quieres, escríbenos lo que piensas de esta parte: una duda, un cambio, algo que te guste o no. Nos llega al momento."
-          aria-label={`Comentario sobre ${seccion}`}
-        />
-        <button
-          type="button"
-          onClick={async () => {
-            if (!texto.trim()) return setMsgTexto('Escribe tu comentario y pulsa enviar.');
-            setMsgTexto('Enviando...');
-            const ok = await avisar({ tipo: 'comentario', id, seccion, reaccion: elegida, texto });
-            setMsgTexto(ok ? 'Enviado. Gracias, Jesús: ya lo tenemos.' : 'No se ha podido enviar. Cuéntaselo por WhatsApp, por favor.');
-            if (ok) setTexto('');
-          }}
-        >
-          Enviar comentario
+      {!escribir && (
+        <button type="button" className="gj-escribir" onClick={() => setEscribir(true)}>
+          Escribirnos algo
         </button>
-        {msgTexto && <em role="status">{msgTexto}</em>}
-      </div>
+      )}
+      {msg && <em role="status">{msg}</em>}
+      {escribir && (
+        <div className="gj-comentario">
+          <textarea
+            rows={3}
+            autoFocus
+            value={texto}
+            onChange={(e) => setTexto(e.target.value)}
+            placeholder={elegida === 'Tengo una duda' ? '¿Cuál es tu duda? Te contestamos enseguida.' : 'Una duda, un cambio, algo que te guste o no. Nos llega al momento.'}
+            aria-label={`Comentario sobre ${seccion}`}
+          />
+          <button
+            type="button"
+            onClick={async () => {
+              if (!texto.trim()) return setMsgTexto('Escribe tu comentario y pulsa enviar.');
+              setMsgTexto('Enviando...');
+              const ok = await avisar({ tipo: 'comentario', id, seccion, reaccion: elegida, texto });
+              setMsgTexto(ok ? 'Enviado. Gracias, Jesús: ya lo tenemos.' : 'No se ha podido enviar. Cuéntanoslo por WhatsApp, por favor.');
+              if (ok) setTexto('');
+            }}
+          >
+            Enviar
+          </button>
+          {msgTexto && <em role="status">{msgTexto}</em>}
+        </div>
+      )}
     </div>
   );
+}
+
+// Apartados ya vistos: se marcan en el índice y alimentan la barra de progreso (solo en este navegador).
+function useVistos(ids: string[]) {
+  const [vistos, setVistos] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    let guardados: string[] = [];
+    try {
+      guardados = JSON.parse(localStorage.getItem('tc-guia-vistos') || '[]');
+    } catch {}
+    const v = new Set(guardados);
+    setVistos(new Set(v));
+    const obs = new IntersectionObserver(
+      (entradas) => {
+        let cambio = false;
+        for (const e of entradas) {
+          if (e.isIntersecting && !v.has(e.target.id)) {
+            v.add(e.target.id);
+            cambio = true;
+          }
+        }
+        if (cambio) {
+          setVistos(new Set(v));
+          try {
+            localStorage.setItem('tc-guia-vistos', JSON.stringify([...v]));
+          } catch {}
+        }
+      },
+      { rootMargin: '0px 0px -40% 0px', threshold: 0 },
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id)?.querySelector('h2');
+      if (el) obs.observe(el.closest('section')!);
+    });
+    return () => obs.disconnect();
+  }, [ids]);
+  return vistos;
 }
 
 export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
@@ -395,10 +443,35 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
     () => (busca.length < 2 ? secciones : secciones.filter((s) => normal(s.titulo + ' ' + s.texto).includes(busca))),
     [busca, secciones],
   );
+  const ids = useMemo(() => secciones.map((x) => x.id), [secciones]);
+  const vistos = useVistos(ids);
+  const [indice, setIndice] = useState(false);
+  const total = secciones.length;
+  const hechos = secciones.filter((x) => vistos.has(x.id)).length;
+  const preguntas = secciones.find((x) => /preguntas para ti/i.test(x.titulo))?.id;
+  const abrirIndice = () => {
+    setIndice(true);
+    setTimeout(() => document.getElementById('gj-indice')?.scrollIntoView({ block: 'start' }), 30);
+  };
   return (
     <div className="guia-jesus">
       <AvisoGuia secciones={secciones} />
-      <aside className="gj-lateral">
+      <aside className="gj-lateral" id="gj-indice">
+        <div className="gj-progreso" aria-label={`Has visto ${hechos} de ${total} apartados`}>
+          <div>
+            <strong>Tu lectura</strong>
+            <span>
+              {hechos} de {total} apartados
+            </span>
+          </div>
+          <div className="gj-progreso-barra">
+            <i style={{ width: `${Math.round((hechos / total) * 100)}%` }} />
+          </div>
+        </div>
+        <button type="button" className="gj-indice-boton" aria-expanded={indice} onClick={() => setIndice((v) => !v)}>
+          {indice ? 'Ocultar el índice' : `Ver el índice (${total} apartados)`}
+        </button>
+        <div className={`gj-indice-caja${indice ? ' abierto' : ''}`}>
         <label className="gj-buscar">
           <span>Buscar en la guía</span>
           <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="reseñas, blog, precio, Instagram..." />
@@ -417,14 +490,17 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
                 {visibles
                   .filter((s) => s.claveGrupo === g)
                   .map((s) => (
-                    <li key={s.id}>
-                      <a href={`#${s.id}`}>{s.titulo}</a>
+                    <li key={s.id} className={vistos.has(s.id) ? 'visto' : ''}>
+                      <a href={`#${s.id}`} onClick={() => setIndice(false)}>
+                        {s.titulo}
+                      </a>
                     </li>
                   ))}
               </ol>
             </div>
           ))}
         </nav>
+        </div>
       </aside>
       <div className="gj-cuerpo">
         {visibles.map((s) => (
@@ -449,6 +525,18 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
           </section>
         ))}
       </div>
+      <nav className="gj-barra" aria-label="Moverse por la guía">
+        <button type="button" onClick={abrirIndice}>
+          Índice
+          <small>
+            {hechos}/{total}
+          </small>
+        </button>
+        {preguntas && <a href={`#${preguntas}`}>Tus preguntas</a>}
+        <button type="button" onClick={() => window.dispatchEvent(new Event('abrir-asistente'))}>
+          Probar el chat
+        </button>
+      </nav>
     </div>
   );
 }

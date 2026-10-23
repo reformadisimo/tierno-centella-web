@@ -4396,3 +4396,115 @@ body:has(.landing) .pie {
 .cg-cabeza strong {
   overflow-wrap: anywhere;
 }
+
+/* Guía: progreso, índice plegable en móvil, reacciones compactas y barra propia */
+.gj-progreso {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+}
+.gj-progreso > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.gj-progreso span {
+  color: var(--tinta-suave);
+}
+.gj-progreso-barra {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--arena);
+  overflow: hidden;
+}
+.gj-progreso-barra i {
+  display: block;
+  height: 100%;
+  background: var(--coral);
+  border-radius: 99px;
+  transition: width 0.4s;
+}
+.gj-indice li.visto a::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  margin: 0 8px 2px 1px;
+  border: solid #17773f;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+.gj-indice-boton {
+  width: 100%;
+  font: inherit;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--tinta);
+  background: var(--blanco);
+  color: var(--tinta);
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.gj-indice-caja {
+  display: none;
+}
+.gj-indice-caja.abierto {
+  display: block;
+}
+.gj-escribir {
+  background: transparent !important;
+  border-style: dashed !important;
+}
+.gj-barra {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 31;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: var(--tinta);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.gj-barra a,
+.gj-barra button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 4px;
+  cursor: pointer;
+}
+.gj-barra a + *,
+.gj-barra button + * {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.gj-barra small {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  border-radius: 99px;
+  background: var(--coral);
+  font-size: 0.75rem;
+}
+body:has(.guia-jesus) .barra-movil {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .gj-indice-boton,
+  .gj-barra {
+    display: none;
+  }
+  .gj-indice-caja {
+    display: block;
+  }
+}
