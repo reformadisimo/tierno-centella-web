@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { sumarHabiles } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
 import { DESPACHO, enlaceWhatsapp, fechaLarga } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 const SITUACIONES = [
   { id: 'denegada', texto: 'Me la han denegado' },
@@ -140,6 +141,7 @@ export default function ComprobadorIncapacidad() {
             >
               Contar mi caso por WhatsApp
             </a>
+            <BotonImprimir />
             <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
               Llamar al {DESPACHO.telefono}
             </a>

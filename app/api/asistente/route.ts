@@ -27,9 +27,11 @@ export async function POST(req: Request) {
   }
 
   let mensajes: Mensaje[] = [];
+  let ingles = false;
   try {
     const cuerpo = await req.json();
     mensajes = Array.isArray(cuerpo?.mensajes) ? cuerpo.mensajes : [];
+    ingles = cuerpo?.idioma === 'en';
   } catch {
     return Response.json({ error: 'Petición no válida.' }, { status: 400 });
   }
@@ -59,7 +61,7 @@ export async function POST(req: Request) {
               max_tokens: 1500,
               system: [
                 { type: 'text', text: conocimientoWeb(), cache_control: { type: 'ephemeral' } },
-                { type: 'text', text: promptAsistente(hoy) },
+                { type: 'text', text: promptAsistente(hoy) + (ingles ? '\n\nEsta conversación empezó en la versión inglesa de la web: responde en inglés salvo que la persona escriba en otro idioma.' : '') },
               ],
               messages: mensajes,
             });

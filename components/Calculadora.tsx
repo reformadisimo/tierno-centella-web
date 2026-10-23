@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes } from '@/lib/calculos';
 import { hoyMadrid, diaSiguiente } from '@/lib/hoy';
 import { DESPACHO, enlaceWhatsapp, euros, eurosConCentimos, fechaLarga } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 const corta = (iso: string) => iso.split('-').reverse().join('/');
 
@@ -252,6 +253,7 @@ export default function Calculadora({ despidoInicial = '' }: { despidoInicial?: 
             <a className="boton" href={enlaceWhatsapp(resumen)}>
               Enviar mi caso por WhatsApp
             </a>
+            <BotonImprimir />
             <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
               Llamar al {DESPACHO.telefono}
             </a>

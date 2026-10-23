@@ -9,6 +9,7 @@ import AvisoCookies from '@/components/AvisoCookies';
 import AvisoSalida from '@/components/AvisoSalida';
 import Medicion from '@/components/Medicion';
 import SalidaRapida from '@/components/SalidaRapida';
+import { CabeceraImpresion, WhatsappQR } from '@/components/Utiles';
 import JsonLd from '@/components/JsonLd';
 import { BASE, esquemaDespacho } from '@/lib/seo';
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Saltar al contenido
         </a>
         <div className="aviso-demo">Versión de demostración. No es la web oficial del despacho.</div>
+        <CabeceraImpresion />
         <Cabecera />
         <main id="contenido">{children}</main>
         <Pie />
@@ -60,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <AvisoCookies />
         <AvisoSalida />
         <SalidaRapida />
+        <WhatsappQR />
         <Medicion />
       </body>
     </html>

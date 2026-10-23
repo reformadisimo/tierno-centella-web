@@ -1,20 +1,122 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
+import { idiomaDe, type Idioma } from '@/lib/idioma';
 
 type Mensaje = { role: 'user' | 'assistant'; content: string };
 
-const SUGERENCIAS = [
-  'Me acaban de despedir, ¿qué hago?',
-  'Creo que sufro acoso en el trabajo',
-  'Me han denegado la incapacidad',
-  '¿Cuánto cuesta la consulta?',
-];
+// La conversación se guarda mientras dura la visita: si la persona pulsa un enlace del chat
+// y la página se recarga, el chat se reabre donde estaba.
+const CLAVE = 'tc-chat';
 
-const BIENVENIDA =
-  'Hola. Soy el asistente del despacho, una inteligencia artificial. Te oriento en despidos, acoso laboral, incapacidad, embarazo y conciliación: cuéntame qué te pasa y te digo qué plazos corren y cuál es el siguiente paso. Puedo equivocarme, así que lo que te diga conviene que lo revise un abogado.';
+const TEXTOS = {
+  es: {
+    lanzador: '¿Hablamos? Pregunta tu caso',
+    lanzadorSub: 'Chat 24 h · respuesta al momento',
+    lanzadorAria: 'Abrir el chat: pregunta tu caso',
+    titulo: 'Asistente de Tierno Centella',
+    subtitulo: 'Inteligencia artificial · orientación general, no asesoramiento',
+    cerrar: 'Cerrar',
+    equipoAlt: 'Jesús Tierno Centella con el equipo del despacho',
+    equipo: 'Jesús Tierno y su equipo',
+    equipoTexto: 'Abogados laboralistas en Jorge Juan, 78 (Madrid). Si tu caso lo necesita, te atiende una persona del despacho.',
+    bienvenida:
+      'Hola. Soy el asistente del despacho, una inteligencia artificial. Te oriento en despidos, acoso laboral, incapacidad, embarazo y conciliación: cuéntame qué te pasa y te digo qué plazos corren y cuál es el siguiente paso. Puedo equivocarme, así que lo que te diga conviene que lo revise un abogado.',
+    escribiendo: 'Escribiendo...',
+    llamar: 'Llamar',
+    teLlamamos: 'Que te llamemos',
+    herramientas: 'Herramientas',
+    herramientasHref: '/herramientas',
+    placeholder: 'Escribe aquí tu pregunta',
+    enviar: 'Enviar',
+    tuMensaje: 'Tu mensaje',
+    aviso: 'Es una inteligencia artificial y puede equivocarse; no sustituye a un abogado. No escribas datos personales que no sean necesarios.',
+    errorBase: 'No he podido responder.',
+    errorContacto: (t: string, w: string) => `Puedes llamarnos al ${t} o escribir por WhatsApp al ${w}.`,
+    waBase: 'Hola, vengo del chat de la web y quiero consultar mi caso.',
+    waConTema: (tema: string) => `Hola, vengo del chat de la web. Mi consulta: ${tema}`,
+    llamadaTitulo: '¿Te llamamos?',
+    llamadaTexto: 'Déjanos tu nombre y tu teléfono. Un abogado del despacho te llama y ya sabrá de qué hemos hablado aquí.',
+    nombre: 'Tu nombre',
+    telefono: 'Tu teléfono',
+    acepto: 'Acepto que el despacho use estos datos y esta conversación para llamarme.',
+    privacidad: 'Privacidad',
+    privacidadHref: '/privacidad',
+    pedirLlamada: 'Quiero que me llaméis',
+    enviando: 'Enviando...',
+    hecho: 'Hecho. Un abogado del despacho te llamará en cuanto pueda, con esta conversación delante.',
+    errorLlamada: 'No se ha podido enviar. Llámanos o escríbenos por WhatsApp, por favor.',
+    faltan: 'Escribe tu nombre y un teléfono, y acepta la casilla.',
+    nueva: 'Empezar de nuevo',
+  },
+  en: {
+    lanzador: 'Need help? Ask about your case',
+    lanzadorSub: '24/7 chat · instant answers',
+    lanzadorAria: 'Open the chat: ask about your case',
+    titulo: 'Tierno Centella assistant',
+    subtitulo: 'Artificial intelligence · general guidance, not legal advice',
+    cerrar: 'Close',
+    equipoAlt: 'Jesús Tierno Centella with the team',
+    equipo: 'Jesús Tierno and his team',
+    equipoTexto: 'Employment lawyers at Jorge Juan, 78 (Madrid). If your case needs it, a person from the firm will help you.',
+    bienvenida:
+      "Hello. I'm the firm's assistant, an artificial intelligence. I can guide you on dismissals, workplace harassment, permanent disability, pregnancy and work-life balance: tell me what's happening and I'll tell you which deadlines apply and what to do next. I can make mistakes, so a lawyer should review what I tell you.",
+    escribiendo: 'Typing...',
+    llamar: 'Call',
+    teLlamamos: 'Call me back',
+    herramientas: 'Tools',
+    herramientasHref: '/en/tools',
+    placeholder: 'Type your question here',
+    enviar: 'Send',
+    tuMensaje: 'Your message',
+    aviso: 'This is an AI and it can make mistakes; it does not replace a lawyer. Please do not share personal data you do not need to.',
+    errorBase: "I couldn't answer.",
+    errorContacto: (t: string, w: string) => `You can call us on +34 ${t} or message us on WhatsApp at +34 ${w}.`,
+    waBase: 'Hello, I come from the website chat and I would like to ask about my case.',
+    waConTema: (tema: string) => `Hello, I come from the website chat. My question: ${tema}`,
+    llamadaTitulo: 'Shall we call you?',
+    llamadaTexto: 'Leave your name and phone number. A lawyer from the firm will call you, already knowing what we talked about here.',
+    nombre: 'Your name',
+    telefono: 'Your phone',
+    acepto: 'I agree that the firm may use these details and this conversation to call me.',
+    privacidad: 'Privacy (in Spanish)',
+    privacidadHref: '/privacidad',
+    pedirLlamada: 'Please call me',
+    enviando: 'Sending...',
+    hecho: 'Done. A lawyer from the firm will call you as soon as possible, with this conversation in front of them.',
+    errorLlamada: "It couldn't be sent. Please call us or message us on WhatsApp.",
+    faltan: 'Please write your name and a phone number, and tick the box.',
+    nueva: 'Start again',
+  },
+};
+
+// Preguntas sugeridas según la página en la que está la persona.
+const SUGERENCIAS: Record<Idioma, { ruta: string; preguntas: string[] }[]> = {
+  es: [
+    { ruta: '/despido', preguntas: ['Me acaban de despedir, ¿qué hago?', '¿Cuánto me corresponde de indemnización?', '¿Qué plazo tengo para reclamar?', '¿Mi despido puede ser nulo?'] },
+    { ruta: '/calculadora-indemnizacion', preguntas: ['¿Cuánto me corresponde de indemnización?', '¿Qué plazo tengo para reclamar?', '¿Me conviene firmar el finiquito?', '¿Cuánto cuesta la consulta?'] },
+    { ruta: '/acoso-laboral', preguntas: ['Creo que sufro acoso en el trabajo', '¿Cómo demuestro el acoso?', '¿Puedo irme de la empresa con indemnización?', 'Estoy de baja por ansiedad, ¿qué hago?'] },
+    { ruta: '/incapacidad-permanente', preguntas: ['Me han denegado la incapacidad, ¿qué hago?', '¿Qué grado de incapacidad puedo pedir?', '¿Cuánto se cobra?', '¿Qué plazo tengo para reclamar?'] },
+    { ruta: '/mujer-y-trabajo', preguntas: ['Me han despedido estando embarazada', '¿Puedo reducir mi jornada para cuidar a mis hijos?', '¿Cuántas semanas de permiso me corresponden?', 'Sufro acoso sexual en el trabajo'] },
+    { ruta: '/herramientas', preguntas: ['¿Qué herramienta me sirve para mi caso?', 'Me acaban de despedir, ¿qué hago?', 'Creo que sufro acoso en el trabajo', '¿Cuánto cuesta la consulta?'] },
+    { ruta: '/empresas', preguntas: ['¿Qué protocolo de acoso necesita mi empresa?', '¿Es obligatorio el canal de denuncias?', 'Tenemos una denuncia interna de acoso, ¿qué hacemos?', '¿Cuánto cuesta la consulta?'] },
+    { ruta: '/', preguntas: ['Me acaban de despedir, ¿qué hago?', 'Creo que sufro acoso en el trabajo', 'Me han denegado la incapacidad', '¿Cuánto cuesta la consulta?'] },
+  ],
+  en: [
+    { ruta: '/en/dismissal', preguntas: ["I've just been dismissed, what should I do?", 'How much compensation am I owed?', 'What is the deadline to challenge it?', 'Could my dismissal be void?'] },
+    { ruta: '/en/workplace-harassment', preguntas: ["I think I'm being harassed at work", 'How can I prove harassment?', 'Can I leave my job with compensation?', "I'm on sick leave for anxiety, what should I do?"] },
+    { ruta: '/en/permanent-disability', preguntas: ['My permanent disability was denied, what now?', 'Which degree of disability can I ask for?', 'How much would I receive?', 'What is the deadline to appeal?'] },
+    { ruta: '/en/women-at-work', preguntas: ['I was dismissed while pregnant', 'Can I reduce my hours to look after my children?', 'How many weeks of leave am I entitled to?', "I'm being sexually harassed at work"] },
+    { ruta: '/en', preguntas: ["I've just been dismissed, what should I do?", "I think I'm being harassed at work", 'My permanent disability was denied', 'How much does a consultation cost?'] },
+  ],
+};
+
+function sugerenciasPara(ruta: string, idioma: Idioma) {
+  return (SUGERENCIAS[idioma].find((s) => (s.ruta === '/' || s.ruta === '/en' ? ruta === s.ruta : ruta.startsWith(s.ruta))) ?? SUGERENCIAS[idioma][SUGERENCIAS[idioma].length - 1]).preguntas;
+}
 
 // Formato mínimo: párrafos, listas, negritas y enlaces. Escapa todo lo demás.
 function formatear(texto: string) {
@@ -23,7 +125,10 @@ function formatear(texto: string) {
     escapar(s)
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\[([^\]]+)\]\((\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, '<a href="$2">$1</a>')
-      .replace(/(^|[\s(])(\/(?:calculadora-indemnizacion|herramientas\/[a-z-]+|acoso-laboral(?:\/[a-z-]+)?|despido(?:\/[a-z-]+)?|incapacidad-permanente(?:\/[a-z0-9-]+)?|mujer-y-trabajo(?:\/[a-z-]+)?|redes-y-medios|blog\/[a-z0-9-]+|sentencias|contacto))(?=[\s).,;]|$)/g, '$1<a href="$2">$2</a>');
+      .replace(
+        /(^|[\s(])(\/(?:calculadora-indemnizacion|herramientas\/[a-z-]+|acoso-laboral(?:\/[a-z-]+)?|despido(?:\/[a-z-]+)?|incapacidad-permanente(?:\/[a-z0-9-]+)?|mujer-y-trabajo(?:\/[a-z-]+)?|redes-y-medios|blog\/[a-z0-9-]+|sentencias|contacto|en(?:\/[a-z0-9-]+)*))(?=[\s).,;]|$)/g,
+        '$1<a href="$2">$2</a>',
+      );
   const bloques = texto.trim().split(/\n{2,}/);
   return bloques
     .map((b) => {
@@ -35,13 +140,66 @@ function formatear(texto: string) {
     .join('');
 }
 
+// Resumen de la conversación para el correo al despacho: lo que escribió la persona, completo,
+// y lo esencial de las respuestas.
+function resumenConversacion(mensajes: Mensaje[]) {
+  const partes = mensajes.map((m) => `${m.role === 'user' ? 'PERSONA' : 'ASISTENTE'}: ${m.content.replace(/\s+/g, ' ').trim()}`);
+  let texto = partes.join('\n\n');
+  if (texto.length > 2900) {
+    const persona = mensajes
+      .filter((m) => m.role === 'user')
+      .map((m) => `PERSONA: ${m.content.replace(/\s+/g, ' ').trim()}`)
+      .join('\n\n');
+    texto = persona.slice(0, 2900);
+  }
+  return texto;
+}
+
+type Guardado = { mensajes: Mensaje[]; abierto: boolean };
+
+function leerGuardado(): Guardado | null {
+  try {
+    const v = sessionStorage.getItem(CLAVE);
+    return v ? (JSON.parse(v) as Guardado) : null;
+  } catch {
+    return null;
+  }
+}
+
 export default function Asistente() {
+  const ruta = usePathname() || '/';
+  const idioma = idiomaDe(ruta);
+  const t = TEXTOS[idioma];
   const [abierto, setAbierto] = useState(false);
   const [mensajes, setMensajes] = useState<Mensaje[]>([]);
   const [texto, setTexto] = useState('');
   const [escribiendo, setEscribiendo] = useState(false);
+  const [cargado, setCargado] = useState(false);
+  const [llamada, setLlamada] = useState(false);
+  const [nombre, setNombre] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [acepto, setAcepto] = useState(false);
+  const [estadoLlamada, setEstadoLlamada] = useState<'' | 'enviando' | 'hecho' | 'error'>('');
+  const [msgLlamada, setMsgLlamada] = useState('');
   const lista = useRef<HTMLDivElement>(null);
   const campo = useRef<HTMLTextAreaElement>(null);
+
+  // Recupera la conversación de esta visita.
+  useEffect(() => {
+    const g = leerGuardado();
+    if (g?.mensajes?.length) {
+      setMensajes(g.mensajes.filter((m) => m.content));
+      if (g.abierto) setAbierto(true);
+    }
+    setCargado(true);
+  }, []);
+
+  useEffect(() => {
+    if (!cargado || escribiendo) return;
+    try {
+      sessionStorage.setItem(CLAVE, JSON.stringify({ mensajes, abierto }));
+    } catch {}
+  }, [mensajes, abierto, cargado, escribiendo]);
 
   useEffect(() => {
     const abrir = () => setAbierto(true);
@@ -52,11 +210,11 @@ export default function Asistente() {
   useEffect(() => {
     // Al abrir sin conversación, se ve el principio (la foto del equipo); después, siempre lo último.
     if (mensajes.length) lista.current?.scrollTo({ top: lista.current.scrollHeight });
-  }, [mensajes, abierto]);
+  }, [mensajes, abierto, llamada]);
 
   useEffect(() => {
-    if (abierto) campo.current?.focus();
-  }, [abierto]);
+    if (abierto && !llamada) campo.current?.focus();
+  }, [abierto, llamada]);
 
   async function enviar(contenido: string) {
     const limpio = contenido.trim();
@@ -65,16 +223,16 @@ export default function Asistente() {
     setMensajes([...historial, { role: 'assistant', content: '' }]);
     setTexto('');
     setEscribiendo(true);
-    medir('chat_mensaje', { numero: historial.filter((m) => m.role === 'user').length });
+    medir('chat_mensaje', { numero: historial.filter((m) => m.role === 'user').length, idioma });
     try {
       const r = await fetch('/api/asistente', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mensajes: historial }),
+        body: JSON.stringify({ mensajes: historial, idioma }),
       });
       if (!r.ok || !r.body) {
         const datos = await r.json().catch(() => ({}));
-        throw new Error(datos.error || 'No he podido responder.');
+        throw new Error(datos.error || t.errorBase);
       }
       const lector = r.body.getReader();
       const deco = new TextDecoder();
@@ -86,15 +244,46 @@ export default function Asistente() {
         setMensajes([...historial, { role: 'assistant', content: acumulado }]);
       }
     } catch (e) {
-      const motivo = e instanceof Error ? e.message : 'No he podido responder.';
-      setMensajes([
-        ...historial,
-        { role: 'assistant', content: `${motivo} Puedes llamarnos al ${DESPACHO.telefono} o escribir por WhatsApp al ${DESPACHO.whatsapp}.` },
-      ]);
+      const motivo = e instanceof Error ? e.message : t.errorBase;
+      setMensajes([...historial, { role: 'assistant', content: `${motivo} ${t.errorContacto(DESPACHO.telefono, DESPACHO.whatsapp)}` }]);
     } finally {
       setEscribiendo(false);
     }
   }
+
+  async function pedirLlamada(e: React.FormEvent) {
+    e.preventDefault();
+    if (!nombre.trim() || telefono.replace(/\D/g, '').length < 9 || !acepto) {
+      setMsgLlamada(t.faltan);
+      return;
+    }
+    setEstadoLlamada('enviando');
+    setMsgLlamada('');
+    try {
+      const r = await fetch('/api/contacto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre,
+          telefono,
+          acepto,
+          tema: idioma === 'en' ? 'Chat (en inglés)' : 'Chat',
+          mensaje: `Conversación en el chat de la web:\n\n${resumenConversacion(mensajes)}`,
+          origen: `chat en ${ruta}`,
+        }),
+      });
+      if (!r.ok) throw new Error();
+      setEstadoLlamada('hecho');
+      medir('formulario_enviado', { tema: 'chat', donde: 'chat', idioma });
+    } catch {
+      setEstadoLlamada('error');
+      setMsgLlamada(t.errorLlamada);
+    }
+  }
+
+  const primeraPregunta = mensajes.find((m) => m.role === 'user')?.content.replace(/\s+/g, ' ').trim();
+  const textoWa = primeraPregunta ? t.waConTema(primeraPregunta.length > 160 ? primeraPregunta.slice(0, 157) + '...' : primeraPregunta) : t.waBase;
+  const sugerencias = sugerenciasPara(ruta, idioma);
 
   return (
     <>
@@ -104,17 +293,17 @@ export default function Asistente() {
           className="asistente-boton"
           onClick={() => {
             setAbierto(true);
-            medir('chat_abierto');
+            medir('chat_abierto', { idioma });
           }}
-          aria-label="Abrir el chat: pregunta tu caso"
+          aria-label={t.lanzadorAria}
         >
           <span className="asistente-foto">
             <img src="/img/jesus-avatar.webp" alt="" width={44} height={44} />
             <span className="asistente-punto" aria-hidden="true" />
           </span>
           <span className="asistente-texto">
-            <strong>¿Hablamos? Pregunta tu caso</strong>
-            <small>Chat 24 h · respuesta al momento</small>
+            <strong>{t.lanzador}</strong>
+            <small>{t.lanzadorSub}</small>
           </span>
           <span className="asistente-icono" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -125,34 +314,34 @@ export default function Asistente() {
         </button>
       )}
       {abierto && (
-        <div className="asistente-panel" role="dialog" aria-label="Asistente del despacho">
+        <div className="asistente-panel" role="dialog" aria-label={t.titulo}>
           <div className="asistente-cabeza">
             <span className="asistente-cabeza-foto">
               <img src="/img/jesus-avatar.webp" alt="" width={44} height={44} />
               <span className="asistente-punto" aria-hidden="true" />
             </span>
             <div>
-              <strong>Asistente de Tierno Centella</strong>
-              <small>Inteligencia artificial · orientación general, no asesoramiento</small>
+              <strong>{t.titulo}</strong>
+              <small>{t.subtitulo}</small>
             </div>
             <button type="button" onClick={() => setAbierto(false)}>
-              Cerrar
+              {t.cerrar}
             </button>
           </div>
           <div className="asistente-mensajes" ref={lista} aria-live="polite">
             <figure className="asistente-equipo">
-              <img src="/img/equipo-640.webp" alt="Jesús Tierno Centella con el equipo del despacho" width={640} height={360} />
+              <img src="/img/equipo-640.webp" alt={t.equipoAlt} width={640} height={360} />
               <figcaption>
-                <strong>Jesús Tierno y su equipo</strong>
-                <span>Abogados laboralistas en Jorge Juan, 78 (Madrid). Si tu caso lo necesita, te atiende una persona del despacho.</span>
+                <strong>{t.equipo}</strong>
+                <span>{t.equipoTexto}</span>
               </figcaption>
             </figure>
             <div className="burbuja burbuja-asistente">
-              <p>{BIENVENIDA}</p>
+              <p>{t.bienvenida}</p>
             </div>
             {mensajes.length === 0 && (
               <div className="asistente-sugerencias">
-                {SUGERENCIAS.map((s) => (
+                {sugerencias.map((s) => (
                   <button key={s} type="button" onClick={() => enviar(s)}>
                     {s}
                   </button>
@@ -168,21 +357,62 @@ export default function Asistente() {
                 <div
                   key={i}
                   className="burbuja burbuja-asistente"
-                  dangerouslySetInnerHTML={{ __html: m.content ? formatear(m.content) : '<p>Escribiendo...</p>' }}
+                  dangerouslySetInnerHTML={{ __html: m.content ? formatear(m.content) : `<p>${t.escribiendo}</p>` }}
                 />
               ),
             )}
+            {llamada && (
+              <div className="asistente-llamada">
+                {estadoLlamada === 'hecho' ? (
+                  <p role="status">{t.hecho}</p>
+                ) : (
+                  <form onSubmit={pedirLlamada}>
+                    <strong>{t.llamadaTitulo}</strong>
+                    <p>{t.llamadaTexto}</p>
+                    <input type="text" autoComplete="name" placeholder={t.nombre} aria-label={t.nombre} value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    <input type="tel" autoComplete="tel" placeholder={t.telefono} aria-label={t.telefono} value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                    <label className="casilla">
+                      <input type="checkbox" checked={acepto} onChange={(e) => setAcepto(e.target.checked)} />
+                      <span>
+                        {t.acepto} <a href={t.privacidadHref}>{t.privacidad}</a>.
+                      </span>
+                    </label>
+                    <button type="submit" className="boton boton-marcador" disabled={estadoLlamada === 'enviando'}>
+                      {estadoLlamada === 'enviando' ? t.enviando : t.pedirLlamada}
+                    </button>
+                    {msgLlamada && (
+                      <em role="alert" className="asistente-llamada-error">
+                        {msgLlamada}{' '}
+                        {estadoLlamada === 'error' && (
+                          <a href={enlaceWhatsapp(textoWa)} target="_blank" rel="noopener">
+                            WhatsApp
+                          </a>
+                        )}
+                      </em>
+                    )}
+                  </form>
+                )}
+              </div>
+            )}
           </div>
           {mensajes.length > 1 && (
-            <div className="asistente-atajos" aria-label="Hablar con el despacho">
-              <a href={DESPACHO.telefonoHref}>
-                Llamar
-              </a>
-              <a href={enlaceWhatsapp('Hola, vengo del chat de la web y quiero consultar mi caso.')}>
-                WhatsApp
-              </a>
-              <a href="/contacto">Que me llamen</a>
-              <a href="/herramientas">Herramientas</a>
+            <div className="asistente-atajos" aria-label={t.teLlamamos}>
+              <button type="button" className={llamada ? 'activo' : ''} onClick={() => setLlamada((v) => !v)}>
+                {t.teLlamamos}
+              </button>
+              <a href={DESPACHO.telefonoHref}>{t.llamar}</a>
+              <a href={enlaceWhatsapp(textoWa)}>WhatsApp</a>
+              <a href={t.herramientasHref}>{t.herramientas}</a>
+              <button
+                type="button"
+                onClick={() => {
+                  setMensajes([]);
+                  setLlamada(false);
+                  setEstadoLlamada('');
+                }}
+              >
+                {t.nueva}
+              </button>
             </div>
           )}
           <form
@@ -193,14 +423,14 @@ export default function Asistente() {
             }}
           >
             <label htmlFor="asistente-texto" className="salta">
-              Tu mensaje
+              {t.tuMensaje}
             </label>
             <textarea
               id="asistente-texto"
               ref={campo}
               rows={1}
               value={texto}
-              placeholder="Escribe aquí tu pregunta"
+              placeholder={t.placeholder}
               onChange={(e) => setTexto(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
@@ -210,10 +440,10 @@ export default function Asistente() {
               }}
             />
             <button type="submit" className="boton" disabled={escribiendo || !texto.trim()}>
-              Enviar
+              {t.enviar}
             </button>
           </form>
-          <p className="asistente-aviso">Es una inteligencia artificial y puede equivocarse; no sustituye a un abogado. No escribas datos personales que no sean necesarios.</p>
+          <p className="asistente-aviso">{t.aviso}</p>
         </div>
       )}
     </>

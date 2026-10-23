@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { calcularFiniquito } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
 import { DESPACHO, enlaceWhatsapp, eurosConCentimos, fechaLarga } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 const numero = (s: string) => Number(s.replace(/\./g, '').replace(',', '.'));
 
@@ -170,6 +171,7 @@ export default function CalculadoraFiniquito() {
             >
               Que lo revise un abogado
             </a>
+            <BotonImprimir />
           </div>
           <p className="letra-pequena">
             Cálculo bruto y orientativo, antes de retenciones. No incluye pluses, comisiones, horas extra ni atrasos de convenio, que también se deben.

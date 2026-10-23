@@ -1,5 +1,7 @@
 'use client';
 
+import { BotonImprimir } from './Utiles';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { sumarHabiles, sumarAnios, diasHabilesRestantes } from '@/lib/calculos';
@@ -134,6 +136,7 @@ export default function Plazos() {
             {s.enlace.texto}
           </Link>
         )}
+        {ultimo && <BotonImprimir />}
       </div>
       <p className="letra-pequena">
         Cálculo orientativo: descuenta fines de semana y festivos nacionales, no los autonómicos ni locales. Para un despido, agosto cuenta como

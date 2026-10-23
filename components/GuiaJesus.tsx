@@ -339,6 +339,48 @@ function useAvisoVisita() {
   }, []);
 }
 
+// Las dudas que escribe Jesús se guardan en su navegador y aparecen al momento en "Tus dudas, respondidas".
+type Duda = { seccion: string; texto: string; tipo: string; fecha: string };
+function leerDudas(): Duda[] {
+  try {
+    return JSON.parse(localStorage.getItem('tc-guia-dudas') || '[]');
+  } catch {
+    return [];
+  }
+}
+function guardarDuda(seccion: string, texto: string, tipo: string) {
+  try {
+    const lista = [...leerDudas(), { seccion, texto: texto.trim(), tipo, fecha: new Date().toISOString() }];
+    localStorage.setItem('tc-guia-dudas', JSON.stringify(lista));
+    window.dispatchEvent(new Event('gj-dudas'));
+  } catch {}
+}
+
+function MisDudas() {
+  const [dudas, setDudas] = useState<Duda[]>([]);
+  useEffect(() => {
+    const leer = () => setDudas(leerDudas());
+    leer();
+    window.addEventListener('gj-dudas', leer);
+    return () => window.removeEventListener('gj-dudas', leer);
+  }, []);
+  if (!dudas.length) return <p className="gj-dudas-vacio">Todavía no nos has escrito ninguna pregunta. Cuando lo hagas, aparecerá aquí al momento.</p>;
+  return (
+    <ul className="gj-dudas">
+      {[...dudas].reverse().map((d) => (
+        <li key={d.fecha}>
+          <span className="gj-dudas-cabeza">
+            <strong>{d.seccion}</strong>
+            <small>{new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }).format(new Date(d.fecha))}</small>
+          </span>
+          <p>&quot;{d.texto}&quot;</p>
+          <em>Recibida. Te contestamos enseguida y la respuesta aparecerá aquí.</em>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function Reaccion({ id, seccion }: { id: string; seccion: string }) {
   const [elegida, setElegida] = useState('');
   const [msg, setMsg] = useState('');
@@ -387,6 +429,7 @@ function Reaccion({ id, seccion }: { id: string; seccion: string }) {
               if (!texto.trim()) return setMsgTexto('Escribe tu comentario y pulsa enviar.');
               setMsgTexto('Enviando...');
               const ok = await avisar({ tipo: 'comentario', id, seccion, reaccion: elegida, texto });
+              if (ok) guardarDuda(seccion, texto, elegida);
               setMsgTexto(ok ? 'Enviado. Gracias, Jesús: ya lo tenemos.' : 'No se ha podido enviar. Cuéntanoslo por WhatsApp, por favor.');
               if (ok) setTexto('');
             }}
@@ -470,6 +513,19 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
             <i style={{ width: `${Math.round((hechos / total) * 100)}%` }} />
           </div>
         </div>
+        <button
+          type="button"
+          className="gj-pdf"
+          onClick={() => {
+            if (q) setQ('');
+            setTimeout(() => {
+              document.querySelectorAll<HTMLDetailsElement>('.gj-detalle').forEach((d) => (d.open = true));
+              window.print();
+            }, 80);
+          }}
+        >
+          Descargar en PDF o imprimir
+        </button>
         <button type="button" className="gj-indice-boton" aria-expanded={indice} onClick={() => setIndice((v) => !v)}>
           {indice ? 'Ocultar el índice' : `Ver el índice (${total} apartados)`}
         </button>
@@ -553,6 +609,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
                 <span className="gj-cerrar">Plegar</span>
               </summary>
               <Contenido html={s.html} />
+              {s.titulo.startsWith('24 bis') && <MisDudas />}
             </details>
             <Reaccion id={s.id} seccion={s.titulo} />
             <a className="gj-arriba" href="#indice">

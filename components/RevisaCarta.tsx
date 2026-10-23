@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 type Pregunta = { id: string; texto: string; ayuda?: string; fallo: string; peso: 'grave' | 'revisar'; solo?: 'objetivo' | 'disciplinario' };
 
@@ -167,6 +168,7 @@ export default function RevisaCarta() {
             <a className="boton" href={enlaceWhatsapp(resumen)}>
               Mandar la carta a un abogado por WhatsApp
             </a>
+            <BotonImprimir />
             <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
               Llamar al {DESPACHO.telefono}
             </a>

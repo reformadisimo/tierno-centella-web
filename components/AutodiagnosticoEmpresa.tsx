@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 type Tipo = 'empresa' | 'colegio' | 'administracion';
 type Punto = { id: string; texto: string; ayuda: string; obligatorio: (t: Tipo, grande: boolean) => boolean; aplica?: (t: Tipo) => boolean };
@@ -195,6 +196,7 @@ export default function AutodiagnosticoEmpresa() {
             <a className="boton" href={enlaceWhatsapp(resumen)}>
               Pedir una revisión de nuestros protocolos
             </a>
+            <BotonImprimir />
             <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
               Llamar al {DESPACHO.telefono}
             </a>

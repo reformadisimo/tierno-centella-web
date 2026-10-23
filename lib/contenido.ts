@@ -29,9 +29,36 @@ export type Pieza = {
   html: string;
   minutos: number;
   faq: { pregunta: string; respuesta: string }[];
+  apartados: { id: string; texto: string }[];
+  es?: string;
 };
 
 const RAIZ = path.join(process.cwd(), 'content');
+
+const aId = (t: string) =>
+  t
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/<[^>]+>/g, '')
+    .replace(/&[a-z]+;/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 60);
+
+// Pone un id a cada apartado (h2) para poder enlazarlo desde el índice "En esta guía".
+function conApartados(html: string) {
+  const apartados: { id: string; texto: string }[] = [];
+  const usados = new Set<string>();
+  const nuevo = html.replace(/<h2>([\s\S]*?)<\/h2>/g, (_, dentro: string) => {
+    let id = aId(dentro) || 'apartado';
+    while (usados.has(id)) id += '-2';
+    usados.add(id);
+    apartados.push({ id, texto: dentro.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'") });
+    return `<h2 id="${id}">${dentro}</h2>`;
+  });
+  return { html: nuevo, apartados };
+}
 
 function leerCabecera(texto: string) {
   const m = texto.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
@@ -62,7 +89,7 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
   const palabras = cuerpo.split(/\s+/).length;
   // Preguntas frecuentes: los ### dentro de la sección "## Preguntas frecuentes", para los datos estructurados.
   const faq: { pregunta: string; respuesta: string }[] = [];
-  const seccion = cuerpo.split(/^## Preguntas frecuentes\s*$/m)[1];
+  const seccion = cuerpo.split(/^## (?:Preguntas frecuentes|Frequently asked questions)\s*$/m)[1];
   if (seccion) {
     const bloque = seccion.split(/^## /m)[0];
     for (const parte of bloque.split(/^### /m).slice(1)) {
@@ -83,7 +110,8 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
     tituloSeo: datos.tituloSeo,
     imagenAlt: datos.imagenAlt,
     orden: datos.orden ? Number(datos.orden) : undefined,
-    html: marked.parse(cuerpo, { async: false }) as string,
+    ...conApartados(marked.parse(cuerpo, { async: false }) as string),
+    es: datos.es,
     minutos: Math.max(1, Math.round(palabras / 220)),
     faq,
   };

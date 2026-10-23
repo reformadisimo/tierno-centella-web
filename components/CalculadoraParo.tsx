@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { calcularParo, IPREM_2026 } from '@/lib/calculos';
 import { DESPACHO, enlaceWhatsapp, euros, eurosConCentimos } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 const numero = (s: string) => Number(s.replace(/\./g, '').replace(',', '.'));
 const meses = (dias: number) => Math.round(dias / 30);
@@ -130,6 +131,7 @@ export default function CalculadoraParo() {
             <a className="boton" href={enlaceWhatsapp('Hola, me han despedido y he calculado mi paro en la web. Quiero saber si puedo reclamar el despido.')}>
               Consultar mi despido
             </a>
+            <BotonImprimir />
           </div>
           <p className="letra-pequena">
             Estimación orientativa con las cifras de 2026 (IPREM de {IPREM_2026} €; topes calculados sobre el IPREM con la sexta parte). El SEPE usa tus bases

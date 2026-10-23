@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { calcularReduccion } from '@/lib/calculos';
 import { DESPACHO, enlaceWhatsapp, euros, eurosConCentimos } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 const numero = (s: string) => Number(s.replace(/\./g, '').replace(',', '.'));
 
@@ -123,6 +124,7 @@ export default function CalculadoraReduccion() {
             <a className="boton boton-claro" href={enlaceWhatsapp('Hola, quiero pedir una reducción de jornada y tengo dudas.')}>
               Consultar por WhatsApp
             </a>
+            <BotonImprimir />
           </div>
           <p className="letra-pequena">
             Cálculo orientativo: tu convenio puede tratar de forma distinta algunos complementos. Dudas: {DESPACHO.telefono}.

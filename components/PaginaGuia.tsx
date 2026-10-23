@@ -5,6 +5,7 @@ import VideoYoutube from './VideoYoutube';
 import { DESPACHO, DEMO, enlaceWhatsapp } from '@/lib/despacho';
 import JsonLd from './JsonLd';
 import { Compartir } from './BotonesAccion';
+import { Escuchar } from './Utiles';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
 
 // Fotos reales del despacho. Cada pieza sin foto propia recibe una fija según su nombre, para que no se repitan todas.
@@ -35,20 +36,23 @@ export function fotoDePieza(pieza: Pieza) {
   return conVariantes(f.src, f.alt);
 }
 
-const fechaCorta = (iso: string) =>
-  new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
+const fechaCorta = (iso: string, en = false) =>
+  new Intl.DateTimeFormat(en ? 'en-GB' : 'es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
 
 export default function PaginaGuia({
   pieza,
   migas,
   relacionadas,
   herramienta,
+  idioma = 'es',
 }: {
   pieza: Pieza;
   migas: { href: string; texto: string }[];
   relacionadas: { href: string; titulo: string }[];
   herramienta?: { href: string; texto: string };
+  idioma?: 'es' | 'en';
 }) {
+  const en = idioma === 'en';
   const video = videoPorId(pieza.video);
   const foto = fotoDePieza(pieza);
   const ruta = migas[migas.length - 1].href + '/' + pieza.slug;
@@ -61,7 +65,7 @@ export default function PaginaGuia({
     dateModified: pieza.actualizado ?? pieza.fecha,
     author: { '@id': ID_JESUS },
     publisher: { '@id': ID_DESPACHO },
-    inLanguage: 'es-ES',
+    inLanguage: en ? 'en' : 'es-ES',
     mainEntityOfPage: BASE + ruta,
     image: video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : `${BASE}${foto.src}`,
     ...(video
@@ -88,8 +92,14 @@ export default function PaginaGuia({
           <div className="firma">
             <img src="/img/jesus-retrato.webp" srcSet="/img/jesus-retrato-640.webp 640w, /img/jesus-retrato.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="" />
             <span>
-              {DEMO ? 'Pendiente de revisión por Jesús Tierno Centella.' : 'Revisado por Jesús Tierno Centella, abogado laboralista.'}{' '}
-              Actualizado el {fechaCorta(pieza.actualizado ?? pieza.fecha)}. {pieza.minutos} min de lectura.
+              {en
+                ? DEMO
+                  ? 'Pending review by Jesús Tierno Centella.'
+                  : 'Reviewed by Jesús Tierno Centella, employment lawyer.'
+                : DEMO
+                  ? 'Pendiente de revisión por Jesús Tierno Centella.'
+                  : 'Revisado por Jesús Tierno Centella, abogado laboralista.'}{' '}
+              {en ? 'Updated' : 'Actualizado el'} {fechaCorta(pieza.actualizado ?? pieza.fecha, en)}. {pieza.minutos} {en ? 'min read' : 'min de lectura'}.
             </span>
           </div>
         </div>
@@ -106,36 +116,51 @@ export default function PaginaGuia({
                 <img src={foto.src} srcSet={foto.srcSet} sizes="(max-width: 1000px) 100vw, 720px" alt={foto.alt} width={1200} height={800} fetchPriority="high" />
               </figure>
             )}
+            <Escuchar />
+            {pieza.apartados.length >= 4 && (
+              <nav className="en-esta-guia" aria-label={en ? 'In this guide' : 'En esta guía'}>
+                <strong>{en ? 'In this guide' : 'En esta guía'}</strong>
+                <ul>
+                  {pieza.apartados.map((a) => (
+                    <li key={a.id}>
+                      <a href={`#${a.id}`}>{a.texto}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
             <div className="prosa" dangerouslySetInnerHTML={{ __html: pieza.html }} />
             <Compartir titulo={pieza.titulo} />
           </article>
           <aside className="guia-lateral">
             <div className="lateral-caja lateral-humana">
               {foto.src.includes('abogada-escucha') ? (
-                <img src="/img/abogada-sonrie-640.webp" alt="Una abogada del despacho sonríe durante una consulta" loading="lazy" />
+                <img src="/img/abogada-sonrie-640.webp" alt={en ? "A lawyer from the firm smiles during a consultation" : "Una abogada del despacho sonríe durante una consulta"} loading="lazy" />
               ) : (
-                <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho atiende una consulta" loading="lazy" />
+                <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt={en ? "A lawyer from the firm during a consultation" : "Una abogada del despacho atiende una consulta"} loading="lazy" />
               )}
-              <h2>¿Hablamos de tu caso?</h2>
-              <p style={{ fontSize: '0.95rem' }}>Te decimos por teléfono si tiene recorrido y qué plazos corren.</p>
+              <h2>{en ? 'Shall we talk about your case?' : '¿Hablamos de tu caso?'}</h2>
+              <p style={{ fontSize: '0.95rem' }}>
+                {en ? 'We tell you over the phone whether it has a chance and which deadlines apply. We speak English.' : 'Te decimos por teléfono si tiene recorrido y qué plazos corren.'}
+              </p>
               <div style={{ display: 'grid', gap: 8 }}>
                 <a className="boton" href={DESPACHO.telefonoHref}>
                   {DESPACHO.telefono}
                 </a>
-                <a className="boton boton-claro" href={enlaceWhatsapp(`Hola, he leído "${pieza.titulo}" y quiero consultar mi caso.`)}>
+                <a className="boton boton-claro" href={enlaceWhatsapp(en ? `Hello, I have read "${pieza.titulo}" and I would like to ask about my case.` : `Hola, he leído "${pieza.titulo}" y quiero consultar mi caso.`)}>
                   WhatsApp
                 </a>
               </div>
             </div>
             {herramienta && (
               <div className="lateral-caja">
-                <h2>Herramienta gratuita</h2>
+                <h2>{en ? 'Free tool' : 'Herramienta gratuita'}</h2>
                 <Link href={herramienta.href}>{herramienta.texto}</Link>
               </div>
             )}
             {relacionadas.length > 0 && (
               <div className="lateral-caja">
-                <h2>Sigue leyendo</h2>
+                <h2>{en ? 'Keep reading' : 'Sigue leyendo'}</h2>
                 <ul>
                   {relacionadas.map((r) => (
                     <li key={r.href}>

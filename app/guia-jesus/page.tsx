@@ -59,7 +59,7 @@ const EXTRA: Record<string, Extra> = {
   '7': { foto: 'libros-derecho', frase: 'Mirar a los demás sirve para saber dónde brillar.', grupo: 'hoy' },
   '7 bis': { foto: 'mujer-pensativa', frase: 'Todos dicen "gratis". Tú tienes algo mejor que contar.', grupo: 'hoy' },
   '8': { foto: 'despacho-mesa', frase: 'Una web pensada para quien lo está pasando mal en su trabajo.', grupo: 'web' },
-  '8 bis': { foto: 'abogada-documentos', frase: 'Veintiún oficios distintos, un solo equipo.', grupo: 'web' },
+  '8 bis': { foto: 'abogada-documentos', frase: 'Veinticinco oficios distintos, un solo proveedor.', grupo: 'web' },
   '9': { foto: 'reunion-equipo', frase: 'Un guiño a las trabajadoras que se convierte en servicio.', grupo: 'web' },
   '10': { foto: 'abogado-joven', frase: 'Como hablar con ChatGPT, pero de tu despacho.', grupo: 'web' },
   '11': { foto: 'calculadora-papeles', frase: 'Herramientas que casi nadie del sector tiene.', grupo: 'web' },

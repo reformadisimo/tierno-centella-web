@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { BotonImprimir } from './Utiles';
 
 export type Opcion = { texto: string; ayuda?: string; valor?: number; marca?: string };
 export type Paso = {
@@ -159,6 +160,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
             <a className="boton" href={enlaceWhatsapp(res.whatsapp)}>
               Enviar mi resultado por WhatsApp
             </a>
+            <BotonImprimir />
             <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
               Llamar al {DESPACHO.telefono}
             </a>
