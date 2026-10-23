@@ -846,7 +846,7 @@ input:focus {
   }
 }
 
-@media (min-width: 1100px) and (max-width: 1320px) {
+@media (min-width: 1100px) and (max-width: 1440px) {
   .menu a {
     padding: 8px 7px;
     font-size: 0.9rem;
@@ -2430,4 +2430,13 @@ textarea {
   background: var(--coral-texto) !important;
   border-color: var(--coral-texto) !important;
   color: var(--blanco);
+}
+
+/* El vídeo aparece con un fundido cuando empieza a reproducirse; hasta entonces se ve la foto */
+.portada-video video {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.portada-video video.reproduciendo {
+  opacity: 1;
 }

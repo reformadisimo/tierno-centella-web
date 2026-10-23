@@ -1,5 +1,6 @@
 ---
 titulo: Despido objetivo: requisitos que la empresa tiene que cumplir
+tituloSeo: Despido objetivo: requisitos
 descripcion: El despido objetivo exige carta con la causa, indemnización de 20 días por año entregada a la vez y 15 días de preaviso. Qué revisar y cuándo es improcedente.
 fecha: 2026-09-22
 actualizado: 2026-09-22

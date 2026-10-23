@@ -1,5 +1,6 @@
 ---
 titulo: Firmar el finiquito como no conforme: qué significa y cuándo hacerlo
+tituloSeo: Firmar el finiquito como no conforme
 descripcion: Firmar el finiquito con la frase no conforme te permite cobrar sin renunciar a reclamar. Qué revisar antes de firmar, qué plazos tienes y qué errores evitar.
 fecha: 2026-09-13
 actualizado: 2026-09-13

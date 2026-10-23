@@ -7,7 +7,7 @@ import { leerColeccion } from '@/lib/contenido';
 import { fotoDePieza } from '@/components/PaginaGuia';
 
 export const metadata: Metadata = meta({
-  titulo: 'Abogadas y abogados para trabajadoras: embarazo, conciliación y acoso sexual',
+  titulo: 'Mujer y trabajo: embarazo, conciliación y acoso sexual',
   descripcion:
     'Despido durante el embarazo o la lactancia, reducción y adaptación de jornada, permisos por nacimiento, acoso sexual y brecha salarial. Tus derechos, explicados con claridad.',
   ruta: '/mujer-y-trabajo',
@@ -40,7 +40,7 @@ export default function MujerYTrabajo() {
               </Link>
             </div>
           </div>
-          <img className="foto" src="/img/abogada-sonrie.webp" alt="Una abogada del despacho sonríe durante una reunión" fetchPriority="high" />
+          <img className="foto" src="/img/abogada-sonrie.webp" srcSet="/img/abogada-sonrie-640.webp 640w, /img/abogada-sonrie.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho sonríe durante una reunión" fetchPriority="high" />
         </div>
       </header>
 
@@ -52,7 +52,7 @@ export default function MujerYTrabajo() {
               const f = fotoDePieza(g);
               return (
                 <Link key={g.slug} href={`/mujer-y-trabajo/${g.slug}`}>
-                  <img src={f.src} alt={f.alt} loading="lazy" />
+                  <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} loading="lazy" />
                   <div>
                     <strong>{g.titulo}</strong>
                     <span>{g.descripcion}</span>
@@ -61,7 +61,7 @@ export default function MujerYTrabajo() {
               );
             })}
             <Link href="/acoso-laboral">
-              <img src="/img/biblioteca.webp" alt="Reunión en la biblioteca del despacho" loading="lazy" />
+              <img src="/img/biblioteca.webp" srcSet="/img/biblioteca-640.webp 640w, /img/biblioteca.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="Reunión en la biblioteca del despacho" loading="lazy" />
               <div>
                 <strong>Acoso laboral</strong>
                 <span>Nuestra especialidad desde hace más de 25 años: cómo saber si lo sufres, cómo demostrarlo y qué reclamar.</span>
@@ -73,7 +73,7 @@ export default function MujerYTrabajo() {
 
       <section className="seccion seccion-arena">
         <div className="contenedor bloque-foto">
-          <img src="/img/equipo.webp" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
+          <img src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
           <div>
             <h2>Cinco cosas que conviene saber hoy</h2>
             <ol className="prosa">

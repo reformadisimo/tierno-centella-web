@@ -36,7 +36,7 @@ export default function Incapacidad() {
           <div>
             <img
               className="foto"
-              src="/img/incapacidad-ventana.webp"
+              src="/img/incapacidad-ventana.webp" srcSet="/img/incapacidad-ventana-640.webp 640w, /img/incapacidad-ventana.webp 1000w" sizes="(max-width: 860px) 100vw, 50vw"
               alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra"
               width={1000}
               height={676}

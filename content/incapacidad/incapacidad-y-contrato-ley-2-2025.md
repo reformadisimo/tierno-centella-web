@@ -1,5 +1,6 @@
 ---
 titulo: Incapacidad permanente y contrato: qué cambia con la Ley 2/2025
+tituloSeo: Incapacidad permanente y Ley 2/2025
 descripcion: Desde mayo de 2025, la incapacidad permanente ya no extingue el contrato de forma automática. Plazos, ajustes razonables y qué puede hacer la empresa.
 fecha: 2026-10-23
 actualizado: 2026-10-23

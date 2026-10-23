@@ -20,6 +20,7 @@ export function meta({
   tipo = 'website',
   publicado,
   modificado,
+  tituloSeo,
 }: {
   titulo: string;
   descripcion: string;
@@ -28,16 +29,23 @@ export function meta({
   tipo?: 'website' | 'article';
   publicado?: string;
   modificado?: string;
+  tituloSeo?: string;
 }): Metadata {
   const url = BASE + ruta;
+  // Google corta el título hacia los 60 caracteres y la descripción hacia los 155.
+  // Si con la marca no cabe, el título va sin ella (Google ya muestra el nombre del sitio aparte).
+  const corto = tituloSeo ?? titulo;
+  const title = corto.length + ' | Tierno Centella'.length <= 60 ? `${corto} | Tierno Centella` : corto;
+  const recorta = (t: string, n: number) => (t.length <= n ? t : t.slice(0, t.lastIndexOf(' ', n - 1)).replace(/[,;:.\s-]+$/, '') + '...');
+  const description = recorta(descripcion, 158);
   const images = imagen ? [{ url: imagen, width: 1200, height: 630, alt: titulo }] : undefined;
   return {
-    title: titulo,
-    description: descripcion,
+    title: { absolute: title },
+    description,
     alternates: { canonical: url },
     openGraph: {
       title: titulo,
-      description: descripcion,
+      description,
       url,
       siteName: DESPACHO.nombre,
       locale: 'es_ES',
@@ -45,7 +53,7 @@ export function meta({
       ...(images ? { images } : {}),
       ...(tipo === 'article' ? { publishedTime: publicado, modifiedTime: modificado ?? publicado, authors: ['Jesús Tierno Centella'] } : {}),
     },
-    twitter: { card: 'summary_large_image', title: titulo, description: descripcion, site: '@TiernoCentella1' },
+    twitter: { card: 'summary_large_image', title: titulo, description },
   };
 }
 

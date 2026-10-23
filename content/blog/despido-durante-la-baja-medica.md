@@ -1,5 +1,6 @@
 ---
 titulo: ¿Te pueden despedir estando de baja? Cuándo el despido es nulo
+tituloSeo: ¿Te pueden despedir estando de baja?
 descripcion: Que te despidan de baja no es nulo de forma automática, pero puede serlo si el motivo real es tu enfermedad. Qué dice la Ley 15/2022 y qué pruebas cuentan.
 fecha: 2026-09-09
 actualizado: 2026-09-09

@@ -1,5 +1,6 @@
 ---
 titulo: Me han dado una carta de despido disciplinario. ¿Qué hago ahora?
+tituloSeo: Despido disciplinario: qué hacer ahora
 descripcion: Qué revisar en la carta, qué firmar y qué no, cuánto tiempo tienes para reclamar, si cobras paro e indemnización y cuándo el despido disciplinario acaba siendo improcedente o nulo.
 fecha: 2026-10-23
 actualizado: 2026-10-23

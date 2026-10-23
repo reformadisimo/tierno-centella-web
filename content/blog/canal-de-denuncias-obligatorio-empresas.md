@@ -1,5 +1,6 @@
 ---
 titulo: El canal de denuncias - qué empresas deben tenerlo y cómo te protege
+tituloSeo: Canal de denuncias: quién debe tenerlo
 descripcion: Qué es el canal interno de información de la Ley 2/2023, qué empresas están obligadas, qué se puede denunciar y por qué quien denuncia está protegido frente a represalias.
 fecha: 2026-10-23
 actualizado: 2026-10-23

@@ -6,6 +6,7 @@ import { CASOS } from '@/lib/casos';
 import { leerColeccion } from '@/lib/contenido';
 import { fotoDePieza } from '@/components/PaginaGuia';
 import ReelInstagram from '@/components/ReelInstagram';
+import VideoPortada from '@/components/VideoPortada';
 import { REELS } from '@/lib/redes';
 
 export default function Inicio() {
@@ -21,10 +22,7 @@ export default function Inicio() {
           <source media="(max-width: 700px)" srcSet="/img/portada-poster-movil.webp" />
           <img className="poster" src="/img/portada-poster.webp" alt="" fetchPriority="high" />
         </picture>
-        <video autoPlay muted loop playsInline poster="/img/portada-poster.webp" aria-hidden="true">
-          <source media="(max-width: 700px)" src="/video/portada-movil.webm" type="video/webm" />
-          <source src="/video/portada.webm" type="video/webm" />
-        </video>
+        <VideoPortada />
         <div className="contenedor">
           <h1>Abogados laboralistas en Madrid, especialistas en acoso laboral.</h1>
           <p className="entradilla">
@@ -84,7 +82,7 @@ export default function Inicio() {
 
       <section className="seccion seccion-arena">
         <div className="contenedor bloque-foto invertido">
-          <img src="/img/abogada-escucha.webp" alt="Una abogada del despacho escucha a una clienta" loading="lazy" />
+          <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho escucha a una clienta" loading="lazy" />
           <div>
             <span className="etiqueta-calida">Mujer y trabajo</span>
             <h2 style={{ maxWidth: '22ch' }}>Embarazada, con hijos o cuidando a alguien: tu trabajo está protegido.</h2>
@@ -142,7 +140,7 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor dos-columnas" style={{ alignItems: 'center' }}>
           <div className="foto-destacada">
-            <img src="/img/reunion-cliente.webp" alt="Jesús Tierno entrega documentación a una clienta en el despacho" loading="lazy" />
+            <img src="/img/reunion-cliente.webp" srcSet="/img/reunion-cliente-640.webp 640w, /img/reunion-cliente.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno entrega documentación a una clienta en el despacho" loading="lazy" />
             <div className="sello">
               <strong>2005</strong>
               Primera condena en España a la empresa y al acosador a la vez
@@ -172,27 +170,27 @@ export default function Inicio() {
           <p>En la calle Jorge Juan, en el barrio de Salamanca. Un equipo pequeño que conoce cada caso por su nombre.</p>
           <div className="galeria" style={{ marginTop: 24 }}>
             <figure className="g-grande">
-              <img src="/img/equipo.webp" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
+              <img src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
               <figcaption>El equipo de Tierno Centella</figcaption>
             </figure>
             <figure className="g-alta">
-              <img src="/img/abogada-sonrie.webp" alt="Una abogada del despacho sonríe durante una reunión" loading="lazy" />
+              <img src="/img/abogada-sonrie.webp" srcSet="/img/abogada-sonrie-640.webp 640w, /img/abogada-sonrie.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho sonríe durante una reunión" loading="lazy" />
             </figure>
             <figure>
-              <img src="/img/biblioteca.webp" alt="Reunión en la biblioteca del despacho" loading="lazy" />
+              <img src="/img/biblioteca.webp" srcSet="/img/biblioteca-640.webp 640w, /img/biblioteca.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="Reunión en la biblioteca del despacho" loading="lazy" />
             </figure>
             <figure>
-              <img src="/img/jesus-firmando.webp" alt="Jesús Tierno revisa un documento" loading="lazy" style={{ objectPosition: 'top' }} />
+              <img src="/img/jesus-firmando.webp" srcSet="/img/jesus-firmando-640.webp 640w, /img/jesus-firmando.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno revisa un documento" loading="lazy" style={{ objectPosition: 'top' }} />
             </figure>
             <figure className="g-alta">
-              <img src="/img/abogado-joven.webp" alt="Un abogado del despacho trabaja con documentos" loading="lazy" />
+              <img src="/img/abogado-joven.webp" srcSet="/img/abogado-joven-640.webp 640w, /img/abogado-joven.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Un abogado del despacho trabaja con documentos" loading="lazy" />
             </figure>
             <figure className="g-grande">
-              <img src="/img/reunion-equipo.webp" alt="El equipo reunido alrededor de la mesa" loading="lazy" />
+              <img src="/img/reunion-equipo.webp" srcSet="/img/reunion-equipo-640.webp 640w, /img/reunion-equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="El equipo reunido alrededor de la mesa" loading="lazy" />
               <figcaption>Cada caso se estudia en equipo</figcaption>
             </figure>
             <figure>
-              <img src="/img/papeleria.webp" alt="Documentación con el logotipo del despacho" loading="lazy" />
+              <img src="/img/papeleria.webp" srcSet="/img/papeleria-640.webp 640w, /img/papeleria.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Documentación con el logotipo del despacho" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -281,7 +279,7 @@ export default function Inicio() {
                 const f = fotoDePieza(p);
                 return (
                   <Link key={p.slug} href={`/blog/${p.slug}`}>
-                    <img src={f.src} alt={f.alt} loading="lazy" />
+                    <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} loading="lazy" />
                     <div>
                       <strong>{p.titulo}</strong>
                       <span>{p.descripcion}</span>
@@ -311,7 +309,7 @@ export default function Inicio() {
               </a>
             </div>
           </div>
-          <img className="foto" src="/img/fachada.webp" alt="Edificios del centro de Madrid" loading="lazy" />
+          <img className="foto" src="/img/fachada.webp" srcSet="/img/fachada-640.webp 640w, /img/fachada.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Edificios del centro de Madrid" loading="lazy" />
         </div>
       </section>
     </>

@@ -23,6 +23,7 @@ export type Pieza = {
   categoria?: string;
   video?: string;
   imagen?: string;
+  tituloSeo?: string;
   imagenAlt?: string;
   orden?: number;
   html: string;
@@ -79,6 +80,7 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
     categoria: datos.categoria,
     video: datos.video,
     imagen: datos.imagen,
+    tituloSeo: datos.tituloSeo,
     imagenAlt: datos.imagenAlt,
     orden: datos.orden ? Number(datos.orden) : undefined,
     html: marked.parse(cuerpo, { async: false }) as string,

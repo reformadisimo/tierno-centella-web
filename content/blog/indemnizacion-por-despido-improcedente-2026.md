@@ -1,5 +1,6 @@
 ---
 titulo: Indemnización por despido improcedente en 2026: cuánto te corresponde
+tituloSeo: Indemnización por despido improcedente 2026
 descripcion: En 2026 el despido improcedente se paga con 33 días por año, hasta 24 mensualidades, y 45 días por el tiempo anterior a 2012. Cálculo y debate europeo.
 fecha: 2026-09-17
 actualizado: 2026-10-23

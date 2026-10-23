@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = leerPieza('blog', slug);
   return p
-    ? meta({ titulo: p.titulo, descripcion: p.descripcion, imagen: fotoDePieza(p).src, ruta: `/blog/${slug}`, tipo: 'article', publicado: p.fecha, modificado: p.actualizado })
+    ? meta({ titulo: p.titulo, tituloSeo: p.tituloSeo, descripcion: p.descripcion, imagen: fotoDePieza(p).src, ruta: `/blog/${slug}`, tipo: 'article', publicado: p.fecha, modificado: p.actualizado })
     : {};
 }
 

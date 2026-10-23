@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export type Ficha = { slug: string; titulo: string; descripcion: string; categoria: string; minutos: number; foto: { src: string; alt: string } };
+export type Ficha = { slug: string; titulo: string; descripcion: string; categoria: string; minutos: number; foto: { src: string; srcSet?: string; alt: string } };
 
 const NOMBRES: Record<string, string> = { acoso: 'Acoso laboral', despido: 'Despido', incapacidad: 'Incapacidad', empresas: 'Empresas' };
 const sinAcentos = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -33,7 +33,7 @@ export default function BlogFiltro({ piezas }: { piezas: Ficha[] }) {
       <div className="tarjetas-foto">
         {vistas.map((p) => (
           <Link key={p.slug} href={`/blog/${p.slug}`}>
-            <img src={p.foto.src} alt={p.foto.alt} loading="lazy" />
+            <img src={p.foto.src} srcSet={p.foto.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={p.foto.alt} loading="lazy" />
             <div>
               <small className="tarjeta-meta">
                 {NOMBRES[p.categoria] ?? 'Laboral'} · {p.minutos} min

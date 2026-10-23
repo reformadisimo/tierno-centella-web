@@ -1,5 +1,6 @@
 ---
 titulo: Despido durante el embarazo, la baja por nacimiento o la lactancia
+tituloSeo: Despido de embarazada: es nulo
 descripcion: Si te despiden embarazada, de baja por nacimiento, con lactancia o en el año siguiente a tu vuelta, el despido es nulo salvo causa real y ajena. Qué hacer y en qué plazo.
 fecha: 2026-10-23
 actualizado: 2026-10-23

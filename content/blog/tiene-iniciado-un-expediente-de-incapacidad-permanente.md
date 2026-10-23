@@ -1,5 +1,6 @@
 ---
 titulo: "Tiene iniciado un expediente de incapacidad permanente": qué significa y qué hacer
+tituloSeo: Expediente de incapacidad permanente iniciado
 descripcion: Qué quiere decir el aviso de la Seguridad Social de que tienes un expediente de incapacidad permanente, qué pasos vienen, cuánto tarda y cómo prepararte para el tribunal médico.
 fecha: 2026-10-23
 actualizado: 2026-10-23

@@ -57,7 +57,7 @@ export default function Empresas() {
               </Link>
             </div>
           </div>
-          <img className="foto" src="/img/reunion-equipo.webp" alt="El equipo del despacho reunido con documentación" />
+          <img className="foto" src="/img/reunion-equipo.webp" srcSet="/img/reunion-equipo-640.webp 640w, /img/reunion-equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="El equipo del despacho reunido con documentación" />
         </div>
       </header>
       <section className="seccion">

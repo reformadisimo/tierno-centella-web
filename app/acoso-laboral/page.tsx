@@ -38,7 +38,7 @@ export default function Acoso() {
             </div>
           </div>
           <div>
-            <img className="foto" src="/img/acoso-tension.webp" alt="Un superior señala con el dedo a una trabajadora que se lleva la mano a la cabeza" />
+            <img className="foto" src="/img/acoso-tension.webp" srcSet="/img/acoso-tension-640.webp 640w, /img/acoso-tension.webp 1254w" sizes="(max-width: 860px) 100vw, 50vw" alt="Un superior señala con el dedo a una trabajadora que se lleva la mano a la cabeza" />
             <p className="foto-pie">Imagen ilustrativa.</p>
           </div>
         </div>

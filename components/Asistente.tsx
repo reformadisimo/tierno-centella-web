@@ -97,7 +97,7 @@ export default function Asistente() {
     <>
       {!abierto && (
         <button type="button" className="asistente-boton" onClick={() => setAbierto(true)}>
-          <img src="/img/jesus-retrato.webp" alt="" />
+          <img src="/img/jesus-retrato.webp" srcSet="/img/jesus-retrato-640.webp 640w, /img/jesus-retrato.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="" />
           Pregunta tu caso
         </button>
       )}

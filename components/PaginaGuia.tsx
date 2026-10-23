@@ -20,12 +20,18 @@ const FOTOS: { src: string; alt: string }[] = [
   { src: 'jesus-camisa', alt: 'Jesús Tierno en el despacho' },
 ];
 
+const conVariantes = (nombre: string, alt: string) => ({
+  src: `/img/${nombre}.webp`,
+  srcSet: `/img/${nombre}-640.webp 640w, /img/${nombre}.webp 1200w`,
+  alt,
+});
+
 export function fotoDePieza(pieza: Pieza) {
-  if (pieza.imagen) return { src: `/img/${pieza.imagen}.webp`, alt: pieza.imagenAlt ?? '' };
+  if (pieza.imagen) return conVariantes(pieza.imagen, pieza.imagenAlt ?? '');
   let h = 0;
   for (const c of pieza.slug) h = (h * 31 + c.charCodeAt(0)) >>> 0;
   const f = FOTOS[h % FOTOS.length];
-  return { src: `/img/${f.src}.webp`, alt: f.alt };
+  return conVariantes(f.src, f.alt);
 }
 
 const fechaCorta = (iso: string) =>
@@ -79,7 +85,7 @@ export default function PaginaGuia({
           <h1>{pieza.titulo}</h1>
           <p className="entradilla">{pieza.descripcion}</p>
           <div className="firma">
-            <img src="/img/jesus-retrato.webp" alt="" />
+            <img src="/img/jesus-retrato.webp" srcSet="/img/jesus-retrato-640.webp 640w, /img/jesus-retrato.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="" />
             <span>
               {DEMO ? 'Pendiente de revisión por Jesús Tierno Centella.' : 'Revisado por Jesús Tierno Centella, abogado laboralista.'}{' '}
               Actualizado el {fechaCorta(pieza.actualizado ?? pieza.fecha)}. {pieza.minutos} min de lectura.
@@ -96,14 +102,14 @@ export default function PaginaGuia({
               </div>
             ) : (
               <figure className="guia-foto">
-                <img src={foto.src} alt={foto.alt} width={1200} height={800} fetchPriority="high" />
+                <img src={foto.src} srcSet={foto.srcSet} sizes="(max-width: 1000px) 100vw, 720px" alt={foto.alt} width={1200} height={800} fetchPriority="high" />
               </figure>
             )}
             <div className="prosa" dangerouslySetInnerHTML={{ __html: pieza.html }} />
           </article>
           <aside className="guia-lateral">
             <div className="lateral-caja lateral-humana">
-              <img src="/img/abogada-escucha.webp" alt="Una abogada del despacho atiende una consulta" loading="lazy" />
+              <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho atiende una consulta" loading="lazy" />
               <h2>¿Hablamos de tu caso?</h2>
               <p style={{ fontSize: '0.95rem' }}>Te decimos por teléfono si tiene recorrido y qué plazos corren.</p>
               <div style={{ display: 'grid', gap: 8 }}>

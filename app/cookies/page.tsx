@@ -20,7 +20,15 @@ export default function Pagina() {
           <h2>Las que usamos</h2>
           <ul>
             <li>Necesarias: guardan tu elección sobre las cookies. Se guardan en tu navegador.</li>
-            <li>Medición: solo si las aceptas, para contar visitas de forma agregada.</li>
+            <li>
+              Medición sin cookies: Vercel Web Analytics y Speed Insights cuentan visitas y miden la velocidad de forma agregada, sin cookies ni datos
+              que te identifiquen.
+            </li>
+            <li>
+              Medición con cookies, solo si las aceptas: Microsoft Clarity, que crea mapas de calor y grabaciones anónimas de cómo se usa la web (dónde se
+              pulsa, hasta dónde se lee) para mejorarla. No graba lo que escribes en los formularios.
+            </li>
+            <li>Instagram: carga sus cookies solo si pulsas para ver uno de los vídeos.</li>
             <li>Servicios externos: YouTube y Google Maps instalan las suyas cuando pulsas para ver un vídeo o el mapa.</li>
           </ul>
           <h2>Cambiar tu elección</h2>

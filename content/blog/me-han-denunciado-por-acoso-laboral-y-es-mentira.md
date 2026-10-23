@@ -1,5 +1,6 @@
 ---
 titulo: Me han denunciado por acoso laboral y es mentira. ¿Qué hago?
+tituloSeo: Me han denunciado por acoso y es mentira
 descripcion: Qué derechos tienes si te acusan falsamente de acoso en el trabajo - cómo se debe investigar, cómo defenderte y qué hacer si en realidad la víctima eres tú.
 fecha: 2026-10-23
 actualizado: 2026-10-23

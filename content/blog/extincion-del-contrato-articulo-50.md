@@ -1,5 +1,6 @@
 ---
 titulo: Irte de la empresa con indemnización - el artículo 50 del Estatuto
+tituloSeo: Artículo 50: irte con indemnización
 descripcion: Cuándo puedes pedir al juez que extinga tu contrato por incumplimientos graves de la empresa y cobrar como en un despido improcedente - impagos, cambios de condiciones que te humillan y acoso.
 fecha: 2026-10-23
 actualizado: 2026-10-23

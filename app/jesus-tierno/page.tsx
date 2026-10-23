@@ -30,7 +30,7 @@ export default function Jesus() {
               </a>
             </div>
           </div>
-          <img className="foto" src="/img/jesus-retrato.webp" alt="Jesús Tierno Centella, de traje gris, con los brazos cruzados" style={{ aspectRatio: '4 / 5', objectPosition: 'top' }} />
+          <img className="foto" src="/img/jesus-retrato.webp" srcSet="/img/jesus-retrato-640.webp 640w, /img/jesus-retrato.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno Centella, de traje gris, con los brazos cruzados" style={{ aspectRatio: '4 / 5', objectPosition: 'top' }} />
         </div>
       </header>
 
@@ -60,8 +60,8 @@ export default function Jesus() {
             </div>
           </div>
           <div style={{ display: 'grid', gap: 20, alignContent: 'start' }}>
-            <img className="foto" src="/img/jesus-firmando.webp" alt="Jesús Tierno revisando un documento en su mesa" />
-            <img className="foto" src="/img/equipo.webp" alt="Jesús Tierno con el equipo del despacho" />
+            <img className="foto" src="/img/jesus-firmando.webp" srcSet="/img/jesus-firmando-640.webp 640w, /img/jesus-firmando.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno revisando un documento en su mesa" />
+            <img className="foto" src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno con el equipo del despacho" />
           </div>
         </div>
       </section>

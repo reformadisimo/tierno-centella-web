@@ -1,5 +1,6 @@
 ---
 titulo: Audiencia previa en el despido disciplinario: qué cambió y qué pasa si no te escuchan
+tituloSeo: Audiencia previa en el despido disciplinario
 descripcion: Desde noviembre de 2024 la empresa debe dejarte defenderte antes de un despido disciplinario. Te explicamos qué es la audiencia previa y qué pasa si no la hay.
 fecha: 2026-09-01
 actualizado: 2026-09-01

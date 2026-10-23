@@ -1,5 +1,6 @@
 ---
 titulo: Cobro menos que un compañero por el mismo trabajo. ¿Qué hago?
+tituloSeo: Brecha salarial: cómo reclamar
 descripcion: Igualdad salarial entre mujeres y hombres - qué dice la ley, cómo acceder al registro retributivo de tu empresa, cómo se prueba la discriminación y qué puedes reclamar.
 fecha: 2026-10-23
 actualizado: 2026-10-23

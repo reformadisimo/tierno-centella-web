@@ -432,11 +432,30 @@ Es lo que hacemos en Reformadísimo y está montado con Resend, que envía desde
 - **Recursos humanos y empresas**: protocolos, investigación de denuncias y formación de mandos, por LinkedIn.
 - **Otros despachos** que no llevan acoso y te derivan casos.
 
-## 19. Saber qué pasa en la web cada día
+## 19. Saber qué pasa en la web cada día (y cómo se mueve cada visita)
 
-Lo que queremos poder verte cada semana: visitas y de dónde vienen, búsquedas con las que apareces y en qué puesto, llamadas y WhatsApp desde la web, formularios recibidos, uso de cada herramienta, preguntas al asistente (anónimas, para saber qué preocupa) y evolución de la ficha de Google. Con Analytics, Search Console, Clarity (mapas de calor gratuitos de Microsoft) y un informe automático por correo.
+Hoy no sabes cuánta gente entra en tu web, de dónde viene, qué lee ni dónde se va. Con la web nueva lo sabremos todo, y te lo contaremos en un informe sencillo.
 
-**Qué está listo hoy**: la web está preparada para medirlo todo. **Qué falta**: tus accesos (apartado 23) y que aceptes las cookies de medición en la versión definitiva.
+**Lo que ya está conectado en la web nueva**:
+
+- **Vercel Analytics**: cuenta visitas, páginas más vistas, de dónde llega la gente (Google, Instagram, ChatGPT...) y desde qué dispositivo. No usa cookies ni datos personales.
+- **Medición de velocidad real**: cómo de rápida va la web en los móviles de tus visitas de verdad, no solo en una prueba.
+- **Microsoft Clarity** (gratuito): **mapas de calor** que enseñan dónde pulsa la gente, hasta dónde lee cada página y dónde se atasca, y grabaciones anónimas de las visitas, como si miraras por encima del hombro de quien navega. Solo se activa si la persona acepta las cookies de medición, y nunca graba lo que escribe en los formularios. Para encenderlo solo falta crear la cuenta (lo hacemos nosotros).
+
+**Lo que podemos conectar si nos das acceso**: Google Analytics, Search Console, Semrush (ya lo usamos), tu ficha de Google, las campañas de Google Ads y de Meta, Instagram, Facebook, LinkedIn y el correo de seguimiento. Con todo conectado, el informe deja de ser una opinión y pasa a ser un dato.
+
+**Lo que recibirías** (una vez por semana, en una página y sin jerga):
+
+| Qué | Ejemplo de lo que te diríamos |
+| --- | --- |
+| Visitas y contactos | "Esta semana 640 visitas y 14 consultas: 9 por WhatsApp, 3 por teléfono y 2 por el formulario" |
+| Qué buscan | "La calculadora del paro es lo más usado; la guía de acoso sexual ha entrado en la primera página de Google" |
+| Dónde se pierden | "En móvil, la mitad de la gente no llega al botón de llamar de la página de incapacidad: lo subimos" |
+| Qué pregunta la gente al asistente | "Muchas preguntas sobre bajas por ansiedad: preparamos un artículo" |
+| Reseñas y ficha de Google | "Dos reseñas nuevas de cinco estrellas; la nota sube a 4,3" |
+| Campañas, si las hay | "Cada consulta por Google Ads ha costado 18 €" |
+
+**Por qué importa**: hasta ahora las decisiones sobre la web se toman a ciegas. Con los mapas de calor y las cifras de cada semana sabremos **exactamente** qué funciona y qué no, y cada mejora tendrá un porqué.
 
 ## 20. El logo, refinado (no sustituido)
 
@@ -449,6 +468,13 @@ El cambio principal está en la tipografía: el nombre y las iniciales llevan le
 La línea divisoria conserva un elemento del logo original y añade un pequeño acento dorado, discreto y sin efectos metálicos. Es un detalle de distinción, no un cambio de protagonismo.
 
 El resultado sigue siendo Tierno Centella, pero con una imagen más definida y cuidada. Ya lo ves en la cabecera y en el pie de la web nueva.
+
+**Es opcional, y tiene marcha atrás.** Un logo nuevo siempre suena raro al principio, porque llevamos años viendo el anterior; a las pocas semanas ya parece el de siempre. Si no te convence, la web vuelve al logo actual en cinco minutos. Lo que gana con este:
+
+- **Se lee mejor en pequeño** (móvil, pestaña del navegador, perfil de Instagram), porque las letras con remates tienen más cuerpo.
+- **Transmite más solidez**, el tono de los despachos con trayectoria, sin perder el estilo de siempre.
+- **El detalle dorado** da un punto de distinción discreto, y combina con el toque cálido de la web.
+- **Funciona en claro y en oscuro**: ya tienes la versión blanca para fondos azules, fotos y vídeos.
 
 ## 21. Cómo se haría el cambio de web
 

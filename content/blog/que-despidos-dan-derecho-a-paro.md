@@ -1,5 +1,6 @@
 ---
 titulo: ¿Con un despido procedente o disciplinario tienes derecho a paro?
+tituloSeo: ¿Despido procedente o disciplinario tiene paro?
 descripcion: Sí. Cualquier despido da derecho a paro, también el disciplinario y el procedente. Qué situaciones no lo dan, qué requisitos se piden y en qué plazo hay que solicitarlo.
 fecha: 2026-10-23
 actualizado: 2026-10-23

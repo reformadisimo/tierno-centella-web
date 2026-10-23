@@ -38,7 +38,7 @@ export default function RedesYMedios() {
               </a>
             </div>
           </div>
-          <img className="foto" src="/img/jesus-camisa.webp" alt="Jesús Tierno en el despacho" fetchPriority="high" />
+          <img className="foto" src="/img/jesus-camisa.webp" srcSet="/img/jesus-camisa-640.webp 640w, /img/jesus-camisa.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno en el despacho" fetchPriority="high" />
         </div>
       </header>
 
