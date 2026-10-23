@@ -180,6 +180,8 @@ En "abogados acoso laboral madrid", por delante de ti salen García de la Santa,
 
 Cada vez más gente no busca en Google: le pregunta a ChatGPT, a Gemini o a la propia IA de Google "¿qué abogado de acoso laboral me recomiendas en Madrid?". De las 710 búsquedas en las que apareces, **579 ya muestran una respuesta de IA arriba del todo**, y solo te citan en 10 (entre ellas, "abogado laboral en Madrid", "preaviso en despido improcedente" y "te pueden despedir después de una excedencia"). García de la Santa sale en 127.
 
+[[mock-ia]]
+
 **Cómo eligen las IA a quién recomendar**: lo explicamos, con lo que ya hemos hecho y lo que haremos, un poco más abajo en este mismo apartado ("Cómo vamos a mejorar en ChatGPT, Claude, Gemini y Google").
 
 **Cómo lo mediremos**: Semrush registra cada mes en cuántas respuestas de IA apareces. Nuestro objetivo a seis meses, sin poder garantizarlo porque depende de Google: pasar de 10 a más de 50 y acercarnos al top 5 de "abogados acoso laboral madrid".
@@ -241,6 +243,8 @@ Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la se
 ## 5. Tu ficha de Google: 4,2 con 59 reseñas
 
 Hemos leído enteras las 59 reseñas de Google y hemos buscado en otras webs. Parecen un detalle, pero son lo primero que ve quien te busca: las estrellas salen antes que tu web, antes que tu experiencia y antes que tus sentencias. Y las IA también las leen.
+
+[[mock-ficha]]
 
 ### El resumen, en cifras
 
@@ -548,6 +552,8 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **No pierde nada y te lo pasa todo**: la conversación se guarda mientras la persona navega, así que si pulsa una guía que le recomienda, el chat sigue ahí al volver. Y dentro del chat hay un botón **"Que te llamemos"**: deja su nombre y su teléfono, y al despacho le llega un correo con **toda la conversación**. Cuando la llaméis, ya sabréis su caso, su tema y su plazo, sin hacerle repetir nada. Las preguntas que sugiere cambian según la página (en despido, "¿Cuánto me corresponde?"; en incapacidad, "Me la han denegado, ¿qué hago?"), y si alguien escribe en inglés, contesta en inglés.
 
+[[mock-aviso]]
+
 **Al principio tendrá pocas conversaciones, y es normal.** Nos encantaría que este chat, que creemos que es estupendo, tuviera ya miles de conversaciones. Pero hay que darlo a conocer: que el SEO empiece a traer visitas, que las campañas de Google Ads y de Instagram lleven gente a la web. Poco a poco irá teniendo más, y esas conversaciones son de lo más valioso que vas a tener: **es cuando el cliente te cuenta su caso sin miedo**, con sus palabras, a cualquier hora, antes de atreverse a llamar.
 
 **Cada conversación, guardada y aprovechada**: todas las conversaciones del chat se guardan en una base de datos privada, solo para vosotros y avisando a quien escribe (hoy está en una cuenta de prueba nuestra; con la web oficial la pasamos a una a tu nombre). Las vemos como una hoja de cálculo: qué pregunta la gente, a qué hora, desde qué página, quién pidió que le llamarais. Eso nos sirve para tres cosas:
@@ -597,6 +603,8 @@ Todas las cifras de las calculadoras están comprobadas a mano con casos de ejem
 La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu teléfono, y Google lo nota. Lo hemos medido con las dos herramientas que más se usan: **PageSpeed Insights**, la nota oficial de Google, y **Pingdom**, que cronometra lo que tarda en cargar.
 
 [[velocidad]]
+
+[[mock-velocidad]]
 
 **En resumen**: la web nueva carga en la mitad de tiempo, pesa bastante menos (1,0 MB frente a 1,8) y hace un tercio de las peticiones.
 
@@ -966,6 +974,8 @@ Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activ
 | Campañas | "Cada consulta por Google Ads ha costado 18 €; la palabra 'mobbing' trae lectores, no clientes: la pausamos" |
 
 (Las cifras de la tabla son ejemplos de cómo te lo contaríamos, no datos tuyos.)
+
+[[mock-informe]]
 
 **Por qué importa**: hasta ahora las decisiones sobre la web y los anuncios se toman a ciegas. Con las grabaciones, los mapas de calor y las cifras de cada semana sabremos **exactamente** qué funciona, mejoraremos cada página y cada campaña día a día, y cada cambio tendrá un porqué.
 

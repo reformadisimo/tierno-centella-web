@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
+import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
   id: string;
@@ -405,6 +406,11 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   semaforo: BloqueSemaforo,
   dolor: BloqueDolor,
   anuncios: AnunciosGuia,
+  'mock-ficha': MockupFicha,
+  'mock-ia': MockupIA,
+  'mock-velocidad': MockupVelocidad,
+  'mock-aviso': MockupAvisoChat,
+  'mock-informe': MockupInforme,
 };
 
 function Contenido({ html }: { html: string }) {
@@ -415,7 +421,7 @@ function Contenido({ html }: { html: string }) {
         <CuestionarioGuia />
       </>
     );
-  const partes = html.split(/<p>\[\[(\w+)\]\]<\/p>/);
+  const partes = html.split(/<p>\[\[([\w-]+)\]\]<\/p>/);
   return (
     <>
       {partes.map((p, i) => {
