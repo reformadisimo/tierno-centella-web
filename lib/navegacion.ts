@@ -95,3 +95,85 @@ export const MENU: Grupo[] = [
     ],
   },
 ];
+
+// Menú de la versión inglesa. Las herramientas y el blog, de momento, solo están en español.
+export const MENU_EN: Grupo[] = [
+  {
+    titulo: 'Workplace harassment',
+    href: '/en/workplace-harassment',
+    foto: 'acoso-tension',
+    sub: 'How to recognise it, prove it and claim',
+    enlaces: [
+      { href: '/en/workplace-harassment', texto: 'All about workplace harassment' },
+      { href: '/en/workplace-harassment/am-i-being-harassed-at-work', texto: 'Is it harassment?' },
+      { href: '/en/workplace-harassment/how-to-prove-workplace-harassment', texto: 'How to prove it' },
+      { href: '/en/workplace-harassment/what-you-can-claim-for-harassment', texto: 'What you can claim' },
+      { href: '/en/workplace-harassment/sick-leave-for-anxiety-due-to-harassment', texto: 'Sick leave for anxiety' },
+      { href: '/en/workplace-harassment/harassment-in-public-sector-and-education', texto: 'Public sector and education' },
+      { href: '/en/workplace-harassment/workplace-harassment-as-a-crime', texto: 'Criminal route' },
+    ],
+  },
+  {
+    titulo: 'Dismissal',
+    href: '/en/dismissal',
+    foto: 'despido-caja',
+    sub: 'Deadlines, types and what you are owed',
+    enlaces: [
+      { href: '/en/dismissal', texto: 'What to do if you are dismissed' },
+      { href: '/en/dismissal/types-of-dismissal', texto: 'Types of dismissal' },
+      { href: '/en/dismissal/when-is-a-dismissal-void', texto: 'When it is void' },
+      { href: '/en/dismissal/deadline-to-challenge-a-dismissal', texto: 'Deadline to challenge it' },
+      { href: '/calculadora-indemnizacion', texto: 'Compensation calculator (in Spanish)' },
+    ],
+  },
+  {
+    titulo: 'Permanent disability',
+    href: '/en/permanent-disability',
+    foto: 'incapacidad-ventana',
+    sub: 'Degrees, amounts and appeals',
+    enlaces: [
+      { href: '/en/permanent-disability', texto: 'Permanent disability' },
+      { href: '/en/permanent-disability/degrees-of-permanent-disability', texto: 'Degrees and amounts' },
+      { href: '/en/permanent-disability/appealing-a-denied-permanent-disability', texto: 'If it is denied' },
+      { href: '/en/permanent-disability/permanent-disability-and-your-contract', texto: 'Your contract after disability' },
+    ],
+  },
+  {
+    titulo: 'Women at work',
+    href: '/en/women-at-work',
+    foto: 'madre-hijo',
+    sub: 'Pregnancy, working hours, leave and sexual harassment',
+    enlaces: [
+      { href: '/en/women-at-work', texto: 'Your rights as a working woman' },
+      { href: '/en/women-at-work/dismissal-during-pregnancy', texto: 'Dismissal and pregnancy' },
+      { href: '/en/women-at-work/reduced-and-adapted-working-hours', texto: 'Reduced and adapted hours' },
+      { href: '/en/women-at-work/birth-and-breastfeeding-leave', texto: 'Birth leave' },
+      { href: '/en/women-at-work/sexual-and-sex-based-harassment', texto: 'Sexual harassment' },
+      { href: '/en/women-at-work/equal-pay-and-pay-gap', texto: 'Equal pay' },
+    ],
+  },
+  {
+    titulo: 'Tools',
+    href: '/en/tools',
+    foto: 'calculadora-papeles',
+    sub: '14 calculators and tests (in Spanish for now)',
+    enlaces: [
+      { href: '/en/tools', texto: 'All tools' },
+      { href: '/herramientas/test-acoso', texto: 'Harassment test (ES)' },
+      { href: '/calculadora-indemnizacion', texto: 'Compensation calculator (ES)' },
+      { href: '/herramientas/plazos', texto: 'Deadlines (ES)' },
+      { href: '/herramientas/comprobador-incapacidad', texto: 'Disability checker (ES)' },
+    ],
+  },
+  {
+    titulo: 'The firm',
+    href: '/en/jesus-tierno',
+    foto: 'fachada',
+    sub: 'Jesús Tierno, rulings and contact',
+    enlaces: [
+      { href: '/en/jesus-tierno', texto: 'Jesús Tierno' },
+      { href: '/en/rulings', texto: 'Rulings won' },
+      { href: '/en/contact', texto: 'Contact' },
+    ],
+  },
+];
