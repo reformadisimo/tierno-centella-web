@@ -33,7 +33,7 @@ export default function CuestionarioGuia() {
   async function enviar() {
     setMsg('Enviando...');
     try {
-      const res = await fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texto: texto() }) });
+      const res = await fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ tipo: 'respuestas', texto: texto() }) });
       const j = await res.json().catch(() => ({ ok: false }));
       setMsg(j.ok ? 'Enviado. Gracias, Jesús: Ignacio ya lo tiene. Puedes seguir editando y volver a enviar.' : 'No se ha podido enviar desde aquí. Usa "Copiar respuestas" y mándalas por WhatsApp o correo.');
     } catch {

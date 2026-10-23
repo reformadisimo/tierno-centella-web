@@ -1,8 +1,60 @@
-// Recibe las respuestas de Jesús a la guía y las manda por correo con Resend.
-// Necesita RESEND_API_KEY y RESPUESTAS_PARA (correo de destino). Sin ellas responde 503 y la guía ofrece copiar o enviar por correo.
+// Avisos de la guía de Jesús, por correo a Ignacio con Resend. Tres tipos, cada uno con su asunto:
+// visita a la guía, reacción a un apartado y respuestas del cuestionario.
+// Necesita RESEND_API_KEY y RESPUESTAS_PARA. Sin ellas responde 503 y la guía ofrece copiar o enviar por correo.
 export const runtime = 'nodejs';
 
+const GUIA = 'https://tierno-centella-web.vercel.app/guia-jesus';
 const visitas = new Map<string, number[]>();
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+function caja(titulo: string, cuerpo: string, enlace: string) {
+  return (
+    `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#0d2c48;max-width:640px">` +
+    `<h2 style="font-size:19px;margin:0 0 12px">${titulo}</h2>${cuerpo}` +
+    `<p style="margin:22px 0 0"><a href="${enlace}" style="background:#003a5f;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none">Abrir la guía</a></p>` +
+    `<p style="color:#5c6f82;font-size:12px;margin-top:22px">Aviso automático de la guía de Tierno Centella.</p></div>`
+  );
+}
+
+type Aviso = { tipo: 'visita' | 'reaccion' | 'respuestas'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
+
+function preparar(a: Aviso) {
+  const hora = new Intl.DateTimeFormat('es-ES', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(new Date());
+  if (a.tipo === 'visita') {
+    return {
+      asunto: `Tierno Centella: Jesús ha abierto la guía (${a.dispositivo ?? 'dispositivo'}, ${hora})`,
+      html: caja(
+        'Jesús ha abierto la guía',
+        `<p>Desde el <b>${esc(a.dispositivo ?? '')}</b>, el ${hora}.</p><p style="color:#3b5168">Avisa una vez cada 4 horas por dispositivo. Si has sido tú, abre la guía una vez con <b>?yo=1</b> al final de la dirección en ese navegador y no volverá a avisarte.</p>`,
+        GUIA,
+      ),
+      texto: `Jesús ha abierto la guía (${a.dispositivo}), ${hora}.`,
+    };
+  }
+  if (a.tipo === 'reaccion') {
+    return {
+      asunto: `Tierno Centella: Jesús dice "${a.reaccion}" en "${a.seccion}"`,
+      html: caja('Jesús ha reaccionado a un apartado', `<p style="font-size:17px"><b>${esc(a.reaccion ?? '')}</b></p><p>Apartado: ${esc(a.seccion ?? '')}</p>`, `${GUIA}#${a.id ?? ''}`),
+      texto: `Jesús dice "${a.reaccion}" en "${a.seccion}".`,
+    };
+  }
+  const t = (a.texto ?? '').trim();
+  const bloques = t.split(/\n\s*\n/).slice(1);
+  const vacias = bloques.filter((b) => b.includes('(sin respuesta)')).length;
+  const cuerpo = bloques
+    .map((b) => {
+      const [p, ...r] = b.split('\n');
+      const resp = r.join(' ').trim();
+      const sin = resp.includes('(sin respuesta)');
+      return `<p style="margin:0 0 12px"><b>${esc(p)}</b><br><span style="color:${sin ? '#9aa7b2' : '#0d2c48'}">${esc(sin ? 'Sin contestar' : resp)}</span></p>`;
+    })
+    .join('');
+  return {
+    asunto: `Tierno Centella: respuestas de Jesús al cuestionario (${bloques.length - vacias} de ${bloques.length} contestadas)`,
+    html: caja('Respuestas de Jesús', cuerpo, `${GUIA}#24-preguntas-para-ti`),
+    texto: t,
+  };
+}
 
 export async function POST(req: Request) {
   const clave = process.env.RESEND_API_KEY;
@@ -11,20 +63,26 @@ export async function POST(req: Request) {
   const ip = (req.headers.get('x-forwarded-for') ?? 'x').split(',')[0];
   const ahora = Date.now();
   const lista = (visitas.get(ip) ?? []).filter((t) => ahora - t < 3600000);
-  if (lista.length >= 20) return Response.json({ ok: false }, { status: 429 });
+  if (lista.length >= 30) return Response.json({ ok: false }, { status: 429 });
   visitas.set(ip, [...lista, ahora]);
-  let texto = '';
+  let aviso: Aviso;
   try {
-    texto = String((await req.json())?.texto ?? '').slice(0, 20000);
-  } catch {}
-  if (texto.trim().length < 5) return Response.json({ ok: false }, { status: 400 });
+    const cuerpo = await req.json();
+    aviso = { ...cuerpo, tipo: ['visita', 'reaccion'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
+    for (const k of ['dispositivo', 'seccion', 'id', 'reaccion', 'texto'] as const) if (aviso[k] != null) aviso[k] = String(aviso[k]).slice(0, k === 'texto' ? 20000 : 200);
+  } catch {
+    return Response.json({ ok: false }, { status: 400 });
+  }
+  if (aviso.tipo === 'respuestas' && (aviso.texto ?? '').trim().length < 5) return Response.json({ ok: false }, { status: 400 });
+  const { asunto, html, texto } = preparar(aviso);
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: process.env.RESPUESTAS_DE || 'Guía Tierno Centella <onboarding@resend.dev>',
+      from: process.env.RESPUESTAS_DE || 'Guía de Jesús (Tierno Centella) <guia@send.miestela.app>',
       to: [para],
-      subject: 'Guía de Jesús Tierno: respuestas y comentarios',
+      subject: asunto,
+      html,
       text: texto,
     }),
   }).catch(() => null);

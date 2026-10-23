@@ -1,12 +1,57 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 
 export type SeccionGuia = { id: string; titulo: string; html: string; texto: string };
 const normal = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+const avisar = (datos: Record<string, string>) =>
+  fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), keepalive: true })
+    .then((r) => r.ok)
+    .catch(() => false);
+
+// Aviso de visita: no avisa si quien abre es Ignacio (?yo=1 una vez en ese navegador) ni más de una vez cada 4 horas.
+function useAvisoVisita() {
+  useEffect(() => {
+    try {
+      const q = location.search;
+      if (/[?&]yo=1/.test(q)) return localStorage.setItem('tc-guia-yo', '1');
+      if (/[?&]yo=0/.test(q)) localStorage.removeItem('tc-guia-yo');
+      if (localStorage.getItem('tc-guia-yo')) return;
+      const ultima = Number(localStorage.getItem('tc-guia-visita') || 0);
+      if (Date.now() - ultima < 4 * 3600000) return;
+      localStorage.setItem('tc-guia-visita', String(Date.now()));
+      avisar({ tipo: 'visita', dispositivo: /Mobi|Android|iPhone/i.test(navigator.userAgent) ? 'móvil' : 'ordenador' });
+    } catch {}
+  }, []);
+}
+
+function Reaccion({ id, seccion }: { id: string; seccion: string }) {
+  const [msg, setMsg] = useState('');
+  return (
+    <div className="gj-reaccion">
+      <span>¿Qué te ha parecido esta parte?</span>
+      {['Me encanta', 'Tengo una duda', 'No lo veo claro'].map((r) => (
+        <button
+          key={r}
+          type="button"
+          onClick={async () => {
+            setMsg('Enviando...');
+            const ok = await avisar({ tipo: 'reaccion', id, seccion, reaccion: r });
+            setMsg(ok ? 'Gracias, Jesús. Ignacio lo verá.' : 'Apuntado. Si quieres, cuéntaselo por WhatsApp.');
+          }}
+        >
+          {r}
+        </button>
+      ))}
+      {msg && <em role="status">{msg}</em>}
+    </div>
+  );
+}
+
 export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
+  useAvisoVisita();
   const [q, setQ] = useState('');
   const busca = normal(q.trim());
   const visibles = useMemo(
@@ -48,6 +93,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
             ) : (
               <div className="prosa" dangerouslySetInnerHTML={{ __html: s.html }} />
             )}
+            <Reaccion id={s.id} seccion={s.titulo} />
             <a className="gj-arriba" href="#indice-guia">
               Volver arriba
             </a>

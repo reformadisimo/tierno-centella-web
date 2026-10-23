@@ -334,7 +334,7 @@ CUESTIONARIO
 
 Jesús, todo esto te lo he hecho como amigo y no te voy a cobrar nada por ello. Me apetecía, porque creo que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
 
-Te cuento en qué estoy: **he montado una agencia de marketing**, estoy terminando su web y ya estoy haciendo webs y campañas para algunos amigos. Si te interesa que sigamos, puedo encargarme de todo o solo de lo que quieras:
+Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya estoy haciendo webs y campañas para algunos amigos. Si te interesa que sigamos, puedo encargarme de todo o solo de lo que quieras:
 
 - La web: publicarla, mantenerla y mejorarla cada mes.
 - El SEO: los artículos del calendario, el seguimiento con Semrush y Search Console y las redirecciones.
