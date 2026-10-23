@@ -48,19 +48,32 @@ export async function POST(req: Request) {
   const codificador = new TextEncoder();
   const flujo = new ReadableStream({
     async start(controlador) {
+      // Modelo principal y otro de reserva por si el principal no está disponible para esta clave.
+      const modelos = [process.env.ASISTENTE_MODELO || 'claude-sonnet-5-5', 'claude-sonnet-4-5'];
       try {
-        const stream = cliente.messages.stream({
-          model: process.env.ASISTENTE_MODELO || 'claude-sonnet-4-5',
-          max_tokens: 1500,
-          system: [
-            { type: 'text', text: conocimientoWeb(), cache_control: { type: 'ephemeral' } },
-            { type: 'text', text: promptAsistente(hoy) },
-          ],
-          messages: mensajes,
-        });
-        for await (const evento of stream) {
-          if (evento.type === 'content_block_delta' && evento.delta.type === 'text_delta') {
-            controlador.enqueue(codificador.encode(evento.delta.text));
+        for (const [i, modelo] of modelos.entries()) {
+          let enviado = false;
+          try {
+            const stream = cliente.messages.stream({
+              model: modelo,
+              max_tokens: 1500,
+              system: [
+                { type: 'text', text: conocimientoWeb(), cache_control: { type: 'ephemeral' } },
+                { type: 'text', text: promptAsistente(hoy) },
+              ],
+              messages: mensajes,
+            });
+            for await (const evento of stream) {
+              if (evento.type === 'content_block_delta' && evento.delta.type === 'text_delta') {
+                enviado = true;
+                controlador.enqueue(codificador.encode(evento.delta.text));
+              }
+            }
+            break;
+          } catch (e) {
+            // Solo se prueba el de reserva si todavía no se ha enviado nada a la persona.
+            if (enviado || i === modelos.length - 1) throw e;
+            console.error(`Modelo ${modelo} no disponible, uso el de reserva:`, e instanceof Error ? e.message : e);
           }
         }
       } catch (e) {

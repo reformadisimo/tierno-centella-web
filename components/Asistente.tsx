@@ -13,7 +13,7 @@ const SUGERENCIAS = [
 ];
 
 const BIENVENIDA =
-  'Hola. Soy el asistente del despacho y te oriento en temas de despido, acoso laboral e incapacidad. Cuéntame qué te pasa y te digo qué plazos corren y cuál es el siguiente paso.';
+  'Hola. Soy el asistente del despacho, una inteligencia artificial. Te oriento en despidos, acoso laboral, incapacidad, embarazo y conciliación: cuéntame qué te pasa y te digo qué plazos corren y cuál es el siguiente paso. Puedo equivocarme, así que lo que te diga conviene que lo revise un abogado.';
 
 // Formato mínimo: párrafos, listas, negritas y enlaces. Escapa todo lo demás.
 function formatear(texto: string) {
@@ -22,7 +22,7 @@ function formatear(texto: string) {
     escapar(s)
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\[([^\]]+)\]\((\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, '<a href="$2">$1</a>')
-      .replace(/(^|[\s(])(\/(?:calculadora-indemnizacion|herramientas\/[a-z-]+|acoso-laboral|despido|incapacidad-permanente|sentencias|contacto))(?=[\s).,;]|$)/g, '$1<a href="$2">$2</a>');
+      .replace(/(^|[\s(])(\/(?:calculadora-indemnizacion|herramientas\/[a-z-]+|acoso-laboral(?:\/[a-z-]+)?|despido(?:\/[a-z-]+)?|incapacidad-permanente(?:\/[a-z0-9-]+)?|mujer-y-trabajo(?:\/[a-z-]+)?|redes-y-medios|blog\/[a-z0-9-]+|sentencias|contacto))(?=[\s).,;]|$)/g, '$1<a href="$2">$2</a>');
   const bloques = texto.trim().split(/\n{2,}/);
   return bloques
     .map((b) => {
@@ -106,7 +106,7 @@ export default function Asistente() {
           <div className="asistente-cabeza">
             <div>
               <strong>Asistente del despacho</strong>
-              <small>Inteligencia artificial. Orientación general.</small>
+              <small>Inteligencia artificial. Puede equivocarse. Orientación general, no asesoramiento.</small>
             </div>
             <button type="button" onClick={() => setAbierto(false)}>
               Cerrar

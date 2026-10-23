@@ -28,16 +28,16 @@ for (const [carpeta, ruta] of Object.entries(RUTAS)) {
         .filter(([k]) => k),
     );
     const cuerpo = m[2];
-    const primerParrafo = limpiar(cuerpo.split(/\n\s*\n/).find((p) => p.trim() && !p.startsWith('#')) ?? '');
-    let faq = '';
-    const seccion = cuerpo.split(/^## Preguntas frecuentes\s*$/m)[1];
-    if (seccion) {
-      for (const parte of seccion.split(/^## /m)[0].split(/^### /m).slice(1)) {
-        const [q, ...r] = parte.split('\n');
-        faq += `  - ${q.trim()} ${limpiar(r.join(' '))}\n`;
-      }
-    }
-    salida += `## ${datos.titulo} (${ruta}${f.replace(/\.md$/, '')})\n${primerParrafo}\n${faq}\n`;
+    // Texto completo de cada pieza: encabezados como líneas propias, enlaces conservando la ruta para que el asistente pueda citarla.
+    const completo = cuerpo
+      .replace(/\[([^\]]+)\]\((\/[^)]+)\)/g, '$1 ($2)')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/^#{2,4}\s*/gm, '> ')
+      .replace(/^>\s?/gm, '')
+      .replace(/[*_`]/g, '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+    salida += `=== ${datos.titulo} (${ruta}${f.replace(/\.md$/, '')}) ===\n${completo}\n\n`;
   }
 }
 
