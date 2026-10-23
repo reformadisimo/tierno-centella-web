@@ -5478,3 +5478,54 @@ body:has(.guia-jesus) .barra-movil {
   background: var(--marcador-suave);
   font-weight: 700;
 }
+
+/* Franja "Hoy / Con nosotros" bajo la foto de cada apartado */
+.gj-franja {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: stretch;
+  margin: 0 0 18px;
+}
+.gj-franja > div {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  padding: 14px 16px;
+  border-radius: 14px;
+  line-height: 1.45;
+}
+.gj-franja small {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.gj-franja-hoy {
+  background: #fbeceb;
+}
+.gj-franja-hoy small {
+  color: var(--alerta);
+}
+.gj-franja-luego {
+  background: #e6f4ec;
+}
+.gj-franja-luego small {
+  color: #17773f;
+}
+.gj-franja span {
+  color: var(--tinta);
+  font-weight: 600;
+}
+.gj-franja .gj-dolor-flecha {
+  align-self: center;
+}
+@media (max-width: 600px) {
+  .gj-franja {
+    grid-template-columns: 1fr;
+  }
+  .gj-franja .gj-dolor-flecha {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+}

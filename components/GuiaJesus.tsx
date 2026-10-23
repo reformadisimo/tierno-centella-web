@@ -13,6 +13,7 @@ export type SeccionGuia = {
   grupo: string;
   claveGrupo: string;
   abierta: boolean;
+  franja?: { hoy: string; luego: string };
 };
 const LOGOS: { src: string; nombre: string; texto: string }[] = [
   { src: 'google-analytics.png', nombre: 'Google Analytics', texto: 'El contador de visitas: cuánta gente entra y de dónde viene.' },
@@ -772,6 +773,21 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
               <img src={`/img/${s.foto}-640.webp`} srcSet={`/img/${s.foto}-640.webp 640w, /img/${s.foto}.webp 1200w`} sizes="(max-width: 900px) 100vw, 760px" alt="" loading="lazy" />
               {s.frase && <figcaption>{s.frase}</figcaption>}
             </figure>
+            {s.franja && (
+              <div className="gj-franja">
+                <div className="gj-franja-hoy">
+                  <small>Hoy</small>
+                  <span>{s.franja.hoy}</span>
+                </div>
+                <svg className="gj-dolor-flecha" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+                <div className="gj-franja-luego">
+                  <small>Con nosotros</small>
+                  <span>{s.franja.luego}</span>
+                </div>
+              </div>
+            )}
             <details className="gj-detalle" open={s.abierta || busca.length >= 2}>
               <summary>
                 <span className="gj-abrir">Ver el detalle de este apartado</span>

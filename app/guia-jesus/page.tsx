@@ -39,6 +39,24 @@ const FUENTES: [string, string][] = [
 
 // Cada apartado: su foto, una frase cercana y su grupo del índice. El detalle va plegado para que la guía se lea fácil.
 type Extra = { foto: string; frase: string; grupo: string; abierta?: boolean };
+
+// Dónde estás hoy y dónde podemos estar, en una línea, para los apartados donde hay algo que mejorar.
+const FRANJAS: Record<string, { hoy: string; luego: string }> = {
+  '4': { hoy: '18,3 segundos en cargar en el móvil, 49 sobre 100 y "consulta gratuita" que no lo es', luego: '3,2 segundos, 94 sobre 100 y el precio claro desde el principio' },
+  '4 bis': { hoy: '239 visitas al mes desde Google (un 38 % menos que en julio) y 14 sobre 100 en las IA', luego: 'Objetivo a un año: unas 2.500 visitas al mes y más de 30 en las IA' },
+  '5': { hoy: '4,2 estrellas y 11 reseñas de una estrella sin contestar', luego: 'Todas respondidas y hacia el 4,5 en un año' },
+  '6': { hoy: 'Instagram con un parón de 2021 a 2024 y dos cuentas de X abandonadas', luego: 'Un ritmo constante: reels con tus casos, LinkedIn para colegios e instituciones' },
+  '7': { hoy: 'García de la Santa recibe 38 veces más visitas que tú', luego: 'Ser el despacho de referencia en acoso laboral en Madrid' },
+  '7 bis': { hoy: 'Casi todos tus competidores dicen "gratis" y tu precio no se explica', luego: 'Qué incluye tu consulta, contado mejor que nadie' },
+  '10': { hoy: 'Fuera de horario nadie contesta a quien te escribe', luego: 'Un asistente 24 horas que guarda cada conversación y te pasa las llamadas' },
+  '11': { hoy: '3 tests que piden el teléfono antes de ayudar', luego: '14 herramientas que ayudan primero y llevan a llamarte' },
+  '12': { hoy: '49 de velocidad en el móvil', luego: '94 de velocidad, 100 en accesibilidad' },
+  '13': { hoy: 'Segunda página para "abogado laboralista madrid"', luego: 'Primera página, con constancia y datos' },
+  '14': { hoy: 'Blog parado desde 2022 y 104 artículos fuera de tu especialidad', luego: 'Tres artículos a la semana sobre lo que de verdad busca la gente' },
+  '17': { hoy: 'Sin seguimiento: quien escribe y no reserva suele perderse', luego: 'Cada contacto con su seguimiento por correo, medido' },
+  '18 bis': { hoy: 'Anuncios que llevan a una página genérica y algún "gratis"', luego: 'Tres páginas por tema y cada consulta medida' },
+  '19': { hoy: 'Sin informes: no sabes dónde va cada euro', luego: 'Informes diarios, semanales y mensuales de todo' },
+};
 const GRUPOS: Record<string, string> = {
   empezar: 'Para empezar',
   hoy: 'Dónde estás hoy',
@@ -113,6 +131,7 @@ function secciones(): SeccionGuia[] {
         grupo: GRUPOS[extra.grupo],
         claveGrupo: extra.grupo,
         abierta: !!extra.abierta,
+        franja: FRANJAS[clave],
       };
     });
 }
