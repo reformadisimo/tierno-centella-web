@@ -75,9 +75,9 @@ function Marcador({ valor, etiqueta }: { valor: number; etiqueta: string }) {
 }
 
 function BloqueVelocidad() {
-  const filas: { titulo: string; nueva: boolean; notas: number[]; etiquetas: string[] }[] = [
-    { titulo: 'Tu web actual, en el móvil', nueva: false, notas: [49, 84, 73, 100], etiquetas: ['Velocidad', 'Accesibilidad', 'Buenas prácticas', 'SEO'] },
-    { titulo: 'La web nueva, en el móvil', nueva: true, notas: [94, 100, 100, 100], etiquetas: ['Velocidad', 'Accesibilidad', 'Buenas prácticas', 'SEO al publicarla'] },
+  const filas: { titulo: string; nueva: boolean; notas: number[]; etiquetas: string[]; agentes: number }[] = [
+    { titulo: 'Tu web actual, en el móvil', nueva: false, notas: [49, 84, 73, 100], etiquetas: ['Velocidad', 'Accesibilidad', 'Buenas prácticas', 'SEO'], agentes: 1 },
+    { titulo: 'La web nueva, en el móvil', nueva: true, notas: [94, 100, 100, 100], etiquetas: ['Velocidad', 'Accesibilidad', 'Buenas prácticas', 'SEO al publicarla'], agentes: 3 },
   ];
   return (
     <div className="gj-velocidad">
@@ -91,12 +91,22 @@ function BloqueVelocidad() {
             {f.notas.map((n, i) => (
               <Marcador key={i} valor={n} etiqueta={f.etiquetas[i]} />
             ))}
+            <div className="gj-agentes">
+              <span className={f.agentes === 3 ? 'bien' : 'mal'}>{f.agentes}/3</span>
+              <small>Navegación agéntica (IA)</small>
+            </div>
           </div>
         </div>
       ))}
       <p className="gj-nota">
         El SEO de la web nueva marca 100 en cuanto se publica en tu dominio. En la dirección de prueba sale 69 porque le pedimos a Google que no la
         indexe, para que no compita con tu web real.
+      </p>
+      <p className="gj-nota">
+        <strong>Navegación agéntica</strong> es la nota nueva de Google para los agentes de IA, los asistentes que ya entran en las webs por ti a buscar
+        información, comparar o pedir cita. Comprueba tres cosas: que un agente entiende cómo está construida cada página, que nada se mueve mientras
+        carga y que existe la ficha para las IA (llms.txt). Tu web actual saca 1 de 3; la nueva, 3 de 3. Bufete Toro, por ejemplo, saca 1 de 3
+        (medido el 23 de octubre de 2026).
       </p>
       <p className="gj-bloque-titulo">
         <img src="/img/guia/pingdom.svg" alt="" width={22} height={22} /> Pingdom, el cronómetro (medido el 23 de octubre de 2026)

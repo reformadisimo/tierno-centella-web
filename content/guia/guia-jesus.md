@@ -29,6 +29,7 @@ Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada d
 | Velocidad en móvil (Google, de 0 a 100) | 49 | **94** |
 | Tiempo hasta ver el contenido en móvil | 18,3 segundos | **3,2 segundos** |
 | Accesibilidad | 84 | **100** |
+| Preparada para los agentes de IA (nota de Google "Navegación agéntica") | 1 de 3 | **3 de 3** |
 | Herramientas gratuitas para el cliente | 3 tests | **14** (calculadoras, tests y autodiagnóstico para colegios) |
 | Guías y artículos actualizados a 2026 | Blog parado en 2022 | **47 páginas** escritas para quien lo está viviendo |
 | Asistente que responde a cualquier hora | No | **Sí**, con todo el contenido de la web |
@@ -589,6 +590,8 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 [[velocidad]]
 
 [[mock-velocidad]]
+
+**Y preparada para los agentes de IA**: Google ya puntúa si los asistentes de IA que navegan por las webs (los que buscan, comparan o piden cita por la persona) pueden entender la tuya. La web nueva saca **3 de 3**; la actual, 1 de 3, y Bufete Toro, 1 de 3. De las webs que hemos medido, solo la tuya nueva saca la nota completa.
 
 **En resumen**: la web nueva carga en la mitad de tiempo, pesa bastante menos (1,0 MB frente a 1,8) y hace un tercio de las peticiones.
 

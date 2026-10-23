@@ -3952,7 +3952,7 @@ body:has(.landing) .pie {
 }
 .gj-vel-marcadores {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   margin-top: 8px;
 }
@@ -5846,3 +5846,11 @@ dl .prosa-foto { margin: 28px 0; }
 /* Guía clicable */
 a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
 .lg-red-cabeza a { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+
+.gj-agentes{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:90px}
+.gj-agentes span{font:700 1.15rem/1 var(--fuente-titulos, inherit);padding:10px 14px;border-radius:999px}
+.gj-agentes span.bien{background:#e3f4e8;color:#17602f}
+.gj-agentes span.mal{background:#fbe5e1;color:#a8442c}
+.gj-agentes small{font-size:.8rem;text-align:center;color:#33414f;line-height:1.2}
+.gj-agentes span{font-weight:800;font-size:1.2rem;min-width:64px;text-align:center}
+@media (max-width: 520px){.gj-agentes{grid-column:1/-1}}
