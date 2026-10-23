@@ -21,6 +21,34 @@ Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con
 | Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 páginas** hechas para convertir: incapacidad, acoso y despido (apartado 18 ter) |
 | Medición | Analytics instalado | **Preparada para contar** cada llamada, WhatsApp, formulario y chat, con mapas de calor y grabaciones en cuanto des el visto bueno (apartado 19) |
 
+**Dónde estás hoy frente a tu competencia** (datos de Semrush, octubre de 2026, búsquedas en España):
+
+| Despacho | Visitas al mes desde Google | Búsquedas en las que aparece | Lo que costarían esas visitas en anuncios |
+| --- | --- | --- | --- |
+| Campmany Abogados | 69.866 | 41.637 | 12.264 $ al mes |
+| Bufete Toro | 47.134 | 29.604 | 16.194 $ al mes |
+| García de la Santa | 9.164 | 2.503 | 14.375 $ al mes |
+| Abogados Durán | 2.457 | 1.387 | 4.759 $ al mes |
+| **Tierno Centella** | **239** | **710** | **161 $ al mes** |
+
+García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú desde Google. Esas visitas le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 14.000 dólares al mes. Tú tienes algo que ellos no tienen (años siendo la referencia en acoso laboral, y la primera condena en España a empresa y acosador, en 2005), pero hoy Google y las IA no lo saben.
+
+**Adónde te podemos llevar en un año** (son objetivos de trabajo, no promesas: dependen de Google y de constancia):
+
+| | Hoy | Objetivo a 12 meses |
+| --- | --- | --- |
+| Visitas al mes desde Google | 239 | Acercarnos a las de Abogados Durán (unas 2.500) |
+| "abogado laboralista madrid" (1.900 búsquedas al mes) | Puesto 18, segunda página | Primera página |
+| Visibilidad en las IA (ChatGPT, Gemini, Google) | 14 sobre 100 | Más de 30, el nivel de Abogados Durán |
+| Nota en Google | 4,2, sin ninguna reseña respondida | 4,5, con todas respondidas |
+| Velocidad en móvil | 49 | **94 (ya hecho)** |
+| Herramientas para tus clientes | 3 tests | **14 (ya hecho)** |
+| Blog | Parado desde 2022 | Tres artículos a la semana |
+| Anuncios de Google | Llevan a una página genérica | **Páginas propias por tema (ya hechas)**, y cada consulta medida |
+| Saber de dónde viene cada cliente | No | Sí: cada llamada, WhatsApp y formulario con su origen |
+
+**Lo que ya está hecho no te cuesta nada: es tuyo.** Lo que queda es trabajo de todos los meses (escribir, medir, responder, ajustar los anuncios), y es justo lo que marca la diferencia entre 239 visitas y 2.500.
+
 **Lo que necesitamos de ti**, en cuatro cosas:
 
 1. Que revises los textos (sobre todo los casos y las guías) y nos digas qué cambiarías.
