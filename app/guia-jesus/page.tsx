@@ -112,7 +112,7 @@ export default function Pagina() {
   return (
     <>
       <header className="gj-portada" id="indice-guia">
-        <img className="gj-portada-foto" src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="100vw" alt="" />
+        <img className="gj-portada-foto" src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo-960.webp 960w, /img/equipo.webp 1600w" sizes="100vw" alt="" />
         <div className="contenedor">
           <img src="/img/logo-tc-blanco.webp" alt="Tierno Centella Abogados" width={260} height={62} />
           <h1>Jesús, esta es tu web nueva. Te la contamos sin prisas.</h1>

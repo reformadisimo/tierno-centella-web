@@ -1,5 +1,6 @@
 ---
 titulo: Incapacidad permanente por ansiedad o depresión: cuándo se concede
+tituloSeo: Incapacidad permanente por ansiedad o depresión
 descripcion: La ansiedad o la depresión pueden dar una incapacidad permanente si son graves, crónicas y no mejoran con tratamiento. Qué se valora y qué informes aportar.
 fecha: 2026-09-30
 actualizado: 2026-09-30

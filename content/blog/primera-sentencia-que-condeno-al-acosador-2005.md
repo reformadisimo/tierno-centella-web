@@ -1,5 +1,6 @@
 ---
 titulo: 2005: la sentencia que condenó también a la directora acosadora
+tituloSeo: 2005: primera condena a empresa y acosador
 descripcion: En 2005 un juzgado de Madrid condenó a la empresa y a la directora acosadora a pagar juntas 30.000 euros a un trabajador. La historia y por qué fue pionera.
 fecha: 2026-10-13
 actualizado: 2026-10-13

@@ -1,5 +1,6 @@
 ---
 titulo: Convenio 190 de la OIT: qué cambia frente al acoso en el trabajo
+tituloSeo: Convenio 190 de la OIT: acoso y violencia laboral
 descripcion: El Convenio 190 de la OIT está en vigor en España desde el 25 de mayo de 2023. Qué entiende por violencia y acoso, a quién protege y qué exige a las empresas.
 fecha: 2026-10-08
 actualizado: 2026-10-08

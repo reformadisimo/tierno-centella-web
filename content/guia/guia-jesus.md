@@ -8,7 +8,7 @@ Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con
 
 **Lo hecho, en una mirada**
 
-| | Web actual | Web nueva |
+| Qué | Web actual | Web nueva |
 | --- | --- | --- |
 | Velocidad en móvil (Google, de 0 a 100) | 49 | **94** |
 | Tiempo hasta ver el contenido en móvil | 18,3 segundos | **3,2 segundos** |
@@ -178,6 +178,26 @@ Hemos leído las 59. Reparto: 44 de cinco estrellas, 3 de cuatro, 1 de tres y **
 - Pedir la reseña en el mejor momento (al cerrar un caso o tras una buena consulta), con un enlace directo por WhatsApp. Nunca reseñas falsas: Google las borra y castiga la ficha.
 - Arreglar lo que provoca las malas: precio claro (ya hecho en la web nueva), compromiso de respuesta en 48 horas laborables, aviso de vacaciones en agosto y un correo después de la consulta con el resumen y los siguientes pasos.
 - Completar la ficha: categoría "Abogado laboralista", servicios, fotos del equipo y una publicación a la semana con los vídeos de Instagram.
+
+### Respuestas listas para copiar y pegar
+
+Responder a las reseñas, también a las malas, es lo que más confianza da a quien está decidiendo. Estas plantillas sirven tal cual; solo hay que cambiar el nombre. Nunca damos datos del caso.
+
+**A una reseña de cinco estrellas**
+
+> Muchas gracias, [nombre]. Nos alegra mucho haberte acompañado en un momento tan difícil. Para eso estamos. Un abrazo de todo el equipo de Tierno Centella.
+
+**A quien dice que la consulta era gratis y se la cobraron**
+
+> Hola, [nombre]. Lamentamos la confusión: tienes razón en que nuestra web antigua hablaba de una consulta gratuita, y eso no era correcto. La primera consulta tiene un precio (150 € más IVA) y ya lo hemos dejado claro en todas partes. Nos gustaría hablarlo contigo: llámanos al 913 24 97 97 y lo vemos.
+
+**A quien se queja de que no le contestaron**
+
+> Hola, [nombre]. Tienes razón en que no te respondimos a tiempo, y lo sentimos. Hemos cambiado la forma de trabajar para contestar siempre en un máximo de 48 horas laborables. Si todavía podemos ayudarte, llámanos al 913 24 97 97 y te atendemos personalmente.
+
+**A una reseña muy dura sobre un caso**
+
+> Hola, [nombre]. Sentimos que tu experiencia no haya sido la que esperabas. Por respeto a la confidencialidad no podemos hablar de ningún caso en público, pero estaremos encantados de hablarlo contigo directamente en el 913 24 97 97.
 
 ## 6. Redes sociales
 
@@ -466,6 +486,27 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 | Durante 3 meses | Un correo al mes con algo útil (un cambio de ley, una sentencia), por si ahora sí es el momento |
 | Después de la consulta | Un resumen de los siguientes pasos y, si quedó contento, el enlace para dejar una reseña |
 
+**Así sería el primer correo** (ejemplo para alguien con una incapacidad denegada):
+
+> **Asunto**: Hemos recibido tu consulta, Ana
+>
+> Hola, Ana. Gracias por escribirnos. Te llamará un abogado del despacho en horario de oficina, normalmente el mismo día.
+>
+> Mientras tanto, lo más importante: si te han denegado la incapacidad, tienes **30 días hábiles** desde que te lo notificaron para presentar la reclamación previa. Si quieres saber hasta qué día tienes, aquí lo calculas en un minuto: [comprobador de incapacidad].
+>
+> Para que no haya sorpresas: la primera consulta de una hora cuesta 150 € más IVA con un abogado del despacho, y 250 € más IVA con Jesús Tierno.
+>
+> Un saludo,
+> Tierno Centella Abogados · 913 24 97 97
+
+**Y los siguientes, en una línea cada uno**:
+
+1. Al día siguiente: "Qué hacer si te han denegado la incapacidad, paso a paso".
+2. A los 3 días: "Tu plazo: lo que no puede esperar".
+3. A la semana: "Quién te defendería y cómo trabajamos".
+4. A las 2 semanas: "Un caso parecido al tuyo".
+5. Una vez al mes, durante 3 meses: una novedad útil (un cambio de ley, una sentencia).
+
 **Cómo funciona por dentro**: con **Resend**, la herramienta de envío de correos que usamos también en otros proyectos. La web avisa a Resend de que alguien ha entrado y de su tema, y Resend envía cada correo en su día, solo, sin que nadie tenga que acordarse. Los textos los redactamos nosotros y tú los revisas.
 
 **Coste**: el plan gratuito de Resend incluye 3.000 correos al mes, de sobra para empezar; el siguiente cuesta unos 20 dólares al mes (condiciones de octubre de 2026).
@@ -566,6 +607,8 @@ Tu web actual ya tiene instalados **Google Analytics 4** y **Google Tag Manager*
 - **Google Tag Manager, Analytics y Google Ads**: la web nueva está preparada para usar **tu mismo contenedor de Tag Manager**, así no se pierde el historial de Analytics y las conversiones de tus anuncios siguen contando desde el primer día.
 
 Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activa si la persona acepta las cookies de medición, como exige la ley.
+
+**Un detalle técnico, para ser transparentes**: las visitas y la velocidad en Vercel son gratis. Contar en Vercel cada llamada, WhatsApp o formulario necesita su plan Pro, que es de pago. Si no queremos pagarlo, esas mismas acciones se cuentan gratis en Clarity y en Google Analytics, que es lo que proponemos.
 
 **Lo que podemos conectar si nos das acceso**: Google Analytics, Search Console, Google Ads, Semrush (ya lo usamos), tu ficha de Google, Meta, Instagram, Facebook, LinkedIn y el correo de seguimiento. Con todo conectado, el informe deja de ser una opinión y pasa a ser un dato.
 

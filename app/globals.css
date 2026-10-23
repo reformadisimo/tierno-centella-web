@@ -3582,12 +3582,12 @@ body:has(.landing) .pie {
   padding: 3px 10px;
   margin-bottom: 6px;
 }
-.gj-g-empezar { --gj-color: #c4583d; }
-.gj-g-hoy { --gj-color: #b0452c; }
-.gj-g-web { --gj-color: #1f6fb5; }
-.gj-g-google { --gj-color: #0c8a4a; }
-.gj-g-clientes { --gj-color: #7a4bb5; }
-.gj-g-seguir { --gj-color: #4a5a6a; }
+.gj-g-empezar { --gj-color: #a8442c; }
+.gj-g-hoy { --gj-color: #8f3520; }
+.gj-g-web { --gj-color: #175a94; }
+.gj-g-google { --gj-color: #0a6b3a; }
+.gj-g-clientes { --gj-color: #63399a; }
+.gj-g-seguir { --gj-color: #3b4856; }
 .gj-seccion h2 {
   border-top: 3px solid var(--gj-color, var(--coral));
   padding-top: 12px;

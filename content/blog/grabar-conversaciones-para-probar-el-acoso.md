@@ -1,5 +1,6 @@
 ---
 titulo: Grabar conversaciones para probar el acoso: cuándo es prueba válida
+tituloSeo: ¿Puedo grabar a mi jefe para probar el acoso?
 descripcion: Grabar una conversación en la que participas suele ser prueba válida del acoso. Qué dicen los tribunales, sus límites y qué grabaciones pueden perjudicarte.
 fecha: 2026-10-18
 actualizado: 2026-10-18

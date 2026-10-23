@@ -82,7 +82,7 @@ export default function Inicio() {
 
       <section className="seccion seccion-arena">
         <div className="contenedor bloque-foto invertido">
-          <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho escucha a una clienta" loading="lazy" />
+          <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha-960.webp 720w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho escucha a una clienta" loading="lazy" />
           <div>
             <span className="etiqueta-calida">Mujer y trabajo</span>
             <h2 style={{ maxWidth: '22ch' }}>Embarazada, con hijos o cuidando a alguien: tu trabajo está protegido.</h2>
@@ -140,7 +140,7 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor dos-columnas" style={{ alignItems: 'center' }}>
           <div className="foto-destacada">
-            <img width={1600} height={1019} src="/img/reunion-cliente.webp" srcSet="/img/reunion-cliente-640.webp 640w, /img/reunion-cliente.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno entrega documentación a una clienta en el despacho" loading="lazy" />
+            <img width={1600} height={1019} src="/img/reunion-cliente.webp" srcSet="/img/reunion-cliente-640.webp 640w, /img/reunion-cliente-960.webp 960w, /img/reunion-cliente.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno entrega documentación a una clienta en el despacho" loading="lazy" />
             <div className="sello">
               <strong>2005</strong>
               Primera condena en España a la empresa y al acosador a la vez
@@ -309,7 +309,7 @@ export default function Inicio() {
               </a>
             </div>
           </div>
-          <img className="foto" src="/img/fachada.webp" srcSet="/img/fachada-640.webp 640w, /img/fachada.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Edificios del centro de Madrid" loading="lazy" />
+          <img className="foto" width={1600} height={1067} src="/img/fachada.webp" srcSet="/img/fachada-640.webp 640w, /img/fachada-960.webp 960w, /img/fachada.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Edificios del centro de Madrid" loading="lazy" />
         </div>
       </section>
     </>

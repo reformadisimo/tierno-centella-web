@@ -1,5 +1,6 @@
 ---
 titulo: Ley 2/2025: la incapacidad permanente ya no extingue el contrato
+tituloSeo: Ley 2/2025: la incapacidad ya no extingue el contrato
 descripcion: Desde mayo de 2025, la incapacidad permanente no termina tu contrato de forma automática. Puedes pedir seguir y la empresa debe adaptar tu puesto o recolocarte.
 fecha: 2026-09-26
 actualizado: 2026-09-26

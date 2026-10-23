@@ -15,7 +15,7 @@ export default function LateralHub({
   return (
     <aside className="lateral-hub" aria-label="Habla con un abogado">
       <div className="lateral-hub-caja">
-        <img src="/img/jesus-retrato-640.webp" alt="" width={56} height={56} />
+        <img src="/img/jesus-avatar.webp" alt="" width={56} height={56} />
         <strong>¿Hablamos de tu caso?</strong>
         <p>{plazo}</p>
         <a className="boton boton-marcador" href={DESPACHO.telefonoHref}>

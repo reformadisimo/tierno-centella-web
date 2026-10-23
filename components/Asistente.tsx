@@ -108,7 +108,7 @@ export default function Asistente() {
           aria-label="Abrir el chat: pregunta tu caso"
         >
           <span className="asistente-foto">
-            <img src="/img/jesus-retrato-640.webp" alt="" width={44} height={44} />
+            <img src="/img/jesus-avatar.webp" alt="" width={44} height={44} />
             <span className="asistente-punto" aria-hidden="true" />
           </span>
           <span className="asistente-texto">
