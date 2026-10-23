@@ -651,7 +651,7 @@ Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas vece
 | abogado incapacidad permanente madrid | 170 | 2,46 € | Ídem, con "en Madrid" |
 | me han denegado la incapacidad permanente (y no puedo trabajar) | 320 | - | Frase exacta encima del titular y primera pregunta frecuente |
 | mejor abogado para incapacidad permanente | 320 | 1,07 € | Experiencia y quién te defiende, bien visibles |
-| abogados incapacidad solo cobran si ganan | 390 | 0,94 € | Te lo preguntamos (pregunta 33): si lo ofreces, va en la landing |
+| abogados incapacidad solo cobran si ganan | 390 | 0,94 € | Te lo preguntamos (pregunta 34): si lo ofreces, va en la landing |
 | abogado laboralista madrid | 1.900 | 3,56 € | La búsqueda más cara: solo merece la pena con una página que convierta |
 | abogado acoso laboral madrid | 140 | 1,66 € | Landing de acoso |
 
@@ -809,7 +809,7 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 
 **Lo legal**: la persona lo acepta con una casilla clara (no viene marcada), cada correo lleva su enlace para darse de baja y la política de privacidad lo explica.
 
-**Qué falta para encenderlo**: enviar desde tu dominio (tiernocentella.es), para lo que necesitamos acceso a donde lo tienes contratado (pregunta 22), y que revises los textos.
+**Qué falta para encenderlo**: enviar desde tu dominio (tiernocentella.es), para lo que necesitamos acceso a donde lo tienes contratado (pregunta 23), y que revises los textos.
 
 Ataca de raíz la queja de algunas reseñas ("después se desentienden") y aprovecha los contactos que hoy se pierden.
 
@@ -857,6 +857,28 @@ Lo hemos mirado en Semrush el 23 de octubre de 2026: en cuántas búsquedas dist
 **Lo que dice esto**: los que más clientes captan hacen las dos cosas, o al menos una muy bien. García de la Santa y Durán no pagan anuncios porque Google ya les enseña gratis. Bufete Toro, Campmany y R. Sánchez pagan, y **con constancia**: su nombre sale cuando alguien les busca (para que no se lo lleve otro) y en las búsquedas de incapacidad, que es donde más se cobra. Tú hoy no tienes ni una cosa ni la otra: poco posicionamiento y anuncios que casi no se ven. La buena noticia: **el hueco del acoso laboral en anuncios está libre**. Nadie lo trabaja con constancia, y es tu especialidad.
 
 **Lo que haríamos**: una campaña pequeña pero continua, centrada en acoso laboral e incapacidad en Madrid, con tus páginas de aterrizaje nuevas, sin "gratis" y midiendo cada consulta. Mejor poco y todos los días que mucho y a ratos.
+
+### Tus anuncios y los de tu competencia, uno al lado del otro
+
+Para que lo veas con tus ojos: así se ven hoy tus anuncios, los de quienes compiten contigo en Madrid y cómo serían los nuestros. Los textos de los demás están copiados tal cual de Semrush y de la Biblioteca de anuncios de Meta; los tuyos, del Centro de Transparencia de Google. Debajo tienes los enlaces para verlos tú mismo, en directo, cuando quieras.
+
+[[anuncios]]
+
+**Lo que ellos hacen mejor**:
+
+- **Constancia.** Campmany sale con su nombre casi todos los meses del año; tú, en meses sueltos. Quien busca "Tierno Centella" y no ve tu anuncio arriba puede ver el de otro.
+- **Una especialidad clara en el anuncio.** Campmany es "incapacidad"; R. Sánchez, "abogado laboral en Madrid". Tus anuncios no dicen que eres el despacho del acoso laboral, que es lo que te diferencia de todos.
+- **Confianza antes del clic.** R. Sánchez pone "733 reseñas en Google" en el título. Tú aún no puedes (4,2 con 59); por eso es tan importante el trabajo de reseñas del apartado 5.
+- **Una herramienta como gancho.** Bufete Toro anuncia una calculadora; Campmany, en Instagram, otra. Tú tienes 14 herramientas gratuitas en la web nueva y ninguna anunciada.
+- **Están en Instagram y Facebook.** Campmany tiene 24.400 seguidores en Facebook y anuncios activos; tú, 285 y ningún anuncio.
+
+**Lo que no copiaríamos**: "primera visita gratuita" y "95 % de tasa de éxito". Lo primero atrae a quien no va a pagar y acaba en reseñas malas (ya lo has vivido). Lo segundo choca con el Código Deontológico, que no permite prometer resultados. Tu ventaja es otra: **una historia real** (2005, la Universidad Rey Juan Carlos, más de 25 años) que nadie más puede contar.
+
+**Tus puntos de dolor en anuncios**, en resumen: casi no se ven, no dicen lo que te hace único, mandan a artículos o a una página que no es la del tema, algún "gratis" que no lo es, ninguna presencia en redes de pago y, sobre todo, **nadie mide qué consulta trae cada euro**.
+
+**Lo que haríamos**: campañas pequeñas y continuas en Google (acoso e incapacidad en Madrid, y tu marca protegida), una campaña sencilla en Instagram y Facebook con tu cara y el test de acoso, cada anuncio con su página propia, y un informe que te diga cada semana cuántas consultas ha traído cada euro.
+
+**Lo que nos falta para afinar**: todo esto está visto desde fuera. Con acceso de solo lectura a **Google Ads, Analytics, Tag Manager, Search Console, tu Perfil de Empresa en Google y Meta (Facebook e Instagram)** dejaremos las estimaciones y hablaremos con tus datos. Te lo preguntamos en el apartado 24.
 
 **Lo que se puede mejorar** (con lo que se ve desde fuera):
 

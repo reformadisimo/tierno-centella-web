@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
+import AnunciosGuia from './AnunciosGuia';
 
 export type SeccionGuia = {
   id: string;
@@ -403,6 +404,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   competencia: BloqueCompetencia,
   semaforo: BloqueSemaforo,
   dolor: BloqueDolor,
+  anuncios: AnunciosGuia,
 };
 
 function Contenido({ html }: { html: string }) {
