@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
 import VideoYoutube from '@/components/VideoYoutube';
 
-export const metadata: Metadata = {
-  title: 'Asesoría laboral para empresas y centros educativos',
-  description:
-    'Protocolos de acoso, investigación de denuncias internas, canal de denuncias y asesoría laboral para empresas, colegios y entidades del tercer sector.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Asesoría laboral para empresas y centros educativos',
+  descripcion: 'Protocolos de acoso, investigación de denuncias internas, canal de denuncias y asesoría laboral para empresas, colegios y entidades del tercer sector.',
+  ruta: '/empresas',
+});
 
 const SERVICIOS = [
   {

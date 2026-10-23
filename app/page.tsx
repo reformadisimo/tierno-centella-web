@@ -10,21 +10,9 @@ export default function Inicio() {
   const ultimos = leerColeccion('blog')
     .sort((a, b) => b.fecha.localeCompare(a.fecha))
     .slice(0, 3);
-  const despacho = {
-    '@context': 'https://schema.org',
-    '@type': 'LegalService',
-    name: DESPACHO.nombre,
-    telephone: '+34913249797',
-    email: DESPACHO.email,
-    address: { '@type': 'PostalAddress', streetAddress: 'Calle de Jorge Juan, 78, 5.º C', postalCode: '28009', addressLocality: 'Madrid', addressCountry: 'ES' },
-    areaServed: 'España',
-    knowsAbout: ['Acoso laboral', 'Despido', 'Incapacidad permanente', 'Derecho laboral'],
-    founder: { '@type': 'Person', name: 'Jesús Tierno Centella' },
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(despacho) }} />
       <section className="portada-video">
         <picture>
           <source media="(max-width: 700px)" srcSet="/img/portada-poster-movil.webp" />

@@ -9,7 +9,7 @@ orden: 2
 
 Si el INSS te deniega la incapacidad permanente o te reconoce un grado menor del que crees que te corresponde, primero tienes que presentar una reclamación previa ante el propio INSS en un plazo de 30 días hábiles desde la notificación. Si el INSS la rechaza o no contesta en 45 días hábiles, tienes otros 30 días hábiles para presentar la demanda en el Juzgado de lo Social. En el juicio, un juez revisa tu caso con los informes médicos y puede reconocer el grado que el INSS negó.
 
-> Plazo clave: 30 días hábiles desde que te notifican la resolución del INSS. Si se pasa, tendrás que empezar de nuevo y perderás meses de pensión. Calcúlalo en /herramientas/plazos.
+> Plazo clave: 30 días hábiles desde que te notifican la resolución del INSS. Si se pasa, tendrás que empezar de nuevo y perderás meses de pensión. Calcúlalo en [la calculadora de plazos](/herramientas/plazos).
 
 ## Cuándo puedes reclamar
 
@@ -89,7 +89,7 @@ Una parte importante de muchas reclamaciones no es el grado, sino el origen. Si 
 - La base reguladora se calcula con los salarios reales, y suele ser más alta.
 - Puede haber un recargo de prestaciones si la empresa incumplió medidas de seguridad.
 
-Si tu baja empezó por estrés, ansiedad o depresión ligada al trabajo, por ejemplo por acoso laboral, merece la pena revisar si debería considerarse accidente de trabajo. Puedes leer más en /acoso-laboral.
+Si tu baja empezó por estrés, ansiedad o depresión ligada al trabajo, por ejemplo por acoso laboral, merece la pena revisar si debería considerarse accidente de trabajo. Puedes leer más en [la sección de acoso laboral](/acoso-laboral).
 
 ## Lo que conviene hacer
 
@@ -99,7 +99,7 @@ Si tu baja empezó por estrés, ansiedad o depresión ligada al trabajo, por eje
 4. Presenta la reclamación previa a tiempo y guarda el justificante.
 5. Cuenta los 30 días para la demanda desde la respuesta o el silencio.
 
-Si te han denegado la incapacidad, cuéntanos tu caso en el 913 24 97 97 o en /contacto.
+Si te han denegado la incapacidad, cuéntanos tu caso en el 913 24 97 97 o en [el formulario de contacto](/contacto).
 
 ## Preguntas frecuentes
 

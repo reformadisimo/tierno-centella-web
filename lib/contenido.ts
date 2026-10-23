@@ -25,6 +25,7 @@ export type Pieza = {
   orden?: number;
   html: string;
   minutos: number;
+  faq: { pregunta: string; respuesta: string }[];
 };
 
 const RAIZ = path.join(process.cwd(), 'content');
@@ -56,6 +57,17 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
   if (!fs.existsSync(fichero)) return null;
   const { datos, cuerpo } = leerCabecera(fs.readFileSync(fichero, 'utf8'));
   const palabras = cuerpo.split(/\s+/).length;
+  // Preguntas frecuentes: los ### dentro de la sección "## Preguntas frecuentes", para los datos estructurados.
+  const faq: { pregunta: string; respuesta: string }[] = [];
+  const seccion = cuerpo.split(/^## Preguntas frecuentes\s*$/m)[1];
+  if (seccion) {
+    const bloque = seccion.split(/^## /m)[0];
+    for (const parte of bloque.split(/^### /m).slice(1)) {
+      const [titulo, ...resto] = parte.split('\n');
+      const respuesta = resto.join(' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_>`]/g, '').replace(/\s+/g, ' ').trim();
+      if (titulo.trim() && respuesta) faq.push({ pregunta: titulo.trim(), respuesta });
+    }
+  }
   return {
     slug,
     titulo: datos.titulo ?? slug,
@@ -67,5 +79,6 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
     orden: datos.orden ? Number(datos.orden) : undefined,
     html: marked.parse(cuerpo, { async: false }) as string,
     minutos: Math.max(1, Math.round(palabras / 220)),
+    faq,
   };
 }

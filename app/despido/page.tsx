@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
 import { leerColeccion } from '@/lib/contenido';
 import VideoYoutube from '@/components/VideoYoutube';
 
-export const metadata: Metadata = {
-  title: 'Abogados de despido en Madrid',
-  description: 'Qué hacer si te despiden: plazo de 20 días hábiles, tipos de despido, indemnización y cuándo es nulo o improcedente.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Abogados de despido en Madrid',
+  descripcion: 'Qué hacer si te despiden: plazo de 20 días hábiles, tipos de despido, indemnización y cuándo es nulo o improcedente.',
+  ruta: '/despido',
+});
 
 export default function Despido() {
   return (

@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Llamada from '@/components/Llamada';
 import { leerColeccion } from '@/lib/contenido';
 
-export const metadata: Metadata = {
-  title: 'Abogados de incapacidad permanente en Madrid',
-  description: 'Grados de incapacidad permanente, cuánto se cobra en cada uno y cómo recurrir si la Seguridad Social te la deniega.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Abogados de incapacidad permanente en Madrid',
+  descripcion: 'Grados de incapacidad permanente, cuánto se cobra en cada uno y cómo recurrir si la Seguridad Social te la deniega.',
+  ruta: '/incapacidad-permanente',
+});
 
 export default function Incapacidad() {
   return (

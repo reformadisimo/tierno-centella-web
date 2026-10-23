@@ -1,27 +1,18 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import VideoYoutube from '@/components/VideoYoutube';
 import { DESPACHO } from '@/lib/despacho';
 
-export const metadata: Metadata = {
-  title: 'Jesús Tierno Centella, abogado especialista en acoso laboral',
-  description:
-    'Socio director de Tierno Centella Abogados. Más de 25 años en derecho laboral, autor de la primera condena en España al acosador laboral (2005) y coautor de "Valores en el trabajo".',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Jesús Tierno Centella, abogado especialista en acoso laboral',
+  descripcion: 'Socio director de Tierno Centella Abogados. Más de 25 años en derecho laboral, autor de la primera condena en España al acosador laboral (2005) y coautor de "Valores en el trabajo".',
+  ruta: '/jesus-tierno',
+});
 
 export default function Jesus() {
-  const persona = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Jesús Tierno Centella',
-    jobTitle: 'Abogado laboralista, socio director',
-    worksFor: { '@type': 'LegalService', name: DESPACHO.nombre },
-    alumniOf: 'Universidad de Alcalá',
-    sameAs: ['https://www.youtube.com/@tiernocentella', 'https://www.instagram.com/tiernocentella_abogados/'],
-  };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(persona) }} />
       <header className="cabeza-pagina">
         <div className="contenedor cabeza-con-foto">
           <div>

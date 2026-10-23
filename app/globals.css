@@ -1556,3 +1556,18 @@ input:focus {
   padding: 14px 4px;
   cursor: pointer;
 }
+
+.pregunta-faq {
+  border-bottom: 1px solid var(--linea);
+  padding: 14px 0;
+}
+
+.pregunta-faq summary {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.pregunta-faq p {
+  margin: 10px 0 0;
+}

@@ -1,6 +1,6 @@
 ---
 titulo: Despido durante la baja médica: cuándo puede ser nulo
-descripcion: Que te despidan estando de baja no es nulo de forma automática, pero puede serlo si el motivo real es tu enfermedad. Qué dice la Ley 15/2022 y qué pruebas cuentan.
+descripcion: Que te despidan de baja no es nulo de forma automática, pero puede serlo si el motivo real es tu enfermedad. Qué dice la Ley 15/2022 y qué pruebas cuentan.
 fecha: 2026-09-09
 actualizado: 2026-09-09
 categoria: despido

@@ -5,6 +5,8 @@ import Cabecera from '@/components/Cabecera';
 import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';
 import Asistente from '@/components/Asistente';
+import JsonLd from '@/components/JsonLd';
+import { BASE, esquemaDespacho } from '@/lib/seo';
 
 const fuente = localFont({
   src: './fonts/schibsted.woff2',
@@ -14,6 +16,15 @@ const fuente = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE),
+  applicationName: 'Tierno Centella Abogados',
+  authors: [{ name: 'Jesús Tierno Centella', url: `${BASE}/jesus-tierno` }],
+  creator: 'Tierno Centella Abogados',
+  publisher: 'Tierno Centella Abogados',
+  formatDetection: { telephone: true, email: true, address: true },
+  alternates: { canonical: BASE },
+  openGraph: { siteName: 'Tierno Centella Abogados', locale: 'es_ES', type: 'website' },
+  twitter: { card: 'summary_large_image', site: '@TiernoCentella1' },
   title: {
     default: 'Tierno Centella Abogados | Abogados laboralistas en Madrid',
     template: '%s | Tierno Centella Abogados',
@@ -32,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={fuente.variable}>
       <body>
+        <JsonLd datos={esquemaDespacho()} />
         <a className="salta" href="#contenido">
           Saltar al contenido
         </a>

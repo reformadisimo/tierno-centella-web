@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import { leerColeccion } from '@/lib/contenido';
 
-export const metadata: Metadata = {
-  title: 'Blog de derecho laboral',
-  description: 'Novedades y guías prácticas sobre despidos, acoso laboral e incapacidad permanente, revisadas por Jesús Tierno.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Blog de derecho laboral',
+  descripcion: 'Novedades y guías prácticas sobre despidos, acoso laboral e incapacidad permanente, revisadas por Jesús Tierno.',
+  ruta: '/blog',
+});
 
 const NOMBRES: Record<string, string> = { acoso: 'Acoso laboral', despido: 'Despido', incapacidad: 'Incapacidad', empresas: 'Empresas' };
 

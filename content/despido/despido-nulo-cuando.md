@@ -9,7 +9,7 @@ orden: 2
 
 Un despido es nulo cuando vulnera un derecho fundamental (por ejemplo, es una represalia por haber reclamado), cuando se basa en una discriminación o cuando afecta a personas que la ley protege de forma especial, como las trabajadoras embarazadas o quienes disfrutan de permisos por cuidado de hijos. Si el juez lo declara nulo, la empresa tiene que readmitirte en tu puesto y pagarte los salarios que dejaste de cobrar. No puede sustituirlo por una indemnización.
 
-> Aunque creas que tu despido es nulo, el plazo es el mismo: 20 días hábiles para presentar la papeleta de conciliación. Calcúlalo en /herramientas/plazos.
+> Aunque creas que tu despido es nulo, el plazo es el mismo: 20 días hábiles para presentar la papeleta de conciliación. Calcúlalo en [la calculadora de plazos](/herramientas/plazos).
 
 ## Qué consecuencias tiene la nulidad
 
@@ -20,7 +20,7 @@ La nulidad deja el despido sin efecto, como si no hubiera ocurrido. En la práct
 - Mantenimiento del alta en la Seguridad Social durante ese tiempo.
 - Posibilidad de pedir una indemnización por daños morales cuando se ha vulnerado un derecho fundamental. Para fijar la cuantía, los tribunales toman con frecuencia como referencia las multas de la LISOS (la ley de infracciones y sanciones laborales).
 
-Es la diferencia clave con el despido improcedente, en el que la empresa puede elegir pagarte y no readmitirte. Lo explicamos en /despido/tipos-de-despido.
+Es la diferencia clave con el despido improcedente, en el que la empresa puede elegir pagarte y no readmitirte. Lo explicamos en [la guía de tipos de despido](/despido/tipos-de-despido).
 
 ## Los casos de nulidad
 
@@ -69,16 +69,16 @@ En los casos de discriminación o vulneración de derechos fundamentales, la ley
 1. Tú tienes que aportar indicios razonables: que denunciaste acoso y te despidieron poco después, que comunicaste tu embarazo y llegó la carta, que la causa alegada no tiene sentido.
 2. Si hay indicios, es la empresa la que debe demostrar que el despido tuvo una causa real y ajena a esos motivos.
 
-Son indicios útiles los correos y mensajes, las fechas, los testigos, una evaluación positiva reciente o el trato distinto a otros compañeros. En /herramientas/mapa-de-pruebas tienes una guía de qué reunir.
+Son indicios útiles los correos y mensajes, las fechas, los testigos, una evaluación positiva reciente o el trato distinto a otros compañeros. En [el mapa de pruebas](/herramientas/mapa-de-pruebas) tienes una guía de qué reunir.
 
 ## Lo que conviene hacer
 
 - Guarda la carta y todos los mensajes anteriores al despido.
 - Anota fechas: cuándo comunicaste el embarazo, la baja, la denuncia o la petición de permiso.
 - No esperes: presenta la papeleta dentro de los 20 días hábiles.
-- Si vienes de una situación de acoso, revisa también /acoso-laboral, porque puede haber otras reclamaciones además del despido.
+- Si vienes de una situación de acoso, revisa también [la sección de acoso laboral](/acoso-laboral), porque puede haber otras reclamaciones además del despido.
 
-Si quieres saber si tu despido podría ser nulo, cuéntanos tu caso en /contacto o en el 913 24 97 97.
+Si quieres saber si tu despido podría ser nulo, cuéntanos tu caso en [el formulario de contacto](/contacto) o en el 913 24 97 97.
 
 ## Preguntas frecuentes
 

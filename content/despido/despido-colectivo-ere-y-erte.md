@@ -9,7 +9,7 @@ orden: 4
 
 Un ERE (despido colectivo) es un despido de varios trabajadores a la vez por causas económicas, técnicas, organizativas o de producción, y termina con tu contrato. Un ERTE es temporal: suspende tu contrato o reduce tu jornada durante un tiempo, y luego vuelves. En el ERE te corresponde una indemnización mínima de 20 días por año, con un máximo de 12 mensualidades, y puedes impugnar tu despido en 20 días hábiles.
 
-> Si te entregan una carta de despido dentro de un ERE, no esperes a ver qué hacen los sindicatos. Lo prudente es reclamar dentro de los 20 días hábiles siguientes. Calcúlalo en /herramientas/plazos.
+> Si te entregan una carta de despido dentro de un ERE, no esperes a ver qué hacen los sindicatos. Lo prudente es reclamar dentro de los 20 días hábiles siguientes. Calcúlalo en [la calculadora de plazos](/herramientas/plazos).
 
 ## Cuándo un despido es colectivo
 
@@ -45,7 +45,7 @@ Tienes dos vías que conviene no confundir:
 - La impugnación colectiva la presentan los representantes de los trabajadores contra el ERE en su conjunto.
 - La impugnación individual la presentas tú contra tu despido concreto, en 20 días hábiles.
 
-Puedes impugnar a título individual aunque haya habido acuerdo en el periodo de consultas. Por ejemplo, si no se respetó la prioridad de permanencia (que tienen los representantes de los trabajadores y, según convenio, otros colectivos), si los criterios de selección no se aplicaron bien contigo o si te eligieron por un motivo discriminatorio. Si hay una impugnación colectiva en marcha, tu demanda individual puede quedar en espera hasta que se resuelva. Para saber cómo presentar la reclamación, lee /despido/plazo-para-reclamar-despido.
+Puedes impugnar a título individual aunque haya habido acuerdo en el periodo de consultas. Por ejemplo, si no se respetó la prioridad de permanencia (que tienen los representantes de los trabajadores y, según convenio, otros colectivos), si los criterios de selección no se aplicaron bien contigo o si te eligieron por un motivo discriminatorio. Si hay una impugnación colectiva en marcha, tu demanda individual puede quedar en espera hasta que se resuelva. Para saber cómo presentar la reclamación, lee [la guía sobre el plazo para reclamar un despido](/despido/plazo-para-reclamar-despido).
 
 ## Qué cambia en un ERTE
 
@@ -64,9 +64,9 @@ También puedes impugnar individualmente tu inclusión en un ERTE, por ejemplo s
 ## Lo que conviene hacer
 
 - Pide a tus representantes el acta del acuerdo y los criterios de selección.
-- Comprueba que la indemnización de tu carta está bien calculada. Puedes hacer una estimación en /calculadora-indemnizacion.
+- Comprueba que la indemnización de tu carta está bien calculada. Puedes hacer una estimación en [la calculadora de indemnización](/calculadora-indemnizacion).
 - Firma la carta como "recibí, no conforme".
-- Si tienes dudas sobre por qué te eligieron a ti, consulta pronto. Llámanos al 913 24 97 97 o escríbenos desde /contacto.
+- Si tienes dudas sobre por qué te eligieron a ti, consulta pronto. Llámanos al 913 24 97 97 o escríbenos desde [el formulario de contacto](/contacto).
 
 ## Preguntas frecuentes
 

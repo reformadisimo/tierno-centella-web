@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Herramientas gratuitas',
-  description: 'Calculadora de indemnización, test de acoso, mapa de pruebas, revisión de la carta de despido, plazos e incapacidad. Gratis y sin datos personales.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Herramientas gratuitas',
+  descripcion: 'Calculadora de indemnización, test de acoso, mapa de pruebas, revisión de la carta de despido, plazos e incapacidad. Gratis y sin datos personales.',
+  ruta: '/herramientas',
+});
 
 const HERRAMIENTAS = [
   { href: '/herramientas/test-acoso', titulo: '¿Es acoso lo que me pasa?', texto: 'Trece preguntas para saber si lo que vives tiene los rasgos del acoso laboral.' },

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
 import { CASOS, JURISPRUDENCIA } from '@/lib/casos';
 
-export const metadata: Metadata = {
-  title: 'Sentencias y casos ganados',
-  description:
-    'Fichas de los casos del despacho: la primera condena en España a la empresa y al acosador (2005), Castilla y León (2011) y la URJC (2024).',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Sentencias y casos ganados',
+  descripcion: 'Fichas de los casos del despacho: la primera condena en España a la empresa y al acosador (2005), Castilla y León (2011) y la URJC (2024).',
+  ruta: '/sentencias',
+});
 
 export default function Sentencias() {
   return (

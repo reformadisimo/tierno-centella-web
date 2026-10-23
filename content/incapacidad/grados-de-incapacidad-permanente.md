@@ -9,7 +9,7 @@ orden: 1
 
 La incapacidad permanente tiene cuatro grados: parcial, total, absoluta y gran incapacidad. Cada uno se reconoce según cuánto te limitan tus lesiones para trabajar, y se cobra de forma distinta: la parcial es un pago único de 24 mensualidades; la total, el 55 % de la base reguladora (75 % si tienes 55 años o más y se cumplen los requisitos); la absoluta, el 100 %; y la gran incapacidad, la pensión que corresponda más un complemento para pagar a quien te ayuda.
 
-> Si el INSS te deniega la incapacidad o te reconoce un grado menor del que crees que te corresponde, tienes 30 días hábiles para presentar la reclamación previa. Lo explicamos en /incapacidad-permanente/reclamacion-previa-y-demanda.
+> Si el INSS te deniega la incapacidad o te reconoce un grado menor del que crees que te corresponde, tienes 30 días hábiles para presentar la reclamación previa. Lo explicamos en [la guía sobre reclamación previa y demanda](/incapacidad-permanente/reclamacion-previa-y-demanda).
 
 ## Qué es la incapacidad permanente
 
@@ -60,13 +60,13 @@ La base reguladora es la cifra sobre la que se aplican los porcentajes. Su cálc
 - Accidente no laboral: se calcula con las bases de un periodo de cotización elegido según la norma.
 - Accidente de trabajo o enfermedad profesional: se toman los salarios reales del último año, incluidas pagas extra y otros conceptos.
 
-Si tu incapacidad viene de un accidente de trabajo o enfermedad profesional, no se exige un periodo mínimo de cotización. Si viene de una enfermedad común, sí, y depende de tu edad. En ambos casos conviene revisar si tu baja está bien calificada; lo contamos con la determinación de contingencia en /incapacidad-permanente.
+Si tu incapacidad viene de un accidente de trabajo o enfermedad profesional, no se exige un periodo mínimo de cotización. Si viene de una enfermedad común, sí, y depende de tu edad. En ambos casos conviene revisar si tu baja está bien calificada; lo contamos con la determinación de contingencia en [la página de incapacidad permanente](/incapacidad-permanente).
 
 Existen además pensiones mínimas que cada año fija la ley de presupuestos o el decreto de revalorización, y que pueden mejorar lo que cobras.
 
 ## Qué pasa con tu trabajo
 
-Hasta 2025, la incapacidad total, absoluta o gran incapacidad terminaba el contrato de forma automática. Desde la Ley 2/2025, de 29 de abril, ya no: puedes pedir seguir en la empresa y esta debe intentar adaptar tu puesto o recolocarte. Lo explicamos en /incapacidad-permanente/incapacidad-y-contrato-ley-2-2025.
+Hasta 2025, la incapacidad total, absoluta o gran incapacidad terminaba el contrato de forma automática. Desde la Ley 2/2025, de 29 de abril, ya no: puedes pedir seguir en la empresa y esta debe intentar adaptar tu puesto o recolocarte. Lo explicamos en [la guía sobre la Ley 2/2025](/incapacidad-permanente/incapacidad-y-contrato-ley-2-2025).
 
 ## Revisión del grado
 
@@ -79,7 +79,7 @@ La incapacidad permanente puede revisarse si empeoras, mejoras o hubo un error d
 3. Lee con calma el dictamen y la resolución, y anota la fecha de notificación.
 4. Si no estás de acuerdo, no dejes pasar los 30 días hábiles de la reclamación previa.
 
-Si quieres que revisemos tu caso, llámanos al 913 24 97 97 o escríbenos desde /contacto.
+Si quieres que revisemos tu caso, llámanos al 913 24 97 97 o escríbenos desde [el formulario de contacto](/contacto).
 
 ## Preguntas frecuentes
 

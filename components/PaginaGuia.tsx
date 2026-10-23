@@ -3,6 +3,8 @@ import type { Pieza } from '@/lib/contenido';
 import { videoPorId } from '@/lib/videos';
 import VideoYoutube from './VideoYoutube';
 import { DESPACHO, DEMO, enlaceWhatsapp } from '@/lib/despacho';
+import JsonLd from './JsonLd';
+import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
 
 const fechaCorta = (iso: string) =>
   new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
@@ -19,6 +21,7 @@ export default function PaginaGuia({
   herramienta?: { href: string; texto: string };
 }) {
   const video = videoPorId(pieza.video);
+  const ruta = migas[migas.length - 1].href + '/' + pieza.slug;
   const datos = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -26,12 +29,20 @@ export default function PaginaGuia({
     description: pieza.descripcion,
     datePublished: pieza.fecha,
     dateModified: pieza.actualizado ?? pieza.fecha,
-    author: { '@type': 'Person', name: 'Jesús Tierno Centella', jobTitle: 'Abogado laboralista' },
-    publisher: { '@type': 'LegalService', name: DESPACHO.nombre },
+    author: { '@id': ID_JESUS },
+    publisher: { '@id': ID_DESPACHO },
+    inLanguage: 'es-ES',
+    mainEntityOfPage: BASE + ruta,
+    image: video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : `${BASE}/img/jesus-firmando.webp`,
+    ...(video
+      ? { video: { '@type': 'VideoObject', name: video.titulo, description: video.descripcion, thumbnailUrl: `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`, embedUrl: `https://www.youtube.com/embed/${video.id}`, ...(video.fecha ? { uploadDate: video.fecha } : {}) } }
+      : {}),
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datos) }} />
+      <JsonLd datos={datos} />
+      <JsonLd datos={esquemaMigas([...migas, { href: ruta, texto: pieza.titulo }])} />
+      {pieza.faq.length > 0 && <JsonLd datos={esquemaFaq(pieza.faq)} />}
       <header className="cabeza-pagina">
         <div className="contenedor">
           <nav className="migas" aria-label="Estás en">

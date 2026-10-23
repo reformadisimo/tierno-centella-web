@@ -10,7 +10,7 @@ video: IoBEF41_SCI
 
 En España hay tres formas principales de despido: el disciplinario (por un incumplimiento grave del trabajador), el objetivo (por causas de la empresa o del puesto) y el colectivo (cuando afecta a muchos trabajadores a la vez). Después, si lo impugnas, un juez lo califica como procedente, improcedente o nulo, y de esa calificación dependen la indemnización y la posibilidad de volver a tu puesto. Tienes 20 días hábiles para reclamar.
 
-> Si te acaban de despedir, el reloj ya corre: 20 días hábiles desde el día siguiente al despido. Puedes calcularlo en /herramientas/plazos.
+> Si te acaban de despedir, el reloj ya corre: 20 días hábiles desde el día siguiente al despido. Puedes calcularlo en [la calculadora de plazos](/herramientas/plazos).
 
 ## Las tres formas de despedir
 
@@ -49,7 +49,7 @@ Si la empresa alega causas económicas y no puede pagar en ese momento, debe dec
 
 ### Despido colectivo
 
-Es el que afecta a un número mínimo de trabajadores en 90 días por causas económicas, técnicas, organizativas o de producción. Exige negociar con los representantes de los trabajadores. Lo explicamos con detalle en la guía sobre /despido/despido-colectivo-ere-y-erte.
+Es el que afecta a un número mínimo de trabajadores en 90 días por causas económicas, técnicas, organizativas o de producción. Exige negociar con los representantes de los trabajadores. Lo explicamos con detalle en la guía sobre [despido colectivo, ERE y ERTE](/despido/despido-colectivo-ere-y-erte).
 
 ## Cómo se califica un despido
 
@@ -66,13 +66,13 @@ La empresa no prueba la causa o no cumple los requisitos de forma (carta poco co
 - Readmitirte en tu puesto y pagarte los salarios desde el despido hasta la readmisión (salarios de tramitación).
 - Pagarte la indemnización por despido improcedente: 33 días por año, con un máximo de 24 mensualidades. Si empezaste antes del 12 de febrero de 2012, el tiempo anterior a esa fecha se calcula a 45 días por año.
 
-Si eres representante de los trabajadores, la opción es tuya y no de la empresa. Puedes hacer una estimación en /calculadora-indemnizacion.
+Si eres representante de los trabajadores, la opción es tuya y no de la empresa. Puedes hacer una estimación en [la calculadora de indemnización](/calculadora-indemnizacion).
 
 En 2024, el Comité Europeo de Derechos Sociales consideró que este sistema de indemnización no compensa suficientemente en todos los casos. Por ahora, la cuantía legal sigue siendo la misma.
 
 ### Nulo
 
-Es la calificación más grave. El despido es nulo cuando vulnera un derecho fundamental o se basa en una discriminación, y también en algunos casos especialmente protegidos, como el embarazo o los permisos por cuidado de hijos. La consecuencia es la readmisión inmediata con todos los salarios que dejaste de cobrar. Además, puedes pedir una indemnización por daños morales. Lo contamos en /despido/despido-nulo-cuando.
+Es la calificación más grave. El despido es nulo cuando vulnera un derecho fundamental o se basa en una discriminación, y también en algunos casos especialmente protegidos, como el embarazo o los permisos por cuidado de hijos. La consecuencia es la readmisión inmediata con todos los salarios que dejaste de cobrar. Además, puedes pedir una indemnización por daños morales. Lo contamos en [la guía sobre el despido nulo](/despido/despido-nulo-cuando).
 
 ## Qué pasa con el paro y el finiquito
 
@@ -91,9 +91,9 @@ Tú también puedes aportar pruebas: mensajes, testigos, nóminas, evaluaciones 
 1. Anota la fecha de efectos del despido y guarda la carta.
 2. Firma la carta y el finiquito como "recibí, no conforme".
 3. Pide el paro en el SEPE.
-4. Presenta la papeleta de conciliación antes de que pasen los 20 días hábiles. Te lo explicamos en /despido/plazo-para-reclamar-despido.
+4. Presenta la papeleta de conciliación antes de que pasen los 20 días hábiles. Te lo explicamos en [la guía sobre el plazo para reclamar un despido](/despido/plazo-para-reclamar-despido).
 
-Si quieres que revisemos tu carta de despido, llámanos al 913 24 97 97 o escríbenos desde /contacto.
+Si quieres que revisemos tu carta de despido, llámanos al 913 24 97 97 o escríbenos desde [el formulario de contacto](/contacto).
 
 ## Preguntas frecuentes
 

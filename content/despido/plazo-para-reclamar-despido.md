@@ -9,7 +9,7 @@ orden: 3
 
 Para reclamar un despido tienes 20 días hábiles desde el día siguiente a la fecha de efectos. En ese plazo debes presentar la papeleta de conciliación, que en Madrid se tramita ante el SMAC (Servicio de Mediación, Arbitraje y Conciliación de la Comunidad de Madrid). La papeleta detiene el reloj, y después del intento de conciliación te quedan los días que no habías gastado para presentar la demanda en el Juzgado de lo Social.
 
-> Si se pasa el plazo, pierdes la posibilidad de reclamar el despido, aunque tuvieras toda la razón. Es un plazo de caducidad y no admite excusas. Calcula tu fecha límite en /herramientas/plazos.
+> Si se pasa el plazo, pierdes la posibilidad de reclamar el despido, aunque tuvieras toda la razón. Es un plazo de caducidad y no admite excusas. Calcula tu fecha límite en [la calculadora de plazos](/herramientas/plazos).
 
 ## Cómo se cuentan los 20 días
 
@@ -87,7 +87,7 @@ Después, el juzgado fija la fecha del juicio. Antes del juicio hay otro intento
 - Confundir la fecha de efectos con la fecha de entrega de la carta.
 - Presentar la papeleta y olvidar que, tras la conciliación, el plazo vuelve a correr.
 
-Si te han despedido hace poco, llámanos al 913 24 97 97 y revisamos tu plazo contigo, o escríbenos desde /contacto.
+Si te han despedido hace poco, llámanos al 913 24 97 97 y revisamos tu plazo contigo, o escríbenos desde [el formulario de contacto](/contacto).
 
 ## Preguntas frecuentes
 

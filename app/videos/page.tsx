@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import VideoYoutube from '@/components/VideoYoutube';
 import { VIDEOS } from '@/lib/videos';
 
-export const metadata: Metadata = {
-  title: 'Vídeos sobre acoso laboral y derecho del trabajo',
-  description: 'Entrevistas de Jesús Tierno con el psicólogo Iñaki Piñuel sobre el acoso laboral, casos ganados y consejos para trabajadores y empresas.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Vídeos sobre acoso laboral y derecho del trabajo',
+  descripcion: 'Entrevistas de Jesús Tierno con el psicólogo Iñaki Piñuel sobre el acoso laboral, casos ganados y consejos para trabajadores y empresas.',
+  ruta: '/videos',
+});
 
 export default function Videos() {
   return (

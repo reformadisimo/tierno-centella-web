@@ -60,9 +60,9 @@ Si el puesto nuevo es compatible con la pensión (por ejemplo, una incapacidad t
 
 ## Si la empresa extingue el contrato
 
-Puedes impugnar la extinción. La ley ha previsto que estos procesos sean urgentes y tengan tramitación preferente. Al no fijar un plazo propio, lo prudente es actuar como en un despido y reclamar dentro de los 20 días hábiles siguientes a la comunicación. Más información en /despido/plazo-para-reclamar-despido.
+Puedes impugnar la extinción. La ley ha previsto que estos procesos sean urgentes y tengan tramitación preferente. Al no fijar un plazo propio, lo prudente es actuar como en un despido y reclamar dentro de los 20 días hábiles siguientes a la comunicación. Más información en [la guía sobre el plazo para reclamar un despido](/despido/plazo-para-reclamar-despido).
 
-En el juicio se discutirá si la empresa estudió de verdad los ajustes, si había puestos vacantes y si la carga era realmente excesiva. Si la empresa te despide sin hacer ese análisis, o por tu estado de salud, puede haber discriminación y el despido podría ser nulo (lee /despido/despido-nulo-cuando).
+En el juicio se discutirá si la empresa estudió de verdad los ajustes, si había puestos vacantes y si la carga era realmente excesiva. Si la empresa te despide sin hacer ese análisis, o por tu estado de salud, puede haber discriminación y el despido podría ser nulo (lee [la guía sobre el despido nulo](/despido/despido-nulo-cuando)).
 
 ## Y si la incapacidad es parcial
 
@@ -75,7 +75,7 @@ La incapacidad permanente parcial nunca ha sido causa de extinción. Sigues en t
 3. Pide que te informen de qué ajustes o puestos se han estudiado.
 4. Si te comunican la extinción, guarda la carta y reclama pronto.
 
-Si estás en esta situación, podemos ayudarte a preparar la comunicación o a revisar la decisión de la empresa. Llámanos al 913 24 97 97 o escríbenos desde /contacto.
+Si estás en esta situación, podemos ayudarte a preparar la comunicación o a revisar la decisión de la empresa. Llámanos al 913 24 97 97 o escríbenos desde [el formulario de contacto](/contacto).
 
 ## Preguntas frecuentes
 

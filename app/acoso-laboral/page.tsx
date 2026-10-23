@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
 import VideoYoutube from '@/components/VideoYoutube';
 import { leerColeccion } from '@/lib/contenido';
 import { CASOS } from '@/lib/casos';
 
-export const metadata: Metadata = {
-  title: 'Abogados de acoso laboral en Madrid',
-  description:
-    'Especialistas en acoso laboral desde hace más de 25 años. Cómo saber si lo sufres, cómo demostrarlo y qué puedes reclamar. Primera condena en España al acosador, en 2005.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Abogados de acoso laboral en Madrid',
+  descripcion: 'Especialistas en acoso laboral desde hace más de 25 años. Cómo saber si lo sufres, cómo demostrarlo y qué puedes reclamar. Primera condena en España al acosador, en 2005.',
+  ruta: '/acoso-laboral',
+});
 
 export default function Acoso() {
   const guias = leerColeccion('acoso');

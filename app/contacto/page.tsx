@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { meta } from '@/lib/seo';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 
-export const metadata: Metadata = {
-  title: 'Contacto y citas',
-  description: 'Llámanos, escríbenos por WhatsApp o reserva una consulta presencial en Madrid o por videollamada.',
-};
+export const metadata: Metadata = meta({
+  titulo: 'Contacto y citas',
+  descripcion: 'Llámanos, escríbenos por WhatsApp o reserva una consulta presencial en Madrid o por videollamada.',
+  ruta: '/contacto',
+});
 
 export default function Contacto() {
   return (
