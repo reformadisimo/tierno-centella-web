@@ -500,6 +500,18 @@ Esto es, de verdad, **pasar a otro nivel**. No tener un proveedor para el SEO, o
 - **Actuación inmediata** en cualquiera de esos frentes, el mismo día.
 - **Resultados que se notan**: el posicionamiento lleva su tiempo (en el apartado 22 te contamos cuánto, sin promesas vacías), pero cada mes podrás ver con datos hacia dónde va.
 
+### Transparencia total: todo es tuyo, siempre
+
+Hay algo que para nosotros no es negociable: **tú tienes el control de todo**. La web, el dominio, Google Analytics, Search Console, Google Ads, tu ficha de Google, Instagram, Facebook y la base de datos de las conversaciones del chat (hoy está en una cuenta de prueba nuestra y la pasaremos a una tuya). Todo está **a tu nombre**, con tu acceso total, y nosotros entramos como invitados.
+
+- **Ves todo lo que hacemos**, cuando quieras, sin tener que pedírnoslo.
+- **Nada depende de nosotros para funcionar.** Ni una clave, ni una cuenta, ni un historial.
+- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos permiso**, ni claves, ni accesos. Ya lo tienes todo. Nos quitas el acceso y listo.
+
+No queremos trabajar de otra manera con ningún cliente. Nos parece la única forma honesta de hacerlo: que sigas con nosotros porque te compensa, no porque no puedas irte.
+
+> **Una pregunta para ti**: hoy, ¿tienes tú el acceso a todo? ¿La web y el dominio están a tu nombre? ¿Puedes entrar en Google Analytics y en Google Ads sin pedírselo a nadie? Si la respuesta a alguna es "no lo sé", es justo lo primero que arreglamos.
+
 ## 9. Mujer y trabajo: el guiño que se convierte en servicio
 
 Muchos de tus clientes son mujeres, y muchas veces es la mujer la que elige al abogado de la familia. Hemos dado a la web un toque más cálido (un color coral suave junto a tu azul, fotos de las abogadas del despacho) sin caer en lo cursi, y una sección propia con:
@@ -989,7 +1001,7 @@ Tu web actual no se tira: todo su contenido aprovechable está dentro de la nuev
 | Dominio tiernocentella.es | Hacer el cambio de web | Nos dices dónde está contratado y lo hacemos contigo |
 | Instagram, Facebook y LinkedIn | Programar y medir (si quieres) | Meta Business Suite y administrador de la página de LinkedIn |
 
-Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, la ficha de Google y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras.
+Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, la ficha de Google y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras. **Las cuentas siguen siendo tuyas**: tú eres el propietario y nosotros, invitados. Si alguna hoy no está a tu nombre, lo primero que hacemos es ponerla a tu nombre.
 
 ## 24. Preguntas para ti
 
