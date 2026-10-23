@@ -2403,3 +2403,31 @@ textarea {
 .gj-reaccion em {
   color: var(--coral-texto);
 }
+
+.gj-reaccion button.activo {
+  background: var(--marca);
+  border-color: var(--marca);
+  color: var(--blanco);
+}
+.gj-comentario {
+  flex: 1 0 100%;
+  display: grid;
+  gap: 6px;
+  margin-top: 6px;
+}
+.gj-comentario textarea {
+  font: inherit;
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  resize: vertical;
+  background: var(--blanco);
+}
+.gj-comentario button {
+  justify-self: start;
+  background: var(--coral-texto) !important;
+  border-color: var(--coral-texto) !important;
+  color: var(--blanco);
+}

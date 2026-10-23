@@ -28,24 +28,51 @@ function useAvisoVisita() {
 }
 
 function Reaccion({ id, seccion }: { id: string; seccion: string }) {
+  const [elegida, setElegida] = useState('');
   const [msg, setMsg] = useState('');
+  const [texto, setTexto] = useState('');
+  const [msgTexto, setMsgTexto] = useState('');
   return (
     <div className="gj-reaccion">
       <span>¿Qué te ha parecido esta parte?</span>
-      {['Me encanta', 'Tengo una duda', 'No lo veo claro'].map((r) => (
+      {['Me encanta', 'Me gusta', 'Tengo una duda', 'No lo veo claro'].map((r) => (
         <button
           key={r}
           type="button"
+          className={elegida === r ? 'activo' : ''}
           onClick={async () => {
+            setElegida(r);
             setMsg('Enviando...');
             const ok = await avisar({ tipo: 'reaccion', id, seccion, reaccion: r });
-            setMsg(ok ? 'Gracias, Jesús. Ignacio lo verá.' : 'Apuntado. Si quieres, cuéntaselo por WhatsApp.');
+            setMsg(ok ? 'Gracias. Ignacio lo verá.' : 'Apuntado. Si quieres, cuéntaselo por WhatsApp.');
           }}
         >
           {r}
         </button>
       ))}
       {msg && <em role="status">{msg}</em>}
+      <div className="gj-comentario">
+        <textarea
+          rows={2}
+          value={texto}
+          onChange={(e) => setTexto(e.target.value)}
+          placeholder="Si quieres, escríbenos lo que piensas de esta parte: una duda, un cambio, algo que te guste o no. Le llega a Ignacio."
+          aria-label={`Comentario sobre ${seccion}`}
+        />
+        <button
+          type="button"
+          onClick={async () => {
+            if (!texto.trim()) return setMsgTexto('Escribe tu comentario y pulsa enviar.');
+            setMsgTexto('Enviando...');
+            const ok = await avisar({ tipo: 'comentario', id, seccion, reaccion: elegida, texto });
+            setMsgTexto(ok ? 'Enviado. Gracias, Jesús: Ignacio ya lo tiene.' : 'No se ha podido enviar. Cuéntaselo por WhatsApp, por favor.');
+            if (ok) setTexto('');
+          }}
+        >
+          Enviar comentario
+        </button>
+        {msgTexto && <em role="status">{msgTexto}</em>}
+      </div>
     </div>
   );
 }

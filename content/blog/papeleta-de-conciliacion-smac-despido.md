@@ -39,6 +39,10 @@ No es obligatorio, pero es donde se cierran la mayoría de los acuerdos, y la di
 
 ## Preguntas frecuentes
 
+### ¿Es obligatorio ir al SMAC en caso de despido?
+
+Sí. Antes de demandar un despido hay que intentar la conciliación, salvo excepciones como trabajar para la Administración. Si no presentas la papeleta, el juzgado no admitirá la demanda hasta que lo hagas. Y si la empresa no acude al acto, no pasa nada: se da por intentada y puedes demandar.
+
 ### ¿Cuánto tarda en celebrarse la conciliación?
 
 Depende de la carga del servicio. La ley prevé que se celebre en 15 días hábiles, pero a veces tarda más. Si pasan 15 días sin celebrarse, el plazo para la demanda vuelve a correr.

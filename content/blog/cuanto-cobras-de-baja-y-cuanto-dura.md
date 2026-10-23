@@ -38,6 +38,10 @@ Pueden despedirte, pero si el motivo real es tu enfermedad, el despido puede ser
 
 ## Preguntas frecuentes
 
+### ¿Se cobra el 100 % estando de baja por enfermedad común?
+
+La Seguridad Social paga el 60 % del día 4 al 20 y el 75 % desde el 21. Solo cobras el 100 % si tu convenio colectivo obliga a la empresa a completar la diferencia. Muchos lo hacen, a veces solo a partir de cierto día o con límites: revisa el tuyo.
+
 ### ¿Cobro las pagas extra estando de baja?
 
 La prestación ya incluye la parte proporcional de las pagas extra, porque la base de cotización las lleva prorrateadas. Si tu convenio mejora la baja, puede haber reglas específicas.

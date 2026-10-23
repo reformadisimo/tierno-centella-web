@@ -4,8 +4,8 @@ import JsonLd from '@/components/JsonLd';
 import Calculadora from '@/components/Calculadora';
 
 export const metadata: Metadata = meta({
-  titulo: 'Calculadora de indemnización por despido',
-  descripcion: 'Calcula al momento tu indemnización por despido objetivo o improcedente y los días que te quedan para reclamar.',
+  titulo: 'Calculadora de indemnización por despido 2026: calcula lo que te corresponde',
+  descripcion: 'Calcula tu indemnización por despido improcedente (33 y 45 días) u objetivo (20 días) en un minuto, con el tramo anterior a 2012 y el plazo que te queda para reclamar.',
   ruta: '/calculadora-indemnizacion',
 });
 

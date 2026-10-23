@@ -16,7 +16,7 @@ function caja(titulo: string, cuerpo: string, enlace: string) {
   );
 }
 
-type Aviso = { tipo: 'visita' | 'reaccion' | 'respuestas'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
+type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
 
 function preparar(a: Aviso) {
   const hora = new Intl.DateTimeFormat('es-ES', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(new Date());
@@ -36,6 +36,17 @@ function preparar(a: Aviso) {
       asunto: `Tierno Centella: Jesús dice "${a.reaccion}" en "${a.seccion}"`,
       html: caja('Jesús ha reaccionado a un apartado', `<p style="font-size:17px"><b>${esc(a.reaccion ?? '')}</b></p><p>Apartado: ${esc(a.seccion ?? '')}</p>`, `${GUIA}#${a.id ?? ''}`),
       texto: `Jesús dice "${a.reaccion}" en "${a.seccion}".`,
+    };
+  }
+  if (a.tipo === 'comentario') {
+    return {
+      asunto: `Tierno Centella: Jesús ha escrito en "${a.seccion}"`,
+      html: caja(
+        'Comentario de Jesús',
+        `<p>Apartado: <b>${esc(a.seccion ?? '')}</b>${a.reaccion ? ` (había marcado: ${esc(a.reaccion)})` : ''}</p><p style="font-size:16px;background:#f5ede4;border-left:4px solid #d9694d;padding:12px 14px;white-space:pre-wrap">${esc(a.texto ?? '')}</p>`,
+        `${GUIA}#${a.id ?? ''}`,
+      ),
+      texto: `Jesús ha escrito en "${a.seccion}": ${a.texto}`,
     };
   }
   const t = (a.texto ?? '').trim();
@@ -68,12 +79,12 @@ export async function POST(req: Request) {
   let aviso: Aviso;
   try {
     const cuerpo = await req.json();
-    aviso = { ...cuerpo, tipo: ['visita', 'reaccion'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
+    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
     for (const k of ['dispositivo', 'seccion', 'id', 'reaccion', 'texto'] as const) if (aviso[k] != null) aviso[k] = String(aviso[k]).slice(0, k === 'texto' ? 20000 : 200);
   } catch {
     return Response.json({ ok: false }, { status: 400 });
   }
-  if (aviso.tipo === 'respuestas' && (aviso.texto ?? '').trim().length < 5) return Response.json({ ok: false }, { status: 400 });
+  if (['respuestas', 'comentario'].includes(aviso.tipo) && (aviso.texto ?? '').trim().length < 2) return Response.json({ ok: false }, { status: 400 });
   const { asunto, html, texto } = preparar(aviso);
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',

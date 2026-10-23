@@ -1,6 +1,8 @@
 ## Empieza aquí: tu guía en 5 minutos
 
-Jesús, esta guía te cuenta qué hemos hecho con tu web, por qué y qué podríamos hacer a partir de aquí. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
+Jesús, esta guía te cuenta qué hemos hecho con tu web, por qué y qué podríamos hacer a partir de aquí.
+
+> **Cómo trabajamos**: de forma sencilla. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
 
 > Todo lo que ves es una **demostración**: la web nueva vive en una dirección de prueba, Google no la indexa y tu web actual sigue funcionando igual. No hemos tocado nada tuyo.
 
