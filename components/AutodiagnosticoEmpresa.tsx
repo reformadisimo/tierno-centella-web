@@ -16,7 +16,7 @@ const PUNTOS: Punto[] = [
   {
     id: 'sexual',
     texto: 'Protocolo frente al acoso sexual y por razón de sexo',
-    ayuda: 'Obligatorio para todas las organizaciones, sea cual sea su tamaño (Ley Orgánica 3/2007, art. 48).',
+    ayuda: 'Para todas las organizaciones, sea cual sea su tamaño (Ley Orgánica 3/2007, art. 48).',
     obligatorio: () => true,
   },
   {
@@ -28,25 +28,25 @@ const PUNTOS: Punto[] = [
   {
     id: 'lgtbi',
     texto: 'Protocolo frente al acoso y la violencia contra personas LGTBI',
-    ayuda: 'Obligatorio para las empresas de más de 50 personas (Ley 4/2023 y Real Decreto 1026/2024).',
+    ayuda: 'En las empresas de más de 50 personas (Ley 4/2023 y Real Decreto 1026/2024).',
     obligatorio: (t, grande) => grande && t !== 'administracion',
   },
   {
     id: 'canal',
     texto: 'Canal interno de denuncias con persona responsable',
-    ayuda: 'Obligatorio con 50 o más personas y en todo el sector público (Ley 2/2023).',
+    ayuda: 'Con 50 o más personas y en todo el sector público (Ley 2/2023).',
     obligatorio: (t, grande) => grande || t === 'administracion',
   },
   {
     id: 'igualdad',
     texto: 'Plan de igualdad registrado',
-    ayuda: 'Obligatorio con 50 o más personas en plantilla.',
+    ayuda: 'Con 50 o más personas en plantilla.',
     obligatorio: (t, grande) => grande,
   },
   {
     id: 'registro',
     texto: 'Registro retributivo con los salarios medios de mujeres y hombres',
-    ayuda: 'Obligatorio para todas las empresas (art. 28.2 del Estatuto de los Trabajadores).',
+    ayuda: 'Para todas las empresas (art. 28.2 del Estatuto de los Trabajadores).',
     obligatorio: (t) => t !== 'administracion',
   },
   {
@@ -70,14 +70,14 @@ const PUNTOS: Punto[] = [
   {
     id: 'bienestar',
     texto: 'Coordinador o coordinadora de bienestar y protección del alumnado',
-    ayuda: 'Obligatorio en todos los centros educativos (Ley Orgánica 8/2021, de protección a la infancia).',
+    ayuda: 'En todos los centros educativos (Ley Orgánica 8/2021, de protección a la infancia).',
     obligatorio: () => true,
     aplica: (t) => t === 'colegio',
   },
   {
     id: 'convivencia',
     texto: 'Plan de convivencia actualizado',
-    ayuda: 'Obligatorio en los centros educativos. Conviene coordinarlo con el protocolo de acoso al personal.',
+    ayuda: 'En los centros educativos. Conviene coordinarlo con el protocolo de acoso al personal.',
     obligatorio: () => true,
     aplica: (t) => t === 'colegio',
   },
@@ -159,7 +159,7 @@ export default function AutodiagnosticoEmpresa() {
             <h3>
               {faltanObl.length === 0
                 ? 'Cumplís con lo obligatorio'
-                : `Os falta${faltanObl.length > 1 ? 'n' : ''} ${faltanObl.length} obligación${faltanObl.length > 1 ? 'es' : ''} legal${faltanObl.length > 1 ? 'es' : ''}`}
+                : faltanObl.length > 1 ? `Os faltan ${faltanObl.length} obligaciones legales` : 'Os falta 1 obligación legal'}
             </h3>
             <p style={{ margin: 0 }}>
               {faltanObl.length === 0
