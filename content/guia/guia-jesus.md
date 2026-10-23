@@ -840,7 +840,7 @@ Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía n
 
 **Lo único que va aparte**: los **vídeos profesionales** con equipo de grabación, si los quieres. Los vídeos sencillos para redes y los guiones entran en la cuota.
 
-Para ajustarte la cuota a lo que de verdad necesitas, me ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Cuando contestes las preguntas del apartado 24, te preparo una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
+Para ajustarte la cuota a lo que de verdad necesitas, me ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparo una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
 
 Y si prefieres seguir como hasta ahora, fenomenal también: la web y la guía son tuyas. Sin ninguna presión.
 
