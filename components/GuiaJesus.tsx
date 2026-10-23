@@ -179,6 +179,150 @@ function BloqueCompetencia() {
   );
 }
 
+
+// Lo que hemos visto, uno a uno: qué pasa hoy, qué te está costando y cómo te ayudamos. Con cariño y con datos.
+const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; luego: string; luegoDato: string; visto: string; cuesta: string; ayudamos: string; ancla?: string }[] = [
+  {
+    titulo: 'Tu web tarda en cargar',
+    icono: 'M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z',
+    hoyDato: '18,3 s',
+    hoy: 'hasta ver el contenido en el móvil (49 sobre 100)',
+    luegoDato: '3,2 s',
+    luego: 'en la web nueva (94 sobre 100)',
+    visto: 'Hemos medido tu web con las herramientas de Google y de Pingdom: en el móvil tarda más de 18 segundos en enseñar lo importante.',
+    cuesta: 'Quien busca un abogado con prisa no espera tanto: se vuelve a Google y entra en el siguiente. Google, además, coloca peor a las webs lentas.',
+    ayudamos: 'La web nueva ya carga en unos 3 segundos y saca 94 de velocidad. Este punto ya está resuelto.',
+    ancla: '12',
+  },
+  {
+    titulo: 'Google casi no te enseña',
+    icono: 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3',
+    hoyDato: '239',
+    hoy: 'visitas al mes desde Google, un 38 % menos que en julio',
+    luegoDato: '2.500',
+    luego: 'nuestro objetivo a 12 meses (el nivel de Abogados Durán)',
+    visto: 'García de la Santa recibe 9.164 visitas al mes y Campmany casi 70.000. Tú estás en la segunda página para "abogado laboralista madrid".',
+    cuesta: 'Cada mes, miles de personas que buscan justo lo que tú haces encuentran antes a otro despacho. No porque sea mejor: porque Google le conoce más.',
+    ayudamos: '45 guías nuevas, tres artículos a la semana, las 220 direcciones antiguas redirigidas y un trabajo constante de SEO medido cada mes.',
+    ancla: '4 bis',
+  },
+  {
+    titulo: 'Las IA no te recomiendan',
+    icono: 'M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4zM4 22a8 8 0 0 1 16 0',
+    hoyDato: '14',
+    hoy: 'sobre 100 de visibilidad en ChatGPT, Gemini y Google',
+    luegoDato: '+30',
+    luego: 'nuestro objetivo, el nivel de los que más salen',
+    visto: 'Cuando alguien pregunta a ChatGPT por un abogado de acoso laboral en Madrid, casi nunca te nombra. A Campmany o a Bufete Toro, sí.',
+    cuesta: 'Cada vez más gente pregunta a la IA antes que a Google. Si la IA no te conoce, para esa persona no existes.',
+    ayudamos: 'Textos que las IA pueden citar, los mismos datos en todas partes, alta en Bing y en directorios jurídicos, y medición mensual.',
+    ancla: '4 bis',
+  },
+  {
+    titulo: 'Reseñas sin contestar',
+    icono: 'M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2 1.2-7-5-4.8 7-.9L12 2z',
+    hoyDato: '4,2',
+    hoy: '59 reseñas: 44 de cinco estrellas, pero 11 de una sin responder',
+    luegoDato: '4,5',
+    luego: 'objetivo en un año, con todas respondidas',
+    visto: 'Hemos leído las 59. Casi ninguna mala discute tu trabajo: hablan del precio que no esperaban o de que nadie les contestó.',
+    cuesta: 'Las estrellas se ven antes que tu web y que tus sentencias. Mucha gente descarta por debajo de 4,5, y una mala sin respuesta pesa el doble.',
+    ayudamos: 'Responderlas todas con plantillas cuidadas, pedir reseña a cada cliente y arreglar lo que provoca las malas.',
+    ancla: '5',
+  },
+  {
+    titulo: '"Consulta gratuita" que no lo es',
+    icono: 'M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z',
+    hoyDato: '3',
+    hoy: 'reseñas de una estrella por un precio que no esperaban',
+    luegoDato: '0',
+    luego: 'mensajes contradictorios: precio claro en todas partes',
+    visto: 'Tu web actual dice en contacto "consulta inicial gratuita" y en la tienda la cita cuesta 150 euros. Algún anuncio también habla de "gratis".',
+    cuesta: 'Atrae a quien no va a pagar y deja a quien sí, enfadado. Y esas reseñas espantan a los siguientes.',
+    ayudamos: 'La web nueva explica el precio antes de reservar. Quitamos "gratis" de los anuncios y revisamos otras webs y directorios.',
+    ancla: '4',
+  },
+  {
+    titulo: 'Tus anuncios pagan clics que se pierden',
+    icono: 'M3 3v18h18M7 14l4-4 4 4 5-6',
+    hoyDato: '1',
+    hoy: 'página genérica para todos los anuncios, sin formulario a la vista',
+    luegoDato: '3',
+    luego: 'páginas por tema, pensadas para que llamen',
+    visto: 'Tus anuncios de Google están activos, pero llevan a una página de acoso aunque la persona busque incapacidad, y no se sabe qué anuncio trae cada cliente.',
+    cuesta: 'Pagas cada clic, y una parte se va sin llamar porque no encuentra lo que buscaba.',
+    ayudamos: 'Ya tienes tres páginas nuevas: incapacidad, acoso y despido. Con acceso a tu cuenta, medimos cuánto cuesta cada consulta y quitamos lo que no funciona.',
+    ancla: '18 bis',
+  },
+  {
+    titulo: 'Las herramientas no ayudaban',
+    icono: 'M4 4h16v16H4zM8 8h8M8 12h8M8 16h5',
+    hoyDato: '3',
+    hoy: 'tests que pedían datos antes de dar nada',
+    luegoDato: '14',
+    luego: 'calculadoras y tests gratuitos, sin dejar datos',
+    visto: 'El test de viabilidad de tu web pide el teléfono antes de orientar, y la persona se queda sin saber qué le pasa ni qué plazo tiene.',
+    cuesta: 'Quien está asustado no da su teléfono a ciegas: se va a la web que sí le ayuda primero.',
+    ayudamos: 'Ya hay 14: indemnización, plazos, test de acoso, mapa de pruebas, incapacidad y más. Ayudan primero y llevan a llamarte.',
+    ancla: '11',
+  },
+  {
+    titulo: 'No sabes de dónde vienen tus clientes',
+    icono: 'M12 20V10M18 20V4M6 20v-4',
+    hoyDato: 'Sin medir',
+    hoy: 'llamadas y WhatsApp que llegan desde la web',
+    luegoDato: '100 %',
+    luego: 'de llamadas, WhatsApp y formularios con su origen',
+    visto: 'Tu web actual tiene Analytics, pero no vemos que cuente las llamadas ni los WhatsApp, ni desde qué página o anuncio llegan.',
+    cuesta: 'Sin datos, las decisiones se toman a ciegas: se paga lo que no funciona y se deja de hacer lo que sí.',
+    ayudamos: 'La web nueva cuenta cada llamada, WhatsApp, formulario y conversación del chat, y te lo contamos en un informe sencillo cada semana.',
+    ancla: '19',
+  },
+];
+
+function BloqueDolor() {
+  return (
+    <div className="gj-dolores">
+      {DOLORES.map((d, i) => (
+        <article key={d.titulo} className="gj-dolor">
+          <header>
+            <span className="gj-dolor-icono" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d={d.icono} />
+              </svg>
+            </span>
+            <span className="gj-dolor-num">{String(i + 1).padStart(2, '0')}</span>
+            <h4>{d.titulo}</h4>
+          </header>
+          <div className="gj-dolor-cifras">
+            <div className="gj-dolor-hoy">
+              <small>Hoy</small>
+              <strong>{d.hoyDato}</strong>
+              <span>{d.hoy}</span>
+            </div>
+            <svg className="gj-dolor-flecha" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+            <div className="gj-dolor-luego">
+              <small>Con nosotros</small>
+              <strong>{d.luegoDato}</strong>
+              <span>{d.luego}</span>
+            </div>
+          </div>
+          <dl>
+            <dt>Lo que hemos visto</dt>
+            <dd>{d.visto}</dd>
+            <dt>Lo que te está costando</dt>
+            <dd>{d.cuesta}</dd>
+            <dt>Cómo te ayudamos</dt>
+            <dd>{d.ayudamos}</dd>
+          </dl>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 // Semáforo de la situación de hoy, área por área.
 const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; haremos: string }[] = [
   { area: 'Google', color: 'rojo', hoy: '239 visitas al mes, un 38 % menos que en julio (384). Puesto 18 en "abogado laboralista madrid".', haremos: '45 guías nuevas, 39 artículos en 13 semanas y las 220 direcciones antiguas redirigidas.' },
@@ -219,6 +363,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   ia: BloqueIA,
   competencia: BloqueCompetencia,
   semaforo: BloqueSemaforo,
+  dolor: BloqueDolor,
 };
 
 function Contenido({ html }: { html: string }) {

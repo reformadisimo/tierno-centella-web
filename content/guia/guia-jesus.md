@@ -10,7 +10,15 @@ Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Se
 
 García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú. Le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 12.700 euros al mes. Tú tienes lo que ellos no tienen (la primera condena en España a empresa y acosador, en 2005, y años siendo la referencia en acoso), pero hoy **Google y las IA no lo saben**.
 
-Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 en julio a 239 en septiembre). Así está cada frente, y lo que haremos en cada uno:
+Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 en julio a 239 en septiembre).
+
+### Lo que hemos visto, y cómo te ayudamos
+
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son ocho cosas que hoy te están costando clientes sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+
+[[dolor]]
+
+**En resumen, frente a frente:**
 
 [[semaforo]]
 
