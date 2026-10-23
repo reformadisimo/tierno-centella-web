@@ -499,6 +499,8 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **Y le puedes enseñar todo lo que quieras**: tu horario exacto y el de agosto, cómo trabajáis un caso de principio a fin, tus honorarios habituales, preguntas que os hacen siempre por teléfono, casos nuevos, notas de prensa... Cuanto más sepa, mejor contesta. Nos lo pasas como te sea más cómodo (un documento, un audio, un correo) y se lo metemos.
 
+**Aprende de lo que le damos, y hay que probarlo.** El asistente no se inventa tu despacho: sabe exactamente lo que le hemos dado, ni más ni menos. Por eso esta primera versión hay que **probarla mucho**: que tú, Irene, Miriam y el equipo le hagáis las preguntas que os hacen cada día, las fáciles y las difíciles, y nos digáis qué contesta bien y qué no. Cada respuesta que no os guste nos dice qué información le falta, y se la añadimos. Por ahora, en nuestras pruebas, **funciona bastante bien**; con lo que le vayamos enseñando entre todos, irá a mejor cada semana.
+
 **Lo que no hace, a propósito**: no busca en internet en tiempo real. Así no se inventa fuentes ni recomienda cosas que no has revisado tú. Si algún día quieres que consulte también el BOE o noticias recientes, se le puede activar.
 
 **Cómo se comporta**: dice que es una inteligencia artificial y que puede equivocarse; no da veredictos ni promete resultados; si no sabe algo, lo dice; da primero el plazo que corre; y si alguien habla de hacerse daño, da el 024. Nunca dice que la consulta sea gratuita: explica el precio y ofrece lo que sí es gratis (las herramientas, llamar o escribir por WhatsApp para saber si el caso necesita consulta, o dejar el teléfono para que le llaméis).
