@@ -17,6 +17,9 @@ const HERRAMIENTAS = [
   { href: '/calculadora-indemnizacion', titulo: 'Calculadora de indemnización', texto: 'Cuánto te corresponde por despido objetivo o improcedente, al momento.' },
   { href: '/herramientas/revisa-tu-carta-de-despido', titulo: 'Revisa tu carta de despido', texto: 'Los defectos de forma que pueden hacer improcedente tu despido.' },
   { href: '/herramientas/plazos', titulo: 'Plazos para reclamar', texto: 'El último día para reclamar un despido, una sanción, una deuda o una incapacidad.' },
+  { href: '/herramientas/calculadora-finiquito', titulo: 'Calculadora de finiquito', texto: 'Los días del último mes, las vacaciones pendientes y la parte de las pagas extra.' },
+  { href: '/herramientas/calculadora-paro', titulo: 'Calculadora del paro', texto: 'Cuánto cobrarás y durante cuántos meses, con los topes de 2026.' },
+  { href: '/herramientas/calendario-permisos', titulo: 'Calendario de permisos por nacimiento', texto: 'Las fechas de tus 19 semanas, la lactancia y la protección de tu puesto.' },
   { href: '/herramientas/comprobador-incapacidad', titulo: 'Comprobador de incapacidad', texto: 'Qué grado podría corresponderte, cuánto se cobra y qué plazo tienes.' },
 ];
 

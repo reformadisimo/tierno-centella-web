@@ -125,3 +125,176 @@ export function sumarAnios(desdeIso: string, anios: number): string {
   f.setUTCFullYear(f.getUTCFullYear() + anios);
   return aIso(f);
 }
+
+// ---------- Calendario de permisos por nacimiento ----------
+
+export function sumarDias(desdeIso: string, dias: number): string {
+  const f = aFecha(desdeIso);
+  f.setUTCDate(f.getUTCDate() + dias);
+  return aIso(f);
+}
+
+export function sumarMeses(desdeIso: string, meses: number): string {
+  const f = aFecha(desdeIso);
+  const dia = f.getUTCDate();
+  f.setUTCDate(1);
+  f.setUTCMonth(f.getUTCMonth() + meses);
+  // Si el mes de destino no tiene ese día (31 de abril), se queda en el último día del mes.
+  const ultimo = new Date(Date.UTC(f.getUTCFullYear(), f.getUTCMonth() + 1, 0)).getUTCDate();
+  f.setUTCDate(Math.min(dia, ultimo));
+  return aIso(f);
+}
+
+export type CalendarioNacimiento = {
+  finObligatorias: string; // último día de las 6 semanas obligatorias
+  limiteFlexibles: string; // último día para disfrutar las 11 semanas flexibles
+  finLactancia: string; // último día del permiso de lactancia (9 meses)
+  finLactanciaAmpliada: string; // si ambos progenitores la disfrutan igual (12 meses)
+  finProteccionDespido: string; // fin de los 12 meses de protección frente al despido tras el nacimiento
+  limiteDosSemanasYParental: string; // último día para las 2 semanas retribuidas y el permiso parental (8 años)
+  limiteReduccionJornada: string; // último día con hijo menor de 12 años
+};
+
+// "Hasta que cumpla N" significa hasta la víspera del cumpleaños.
+export function calendarioNacimiento(nacimientoIso: string): CalendarioNacimiento {
+  return {
+    finObligatorias: sumarDias(nacimientoIso, 6 * 7 - 1),
+    limiteFlexibles: sumarDias(sumarMeses(nacimientoIso, 12), -1),
+    finLactancia: sumarDias(sumarMeses(nacimientoIso, 9), -1),
+    finLactanciaAmpliada: sumarDias(sumarMeses(nacimientoIso, 12), -1),
+    finProteccionDespido: sumarMeses(nacimientoIso, 12),
+    limiteDosSemanasYParental: sumarDias(sumarAnios(nacimientoIso, 8), -1),
+    limiteReduccionJornada: sumarDias(sumarAnios(nacimientoIso, 12), -1),
+  };
+}
+
+// ---------- Finiquito ----------
+
+function diasEntre(desdeIso: string, hastaIso: string): number {
+  return Math.round((aFecha(hastaIso).getTime() - aFecha(desdeIso).getTime()) / 86400000) + 1; // ambos incluidos
+}
+
+export type DatosFiniquito = {
+  baja: string; // último día trabajado
+  salarioAnual: number; // bruto anual con pagas
+  pagas: 12 | 14; // 12 = pagas extra prorrateadas en nómina
+  devengoPagas: 'semestral' | 'anual';
+  vacacionesAnuales: number; // días naturales al año (30 por ley)
+  vacacionesDisfrutadas: number; // días naturales disfrutados este año
+};
+
+export type ResultadoFiniquito = {
+  diasMes: number;
+  salarioMes: number;
+  diasVacaciones: number;
+  importeVacaciones: number;
+  pagaVerano: number;
+  pagaNavidad: number;
+  total: number;
+};
+
+export function calcularFiniquito(d: DatosFiniquito): ResultadoFiniquito {
+  const [anio, mes, dia] = d.baja.split('-').map(Number);
+  const salarioMensual = d.salarioAnual / d.pagas;
+  // Mes comercial de 30 días: si te vas el 31, cobras el mes entero.
+  const diasMes = Math.min(dia, 30);
+  const salarioMes = redondea((salarioMensual * diasMes) / 30);
+
+  const inicioAnio = `${anio}-01-01`;
+  const diasAnio = diasEntre(inicioAnio, `${anio}-12-31`);
+  const generadas = (d.vacacionesAnuales * diasEntre(inicioAnio, d.baja)) / diasAnio;
+  const diasVacaciones = Math.max(0, Math.round((generadas - d.vacacionesDisfrutadas) * 100) / 100);
+  const importeVacaciones = redondea((d.salarioAnual / 365) * diasVacaciones);
+
+  let pagaVerano = 0;
+  let pagaNavidad = 0;
+  if (d.pagas === 14) {
+    const paga = d.salarioAnual / 14;
+    const primerSemestre = mes <= 6;
+    if (d.devengoPagas === 'semestral') {
+      // Verano: del 1 de enero al 30 de junio. Navidad: del 1 de julio al 31 de diciembre.
+      if (primerSemestre) pagaVerano = paga * (diasEntre(inicioAnio, d.baja) / diasEntre(inicioAnio, `${anio}-06-30`));
+      else pagaNavidad = paga * (diasEntre(`${anio}-07-01`, d.baja) / diasEntre(`${anio}-07-01`, `${anio}-12-31`));
+    } else {
+      // Navidad: del 1 de enero al 31 de diciembre. Verano: del 1 de julio del año anterior al 30 de junio.
+      pagaNavidad = paga * (diasEntre(inicioAnio, d.baja) / diasAnio);
+      const inicioVerano = primerSemestre ? `${anio - 1}-07-01` : `${anio}-07-01`;
+      const finVerano = primerSemestre ? `${anio}-06-30` : `${anio + 1}-06-30`;
+      pagaVerano = paga * (diasEntre(inicioVerano, d.baja) / diasEntre(inicioVerano, finVerano));
+    }
+  }
+  pagaVerano = redondea(pagaVerano);
+  pagaNavidad = redondea(pagaNavidad);
+  return {
+    diasMes,
+    salarioMes,
+    diasVacaciones,
+    importeVacaciones,
+    pagaVerano,
+    pagaNavidad,
+    total: redondea(salarioMes + importeVacaciones + pagaVerano + pagaNavidad),
+  };
+}
+
+// ---------- Prestación por desempleo (paro) ----------
+// Cifras de 2026: IPREM mensual de 600 euros; los topes se calculan sobre el IPREM incrementado en una sexta parte (700 euros).
+export const IPREM_2026 = 600;
+const IPREM_TOPES = (IPREM_2026 * 7) / 6;
+export const TOPES_PARO = {
+  minimo: [0.8, 1.07, 1.07].map((p) => Math.round(IPREM_TOPES * p)), // sin hijos, 1 hijo, 2 o más
+  maximo: [1.75, 2, 2.25].map((p) => Math.round(IPREM_TOPES * p)),
+};
+
+const TABLA_DURACION: [number, number][] = [
+  [2160, 720],
+  [1980, 660],
+  [1800, 600],
+  [1620, 540],
+  [1440, 480],
+  [1260, 420],
+  [1080, 360],
+  [900, 300],
+  [720, 240],
+  [540, 180],
+  [360, 120],
+];
+
+export function duracionParo(diasCotizados: number): number {
+  return TABLA_DURACION.find(([min]) => diasCotizados >= min)?.[1] ?? 0;
+}
+
+export type ResultadoParo = {
+  baseDiaria: number;
+  dias: number;
+  mensualPrimeros6: number;
+  mensualDespues: number;
+  topeAplicado: 'minimo' | 'maximo' | null;
+  totalBruto: number;
+};
+
+// baseMensual: base de cotización media de los últimos 180 días (si no la sabes, salario bruto anual / 12).
+// parcial: porcentaje de jornada (100 = completa); los topes se reducen en la misma proporción.
+export function calcularParo(baseMensual: number, hijos: 0 | 1 | 2, diasCotizados: number, parcial = 100): ResultadoParo {
+  const baseDiaria = baseMensual / 30;
+  const dias = duracionParo(diasCotizados);
+  const min = (TOPES_PARO.minimo[hijos] * parcial) / 100;
+  const max = (TOPES_PARO.maximo[hijos] * parcial) / 100;
+  let topeAplicado: ResultadoParo['topeAplicado'] = null;
+  const ajusta = (n: number) => {
+    if (n > max) {
+      topeAplicado = 'maximo';
+      return max;
+    }
+    if (n < min) {
+      topeAplicado = topeAplicado ?? 'minimo';
+      return min;
+    }
+    return n;
+  };
+  const mensualPrimeros6 = redondea(ajusta(baseDiaria * 30 * 0.7));
+  const mensualDespues = redondea(ajusta(baseDiaria * 30 * 0.6));
+  const diasPrimeros = Math.min(dias, 180);
+  const diasResto = Math.max(0, dias - 180);
+  const totalBruto = redondea((mensualPrimeros6 / 30) * diasPrimeros + (mensualDespues / 30) * diasResto);
+  return { baseDiaria: redondea(baseDiaria), dias, mensualPrimeros6, mensualDespues, topeAplicado, totalBruto };
+}

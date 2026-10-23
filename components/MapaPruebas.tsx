@@ -69,7 +69,7 @@ export default function MapaPruebas() {
                   type="checkbox"
                   checked={tengo.includes(p.id)}
                   onChange={() => alternar(p.id)}
-                  style={{ width: 20, height: 20, marginTop: 3, accentColor: '#12302c' }}
+                  style={{ width: 20, height: 20, marginTop: 3, accentColor: '#003a5f' }}
                 />
                 <label htmlFor={p.id}>
                   <strong style={{ display: 'block' }}>{p.nombre}</strong>

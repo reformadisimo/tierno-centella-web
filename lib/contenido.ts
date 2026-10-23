@@ -22,6 +22,8 @@ export type Pieza = {
   actualizado?: string;
   categoria?: string;
   video?: string;
+  imagen?: string;
+  imagenAlt?: string;
   orden?: number;
   html: string;
   minutos: number;
@@ -76,6 +78,8 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
     actualizado: datos.actualizado,
     categoria: datos.categoria,
     video: datos.video,
+    imagen: datos.imagen,
+    imagenAlt: datos.imagenAlt,
     orden: datos.orden ? Number(datos.orden) : undefined,
     html: marked.parse(cuerpo, { async: false }) as string,
     minutos: Math.max(1, Math.round(palabras / 220)),

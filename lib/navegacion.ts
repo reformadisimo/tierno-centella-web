@@ -36,6 +36,18 @@ export const MENU: Grupo[] = [
     ],
   },
   {
+    titulo: 'Mujer y trabajo',
+    href: '/mujer-y-trabajo',
+    enlaces: [
+      { href: '/mujer-y-trabajo', texto: 'Tus derechos como trabajadora' },
+      { href: '/mujer-y-trabajo/despido-embarazada', texto: 'Despido y embarazo' },
+      { href: '/mujer-y-trabajo/reduccion-y-adaptacion-de-jornada', texto: 'Reducción y adaptación de jornada' },
+      { href: '/mujer-y-trabajo/permisos-por-nacimiento-y-lactancia', texto: 'Permisos por nacimiento' },
+      { href: '/mujer-y-trabajo/acoso-sexual-y-por-razon-de-sexo', texto: 'Acoso sexual' },
+      { href: '/mujer-y-trabajo/brecha-salarial-registro-retributivo', texto: 'Brecha salarial' },
+    ],
+  },
+  {
     titulo: 'Herramientas',
     href: '/herramientas',
     enlaces: [
@@ -45,9 +57,12 @@ export const MENU: Grupo[] = [
       { href: '/herramientas/test-extincion', texto: '¿Puedo irme con indemnización?' },
       { href: '/herramientas/test-baja-laboral', texto: '¿Mi baja es accidente de trabajo?' },
       { href: '/calculadora-indemnizacion', texto: 'Calculadora de indemnización' },
+      { href: '/herramientas/calculadora-finiquito', texto: 'Calculadora de finiquito' },
+      { href: '/herramientas/calculadora-paro', texto: 'Calculadora del paro' },
       { href: '/herramientas/revisa-tu-carta-de-despido', texto: 'Revisa tu carta de despido' },
       { href: '/herramientas/plazos', texto: 'Plazos para reclamar' },
       { href: '/herramientas/comprobador-incapacidad', texto: 'Comprobador de incapacidad' },
+      { href: '/herramientas/calendario-permisos', texto: 'Calendario de permisos por nacimiento' },
     ],
   },
   {
@@ -57,6 +72,7 @@ export const MENU: Grupo[] = [
       { href: '/jesus-tierno', texto: 'Jesús Tierno' },
       { href: '/sentencias', texto: 'Sentencias ganadas' },
       { href: '/videos', texto: 'Vídeos' },
+      { href: '/redes-y-medios', texto: 'Redes y medios' },
       { href: '/empresas', texto: 'Para empresas y centros educativos' },
       { href: '/blog', texto: 'Blog' },
       { href: '/preguntas-frecuentes', texto: 'Preguntas frecuentes' },

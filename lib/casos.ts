@@ -1,6 +1,6 @@
 export type Caso = {
   slug: string;
-  materia: 'Acoso laboral' | 'Despido' | 'Incapacidad';
+  materia: 'Acoso laboral' | 'Despido' | 'Incapacidad' | 'Conciliación' | 'Prevención de riesgos';
   titulo: string;
   organo: string;
   fecha: string; // texto legible
@@ -74,7 +74,72 @@ export const CASOS: Caso[] = [
       nombre: 'El Español, 2 de abril de 2024',
       url: 'https://www.elespanol.com/reportajes/20240402/universidad-rey-juan-carlos-condenada-pagar-eur-docente-no-evitar-acoso-laboral/844415900_0.html',
     },
-    pendiente: 'Confirmar con el despacho el órgano, la fecha de la sentencia y su papel en el caso.',
+    pendiente: 'El despacho lo presenta en Instagram (21/10/2024) como su último éxito. Confirmar órgano y fecha de la sentencia.',
+  },
+  {
+    slug: 'despido-represalia-permiso-hija-2025',
+    materia: 'Conciliación',
+    titulo: 'Despedida por pedir un permiso para una actividad escolar de su hija',
+    organo: 'Pendiente de confirmar con el despacho',
+    fecha: 'Octubre de 2025',
+    anio: 2025,
+    resumen:
+      'El tribunal reconoció que el despido fue una represalia porque la trabajadora había pedido un permiso para atender una actividad escolar de su hija menor.',
+    hechos: ['La trabajadora solicitó un permiso para una actividad escolar de su hija.', 'Poco después, la empresa la despidió.'],
+    resultado:
+      'Vulneración de la garantía de indemnidad e indemnización por daños y perjuicios equiparable a la de un despido improcedente.',
+    porQueImporta: 'Pedir lo que la ley te reconoce para cuidar de tus hijos no puede costarte el trabajo.',
+    fuente: { nombre: 'Publicado por el despacho en Instagram, 23 de octubre de 2025', url: 'https://www.instagram.com/reel/DQJTw63CkLn/' },
+    pendiente: 'Pedir juzgado, fecha y cuantía.',
+  },
+  {
+    slug: 'degradada-tras-pedir-permisos-2025',
+    materia: 'Conciliación',
+    titulo: 'Degradada por pedir permisos para cuidar a su pareja enferma',
+    organo: 'Pendiente de confirmar con el despacho',
+    fecha: 'Mayo de 2025',
+    anio: 2025,
+    resumen:
+      'Tras pedir permisos por la enfermedad de su pareja, una responsable perdió su puesto, parte de sus ingresos y pasó a tareas administrativas. El juzgado extinguió su contrato con indemnización.',
+    hechos: ['Pérdida del puesto de responsabilidad.', 'Reducción de ingresos.', 'Relegada a tareas administrativas.'],
+    resultado: 'Extinción del contrato a petición de la trabajadora, con indemnización y reconocimiento de la vulneración de derechos fundamentales.',
+    porQueImporta: 'Una modificación encubierta de condiciones como castigo por cuidar es discriminatoria, y permite irse con indemnización.',
+    fuente: { nombre: 'Publicado por el despacho en Instagram, 13 de mayo de 2025', url: 'https://www.instagram.com/reel/DJl-ztCtNi-/' },
+    pendiente: 'Pedir juzgado, fecha y cuantía.',
+  },
+  {
+    slug: 'despido-nulo-represalia-denuncia-interna-2025',
+    materia: 'Despido',
+    titulo: 'Nulo un despido "objetivo" que era una represalia',
+    organo: 'Pendiente de confirmar con el despacho',
+    fecha: 'Septiembre de 2025',
+    anio: 2025,
+    resumen:
+      'La empresa alegó causas objetivas, pero el despido respondía a que el trabajador había denunciado irregularidades internas. El juzgado lo declaró nulo.',
+    hechos: ['Denuncia interna de irregularidades.', 'Despido posterior por supuestas causas objetivas.'],
+    resultado: 'Despido nulo: readmisión y salarios de tramitación.',
+    porQueImporta: 'Denunciar dentro de la empresa está protegido. Si te despiden por ello, el despido es nulo.',
+    fuente: { nombre: 'Publicado por el despacho en Instagram, 16 de septiembre de 2025', url: 'https://www.instagram.com/reel/DOqXRiIjDCO/' },
+    pendiente: 'Pedir juzgado y fecha.',
+  },
+  {
+    slug: 'prevencion-riesgos-centro-educativo-2025',
+    materia: 'Prevención de riesgos',
+    titulo: 'Una docente con discapacidad a la que no adaptaron el puesto',
+    organo: 'Pendiente de confirmar con el despacho. Juicio celebrado el 22 de octubre de 2025',
+    fecha: 'Noviembre de 2025',
+    anio: 2025,
+    resumen:
+      'Una trabajadora de un centro educativo con un 39 % de discapacidad tras un accidente de trabajo pidió adaptar su puesto. No se hizo, sus dolencias se agravaron y sufrió daño psicológico. El juzgado apreció una inacción absoluta en prevención de riesgos.',
+    hechos: [
+      'Accidente de trabajo y discapacidad reconocida del 39 %.',
+      'Peticiones de adaptación del puesto desatendidas desde 2018.',
+      'Conflicto con el equipo directivo y daño psicológico.',
+    ],
+    resultado: 'Sentencia favorable por incumplimiento de la normativa de prevención de riesgos laborales.',
+    porQueImporta: 'No adaptar el puesto a quien lo necesita es un incumplimiento que se indemniza.',
+    fuente: { nombre: 'Serie de vídeos del despacho con Irene Ramos, 26 de noviembre de 2025', url: 'https://www.instagram.com/reel/DRg6D-8jcR2/' },
+    pendiente: 'Pedir juzgado, fecha y cuantía.',
   },
   {
     slug: 'despido-prueba-gps',

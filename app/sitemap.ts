@@ -9,6 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/acoso-laboral',
     '/despido',
     '/incapacidad-permanente',
+    '/mujer-y-trabajo',
+    '/herramientas/calendario-permisos',
+    '/herramientas/calculadora-finiquito',
+    '/herramientas/calculadora-paro',
     '/calculadora-indemnizacion',
     '/herramientas',
     '/herramientas/test-acoso',
@@ -23,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/jesus-tierno',
     '/empresas',
     '/videos',
+    '/redes-y-medios',
     '/blog',
     '/preguntas-frecuentes',
     '/glosario',
@@ -32,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...leerColeccion('acoso').map((p) => ({ url: `${BASE}/acoso-laboral/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('despido').map((p) => ({ url: `${BASE}/despido/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('incapacidad').map((p) => ({ url: `${BASE}/incapacidad-permanente/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
+    ...leerColeccion('mujer').map((p) => ({ url: `${BASE}/mujer-y-trabajo/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('blog').map((p) => ({ url: `${BASE}/blog/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
   ];
   return [...fijas, ...guias];

@@ -5,6 +5,7 @@ import Cabecera from '@/components/Cabecera';
 import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';
 import Asistente from '@/components/Asistente';
+import AvisoCookies from '@/components/AvisoCookies';
 import JsonLd from '@/components/JsonLd';
 import { BASE, esquemaDespacho } from '@/lib/seo';
 
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#12302c',
+  themeColor: '#003a5f',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Pie />
         <BarraMovil />
         <Asistente />
+        <AvisoCookies />
       </body>
     </html>
   );

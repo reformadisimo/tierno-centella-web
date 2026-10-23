@@ -1,4 +1,7 @@
 import { DESPACHO } from './despacho';
+import { CONOCIMIENTO } from './conocimiento.generado';
+import { FAQ } from './faq';
+import { CASOS } from './casos';
 
 export const NOMBRE_ASISTENTE = 'Asistente de Tierno Centella';
 
@@ -36,4 +39,35 @@ REGLAS FIRMES
 - Si preguntan algo que no es laboral, dilo con amabilidad y vuelve a lo que puedes ayudar.
 - Nunca critiques a otros despachos ni hables de ellos.
 - Cierra cuando proceda con el siguiente paso concreto: llamar al ${DESPACHO.telefono}, escribir por WhatsApp al ${DESPACHO.whatsapp} o reservar en /contacto.`;
+}
+
+// Bloque largo y estable: todo el contenido de la web. Va aparte para poder cachearlo.
+export function conocimientoWeb() {
+  const faq = FAQ.map((f) => `- ${f.pregunta} ${f.respuesta}`).join('\n');
+  const casos = CASOS.map((c) => `- ${c.titulo}. ${c.organo}, ${c.fecha}. ${c.resumen} ${c.pendiente ? '(Dato pendiente de confirmar: ' + c.pendiente + ')' : ''}`).join('\n');
+  return `CONTENIDO DE LA WEB DEL DESPACHO (úsalo para responder y para enlazar la guía adecuada con su ruta)
+
+PREGUNTAS FRECUENTES
+${faq}
+
+CASOS DEL DESPACHO
+${casos}
+
+GUÍAS Y ARTÍCULOS (título, ruta, idea principal y preguntas frecuentes)
+${CONOCIMIENTO}
+
+HERRAMIENTAS
+- /herramientas/test-acoso: ¿es acoso lo que me pasa?
+- /herramientas/mapa-de-pruebas: qué pruebas de acoso tengo y cuáles faltan
+- /herramientas/test-nulidad: ¿mi despido puede ser nulo?
+- /herramientas/test-extincion: ¿puedo irme de la empresa con indemnización?
+- /herramientas/test-baja-laboral: ¿mi baja debería ser accidente de trabajo?
+- /calculadora-indemnizacion: indemnización por despido
+- /herramientas/calculadora-finiquito: finiquito
+- /herramientas/calculadora-paro: prestación por desempleo
+- /herramientas/revisa-tu-carta-de-despido: defectos de la carta
+- /herramientas/plazos: último día para reclamar
+- /herramientas/comprobador-incapacidad: grado de incapacidad y plazo
+- /herramientas/calendario-permisos: fechas de los permisos por nacimiento, lactancia y protección frente al despido
+- /mujer-y-trabajo: embarazo, conciliación, acoso sexual y brecha salarial`;
 }

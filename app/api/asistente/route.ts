@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { promptAsistente } from '@/lib/prompt-asistente';
+import { promptAsistente, conocimientoWeb } from '@/lib/prompt-asistente';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -52,7 +52,10 @@ export async function POST(req: Request) {
         const stream = cliente.messages.stream({
           model: process.env.ASISTENTE_MODELO || 'claude-sonnet-4-5',
           max_tokens: 1500,
-          system: promptAsistente(hoy),
+          system: [
+            { type: 'text', text: conocimientoWeb(), cache_control: { type: 'ephemeral' } },
+            { type: 'text', text: promptAsistente(hoy) },
+          ],
           messages: mensajes,
         });
         for await (const evento of stream) {

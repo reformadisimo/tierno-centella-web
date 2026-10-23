@@ -19,8 +19,7 @@ export default function Cabecera() {
     <header className="cabecera">
       <div className="contenedor cabecera-fila">
         <Link href="/" className="marca" aria-label="Tierno Centella Abogados, inicio">
-          <span className="marca-nombre">Tierno Centella</span>
-          <span className="marca-oficio">Abogados laboralistas</span>
+          <img src="/img/logo-color.png" alt="Tierno Centella Abogados" width={149} height={44} />
         </Link>
 
         <nav className="menu" aria-label="Principal">

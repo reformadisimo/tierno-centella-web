@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { DESPACHO } from '@/lib/despacho';
 import { REDES } from '@/lib/seo';
@@ -8,7 +10,7 @@ export default function Pie() {
       <div className="contenedor">
         <div className="pie-rejilla">
           <div>
-            <h2>{DESPACHO.nombre}</h2>
+            <img className="pie-logo" src="/img/logo-blanco.png" alt={DESPACHO.nombre} width={176} height={52} loading="lazy" />
             <p>
               Despacho especializado en derecho laboral. Defendemos a trabajadores en despidos, acoso laboral e incapacidad
               permanente, y asesoramos a empresas.
@@ -58,8 +60,16 @@ export default function Pie() {
           <a href={REDES.instagram} rel="me noopener" target="_blank">Instagram</a>
           <a href={REDES.youtube} rel="me noopener" target="_blank">YouTube</a>
           <a href={REDES.facebook} rel="me noopener" target="_blank">Facebook</a>
-          <a href={REDES.x} rel="me noopener" target="_blank">X</a>
           <a href={REDES.linkedin} rel="me noopener" target="_blank">LinkedIn de Jesús Tierno</a>
+          <a href="/redes-y-medios">Redes y medios</a>
+        </nav>
+        <nav className="pie-redes" aria-label="Información legal" style={{ marginTop: 16 }}>
+          <Link href="/aviso-legal">Aviso legal</Link>
+          <Link href="/privacidad">Privacidad</Link>
+          <Link href="/cookies">Cookies</Link>
+          <button type="button" className="boton-enlace" style={{ color: 'inherit', padding: 0 }} onClick={() => window.dispatchEvent(new Event('abrir-cookies'))}>
+            Configurar cookies
+          </button>
         </nav>
         <p className="pie-legal">
           La información de esta web es orientativa y no sustituye el consejo de un abogado sobre tu caso concreto.

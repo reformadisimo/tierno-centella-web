@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import { notFound } from 'next/navigation';
-import PaginaGuia from '@/components/PaginaGuia';
+import PaginaGuia, { fotoDePieza } from '@/components/PaginaGuia';
 import { leerColeccion, leerPieza } from '@/lib/contenido';
 
 export function generateStaticParams() {
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = leerPieza('acoso', slug);
   return p
-    ? meta({ titulo: p.titulo, descripcion: p.descripcion, ruta: `/acoso-laboral/${slug}`, tipo: 'article', publicado: p.fecha, modificado: p.actualizado })
+    ? meta({ titulo: p.titulo, descripcion: p.descripcion, imagen: fotoDePieza(p).src, ruta: `/acoso-laboral/${slug}`, tipo: 'article', publicado: p.fecha, modificado: p.actualizado })
     : {};
 }
 

@@ -6,6 +6,28 @@ import { DESPACHO, DEMO, enlaceWhatsapp } from '@/lib/despacho';
 import JsonLd from './JsonLd';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
 
+// Fotos reales del despacho. Cada pieza sin foto propia recibe una fija según su nombre, para que no se repitan todas.
+const FOTOS: { src: string; alt: string }[] = [
+  { src: 'abogada-escucha', alt: 'Una abogada del despacho escucha a una clienta' },
+  { src: 'jesus-firmando', alt: 'Jesús Tierno revisa documentación en su mesa' },
+  { src: 'abogada-documentos', alt: 'Una abogada del despacho revisa un expediente' },
+  { src: 'biblioteca', alt: 'Reunión en la biblioteca del despacho' },
+  { src: 'abogada-lee', alt: 'Una abogada del despacho estudia un caso' },
+  { src: 'reunion-cliente', alt: 'Jesús Tierno entrega documentación a una clienta' },
+  { src: 'abogada-sonrie', alt: 'Una abogada del despacho sonríe durante una reunión' },
+  { src: 'reunion-equipo', alt: 'El equipo del despacho reunido' },
+  { src: 'abogado-joven', alt: 'Un abogado del despacho trabaja con documentos' },
+  { src: 'jesus-camisa', alt: 'Jesús Tierno en el despacho' },
+];
+
+export function fotoDePieza(pieza: Pieza) {
+  if (pieza.imagen) return { src: `/img/${pieza.imagen}.webp`, alt: pieza.imagenAlt ?? '' };
+  let h = 0;
+  for (const c of pieza.slug) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  const f = FOTOS[h % FOTOS.length];
+  return { src: `/img/${f.src}.webp`, alt: f.alt };
+}
+
 const fechaCorta = (iso: string) =>
   new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
 
@@ -21,6 +43,7 @@ export default function PaginaGuia({
   herramienta?: { href: string; texto: string };
 }) {
   const video = videoPorId(pieza.video);
+  const foto = fotoDePieza(pieza);
   const ruta = migas[migas.length - 1].href + '/' + pieza.slug;
   const datos = {
     '@context': 'https://schema.org',
@@ -33,7 +56,7 @@ export default function PaginaGuia({
     publisher: { '@id': ID_DESPACHO },
     inLanguage: 'es-ES',
     mainEntityOfPage: BASE + ruta,
-    image: video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : `${BASE}/img/jesus-firmando.webp`,
+    image: video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : `${BASE}${foto.src}`,
     ...(video
       ? { video: { '@type': 'VideoObject', name: video.titulo, description: video.descripcion, thumbnailUrl: `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`, embedUrl: `https://www.youtube.com/embed/${video.id}`, ...(video.fecha ? { uploadDate: video.fecha } : {}) } }
       : {}),
@@ -67,15 +90,20 @@ export default function PaginaGuia({
       <section className="seccion">
         <div className="contenedor guia">
           <article>
-            {video && (
+            {video ? (
               <div style={{ marginBottom: 32 }}>
                 <VideoYoutube id={video.id} titulo={video.titulo} />
               </div>
+            ) : (
+              <figure className="guia-foto">
+                <img src={foto.src} alt={foto.alt} width={1200} height={800} fetchPriority="high" />
+              </figure>
             )}
             <div className="prosa" dangerouslySetInnerHTML={{ __html: pieza.html }} />
           </article>
           <aside className="guia-lateral">
-            <div className="lateral-caja">
+            <div className="lateral-caja lateral-humana">
+              <img src="/img/abogada-escucha.webp" alt="Una abogada del despacho atiende una consulta" loading="lazy" />
               <h2>¿Hablamos de tu caso?</h2>
               <p style={{ fontSize: '0.95rem' }}>Te decimos por teléfono si tiene recorrido y qué plazos corren.</p>
               <div style={{ display: 'grid', gap: 8 }}>

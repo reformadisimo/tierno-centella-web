@@ -9,7 +9,7 @@ export const REDES = {
   youtube: 'https://www.youtube.com/@tiernocentella',
   facebook: 'https://www.facebook.com/TiernoCentellaAbogados/',
   x: 'https://x.com/TiernoCentella1',
-  linkedin: 'https://www.linkedin.com/in/jes%C3%BAs-tierno-centella-981a90147/',
+  linkedin: 'https://www.linkedin.com/in/jes%C3%BAs-tierno-centella-13ba92188/',
 };
 
 export function meta({

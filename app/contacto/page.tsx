@@ -1,57 +1,50 @@
 import type { Metadata } from 'next';
-import { meta } from '@/lib/seo';
+import Link from 'next/link';
+import { meta, esquemaMigas } from '@/lib/seo';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import VideoAmbiente from '@/components/VideoAmbiente';
+import FormularioContacto from '@/components/FormularioContacto';
+import Mapa from '@/components/Mapa';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = meta({
-  titulo: 'Contacto y citas',
-  descripcion: 'Llámanos, escríbenos por WhatsApp o reserva una consulta presencial en Madrid o por videollamada.',
+  titulo: 'Contacto y citas con abogados laboralistas en Madrid',
+  descripcion:
+    'Llámanos, escríbenos por WhatsApp o déjanos tu teléfono. Consulta de una hora en Jorge Juan, Madrid, o por videollamada desde toda España.',
   ruta: '/contacto',
 });
 
 export default function Contacto() {
   return (
     <>
+      <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/contacto', texto: 'Contacto' }])} />
       <header className="cabeza-pagina">
         <div className="contenedor">
+          <nav className="migas" aria-label="Estás en">
+            <Link href="/">Inicio</Link> / Contacto
+          </nav>
           <h1>Habla con un abogado</h1>
           <p className="entradilla">
-            Cuéntanos tu caso por teléfono o WhatsApp sin coste. Si necesitas que lo estudiemos a fondo, reserva una consulta.
+            La primera orientación por teléfono o WhatsApp no tiene coste. Si tu caso lo necesita, lo estudiamos a fondo en una consulta de una
+            hora.
           </p>
+          <div className="acciones">
+            <a className="boton" href={DESPACHO.telefonoHref}>
+              Llamar al {DESPACHO.telefono}
+            </a>
+            <a className="boton boton-claro" href={enlaceWhatsapp('Hola, quiero consultar un caso laboral.')}>
+              WhatsApp {DESPACHO.whatsapp}
+            </a>
+          </div>
         </div>
       </header>
       <section className="seccion">
         <div className="contenedor dos-columnas">
-          <div className="texto">
-            <h2 style={{ marginTop: 0 }}>Primera llamada</h2>
-            <p>Te decimos si tu caso tiene recorrido y qué plazos corren.</p>
-            <div className="acciones">
-              <a className="boton" href={DESPACHO.telefonoHref}>
-                Llamar al {DESPACHO.telefono}
-              </a>
-              <a className="boton boton-claro" href={enlaceWhatsapp('Hola, quiero consultar un caso laboral.')}>
-                WhatsApp {DESPACHO.whatsapp}
-              </a>
-            </div>
-            <h2>Dónde estamos</h2>
-            <p>
-              {DESPACHO.direccion}
-              <br />
-              {DESPACHO.ciudad}
-              <br />
-              <a href={DESPACHO.mapa}>Ver en el mapa</a>
-            </p>
-            <p>
-              <a href={`mailto:${DESPACHO.email}`}>{DESPACHO.email}</a>
-            </p>
-          </div>
+          <FormularioContacto />
           <div className="texto">
             <VideoAmbiente src="/video/consulta.webm" poster="/img/consulta-poster.webp" alt="Jesús Tierno reunido con una clienta en el despacho" />
             <h2>Consulta de una hora</h2>
-            <p>
-              Estudiamos tus documentos y te damos un plan de acción. Presencial en el despacho o por videollamada; eliges día y
-              hora al reservar.
-            </p>
+            <p>Estudiamos tus documentos y sales con un plan de acción. Presencial en el despacho o por videollamada.</p>
             <table className="tabla">
               <tbody>
                 <tr>
@@ -77,6 +70,25 @@ export default function Contacto() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="seccion seccion-cielo">
+        <div className="contenedor dos-columnas">
+          <div>
+            <h2>Dónde estamos</h2>
+            <p>
+              {DESPACHO.direccion}
+              <br />
+              {DESPACHO.ciudad}
+            </p>
+            <p>
+              <a href={DESPACHO.telefonoHref}>{DESPACHO.telefono}</a>
+              <br />
+              <a href={`mailto:${DESPACHO.email}`}>{DESPACHO.email}</a>
+            </p>
+            <p>Atendemos casos de toda España por videollamada.</p>
+          </div>
+          <Mapa />
         </div>
       </section>
     </>
