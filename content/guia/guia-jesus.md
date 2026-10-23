@@ -388,7 +388,7 @@ Las sentencias son lo que más autoridad da a una web de abogados, ante Google, 
 
 | Sentencia | Qué decidió | Para quién importa |
 | --- | --- | --- |
-| STS 62/2026 | El permiso parental de 8 semanas cuenta como tiempo trabajado para generar vacaciones, y se puede disfrutar por semanas sueltas | Madres y padres con hijos menores de 8 años |
+| STS 62/2026 | El permiso parental de 8 semanas cuenta como tiempo trabajado para generar vacaciones, y si se disfruta en partes, cada una debe ser de al menos una semana | Madres y padres con hijos menores de 8 años |
 | STS 126/2026 | El permiso de 5 días por hospitalización o enfermedad grave de un familiar puede empezar después del hecho y se cuenta en días laborables | Quien cuida de un familiar |
 | STS 159/2026 | La empresa puede reducir la prima por objetivos durante una baja si reduce también los objetivos, pero es discriminatorio exigir una permanencia que excluya a quien estuvo de baja | Trabajadores con salario variable |
 | STS 169/2026 | Una práctica que la empresa mantiene años puede convertirse en un derecho, y retirarla exige comunicarlo por escrito | Cualquier trabajador al que le quitan "lo de siempre" |
