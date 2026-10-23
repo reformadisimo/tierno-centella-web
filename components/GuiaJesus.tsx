@@ -152,7 +152,74 @@ function BloqueIA() {
   );
 }
 
-const BLOQUES: Record<string, () => React.ReactElement> = { logos: BloqueLogos, velocidad: BloqueVelocidad, ia: BloqueIA };
+// Visitas al mes desde Google (Semrush, España, octubre de 2026).
+const VISITAS: { nombre: string; visitas: number; tu?: boolean }[] = [
+  { nombre: 'Campmany Abogados', visitas: 69866 },
+  { nombre: 'Bufete Toro', visitas: 47134 },
+  { nombre: 'García de la Santa', visitas: 9164 },
+  { nombre: 'Abogados Durán', visitas: 2457 },
+  { nombre: 'Tierno Centella', visitas: 239, tu: true },
+];
+
+function BloqueCompetencia() {
+  const max = Math.max(...VISITAS.map((v) => v.visitas));
+  return (
+    <div className="gj-barras" role="img" aria-label="Visitas al mes desde Google: Campmany 69.866, Bufete Toro 47.134, García de la Santa 9.164, Abogados Durán 2.457, Tierno Centella 239">
+      {VISITAS.map((v) => (
+        <div key={v.nombre} className={`gj-barra${v.tu ? ' tu' : ''}`}>
+          <span className="gj-barra-nombre">{v.nombre}</span>
+          <span className="gj-barra-pista">
+            <span className="gj-barra-relleno" style={{ width: `${Math.max(0.8, (v.visitas / max) * 100)}%` }} />
+            <b>{v.visitas.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</b>
+          </span>
+        </div>
+      ))}
+      <p className="gj-nota">Visitas al mes que llegan desde Google. Fuente: Semrush, octubre de 2026.</p>
+    </div>
+  );
+}
+
+// Semáforo de la situación de hoy, área por área.
+const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; haremos: string }[] = [
+  { area: 'Google', color: 'rojo', hoy: '239 visitas al mes, un 38 % menos que en julio (384). Puesto 18 en "abogado laboralista madrid".', haremos: '45 guías nuevas, 39 artículos en 13 semanas y las 220 direcciones antiguas redirigidas.' },
+  { area: 'Inteligencia artificial', color: 'rojo', hoy: '14 sobre 100. ChatGPT y Gemini casi nunca te nombran.', haremos: 'Respuestas que las IA puedan citar, datos iguales en todas partes, alta en Bing y medición mensual.' },
+  { area: 'Autoridad (quién te enlaza)', color: 'rojo', hoy: '8 sobre 100. García de la Santa tiene 30 y Bufete Toro, 37.', haremos: 'Enlaces de medios, universidades y colegios profesionales, donde ya tienes relación.' },
+  { area: 'Tu web', color: 'rojo', hoy: '18 segundos en cargar en el móvil, 49 sobre 100 de velocidad, "consulta gratuita" que no lo es.', haremos: 'Hecho: 94 de velocidad, 14 herramientas, asistente, precio claro.' },
+  { area: 'Anuncios de Google', color: 'rojo', hoy: 'Activos, pero llevan a una página genérica y no se sabe qué consulta trae cada anuncio.', haremos: 'Hecho: tres páginas por tema. Falta medir cada consulta y ajustar las campañas.' },
+  { area: 'Reseñas', color: 'ambar', hoy: '4,2 con 59 reseñas: 44 de cinco estrellas, pero 11 de una sin contestar.', haremos: 'Responderlas todas, pedir reseñas al cerrar cada caso y llegar a 4,5 en un año.' },
+  { area: 'Blog', color: 'rojo', hoy: 'Parado desde 2022, con temas que no son tuyos.', haremos: 'Tres artículos a la semana sobre lo que de verdad busca la gente.' },
+  { area: 'Redes sociales', color: 'ambar', hoy: 'Instagram con buenos vídeos pero un parón de 2021 a 2024; dos cuentas de X abandonadas.', haremos: 'Un ritmo constante, reels con tus casos y LinkedIn para colegios e instituciones.' },
+  { area: 'Saber de dónde vienen tus clientes', color: 'rojo', hoy: 'No se mide.', haremos: 'Cada llamada, WhatsApp y formulario con su origen, y un informe sencillo cada semana.' },
+];
+
+function BloqueSemaforo() {
+  return (
+    <div className="gj-semaforo">
+      {SEMAFORO.map((f) => (
+        <div key={f.area} className={`gj-sem-fila gj-sem-${f.color}`}>
+          <span className="gj-sem-luz" aria-label={f.color === 'rojo' ? 'Mal' : f.color === 'ambar' ? 'Mejorable' : 'Bien'} />
+          <div>
+            <strong>{f.area}</strong>
+            <p>
+              <span>Hoy:</span> {f.hoy}
+            </p>
+            <p>
+              <span>Lo que haremos:</span> {f.haremos}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const BLOQUES: Record<string, () => React.ReactElement> = {
+  logos: BloqueLogos,
+  velocidad: BloqueVelocidad,
+  ia: BloqueIA,
+  competencia: BloqueCompetencia,
+  semaforo: BloqueSemaforo,
+};
 
 function Contenido({ html }: { html: string }) {
   if (html.includes('<p>CUESTIONARIO</p>'))
@@ -286,7 +353,7 @@ function Reaccion({ id, seccion }: { id: string; seccion: string }) {
             setElegida(r);
             setMsg('Enviando...');
             const ok = await avisar({ tipo: 'reaccion', id, seccion, reaccion: r });
-            setMsg(ok ? 'Gracias. Ignacio lo verá.' : 'Apuntado. Si quieres, cuéntaselo por WhatsApp.');
+            setMsg(ok ? 'Gracias. Lo vemos enseguida.' : 'Apuntado. Si quieres, cuéntaselo por WhatsApp.');
           }}
         >
           {r}
@@ -298,7 +365,7 @@ function Reaccion({ id, seccion }: { id: string; seccion: string }) {
           rows={2}
           value={texto}
           onChange={(e) => setTexto(e.target.value)}
-          placeholder="Si quieres, escríbenos lo que piensas de esta parte: una duda, un cambio, algo que te guste o no. Le llega a Ignacio."
+          placeholder="Si quieres, escríbenos lo que piensas de esta parte: una duda, un cambio, algo que te guste o no. Nos llega al momento."
           aria-label={`Comentario sobre ${seccion}`}
         />
         <button
@@ -307,7 +374,7 @@ function Reaccion({ id, seccion }: { id: string; seccion: string }) {
             if (!texto.trim()) return setMsgTexto('Escribe tu comentario y pulsa enviar.');
             setMsgTexto('Enviando...');
             const ok = await avisar({ tipo: 'comentario', id, seccion, reaccion: elegida, texto });
-            setMsgTexto(ok ? 'Enviado. Gracias, Jesús: Ignacio ya lo tiene.' : 'No se ha podido enviar. Cuéntaselo por WhatsApp, por favor.');
+            setMsgTexto(ok ? 'Enviado. Gracias, Jesús: ya lo tenemos.' : 'No se ha podido enviar. Cuéntaselo por WhatsApp, por favor.');
             if (ok) setTexto('');
           }}
         >

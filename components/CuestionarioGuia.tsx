@@ -35,7 +35,7 @@ export default function CuestionarioGuia() {
     try {
       const res = await fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ tipo: 'respuestas', texto: texto() }) });
       const j = await res.json().catch(() => ({ ok: false }));
-      setMsg(j.ok ? 'Enviado. Gracias, Jesús: Ignacio ya lo tiene. Puedes seguir editando y volver a enviar.' : 'No se ha podido enviar desde aquí. Usa "Copiar respuestas" y mándalas por WhatsApp o correo.');
+      setMsg(j.ok ? 'Enviado. Gracias, Jesús: ya lo tenemos. Puedes seguir editando y volver a enviar.' : 'No se ha podido enviar desde aquí. Usa "Copiar respuestas" y mándalas por WhatsApp o correo.');
     } catch {
       setMsg('No se ha podido enviar desde aquí. Usa "Copiar respuestas" y mándalas por WhatsApp o correo.');
     }
@@ -43,7 +43,7 @@ export default function CuestionarioGuia() {
   async function copiar() {
     try {
       await navigator.clipboard.writeText(texto());
-      setMsg('Copiadas. Pégalas en un WhatsApp o un correo a Ignacio.');
+      setMsg('Copiadas. Pégalas en un WhatsApp o un correo para nosotros.');
     } catch {
       setMsg('Tu navegador no deja copiar. Usa el botón de correo.');
     }
@@ -90,7 +90,7 @@ export default function CuestionarioGuia() {
       })}
       <div className="acciones" style={{ marginTop: 20 }}>
         <button type="button" className="boton boton-marcador" onClick={enviar}>
-          Enviar a Ignacio
+          Enviárnoslas
         </button>
         <button type="button" className="boton boton-claro" onClick={copiar}>
           Copiar respuestas

@@ -116,7 +116,11 @@ export default function Pagina() {
         <div className="contenedor">
           <img src="/img/logo-tc-blanco.webp" alt="Tierno Centella Abogados" width={260} height={62} />
           <h1>Jesús, esta es tu web nueva. Te la contamos sin prisas.</h1>
-          <p>Para Jesús Tierno Centella, con cariño. Preparada por Ignacio de la Rubia. Octubre de 2026.</p>
+          <p className="gj-portada-gancho">
+            Hoy te encuentran en Google <strong>239 personas al mes</strong>. A García de la Santa, <strong>9.164</strong>. Te contamos por qué, lo
+            que ya hemos hecho y todo lo que podemos mejorar juntos.
+          </p>
+          <p>Para Jesús Tierno Centella, con cariño. Octubre de 2026.</p>
           <ul className="gj-portada-cifras">
             <li>
               <strong>94</strong> de velocidad en móvil (antes 49)

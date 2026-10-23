@@ -1,12 +1,20 @@
 ## Empieza aquí: tu guía en 5 minutos
 
-Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con tu web, por qué, y todo lo que podríamos hacer juntos a partir de aquí. Cada apartado empieza con una foto y una frase: si solo tienes un rato, con eso ya te haces una idea. Si quieres más, pulsa "Ver el detalle".
+Jesús, qué ilusión enseñarte esto. En cinco minutos vas a ver **dónde estás hoy, lo que ya te hemos hecho y adónde te podemos llevar**. Cada apartado de la guía empieza con una foto y una frase; si quieres más, pulsa "Ver el detalle".
 
-> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online: nos escribes cuando te venga bien y te contestamos rápido. Y cuando algo se explica mejor hablando, una llamada o una videollamada de diez minutos y listo. Cualquier duda, por pequeña que sea, pregúntanos: para eso estamos. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
+### 1. Dónde estás hoy
 
-> Todo lo que ves es una **demostración**: la web nueva vive en una dirección de prueba, Google no la indexa y tu web actual sigue funcionando igual. No hemos tocado nada tuyo.
+Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Semrush, octubre de 2026):
 
-**Lo hecho, en una mirada**
+[[competencia]]
+
+García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú. Le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 14.000 dólares al mes. Tú tienes lo que ellos no tienen (la primera condena en España a empresa y acosador, en 2005, y años siendo la referencia en acoso), pero hoy **Google y las IA no lo saben**.
+
+Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 en julio a 239 en septiembre). Así está cada frente, y lo que haremos en cada uno:
+
+[[semaforo]]
+
+### 2. Lo que ya te hemos hecho (y es tuyo)
 
 | Qué | Web actual | Web nueva |
 | --- | --- | --- |
@@ -21,19 +29,9 @@ Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con
 | Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 páginas** hechas para convertir: incapacidad, acoso y despido (apartado 18 ter) |
 | Medición | Analytics instalado | **Preparada para contar** cada llamada, WhatsApp, formulario y chat, con mapas de calor y grabaciones en cuanto des el visto bueno (apartado 19) |
 
-**Dónde estás hoy frente a tu competencia** (datos de Semrush, octubre de 2026, búsquedas en España):
+### 3. Adónde te podemos llevar en un año
 
-| Despacho | Visitas al mes desde Google | Búsquedas en las que aparece | Lo que costarían esas visitas en anuncios |
-| --- | --- | --- | --- |
-| Campmany Abogados | 69.866 | 41.637 | 12.264 $ al mes |
-| Bufete Toro | 47.134 | 29.604 | 16.194 $ al mes |
-| García de la Santa | 9.164 | 2.503 | 14.375 $ al mes |
-| Abogados Durán | 2.457 | 1.387 | 4.759 $ al mes |
-| **Tierno Centella** | **239** | **710** | **161 $ al mes** |
-
-García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú desde Google. Esas visitas le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 14.000 dólares al mes. Tú tienes algo que ellos no tienen (años siendo la referencia en acoso laboral, y la primera condena en España a empresa y acosador, en 2005), pero hoy Google y las IA no lo saben.
-
-**Adónde te podemos llevar en un año** (son objetivos de trabajo, no promesas: dependen de Google y de constancia):
+Son objetivos de trabajo, no promesas: dependen de Google y de la constancia.
 
 | | Hoy | Objetivo a 12 meses |
 | --- | --- | --- |
@@ -47,25 +45,24 @@ García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38
 | Anuncios de Google | Llevan a una página genérica | **Páginas propias por tema (ya hechas)**, y cada consulta medida |
 | Saber de dónde viene cada cliente | No | Sí: cada llamada, WhatsApp y formulario con su origen |
 
-**Lo que ya está hecho no te cuesta nada: es tuyo.** Lo que queda es trabajo de todos los meses (escribir, medir, responder, ajustar los anuncios), y es justo lo que marca la diferencia entre 239 visitas y 2.500.
+**Lo que ya está hecho no te cuesta nada.** Lo que queda es trabajo de todos los meses (escribir, medir, responder, ajustar los anuncios), y es justo lo que marca la diferencia entre 239 visitas y 2.500.
 
-**Lo que necesitamos de ti**, en cuatro cosas:
+### 4. Lo que necesitamos de ti
 
 1. Que revises los textos (sobre todo los casos y las guías) y nos digas qué cambiarías.
 2. Que contestes las preguntas del apartado 24. Son cortas.
 3. Si te convence, los accesos del apartado 23 para medir y seguir mejorando.
 4. **Tu tiempo**: unas 3 o 4 horas repartidas en dos semanas para revisar las guías (te las podemos ir pasando por bloques), 15 minutos para los accesos y, si seguimos, unos 30 minutos a la semana para leer los artículos antes de publicarlos.
 
+> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online: nos escribes cuando te venga bien y te contestamos rápido. Y cuando algo se explica mejor hablando, una llamada o una videollamada de diez minutos y listo. Cualquier duda, por pequeña que sea, pregúntanos: para eso estamos. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
+
+> Todo lo que ves es una **demostración**: la web nueva vive en una dirección de prueba, Google no la indexa y tu web actual sigue funcionando igual. No hemos tocado nada tuyo.
+
 ## 1. Lo esencial en un minuto
 
 **Lo que haces genial y nadie te puede quitar.** Fuiste el primero en España en conseguir que un juez condenara a la empresa y al acosador a la vez (2005). Has escrito un libro con Bernabé Tierno. Has conversado dos veces con Iñaki Piñuel, el gran referente del mobbing. Has estado en Onda Cero y has sido ponente en la Universidad Pontificia Comillas. Tus clientes, en Google, dicen una y otra vez lo mismo: cercanía y que sois especialistas de verdad. **Ningún competidor de Madrid tiene esto.** La web antigua lo esconde; la nueva lo pone delante.
 
-**Lo que hoy te está costando clientes.**
-
-- La web tarda 18 segundos en enseñar su contenido en un móvil. La mayoría de la gente se va antes.
-- Dice "consulta inicial gratuita" en una página y vende la consulta a 150 € en otra. Esa contradicción aparece en 4 de tus 11 reseñas de una estrella.
-- El blog lleva parado desde 2022 y mezcla temas que no son tuyos (seguros de coche, hipotecas, okupación).
-- Ninguna reseña de Google tiene respuesta del despacho.
+**Lo que hoy te está costando clientes**: lo tienes arriba, en "Dónde estás hoy".
 
 **La red que hemos tendido.** Una web rápida, clara, con tu cara y tus casos; herramientas que resuelven la duda del momento ("¿cuántos días me quedan para reclamar?") y llevan a llamarte; un asistente que contesta a las once de la noche, cuando la persona angustiada busca ayuda; y una sección para mujeres trabajadoras, que son una parte importante de tus clientes.
 
@@ -850,11 +847,11 @@ CUESTIONARIO
 
 ## 25. Y ahora, tú decides
 
-Jesús, **la web es tuya: te la regalo**. Todo lo que ves (la web, las guías, las herramientas, el asistente, las páginas para tus anuncios, la medición y esta guía) te lo he hecho como amigo y no te voy a cobrar nada por ello. Me apetecía, porque creo que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
+Jesús, **la web es tuya: te la regalamos**. Todo lo que ves (la web, las guías, las herramientas, el asistente, las páginas para tus anuncios, la medición y esta guía) te lo hemos hecho como amigos y no te vamos a cobrar nada por ello. Nos apetecía, porque creemos que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
 
-Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya llevo webs y campañas de algunos amigos. Y me encantaría llevar la tuya.
+Te contamos en qué estamos: **estamos montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya llevamos webs y campañas de algunos amigos. Y nos encantaría acompañarte a ti.
 
-**Lo que te propongo a partir de aquí es un servicio 360, un mantenimiento con una cuota mensual que cubre todo** (el precio lo definimos juntos, según lo que quieras abarcar): tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
+**Lo que te proponemos a partir de aquí es un servicio 360, un mantenimiento con una cuota mensual que cubre todo** (el precio lo definimos juntos, según lo que quieras abarcar): tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
 
 | Qué incluye | En la práctica |
 | --- | --- |
@@ -868,13 +865,13 @@ Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía n
 
 **Lo único que va aparte**: los **vídeos profesionales** con equipo de grabación, si los quieres. Los vídeos sencillos para redes y los guiones entran en la cuota.
 
-Para ajustarte la cuota a lo que de verdad necesitas, me ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparo una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
+Para ajustarte la cuota a lo que de verdad necesitas, nos ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparamos una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
 
 Y si prefieres seguir como hasta ahora, fenomenal también: la web y la guía son tuyas. Sin ninguna presión.
 
 Un abrazo,
 
-**Ignacio de la Rubia**
+**Ignacio de la Rubia y el equipo**
 
 ## 26. Fuentes
 
