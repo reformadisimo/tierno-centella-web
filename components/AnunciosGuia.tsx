@@ -140,9 +140,123 @@ function TarjetaSocial({
   );
 }
 
+
+// Mockups en un móvil: cómo ve Google quien busca hoy "abogado acoso laboral madrid", y cómo te vería con nosotros.
+function Movil({ titulo, children, tono }: { titulo: string; children: React.ReactNode; tono: 'mal' | 'bien' }) {
+  return (
+    <figure className={`gm-figura gm-${tono}`}>
+      <div className="gm-movil">
+        <div className="gm-muesca" aria-hidden="true" />
+        <div className="gm-pantalla">{children}</div>
+      </div>
+      <figcaption>{titulo}</figcaption>
+    </figure>
+  );
+}
+
+function Buscador({ q }: { q: string }) {
+  return (
+    <div className="gm-google">
+      <div className="gm-logo" aria-hidden="true">
+        <span style={{ color: '#4285f4' }}>G</span>
+        <span style={{ color: '#ea4335' }}>o</span>
+        <span style={{ color: '#fbbc05' }}>o</span>
+        <span style={{ color: '#4285f4' }}>g</span>
+        <span style={{ color: '#34a853' }}>l</span>
+        <span style={{ color: '#ea4335' }}>e</span>
+      </div>
+      <div className="gm-caja">{q}</div>
+    </div>
+  );
+}
+
+function Resultado({ patrocinado, sitio, url, titulo, texto, enlaces }: { patrocinado?: boolean; sitio: string; url: string; titulo: string; texto?: string; enlaces?: string[] }) {
+  return (
+    <div className="gm-res">
+      {patrocinado && <strong className="gm-patro">Patrocinado</strong>}
+      <div className="gm-sitio">
+        <span className="ga-favicon" aria-hidden="true">
+          {sitio.slice(0, 1)}
+        </span>
+        <span>
+          <b>{sitio}</b>
+          <small>{url}</small>
+        </span>
+      </div>
+      <p className="gm-titulo">{titulo}</p>
+      {texto && <p className="gm-texto">{texto}</p>}
+      {enlaces && (
+        <div className="gm-enlaces">
+          {enlaces.map((e) => (
+            <span key={e}>{e}</span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MovilesComparados() {
+  return (
+    <div className="gm-rejilla">
+      <Movil tono="mal" titulo="Hoy: alguien busca abogado de acoso en Madrid. Salen otros despachos y tú no.">
+        <Buscador q="abogado acoso laboral madrid" />
+        <Resultado
+          patrocinado
+          sitio="R. Sánchez Abogados"
+          url="rsanchezabogados.es"
+          titulo="R. Sánchez Abogados | 733 Reseñas en Google"
+          texto="Abogado Laboral Especialista - Abogado Laboral en Madrid. Ayudamos a Particulares, Empresas y Emprendedores en Cualquier Proceso Laboral."
+        />
+        <div className="gm-ausente">Tierno Centella no aparece en los anuncios</div>
+        <div className="gm-gris" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+      </Movil>
+      <Movil tono="bien" titulo="Con nosotros: tu anuncio arriba, con tu especialidad, tu historia y tus herramientas.">
+        <Buscador q="abogado acoso laboral madrid" />
+        <Resultado
+          patrocinado
+          sitio="Tierno Centella Abogados"
+          url="tiernocentella.es"
+          titulo="Abogado Acoso Laboral Madrid | Pioneros desde 2005"
+          texto="En 2005 logramos que un juez condenara a la empresa y al acosador. Haz el test gratuito y te decimos qué plazo corre."
+          enlaces={['¿Es acoso? Test gratis', 'Casos ganados', 'Pedir cita', 'WhatsApp']}
+        />
+        <div className="gm-gris" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+      </Movil>
+      <Movil tono="bien" titulo="Y en Instagram: tu cara, una pregunta que la persona se reconoce y el test de acoso.">
+        <div className="gm-insta-barra" aria-hidden="true">
+          <b>Instagram</b>
+        </div>
+        <div className="gm-insta-cabeza">
+          <img src="/img/jesus-avatar.webp" alt="" width={32} height={32} />
+          <span>
+            <b>tiernocentella_abogados</b>
+            <small>Publicidad</small>
+          </span>
+        </div>
+        <img className="gm-insta-foto" src="/img/jesus-mesa-640.webp" alt="" width={640} height={427} loading="lazy" />
+        <div className="gm-insta-boton">Hacer el test</div>
+        <p className="gm-insta-texto">
+          <b>tiernocentella_abogados</b> ¿Te gritan, te aíslan o te quitan funciones? En 2 minutos sabrás si es acoso laboral. Test gratuito, sin dejar datos.
+        </p>
+      </Movil>
+    </div>
+  );
+}
+
 export default function AnunciosGuia() {
   return (
     <div className="ga">
+      <h4 className="ga-grupo">De un vistazo: hoy y con nosotros</h4>
+      <MovilesComparados />
       <h4 className="ga-grupo">Tus anuncios en Google, tal como se ven</h4>
       <div className="ga-rejilla">
         {TUYOS.map((a) => (
