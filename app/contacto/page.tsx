@@ -50,13 +50,13 @@ export default function Contacto() {
                 <tr>
                   <td>Con un abogado del despacho</td>
                   <td>
-                    <strong>{DESPACHO.precioCita} €{DESPACHO.iva}</strong>
+                    <strong className="precio-nowrap">{DESPACHO.precioCita} €{DESPACHO.iva}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td>Con Jesús Tierno</td>
                   <td>
-                    <strong>{DESPACHO.precioCitaJesus} €{DESPACHO.iva}</strong>
+                    <strong className="precio-nowrap">{DESPACHO.precioCitaJesus} €{DESPACHO.iva}</strong>
                   </td>
                 </tr>
               </tbody>

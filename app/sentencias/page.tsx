@@ -3,6 +3,7 @@ import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
 import { CASOS, JURISPRUDENCIA } from '@/lib/casos';
+import { DEMO } from '@/lib/despacho';
 
 export const metadata: Metadata = meta({
   titulo: 'Sentencias y casos ganados',
@@ -12,6 +13,14 @@ export const metadata: Metadata = meta({
 
 // Los casos son del despacho que dirige Jesús Tierno: la cara que los acompaña es la suya.
 const FOTOS_JESUS = ['jesus-firmando', 'jesus-retrato', 'jesus-camisa', 'jesus-puerta', 'reunion-cliente'];
+
+// Quita los avisos internos del órgano y la fecha: el aviso de "pendiente" ya va en su etiqueta (y solo en la demo).
+function lineaOrgano(organo: string, fecha: string) {
+  const o = organo.replace(/^Pendiente de confirmar con el despacho\.?\s*/, '');
+  const f = fecha === 'Pendiente' ? '' : fecha;
+  const linea = [o, f].filter(Boolean).join('. ');
+  return linea ? `${linea}.` : 'Caso del despacho.';
+}
 
 export default function Sentencias() {
   return (
@@ -43,9 +52,7 @@ export default function Sentencias() {
                 </div>
                 <div className="ficha-cuerpo">
                   <h3>{c.titulo}</h3>
-                  <span className="ficha-organo">
-                    {c.organo}. {c.fecha}.
-                  </span>
+                  <span className="ficha-organo">{lineaOrgano(c.organo, c.fecha)}</span>
                   <p>{c.resumen}</p>
                   <div>
                     <strong>Qué pasó</strong>
@@ -64,7 +71,7 @@ export default function Sentencias() {
                   </div>
                   <div className="ficha-pie">
                     {c.fuente && <a href={c.fuente.url}>Fuente: {c.fuente.nombre}</a>}
-                    {c.pendiente && <span className="ficha-pendiente">Pendiente de confirmar con el despacho</span>}
+                    {DEMO && c.pendiente && <span className="ficha-pendiente">Pendiente de confirmar con el despacho</span>}
                   </div>
                 </div>
               </article>

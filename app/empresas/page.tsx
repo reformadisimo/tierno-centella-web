@@ -53,7 +53,7 @@ export default function Empresas() {
             </p>
             <div className="acciones">
               <Link className="boton boton-marcador" href="/herramientas/autodiagnostico-acoso-empresas">
-                Hacer el autodiagnóstico en 2 minutos
+                Autodiagnóstico en 2 minutos
               </Link>
             </div>
           </div>

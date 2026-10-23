@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
+import LateralHub from '@/components/LateralHub';
 import { leerColeccion } from '@/lib/contenido';
 import VideoYoutube from '@/components/VideoYoutube';
 
@@ -30,7 +31,8 @@ export default function Despido() {
       </header>
 
       <section className="seccion">
-        <div className="contenedor texto">
+        <div className="contenedor con-lateral">
+          <div className="texto">
           <div className="recuadro">
             <p>
               <strong>Tienes 20 días hábiles para reclamar</strong>, contados desde el día siguiente al despido. No cuentan los
@@ -105,6 +107,8 @@ export default function Despido() {
             <li>No firmes el finiquito como conforme sin que lo revise un abogado.</li>
             <li>Llámanos o calcula tu indemnización para saber cuánto está en juego.</li>
           </ol>
+          </div>
+          <LateralHub plazo="Tienes 20 días hábiles desde el despido para reclamar. Lo primero que miramos es tu plazo." herramienta={{ href: '/calculadora-indemnizacion', texto: 'Calcula tu indemnización' }} whatsapp="Hola, me han despedido y quiero consultar mi caso." />
         </div>
       </section>
       <section className="seccion seccion-blanca">

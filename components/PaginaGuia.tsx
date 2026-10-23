@@ -109,7 +109,11 @@ export default function PaginaGuia({
           </article>
           <aside className="guia-lateral">
             <div className="lateral-caja lateral-humana">
-              <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho atiende una consulta" loading="lazy" />
+              {foto.src.includes('abogada-escucha') ? (
+                <img src="/img/abogada-sonrie-640.webp" alt="Una abogada del despacho sonríe durante una consulta" loading="lazy" />
+              ) : (
+                <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho atiende una consulta" loading="lazy" />
+              )}
               <h2>¿Hablamos de tu caso?</h2>
               <p style={{ fontSize: '0.95rem' }}>Te decimos por teléfono si tiene recorrido y qué plazos corren.</p>
               <div style={{ display: 'grid', gap: 8 }}>

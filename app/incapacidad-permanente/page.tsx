@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Llamada from '@/components/Llamada';
+import LateralHub from '@/components/LateralHub';
 import { leerColeccion } from '@/lib/contenido';
 
 export const metadata: Metadata = meta({
@@ -48,7 +49,8 @@ export default function Incapacidad() {
       </header>
 
       <section className="seccion">
-        <div className="contenedor texto">
+        <div className="contenedor con-lateral">
+          <div className="texto">
           <div className="recuadro">
             <p>
               <strong>Tienes 30 días hábiles para la reclamación previa</strong> desde que te notifican la resolución. Es el primer
@@ -64,7 +66,7 @@ export default function Incapacidad() {
           </div>
 
           <h2>Los cuatro grados y lo que se cobra</h2>
-          <table className="tabla">
+          <table className="tabla tabla-fichas">
             <thead>
               <tr>
                 <th>Grado</th>
@@ -74,24 +76,24 @@ export default function Incapacidad() {
             </thead>
             <tbody>
               <tr>
-                <td>Parcial</td>
-                <td>Tu rendimiento en tu profesión baja al menos un 33 %, pero puedes seguir en ella.</td>
-                <td>Un pago único de 24 mensualidades de tu base reguladora.</td>
+                <td data-label="Grado">Parcial</td>
+                <td data-label="Cuándo se reconoce">Tu rendimiento en tu profesión baja al menos un 33 %, pero puedes seguir en ella.</td>
+                <td data-label="Qué cobras">Un pago único de 24 mensualidades de tu base reguladora.</td>
               </tr>
               <tr>
-                <td>Total</td>
-                <td>No puedes hacer tu profesión habitual, pero sí otra distinta.</td>
-                <td>El 55 % de tu base reguladora cada mes; el 75 % desde los 55 años si no encuentras otro empleo.</td>
+                <td data-label="Grado">Total</td>
+                <td data-label="Cuándo se reconoce">No puedes hacer tu profesión habitual, pero sí otra distinta.</td>
+                <td data-label="Qué cobras">El 55 % de tu base reguladora cada mes; el 75 % desde los 55 años si no encuentras otro empleo.</td>
               </tr>
               <tr>
-                <td>Absoluta</td>
-                <td>No puedes hacer ningún trabajo.</td>
-                <td>El 100 % de tu base reguladora cada mes.</td>
+                <td data-label="Grado">Absoluta</td>
+                <td data-label="Cuándo se reconoce">No puedes hacer ningún trabajo.</td>
+                <td data-label="Qué cobras">El 100 % de tu base reguladora cada mes.</td>
               </tr>
               <tr>
-                <td>Gran incapacidad</td>
-                <td>Además necesitas ayuda de otra persona para la vida diaria.</td>
-                <td>La pensión de la absoluta más un complemento para pagar esa ayuda.</td>
+                <td data-label="Grado">Gran incapacidad</td>
+                <td data-label="Cuándo se reconoce">Además necesitas ayuda de otra persona para la vida diaria.</td>
+                <td data-label="Qué cobras">La pensión de la absoluta más un complemento para pagar esa ayuda.</td>
               </tr>
             </tbody>
           </table>
@@ -103,6 +105,8 @@ export default function Incapacidad() {
             <li>Presentamos la reclamación previa dentro de plazo.</li>
             <li>Si la deniegan, presentamos la demanda y te defendemos en el juicio.</li>
           </ol>
+          </div>
+          <LateralHub plazo="Si te la han denegado, tienes 30 días hábiles para la reclamación previa." herramienta={{ href: '/herramientas/comprobador-incapacidad', texto: 'Comprueba tu grado y tu plazo' }} whatsapp="Hola, quiero consultar un caso de incapacidad permanente." />
         </div>
       </section>
       <section className="seccion seccion-blanca">

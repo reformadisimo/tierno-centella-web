@@ -11,7 +11,7 @@ export const metadata: Metadata = meta({
   descripcion:
     'Despido durante el embarazo o la lactancia, reducción y adaptación de jornada, permisos por nacimiento, acoso sexual y brecha salarial. Tus derechos, explicados con claridad.',
   ruta: '/mujer-y-trabajo',
-  imagen: '/img/abogada-sonrie.webp',
+  imagen: '/img/reunion-equipo.webp',
 });
 
 export default function MujerYTrabajo() {
@@ -33,14 +33,14 @@ export default function MujerYTrabajo() {
             </p>
             <div className="acciones">
               <Link className="boton boton-marcador" href="/herramientas/calendario-permisos">
-                Calcular mis permisos por nacimiento
+                Calcular mis permisos
               </Link>
               <Link className="boton boton-claro" href="/herramientas/calculadora-reduccion-jornada">
                 Calcular mi reducción de jornada
               </Link>
             </div>
           </div>
-          <img className="foto" src="/img/abogada-sonrie.webp" srcSet="/img/abogada-sonrie-640.webp 640w, /img/abogada-sonrie.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho sonríe durante una reunión" fetchPriority="high" />
+          <img className="foto" src="/img/reunion-equipo.webp" srcSet="/img/reunion-equipo-640.webp 640w, /img/reunion-equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Abogadas del despacho en una reunión de trabajo" fetchPriority="high" />
         </div>
       </header>
 

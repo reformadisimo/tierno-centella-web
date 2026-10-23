@@ -106,7 +106,7 @@ export default function Inicio() {
             </ul>
             <div className="acciones">
               <Link className="boton" href="/herramientas/calendario-permisos">
-                Calcular mis permisos por nacimiento
+                Calcular mis permisos
               </Link>
               <Link className="boton boton-claro" href="/mujer-y-trabajo">
                 Ver todo
@@ -189,7 +189,7 @@ export default function Inicio() {
               <img src="/img/reunion-equipo.webp" srcSet="/img/reunion-equipo-640.webp 640w, /img/reunion-equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="El equipo reunido alrededor de la mesa" loading="lazy" />
               <figcaption>Cada caso se estudia en equipo</figcaption>
             </figure>
-            <figure>
+            <figure className="g-alta">
               <img src="/img/papeleria.webp" srcSet="/img/papeleria-640.webp 640w, /img/papeleria.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Documentación con el logotipo del despacho" loading="lazy" />
             </figure>
           </div>

@@ -10,6 +10,7 @@ const TEMAS = ['Me han despedido', 'Sufro acoso laboral', 'Incapacidad o baja', 
 export default function FormularioContacto() {
   const [estado, setEstado] = useState<'listo' | 'enviando' | 'enviado' | 'error'>('listo');
   const [error, setError] = useState('');
+  const [faltaTema, setFaltaTema] = useState(false);
   const [datos, setDatos] = useState({ nombre: '', telefono: '', email: '', tema: '', cuando: 'Cuanto antes', mensaje: '', acepto: false, seguimiento: false, web: '' });
   const cambiar = (k: keyof typeof datos, v: string | boolean) => setDatos((d) => ({ ...d, [k]: v }));
 
@@ -17,6 +18,11 @@ export default function FormularioContacto() {
 
   async function enviar(e: React.FormEvent) {
     e.preventDefault();
+    if (!datos.tema) {
+      setFaltaTema(true);
+      document.getElementById('f-tema')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
     setEstado('enviando');
     setError('');
     try {
@@ -45,18 +51,23 @@ export default function FormularioContacto() {
       <p className="campo-ayuda" style={{ marginBottom: 16 }}>
         Cuatro datos y te llamamos. Si tu caso tiene plazo corriendo, lo vemos primero.
       </p>
-      <fieldset className="pregunta-test" style={{ marginBottom: 14 }}>
+      <fieldset id="f-tema" className={`pregunta-test${faltaTema ? ' campo-error' : ''}`} style={{ marginBottom: 14 }} aria-describedby={faltaTema ? 'f-tema-error' : undefined}>
         <legend className="campo">
           <strong>¿Sobre qué es?</strong>
         </legend>
         <div className="escala">
           {TEMAS.map((t) => (
             <label key={t}>
-              <input type="radio" name="tema" checked={datos.tema === t} onChange={() => cambiar('tema', t)} required />
+              <input type="radio" name="tema" checked={datos.tema === t} onChange={() => { cambiar('tema', t); setFaltaTema(false); }} />
               {t}
             </label>
           ))}
         </div>
+        {faltaTema && (
+          <p id="f-tema-error" className="error-campo" role="alert">
+            Elige sobre qué es tu consulta.
+          </p>
+        )}
       </fieldset>
       <div className="campos-fila">
         <div className="campo">

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import VideoYoutube from '@/components/VideoYoutube';
-import { DESPACHO } from '@/lib/despacho';
+import { DEMO, DESPACHO } from '@/lib/despacho';
 
 export const metadata: Metadata = meta({
   titulo: 'Jesús Tierno Centella, abogado especialista en acoso laboral',
@@ -26,7 +26,7 @@ export default function Jesus() {
             </p>
             <div className="acciones">
               <a className="boton" href={DESPACHO.citaJesus}>
-                Reservar consulta con Jesús ({DESPACHO.precioCitaJesus} €{DESPACHO.iva})
+                Reservar con Jesús ({DESPACHO.precioCitaJesus} €{DESPACHO.iva})
               </a>
             </div>
           </div>
@@ -55,9 +55,11 @@ export default function Jesus() {
               Es coautor, con el psicólogo Bernabé Tierno, de <em>Valores en el trabajo: estrategias para afrontar y superar los nuevos retos
               laborales</em> (La Esfera de los Libros, 2002), sobre cómo el trabajo puede enriquecer a quien lo hace en lugar de destruirle.
             </p>
-            <div className="recuadro">
-              <p>Pendiente de completar con Jesús: número de colegiado, ponencias, apariciones en prensa y casos que se puedan contar.</p>
-            </div>
+            {DEMO && (
+              <div className="recuadro">
+                <p>Pendiente de completar con Jesús: número de colegiado, ponencias, apariciones en prensa y casos que se puedan contar.</p>
+              </div>
+            )}
           </div>
           <div style={{ display: 'grid', gap: 20, alignContent: 'start' }}>
             <img className="foto" src="/img/jesus-firmando.webp" srcSet="/img/jesus-firmando-640.webp 640w, /img/jesus-firmando.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno revisando un documento en su mesa" />

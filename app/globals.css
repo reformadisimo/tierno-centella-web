@@ -46,7 +46,12 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
+}
+
+html {
+  scroll-padding-top: 96px;
 }
 
 a {
@@ -194,6 +199,8 @@ p {
   border: 2px solid var(--tinta);
   background: var(--tinta);
   color: var(--blanco);
+  text-align: center;
+  line-height: 1.2;
 }
 
 .boton:hover {
@@ -855,7 +862,16 @@ input:focus {
     font-size: 0.9rem;
   }
   .boton-telefono {
-    display: none;
+    width: 48px;
+    padding: 0;
+  }
+  .boton-telefono .tel-numero {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }
 
@@ -1070,6 +1086,7 @@ input:focus {
   .guia-lateral {
     position: sticky;
     top: 88px;
+    align-self: start;
   }
 }
 
@@ -3311,4 +3328,175 @@ body:has(.landing) .pie {
   .salida {
     animation: none;
   }
+}
+
+/* Páginas principales con lateral fijo de contacto (escritorio) */
+.con-lateral {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 1000px) {
+  .con-lateral {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    align-items: start;
+  }
+}
+
+.lateral-hub {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .lateral-hub {
+    display: block;
+    position: sticky;
+    top: 96px;
+    align-self: start;
+  }
+}
+
+.lateral-hub-caja {
+  display: grid;
+  gap: 10px;
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-top: 4px solid var(--coral);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(13, 44, 72, 0.08);
+}
+
+.lateral-hub-caja img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.lateral-hub-caja strong {
+  font-size: 1.15rem;
+}
+
+.lateral-hub-caja p {
+  margin: 0 0 4px;
+  color: var(--tinta-media);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.lateral-hub-herramienta {
+  font-weight: 700;
+  color: var(--coral-texto);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.lateral-hub-herramienta::after {
+  content: ' \2192';
+}
+
+.lateral-hub-caja small {
+  color: var(--tinta-suave);
+}
+
+.tabla th:first-child {
+  white-space: nowrap;
+}
+
+/* Tablas que en móvil se leen mejor como fichas */
+@media (max-width: 600px) {
+  .tabla-fichas thead {
+    display: none;
+  }
+  .tabla-fichas,
+  .tabla-fichas tbody,
+  .tabla-fichas tr,
+  .tabla-fichas td {
+    display: block;
+    width: 100%;
+  }
+  .tabla-fichas {
+    background: transparent;
+  }
+  .tabla-fichas tr {
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .tabla-fichas td {
+    border-bottom: 0;
+    padding: 4px 16px 10px;
+  }
+  .tabla-fichas td:first-child {
+    background: var(--tinta);
+    color: var(--blanco);
+    font-weight: 800;
+    padding: 10px 16px;
+    margin-bottom: 6px;
+  }
+  .tabla-fichas td:not(:first-child)::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--tinta-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Que los enlaces de lista parezcan enlaces */
+.rejilla-guias strong::after,
+.servicios strong::after {
+  content: ' \2192';
+  color: var(--coral);
+  font-weight: 800;
+}
+
+/* Galería del despacho en móvil: la primera foto a todo el ancho y sin pies que tapen caras */
+@media (max-width: 899px) {
+  .galeria .g-grande:first-child {
+    grid-column: 1 / -1;
+  }
+  .galeria figure:not(:first-child) figcaption {
+    display: none;
+  }
+}
+
+/* Vídeos de Instagram en móvil: carrusel horizontal en vez de una columna larguísima */
+@media (max-width: 600px) {
+  .rejilla-reels {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .reel {
+    scroll-snap-align: start;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* Precios de la consulta: que el importe no se parta */
+.precio-nowrap,
+.tabla td:last-child strong {
+  white-space: nowrap;
+}
+
+.campo-error .escala label {
+  border-color: var(--alerta);
+}
+
+.error-campo {
+  color: var(--alerta);
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin: 8px 0 0;
 }
