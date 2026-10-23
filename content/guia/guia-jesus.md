@@ -591,7 +591,22 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 
 [[mock-velocidad]]
 
-**Y preparada para los agentes de IA**: Google ya puntúa si los asistentes de IA que navegan por las webs (los que buscan, comparan o piden cita por la persona) pueden entender la tuya. La web nueva saca **3 de 3**; la actual, 1 de 3, y Bufete Toro, 1 de 3. De las webs que hemos medido, solo la tuya nueva saca la nota completa.
+**Y preparada para los agentes de IA**: Google ya puntúa si los asistentes de IA que navegan por las webs (los que buscan, comparan o piden cita por la persona) pueden entender la tuya. Lo hemos medido el 23 de octubre de 2026 en tu web y en la de nueve despachos de Madrid. **Ninguno saca la nota completa. La web nueva, sí.**
+
+| Web (en el móvil) | Navegación agéntica |
+| --- | --- |
+| **Tu web nueva** | **3 de 3** |
+| Campmany | 2 de 3 |
+| Labormind | 2 de 3 |
+| Bufete Toro | 1 de 3 |
+| García de la Santa | 1 de 3 |
+| Tu web actual | 1 de 3 |
+| Pedraza Laboral | 1 de 2 |
+| Jover Marben | 1 de 2 |
+| Madrid-Laboral | 1 de 2 |
+| Abogados Durán | 0 de 2 |
+
+(Cuando sale "de 2", Google no ha podido comprobar uno de los tres puntos en esa web.)
 
 **En resumen**: la web nueva carga en la mitad de tiempo, pesa bastante menos (1,0 MB frente a 1,8) y hace un tercio de las peticiones.
 

@@ -105,8 +105,8 @@ function BloqueVelocidad() {
       <p className="gj-nota">
         <strong>Navegación agéntica</strong> es la nota nueva de Google para los agentes de IA, los asistentes que ya entran en las webs por ti a buscar
         información, comparar o pedir cita. Comprueba tres cosas: que un agente entiende cómo está construida cada página, que nada se mueve mientras
-        carga y que existe la ficha para las IA (llms.txt). Tu web actual saca 1 de 3; la nueva, 3 de 3. Bufete Toro, por ejemplo, saca 1 de 3
-        (medido el 23 de octubre de 2026).
+        carga y que existe la ficha para las IA (llms.txt). Tu web actual saca 1 de 3; la nueva, 3 de 3. De nueve despachos de Madrid que hemos medido, ninguno
+        llega al 3 de 3 (el 23 de octubre de 2026; la tabla está un poco más abajo).
       </p>
       <p className="gj-bloque-titulo">
         <img src="/img/guia/pingdom.svg" alt="" width={22} height={22} /> Pingdom, el cronómetro (medido el 23 de octubre de 2026)
