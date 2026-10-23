@@ -5,7 +5,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { MENU, MENU_EN } from '@/lib/navegacion';
-import { idiomaDe, rutaEnOtroIdioma } from '@/lib/idioma';
+import { GUIAS_ES_EN, idiomaDe, rutaEnOtroIdioma } from '@/lib/idioma';
+
+// En inglés, solo se enlazan las guías que ya están traducidas.
+const EN_EXISTEN = new Set(Object.values(GUIAS_ES_EN));
+const MENU_EN_VISIBLE = MENU_EN.map((g) => ({ ...g, enlaces: g.enlaces.filter((e) => e.href.split('/').length < 4 || !e.href.startsWith('/en/') || EN_EXISTEN.has(e.href)) }));
 
 const T = {
   es: { inicio: '/', inicioAria: 'Tierno Centella Abogados, inicio', principal: 'Principal', contacto: 'Contacto', contactoHref: '/contacto', llamarAria: 'Llamar al', menu: 'Menú', cerrar: 'Cerrar', pasando: '¿Qué te está pasando?', jesusHref: '/jesus-tierno', jesusSub: 'Más de 25 años defendiendo a trabajadores', hablamos: '¿Hablamos de tu caso?', consulta: 'Primera consulta de una hora:', video: 'Madrid, o por videollamada.', llamar: 'Llamar', cita: 'Pedir cita', wa: 'Hola, quiero consultar mi caso.', buscar: 'Buscar en la web', buscarHref: '/buscar', otro: 'EN', otroAria: 'English version', otroLang: 'en' },
@@ -16,7 +20,7 @@ export default function Cabecera() {
   const ruta = usePathname() || '/';
   const idioma = idiomaDe(ruta);
   const t = T[idioma];
-  const menu = idioma === 'en' ? MENU_EN : MENU;
+  const menu = idioma === 'en' ? MENU_EN_VISIBLE : MENU;
   const [abierto, setAbierto] = useState(false);
   const cabecera = useRef<HTMLElement>(null);
 

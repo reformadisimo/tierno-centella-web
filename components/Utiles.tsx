@@ -196,3 +196,17 @@ export function WhatsappQR() {
     </div>
   );
 }
+
+// Idioma del documento según la página (la web comparte una sola plantilla para los dos idiomas).
+export function IdiomaHtml() {
+  const ruta = usePathname();
+  useEffect(() => {
+    document.documentElement.lang = idiomaDe(ruta) === 'en' ? 'en' : 'es';
+  }, [ruta]);
+  return null;
+}
+
+export function AvisoDemo() {
+  const en = idiomaDe(usePathname()) === 'en';
+  return <div className="aviso-demo">{en ? "Demo version. This is not the firm's official website." : 'Versión de demostración. No es la web oficial del despacho.'}</div>;
+}

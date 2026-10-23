@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { leerColeccion } from '@/lib/contenido';
 import { CASOS } from '@/lib/casos';
+import { AREAS_EN } from '@/lib/areas-en';
 
 const BASE = 'https://tiernocentella.es';
 
@@ -38,6 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((r) => ({ url: BASE + r }));
   const guias = [
     ...CASOS.map((c) => ({ url: `${BASE}/sentencias/${c.slug}` })),
+    ...['/en', '/en/contact', '/en/jesus-tierno', '/en/rulings', '/en/tools'].map((r) => ({ url: BASE + r })),
+    ...CASOS.map((c) => ({ url: `${BASE}/en/rulings/${c.slug}` })),
+    ...AREAS_EN.flatMap((a) => [{ url: `${BASE}/en/${a.slug}` }, ...leerColeccion(`en/${a.carpeta}`).map((p) => ({ url: `${BASE}/en/${a.slug}/${p.slug}`, lastModified: p.actualizado ?? p.fecha }))]),
     ...leerColeccion('acoso').map((p) => ({ url: `${BASE}/acoso-laboral/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('despido').map((p) => ({ url: `${BASE}/despido/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('incapacidad').map((p) => ({ url: `${BASE}/incapacidad-permanente/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),

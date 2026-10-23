@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { idiomaDe } from '@/lib/idioma';
 
 type Eleccion = { analitica: boolean; externos: boolean; publicidad?: boolean; fecha: string };
 const CLAVE = 'tc-cookies';
@@ -16,6 +18,7 @@ export function leerEleccion(): Eleccion | null {
 }
 
 export default function AvisoCookies() {
+  const en = idiomaDe(usePathname()) === 'en';
   const [visible, setVisible] = useState(false);
   const [detalle, setDetalle] = useState(false);
   const [analitica, setAnalitica] = useState(false);
@@ -45,44 +48,54 @@ export default function AvisoCookies() {
     <div className="cookies" role="dialog" aria-label="Cookies" aria-live="polite">
       <div className="cookies-caja">
         <p>
-          <strong>Tu privacidad.</strong> Usamos las cookies imprescindibles para que la web funcione. Con tu permiso, también las de
-          medición de visitas y las de servicios externos como YouTube o Google Maps, que solo se cargan cuando los abres.{' '}
-          <Link href="/cookies">Más información sobre las cookies</Link>.
+          {en ? (
+            <>
+              <strong>Your privacy.</strong> We use the cookies needed for the website to work. With your permission, also visit measurement cookies and
+              those of external services such as YouTube or Google Maps, which only load when you open them.{' '}
+              <Link href="/cookies">More about cookies (in Spanish)</Link>.
+            </>
+          ) : (
+            <>
+              <strong>Tu privacidad.</strong> Usamos las cookies imprescindibles para que la web funcione. Con tu permiso, también las de
+              medición de visitas y las de servicios externos como YouTube o Google Maps, que solo se cargan cuando los abres.{' '}
+              <Link href="/cookies">Más información sobre las cookies</Link>.
+            </>
+          )}
         </p>
         {detalle && (
           <div className="cookies-detalle">
             <label className="casilla">
               <input type="checkbox" checked disabled />
-              <span>Necesarias. Recordar tu elección y que la web funcione. Siempre activas.</span>
+              <span>{en ? 'Necessary. Remember your choice and keep the website working. Always on.' : 'Necesarias. Recordar tu elección y que la web funcione. Siempre activas.'}</span>
             </label>
             <label className="casilla">
               <input type="checkbox" checked={analitica} onChange={(e) => setAnalitica(e.target.checked)} />
-              <span>Medición. Contar visitas de forma agregada para mejorar la web.</span>
+              <span>{en ? 'Measurement. Count visits in aggregate to improve the website.' : 'Medición. Contar visitas de forma agregada para mejorar la web.'}</span>
             </label>
             <label className="casilla">
               <input type="checkbox" checked={externos} onChange={(e) => setExternos(e.target.checked)} />
-              <span>Servicios externos. Vídeos de YouTube y mapa de Google, al pulsarlos.</span>
+              <span>{en ? 'External services. YouTube videos and Google Maps, when you click them.' : 'Servicios externos. Vídeos de YouTube y mapa de Google, al pulsarlos.'}</span>
             </label>
             <label className="casilla">
               <input type="checkbox" checked={publicidad} onChange={(e) => setPublicidad(e.target.checked)} />
-              <span>Publicidad. Saber si llegaste desde un anuncio de Google y si nos contactaste, para no gastar en anuncios que no ayudan a nadie. No te mostramos anuncios personalizados.</span>
+              <span>{en ? 'Advertising. Know whether you came from a Google ad and whether you contacted us, so we do not spend on ads that help nobody. We do not show you personalised ads.' : 'Publicidad. Saber si llegaste desde un anuncio de Google y si nos contactaste, para no gastar en anuncios que no ayudan a nadie. No te mostramos anuncios personalizados.'}</span>
             </label>
           </div>
         )}
         <div className="cookies-botones">
           <button type="button" className="boton" onClick={() => guardar({ analitica: true, externos: true, publicidad: true })}>
-            Aceptar todas
+            {en ? 'Accept all' : 'Aceptar todas'}
           </button>
           <button type="button" className="boton boton-claro" onClick={() => guardar({ analitica: false, externos: false, publicidad: false })}>
-            Rechazar
+            {en ? 'Reject' : 'Rechazar'}
           </button>
           {detalle ? (
             <button type="button" className="boton boton-claro" onClick={() => guardar({ analitica, externos, publicidad })}>
-              Guardar mi elección
+              {en ? 'Save my choice' : 'Guardar mi elección'}
             </button>
           ) : (
             <button type="button" className="boton-enlace" onClick={() => setDetalle(true)}>
-              Configurar
+              {en ? 'Settings' : 'Configurar'}
             </button>
           )}
         </div>

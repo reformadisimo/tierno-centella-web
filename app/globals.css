@@ -5189,3 +5189,16 @@ body:has(.guia-jesus) .barra-movil {
     height: 40px;
   }
 }
+.en-plazo {
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-left: 4px solid var(--marcador);
+  color: var(--tinta);
+  padding: 16px 20px;
+  border-radius: 12px;
+}
+.en-es {
+  color: var(--tinta-suave);
+  font-size: 0.8rem;
+  font-weight: 700;
+}

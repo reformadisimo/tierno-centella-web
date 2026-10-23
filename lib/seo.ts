@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { DESPACHO } from './despacho';
+import { idiomaDe, rutaEnOtroIdioma } from './idioma';
 
 // Dominio definitivo. Mientras sea demo, robots lo bloquea, pero todo apunta ya a la web oficial.
 export const BASE = 'https://tiernocentella.es';
@@ -42,19 +43,29 @@ export function meta({
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: url },
+    alternates: { canonical: url, ...alternativas(ruta) },
     openGraph: {
       title: titulo,
       description,
       url,
       siteName: DESPACHO.nombre,
-      locale: 'es_ES',
+      locale: idiomaDe(ruta) === 'en' ? 'en_GB' : 'es_ES',
       type: tipo,
       ...(images ? { images } : {}),
       ...(tipo === 'article' ? { publishedTime: publicado, modifiedTime: modificado ?? publicado, authors: ['Jesús Tierno Centella'] } : {}),
     },
     twitter: { card: 'summary_large_image', title: titulo, description },
   };
+}
+
+// Versión en el otro idioma, si existe: Google la muestra a quien busca en ese idioma (hreflang).
+function alternativas(ruta: string) {
+  const otra = rutaEnOtroIdioma(ruta);
+  const esInicio = ruta === '/' || ruta === '/en';
+  if (!esInicio && (otra === '/' || otra === '/en')) return {};
+  const es = idiomaDe(ruta) === 'es' ? ruta : otra;
+  const en = idiomaDe(ruta) === 'en' ? ruta : otra;
+  return { languages: { es: BASE + (es === '/' ? '' : es), en: BASE + en, 'x-default': BASE + (es === '/' ? '' : es) } };
 }
 
 export const ID_DESPACHO = `${BASE}/#despacho`;

@@ -438,6 +438,11 @@ Salen del estudio de cómo trabajan los despachos que más clientes captan y de 
 - **El WhatsApp llega con el tema ya escrito** ("escribo desde la web por un tema de acoso laboral") y el botón de herramientas del móvil cambia según la página: el test en acoso, el comprobador en incapacidad, el calendario en Mujer y trabajo.
 - **Una página de error que no pierde a nadie**: si alguien llega por un enlace roto, ve tus temas, el chat y el teléfono.
 - **Tu colegio y tu número de colegiado en el pie**, como exige el Código Deontológico. Solo nos falta que nos los digas (pregunta del apartado 24).
+- **Tu web también en inglés**: un botón ES / EN arriba cambia de idioma en cualquier página. Portada, las cuatro áreas, las guías, tus sentencias, tu página y contacto, pensados para los muchos trabajadores extranjeros que viven en Madrid y buscan un abogado que les hable en su idioma. El asistente también contesta en inglés. Las herramientas y el blog los iremos traduciendo con calma.
+- **Un buscador para toda la web**: la lupa de arriba busca en todas las guías, artículos, herramientas, sentencias, el glosario y las preguntas frecuentes. Y si alguien no encuentra lo que busca, le ofrece preguntárselo al asistente.
+- **Cada guía, con su índice y para escucharla**: las guías largas empiezan con un índice "En esta guía" para saltar a lo que interesa, y un botón "Escuchar esta guía" que la lee en voz alta. Pensado para personas mayores, para quien está de baja y le cuesta leer, o para escucharla mientras conduce.
+- **"Guardar o imprimir mi resultado"** en todas las herramientas: el cálculo de la indemnización, los plazos o el resultado del test salen en una hoja limpia, con tus datos de contacto arriba, para llevarla a la consulta.
+- **WhatsApp también desde el ordenador**: quien pulsa WhatsApp en el ordenador ve un código para escanearlo con el móvil, o puede abrir WhatsApp Web. Antes, muchos se quedaban ahí.
 - **Cookies de publicidad aparte**: quien acepta, nos deja saber si llegó desde un anuncio y si contactó, que es lo que necesita Google Ads para aprender. Con el modo de consentimiento de Google, que es obligatorio en Europa para medir los anuncios.
 
 **Lo que dejamos para más adelante, a propósito**:
@@ -516,6 +521,8 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 **Lo que no hace, a propósito**: no busca en internet en tiempo real. Así no se inventa fuentes ni recomienda cosas que no has revisado tú. Si algún día quieres que consulte también el BOE o noticias recientes, se le puede activar.
 
 **Cómo se comporta**: dice que es una inteligencia artificial y que puede equivocarse; no da veredictos ni promete resultados; si no sabe algo, lo dice; da primero el plazo que corre; y si alguien habla de hacerse daño, da el 024. Nunca dice que la consulta sea gratuita: explica el precio y ofrece lo que sí es gratis (las herramientas, llamar o escribir por WhatsApp para saber si el caso necesita consulta, o dejar el teléfono para que le llaméis).
+
+**No pierde nada y te lo pasa todo**: la conversación se guarda mientras la persona navega, así que si pulsa una guía que le recomienda, el chat sigue ahí al volver. Y dentro del chat hay un botón **"Que te llamemos"**: deja su nombre y su teléfono, y al despacho le llega un correo con **toda la conversación**. Cuando la llaméis, ya sabréis su caso, su tema y su plazo, sin hacerle repetir nada. Las preguntas que sugiere cambian según la página (en despido, "¿Cuánto me corresponde?"; en incapacidad, "Me la han denegado, ¿qué hago?"), y si alguien escribe en inglés, contesta en inglés.
 
 **Acompaña sin presionar**: primero ayuda de verdad; después propone el siguiente paso que encaja (una herramienta si solo se está informando, llamar hoy si tiene un plazo corriendo). Una sola invitación por mensaje. Dentro del chat hay además botones fijos para llamar, escribir por WhatsApp o pedir que le llaméis.
 

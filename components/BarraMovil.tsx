@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { idiomaDe } from '@/lib/idioma';
 
 // El WhatsApp llega con el tema ya escrito y el tercer botón lleva a la herramienta de esa sección:
 // quien lee sobre acoso no necesita la calculadora de despido.
@@ -13,6 +14,10 @@ const SEGUN_TEMA: { ruta: string; tema: string; boton: string; href: string }[] 
   { ruta: '/mujer-y-trabajo', tema: 'embarazo o conciliación', boton: 'Permisos', href: '/herramientas/calendario-permisos' },
   { ruta: '/despido', tema: 'despido', boton: 'Calcular', href: '/calculadora-indemnizacion' },
   { ruta: '/consulta/despido', tema: 'despido', boton: '', href: '' },
+  { ruta: '/en/workplace-harassment', tema: 'workplace harassment', boton: 'Test (ES)', href: '/herramientas/test-acoso' },
+  { ruta: '/en/permanent-disability', tema: 'permanent disability', boton: 'Check (ES)', href: '/herramientas/comprobador-incapacidad' },
+  { ruta: '/en/women-at-work', tema: 'pregnancy or work-life balance', boton: 'Leave (ES)', href: '/herramientas/calendario-permisos' },
+  { ruta: '/en/dismissal', tema: 'dismissal', boton: 'Calculate', href: '/calculadora-indemnizacion' },
 ];
 
 export default function BarraMovil() {
@@ -20,17 +25,24 @@ export default function BarraMovil() {
   // En las landings de anuncios no sacamos a nadie de la página: el tercer botón lleva al formulario.
   const enLanding = ruta.startsWith('/consulta/');
   const tema = SEGUN_TEMA.find((t) => ruta.startsWith(t.ruta));
-  const mensaje = tema ? `Hola, escribo desde la web por un tema de ${tema.tema}.` : 'Hola, quiero consultar un caso laboral.';
+  const en = idiomaDe(ruta) === 'en';
+  const mensaje = en
+    ? tema
+      ? `Hello, I am writing from the website about ${tema.tema}.`
+      : 'Hello, I would like to ask about an employment matter.'
+    : tema
+      ? `Hola, escribo desde la web por un tema de ${tema.tema}.`
+      : 'Hola, quiero consultar un caso laboral.';
   return (
-    <nav className="barra-movil" aria-label="Contacto rápido">
-      <a href={DESPACHO.telefonoHref}>Llamar</a>
+    <nav className="barra-movil" aria-label={en ? 'Quick contact' : 'Contacto rápido'}>
+      <a href={DESPACHO.telefonoHref}>{en ? 'Call' : 'Llamar'}</a>
       <a href={enlaceWhatsapp(mensaje)}>WhatsApp</a>
       {enLanding ? (
         <a href="#lf-arriba">Te llamamos</a>
       ) : (
-        <a href={tema?.href || '/calculadora-indemnizacion'}>{tema?.boton || 'Calcular'}</a>
+        <a href={tema?.href || (en ? '/en/tools' : '/calculadora-indemnizacion')}>{tema?.boton || (en ? 'Tools' : 'Calcular')}</a>
       )}
-      <button type="button" onClick={() => window.dispatchEvent(new Event('abrir-asistente'))} aria-label="Abrir el chat">
+      <button type="button" onClick={() => window.dispatchEvent(new Event('abrir-asistente'))} aria-label={en ? 'Open the chat' : 'Abrir el chat'}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ verticalAlign: '-3px', marginRight: 5 }}>
           <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12z" />
         </svg>

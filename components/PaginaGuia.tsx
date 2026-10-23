@@ -79,7 +79,7 @@ export default function PaginaGuia({
       {pieza.faq.length > 0 && <JsonLd datos={esquemaFaq(pieza.faq)} />}
       <header className="cabeza-pagina">
         <div className="contenedor">
-          <nav className="migas" aria-label="Estás en">
+          <nav className="migas" aria-label={en ? "You are here" : "Estás en"}>
             {migas.map((m, i) => (
               <span key={m.href}>
                 {i > 0 && ' / '}
