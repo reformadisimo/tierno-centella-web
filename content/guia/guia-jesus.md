@@ -14,7 +14,7 @@ Jesús, esta guía te cuenta qué hemos hecho con tu web, por qué y qué podrí
 | Tiempo hasta ver el contenido en móvil | 18,3 segundos | **3,2 segundos** |
 | Accesibilidad | 84 | **100** |
 | Herramientas gratuitas para el cliente | 3 tests | **14** (calculadoras, tests y autodiagnóstico para colegios) |
-| Guías y artículos actualizados a 2026 | Blog parado en 2022 | **42 páginas** escritas para quien lo está viviendo |
+| Guías y artículos actualizados a 2026 | Blog parado en 2022 | **45 páginas** escritas para quien lo está viviendo |
 | Asistente que responde a cualquier hora | No | **Sí**, con todo el contenido de la web |
 | Sección para trabajadoras: embarazo, conciliación, acoso sexual | No | **Sí** |
 | Direcciones antiguas del blog redirigidas | | **Las 220**, una a una |
@@ -213,7 +213,7 @@ Y dos casos tuyos de 2025 que encajan de lleno: la madre despedida por pedir per
 
 Abajo a la derecha, "Pregunta tu caso". Contesta a cualquier hora con lo que sabe:
 
-- El texto completo de las 42 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las herramientas.
+- El texto completo de las 45 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las herramientas.
 - Un resumen del derecho laboral vigente en octubre de 2026 (plazos, indemnizaciones, despido nulo, permisos, incapacidad, paro).
 
 **Cómo se comporta**: dice que es una inteligencia artificial y que puede equivocarse; no da veredictos ni promete resultados; si no sabe algo, lo dice; da el plazo que corre; deriva siempre a una consulta; y si alguien habla de hacerse daño, da el 024. Nunca dice que la consulta sea gratuita.
@@ -322,7 +322,7 @@ Hemos revisado los 220 artículos de tu blog uno a uno:
 - **Guías** (las secciones de Acoso, Despido, Incapacidad y Mujer y trabajo): contenido de fondo que no caduca. Son las páginas que deben salir en Google.
 - **Blog**: actualidad (sentencias, cambios de ley) y respuestas a dudas concretas. Cada artículo enlaza a su guía y a su herramienta, para que la persona avance.
 
-**Ya hay 21 artículos en el blog**, 9 de ellos nuevos hoy (despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso y canal de denuncias). **Necesitamos que los revises**.
+**Ya hay 24 artículos en el blog**, 12 de ellos nuevos hoy (despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso, canal de denuncias, qué despidos dan derecho a paro, me han denunciado por acoso y es mentira, y el expediente de incapacidad permanente). **Necesitamos que los revises**.
 
 > Una advertencia honesta: no tenemos acceso a Analytics ni a Search Console, así que no sabemos qué artículos antiguos te traen visitas hoy. Con esos datos afinaríamos las redirecciones y el orden del calendario.
 
