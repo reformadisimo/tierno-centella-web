@@ -1,7 +1,7 @@
 ---
 titulo: Dismissal during pregnancy, birth leave or breastfeeding leave
 tituloSeo: Dismissed while pregnant in Spain: it is void
-descripcion: If you are dismissed while pregnant, on birth leave, on breastfeeding leave or in the year after you return, it is void unless there is a real, unrelated cause.
+descripcion: Dismissed while pregnant, on birth or breastfeeding leave or in the year after you return? It is void unless there is a real, unrelated cause.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: mujer

@@ -1,6 +1,6 @@
 ---
 titulo: Workplace harassment as a crime
-descripcion: When workplace harassment is a crime under Article 173.1 of the Criminal Code: requirements, penalties, reporting, limitation period and the employment route.
+descripcion: When workplace harassment is a crime under Article 173.1 of the Criminal Code: requirements, penalties, reporting, time limits and the employment route.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso
