@@ -372,6 +372,8 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 ## 6. Redes sociales
 
+[[redes]]
+
 **Instagram** (4.007 seguidores, 265 publicaciones). Tres etapas: 2019-2021 con mucho contenido genérico y de otras áreas; **tres años de silencio** (2021-2024); y desde 2024, reels en el despacho con Jesús e Irene, que es lo mejor que tenéis. Los que más gustan: qué es el acoso (85 me gusta), cómo saber si lo sufro con Piñuel (76), "el andamio sin arnés" (75). En 2026 el ritmo ha bajado a uno al mes. Seguís usando #ertecoronavirus y #abogadosbilbao.
 
 **LinkedIn.** Tu perfil tiene 2.371 seguidores, pero publicas muy poco. Es donde están directores de colegios, recursos humanos, sindicatos y otros abogados: el canal para las campañas a instituciones. Hay que fusionar las dos páginas de empresa.
@@ -935,6 +937,8 @@ Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activ
 
 **Lo que podemos conectar si nos das acceso**: Google Analytics, Search Console, Google Ads, Semrush (ya lo usamos), tu ficha de Google, Meta, Instagram, Facebook, LinkedIn y el correo de seguimiento. Con todo conectado, el informe deja de ser una opinión y pasa a ser un dato.
 
+[[conexiones]]
+
 **Lo que recibirías** (una vez por semana, en una página y sin jerga):
 
 | Qué | Ejemplo de lo que te diríamos |
@@ -1016,15 +1020,7 @@ Tu web actual no se tira: todo su contenido aprovechable está dentro de la nuev
 
 ## 23. Los accesos que necesitamos (y cómo darlos)
 
-| Qué | Para qué | Cómo |
-| --- | --- | --- |
-| Google Analytics | Medir visitas | Administrar > Gestión de acceso > añadir nuestro correo como lector |
-| Google Tag Manager | Mantener el mismo contenedor en la web nueva | Administrador > Gestión de usuarios > añadir nuestro correo con permiso para publicar (solo en este contenedor) |
-| Google Ads | Ver cuánto cuesta cada consulta y proponer mejoras | Herramientas > Acceso y seguridad > añadir nuestro correo con acceso de solo lectura |
-| Search Console | Ver búsquedas y redirecciones | Configuración > Usuarios y permisos > añadir usuario |
-| Ficha de Google | Responder reseñas y publicar | Perfil de Empresa > Gestores > añadir gestor |
-| Dominio tiernocentella.es | Hacer el cambio de web | Nos dices dónde está contratado y lo hacemos contigo |
-| Instagram, Facebook y LinkedIn | Programar y medir (si quieres) | Meta Business Suite y administrador de la página de LinkedIn |
+[[accesos]]
 
 Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, la ficha de Google y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras. **Las cuentas siguen siendo tuyas**: tú eres el propietario y nosotros, invitados. Si alguna hoy no está a tu nombre, lo primero que hacemos es ponerla a tu nombre.
 

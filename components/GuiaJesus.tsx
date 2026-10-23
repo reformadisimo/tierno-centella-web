@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
 import OficiosGuia from './OficiosGuia';
+import { BloqueAccesos, BloqueConexiones, BloqueRedes } from './LogosGuia';
 import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
@@ -19,10 +20,10 @@ export type SeccionGuia = {
   franja?: { hoy: string; luego: string };
 };
 const LOGOS: { src: string; nombre: string; texto: string }[] = [
-  { src: 'google-analytics.png', nombre: 'Google Analytics', texto: 'El contador de visitas: cuánta gente entra y de dónde viene.' },
+  { src: 'google-analytics-icono.png', nombre: 'Google Analytics', texto: 'El contador de visitas: cuánta gente entra y de dónde viene.' },
   { src: 'google-search-console.png', nombre: 'Search Console', texto: 'Cómo te ve Google: con qué búsquedas sales y en qué puesto.' },
   { src: 'googletagmanager.svg', nombre: 'Tag Manager', texto: 'La caja donde se enchufan Analytics y los anuncios.' },
-  { src: 'google-ads.png', nombre: 'Google Ads', texto: 'Los anuncios que salen arriba en Google. Pagas por clic.' },
+  { src: 'google-ads-icono.png', nombre: 'Google Ads', texto: 'Los anuncios que salen arriba en Google. Pagas por clic.' },
   { src: 'google-business-profile.jpg', nombre: 'Ficha de Google', texto: 'Tu tarjeta en Maps: fotos, horario, teléfono y reseñas.' },
   { src: 'semrush.svg', nombre: 'Semrush', texto: 'Qué busca la gente, cómo van tus rivales y qué dicen las IA de ti.' },
   { src: 'pagespeedinsights.svg', nombre: 'PageSpeed', texto: 'La nota oficial de Google a la velocidad de tu web.' },
@@ -33,6 +34,10 @@ const LOGOS: { src: string; nombre: string; texto: string }[] = [
   { src: 'instagram.jpg', nombre: 'Instagram', texto: 'Tus reels: el acoso explicado en un minuto.' },
   { src: 'linkedin.svg', nombre: 'LinkedIn', texto: 'Donde están los colegios, empresas e instituciones.' },
   { src: 'facebook.png', nombre: 'Facebook', texto: 'Tu página y la comunidad de siempre.' },
+  { src: 'youtube.svg', nombre: 'YouTube', texto: 'Tus entrevistas y casos ganados, en vídeo.' },
+  { src: 'x.svg', nombre: 'X', texto: 'La antigua Twitter: hoy tus dos cuentas están paradas.' },
+  { src: 'openai.svg', nombre: 'ChatGPT', texto: 'La IA a la que cada vez más gente le pregunta por un abogado.' },
+  { src: 'googlegemini.svg', nombre: 'Gemini', texto: 'La IA de Google: también responde y recomienda.' },
 ];
 
 function BloqueLogos() {
@@ -408,6 +413,9 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   dolor: BloqueDolor,
   anuncios: AnunciosGuia,
   oficios: OficiosGuia,
+  redes: BloqueRedes,
+  conexiones: BloqueConexiones,
+  accesos: BloqueAccesos,
   'mock-ficha': MockupFicha,
   'mock-ia': MockupIA,
   'mock-velocidad': MockupVelocidad,

@@ -1,5 +1,6 @@
 // Mockups en móvil para la guía de Jesús: "hoy" frente a "con nosotros", para verlo de un vistazo sin leer.
 // Las reseñas y los mensajes son ejemplos (lo dice cada pie); las cifras son las de la guía.
+import { Logo } from './LogosGuia';
 
 function Movil({ titulo, children, tono }: { titulo: string; children: React.ReactNode; tono: 'mal' | 'bien' }) {
   return (
@@ -26,7 +27,7 @@ function Ficha({ nota, total, respondida }: { nota: string; total: number; respo
       <div className="mk-mapa" aria-hidden="true">
         <span className="mk-pin" />
       </div>
-      <p className="mk-ficha-nombre">Tierno Centella Abogados</p>
+      <p className="mk-ficha-nombre lg-barra"><Logo nombre="Ficha de Google" tam={22} /> Tierno Centella Abogados</p>
       <p className="mk-ficha-nota">
         <b>{nota}</b> <Estrellas n={Math.round(parseFloat(nota.replace(',', '.')))} /> <small>({total})</small>
       </p>
@@ -73,7 +74,7 @@ export function MockupFicha() {
 function Chat({ respuesta, nombraTu }: { respuesta: string[]; nombraTu: boolean }) {
   return (
     <div className="mk-chatgpt">
-      <p className="mk-chatgpt-barra">ChatGPT</p>
+      <p className="mk-chatgpt-barra lg-barra"><Logo nombre="ChatGPT" tam={20} /> ChatGPT</p>
       <p className="mk-pregunta">¿Qué abogado de acoso laboral me recomiendas en Madrid?</p>
       <div className="mk-respuesta-ia">
         {respuesta.map((r, i) => (
@@ -166,7 +167,7 @@ export function MockupAvisoChat() {
     <div className="gm-rejilla">
       <Movil tono="bien" titulo="Una persona habla con el chat a las 23:40 y pide que la llaméis. Esto es lo que te llega (ejemplo).">
         <div className="mk-correo">
-          <p className="mk-correo-barra">Correo</p>
+          <p className="mk-correo-barra">Correo del despacho</p>
           <p className="mk-correo-de">
             <b>Web Tierno Centella</b> <small>23:41</small>
           </p>
@@ -187,7 +188,9 @@ export function MockupAvisoChat() {
       <Movil tono="bien" titulo="Y a la mañana siguiente llamas sabiendo ya su caso, su tema y su plazo, sin hacerle repetir nada.">
         <div className="mk-whatsapp">
           <p className="mk-wa-barra">
-            <b>Laura</b>
+            <b className="lg-barra">
+              <Logo nombre="WhatsApp" tam={20} /> Laura
+            </b>
             <small>en línea</small>
           </p>
           <p className="mk-burbuja mk-wa-yo">Buenos días, Laura. Soy Jesús Tierno. He leído lo que nos contaste anoche: tu plazo corre hasta el 20 de noviembre y por lo que cuentas el despido podría ser nulo. ¿Te llamo ahora?</p>

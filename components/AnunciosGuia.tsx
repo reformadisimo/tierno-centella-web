@@ -1,3 +1,4 @@
+import { Logo } from './LogosGuia';
 // Galería de anuncios para la guía de Jesús: los suyos tal como se ven hoy, los de la competencia y cómo serían los nuestros.
 // Los textos de los anuncios ajenos están copiados tal cual de Semrush y de la Biblioteca de anuncios de Meta (23 de octubre de 2026).
 
@@ -232,7 +233,8 @@ function MovilesComparados() {
         </div>
       </Movil>
       <Movil tono="bien" titulo="Y en Instagram: tu cara, una pregunta que la persona se reconoce y el test de acoso.">
-        <div className="gm-insta-barra" aria-hidden="true">
+        <div className="gm-insta-barra lg-barra" aria-hidden="true">
+          <Logo nombre="Instagram" tam={20} />
           <b>Instagram</b>
         </div>
         <div className="gm-insta-cabeza">
@@ -257,21 +259,21 @@ export default function AnunciosGuia() {
     <div className="ga">
       <h4 className="ga-grupo">De un vistazo: hoy y con nosotros</h4>
       <MovilesComparados />
-      <h4 className="ga-grupo">Tus anuncios en Google, tal como se ven</h4>
+      <h4 className="ga-grupo lg-barra"><Logo nombre="Google Ads" tam={24} /> Tus anuncios en Google, tal como se ven</h4>
       <div className="ga-rejilla">
         {TUYOS.map((a) => (
           <TarjetaGoogle key={a.titulo} a={a} />
         ))}
       </div>
 
-      <h4 className="ga-grupo">Los de tu competencia</h4>
+      <h4 className="ga-grupo lg-barra"><Logo nombre="Google Ads" tam={24} /> Los de tu competencia</h4>
       <div className="ga-rejilla">
         {ELLOS.map((a) => (
           <TarjetaGoogle key={a.titulo} a={a} />
         ))}
       </div>
 
-      <h4 className="ga-grupo">En Instagram y Facebook</h4>
+      <h4 className="ga-grupo lg-barra"><Logo nombre="Instagram" tam={24} /> <Logo nombre="Facebook" tam={24} /> En Instagram y Facebook</h4>
       <div className="ga-rejilla">
         <TarjetaSocial
           quien="Tierno Centella Abogados"
@@ -301,7 +303,7 @@ export default function AnunciosGuia() {
         />
       </div>
 
-      <h4 className="ga-grupo">Así serían los tuyos en Google</h4>
+      <h4 className="ga-grupo lg-barra"><Logo nombre="Google Ads" tam={24} /> Así serían los tuyos en Google</h4>
       <div className="ga-rejilla">
         {NUESTROS.map((a) => (
           <TarjetaGoogle key={a.titulo} a={a} />
