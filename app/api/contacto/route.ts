@@ -20,6 +20,7 @@ export async function POST(req: Request) {
   const tema = limpiar(datos.tema, 80);
   const mensaje = limpiar(datos.mensaje, 3000);
   const cuando = limpiar(datos.cuando, 80);
+  const origen = limpiar(datos.origen, 400);
   if (!nombre || (!telefono && !email) || !datos.acepto) {
     return Response.json({ error: 'Faltan tu nombre, un teléfono o correo, o aceptar la política de privacidad.' }, { status: 400 });
   }
@@ -34,7 +35,7 @@ export async function POST(req: Request) {
   const html = `<h2>Nueva consulta desde la web</h2>
 <p><strong>Nombre:</strong> ${escapar(nombre)}<br><strong>Teléfono:</strong> ${escapar(telefono || '-')}<br><strong>Correo:</strong> ${escapar(
     email || '-',
-  )}<br><strong>Tema:</strong> ${escapar(tema || '-')}<br><strong>Cuándo llamar:</strong> ${escapar(cuando || '-')}</p>
+  )}<br><strong>Tema:</strong> ${escapar(tema || '-')}<br><strong>Cuándo llamar:</strong> ${escapar(cuando || '-')}<br><strong>Origen:</strong> ${escapar(origen || 'Web')}</p>
 <p>${escapar(mensaje || '(sin mensaje)').replace(/\n/g, '<br>')}</p>`;
 
   const r = await fetch('https://api.resend.com/emails', {
