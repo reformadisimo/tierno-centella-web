@@ -32,7 +32,7 @@ Article 50 of the Workers' Statute allows you to ask for your contract to be ter
 
 If the court upholds your claim:
 
-- **Compensation as in an unfair dismissal.** 33 days' salary per year worked, up to a maximum of 24 months' pay. Time worked before 12 February 2012 is calculated at 45 days per year. You can estimate it with the [compensation calculator](/calculadora-indemnizacion) (in Spanish).
+- **Compensation as in an unfair dismissal.** 33 days' salary per year worked, up to a maximum of 24 months' pay. Time worked before 12 February 2012 is calculated at 45 days per year. You can estimate it with the [compensation calculator](/en/tools/compensation-calculator).
 - **Moral damages.** If the violation of your fundamental rights is proven, you can add further compensation. See [what you can claim](/en/workplace-harassment/what-you-can-claim-for-harassment).
 - **Unemployment benefit.** Termination through this route is considered involuntary, so you can receive unemployment benefit (prestación por desempleo) if you meet the contribution requirements.
 
@@ -72,7 +72,7 @@ An example not handled by this firm, discussed as case law: Social Court No. 1 o
 
 It is not enough for the dismissal to come after your complaint. You have to provide indications that the two are connected: how close together they are in time, that there were no problems before, that the reasons for the dismissal are weak. If you provide them, the company will have to prove that the dismissal had nothing to do with it.
 
-> You have 20 working days (días hábiles) to challenge a dismissal, and August counts. If you are dismissed, do not wait. Check your dates in [deadlines](/herramientas/plazos) (in Spanish).
+> You have 20 working days (días hábiles) to challenge a dismissal, and August counts. If you are dismissed, do not wait. Check your dates in [deadlines](/en/tools/deadlines).
 
 Since Supreme Court (Tribunal Supremo) judgment 1250/2024 of 18 November, for disciplinary dismissals after that date the company must first give you the opportunity to defend yourself against the accusations (prior hearing, audiencia previa). The Supreme Court has since held that, if it does not, the dismissal is unfair. More information in [dismissal](/en/dismissal).
 

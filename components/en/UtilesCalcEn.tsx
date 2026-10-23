@@ -1,7 +1,5 @@
 'use client';
 
-import { BotonImprimir } from '../Utiles';
-
 // Utilidades en inglés para las calculadoras de /en/tools. La lógica de cálculo sigue en lib/calculos.ts.
 
 // Importe sin decimales con formato inglés: €28,000.
@@ -24,10 +22,8 @@ export const fechaLargaEn = (iso: string) =>
 // Fecha corta dd/mm/aaaa.
 export const fechaCortaEn = (iso: string) => iso.split('-').reverse().join('/');
 
-// Botón para guardar o imprimir el resultado, con el texto en inglés.
-export function BotonImprimirEn({ texto }: { texto?: string }) {
-  return <BotonImprimir texto={texto ?? 'Save or print my result'} />;
-}
+// El botón de imprimir en inglés vive en UtilesEn.tsx; se reexporta para las calculadoras.
+export { BotonImprimirEn } from './UtilesEn';
 
 // Aviso si el salario parece mensual (o con un cero de más) en una casilla que pide el anual.
 export function avisoSalarioAnualEn(n: number) {

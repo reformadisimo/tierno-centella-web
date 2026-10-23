@@ -37,4 +37,4 @@ mujer/reduccion-y-adaptacion-de-jornada -> reduced-and-adapted-working-hours
 Ejemplos de enlace: /acoso-laboral/como-demostrar-el-acoso -> /en/workplace-harassment/how-to-prove-workplace-harassment
 /mujer-y-trabajo/despido-embarazada -> /en/women-at-work/dismissal-during-pregnancy
 
-Todo lo que NO está en este mapa (herramientas /herramientas/..., /calculadora-indemnizacion, /blog/..., /glosario, /preguntas-frecuentes, /videos...) se queda con su ruta española y se añade " (in Spanish)" tras el texto del enlace. Excepción: /sentencias y /contacto sí están en el mapa.
+Todo lo que NO está en este mapa (herramientas /herramientas/..., /calculadora-indemnizacion, /blog/..., /glosario, /preguntas-frecuentes, /videos...) se queda con su ruta española. Las herramientas (/en/tools/...) y el blog (/en/blog/...) ya están en inglés: usa sus rutas inglesas.

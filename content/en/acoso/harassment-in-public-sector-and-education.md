@@ -54,7 +54,7 @@ The usual steps are:
 2. Wait for the decision. If it is refused, or there is no answer within the deadline, it is treated as rejected.
 3. Go to the Administrative High Court or Administrative Court (Tribunal or Juzgado de lo Contencioso-Administrativo).
 
-> The deadline to claim financial liability is one year. For harm to your health, it runs from when you recover or from when the lasting effects (secuelas) are known. Check your dates in [deadlines](/herramientas/plazos) (in Spanish).
+> The deadline to claim financial liability is one year. For harm to your health, it runs from when you recover or from when the lasting effects (secuelas) are known. Check your dates in [deadlines](/en/tools/deadlines).
 
 ### Protection of fundamental rights
 

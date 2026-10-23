@@ -91,7 +91,7 @@ With horizontal harassment, the routes are the same as in all other cases:
 
 We go into detail in [what you can claim](/en/workplace-harassment/what-you-can-claim-for-harassment).
 
-> The deadline to claim damages is one year. Check your dates in [deadlines](/herramientas/plazos) (in Spanish).
+> The deadline to claim damages is one year. Check your dates in [deadlines](/en/tools/deadlines).
 
 If your health suffers, see your doctor and explain that the cause is work-related. We explain how in [sick leave for anxiety due to harassment](/en/workplace-harassment/sick-leave-for-anxiety-due-to-harassment).
 

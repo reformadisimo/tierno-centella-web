@@ -11,7 +11,7 @@ es: tipos-de-despido
 
 In Spain there are three main forms of dismissal: disciplinary dismissal (despido disciplinario), for a serious breach by the worker; objective dismissal (despido objetivo), for reasons relating to the company or the job; and collective dismissal (despido colectivo), when it affects many workers at once. Then, if you challenge it, a judge classifies it as justified (procedente), unfair (improcedente) or void (nulo), and that classification determines your severance pay and whether you can go back to your job. You have 20 working days to make your claim.
 
-> If you have just been dismissed, the clock is already running: 20 working days from the day after the dismissal. You can work it out with [the deadline calculator](/herramientas/plazos) (in Spanish).
+> If you have just been dismissed, the clock is already running: 20 working days from the day after the dismissal. You can work it out with [the deadline calculator](/en/tools/deadlines).
 
 ## The three forms of dismissal
 
@@ -67,7 +67,7 @@ The company does not prove the reason or does not meet the formal requirements (
 - Taking you back in your job and paying your wages from the dismissal until reinstatement (salarios de tramitación).
 - Paying you severance for unfair dismissal: 33 days per year, up to a maximum of 24 months' pay. If you started before 12 February 2012, the time before that date is calculated at 45 days per year.
 
-If you are a workers' representative, the choice is yours, not the company's. You can get an estimate with [the severance calculator](/calculadora-indemnizacion) (in Spanish).
+If you are a workers' representative, the choice is yours, not the company's. You can get an estimate with [the severance calculator](/en/tools/compensation-calculator).
 
 In 2024, the European Committee of Social Rights found that this severance system does not provide sufficient compensation in all cases. For now, the legal amount remains the same.
 

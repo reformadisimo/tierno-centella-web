@@ -1,6 +1,6 @@
 ---
 titulo: How to report workplace harassment, step by step
-descripcion: The five ways to report harassment at work (company, Labour Inspectorate, social court, criminal route and public authority), in what order and how to avoid reprisals.
+descripcion: Five ways to report harassment at work (company, Labour Inspectorate, Social Court, criminal route and public authority), in what order and how to stay safe.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

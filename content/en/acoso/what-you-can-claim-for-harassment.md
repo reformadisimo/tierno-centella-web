@@ -40,7 +40,7 @@ If the judge rules in your favour:
 - You can receive unemployment benefit (paro), because it is an involuntary termination.
 - You can add compensation for moral damages, for the violation of your fundamental rights.
 
-You can calculate the statutory part of the compensation with our [compensation calculator](/calculadora-indemnizacion) (in Spanish).
+You can calculate the statutory part of the compensation with our [compensation calculator](/en/tools/compensation-calculator).
 
 > While the case is going through, you generally keep working. There are exceptions when continuing puts your health or your dignity at risk. We explain them in [quitting your job because of harassment](/en/workplace-harassment/quitting-your-job-because-of-harassment).
 
@@ -88,7 +88,7 @@ Deadlines are what ruin the most cases. These are the general ones:
 - **Termination of the contract under article 50:** it has to be requested while the contract is still in force. If you are dismissed first, the strategy changes.
 - **If you are dismissed:** 20 working days (días hábiles) to challenge the dismissal. August counts.
 
-> For most claims you must first file a request for conciliation (papeleta de conciliación); for the protection of fundamental rights it is not compulsory. Check your dates with our [deadlines](/herramientas/plazos) (in Spanish) tool.
+> For most claims you must first file a request for conciliation (papeleta de conciliación); for the protection of fundamental rights it is not compulsory. Check your dates with our [deadlines](/en/tools/deadlines) tool.
 
 ## Frequently asked questions
 

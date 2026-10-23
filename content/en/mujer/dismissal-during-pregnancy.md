@@ -13,7 +13,7 @@ es: despido-embarazada
 
 If you are dismissed while pregnant, on birth leave, on breastfeeding leave (permiso de lactancia) or on reduced working hours (reducción de jornada) for caring, the law presumes the dismissal is void (despido nulo). You do not have to prove that this is why you were dismissed: it is the employer that has to prove a real cause that has nothing to do with it. If it cannot, the judge orders it to reinstate you and to pay you all the salary you did not receive.
 
-> The deadline does not wait: you have 20 working days from the dismissal to file the conciliation request (papeleta de conciliación). Work out your last day with [the deadline calculator](/herramientas/plazos) (in Spanish).
+> The deadline does not wait: you have 20 working days from the dismissal to file the conciliation request (papeleta de conciliación). Work out your last day with [the deadline calculator](/en/tools/deadlines).
 
 ## Who is protected
 
@@ -50,7 +50,7 @@ It may be, but the employer has to prove the cause and that choosing your post h
 
 ### "Sign here, it's an agreement"
 
-Do not sign a voluntary resignation or an exit agreement without a lawyer seeing it. If you sign the final settlement (finiquito), add "no conforme" (not in agreement) next to your signature. We explain this in [what signing the finiquito as "no conforme" means](/blog/finiquito-firmar-no-conforme) (in Spanish).
+Do not sign a voluntary resignation or an exit agreement without a lawyer seeing it. If you sign the final settlement (finiquito), add "no conforme" (not in agreement) next to your signature. We explain this in [what signing the finiquito as "no conforme" means](/en/blog/signing-the-final-settlement-not-in-agreement).
 
 ## What to do from today
 
@@ -59,7 +59,7 @@ Do not sign a voluntary resignation or an exit agreement without a lawyer seeing
 3. Keep the messages from the previous weeks: changes in how you were treated, comments about the pregnancy, duties taken away from you.
 4. Do not let the 20 working days go by.
 
-If you want to know how strong your case is, take [the void dismissal test](/herramientas/test-nulidad) (in Spanish) or call us on 913 24 97 97.
+If you want to know how strong your case is, take [the void dismissal test](/en/tools/void-dismissal-test) or call us on 913 24 97 97.
 
 ## Frequently asked questions
 

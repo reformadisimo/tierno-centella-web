@@ -10,7 +10,7 @@ es: reclamacion-previa-y-demanda
 
 If the INSS (Spanish Social Security) refuses your permanent disability (incapacidad permanente) or recognises a lower degree than you believe you are entitled to, you must first file a prior administrative claim (reclamación previa) with the INSS itself within 30 working days of being notified. If the INSS rejects it or does not reply within 45 working days, you have another 30 working days to file a lawsuit (demanda) at the Labour Court (Juzgado de lo Social). At the trial, a judge reviews your case with the medical reports and can recognise the degree the INSS refused.
 
-> Key deadline: 30 working days from when you are notified of the INSS decision. If it passes, you will have to start again and you will lose months of pension. Work it out with [the deadline calculator](/herramientas/plazos) (in Spanish).
+> Key deadline: 30 working days from when you are notified of the INSS decision. If it passes, you will have to start again and you will lose months of pension. Work it out with [the deadline calculator](/en/tools/deadlines).
 
 ## When you can make a claim
 

@@ -70,7 +70,7 @@ You can ask the National Social Security Institute (Instituto Nacional de la Seg
 
 If the INSS refuses, you can file a prior administrative claim (reclamación previa) and then a claim in the Social Court (Juzgado de lo Social).
 
-> The prior administrative claim against the INSS decision must be filed within 30 working days (días hábiles) of being notified. Check your dates in [deadlines](/herramientas/plazos) (in Spanish).
+> The prior administrative claim against the INSS decision must be filed within 30 working days (días hábiles) of being notified. Check your dates in [deadlines](/en/tools/deadlines).
 
 This procedure does not stop your sick leave: while it is being decided, you remain on leave and are paid as for a common illness. If the decision goes in your favour, the differences are paid to you.
 

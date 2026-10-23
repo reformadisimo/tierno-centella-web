@@ -1,6 +1,6 @@
 ---
 titulo: The types of workplace harassment and how to recognise them
-descripcion: Harassment by a boss, coworkers or subordinates, and by its aim, from strategic to perverse harassment. Concrete examples to understand what is happening to you.
+descripcion: Harassment by a boss, coworkers or subordinates, and by its aim, from strategic to perverse harassment. Concrete examples to understand what is happening.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

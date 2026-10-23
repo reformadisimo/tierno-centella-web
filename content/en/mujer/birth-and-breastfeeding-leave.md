@@ -12,7 +12,7 @@ es: permisos-por-nacimiento-y-lactancia
 
 Since 31 July 2025, each parent has **19 weeks** of birth and childcare leave (permiso por nacimiento y cuidado del menor), paid at 100 % of their benefit base (base reguladora) by Social Security (Seguridad Social). Single-parent families can get up to 32. There is also breastfeeding leave (permiso de lactancia), parental leave (permiso parental) and several short periods of leave to care for family members.
 
-> Work out the dates of your leave and how long your job is protected with [the birth leave calendar](/herramientas/calendario-permisos) (in Spanish).
+> Work out the dates of your leave and how long your job is protected with [the birth leave calendar](/en/tools/birth-leave-calendar).
 
 ## The 19 weeks, step by step
 

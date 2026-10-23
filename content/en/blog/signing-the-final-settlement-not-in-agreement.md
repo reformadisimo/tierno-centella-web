@@ -1,7 +1,7 @@
 ---
 titulo: Signing the final settlement as not in agreement: what it means and when to do it
 tituloSeo: Signing your final settlement as not in agreement
-descripcion: Signing the final settlement with the words not in agreement lets you get paid without giving up your claim. What to check before signing, your deadlines and mistakes to avoid.
+descripcion: Signing the final settlement as not in agreement lets you get paid without giving up your claim. What to check first, your deadlines and mistakes to avoid.
 fecha: 2026-09-13
 actualizado: 2026-09-13
 categoria: despido

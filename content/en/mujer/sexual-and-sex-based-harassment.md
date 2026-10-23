@@ -42,7 +42,7 @@ In discrimination cases the law helps you with the evidence: it is enough for yo
 - Coworkers who saw it or whom you told at the time.
 - Medical or psychological reports linking your distress to work.
 
-In [the evidence map](/herramientas/mapa-de-pruebas) (in Spanish) you can tick what you have and see what you are missing.
+In [the evidence map](/en/tools/harassment-evidence-map) you can tick what you have and see what you are missing.
 
 ## What you can claim
 

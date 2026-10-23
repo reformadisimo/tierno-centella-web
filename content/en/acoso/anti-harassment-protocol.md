@@ -63,7 +63,7 @@ You have the right to know what the protocol says. Ask human resources or the wo
 
 Before you take the step, gather your evidence. We explain how in [how to prove harassment](/en/workplace-harassment/how-to-prove-workplace-harassment).
 
-> Activating the protocol does not stop the deadlines for going to court. Do not wait for it to finish if a deadline is about to expire. Check [deadlines](/herramientas/plazos) (in Spanish).
+> Activating the protocol does not stop the deadlines for going to court. Do not wait for it to finish if a deadline is about to expire. Check [deadlines](/en/tools/deadlines).
 
 ## What happens if the company does not have one or does not apply it
 

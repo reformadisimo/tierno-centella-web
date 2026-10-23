@@ -1,7 +1,7 @@
 ---
 titulo: The whistleblowing channel - which companies must have one and how it protects you
 tituloSeo: Whistleblowing channel: who must have one
-descripcion: What the internal reporting channel under Law 2/2023 is, which companies must have one, what can be reported and why whistleblowers are protected from retaliation.
+descripcion: What the internal reporting channel under Law 2/2023 is, which companies need one, what can be reported and why whistleblowers are protected from retaliation.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: empresas

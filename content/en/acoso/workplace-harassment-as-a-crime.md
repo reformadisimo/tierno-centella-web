@@ -64,7 +64,7 @@ For the complaint to succeed, you need evidence: a diary of events, messages, wi
 
 The crime of workplace harassment becomes time-barred (prescribe) after five years, because its maximum penalty is under five years in prison. In a continuing offence like this one, the period generally runs from the last act of harassment.
 
-Be careful: the deadlines in the employment route are much shorter. The fact that the crime is not yet time-barred does not mean you are still in time to claim in the Social Court. See [deadlines](/herramientas/plazos) (in Spanish).
+Be careful: the deadlines in the employment route are much shorter. The fact that the crime is not yet time-barred does not mean you are still in time to claim in the Social Court. See [deadlines](/en/tools/deadlines).
 
 ## Combining it with the employment route
 

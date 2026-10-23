@@ -1,7 +1,7 @@
 ---
 titulo: Objective dismissal: requirements the company must meet
 tituloSeo: Objective dismissal in Spain: requirements
-descripcion: An objective dismissal requires a letter stating the cause, 20 days' pay per year handed over at the same time and 15 days' notice. What to check and when it is unfair.
+descripcion: An objective dismissal requires a letter stating the cause, 20 days' pay per year handed over at once and 15 days' notice. What to check and when it is unfair.
 fecha: 2026-09-22
 actualizado: 2026-09-22
 categoria: despido

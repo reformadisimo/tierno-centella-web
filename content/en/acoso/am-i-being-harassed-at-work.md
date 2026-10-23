@@ -58,7 +58,7 @@ These behaviours appear frequently in harassment cases. If you recognise several
 
 On top of this come the effects on your health: insomnia, anxiety before going to work, crying, digestive problems, feelings of guilt or that "you are doing something wrong". The fact that this is happening to you does not mean you are imagining it.
 
-If you would like to get your bearings with a few simple questions, you can take our [workplace harassment test](/herramientas/test-acoso) (in Spanish).
+If you would like to get your bearings with a few simple questions, you can take our [workplace harassment test](/en/tools/harassment-test).
 
 ## Types of harassment depending on who does it
 

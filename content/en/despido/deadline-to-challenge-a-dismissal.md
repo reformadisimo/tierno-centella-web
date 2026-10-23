@@ -10,7 +10,7 @@ es: plazo-para-reclamar-despido
 
 To challenge a dismissal you have 20 working days from the day after its effective date. Within that time you must file the conciliation claim form (papeleta de conciliación), which in Madrid is handled by the SMAC (Servicio de Mediación, Arbitraje y Conciliación de la Comunidad de Madrid, the Madrid Region's mediation, arbitration and conciliation service). Filing the claim form stops the clock, and after the conciliation attempt you have the days you had not used to file your lawsuit (demanda) at the Labour Court (Juzgado de lo Social).
 
-> If the deadline passes, you lose the chance to challenge the dismissal, even if you were completely in the right. It is a strict time limit (plazo de caducidad) and no excuses are accepted. Work out your deadline with [the deadline calculator](/herramientas/plazos) (in Spanish).
+> If the deadline passes, you lose the chance to challenge the dismissal, even if you were completely in the right. It is a strict time limit (plazo de caducidad) and no excuses are accepted. Work out your deadline with [the deadline calculator](/en/tools/deadlines).
 
 ## How the 20 days are counted
 

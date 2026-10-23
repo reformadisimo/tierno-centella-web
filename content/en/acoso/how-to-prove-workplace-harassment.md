@@ -19,7 +19,7 @@ The good news is that you do not have to prove everything one hundred per cent. 
 
 > Start gathering evidence today, even if you have not yet decided to make a claim. Whatever you do not keep now may disappear.
 
-To see at a glance what evidence you have and what you are missing, use our [evidence map](/herramientas/mapa-de-pruebas) (in Spanish).
+To see at a glance what evidence you have and what you are missing, use our [evidence map](/en/tools/harassment-evidence-map).
 
 ## 1. The diary of events
 
@@ -114,6 +114,6 @@ You can win without witnesses if there are other indications: messages, medical 
 
 ### How far back can I go?
 
-Everything you can document helps to show the pattern. The deadlines for making a claim are a separate matter; check them in [deadlines](/herramientas/plazos) (in Spanish).
+Everything you can document helps to show the pattern. The deadlines for making a claim are a separate matter; check them in [deadlines](/en/tools/deadlines).
 
 If you would like us to review what evidence you have and what you are missing, call us on 913 24 97 97 or write to us via [contact](/en/contact).

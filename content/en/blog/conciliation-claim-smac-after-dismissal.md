@@ -1,6 +1,6 @@
 ---
 titulo: The conciliation claim after a dismissal, step by step
-descripcion: What the conciliation claim is, where to file it in Madrid, how it stops the 20-day deadline, what happens at the hearing and what to do if there is no agreement.
+descripcion: What the conciliation claim is, where to file it in Madrid, how it stops the 20-day deadline, what happens at the hearing and what to do if no deal is reached.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido

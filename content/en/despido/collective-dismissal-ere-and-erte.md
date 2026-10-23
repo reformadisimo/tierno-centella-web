@@ -10,7 +10,7 @@ es: despido-colectivo-ere-y-erte
 
 An ERE (collective dismissal, despido colectivo) is when a company dismisses several workers at once for economic, technical, organisational or production reasons. It ends your contract. An ERTE (temporary layoff scheme) is temporary: it suspends your contract or reduces your working hours for a period of time, and then you go back. In an ERE you are entitled to minimum severance pay of 20 days per year worked, up to a maximum of 12 months' pay, and you can challenge your dismissal within 20 working days.
 
-> If you are given a dismissal letter as part of an ERE, do not wait to see what the unions do. The safe thing is to file your claim within the next 20 working days. Work out your deadline with [the deadline calculator](/herramientas/plazos) (in Spanish).
+> If you are given a dismissal letter as part of an ERE, do not wait to see what the unions do. The safe thing is to file your claim within the next 20 working days. Work out your deadline with [the deadline calculator](/en/tools/deadlines).
 
 ## When a dismissal is collective
 
@@ -65,7 +65,7 @@ You can also challenge your inclusion in an ERTE individually, for example if th
 ## What you should do
 
 - Ask your representatives for the minutes of the agreement and the selection criteria.
-- Check that the severance in your letter has been calculated correctly. You can get an estimate with [the severance calculator](/calculadora-indemnizacion) (in Spanish).
+- Check that the severance in your letter has been calculated correctly. You can get an estimate with [the severance calculator](/en/tools/compensation-calculator).
 - Sign the letter as "received, not in agreement" ("recibí, no conforme").
 - If you have doubts about why you were chosen, get advice early. Call us on 913 24 97 97 or write to us using [the contact form](/en/contact).
 

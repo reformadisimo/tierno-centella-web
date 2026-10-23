@@ -1,7 +1,7 @@
 ---
 titulo: Permanent disability for anxiety or depression: when it is granted
 tituloSeo: Permanent disability for anxiety or depression
-descripcion: Anxiety or depression can lead to permanent disability if they are severe, chronic and do not improve with treatment. What is assessed and which reports to provide.
+descripcion: Anxiety or depression can lead to permanent disability if severe, chronic and not improving with treatment. What is assessed and which reports to provide.
 fecha: 2026-09-30
 actualizado: 2026-09-30
 categoria: incapacidad

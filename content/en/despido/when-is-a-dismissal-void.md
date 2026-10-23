@@ -10,7 +10,7 @@ es: despido-nulo-cuando
 
 A dismissal is void (despido nulo) when it violates a fundamental right (for example, it is retaliation for having made a complaint), when it is based on discrimination or when it affects people the law gives special protection to, such as pregnant workers or people taking leave to care for their children. If the judge declares it void, the company must take you back in your job and pay you the wages you did not receive. It cannot replace this with severance pay.
 
-> Even if you believe your dismissal is void, the deadline is the same: 20 working days to file the conciliation claim form (papeleta de conciliación). Work it out with [the deadline calculator](/herramientas/plazos) (in Spanish).
+> Even if you believe your dismissal is void, the deadline is the same: 20 working days to file the conciliation claim form (papeleta de conciliación). Work it out with [the deadline calculator](/en/tools/deadlines).
 
 ## What happens when a dismissal is void
 
@@ -70,7 +70,7 @@ In cases of discrimination or violation of fundamental rights, the law shares th
 1. You have to provide reasonable indications (indicios): that you reported harassment and were dismissed shortly afterwards, that you told the company you were pregnant and then the letter arrived, that the reason given makes no sense.
 2. If there are such indications, it is the company that must prove the dismissal had a real reason unrelated to those motives.
 
-Useful indications include emails and messages, dates, witnesses, a recent positive performance review or being treated differently from other colleagues. [The evidence map](/herramientas/mapa-de-pruebas) (in Spanish) gives you a guide to what to gather.
+Useful indications include emails and messages, dates, witnesses, a recent positive performance review or being treated differently from other colleagues. [The evidence map](/en/tools/harassment-evidence-map) gives you a guide to what to gather.
 
 ## What you should do
 

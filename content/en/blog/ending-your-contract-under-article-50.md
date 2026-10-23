@@ -1,7 +1,7 @@
 ---
 titulo: Leaving the company with compensation - Article 50 of the Workers' Statute
 tituloSeo: Article 50: leave your job with compensation
-descripcion: When you can ask a judge to end your contract over serious breaches by the company and be paid as in an unfair dismissal: unpaid wages, humiliating changes and harassment.
+descripcion: When you can ask a judge to end your contract over serious breaches by the company and be paid as if unfairly dismissed: unpaid wages, humiliation, harassment.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido
