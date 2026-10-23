@@ -328,7 +328,57 @@ Hemos revisado los 220 artículos de tu blog uno a uno:
 
 ## 15. Calendario editorial: 13 semanas, 39 artículos
 
-CALENDARIO_PENDIENTE
+Tres artículos por semana (lunes, miércoles y viernes) durante 13 semanas: del 26 de octubre de 2026 al 22 de enero de 2027. Los temas salen de tres fuentes: **lo que más busca la gente** según Semrush, **la actualidad** (sentencias del Supremo de 2026, el 25 de noviembre, las fiestas, la subida de pensiones y del salario mínimo en enero) y **tus propios casos**, que son lo que nadie más puede contar.
+
+**Cómo está repartido**: 9 de acoso laboral (dos pensados para la enseñanza y la sanidad), 7 de despido y paro, 5 de incapacidad, 5 de Mujer y trabajo, 4 sentencias del Supremo de 2026, 2 casos del despacho, 1 para empresas y colegios (los protocolos), 5 de actualidad de temporada (vacaciones, paga extra, plazos en Navidad, salario mínimo, teletrabajo) y 1 comercial.
+
+| Sem. | Fecha | Artículo | Búsqueda que ataca | Búsquedas al mes | Tipo |
+| --- | --- | --- | --- | --- | --- |
+| 1 | lun 26 oct | Finiquito: qué incluye y cómo comprobar que está bien | finiquito | 3.600 | Guía práctica |
+| 1 | mié 28 oct | ¿Qué es un despido improcedente y qué puedes conseguir? | despido improcedente | 18.100 | Pilar |
+| 1 | vie 30 oct | Cuánto paro te queda y cómo consultarlo | calcular paro | 6.600 | Herramienta |
+| 2 | lun 2 nov | Expediente Fogasa: cómo cobrar si tu empresa no paga | expediente fogasa | 1.900 | Guía práctica |
+| 2 | mié 4 nov | Mobbing: qué es, tipos y señales para reconocerlo | mobbing | 8.100 | Pilar acoso |
+| 2 | vie 6 nov | Qué se considera acoso laboral por parte de tu jefe | qué se considera acoso laboral por parte de tu jefe | 70 | Acoso |
+| 3 | lun 9 nov | Ventajas de la incapacidad permanente total (y lo que no te cuentan) | ventajas de ser pensionista por incapacidad permanente total | 880 | Incapacidad |
+| 3 | mié 11 nov | ¿Te pueden despedir al volver de una excedencia? | te pueden despedir después de una excedencia | 50 | Mujer y trabajo |
+| 3 | vie 13 nov | El permiso parental cuenta para tus vacaciones: lo dice el Supremo (STS 62/2026) | permiso parental vacaciones | - | Sentencia |
+| 4 | lun 16 nov | Burnout o acoso laboral: en qué se diferencian | burnout o mobbing | - | Acoso |
+| 4 | mié 18 nov | ¿Qué es mejor, jubilarse o la incapacidad permanente total? | qué es mejor jubilarse o incapacidad permanente total | 170 | Incapacidad |
+| 4 | vie 20 nov | Despedida por pedir un permiso para la función escolar de su hija: nuestro caso | garantía de indemnidad | - | Caso del despacho |
+| 5 | lun 23 nov | Acoso laboral a docentes: qué hacer si eres profesor o profesora | acoso laboral docentes | - | Acoso / colegios |
+| 5 | mié 25 nov | Dónde y cómo denunciar el acoso laboral en Madrid | dónde denunciar acoso laboral | 50 | Acoso local |
+| 5 | vie 27 nov | 25N: el acoso sexual en el trabajo también es violencia contra las mujeres | acoso sexual en el trabajo | 260 | Mujer y trabajo (25 de noviembre) |
+| 6 | lun 30 nov | ¿Es obligatorio el protocolo de acoso laboral en mi empresa? | protocolo acoso laboral | 720 | Empresas y colegios |
+| 6 | mié 2 dic | Cuánto es la indemnización por acoso laboral | indemnización por acoso laboral | 110 | Acoso |
+| 6 | vie 4 dic | Te cobran menos por el mismo trabajo: así se reclama la brecha salarial | brecha salarial | 1.600 | Mujer y trabajo |
+| 7 | lun 7 dic | Prima por objetivos y baja médica: lo que dice el Supremo (STS 159/2026) | prima por objetivos baja | - | Sentencia |
+| 7 | mié 9 dic | Acoso laboral en la sanidad: médicos, enfermeras y técnicos | acoso laboral sanidad | - | Acoso / instituciones |
+| 7 | vie 11 dic | Teletrabajo: qué debe decir tu pacto y qué cláusulas son abusivas | teletrabajo pacto | - | Actualidad |
+| 8 | lun 14 dic | Modificación sustancial de condiciones: tienes 20 días para reclamar | modificación sustancial de condiciones | - | Despido |
+| 8 | mié 16 dic | ¿Cuánto se cobra de incapacidad permanente total en 2027? | incapacidad permanente total | 8.100 | Incapacidad (revalorización) |
+| 8 | vie 18 dic | Los 5 días por enfermedad de un familiar se cuentan en días laborables (STS 126/2026) | permiso por hospitalización familiar | - | Sentencia |
+| 9 | lun 21 dic | Vacaciones no disfrutadas: ¿se pierden el 31 de diciembre? | vacaciones no disfrutadas | - | Actualidad (diciembre) |
+| 9 | mié 23 dic | Paga extra de Navidad: qué te deben si te despiden antes | paga extra navidad despido | - | Actualidad (diciembre) |
+| 9 | jue 24 dic | Te despiden en Navidad: el 24 y el 31 no cuentan para reclamar | despido navidad plazo | - | Actualidad (diciembre) |
+| 10 | lun 28 dic | Degradada por cuidar a su pareja enferma: así ganamos la extinción | extinción contrato modificación encubierta | - | Caso del despacho |
+| 10 | mié 30 dic | Riesgos psicosociales: cuando la empresa no actúa también paga | riesgos psicosociales | - | Acoso / prevención |
+| 10 | jue 31 dic | Lo que una empresa no puede retirarte sin avisar: la condición más beneficiosa (STS 169/2026) | condición más beneficiosa | - | Sentencia |
+| 11 | lun 4 ene | ¿Tributa la indemnización por despido en la renta? | indemnización despido tributa | - | Despido |
+| 11 | mar 5 ene | SMI 2027: cuánto sube el salario mínimo y a quién afecta | salario mínimo interprofesional | 27.100 | Actualidad (enero) |
+| 11 | vie 8 ene | Con incapacidad permanente total, ¿se puede trabajar? | con incapacidad permanente total se puede trabajar | 170 | Incapacidad |
+| 12 | lun 11 ene | Me han denegado la incapacidad y no puedo trabajar: qué hago | me han denegado la incapacidad permanente | 210 | Incapacidad |
+| 12 | mié 13 ene | Despido de embarazada: lo que han dicho los tribunales | despido embarazada | 90 | Mujer y trabajo |
+| 12 | vie 15 ene | Reducción de jornada: ¿te pueden cambiar el turno? | reducción de jornada por cuidado de hijos | 390 | Mujer y trabajo |
+| 13 | lun 18 ene | Subsidio por desempleo en 2027: quién lo cobra al acabar el paro | subsidio desempleo | - | Actualidad (enero) |
+| 13 | mié 20 ene | Cómo preparar tu primera consulta con un abogado de acoso | consulta abogado acoso laboral | - | Acoso |
+| 13 | vie 22 ene | Abogados de acoso laboral en Madrid: cómo elegir bien | abogados acoso laboral madrid | 260 | Comercial |
+
+**Cómo será cada artículo**: responde la pregunta en las dos primeras frases (es lo que leen Google y las IA), explica con ejemplos, enlaza a su guía y a su herramienta, cierra con preguntas frecuentes y fuentes, y lleva tu firma tras revisarlo. Cada uno sale también como vídeo corto en Instagram (tú o Irene, un minuto) y como publicación en LinkedIn y en la ficha de Google: **un tema, cuatro canales**.
+
+**Lo que necesita de ti**: unos 10 minutos por artículo para revisarlo, y un vídeo a la semana si te animas. Si prefieres otro ritmo (dos por semana, o revisar cada lunes los tres de la semana), se ajusta.
+
+**Por qué este orden**: primero lo que más se busca y menos competencia tiene (finiquito, paro, despido improcedente), para traer visitas pronto; en medio, autoridad (sentencias y tus casos), que es lo que hace que Google y las IA te elijan; y al final, lo comercial ("cómo elegir abogado de acoso en Madrid"), cuando la web ya tenga fuerza.
 
 ## 16. Las últimas sentencias que vamos a contar
 

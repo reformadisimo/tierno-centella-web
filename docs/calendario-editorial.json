@@ -1,0 +1,392 @@
+[
+ {
+  "semana": 1,
+  "fecha": "2026-10-26",
+  "titulo": "Finiquito: qué incluye y cómo comprobar que está bien",
+  "busqueda": "finiquito",
+  "volumen": "3.600",
+  "tipo": "Guía práctica",
+  "herramienta": "Calculadora de finiquito",
+  "video": "Irene explica cómo revisar un finiquito"
+ },
+ {
+  "semana": 1,
+  "fecha": "2026-10-28",
+  "titulo": "¿Qué es un despido improcedente y qué puedes conseguir?",
+  "busqueda": "despido improcedente",
+  "volumen": "18.100",
+  "tipo": "Pilar",
+  "herramienta": "Calculadora de indemnización",
+  "video": "Jesús: improcedente, nulo o procedente en un minuto"
+ },
+ {
+  "semana": 1,
+  "fecha": "2026-10-30",
+  "titulo": "Cuánto paro te queda y cómo consultarlo",
+  "busqueda": "calcular paro",
+  "volumen": "6.600",
+  "tipo": "Herramienta",
+  "herramienta": "Calculadora del paro",
+  "video": "Cómo ver tu paro en el móvil"
+ },
+ {
+  "semana": 2,
+  "fecha": "2026-11-02",
+  "titulo": "Expediente Fogasa: cómo cobrar si tu empresa no paga",
+  "busqueda": "expediente fogasa",
+  "volumen": "1.900",
+  "tipo": "Guía práctica",
+  "herramienta": "Plazos para reclamar",
+  "video": ""
+ },
+ {
+  "semana": 2,
+  "fecha": "2026-11-04",
+  "titulo": "Mobbing: qué es, tipos y señales para reconocerlo",
+  "busqueda": "mobbing",
+  "volumen": "8.100",
+  "tipo": "Pilar acoso",
+  "herramienta": "Test de acoso",
+  "video": "Reel: los 3 tipos de mobbing"
+ },
+ {
+  "semana": 2,
+  "fecha": "2026-11-06",
+  "titulo": "Qué se considera acoso laboral por parte de tu jefe",
+  "busqueda": "qué se considera acoso laboral por parte de tu jefe",
+  "volumen": "70",
+  "tipo": "Acoso",
+  "herramienta": "Test de acoso",
+  "video": "Jesús responde"
+ },
+ {
+  "semana": 3,
+  "fecha": "2026-11-09",
+  "titulo": "Ventajas de la incapacidad permanente total (y lo que no te cuentan)",
+  "busqueda": "ventajas de ser pensionista por incapacidad permanente total",
+  "volumen": "880",
+  "tipo": "Incapacidad",
+  "herramienta": "Comprobador de incapacidad",
+  "video": ""
+ },
+ {
+  "semana": 3,
+  "fecha": "2026-11-11",
+  "titulo": "¿Te pueden despedir al volver de una excedencia?",
+  "busqueda": "te pueden despedir después de una excedencia",
+  "volumen": "50",
+  "tipo": "Mujer y trabajo",
+  "herramienta": "Test de despido nulo",
+  "video": "Ya te cita la IA de Google: hay que mantenerlo"
+ },
+ {
+  "semana": 3,
+  "fecha": "2026-11-13",
+  "titulo": "El permiso parental cuenta para tus vacaciones: lo dice el Supremo (STS 62/2026)",
+  "busqueda": "permiso parental vacaciones",
+  "volumen": "",
+  "tipo": "Sentencia",
+  "herramienta": "Calendario de permisos",
+  "video": "Irene explica la sentencia"
+ },
+ {
+  "semana": 4,
+  "fecha": "2026-11-16",
+  "titulo": "Burnout o acoso laboral: en qué se diferencian",
+  "busqueda": "burnout o mobbing",
+  "volumen": "",
+  "tipo": "Acoso",
+  "herramienta": "Test de acoso",
+  "video": ""
+ },
+ {
+  "semana": 4,
+  "fecha": "2026-11-18",
+  "titulo": "¿Qué es mejor, jubilarse o la incapacidad permanente total?",
+  "busqueda": "qué es mejor jubilarse o incapacidad permanente total",
+  "volumen": "170",
+  "tipo": "Incapacidad",
+  "herramienta": "Comprobador de incapacidad",
+  "video": ""
+ },
+ {
+  "semana": 4,
+  "fecha": "2026-11-20",
+  "titulo": "Despedida por pedir un permiso para la función escolar de su hija: nuestro caso",
+  "busqueda": "garantía de indemnidad",
+  "volumen": "",
+  "tipo": "Caso del despacho",
+  "herramienta": "Test de despido nulo",
+  "video": "Jesús cuenta el caso"
+ },
+ {
+  "semana": 5,
+  "fecha": "2026-11-23",
+  "titulo": "Acoso laboral a docentes: qué hacer si eres profesor o profesora",
+  "busqueda": "acoso laboral docentes",
+  "volumen": "",
+  "tipo": "Acoso / colegios",
+  "herramienta": "Autodiagnóstico para colegios",
+  "video": "Jesús: acoso en la enseñanza"
+ },
+ {
+  "semana": 5,
+  "fecha": "2026-11-25",
+  "titulo": "Dónde y cómo denunciar el acoso laboral en Madrid",
+  "busqueda": "dónde denunciar acoso laboral",
+  "volumen": "50",
+  "tipo": "Acoso local",
+  "herramienta": "Mapa de pruebas",
+  "video": ""
+ },
+ {
+  "semana": 5,
+  "fecha": "2026-11-27",
+  "titulo": "25N: el acoso sexual en el trabajo también es violencia contra las mujeres",
+  "busqueda": "acoso sexual en el trabajo",
+  "volumen": "260",
+  "tipo": "Mujer y trabajo (25 de noviembre)",
+  "herramienta": "Mapa de pruebas",
+  "video": "Irene: qué hacer si te pasa"
+ },
+ {
+  "semana": 6,
+  "fecha": "2026-11-30",
+  "titulo": "¿Es obligatorio el protocolo de acoso laboral en mi empresa?",
+  "busqueda": "protocolo acoso laboral",
+  "volumen": "720",
+  "tipo": "Empresas y colegios",
+  "herramienta": "Autodiagnóstico para empresas",
+  "video": ""
+ },
+ {
+  "semana": 6,
+  "fecha": "2026-12-02",
+  "titulo": "Cuánto es la indemnización por acoso laboral",
+  "busqueda": "indemnización por acoso laboral",
+  "volumen": "110",
+  "tipo": "Acoso",
+  "herramienta": "Test de extinción",
+  "video": "Jesús: cómo se calcula el daño"
+ },
+ {
+  "semana": 6,
+  "fecha": "2026-12-04",
+  "titulo": "Te cobran menos por el mismo trabajo: así se reclama la brecha salarial",
+  "busqueda": "brecha salarial",
+  "volumen": "1.600",
+  "tipo": "Mujer y trabajo",
+  "herramienta": "",
+  "video": ""
+ },
+ {
+  "semana": 7,
+  "fecha": "2026-12-07",
+  "titulo": "Prima por objetivos y baja médica: lo que dice el Supremo (STS 159/2026)",
+  "busqueda": "prima por objetivos baja",
+  "volumen": "",
+  "tipo": "Sentencia",
+  "herramienta": "Cuánto se cobra de baja",
+  "video": ""
+ },
+ {
+  "semana": 7,
+  "fecha": "2026-12-09",
+  "titulo": "Acoso laboral en la sanidad: médicos, enfermeras y técnicos",
+  "busqueda": "acoso laboral sanidad",
+  "volumen": "",
+  "tipo": "Acoso / instituciones",
+  "herramienta": "Mapa de pruebas",
+  "video": "Jornadas de Comillas con AMYTS"
+ },
+ {
+  "semana": 7,
+  "fecha": "2026-12-11",
+  "titulo": "Teletrabajo: qué debe decir tu pacto y qué cláusulas son abusivas",
+  "busqueda": "teletrabajo pacto",
+  "volumen": "",
+  "tipo": "Actualidad",
+  "herramienta": "",
+  "video": "Reel del despacho"
+ },
+ {
+  "semana": 8,
+  "fecha": "2026-12-14",
+  "titulo": "Modificación sustancial de condiciones: tienes 20 días para reclamar",
+  "busqueda": "modificación sustancial de condiciones",
+  "volumen": "",
+  "tipo": "Despido",
+  "herramienta": "Plazos para reclamar",
+  "video": "Irene explica"
+ },
+ {
+  "semana": 8,
+  "fecha": "2026-12-16",
+  "titulo": "¿Cuánto se cobra de incapacidad permanente total en 2027?",
+  "busqueda": "incapacidad permanente total",
+  "volumen": "8.100",
+  "tipo": "Incapacidad (revalorización)",
+  "herramienta": "Comprobador de incapacidad",
+  "video": ""
+ },
+ {
+  "semana": 8,
+  "fecha": "2026-12-18",
+  "titulo": "Los 5 días por enfermedad de un familiar se cuentan en días laborables (STS 126/2026)",
+  "busqueda": "permiso por hospitalización familiar",
+  "volumen": "",
+  "tipo": "Sentencia",
+  "herramienta": "Calendario de permisos",
+  "video": ""
+ },
+ {
+  "semana": 9,
+  "fecha": "2026-12-21",
+  "titulo": "Vacaciones no disfrutadas: ¿se pierden el 31 de diciembre?",
+  "busqueda": "vacaciones no disfrutadas",
+  "volumen": "",
+  "tipo": "Actualidad (diciembre)",
+  "herramienta": "Calculadora de finiquito",
+  "video": ""
+ },
+ {
+  "semana": 9,
+  "fecha": "2026-12-23",
+  "titulo": "Paga extra de Navidad: qué te deben si te despiden antes",
+  "busqueda": "paga extra navidad despido",
+  "volumen": "",
+  "tipo": "Actualidad (diciembre)",
+  "herramienta": "Calculadora de finiquito",
+  "video": ""
+ },
+ {
+  "semana": 9,
+  "fecha": "2026-12-24",
+  "titulo": "Te despiden en Navidad: el 24 y el 31 no cuentan para reclamar",
+  "busqueda": "despido navidad plazo",
+  "volumen": "",
+  "tipo": "Actualidad (diciembre)",
+  "herramienta": "Plazos para reclamar",
+  "video": "Jesús: cuidado con los plazos en fiestas"
+ },
+ {
+  "semana": 10,
+  "fecha": "2026-12-28",
+  "titulo": "Degradada por cuidar a su pareja enferma: así ganamos la extinción",
+  "busqueda": "extinción contrato modificación encubierta",
+  "volumen": "",
+  "tipo": "Caso del despacho",
+  "herramienta": "Test de extinción",
+  "video": ""
+ },
+ {
+  "semana": 10,
+  "fecha": "2026-12-30",
+  "titulo": "Riesgos psicosociales: cuando la empresa no actúa también paga",
+  "busqueda": "riesgos psicosociales",
+  "volumen": "",
+  "tipo": "Acoso / prevención",
+  "herramienta": "Autodiagnóstico para empresas",
+  "video": "Irene: sentencia de la docente con discapacidad"
+ },
+ {
+  "semana": 10,
+  "fecha": "2026-12-31",
+  "titulo": "Lo que una empresa no puede retirarte sin avisar: la condición más beneficiosa (STS 169/2026)",
+  "busqueda": "condición más beneficiosa",
+  "volumen": "",
+  "tipo": "Sentencia",
+  "herramienta": "",
+  "video": ""
+ },
+ {
+  "semana": 11,
+  "fecha": "2027-01-04",
+  "titulo": "¿Tributa la indemnización por despido en la renta?",
+  "busqueda": "indemnización despido tributa",
+  "volumen": "",
+  "tipo": "Despido",
+  "herramienta": "Calculadora de indemnización",
+  "video": ""
+ },
+ {
+  "semana": 11,
+  "fecha": "2027-01-05",
+  "titulo": "SMI 2027: cuánto sube el salario mínimo y a quién afecta",
+  "busqueda": "salario mínimo interprofesional",
+  "volumen": "27.100",
+  "tipo": "Actualidad (enero)",
+  "herramienta": "",
+  "video": ""
+ },
+ {
+  "semana": 11,
+  "fecha": "2027-01-08",
+  "titulo": "Con incapacidad permanente total, ¿se puede trabajar?",
+  "busqueda": "con incapacidad permanente total se puede trabajar",
+  "volumen": "170",
+  "tipo": "Incapacidad",
+  "herramienta": "Comprobador de incapacidad",
+  "video": ""
+ },
+ {
+  "semana": 12,
+  "fecha": "2027-01-11",
+  "titulo": "Me han denegado la incapacidad y no puedo trabajar: qué hago",
+  "busqueda": "me han denegado la incapacidad permanente",
+  "volumen": "210",
+  "tipo": "Incapacidad",
+  "herramienta": "Plazos para reclamar",
+  "video": ""
+ },
+ {
+  "semana": 12,
+  "fecha": "2027-01-13",
+  "titulo": "Despido de embarazada: lo que han dicho los tribunales",
+  "busqueda": "despido embarazada",
+  "volumen": "90",
+  "tipo": "Mujer y trabajo",
+  "herramienta": "Calendario de permisos",
+  "video": ""
+ },
+ {
+  "semana": 12,
+  "fecha": "2027-01-15",
+  "titulo": "Reducción de jornada: ¿te pueden cambiar el turno?",
+  "busqueda": "reducción de jornada por cuidado de hijos",
+  "volumen": "390",
+  "tipo": "Mujer y trabajo",
+  "herramienta": "Calculadora de reducción de jornada",
+  "video": ""
+ },
+ {
+  "semana": 13,
+  "fecha": "2027-01-18",
+  "titulo": "Subsidio por desempleo en 2027: quién lo cobra al acabar el paro",
+  "busqueda": "subsidio desempleo",
+  "volumen": "",
+  "tipo": "Actualidad (enero)",
+  "herramienta": "Calculadora del paro",
+  "video": ""
+ },
+ {
+  "semana": 13,
+  "fecha": "2027-01-20",
+  "titulo": "Cómo preparar tu primera consulta con un abogado de acoso",
+  "busqueda": "consulta abogado acoso laboral",
+  "volumen": "",
+  "tipo": "Acoso",
+  "herramienta": "Mapa de pruebas",
+  "video": "Jesús: qué traer a la primera cita"
+ },
+ {
+  "semana": 13,
+  "fecha": "2027-01-22",
+  "titulo": "Abogados de acoso laboral en Madrid: cómo elegir bien",
+  "busqueda": "abogados acoso laboral madrid",
+  "volumen": "260",
+  "tipo": "Comercial",
+  "herramienta": "Test de acoso",
+  "video": "Presentación del equipo"
+ }
+]
