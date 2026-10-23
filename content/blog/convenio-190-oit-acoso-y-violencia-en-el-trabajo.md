@@ -5,6 +5,8 @@ fecha: 2026-10-08
 actualizado: 2026-10-08
 categoria: acoso
 video: lVoi2ijP1bA
+imagen: manos-unidas
+imagenAlt: Varias manos unidas en señal de apoyo
 ---
 
 El Convenio 190 de la Organización Internacional del Trabajo es el primer tratado internacional sobre violencia y acoso en el trabajo. Está en vigor en España desde el 25 de mayo de 2023. Protege no solo a los empleados con contrato, sino también a becarios, personas en busca de empleo o despedidas, y cubre el acoso por mensajes o en los trayectos al trabajo.

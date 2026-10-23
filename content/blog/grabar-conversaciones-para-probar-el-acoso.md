@@ -4,6 +4,8 @@ descripcion: Grabar una conversación en la que participas suele ser prueba vál
 fecha: 2026-10-18
 actualizado: 2026-10-18
 categoria: acoso
+imagen: hombre-estres
+imagenAlt: Un trabajador estresado rodeado de móviles y papeles
 ---
 
 Si participas en la conversación, grabarla sin avisar a la otra persona es, en general, legal y puede usarse como prueba del acoso en un juicio. El Tribunal Constitucional lo dejó claro en 1984: no hay secreto de las comunicaciones frente a quien participa en ellas. Lo que no puedes hacer es grabar conversaciones ajenas, difundir la grabación o grabar de forma masiva y sin necesidad.

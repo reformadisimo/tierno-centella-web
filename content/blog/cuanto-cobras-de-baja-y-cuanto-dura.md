@@ -4,6 +4,8 @@ descripcion: Lo que cobras durante la incapacidad temporal según sea enfermedad
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: incapacidad
+imagen: calculadora-papeles
+imagenAlt: Cuentas con calculadora, cuaderno y portátil
 ---
 
 Lo que cobras de baja depende de su origen. Si es una **enfermedad común**, los tres primeros días no cobras nada (salvo que tu convenio lo mejore), del 4.º al 20.º cobras el 60 % de tu base reguladora y desde el 21.º, el 75 %. Si es un **accidente de trabajo o una enfermedad profesional**, cobras el 75 % desde el día siguiente a la baja.

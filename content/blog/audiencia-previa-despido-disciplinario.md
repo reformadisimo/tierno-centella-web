@@ -5,6 +5,8 @@ descripcion: Desde noviembre de 2024 la empresa debe dejarte defenderte antes de
 fecha: 2026-09-01
 actualizado: 2026-09-01
 categoria: despido
+imagen: jefe-senala
+imagenAlt: Un superior señala con el dedo a un trabajador
 ---
 
 Antes de despedirte por un motivo disciplinario, la empresa tiene que darte la oportunidad de defenderte de lo que te acusa. Lo dijo el Tribunal Supremo en su sentencia 1250/2024, de 18 de noviembre de 2024, y vale para los despidos posteriores a esa fecha. Si la empresa se salta este paso sin una razón que lo justifique, el despido puede declararse improcedente.

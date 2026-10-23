@@ -4,6 +4,8 @@ descripcion: Acoso de un jefe, de compañeros o de subordinados, y según lo que
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso
+imagen: acoso-ventana
+imagenAlt: Una trabajadora junto a la ventana de la oficina
 ---
 
 El acoso laboral es un trato hostil y repetido que busca aislarte, humillarte o que te vayas. Puede venir de arriba, de tu mismo nivel o incluso de abajo, y perseguir objetivos distintos. Saber de qué tipo es ayuda a decidir contra quién reclamar y qué pruebas buscar.

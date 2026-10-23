@@ -4,6 +4,8 @@ descripcion: Desde mayo de 2025, la incapacidad permanente no termina tu contrat
 fecha: 2026-09-26
 actualizado: 2026-09-26
 categoria: incapacidad
+imagen: silla-ruedas
+imagenAlt: Un trabajador en silla de ruedas durante una reunión
 ---
 
 Desde el 1 de mayo de 2025, que te reconozcan una incapacidad permanente total, absoluta o una gran incapacidad ya no termina tu contrato de forma automática. Lo dice la Ley 2/2025, de 29 de abril. Si quieres seguir trabajando, tienes que comunicarlo por escrito en 10 días naturales, y la empresa debe intentar adaptar tu puesto o darte otro compatible antes de poder extinguir el contrato.

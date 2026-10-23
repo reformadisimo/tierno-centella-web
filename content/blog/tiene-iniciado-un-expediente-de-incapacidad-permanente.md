@@ -5,6 +5,8 @@ descripcion: Qué quiere decir el aviso de la Seguridad Social de que tienes un 
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: incapacidad
+imagen: portatil-manos
+imagenAlt: Una persona consulta su expediente en el portátil
 ---
 
 Ese aviso significa que el Instituto Nacional de la Seguridad Social (INSS) ha abierto el procedimiento para decidir si tienes una incapacidad permanente y en qué grado. Puede abrirse porque lo pediste tú o porque lo inicia el propio INSS, normalmente cuando una baja se alarga cerca del año o del año y medio. No es todavía una decisión: es el comienzo.

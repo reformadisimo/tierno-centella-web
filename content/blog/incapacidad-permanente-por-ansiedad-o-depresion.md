@@ -4,6 +4,8 @@ descripcion: La ansiedad o la depresión pueden dar una incapacidad permanente s
 fecha: 2026-09-30
 actualizado: 2026-09-30
 categoria: incapacidad
+imagen: mujer-pensativa
+imagenAlt: Una mujer pensativa junto a una ventana
 ---
 
 Sí, la ansiedad o la depresión pueden dar lugar a una incapacidad permanente, pero el diagnóstico por sí solo no basta. El INSS y los jueces valoran si el trastorno es grave, si se ha cronificado tras años de evolución y si no ha mejorado lo suficiente con los tratamientos. Lo decisivo es demostrar qué no puedes hacer en tu trabajo por culpa de la enfermedad.

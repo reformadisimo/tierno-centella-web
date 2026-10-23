@@ -4,6 +4,8 @@ descripcion: Qué es la papeleta de conciliación, dónde se presenta en Madrid,
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido
+imagen: documento-pluma
+imagenAlt: Un documento y una pluma
 ---
 
 La papeleta de conciliación es el primer paso obligatorio para reclamar un despido. Es un escrito en el que cuentas que te han despedido y que no estás de acuerdo, y se presenta en el servicio de mediación y conciliación de tu comunidad autónoma. En la Comunidad de Madrid es el SMAC. Presentarla a tiempo es lo que salva tu reclamación.

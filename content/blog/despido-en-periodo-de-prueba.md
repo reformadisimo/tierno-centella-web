@@ -4,6 +4,8 @@ descripcion: Cuánto puede durar el periodo de prueba, cuándo la empresa puede 
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido
+imagen: trabajador-portatil
+imagenAlt: Un trabajador toma notas junto a su portátil
 ---
 
 Durante el periodo de prueba, la empresa y tú podéis terminar el contrato sin preaviso, sin indemnización y sin explicar el motivo. Pero esa libertad tiene límites: el periodo de prueba tiene que estar pactado por escrito, no puede durar más de lo permitido y la decisión no puede ser discriminatoria ni una represalia.

@@ -1,6 +1,6 @@
 ## Empieza aquí: tu guía en 5 minutos
 
-Jesús, esta guía te cuenta qué hemos hecho con tu web, por qué y qué podríamos hacer a partir de aquí.
+Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con tu web, por qué, y todo lo que podríamos hacer juntos a partir de aquí. Cada apartado empieza con una foto y una frase: si solo tienes un rato, con eso ya te haces una idea. Si quieres más, pulsa "Ver el detalle".
 
 > **Cómo trabajamos**: de forma sencilla. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
 
@@ -41,6 +41,12 @@ Jesús, esta guía te cuenta qué hemos hecho con tu web, por qué y qué podrí
 **La red que hemos tendido.** Una web rápida, clara, con tu cara y tus casos; herramientas que resuelven la duda del momento ("¿cuántos días me quedan para reclamar?") y llevan a llamarte; un asistente que contesta a las once de la noche, cuando la persona angustiada busca ayuda; y una sección para mujeres trabajadoras, que son una parte muy grande de tus clientas.
 
 ## 2. Palabras que vamos a usar
+
+Para que nada te suene a chino: cada herramienta de la que hablamos, con su logo y una frase.
+
+[[logos]]
+
+Y las palabras, con ejemplos de la vida real:
 
 | Palabra | Qué es, en una frase |
 | --- | --- |
@@ -141,6 +147,19 @@ Cada vez más gente no busca en Google: le pregunta a ChatGPT, a Gemini o a la p
 
 **Cómo lo mediremos**: Semrush registra cada mes en cuántas respuestas de IA apareces. El objetivo razonable a seis meses es pasar de 10 a más de 50, y entrar en el top 5 de "abogados acoso laboral madrid".
 
+### Qué dicen de ti las IA (proyecto nuevo en Semrush)
+
+Hemos creado tu proyecto en Semrush para vigilar, mes a mes, cómo te recomiendan ChatGPT, Gemini y las respuestas de IA de Google. La primera foto, del 22 de octubre de 2026:
+
+[[ia]]
+
+- **Te citan, pero casi no te nombran**: 19 citas a 14 páginas de tu web, pero solo 2 menciones de tu nombre. Las IA usan tus textos sin recomendarte.
+- **Donde ya asomas**: "abogados de acoso laboral en España" (18 sobre 100) y "acoso laboral y bajas laborales" (16).
+- **Donde no estás y hay muchísimas preguntas**: salud mental y bajas, bajas laborales y prestaciones, contratos, acoso y mobbing, permisos retribuidos, discapacidad. Semrush cuenta 921 temas en los que podrías aparecer.
+- **Con quién te compara**: Campmany Abogados, Law&Trends, PayFit y Stop Acoso Laboral.
+
+**Qué vamos a hacer**: los artículos del calendario están pensados justo para esos temas; cada guía responde en las dos primeras frases (es lo que las IA copian); y tus datos van a coincidir en todas partes. En unos meses volvemos a medir y te enseñamos la diferencia.
+
 ## 5. Tu ficha de Google: 4,2 con 59 reseñas
 
 Hemos leído las 59. Reparto: 44 de cinco estrellas, 3 de cuatro, 1 de tres y **11 de una**. **Ninguna tiene respuesta del despacho.**
@@ -222,7 +241,7 @@ Abajo a la derecha, "Pregunta tu caso". Contesta a cualquier hora con lo que sab
 
 **Una prueba real**: le escribimos "mi jefe me hace comentarios sobre mi cuerpo y me ha quitado un proyecto, ¿qué casos parecidos habéis ganado?". Explicó el acoso sexual y por razón de sexo, enlazó el mapa de pruebas, dio el 016 y dijo que no tenía un caso igual "y no voy a inventarlo". Cerró invitando a la consulta.
 
-**Qué cuesta**: usa la misma tecnología que el asistente de Reformadísimo. Cada conversación cuesta unos céntimos. Para la prueba lo pagamos nosotros; si sigue, tendría su propia cuenta y podrías ver el gasto.
+**Qué cuesta**: cada conversación cuesta unos céntimos. Para la prueba lo pagamos nosotros; si sigue, tendría su propia cuenta y podrías ver el gasto.
 
 ## 11. Las herramientas: lo que casi nadie del sector tiene
 
@@ -247,16 +266,13 @@ Todas las cifras de las calculadoras están comprobadas a mano con casos de ejem
 
 ## 12. Velocidad y notas de Google
 
-Medido con PageSpeed Insights (la herramienta oficial de Google) el 23 de octubre de 2026:
+La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu teléfono, y Google lo nota. Lo hemos medido con las dos herramientas que más se usan: **PageSpeed Insights**, la nota oficial de Google, y **Pingdom**, que cronometra lo que tarda en cargar.
 
-| | Rendimiento | Accesibilidad | Buenas prácticas | SEO |
-| --- | --- | --- | --- | --- |
-| Web actual, móvil | 49 | 84 | 73 | 100 |
-| **Web nueva, móvil** | **94** | **100** | **100** | 69 |
-| Web actual, ordenador | 56 | 82 | 73 | 100 |
-| **Web nueva, ordenador** | **99** | **100** | 96 | 69 |
+[[velocidad]]
 
-**Por qué el SEO de la nueva marca 69**: porque es una demostración y le hemos pedido a Google que no la indexe, para que no compita con tu web real. Es lo único que penaliza. Al publicarla en tiernocentella.es se quita y vuelve a 100.
+**En resumen**: la web nueva carga en la mitad de tiempo, pesa casi la mitad y hace un tercio de las peticiones. En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
+
+**Y lo que queda por pulir**: al publicarla en tu dominio, el SEO sube a 100. Las fotos y el vídeo ya se guardan en el navegador de cada visita, así que la segunda vez va todavía más rápida.
 
 ## 13. Cómo ponerte por delante en Google y en las IA
 
@@ -426,6 +442,8 @@ Las sentencias son lo que más autoridad da a una web de abogados, ante Google, 
 - 2025: sentencia por falta de prevención para una docente con discapacidad a la que no adaptaron el puesto.
 
 > Estamos completando esta lista con sentencias recientes del Tribunal Supremo y de los tribunales de Madrid sobre acoso, despido nulo e incapacidad, cada una con su fuente. Las iremos añadiendo aquí y al calendario.
+
+**Una pregunta importante para ti**: en las fichas de sentencias hemos puesto tu foto, porque eres la cara del despacho. Si algún caso lo llevó otra abogada o abogado del equipo, dínoslo y ponemos su nombre y su foto: es justo y además da confianza. Te lo preguntamos también en el apartado 24.
 
 ## 17. Del formulario a la consulta: el seguimiento por correo
 

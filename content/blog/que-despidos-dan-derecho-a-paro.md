@@ -5,6 +5,8 @@ descripcion: Sí. Cualquier despido da derecho a paro, también el disciplinario
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido
+imagen: jubilado-papeles
+imagenAlt: Un hombre revisa sus papeles con la calculadora
 ---
 
 Sí. **Cualquier despido te da derecho a la prestación por desempleo**, sea disciplinario, objetivo o colectivo, y lo declare el juez procedente, improcedente o nulo. Lo que decide si cobras paro no es el tipo de despido, sino que hayas perdido el trabajo sin que sea por tu voluntad y que hayas cotizado lo suficiente.

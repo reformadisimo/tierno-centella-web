@@ -5,9 +5,9 @@ descripcion: Igualdad salarial entre mujeres y hombres - qué dice la ley, cómo
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: mujer
-imagen: abogada-documentos
-imagenAlt: Una abogada del despacho revisa documentación de un caso
 orden: 5
+imagen: igualdad
+imagenAlt: Unas manos sostienen un cartel con el símbolo de igualdad entre hombres y mujeres
 ---
 
 La empresa está obligada a pagar lo mismo por un trabajo de igual valor, sin diferencias por sexo, en el salario base y en todos los complementos. Si cobras menos que un compañero que hace un trabajo equivalente, puedes reclamar la diferencia de los últimos 12 meses y una indemnización por discriminación.

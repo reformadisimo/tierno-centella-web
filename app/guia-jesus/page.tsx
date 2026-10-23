@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 
 const FUENTES: [string, string][] = [
   ['PageSpeed Insights de Google (mediciones del 23/10/2026)', 'https://pagespeed.web.dev/'],
+  ['Pingdom Website Speed Test, desde Londres (mediciones del 23/10/2026)', 'https://tools.pingdom.com/'],
+  ['Semrush AI Visibility: proyecto tiernocentella.es (datos del 22/10/2026)', 'https://www.semrush.com/ai-seo/overview/?q=tiernocentella.es'],
   ['Ficha de Google de Tierno Centella Abogados (59 reseñas leídas el 23/10/2026)', 'https://www.google.com/maps/place/Tierno+Centella+Abogados/'],
   ['Instagram del despacho', 'https://www.instagram.com/tiernocentella_abogados/'],
   ['LinkedIn de Jesús Tierno Centella', 'https://www.linkedin.com/in/jes%C3%BAs-tierno-centella-13ba92188/'],
@@ -30,6 +32,50 @@ const FUENTES: [string, string][] = [
   ['Estudio de competencia: Bufete Toro, Campmany, García de la Santa, Jover Marben, Pedraza Laboral', 'https://www.bufetetoro.com/abogados-acoso-laboral-madrid/'],
 ];
 
+// Cada apartado: su foto, una frase cercana y su grupo del índice. El detalle va plegado para que la guía se lea fácil.
+type Extra = { foto: string; frase: string; grupo: string; abierta?: boolean };
+const GRUPOS: Record<string, string> = {
+  empezar: 'Para empezar',
+  hoy: 'Dónde estás hoy',
+  web: 'Tu web nueva',
+  google: 'Que te encuentren',
+  clientes: 'Clientes y campañas',
+  seguir: 'Cómo seguimos',
+};
+const EXTRA: Record<string, Extra> = {
+  inicio: { foto: 'equipo', frase: 'Jesús, bienvenido. Aquí está todo, contado con calma.', grupo: 'empezar', abierta: true },
+  '1': { foto: 'jesus-mesa', frase: 'Lo importante, en lo que tardas en tomarte un café.', grupo: 'empezar', abierta: true },
+  '2': { foto: 'portatil-manos', frase: 'Las palabras raras, explicadas como a un amigo.', grupo: 'empezar' },
+  '3': { foto: 'placa', frase: 'Lo más difícil ya lo tienes: veinticinco años de buen trabajo.', grupo: 'hoy' },
+  '4': { foto: 'hombre-estres', frase: 'Tu web actual te está costando clientes. Tiene arreglo.', grupo: 'hoy' },
+  '4 bis': { foto: 'trabajador-portatil', frase: 'Lo que ven Google y las IA cuando alguien pregunta por ti.', grupo: 'hoy' },
+  '5': { foto: 'recepcion', frase: 'Tu ficha de Google es tu escaparate. Vamos a sacarle brillo.', grupo: 'hoy' },
+  '6': { foto: 'equipo-pasillo', frase: 'Tienes muchas historias que contar. Las redes son el altavoz.', grupo: 'hoy' },
+  '7': { foto: 'libros-derecho', frase: 'Mirar a los demás sirve para saber dónde brillar.', grupo: 'hoy' },
+  '8': { foto: 'despacho-mesa', frase: 'Una web pensada para quien lo está pasando mal en su trabajo.', grupo: 'web' },
+  '9': { foto: 'reunion-equipo', frase: 'Un guiño a las trabajadoras que se convierte en servicio.', grupo: 'web' },
+  '10': { foto: 'abogado-joven', frase: 'Un asistente que contesta a cualquier hora, y con prudencia.', grupo: 'web' },
+  '11': { foto: 'calculadora-papeles', frase: 'Herramientas que casi nadie del sector tiene.', grupo: 'web' },
+  '12': { foto: 'fachada', frase: 'Tu web, el doble de rápida. Y se nota.', grupo: 'web' },
+  '13': { foto: 'biblioteca', frase: 'Cómo llegar el primero, en Google y en las IA.', grupo: 'google' },
+  '13 bis': { foto: 'documentos-mesa', frase: 'Datos de verdad para escribir textos que funcionan.', grupo: 'google' },
+  '14': { foto: 'abogada-lee', frase: '220 artículos revisados uno a uno, sin perder nada por el camino.', grupo: 'google' },
+  '15': { foto: 'papeleria', frase: 'Tres artículos a la semana, ya pensados para ti.', grupo: 'google' },
+  '16': { foto: 'mazo', frase: 'Tus sentencias, contadas para que cualquiera las entienda.', grupo: 'google' },
+  '17': { foto: 'acuerdo', frase: 'Que nadie que te escriba se quede sin respuesta.', grupo: 'clientes' },
+  '18': { foto: 'reunion-oficina', frase: 'Llegar a quien te necesita, y a quien puede recomendarte.', grupo: 'clientes' },
+  '18 bis': { foto: 'sala-reuniones', frase: 'Ya inviertes en anuncios. Vamos a que rindan más.', grupo: 'clientes' },
+  '18 ter': { foto: 'firma-contrato', frase: 'Páginas hechas para que quien llega, llame.', grupo: 'clientes' },
+  '19': { foto: 'jesus-con-abogada', frase: 'Todo medido, para mejorar un poco cada semana.', grupo: 'clientes' },
+  '20': { foto: 'empresas-firma', frase: 'Tu logo de siempre, un poco más fino.', grupo: 'web' },
+  '21': { foto: 'documento-pluma', frase: 'Un cambio sin sustos: tus clientes y Google ni lo notan.', grupo: 'seguir' },
+  '22': { foto: 'manos-unidas', frase: 'Lo que pasará en los próximos meses, sin promesas vacías.', grupo: 'seguir' },
+  '23': { foto: 'reunion-cliente', frase: 'Cinco minutos tuyos, y nosotros hacemos el resto.', grupo: 'seguir' },
+  '24': { foto: 'abogada-escucha', frase: 'Unas preguntas cortas para afinar. Contesta solo las que quieras.', grupo: 'seguir', abierta: true },
+  '25': { foto: 'jesus-retrato', frase: 'La web es tuya. Lo demás, cuando quieras.', grupo: 'seguir', abierta: true },
+  '26': { foto: 'libros', frase: 'De dónde sale cada dato.', grupo: 'seguir' },
+};
+
 function secciones(): SeccionGuia[] {
   let md = fs.readFileSync(path.join(process.cwd(), 'content/guia/guia-jesus.md'), 'utf8');
   md = md.replace('FUENTES', FUENTES.map(([t, u]) => `- [${t}](${u})`).join('\n'));
@@ -46,7 +92,19 @@ function secciones(): SeccionGuia[] {
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
       const html = (marked.parse(cuerpo, { async: false }) as string).replace(/<a href="http/g, '<a target="_blank" rel="noopener" href="http');
-      return { id, titulo: titulo.trim(), html, texto: cuerpo.replace(/[#*|>_\-[\]()]/g, ' ') };
+      const clave = titulo.match(/^(\d+(?: bis| ter)?)\./)?.[1] ?? 'inicio';
+      const extra = EXTRA[clave] ?? { foto: 'biblioteca', frase: '', grupo: 'seguir' };
+      return {
+        id,
+        titulo: titulo.trim(),
+        html,
+        texto: cuerpo.replace(/[#*|>_\-[\]()]/g, ' '),
+        foto: extra.foto,
+        frase: extra.frase,
+        grupo: GRUPOS[extra.grupo],
+        claveGrupo: extra.grupo,
+        abierta: !!extra.abierta,
+      };
     });
 }
 
@@ -54,10 +112,25 @@ export default function Pagina() {
   return (
     <>
       <header className="gj-portada" id="indice-guia">
+        <img className="gj-portada-foto" src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="100vw" alt="" />
         <div className="contenedor">
           <img src="/img/logo-tc-blanco.webp" alt="Tierno Centella Abogados" width={260} height={62} />
-          <h1>Tu web nueva, explicada sin prisas</h1>
-          <p>Guía para Jesús Tierno Centella. Preparada por Ignacio de la Rubia. Octubre de 2026.</p>
+          <h1>Jesús, esta es tu web nueva. Te la contamos sin prisas.</h1>
+          <p>Para Jesús Tierno Centella, con cariño. Preparada por Ignacio de la Rubia. Octubre de 2026.</p>
+          <ul className="gj-portada-cifras">
+            <li>
+              <strong>94</strong> de velocidad en móvil (antes 49)
+            </li>
+            <li>
+              <strong>14</strong> herramientas para tus clientes
+            </li>
+            <li>
+              <strong>3</strong> páginas nuevas para tus anuncios
+            </li>
+            <li>
+              <strong>220</strong> artículos antiguos, redirigidos uno a uno
+            </li>
+          </ul>
         </div>
       </header>
       <div className="contenedor">

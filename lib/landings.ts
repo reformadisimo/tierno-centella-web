@@ -44,8 +44,8 @@ export const LANDINGS: Landing[] = [
       'Estudiamos lo que decide el grado: tus informes y tu profesión habitual',
       'En el despacho de Jorge Juan o por videollamada desde toda España',
     ],
-    foto: 'abogada-documentos',
-    fotoAlt: 'Abogada del despacho revisando la documentación de un expediente',
+    foto: 'incapacidad-ventana',
+    fotoAlt: 'Una mujer junto a la ventana de su oficina',
     plazo: {
       cifra: '30 días hábiles',
       texto: 'para presentar la reclamación previa desde que te notifican la resolución. Si se pasa, pierdes esa vía.',
@@ -147,8 +147,8 @@ export const LANDINGS: Landing[] = [
       'Te decimos con claridad si lo que vives es acoso y cómo probarlo',
       'En el despacho de Jorge Juan o por videollamada desde toda España',
     ],
-    foto: 'abogada-escucha',
-    fotoAlt: 'Abogada del despacho escuchando a una clienta',
+    foto: 'acoso-tension',
+    fotoAlt: 'Un superior señala con el dedo a una trabajadora',
     plazo: {
       cifra: 'Antes de actuar',
       texto: 'asesórate: dimitir, firmar un acuerdo o denunciar sin prueba puede hacerte perder la indemnización y el paro.',
@@ -212,8 +212,8 @@ export const LANDINGS: Landing[] = [
       'Revisamos la carta y el finiquito antes de que firmes nada',
       'En el despacho de Jorge Juan o por videollamada desde toda España',
     ],
-    foto: 'jesus-firmando',
-    fotoAlt: 'Jesús Tierno Centella firmando documentos en el despacho',
+    foto: 'despido-caja',
+    fotoAlt: 'Una persona recoge sus cosas en una caja tras un despido',
     plazo: { cifra: '20 días hábiles', texto: 'para impugnar el despido desde el día siguiente. Pasado ese plazo, ya no se puede reclamar.' },
     situaciones: [
       { titulo: 'Despido disciplinario', texto: 'La empresa tiene que probar lo que dice la carta. Si no puede, es improcedente.' },

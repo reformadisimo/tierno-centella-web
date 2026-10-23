@@ -4,9 +4,9 @@ descripcion: Cómo pedir una reducción de jornada o una adaptación de horario 
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: mujer
-imagen: abogada-sonrie
-imagenAlt: Una abogada del despacho sonríe durante una reunión
 orden: 3
+imagen: familia-siluetas
+imagenAlt: Siluetas de una familia con sus hijos
 ---
 
 Tienes dos herramientas distintas para conciliar. La **reducción de jornada** es un derecho que la empresa no puede negarte: trabajas menos horas y cobras menos. La **adaptación de jornada** es pedir otra forma de trabajar (otro horario, teletrabajo, jornada continua) sin reducir horas; la empresa tiene que negociarla contigo y solo puede rechazarla con razones objetivas.

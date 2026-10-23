@@ -3,16 +3,17 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { DESPACHO } from '@/lib/despacho';
+import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
 
 // Aviso de salida: cuando alguien se va sin haber hecho nada, le ofrecemos un último paso útil
 // (su tema, una calculadora, el chat, una llamada o los pasos de su caso por correo).
-// Sale como mucho una vez cada 7 días, nunca en las landings de anuncios, la guía o contacto,
+// Sale como mucho una vez cada 7 días, nunca en la guía o contacto,
+// (en las landings de anuncios, una versión que no saca a nadie de la página),
 // ni si ya escribió al chat, envió un formulario o todavía no ha elegido las cookies.
 const CLAVE = 'tc-salida';
 const DIAS = 7;
-const RUTAS_FUERA = ['/consulta/', '/guia-jesus', '/contacto', '/privacidad', '/cookies', '/aviso-legal'];
+const RUTAS_FUERA = ['/guia-jesus', '/contacto', '/privacidad', '/cookies', '/aviso-legal'];
 
 const TEMAS = [
   { href: '/despido', texto: 'Me han despedido' },
@@ -50,6 +51,7 @@ export default function AvisoSalida() {
   const caja = useRef<HTMLDivElement>(null);
 
   const fuera = RUTAS_FUERA.some((r) => ruta.startsWith(r));
+  const enLanding = ruta.startsWith('/consulta/');
 
   useEffect(() => {
     if (fuera) return;
@@ -154,43 +156,86 @@ export default function AvisoSalida() {
         </button>
         <p className="etiqueta-calida">Antes de irte</p>
         <h2 id="salida-titulo">¿Te ayudamos con tu caso?</h2>
+        {enLanding ? (
+          <>
+            <p className="salida-intro">Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.</p>
+            <div className="salida-temas">
+              <a
+                href="#lf-arriba"
+                onClick={() => {
+                  elegir('formulario landing');
+                  setTimeout(() => document.querySelector<HTMLSelectElement>('#lf-arriba select')?.focus(), 300);
+                }}
+              >
+                Que me llaméis vosotros
+              </a>
+              <a href={enlaceWhatsapp('Hola, quiero consultar mi caso.')} onClick={() => elegir('whatsapp')}>
+                Escribir por WhatsApp
+              </a>
+            </div>
+            <div className="salida-fila">
+              <div>
+                <strong>¿Prefieres preguntar primero?</strong>
+                <p className="salida-intro" style={{ margin: '4px 0 0' }}>El chat te responde al momento, a cualquier hora.</p>
+              </div>
+              <div className="salida-acciones">
+                <button
+                  type="button"
+                  className="boton"
+                  onClick={() => {
+                    elegir('chat');
+                    window.dispatchEvent(new Event('abrir-asistente'));
+                  }}
+                >
+                  Preguntar al chat
+                </button>
+                <a className="boton boton-marcador" href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
+                  Llamar
+                </a>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
         <p className="salida-intro">Elige lo que más se parece a lo tuyo y te llevamos directo.</p>
 
-        <div className="salida-temas">
-          {TEMAS.map((t) => (
-            <Link key={t.href} href={t.href} onClick={() => elegir(t.texto)}>
-              {t.texto}
-            </Link>
-          ))}
-        </div>
-
-        <div className="salida-fila">
-          <div>
-            <strong>Calcula lo tuyo</strong>
-            <div className="salida-chips">
-              {CALCULOS.map((c) => (
-                <Link key={c.href} href={c.href} onClick={() => elegir(`calcular ${c.texto}`)}>
-                  {c.texto}
+            <div className="salida-temas">
+              {TEMAS.map((t) => (
+                <Link key={t.href} href={t.href} onClick={() => elegir(t.texto)}>
+                  {t.texto}
                 </Link>
               ))}
             </div>
-          </div>
-          <div className="salida-acciones">
-            <button
-              type="button"
-              className="boton"
-              onClick={() => {
-                elegir('chat');
-                window.dispatchEvent(new Event('abrir-asistente'));
-              }}
-            >
-              Preguntar al chat
-            </button>
-            <a className="boton boton-marcador" href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
-              Llamar
-            </a>
-          </div>
-        </div>
+
+            <div className="salida-fila">
+              <div>
+                <strong>Calcula lo tuyo</strong>
+                <div className="salida-chips">
+                  {CALCULOS.map((c) => (
+                    <Link key={c.href} href={c.href} onClick={() => elegir(`calcular ${c.texto}`)}>
+                      {c.texto}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div className="salida-acciones">
+                <button
+                  type="button"
+                  className="boton"
+                  onClick={() => {
+                    elegir('chat');
+                    window.dispatchEvent(new Event('abrir-asistente'));
+                  }}
+                >
+                  Preguntar al chat
+                </button>
+                <a className="boton boton-marcador" href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
+                  Llamar
+                </a>
+              </div>
+            </div>
+          </>
+        )}
 
         {estado === 'hecho' ? (
           <p className="salida-hecho" role="status">

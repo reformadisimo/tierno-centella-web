@@ -5,6 +5,8 @@ descripcion: Cuándo puedes pedir al juez que extinga tu contrato por incumplimi
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido
+imagen: acuerdo
+imagenAlt: Dos personas se dan la mano tras un acuerdo
 ---
 
 El artículo 50 del Estatuto de los Trabajadores te permite pedir al juez que termine tu contrato por un incumplimiento grave de la empresa y que te indemnice como si te hubieran despedido de forma improcedente: 33 días de salario por año trabajado, con un máximo de 24 mensualidades. Es la salida cuando ya no puedes seguir, pero irte por tu cuenta te haría perder la indemnización y el paro.

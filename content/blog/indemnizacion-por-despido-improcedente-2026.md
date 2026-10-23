@@ -5,6 +5,8 @@ descripcion: En 2026 el despido improcedente se paga con 33 días por año, hast
 fecha: 2026-09-17
 actualizado: 2026-10-23
 categoria: despido
+imagen: mazo
+imagenAlt: Un mazo de juez
 ---
 
 En octubre de 2026, la indemnización por despido improcedente sigue siendo de 33 días de salario por año trabajado, con un máximo de 24 mensualidades. Si tu contrato empezó antes del 12 de febrero de 2012, el tiempo anterior a esa fecha se paga a 45 días por año. Europa ha criticado este sistema, pero la ley no ha cambiado.

@@ -5,6 +5,8 @@ descripcion: Qué revisar en la carta, qué firmar y qué no, cuánto tiempo tie
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: despido
+imagen: mujer-cansada
+imagenAlt: Una trabajadora con la cabeza entre las manos frente al portátil
 ---
 
 El despido disciplinario es el que la empresa justifica en una falta grave tuya: ausencias, desobediencia, bajo rendimiento, ofensas o transgresión de la buena fe. Si la empresa no puede probar esa falta, o la carta no cumple los requisitos, el despido es improcedente y te corresponde indemnización. Y si en realidad es una represalia o una discriminación, es nulo.

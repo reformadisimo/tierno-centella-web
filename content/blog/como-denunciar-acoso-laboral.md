@@ -4,6 +4,8 @@ descripcion: Las cinco vías para denunciar el acoso en el trabajo (empresa, Ins
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso
+imagen: mujer-agobiada
+imagenAlt: Una trabajadora agobiada mientras alguien le entrega papeles
 ---
 
 Para denunciar el acoso laboral hay cinco vías, y no son excluyentes: la denuncia interna a tu empresa, la Inspección de Trabajo, el Juzgado de lo Social, la vía penal y, si trabajas para la Administración, la reclamación a la propia Administración. Lo habitual es empezar por la denuncia interna por escrito, porque obliga a la empresa a actuar y te protege.

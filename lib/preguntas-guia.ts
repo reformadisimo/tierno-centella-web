@@ -31,5 +31,6 @@ export const PREGUNTAS_GUIA: PreguntaGuia[] = [
   { n: 27, bloque: 'Hasta dónde quieres llegar', pregunta: '¿Qué tipo de casos quieres más, y cuáles menos?' },
   { n: 28, bloque: 'Hasta dónde quieres llegar', pregunta: '¿Con qué presupuesto mensual contarías para marketing si los resultados acompañan?', opciones: ['Menos de 500 €', '500 a 1.500 €', 'Más de 1.500 €', 'Prefiero hablarlo'] },
   { n: 29, bloque: 'Hasta dónde quieres llegar', pregunta: 'En incapacidad permanente, ¿trabajas con una parte a resultado (cobrar solo si se gana) o solo con presupuesto cerrado?', opciones: ['Parte a resultado', 'Presupuesto cerrado', 'Depende del caso'], pista: 'Unas 390 personas al mes buscan "abogados incapacidad solo cobran si ganan". Si lo ofreces, lo ponemos en la landing de anuncios' },
-  { n: 30, bloque: 'Hasta dónde quieres llegar', pregunta: '¿Algo más que quieras contarnos o preguntarnos?', opcional: true },
+  { n: 30, bloque: 'Hasta dónde quieres llegar', pregunta: 'En las sentencias de la web, ¿quién llevó cada caso? ¿Ponemos su nombre y su foto?', pista: 'Ahora sale tu foto en todas. Si alguno lo llevó otra persona del equipo, nos encanta reconocerlo' },
+  { n: 31, bloque: 'Hasta dónde quieres llegar', pregunta: '¿Algo más que quieras contarnos o preguntarnos?', opcional: true },
 ];

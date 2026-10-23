@@ -41,7 +41,13 @@ const nextConfig = {
   poweredByHeader: false,
   async headers() {
     // Demo: que ningún buscador indexe esta web mientras no sea la oficial.
-    return [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }];
+    // Fotos, vídeos y logos: que el navegador los guarde 30 días (más rápido en la segunda visita).
+    const cache = [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }];
+    return [
+      { source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+      { source: '/img/:path*', headers: cache },
+      { source: '/video/:path*', headers: cache },
+    ];
   },
   async redirects() {
     const vistas = new Set();

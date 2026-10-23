@@ -4,6 +4,8 @@ descripcion: Quién puede pedirla, qué documentos preparar, cómo es el tribuna
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: incapacidad
+imagen: medico-informe
+imagenAlt: Un médico rellena un informe en la sala de espera
 ---
 
 La incapacidad permanente se pide al Instituto Nacional de la Seguridad Social (INSS), por su sede electrónica o en un centro de atención. También puede iniciarse sola, cuando agotas la baja y el INSS abre el expediente. Lo decisivo no es el formulario, sino los informes médicos que demuestran cómo te limitan tus dolencias para trabajar.

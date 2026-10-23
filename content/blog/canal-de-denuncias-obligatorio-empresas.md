@@ -5,6 +5,8 @@ descripcion: Qué es el canal interno de información de la Ley 2/2023, qué emp
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: empresas
+imagen: equipo-pasillo
+imagenAlt: Tres compañeros revisan documentos mientras caminan por la oficina
 ---
 
 La Ley 2/2023, de protección de las personas que informan sobre infracciones, obliga a las empresas de **50 o más trabajadores** y a todo el sector público a tener un **canal interno de información**: una vía segura y confidencial para comunicar irregularidades. Quien informa de buena fe queda protegido frente a represalias, incluido el despido.

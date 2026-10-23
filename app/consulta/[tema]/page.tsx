@@ -8,6 +8,7 @@ import FormularioLanding from '@/components/FormularioLanding';
 import ComprobadorIncapacidad from '@/components/ComprobadorIncapacidad';
 import TestAcoso from '@/components/TestAcoso';
 import Calculadora from '@/components/Calculadora';
+import VideoPortada from '@/components/VideoPortada';
 
 // Páginas de aterrizaje para Google Ads. Sin menú (todo lleva a contactar), sin indexar
 // (son para el tráfico de pago) y con el formulario a la vista nada más entrar.
@@ -61,6 +62,7 @@ export default async function Landing({ params }: { params: Promise<{ tema: stri
           alt=""
           fetchPriority="high"
         />
+        <VideoPortada />
         <div className="contenedor lp-heroe-rejilla">
           <div className="lp-heroe-texto">
             <p className="lp-antetitulo">{l.antetitulo}</p>

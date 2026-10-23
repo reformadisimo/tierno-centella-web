@@ -5,6 +5,8 @@ fecha: 2026-10-13
 actualizado: 2026-10-13
 categoria: acoso
 video: TwKRGi1LISY
+imagen: jesus-mesa
+imagenAlt: Jesús Tierno Centella en su despacho
 ---
 
 El 30 de septiembre de 2005, el Juzgado de lo Social n.º 29 de Madrid condenó a una empresa y a la directora que acosaba a uno de sus trabajadores, David del Olmo, a pagarle 30.000 euros de forma solidaria. Según el despacho, fue la primera sentencia en España que condenaba así, junto a la empresa, a la persona acosadora. El Tribunal Superior de Justicia de Madrid desestimó después el recurso. El abogado del trabajador fue Jesús Tierno.

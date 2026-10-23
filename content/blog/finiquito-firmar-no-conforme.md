@@ -5,6 +5,8 @@ descripcion: Firmar el finiquito con la frase no conforme te permite cobrar sin 
 fecha: 2026-09-13
 actualizado: 2026-09-13
 categoria: despido
+imagen: firma-contrato
+imagenAlt: Una persona firma un documento
 ---
 
 Firmar el finiquito como "no conforme" significa que recibes el dinero o el documento, pero no aceptas que esté todo pagado ni renuncias a reclamar. Es la forma más prudente de firmar cuando te despiden o cuando no tienes claro que las cuentas estén bien. Además, tienes derecho a pedir que esté presente un representante de los trabajadores en el momento de la firma.

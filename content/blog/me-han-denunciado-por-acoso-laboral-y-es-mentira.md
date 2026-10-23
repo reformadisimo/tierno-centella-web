@@ -5,6 +5,8 @@ descripcion: Qué derechos tienes si te acusan falsamente de acoso en el trabajo
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso
+imagen: jesus-con-abogada
+imagenAlt: Una abogada del despacho estudia un caso
 ---
 
 Si te han denunciado por acoso y no es verdad, lo primero es no responder en caliente. Tienes derecho a conocer de qué te acusan, a defenderte y a que la investigación sea imparcial y confidencial. Y conviene saber algo que vemos cada vez más en el despacho: **a veces quien acosa denuncia primero a su víctima** para presentarse como la perjudicada.

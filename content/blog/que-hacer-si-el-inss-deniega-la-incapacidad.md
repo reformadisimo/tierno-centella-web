@@ -4,6 +4,8 @@ descripcion: Si el INSS deniega tu incapacidad permanente o te da un grado menor
 fecha: 2026-10-04
 actualizado: 2026-10-04
 categoria: incapacidad
+imagen: libros-derecho
+imagenAlt: Libros de derecho en una estantería
 ---
 
 Si el INSS te deniega la incapacidad permanente o te reconoce un grado inferior al que crees que te corresponde, tienes 30 días hábiles desde la notificación para presentar una reclamación previa. Si la rechaza o no contesta en 45 días, puedes demandar ante el Juzgado de lo Social. Una denegación no es el final: muchas incapacidades se reconocen en el juicio.

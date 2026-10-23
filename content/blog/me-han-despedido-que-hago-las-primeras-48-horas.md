@@ -4,6 +4,8 @@ descripcion: Qué hacer nada más recibir un despido: qué firmar y qué no, qu�
 fecha: 2026-09-05
 actualizado: 2026-09-05
 categoria: despido
+imagen: despido-caja
+imagenAlt: Una persona recoge sus cosas en una caja tras un despido
 ---
 
 Si te acaban de despedir, lo más importante en las primeras 48 horas es no firmar nada como conforme, guardar la carta y todas las pruebas, y apuntar la fecha del despido. Desde el día siguiente tienes 20 días hábiles para reclamar. El paro puedes pedirlo a la vez, porque reclamar el despido no te impide cobrarlo.

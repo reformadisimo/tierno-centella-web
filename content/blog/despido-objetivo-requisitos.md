@@ -5,6 +5,8 @@ descripcion: El despido objetivo exige carta con la causa, indemnización de 20 
 fecha: 2026-09-22
 actualizado: 2026-09-22
 categoria: despido
+imagen: reunion-oficina
+imagenAlt: Una reunión de empresa en una sala de oficinas
 ---
 
 Para que un despido objetivo sea válido, la empresa tiene que darte una carta que explique la causa con hechos concretos, ponerte a disposición en ese mismo momento una indemnización de 20 días de salario por año trabajado y avisarte con 15 días de antelación. Si no demuestra la causa o falla en la carta o en la indemnización, el despido puede ser improcedente.

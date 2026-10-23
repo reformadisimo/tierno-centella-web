@@ -4,9 +4,9 @@ descripcion: Las 19 semanas del permiso por nacimiento, cómo se reparten, el pe
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: mujer
-imagen: reunion-cliente
-imagenAlt: Jesús Tierno entrega documentación a una clienta
 orden: 4
+imagen: madre-hijo
+imagenAlt: Una madre juega con su hijo pequeño
 ---
 
 Desde el 31 de julio de 2025, cada progenitor tiene **19 semanas** de permiso por nacimiento y cuidado del menor, pagadas al 100 % de su base reguladora por la Seguridad Social. Las familias monoparentales pueden llegar a 32. Además existen el permiso de lactancia, el permiso parental y varios permisos cortos para cuidar a familiares.

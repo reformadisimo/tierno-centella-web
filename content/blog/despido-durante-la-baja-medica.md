@@ -5,6 +5,8 @@ descripcion: Que te despidan de baja no es nulo de forma automática, pero puede
 fecha: 2026-09-09
 actualizado: 2026-09-09
 categoria: despido
+imagen: mujer-cafe
+imagenAlt: Una mujer cansada en su mesa de trabajo
 ---
 
 Un despido durante la baja médica no es nulo solo por estar de baja. Puede serlo si el motivo real es tu enfermedad: desde julio de 2022, la Ley 15/2022 de igualdad de trato incluye la enfermedad entre las causas de discriminación prohibidas. Si aportas indicios de que te despidieron por estar enfermo, es la empresa la que tiene que demostrar que tuvo otra razón.

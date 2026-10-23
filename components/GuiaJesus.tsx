@@ -3,7 +3,179 @@
 import { useEffect, useMemo, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 
-export type SeccionGuia = { id: string; titulo: string; html: string; texto: string };
+export type SeccionGuia = {
+  id: string;
+  titulo: string;
+  html: string;
+  texto: string;
+  foto: string;
+  frase: string;
+  grupo: string;
+  claveGrupo: string;
+  abierta: boolean;
+};
+const LOGOS: { src: string; nombre: string; texto: string }[] = [
+  { src: 'google-analytics.png', nombre: 'Google Analytics', texto: 'El contador de visitas: cuánta gente entra y de dónde viene.' },
+  { src: 'google-search-console.png', nombre: 'Search Console', texto: 'Cómo te ve Google: con qué búsquedas sales y en qué puesto.' },
+  { src: 'googletagmanager.svg', nombre: 'Tag Manager', texto: 'La caja donde se enchufan Analytics y los anuncios.' },
+  { src: 'google-ads.png', nombre: 'Google Ads', texto: 'Los anuncios que salen arriba en Google. Pagas por clic.' },
+  { src: 'google-business-profile.jpg', nombre: 'Ficha de Google', texto: 'Tu tarjeta en Maps: fotos, horario, teléfono y reseñas.' },
+  { src: 'semrush.svg', nombre: 'Semrush', texto: 'Qué busca la gente, cómo van tus rivales y qué dicen las IA de ti.' },
+  { src: 'pagespeedinsights.svg', nombre: 'PageSpeed', texto: 'La nota oficial de Google a la velocidad de tu web.' },
+  { src: 'pingdom.svg', nombre: 'Pingdom', texto: 'Cronómetro: cuánto tarda en cargar tu web y cuánto pesa.' },
+  { src: 'vercel.svg', nombre: 'Vercel', texto: 'Donde vive la web nueva: rápida, segura y con su propio contador.' },
+  { src: 'resend.svg', nombre: 'Resend', texto: 'El cartero: envía los correos de seguimiento desde tu dominio.' },
+  { src: 'whatsapp-business.jpg', nombre: 'WhatsApp Business', texto: 'Tu WhatsApp del despacho, con respuestas rápidas.' },
+  { src: 'instagram.jpg', nombre: 'Instagram', texto: 'Tus reels: el acoso explicado en un minuto.' },
+  { src: 'linkedin.svg', nombre: 'LinkedIn', texto: 'Donde están los colegios, empresas e instituciones.' },
+  { src: 'facebook.png', nombre: 'Facebook', texto: 'Tu página y la comunidad de siempre.' },
+];
+
+function BloqueLogos() {
+  return (
+    <div className="gj-logos">
+      {LOGOS.map((l) => (
+        <div key={l.nombre}>
+          <img src={`/img/guia/${l.src}`} alt={`Logotipo de ${l.nombre}`} width={40} height={40} loading="lazy" />
+          <strong>{l.nombre}</strong>
+          <span>{l.texto}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Marcador circular de 0 a 100, en verde, naranja o rojo como PageSpeed.
+function Marcador({ valor, etiqueta }: { valor: number; etiqueta: string }) {
+  const color = valor >= 90 ? '#0c8a4a' : valor >= 50 ? '#d97a0b' : '#c8321f';
+  const r = 26;
+  const c = 2 * Math.PI * r;
+  return (
+    <div className="gj-marcador">
+      <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true">
+        <circle cx="34" cy="34" r={r} fill="none" stroke="#e8edf2" strokeWidth="6" />
+        <circle cx="34" cy="34" r={r} fill="none" stroke={color} strokeWidth="6" strokeLinecap="round" strokeDasharray={`${(valor / 100) * c} ${c}`} transform="rotate(-90 34 34)" />
+        <text x="34" y="40" textAnchor="middle" fontSize="18" fontWeight="800" fill={color}>
+          {valor}
+        </text>
+      </svg>
+      <span>{etiqueta}</span>
+    </div>
+  );
+}
+
+function BloqueVelocidad() {
+  const filas: { titulo: string; nueva: boolean; notas: number[]; etiquetas: string[] }[] = [
+    { titulo: 'Tu web actual, en el móvil', nueva: false, notas: [49, 84, 73, 100], etiquetas: ['Velocidad', 'Accesibilidad', 'Buenas prácticas', 'SEO'] },
+    { titulo: 'La web nueva, en el móvil', nueva: true, notas: [94, 100, 100, 100], etiquetas: ['Velocidad', 'Accesibilidad', 'Buenas prácticas', 'SEO al publicarla'] },
+  ];
+  return (
+    <div className="gj-velocidad">
+      <p className="gj-bloque-titulo">
+        <img src="/img/guia/pagespeedinsights.svg" alt="" width={22} height={22} /> PageSpeed Insights, la nota oficial de Google
+      </p>
+      {filas.map((f) => (
+        <div key={f.titulo} className={`gj-vel-fila${f.nueva ? ' nueva' : ''}`}>
+          <strong>{f.titulo}</strong>
+          <div className="gj-vel-marcadores">
+            {f.notas.map((n, i) => (
+              <Marcador key={i} valor={n} etiqueta={f.etiquetas[i]} />
+            ))}
+          </div>
+        </div>
+      ))}
+      <p className="gj-nota">
+        El SEO de la web nueva marca 100 en cuanto se publica en tu dominio. En la dirección de prueba sale 69 porque le pedimos a Google que no la
+        indexe, para que no compita con tu web real.
+      </p>
+      <p className="gj-bloque-titulo">
+        <img src="/img/guia/pingdom.svg" alt="" width={22} height={22} /> Pingdom, el cronómetro (medido el 23 de octubre de 2026)
+      </p>
+      <div className="gj-pingdom">
+        <div>
+          <span>Nota</span>
+          <b className="mal">C · 78</b>
+          <b className="bien">B · 84</b>
+        </div>
+        <div>
+          <span>Tiempo de carga</span>
+          <b className="mal">3,14 s</b>
+          <b className="bien">1,58 s</b>
+        </div>
+        <div>
+          <span>Peso de la página</span>
+          <b className="mal">1,8 MB</b>
+          <b className="bien">1,0 MB</b>
+        </div>
+        <div>
+          <span>Peticiones al servidor</span>
+          <b className="mal">88</b>
+          <b className="bien">28</b>
+        </div>
+      </div>
+      <p className="gj-leyenda">
+        <i className="mal" /> Web actual <i className="bien" /> Web nueva
+      </p>
+    </div>
+  );
+}
+
+function BloqueIA() {
+  return (
+    <div className="gj-ia">
+      <div className="gj-ia-cifra">
+        <Marcador valor={14} etiqueta="Visibilidad en la IA" />
+        <p>
+          <strong>14 sobre 100: baja.</strong> Semrush dice que las IA casi nunca te mencionan cuando alguien pregunta por abogados laboralistas,
+          comparado con tus competidores.
+        </p>
+      </div>
+      <div className="gj-ia-plataformas">
+        <div>
+          <b>ChatGPT</b>
+          <span>1 mención</span>
+        </div>
+        <div>
+          <b>Respuestas de IA de Google</b>
+          <span>1 mención</span>
+        </div>
+        <div>
+          <b>Modo IA de Google</b>
+          <span>0</span>
+        </div>
+        <div>
+          <b>Gemini</b>
+          <span>0</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const BLOQUES: Record<string, () => React.ReactElement> = { logos: BloqueLogos, velocidad: BloqueVelocidad, ia: BloqueIA };
+
+function Contenido({ html }: { html: string }) {
+  if (html.includes('<p>CUESTIONARIO</p>'))
+    return (
+      <>
+        <div className="prosa" dangerouslySetInnerHTML={{ __html: html.replace('<p>CUESTIONARIO</p>', '') }} />
+        <CuestionarioGuia />
+      </>
+    );
+  const partes = html.split(/<p>\[\[(\w+)\]\]<\/p>/);
+  return (
+    <>
+      {partes.map((p, i) => {
+        if (i % 2 === 1) {
+          const B = BLOQUES[p];
+          return B ? <B key={i} /> : null;
+        }
+        return p.trim() ? <div key={i} className="prosa" dangerouslySetInnerHTML={{ __html: p }} /> : null;
+      })}
+    </>
+  );
+}
+
 const normal = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 const avisar = (datos: Record<string, string>) =>
@@ -99,27 +271,38 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
         )}
         <nav aria-label="Índice de la guía">
           <strong className="gj-indice-titulo">Índice</strong>
-          <ol className="gj-indice">
-            {visibles.map((s) => (
-              <li key={s.id}>
-                <a href={`#${s.id}`}>{s.titulo}</a>
-              </li>
-            ))}
-          </ol>
+          {[...new Set(visibles.map((s) => s.claveGrupo))].map((g) => (
+            <div key={g} className={`gj-indice-grupo gj-g-${g}`}>
+              <span>{visibles.find((s) => s.claveGrupo === g)?.grupo}</span>
+              <ol className="gj-indice">
+                {visibles
+                  .filter((s) => s.claveGrupo === g)
+                  .map((s) => (
+                    <li key={s.id}>
+                      <a href={`#${s.id}`}>{s.titulo}</a>
+                    </li>
+                  ))}
+              </ol>
+            </div>
+          ))}
         </nav>
       </aside>
       <div className="gj-cuerpo">
         {visibles.map((s) => (
-          <section key={s.id} id={s.id} className="gj-seccion">
+          <section key={s.id} id={s.id} className={`gj-seccion gj-g-${s.claveGrupo}`}>
+            <span className="gj-etiqueta">{s.grupo}</span>
             <h2>{s.titulo}</h2>
-            {s.html.includes('<p>CUESTIONARIO</p>') ? (
-              <>
-                <div className="prosa" dangerouslySetInnerHTML={{ __html: s.html.replace('<p>CUESTIONARIO</p>', '') }} />
-                <CuestionarioGuia />
-              </>
-            ) : (
-              <div className="prosa" dangerouslySetInnerHTML={{ __html: s.html }} />
-            )}
+            <figure className="gj-banner">
+              <img src={`/img/${s.foto}-640.webp`} srcSet={`/img/${s.foto}-640.webp 640w, /img/${s.foto}.webp 1200w`} sizes="(max-width: 900px) 100vw, 760px" alt="" loading="lazy" />
+              {s.frase && <figcaption>{s.frase}</figcaption>}
+            </figure>
+            <details className="gj-detalle" open={s.abierta || busca.length >= 2}>
+              <summary>
+                <span className="gj-abrir">Ver el detalle de este apartado</span>
+                <span className="gj-cerrar">Plegar</span>
+              </summary>
+              <Contenido html={s.html} />
+            </details>
             <Reaccion id={s.id} seccion={s.titulo} />
             <a className="gj-arriba" href="#indice-guia">
               Volver arriba
