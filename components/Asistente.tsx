@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { DESPACHO } from '@/lib/despacho';
+import { medir } from '@/lib/medir';
 
 type Mensaje = { role: 'user' | 'assistant'; content: string };
 
@@ -63,6 +64,7 @@ export default function Asistente() {
     setMensajes([...historial, { role: 'assistant', content: '' }]);
     setTexto('');
     setEscribiendo(true);
+    medir('chat_mensaje', { numero: historial.filter((m) => m.role === 'user').length });
     try {
       const r = await fetch('/api/asistente', {
         method: 'POST',
@@ -96,9 +98,29 @@ export default function Asistente() {
   return (
     <>
       {!abierto && (
-        <button type="button" className="asistente-boton" onClick={() => setAbierto(true)}>
-          <img src="/img/jesus-retrato.webp" srcSet="/img/jesus-retrato-640.webp 640w, /img/jesus-retrato.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="" />
-          Pregunta tu caso
+        <button
+          type="button"
+          className="asistente-boton"
+          onClick={() => {
+            setAbierto(true);
+            medir('chat_abierto');
+          }}
+          aria-label="Abrir el chat: pregunta tu caso"
+        >
+          <span className="asistente-foto">
+            <img src="/img/jesus-retrato-640.webp" alt="" width={44} height={44} />
+            <span className="asistente-punto" aria-hidden="true" />
+          </span>
+          <span className="asistente-texto">
+            <strong>¿Hablamos? Pregunta tu caso</strong>
+            <small>Chat 24 h · respuesta al momento</small>
+          </span>
+          <span className="asistente-icono" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12z" />
+              <path d="M8.5 12h.01M12 12h.01M15.5 12h.01" />
+            </svg>
+          </span>
         </button>
       )}
       {abierto && (

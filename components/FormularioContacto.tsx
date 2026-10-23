@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { medir } from '@/lib/medir';
 
 const TEMAS = ['Me han despedido', 'Sufro acoso laboral', 'Incapacidad o baja', 'Me deben dinero', 'Soy una empresa', 'Otro tema'];
 
@@ -23,6 +24,7 @@ export default function FormularioContacto() {
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(j.error || 'No se pudo enviar.');
       setEstado('enviado');
+      medir('formulario_enviado', { tema: datos.tema || 'sin tema', cuando: datos.cuando });
     } catch (err) {
       setError(err instanceof Error ? err.message : 'No se pudo enviar.');
       setEstado('error');

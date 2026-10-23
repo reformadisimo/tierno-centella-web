@@ -1324,51 +1324,106 @@ input:focus {
 /* Fichas de sentencias */
 .fichas {
   display: grid;
-  gap: 24px;
+  gap: 28px;
 }
-
 .ficha {
   background: var(--blanco);
-  border: 1px solid var(--linea);
-  border-radius: 10px;
-  padding: clamp(20px, 3vw, 28px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(13, 44, 72, 0.08);
   display: grid;
-  gap: 10px;
 }
-
-@media (min-width: 900px) {
+@media (min-width: 860px) {
   .ficha {
-    grid-template-columns: 9rem 1fr;
-    gap: 6px 28px;
-  }
-  .ficha-anio {
-    grid-row: span 6;
+    grid-template-columns: 300px 1fr;
   }
 }
-
-.ficha-anio {
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+.ficha-lado {
+  position: relative;
+  min-height: 220px;
+}
+.ficha-lado img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ficha-lado::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 38, 64, 0) 35%, rgba(0, 38, 64, 0.82) 100%);
+}
+.ficha-sello {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  z-index: 1;
+  color: var(--blanco);
+  display: grid;
+}
+.ficha-sello span {
+  font-size: 2.6rem;
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
 }
-
+.ficha-sello small {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffd9cd;
+  margin-top: 4px;
+}
+.ficha-cuerpo {
+  padding: clamp(20px, 3vw, 30px);
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.ficha-cuerpo p {
+  margin: 0;
+}
+.ficha-cuerpo ul {
+  margin: 6px 0 0;
+  padding-left: 1.2em;
+}
 .ficha h3 {
   font-size: 1.35rem;
 }
-
 .ficha-organo {
   color: var(--tinta-suave);
   font-size: 0.93rem;
 }
-
+.ficha-importa {
+  background: var(--coral-suave);
+  border-left: 4px solid var(--coral);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: grid;
+  gap: 2px;
+}
+.ficha-importa strong {
+  color: var(--coral-texto);
+}
+.ficha-pie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--linea);
+  padding-top: 12px;
+  margin-top: 4px;
+}
 .ficha-pendiente {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: #7a5a00;
   background: var(--marcador-suave);
-  padding: 6px 10px;
-  border-radius: var(--radio);
-  justify-self: start;
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
 .rejilla-videos {
@@ -1390,24 +1445,91 @@ input:focus {
   z-index: 35;
   display: none;
   align-items: center;
-  gap: 10px;
-  background: var(--tinta);
-  color: var(--blanco);
-  border: 0;
-  border-radius: 999px;
-  padding: 12px 20px 12px 12px;
+  gap: 12px;
+  background: var(--blanco);
+  color: var(--tinta);
+  border: 1px solid var(--linea);
+  border-radius: 22px 22px 6px 22px;
+  padding: 10px 10px 10px 10px;
   font: inherit;
-  font-weight: 700;
+  text-align: left;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(13, 44, 72, 0.3);
+  box-shadow: 0 12px 32px rgba(13, 44, 72, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: chat-entra 0.5s ease 1.2s both;
 }
 
-.asistente-boton img {
-  width: 36px;
-  height: 36px;
+.asistente-boton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(13, 44, 72, 0.28);
+}
+
+.asistente-foto {
+  position: relative;
+  flex: none;
+}
+
+.asistente-foto img {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
+  display: block;
+}
+
+.asistente-punto {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2fa36b;
+  border: 2px solid var(--blanco);
+}
+
+.asistente-texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.asistente-texto strong {
+  font-size: 0.98rem;
+}
+
+.asistente-texto small {
+  color: var(--tinta-suave);
+  font-size: 0.8rem;
+}
+
+.asistente-icono {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #fff;
+}
+
+@keyframes chat-entra {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .asistente-boton {
+    animation: none;
+  }
 }
 
 @media (min-width: 900px) {

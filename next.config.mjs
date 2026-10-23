@@ -8,6 +8,8 @@ const ANTIGUAS = [
   ['/acoso-laboral-mobbing', '/acoso-laboral'],
   ['/acoso-laboral-mobbing/test-viabilidad-acoso-laboral', '/herramientas/test-acoso'],
   ['/abogados-acoso-laboral-o-mobbing', '/acoso-laboral'],
+  ['/acoso', '/acoso-laboral'],
+  ['/incapacidad', '/incapacidad-permanente'],
   ['/acoso-laboral-o-mobbing', '/acoso-laboral'],
   ['/acoso-laboral/test', '/herramientas/test-acoso'],
   ['/test-acoso-laboral-por-abogados-mobbing', '/herramientas/test-acoso'],

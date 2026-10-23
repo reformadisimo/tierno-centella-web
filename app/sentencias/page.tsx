@@ -10,6 +10,14 @@ export const metadata: Metadata = meta({
   ruta: '/sentencias',
 });
 
+const FOTO_MATERIA: Record<string, string> = {
+  'Acoso laboral': 'abogada-escucha',
+  Despido: 'jesus-firmando',
+  Conciliación: 'abogada-sonrie',
+  'Prevención de riesgos': 'biblioteca',
+  Incapacidad: 'abogada-documentos',
+};
+
 export default function Sentencias() {
   return (
     <>
@@ -27,37 +35,46 @@ export default function Sentencias() {
       </header>
       <section className="seccion">
         <div className="contenedor fichas">
-          {CASOS.map((c) => (
-            <article className="ficha" key={c.slug} id={c.slug}>
-              <div className="ficha-anio">{c.anio || '—'}</div>
-              <span className="campo-ayuda">{c.materia}</span>
-              <h3>{c.titulo}</h3>
-              <span className="ficha-organo">
-                {c.organo}. {c.fecha}.
-              </span>
-              <p style={{ margin: 0 }}>{c.resumen}</p>
-              <div>
-                <strong>Qué pasó</strong>
-                <ul style={{ margin: '6px 0 0', paddingLeft: '1.2em' }}>
-                  {c.hechos.map((h) => (
-                    <li key={h}>{h}</li>
-                  ))}
-                </ul>
-              </div>
-              <p style={{ margin: 0 }}>
-                <strong>Resultado.</strong> {c.resultado}
-              </p>
-              <p style={{ margin: 0 }}>
-                <strong>Por qué importa.</strong> {c.porQueImporta}
-              </p>
-              {c.fuente && (
-                <a href={c.fuente.url} style={{ fontSize: '0.93rem' }}>
-                  {c.fuente.nombre}
-                </a>
-              )}
-              {c.pendiente && <span className="ficha-pendiente">Pendiente: {c.pendiente}</span>}
-            </article>
-          ))}
+          {CASOS.map((c) => {
+            const foto = FOTO_MATERIA[c.materia] ?? FOTO_MATERIA['Acoso laboral'];
+            return (
+              <article className="ficha" key={c.slug} id={c.slug}>
+                <div className="ficha-lado">
+                  <img src={`/img/${foto}-640.webp`} alt="" width={640} height={480} loading="lazy" />
+                  <div className="ficha-sello">
+                    <span>{c.anio || 'Caso'}</span>
+                    <small>{c.materia}</small>
+                  </div>
+                </div>
+                <div className="ficha-cuerpo">
+                  <h3>{c.titulo}</h3>
+                  <span className="ficha-organo">
+                    {c.organo}. {c.fecha}.
+                  </span>
+                  <p>{c.resumen}</p>
+                  <div>
+                    <strong>Qué pasó</strong>
+                    <ul>
+                      {c.hechos.map((h) => (
+                        <li key={h}>{h}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <p>
+                    <strong>Resultado.</strong> {c.resultado}
+                  </p>
+                  <div className="ficha-importa">
+                    <strong>Por qué importa</strong>
+                    <span>{c.porQueImporta}</span>
+                  </div>
+                  <div className="ficha-pie">
+                    {c.fuente && <a href={c.fuente.url}>Fuente: {c.fuente.nombre}</a>}
+                    {c.pendiente && <span className="ficha-pendiente">Pendiente de confirmar con el despacho</span>}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
       <section className="seccion seccion-blanca">
