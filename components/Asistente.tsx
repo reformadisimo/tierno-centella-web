@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { DESPACHO } from '@/lib/despacho';
+import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
 
 type Mensaje = { role: 'user' | 'assistant'; content: string };
@@ -161,6 +161,18 @@ export default function Asistente() {
               ),
             )}
           </div>
+          {mensajes.length > 1 && (
+            <div className="asistente-atajos" aria-label="Hablar con el despacho">
+              <a href={DESPACHO.telefonoHref}>
+                Llamar
+              </a>
+              <a href={enlaceWhatsapp('Hola, vengo del chat de la web y quiero consultar mi caso.')}>
+                WhatsApp
+              </a>
+              <a href="/contacto">Que me llamen</a>
+              <a href="/herramientas">Herramientas</a>
+            </div>
+          )}
           <form
             className="asistente-form"
             onSubmit={(e) => {

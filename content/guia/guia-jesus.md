@@ -2,7 +2,7 @@
 
 Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con tu web, por qué, y todo lo que podríamos hacer juntos a partir de aquí. Cada apartado empieza con una foto y una frase: si solo tienes un rato, con eso ya te haces una idea. Si quieres más, pulsa "Ver el detalle".
 
-> **Cómo trabajamos**: de forma sencilla. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
+> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online: nos escribes cuando te venga bien y te contestamos rápido. Y cuando algo se explica mejor hablando, una llamada o una videollamada de diez minutos y listo. Cualquier duda, por pequeña que sea, pregúntanos: para eso estamos. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
 
 > Todo lo que ves es una **demostración**: la web nueva vive en una dirección de prueba, Google no la indexa y tu web actual sigue funcionando igual. No hemos tocado nada tuyo.
 
@@ -160,6 +160,47 @@ Hemos creado tu proyecto en Semrush para vigilar, mes a mes, cómo te recomienda
 
 **Qué vamos a hacer**: los artículos del calendario están pensados justo para esos temas; cada guía responde en las dos primeras frases (es lo que las IA copian); y tus datos van a coincidir en todas partes. En unos meses volvemos a medir y te enseñamos la diferencia.
 
+### Tú frente a la competencia, en la IA y en Google
+
+**En las IA** (visibilidad de Semrush, de 0 a 100, octubre de 2026):
+
+| Despacho | Visibilidad en la IA | Veces que la IA los nombra | Veces que citan su web |
+| --- | --- | --- | --- |
+| Campmany Abogados | 40 (media) | 456 | 3.500 |
+| Bufete Toro | 38 (media) | 282 | 3.200 |
+| Abogados Durán | 31 (baja) | 8 | 63 |
+| García de la Santa | 18 (baja) | 12 | 138 |
+| Stop Acoso Laboral | 14 (baja) | 1 | 1 |
+| **Tierno Centella** | **14 (baja)** | **2** | **19** |
+
+Campmany y Bufete Toro no son mejores abogados: tienen cientos de páginas que responden preguntas concretas, y las IA las citan. Es exactamente lo que estamos construyendo para ti.
+
+**En Google** (tu puesto hoy en las búsquedas que más importan):
+
+| Búsqueda | Al mes | Tu puesto | Quién sale primero |
+| --- | --- | --- | --- |
+| abogado laboralista madrid | 1.900 | 18 | García de la Santa |
+| abogados laboralistas madrid | 1.300 | 18 | García de la Santa |
+| abogados incapacidad permanente | 1.000 | fuera de los 10 primeros | abogadoincapacidadpermanente.com y Campmany |
+| abogado incapacidad permanente | 720 | 27 | Campmany |
+| abogados acoso laboral | 480 | 9 | Bufete Toro |
+| test de acoso laboral | 720 | 12 | Javaloyes Legal |
+| abogado acoso laboral madrid | 140 | fuera de los 10 primeros | García de la Santa y Bufete Toro |
+
+Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la segunda página.
+
+### Cómo vamos a mejorar en ChatGPT, Claude, Gemini y Google
+
+1. **Responder lo que se pregunta**: cada guía empieza con la respuesta en dos frases, con cifras, plazos y su fuente. Es lo que las IA copian y enlazan.
+2. **Los mismos datos en todas partes**: años de experiencia, precio, dirección y especialidades iguales en la web, la ficha de Google, LinkedIn y los directorios. Ante datos que no cuadran, la IA recomienda a otro.
+3. **Darte de alta en Bing**: ChatGPT busca en Bing, no en Google. Con Bing Webmaster Tools y Bing Places tu web y tu ficha entran también ahí.
+4. **Dejar pasar a los rastreadores de las IA** (los de ChatGPT, Claude, Gemini y Perplexity) cuando la web se publique, y con el archivo llms.txt que ya está hecho.
+5. **Que hablen de ti fuera de tu web**: entrevistas, colegios profesionales, universidades, artículos de Jesús en LinkedIn y directorios jurídicos. Semrush nos marca más de 3.000 sitios donde tus competidores aparecen y tú no.
+6. **Reseñas**: las IA también leen tu ficha de Google. Cada reseña nueva suma.
+7. **Medirlo cada mes** en el proyecto de Semrush que ya hemos creado. Semrush mide ChatGPT, Gemini y las respuestas de IA de Google; Claude no lo mide, pero lee las mismas fuentes, así que lo que funciona para los demás funciona para Claude.
+
+> **Un estudio de la competencia completo**: lo hemos hecho internamente para diseñarte la mejor web posible (quién sale, qué ofrecen, qué precios y qué herramientas tienen, cómo les ven las IA). Si quieres, te lo preparamos por escrito para ti.
+
 ## 5. Tu ficha de Google: 4,2 con 59 reseñas
 
 Hemos leído las 59. Reparto: 44 de cinco estrellas, 3 de cuatro, 1 de tres y **11 de una**. **Ninguna tiene respuesta del despacho.**
@@ -265,6 +306,8 @@ Abajo a la derecha, "Pregunta tu caso". Contesta a cualquier hora con lo que sab
 
 ## 11. Las herramientas: lo que casi nadie del sector tiene
 
+**Antes y ahora**: tu web actual tiene 3 tests, el más conocido el de viabilidad del acoso. La nueva tiene **14 herramientas**, además del asistente que contesta a cualquier hora y las tres páginas para tus anuncios. Ninguna pide datos personales para dar el resultado, y todas terminan invitando a hablar contigo.
+
 | Herramienta | Para qué |
 | --- | --- |
 | ¿Es acoso lo que me pasa? | Siete preguntas y un resultado orientativo con pasos concretos |
@@ -282,7 +325,9 @@ Abajo a la derecha, "Pregunta tu caso". Contesta a cualquier hora con lo que sab
 | Comprobador de incapacidad | Qué grado podría corresponderle |
 | Autodiagnóstico para empresas y colegios | Si cumplen protocolos, canal de denuncias y plan de igualdad |
 
-Todas las cifras de las calculadoras están comprobadas a mano con casos de ejemplo, y ninguna pide datos personales. Al final, cada una ofrece enviar el resultado por WhatsApp: ese mensaje es un cliente que ya llega sabiendo qué le pasa.
+Todas las cifras de las calculadoras están comprobadas a mano con casos de ejemplo. Al final, cada una ofrece enviar el resultado por WhatsApp: ese mensaje es un cliente que ya llega sabiendo qué le pasa.
+
+**Y siempre se pueden crear nuevas**: si en el despacho os preguntan mucho por algo (cuánto se cobra de baja por ansiedad, qué pasa con las vacaciones durante una baja, cuánto tiempo puede durar un ERTE...), lo convertimos en una herramienta. Dinos cuál echas de menos.
 
 ## 12. Velocidad y notas de Google
 
@@ -694,7 +739,7 @@ Jesús, **la web es tuya: te la regalo**. Todo lo que ves (la web, las guías, l
 
 Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya llevo webs y campañas de algunos amigos. Y me encantaría llevar la tuya.
 
-**Lo que te propongo a partir de aquí es un servicio 360, con una cuota mensual**: tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
+**Lo que te propongo a partir de aquí es un servicio 360, un mantenimiento con una cuota mensual que cubre todo** (el precio lo definimos juntos, según lo que quieras abarcar): tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
 
 | Qué incluye | En la práctica |
 | --- | --- |

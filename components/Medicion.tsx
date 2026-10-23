@@ -31,7 +31,7 @@ function cargarGtm() {
 function escucharContactos(e: MouseEvent) {
   const a = (e.target as HTMLElement | null)?.closest?.('a');
   const href = a?.getAttribute('href') || '';
-  const donde = a?.closest('header') ? 'cabecera' : a?.closest('footer') ? 'pie' : a?.closest('.barra-movil') ? 'barra-movil' : 'contenido';
+  const donde = a?.closest('.asistente-panel') ? 'chat' : a?.closest('.salida') ? 'aviso-salida' : a?.closest('header') ? 'cabecera' : a?.closest('footer') ? 'pie' : a?.closest('.barra-movil') ? 'barra-movil' : 'contenido';
   if (href.startsWith('tel:')) medir('llamada', { donde });
   else if (href.includes('wa.me')) medir('whatsapp', { donde });
   else if (href.startsWith('mailto:')) medir('correo', { donde });

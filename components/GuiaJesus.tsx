@@ -176,6 +176,74 @@ function Contenido({ html }: { html: string }) {
   );
 }
 
+// Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
+const VERSION = 2;
+const NOVEDADES: { texto: string; clave: string }[] = [
+  { texto: 'Cómo te ven ChatGPT, Gemini y Google frente a tu competencia, y cómo vamos a mejorarlo', clave: '4 bis' },
+  { texto: 'Respuestas listas para copiar y pegar en tus reseñas de Google', clave: '5' },
+  { texto: 'Tu velocidad, con las notas de PageSpeed y de Pingdom', clave: '12' },
+  { texto: 'Así sería el primer correo de seguimiento a un cliente', clave: '17' },
+  { texto: 'Tres páginas nuevas para que tus anuncios conviertan', clave: '18 ter' },
+];
+
+function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
+  const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades'>('');
+  useEffect(() => {
+    try {
+      const vista = Number(localStorage.getItem('tc-guia-version') || 0);
+      if (vista < VERSION) setModo(vista === 0 ? 'bienvenida' : 'novedades');
+      localStorage.setItem('tc-guia-version', String(VERSION));
+    } catch {}
+  }, []);
+  if (!modo) return null;
+  const cerrar = () => setModo('');
+  const idDe = (clave: string) => secciones.find((s) => s.titulo.startsWith(clave + '.'))?.id;
+  return (
+    <div className="salida-fondo" onClick={cerrar}>
+      <div className="salida gj-aviso" role="dialog" aria-modal="true" aria-labelledby="gj-aviso-titulo" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="salida-cerrar" onClick={cerrar} aria-label="Cerrar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+        {modo === 'bienvenida' ? (
+          <>
+            <p className="etiqueta-calida">Hola, Jesús</p>
+            <h2 id="gj-aviso-titulo">Bienvenido a tu guía</h2>
+            <p>
+              Aquí te contamos tu web nueva sin tecnicismos. Cada apartado empieza con una foto y una frase; si quieres más, pulsa &quot;Ver el
+              detalle&quot;.
+            </p>
+            <p>
+              <strong>Pregúntanos todo lo que quieras.</strong> Debajo de cada apartado puedes decirnos qué te parece y escribirnos: nos llega al
+              momento y te contestamos rápido. Y si prefieres hablarlo, una llamada de diez minutos y listo.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="etiqueta-calida">Novedades</p>
+            <h2 id="gj-aviso-titulo">La guía se ha actualizado</h2>
+            <p>Desde tu última visita hemos añadido:</p>
+            <ul className="gj-novedades">
+              {NOVEDADES.map((n) => (
+                <li key={n.clave}>
+                  <a href={`#${idDe(n.clave) ?? ''}`} onClick={cerrar}>
+                    {n.texto}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p>Cualquier duda, escríbenos debajo de cada apartado: nos llega al momento.</p>
+          </>
+        )}
+        <button type="button" className="boton boton-marcador" onClick={cerrar}>
+          {modo === 'bienvenida' ? 'Empezar a leer' : 'Verlo'}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 const normal = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 const avisar = (datos: Record<string, string>) =>
@@ -259,6 +327,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
   );
   return (
     <div className="guia-jesus">
+      <AvisoGuia secciones={secciones} />
       <aside className="gj-lateral">
         <label className="gj-buscar">
           <span>Buscar en la guía</span>
