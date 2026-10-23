@@ -54,7 +54,7 @@ const FRANJAS: Record<string, { hoy: string; luego: string }> = {
   '13': { hoy: 'Segunda página para "abogado laboralista madrid"', luego: 'Primera página, con constancia y datos' },
   '14': { hoy: 'Blog parado desde 2022 y 104 artículos fuera de tu especialidad', luego: 'Tres artículos a la semana sobre lo que de verdad busca la gente' },
   '17': { hoy: 'Sin seguimiento: quien escribe y no reserva suele perderse', luego: 'Cada contacto con su seguimiento por correo, medido' },
-  '18 bis': { hoy: 'Anuncios que llevan a una página genérica y algún "gratis"', luego: 'Tres páginas por tema y cada consulta medida' },
+  '18 bis': { hoy: 'Tus anuncios salen en 7 búsquedas al año; Bufete Toro, en 100', luego: 'Una campaña constante en acoso e incapacidad, con cada euro medido' },
   '8 bis': { hoy: '¿Tienes tú las claves de la web, el dominio y tus cuentas? Muchas veces las tiene el proveedor', luego: 'Todo a tu nombre y con tu acceso total: si un día te vas, no nos pides nada' },
   '19': { hoy: 'Sin informes: no sabes dónde va cada euro', luego: 'Informes diarios, semanales y mensuales de todo' },
 };

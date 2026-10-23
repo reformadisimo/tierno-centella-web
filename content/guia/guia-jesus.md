@@ -842,6 +842,8 @@ Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush
 
 ### Tú frente a la competencia en Google Ads
 
+**A falta de ver tus datos de verdad** (Google Ads, Analytics, Tag Manager, Search Console y tu Perfil de Empresa en Google), lo que se ve desde fuera es claro: **no debes de estar invirtiendo mucho en anuncios**, o lo haces a ratos. Bufete Toro sale con anuncio en 100 búsquedas distintas al año; tú, en 7. Con acceso de solo lectura a esas cuentas te diremos, con datos y no con estimaciones, cuánto se invierte, dónde va cada euro y qué trae.
+
 Lo hemos mirado en Semrush el 23 de octubre de 2026: en cuántas búsquedas distintas ha detectado anuncios de cada despacho en los últimos 12 meses. No es el dinero que gasta cada uno (eso solo lo sabe Google), pero sí dice **quién está presente y quién no**.
 
 | Despacho | Búsquedas con anuncio (12 meses) | Dónde se anuncia |
