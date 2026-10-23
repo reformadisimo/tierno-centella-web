@@ -35,8 +35,8 @@ export default function MujerYTrabajo() {
               <Link className="boton boton-marcador" href="/herramientas/calendario-permisos">
                 Calcular mis permisos por nacimiento
               </Link>
-              <Link className="boton boton-claro" href="/herramientas/test-nulidad">
-                ¿Mi despido puede ser nulo?
+              <Link className="boton boton-claro" href="/herramientas/calculadora-reduccion-jornada">
+                Calcular mi reducción de jornada
               </Link>
             </div>
           </div>

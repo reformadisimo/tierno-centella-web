@@ -51,6 +51,11 @@ export default function Empresas() {
               Llevamos décadas viendo el acoso desde el lado de la víctima. Por eso sabemos qué falla en las empresas y en los colegios, y
               cómo evitarlo.
             </p>
+            <div className="acciones">
+              <Link className="boton boton-marcador" href="/herramientas/autodiagnostico-acoso-empresas">
+                Hacer el autodiagnóstico en 2 minutos
+              </Link>
+            </div>
           </div>
           <img className="foto" src="/img/reunion-equipo.webp" alt="El equipo del despacho reunido con documentación" />
         </div>

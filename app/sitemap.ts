@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/herramientas/calendario-permisos',
     '/herramientas/calculadora-finiquito',
     '/herramientas/calculadora-paro',
+    '/herramientas/calculadora-reduccion-jornada',
+    '/herramientas/autodiagnostico-acoso-empresas',
     '/calculadora-indemnizacion',
     '/herramientas',
     '/herramientas/test-acoso',

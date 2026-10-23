@@ -1,5 +1,5 @@
 // Casos calculados a mano antes de escribir el código. Ejecutar: npm test
-import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes, mesesTrabajados, sumarHabiles, sumarAnios, sumarDias, sumarMeses, calendarioNacimiento, calcularFiniquito, calcularParo, duracionParo, TOPES_PARO } from '../lib/calculos.ts';
+import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes, mesesTrabajados, sumarHabiles, sumarAnios, sumarDias, sumarMeses, calendarioNacimiento, calcularFiniquito, calcularParo, duracionParo, TOPES_PARO, calcularReduccion } from '../lib/calculos.ts';
 
 let fallos = 0;
 function igual(nombre: string, real: unknown, esperado: unknown) {
@@ -102,6 +102,19 @@ igual('duración 3.000 días', duracionParo(3000), 720);
   igual('paro 2 mensual', p.mensualPrimeros6, 749);
   igual('paro 2 total', p.totalBruto, 2996);
 }
+
+// Reducción de jornada: 30.000 euros, de 40 a 30 horas = 25 % menos, 22.500 euros, 1.875 al mes, 6 horas al día.
+{
+  const r = calcularReduccion(30000, 40, 30);
+  igual('reducción porcentaje', r.porcentaje, 25);
+  igual('reducción válida', r.valida, true);
+  igual('reducción salario', r.salarioAnual, 22500);
+  igual('reducción mensual', r.salarioMensual12, 1875);
+  igual('reducción horas al día', r.horasDiarias, 6);
+}
+igual('un octavo justo es válido', calcularReduccion(24000, 40, 35).valida, true);
+igual('menos de un octavo no vale', calcularReduccion(24000, 40, 36).valida, false);
+igual('más de la mitad no vale', calcularReduccion(24000, 40, 19).valida, false);
 
 if (fallos) {
   console.log(`\n${fallos} fallo(s)`);

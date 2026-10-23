@@ -252,7 +252,7 @@ export default function Inicio() {
             </li>
           </ul>
           <p style={{ marginTop: 20 }}>
-            <Link href="/herramientas">Ver todas las herramientas (12)</Link>
+            <Link href="/herramientas">Ver todas las herramientas (14)</Link>
           </p>
         </div>
       </section>

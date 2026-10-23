@@ -298,3 +298,20 @@ export function calcularParo(baseMensual: number, hijos: 0 | 1 | 2, diasCotizado
   const totalBruto = redondea((mensualPrimeros6 / 30) * diasPrimeros + (mensualDespues / 30) * diasResto);
   return { baseDiaria: redondea(baseDiaria), dias, mensualPrimeros6, mensualDespues, topeAplicado, totalBruto };
 }
+
+// ---------- Reducción de jornada por cuidado ----------
+export type ResultadoReduccion = {
+  porcentaje: number; // reducción en %
+  valida: boolean; // entre un octavo y la mitad
+  salarioAnual: number;
+  salarioMensual12: number;
+  horasDiarias: number;
+};
+
+export function calcularReduccion(salarioAnual: number, horasActuales: number, horasNuevas: number, diasSemana = 5): ResultadoReduccion {
+  const fraccion = 1 - horasNuevas / horasActuales;
+  const porcentaje = Math.round(fraccion * 10000) / 100;
+  const valida = fraccion >= 0.125 - 1e-9 && fraccion <= 0.5 + 1e-9;
+  const nuevo = redondea(salarioAnual * (horasNuevas / horasActuales));
+  return { porcentaje, valida, salarioAnual: nuevo, salarioMensual12: redondea(nuevo / 12), horasDiarias: Math.round((horasNuevas / diasSemana) * 100) / 100 };
+}

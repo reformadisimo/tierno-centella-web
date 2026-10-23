@@ -83,6 +83,8 @@ HERRAMIENTAS GRATUITAS DE LA WEB
 - /herramientas/calculadora-finiquito: finiquito (último mes, vacaciones y pagas extra)
 - /herramientas/calculadora-paro: cuánto paro y durante cuánto tiempo
 - /herramientas/calendario-permisos: fechas de los permisos por nacimiento, lactancia y protección frente al despido
+- /herramientas/calculadora-reduccion-jornada: cuánto se cobra con reducción de jornada por cuidado
+- /herramientas/autodiagnostico-acoso-empresas: para empresas, colegios y administraciones, si cumplen con protocolos de acoso, canal de denuncias y plan de igualdad
 - /herramientas/revisa-tu-carta-de-despido: defectos de la carta
 - /herramientas/plazos: último día para reclamar
 - /herramientas/comprobador-incapacidad: grado de incapacidad y plazo

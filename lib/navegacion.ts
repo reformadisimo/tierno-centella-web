@@ -45,6 +45,7 @@ export const MENU: Grupo[] = [
       { href: '/mujer-y-trabajo/permisos-por-nacimiento-y-lactancia', texto: 'Permisos por nacimiento' },
       { href: '/mujer-y-trabajo/acoso-sexual-y-por-razon-de-sexo', texto: 'Acoso sexual' },
       { href: '/mujer-y-trabajo/brecha-salarial-registro-retributivo', texto: 'Brecha salarial' },
+      { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Calculadora de reducción de jornada' },
     ],
   },
   {
@@ -63,6 +64,8 @@ export const MENU: Grupo[] = [
       { href: '/herramientas/plazos', texto: 'Plazos para reclamar' },
       { href: '/herramientas/comprobador-incapacidad', texto: 'Comprobador de incapacidad' },
       { href: '/herramientas/calendario-permisos', texto: 'Calendario de permisos por nacimiento' },
+      { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Calculadora de reducción de jornada' },
+      { href: '/herramientas/autodiagnostico-acoso-empresas', texto: 'Autodiagnóstico para empresas y colegios' },
     ],
   },
   {
