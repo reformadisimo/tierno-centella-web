@@ -181,7 +181,8 @@ const VERSION = 3;
 const NOVEDADES: { texto: string; clave: string }[] = [
   { texto: 'Cómo te ven ChatGPT, Gemini y Google frente a tu competencia, y cómo vamos a mejorarlo', clave: '4 bis' },
   { texto: 'El resumen de tus 59 reseñas, cómo responderlas y cómo llegar a 4,8', clave: '5' },
-  { texto: 'Todas las herramientas, ahora con su foto', clave: '11' },
+  { texto: 'El asistente: como hablar con ChatGPT, pero de tu despacho', clave: '10' },
+  { texto: 'Las herramientas de antes y las de ahora, y cómo crear nuevas', clave: '11' },
   { texto: 'Tu velocidad, con las notas de PageSpeed y de Pingdom', clave: '12' },
   { texto: 'Así sería el primer correo de seguimiento a un cliente', clave: '17' },
   { texto: 'Tres páginas nuevas para que tus anuncios conviertan', clave: '18 ter' },

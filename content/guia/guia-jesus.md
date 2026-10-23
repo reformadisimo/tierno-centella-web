@@ -19,13 +19,14 @@ Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con
 | Sección para trabajadoras: embarazo, conciliación, acoso sexual | No | **Sí** |
 | Direcciones antiguas del blog redirigidas | | **Las 220**, una a una |
 | Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 páginas** hechas para convertir: incapacidad, acoso y despido (apartado 18 ter) |
-| Medición | Analytics instalado | **Cada llamada, WhatsApp, formulario y chat contado**, mapas de calor y grabaciones (apartado 19) |
+| Medición | Analytics instalado | **Preparada para contar** cada llamada, WhatsApp, formulario y chat, con mapas de calor y grabaciones en cuanto des el visto bueno (apartado 19) |
 
-**Lo que necesitamos de ti**, en tres cosas:
+**Lo que necesitamos de ti**, en cuatro cosas:
 
 1. Que revises los textos (sobre todo los casos y las guías) y nos digas qué cambiarías.
 2. Que contestes las preguntas del apartado 24. Son cortas.
 3. Si te convence, los accesos del apartado 23 para medir y seguir mejorando.
+4. **Tu tiempo**: unas 3 o 4 horas repartidas en dos semanas para revisar las guías (te las podemos ir pasando por bloques), 15 minutos para los accesos y, si seguimos, unos 30 minutos a la semana para leer los artículos antes de publicarlos.
 
 ## 1. Lo esencial en un minuto
 
@@ -34,11 +35,11 @@ Jesús, qué ilusión enseñarte esto. Esta guía te cuenta qué hemos hecho con
 **Lo que hoy te está costando clientes.**
 
 - La web tarda 18 segundos en enseñar su contenido en un móvil. La mayoría de la gente se va antes.
-- Dice "consulta inicial gratuita" en una página y vende la consulta a 150 € en otra. Esa contradicción provoca la mitad de tus reseñas de una estrella.
+- Dice "consulta inicial gratuita" en una página y vende la consulta a 150 € en otra. Esa contradicción aparece en 4 de tus 11 reseñas de una estrella.
 - El blog lleva parado desde 2022 y mezcla temas que no son tuyos (seguros de coche, hipotecas, okupación).
 - Ninguna reseña de Google tiene respuesta del despacho.
 
-**La red que hemos tendido.** Una web rápida, clara, con tu cara y tus casos; herramientas que resuelven la duda del momento ("¿cuántos días me quedan para reclamar?") y llevan a llamarte; un asistente que contesta a las once de la noche, cuando la persona angustiada busca ayuda; y una sección para mujeres trabajadoras, que son una parte muy grande de tus clientas.
+**La red que hemos tendido.** Una web rápida, clara, con tu cara y tus casos; herramientas que resuelven la duda del momento ("¿cuántos días me quedan para reclamar?") y llevan a llamarte; un asistente que contesta a las once de la noche, cuando la persona angustiada busca ayuda; y una sección para mujeres trabajadoras, que son una parte importante de tus clientes.
 
 ## 2. Palabras que vamos a usar
 
@@ -57,7 +58,11 @@ Y las palabras, con ejemplos de la vida real:
 | Semrush | Una herramienta de pago para espiar qué busca la gente y cómo están tus competidores. |
 | Ficha de Google | Tu tarjeta en Google Maps: fotos, horario, teléfono y reseñas. |
 | CRM | Una agenda de clientes con memoria: de dónde vino cada uno, qué le pasa y en qué punto está. |
-| Journey (recorrido) | Los correos automáticos que recibe alguien después de dejar sus datos, según lo que consultó. |
+| Landing (página de aterrizaje) | Una página hecha solo para quien llega desde un anuncio, con un único objetivo: que llame. |
+| Convertir | Que una visita acabe en llamada, WhatsApp o formulario. |
+| Indexar | Que Google guarde una página y pueda enseñarla en sus resultados. |
+| SEM | Los anuncios de pago en Google. |
+| Seguimiento por correo | Los correos que recibe alguien después de dejar sus datos, según lo que consultó (apartado 17). |
 | Resend | El servicio que envía esos correos desde tu dominio. |
 | Redirección 301 | Un desvío permanente: quien entra por una dirección antigua llega a la nueva sin perderse, y Google pasa la "fuerza" de la vieja a la nueva. |
 | Canibalización | Cuando dos páginas tuyas compiten por la misma búsqueda y se quitan visitas entre ellas. |
@@ -79,7 +84,7 @@ Y las palabras, con ejemplos de la vida real:
 
 Lo hemos medido todo el mismo día con las herramientas de Google y de Pingdom. Las capturas y cifras están guardadas.
 
-**Velocidad.** En móvil, 49 sobre 100. El contenido principal tarda 18,3 segundos en aparecer. En ordenador, 56. La página pesa 1,8 MB y hace 89 peticiones, sin compresión.
+**Velocidad.** En móvil, 49 sobre 100. El contenido principal tarda 18,3 segundos en aparecer. En ordenador, 56. La página pesa 1,8 MB y hace 88 peticiones.
 
 **Mensajes que se contradicen.** "Ofrecemos una consulta inicial gratuita" (página de contacto) frente a la cita a 150 € (tienda). Las reseñas negativas lo repiten: "me dijeron que era gratis y me cobraron".
 
@@ -137,15 +142,9 @@ En "abogados acoso laboral madrid", por delante de ti salen García de la Santa,
 
 Cada vez más gente no busca en Google: le pregunta a ChatGPT, a Gemini o a la propia IA de Google "¿qué abogado de acoso laboral me recomiendas en Madrid?". De las 710 búsquedas en las que apareces, **579 ya muestran una respuesta de IA arriba del todo**, y solo te citan en 10 (entre ellas, "abogado laboral en Madrid", "preaviso en despido improcedente" y "te pueden despedir después de una excedencia"). García de la Santa sale en 127.
 
-**Cómo eligen las IA a quién recomendar**, y qué hemos hecho para ello:
+**Cómo eligen las IA a quién recomendar**: lo explicamos, con lo que ya hemos hecho y lo que haremos, un poco más abajo en este mismo apartado ("Cómo vamos a mejorar en ChatGPT, Claude, Gemini y Google").
 
-1. **Respuestas claras y completas a preguntas concretas.** Las IA citan a quien responde mejor. Cada guía nueva empieza respondiendo en dos frases y sigue con detalle, preguntas frecuentes y fuentes.
-2. **Datos estructurados y llms.txt.** Le dicen a la IA quién eres, qué haces, dónde estás y quién firma cada texto. Ya están en la web nueva.
-3. **Autoridad verificable.** Sentencias con tribunal y fecha, el libro, Piñuel, Onda Cero, Comillas. Las IA dan más peso a lo que pueden comprobar.
-4. **Menciones en otros sitios.** Reseñas en Google, LinkedIn activo, entrevistas y enlaces desde universidades, sindicatos y colegios profesionales. Hoy tu autoridad es 8; la de Bufete Toro, 37.
-5. **Coherencia.** Mismo nombre, dirección y teléfono en todas partes; fuera webs duplicadas (acosomoral.es) y cuentas abandonadas.
-
-**Cómo lo mediremos**: Semrush registra cada mes en cuántas respuestas de IA apareces. El objetivo razonable a seis meses es pasar de 10 a más de 50, y entrar en el top 5 de "abogados acoso laboral madrid".
+**Cómo lo mediremos**: Semrush registra cada mes en cuántas respuestas de IA apareces. Nuestro objetivo a seis meses, sin poder garantizarlo porque depende de Google: pasar de 10 a más de 50 y acercarnos al top 5 de "abogados acoso laboral madrid".
 
 ### Qué dicen de ti las IA (proyecto nuevo en Semrush)
 
@@ -162,7 +161,7 @@ Hemos creado tu proyecto en Semrush para vigilar, mes a mes, cómo te recomienda
 
 ### Tú frente a la competencia, en la IA y en Google
 
-**En las IA** (visibilidad de Semrush, de 0 a 100, octubre de 2026):
+**En las IA** (visibilidad de Semrush, de 0 a 100, octubre de 2026). Ojo: aquí medimos algo distinto que más arriba. Arriba, en cuántas de tus búsquedas de Google sale la IA citándote (10); aquí, cuántas veces enlazan tu web ChatGPT, Gemini y Google en total (19).
 
 | Despacho | Visibilidad en la IA | Veces que la IA los nombra | Veces que citan su web |
 | --- | --- | --- | --- |
@@ -185,7 +184,7 @@ Campmany y Bufete Toro no son mejores abogados: tienen cientos de páginas que r
 | abogado incapacidad permanente | 720 | 27 | Campmany |
 | abogados acoso laboral | 480 | 9 | Bufete Toro |
 | test de acoso laboral | 720 | 12 | Javaloyes Legal |
-| abogado acoso laboral madrid | 140 | fuera de los 10 primeros | García de la Santa y Bufete Toro |
+| abogado acoso laboral madrid (en singular; en plural sales el 10) | 140 | fuera de los 10 primeros | García de la Santa y Bufete Toro |
 
 Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la segunda página.
 
@@ -193,8 +192,8 @@ Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la se
 
 1. **Responder lo que se pregunta**: cada guía empieza con la respuesta en dos frases, con cifras, plazos y su fuente. Es lo que las IA copian y enlazan.
 2. **Los mismos datos en todas partes**: años de experiencia, precio, dirección y especialidades iguales en la web, la ficha de Google, LinkedIn y los directorios. Ante datos que no cuadran, la IA recomienda a otro.
-3. **Darte de alta en Bing**: ChatGPT busca en Bing, no en Google. Con Bing Webmaster Tools y Bing Places tu web y tu ficha entran también ahí.
-4. **Dejar pasar a los rastreadores de las IA** (los de ChatGPT, Claude, Gemini y Perplexity) cuando la web se publique, y con el archivo llms.txt que ya está hecho.
+3. **Que te encuentre también Bing**, porque ChatGPT busca sobre todo ahí. Es darte de alta, y es gratis.
+4. **Dejar entrar a las IA en tu web** cuando la publiquemos, para que puedan leerla y citarte (la ficha especial para ellas, llms.txt, ya está hecha).
 5. **Que hablen de ti fuera de tu web**: entrevistas, colegios profesionales, universidades, artículos de Jesús en LinkedIn y directorios jurídicos. Semrush nos marca más de 3.000 sitios donde tus competidores aparecen y tú no.
 6. **Reseñas**: las IA también leen tu ficha de Google. Cada reseña nueva suma.
 7. **Medirlo cada mes** en el proyecto de Semrush que ya hemos creado. Semrush mide ChatGPT, Gemini y las respuestas de IA de Google; Claude no lo mide, pero lee las mismas fuentes, así que lo que funciona para los demás funciona para Claude.
@@ -239,19 +238,19 @@ Las hemos leído enteras. Casi ninguna discute el resultado jurídico: se quejan
 
 | Qué cuentan | Cuántas | De cuándo |
 | --- | --- | --- |
-| **El precio les pilló por sorpresa**: creían que la consulta era gratis (lo decía la web antigua), o pagaron 150 € más IVA (unos 181 €) por una llamada de 10 a 20 minutos | 4 | de hace 4 años a hace 1 |
-| **No les contestaban**: mes y medio llamando, una cita que nunca se volvió a dar, una consulta de agosto que en febrero seguía sin fecha | 3 | hace 1 año |
+| **El precio les pilló por sorpresa**: creían que la consulta era gratis (lo decía la web antigua), o pagaron 150 € más IVA (unos 181 €) por una llamada de 10 a 20 minutos | 3 | de hace 4 años a hace 1 |
+| **No les contestaban**: mes y medio llamando (y luego también les sorprendió el precio), una cita que nunca se volvió a dar, una consulta de agosto que en febrero seguía sin fecha. Una de ellas menciona a tu padre y habla de "afectados" | 3 | hace 1 año |
 | **Contrataron por ti y les llevó otra persona**, con correos sin respuesta y un final tenso por una diferencia de honorarios | 1 | hace 5 meses |
 | **No están contentos con el resultado del juicio** | 2 | hace 7 meses |
-| Muy duras, sin detalles (una menciona a tu padre y habla de "afectados") | 2 | hace 1 y 2 años |
+| Muy dura, sin detalles | 1 | hace 2 años |
 | Sin texto | 1 | hace 1 año |
 
-(Algunas reseñas tocan más de un tema; las contamos por el principal.)
+(Suman 11: cada reseña va en su tema principal, aunque alguna toque dos.)
 
 **Lo que nos dicen entre líneas**:
 
 1. **Decir el precio siempre antes**, como se hizo con la clienta de Gran Canaria. La web nueva ya lo hace.
-2. **Contestar siempre, aunque sea para decir "esta semana no podemos"**. Un compromiso de respuesta en 48 horas laborables y un aviso claro en agosto evitan casi la mitad de las malas.
+2. **Contestar siempre, aunque sea para decir "esta semana no podemos"**. Un compromiso de respuesta en 48 horas laborables y un aviso claro en agosto habrían evitado al menos 3 de las 11 malas.
 3. **Si alguien te contrata a ti, que sepa desde el principio quién llevará el día a día** y que tú supervisas. Las expectativas claras evitan desilusiones.
 4. **Explicar bien qué incluye la consulta**: una hora, con documentos, y qué pasa después.
 
@@ -296,6 +295,8 @@ Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos d
 
 ### Respuestas listas para copiar y pegar
 
+> Antes de usarlas: la del precio, cuando hayamos quitado el "gratis" de la web actual y de los anuncios; y la del plazo de respuesta, cuando nos confirmes que te comprometes a esas 48 horas (pregunta del apartado 24).
+
 Responder a las reseñas, también a las malas, es lo que más confianza da a quien está decidiendo. Estas plantillas sirven tal cual; solo hay que cambiar el nombre. Nunca damos datos del caso.
 
 **A una reseña de cinco estrellas**
@@ -304,7 +305,7 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 **A quien dice que la consulta era gratis y se la cobraron**
 
-> Hola, [nombre]. Lamentamos la confusión: tienes razón en que nuestra web antigua hablaba de una consulta gratuita, y eso no era correcto. La primera consulta tiene un precio (150 € más IVA) y ya lo hemos dejado claro en todas partes. Nos gustaría hablarlo contigo: llámanos al 913 24 97 97 y lo vemos.
+> Hola, [nombre]. Lamentamos la confusión: tienes razón en que en algún sitio pusimos que la primera consulta era gratuita, y no era correcto. La primera consulta de una hora cuesta 150 € más IVA con un abogado del despacho (250 € más IVA con Jesús Tierno), y lo estamos dejando claro en todas partes. Nos gustaría hablarlo contigo: llámanos al 913 24 97 97 y lo vemos.
 
 **A quien se queja de que no le contestaron**
 
@@ -360,14 +361,14 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 - **Herramientas**: 14, sin pedir datos.
 - **Sentencias**: fichas con tribunal, fecha, qué se consiguió y fuente. Lo que no está confirmado aparece como pendiente.
 - **Jesús Tierno**: tu ficha, con el libro y los vídeos con Piñuel.
-- **Redes y medios**, **Vídeos**, **Blog** (con buscador), **Preguntas frecuentes**, **Glosario** (60 términos), **Empresas y colegios**, **Contacto** (formulario, WhatsApp, mapa y precios claros).
+- **Redes y medios**, **Vídeos**, **Blog** (con buscador), **Preguntas frecuentes**, **Glosario** (más de 60 términos), **Empresas y colegios**, **Contacto** (formulario, WhatsApp, mapa y precios claros).
 - **Cookies, aviso legal y privacidad**, con un aviso de cookies que deja rechazar con un clic.
 
 > Todas las guías llevan la firma "Pendiente de revisión por Jesús Tierno Centella". Cuando las revises, pasará a "Revisado por".
 
 ## 9. Mujer y trabajo: el guiño que se convierte en servicio
 
-Muchas de tus clientas son mujeres, y muchas veces es la mujer la que elige al abogado de la familia. Hemos dado a la web un toque más cálido (un color coral suave junto a tu azul, fotos de las abogadas del despacho) sin caer en lo cursi, y una sección propia con:
+Muchos de tus clientes son mujeres, y muchas veces es la mujer la que elige al abogado de la familia. Hemos dado a la web un toque más cálido (un color coral suave junto a tu azul, fotos de las abogadas del despacho) sin caer en lo cursi, y una sección propia con:
 
 - Despido durante el embarazo, la baja por nacimiento o la lactancia (nulo aunque la empresa no lo supiera).
 - Reducción y adaptación de jornada, con su calculadora.
@@ -379,14 +380,26 @@ Y dos casos tuyos de 2025 que encajan de lleno: la madre despedida por pedir per
 
 ## 10. El asistente con inteligencia artificial
 
-Abajo a la derecha, "Pregunta tu caso". Contesta a cualquier hora con lo que sabe:
+Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot** de botones y respuestas enlatadas que no entiende nada. Es como hablar con ChatGPT, pero de tu despacho: entiende lo que le escriben con sus propias palabras, contesta a cualquier hora y lo hace con tus datos y tu forma de trabajar.
 
-- El texto completo de las 45 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las herramientas.
-- Un resumen del derecho laboral vigente en octubre de 2026 (plazos, indemnizaciones, despido nulo, permisos, incapacidad, paro).
+**Lo que sabe**:
 
-**Cómo se comporta**: dice que es una inteligencia artificial y que puede equivocarse; no da veredictos ni promete resultados; si no sabe algo, lo dice; da el plazo que corre; deriva siempre a una consulta; y si alguien habla de hacerse daño, da el 024. Nunca dice que la consulta sea gratuita.
+- **Toda tu web**: el texto completo de las 45 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 14 herramientas, para enlazar la que encaja con cada persona.
+- **Tu despacho**: quién eres, tu equipo, tu dirección, teléfono, WhatsApp y correo, cuánto cuesta la consulta y cómo se reserva.
+- **El derecho laboral vigente en octubre de 2026**: plazos, indemnizaciones, despido nulo, permisos, incapacidad, paro.
 
-**Una prueba real**: le escribimos "mi jefe me hace comentarios sobre mi cuerpo y me ha quitado un proyecto, ¿qué casos parecidos habéis ganado?". Explicó el acoso sexual y por razón de sexo, enlazó el mapa de pruebas, dio el 016 y dijo que no tenía un caso igual "y no voy a inventarlo". Cerró invitando a la consulta.
+**Y le puedes enseñar todo lo que quieras**: tu horario exacto y el de agosto, cómo trabajáis un caso de principio a fin, tus honorarios habituales, preguntas que os hacen siempre por teléfono, casos nuevos, notas de prensa... Cuanto más sepa, mejor contesta. Nos lo pasas como te sea más cómodo (un documento, un audio, un correo) y se lo metemos.
+
+**Lo que no hace, a propósito**: no busca en internet en tiempo real. Así no se inventa fuentes ni recomienda cosas que no has revisado tú. Si algún día quieres que consulte también el BOE o noticias recientes, se le puede activar.
+
+**Cómo se comporta**: dice que es una inteligencia artificial y que puede equivocarse; no da veredictos ni promete resultados; si no sabe algo, lo dice; da primero el plazo que corre; y si alguien habla de hacerse daño, da el 024. Nunca dice que la consulta sea gratuita: explica el precio y ofrece lo que sí es gratis (las herramientas, llamar o escribir por WhatsApp para saber si el caso necesita consulta, o dejar el teléfono para que le llaméis).
+
+**Acompaña sin presionar**: primero ayuda de verdad; después propone el siguiente paso que encaja (una herramienta si solo se está informando, llamar hoy si tiene un plazo corriendo). Una sola invitación por mensaje. Dentro del chat hay además botones fijos para llamar, escribir por WhatsApp o pedir que le llaméis.
+
+**Dos pruebas reales**:
+
+- "¿La primera consulta es gratis?" Contestó que no, dio los dos precios con IVA y explicó lo que sí es gratis, sin rodeos.
+- "Me han denegado la incapacidad hace dos semanas, ¿qué hago?" Empezó por el plazo de 30 días hábiles (y calculó que ya había gastado unos 10), dio tres pasos concretos, enlazó la guía de la reclamación previa, preguntó qué grado pedía y recomendó llamar hoy.
 
 **Qué cuesta**: cada conversación cuesta unos céntimos. Para la prueba lo pagamos nosotros; si sigue, tendría su propia cuenta y podrías ver el gasto.
 
@@ -421,7 +434,9 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 
 [[velocidad]]
 
-**En resumen**: la web nueva carga en la mitad de tiempo, pesa casi la mitad y hace un tercio de las peticiones. En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
+**En resumen**: la web nueva carga en la mitad de tiempo, pesa bastante menos (1,0 MB frente a 1,8) y hace un tercio de las peticiones.
+
+**¿Por qué 18 segundos en un sitio y 3 en otro?** PageSpeed simula un móvil normal con una conexión normal; Pingdom mide desde un ordenador con una conexión muy rápida. Las dos dicen lo mismo: la nueva va el doble de rápido. En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
 
 **Y lo que queda por pulir**: al publicarla en tu dominio, el SEO sube a 100. Las fotos y el vídeo ya se guardan en el navegador de cada visita, así que la segunda vez va todavía más rápida.
 
@@ -476,13 +491,7 @@ Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas vece
 | abogado laboralista madrid | 1.900 | 3,56 € | La búsqueda más cara: solo merece la pena con una página que convierta |
 | abogado acoso laboral madrid | 140 | 1,66 € | Landing de acoso |
 
-**Y la misma regla para que te recomiende la IA**. ChatGPT, Gemini o las respuestas de IA de Google recomiendan a quien da **datos claros y que coinciden en todas partes**. Hoy tus años de experiencia aparecen como 15, 20 y más de 25 según dónde se mire, y la web dice "consulta gratuita" mientras tus reseñas hablan de precio. Para una IA eso es ruido, y ante la duda recomienda a otro. Por eso:
-
-1. **Una sola versión de cada dato** (años, precio, dirección, especialidades) en la web, la ficha de Google, LinkedIn, los directorios y los anuncios. Dinos la cifra buena de años y la unificamos.
-2. **Respuestas que se pueden citar**: cada guía responde en las dos primeras frases, con cifras y plazos exactos y su fuente. Es lo que las IA copian y enlazan.
-3. **Preguntas frecuentes reales** sacadas de Semrush y de lo que la gente pregunta al chat de la web.
-4. **Menciones fuera de tu web**: medios, universidades, colegios profesionales. Las IA se fían más de lo que otros dicen de ti que de lo que dices tú.
-5. **Medirlo**: Semrush cuenta en cuántas respuestas de IA de Google apareces (hoy, en 10 de 579 de tus búsquedas). Es la cifra que queremos ver subir cada mes.
+**Y la misma regla para que te recomiende la IA**: datos claros y que coincidan en todas partes. Hoy tus años de experiencia aparecen como 15, 20 y más de 25 según dónde se mire; dinos la cifra buena y la unificamos. El plan completo está en el apartado 4 bis.
 
 **Lo que haríamos cada mes con Semrush**:
 
@@ -512,13 +521,13 @@ Hemos revisado los 220 artículos de tu blog uno a uno:
 - **Guías** (las secciones de Acoso, Despido, Incapacidad y Mujer y trabajo): contenido de fondo que no caduca. Son las páginas que deben salir en Google.
 - **Blog**: actualidad (sentencias, cambios de ley) y respuestas a dudas concretas. Cada artículo enlaza a su guía y a su herramienta, para que la persona avance.
 
-**Ya hay 24 artículos en el blog**, 12 de ellos nuevos hoy (despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso, canal de denuncias, qué despidos dan derecho a paro, me han denunciado por acoso y es mentira, y el expediente de incapacidad permanente). **Necesitamos que los revises**.
+**Ya hay 24 artículos en el blog**, 12 de ellos escritos en octubre de 2026 (despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso, canal de denuncias, qué despidos dan derecho a paro, me han denunciado por acoso y es mentira, y el expediente de incapacidad permanente). **Necesitamos que los revises**.
 
 > Una advertencia honesta: no tenemos acceso a Analytics ni a Search Console, así que no sabemos qué artículos antiguos te traen visitas hoy. Con esos datos afinaríamos las redirecciones y el orden del calendario.
 
 ## 15. Calendario editorial: 13 semanas, 39 artículos
 
-Tres artículos por semana (lunes, miércoles y viernes) durante 13 semanas: del 26 de octubre de 2026 al 22 de enero de 2027. Los temas salen de tres fuentes: **lo que más busca la gente** según Semrush, **la actualidad** (sentencias del Supremo de 2026, el 25 de noviembre, las fiestas, la subida de pensiones y del salario mínimo en enero) y **tus propios casos**, que son lo que nadie más puede contar.
+Tres artículos por semana (lunes, miércoles y viernes; en Navidad y Reyes se mueve algún día por los festivos) durante 13 semanas, desde el día en que se publique la web. Las fechas de la tabla son un ejemplo, empezando el 26 de octubre de 2026. Los temas salen de tres fuentes: **lo que más busca la gente** según Semrush, **la actualidad** (sentencias del Supremo de 2026, el 25 de noviembre, las fiestas, la subida de pensiones y del salario mínimo en enero) y **tus propios casos**, que son lo que nadie más puede contar.
 
 **Cómo está repartido**: 9 de acoso laboral (dos pensados para la enseñanza y la sanidad), 7 de despido y paro, 5 de incapacidad, 5 de Mujer y trabajo, 4 sentencias del Supremo de 2026, 2 casos del despacho, 1 para empresas y colegios (los protocolos), 5 de actualidad de temporada (vacaciones, paga extra, plazos en Navidad, salario mínimo, teletrabajo) y 1 comercial.
 
@@ -621,7 +630,7 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 
 > **Asunto**: Hemos recibido tu consulta, Ana
 >
-> Hola, Ana. Gracias por escribirnos. Te llamará un abogado del despacho en horario de oficina, normalmente el mismo día.
+> Hola, Ana. Gracias por escribirnos. Te llamará un abogado del despacho en horario de oficina, en un máximo de 48 horas laborables.
 >
 > Mientras tanto, lo más importante: si te han denegado la incapacidad, tienes **30 días hábiles** desde que te lo notificaron para presentar la reclamación previa. Si quieres saber hasta qué día tienes, aquí lo calculas en un minuto: [comprobador de incapacidad].
 >
@@ -629,14 +638,6 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 >
 > Un saludo,
 > Tierno Centella Abogados · 913 24 97 97
-
-**Y los siguientes, en una línea cada uno**:
-
-1. Al día siguiente: "Qué hacer si te han denegado la incapacidad, paso a paso".
-2. A los 3 días: "Tu plazo: lo que no puede esperar".
-3. A la semana: "Quién te defendería y cómo trabajamos".
-4. A las 2 semanas: "Un caso parecido al tuyo".
-5. Una vez al mes, durante 3 meses: una novedad útil (un cambio de ley, una sentencia).
 
 **Cómo funciona por dentro**: con **Resend**, la herramienta de envío de correos que usamos también en otros proyectos. La web avisa a Resend de que alguien ha entrado y de su tema, y Resend envía cada correo en su día, solo, sin que nadie tenga que acordarse. Los textos los redactamos nosotros y tú los revisas.
 
@@ -670,7 +671,7 @@ Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush
 
 - Tu empresa, TIERNO CENTELLA SL, es anunciante verificado en Google y tiene **8 anuncios** registrados en España.
 - Hay campaña **activa**: uno de los anuncios se mostró por primera vez el 5 de abril de 2026 y por última vez el **22 de octubre de 2026**. Entre abril y julio se enseñó entre 4.000 y 5.000 veces.
-- Los anuncios son de texto: "Abogado Laboralista Experto - Reserva tu Cita", "Solicita tu Incapacidad - Reserva tu Cita" y otros que **repiten el título de artículos del blog** ("Cómo identificar el acoso laboral o mobbing ? | Tierno Centella"). Eso último es típico de los anuncios dinámicos: Google crea el anuncio a partir de tus páginas.
+- Los anuncios son de texto: "Abogado Laboralista Experto - Reserva tu Cita", "Solicita tu Incapacidad - Reserva tu Cita" y otros que **repiten el título de artículos del blog** ("Cómo identificar el acoso laboral o mobbing ? | Tierno Centella"). Eso pasa cuando Google crea los anuncios solo, a partir de tus páginas, y suele traer gente que solo quiere leer, no contratar.
 - Según Semrush, en 2026 se han visto anuncios tuyos en búsquedas como "abogado acoso laboral madrid" (en primera posición, a 1,80-2,64 € el clic), "cómo denunciar acoso laboral", "cómo demostrar el acoso laboral" y "abogado laboralista gratuito".
 - En la búsqueda que hicimos ("abogado acoso laboral madrid") salían patrocinados G2 Abogados y R. Sánchez Abogados, y tu anuncio no. Una sola búsqueda no es concluyente: depende de la hora, el presupuesto y quién busca.
 
@@ -679,7 +680,7 @@ Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush
 1. **Anuncios que llevan a artículos del blog**. Quien busca "cómo identificar el mobbing" suele estar informándose, no contratando. Pagas clics de lectores. Mejor: anuncios solo para búsquedas de quien quiere un abogado, y el blog para el posicionamiento gratuito.
 2. **"Primera consulta gratis"** en algún anuncio y la palabra "gratuito" en las búsquedas. Tu consulta tiene precio, y las reseñas ya lo reflejan: atrae a quien no va a pagar y genera opiniones negativas. Se quita, y "gratis" y "gratuito" pasan a ser **palabras negativas** (las que impiden que salga el anuncio).
 3. **Páginas de destino que no convierten**. El anuncio de marca ("Tierno Centella Abogados - Abogados Laborales en Madrid") lleva a la página de acoso laboral de la web actual, aunque quien busca venga por un despido o una incapacidad, y la dirección que enseñan otros anuncios, tiernocentella.es/acoso, abre hoy un artículo sobre "acoso ascendente" sin formulario. Lo explicamos y lo resolvemos en el apartado siguiente.
-4. **Medir la consulta, no el clic**. En la web nueva ya contamos cada llamada, cada WhatsApp, cada formulario enviado y cada conversación del chat. Conectado a Google Ads, la campaña aprende qué búsquedas traen clientes y deja de gastar en las que no.
+4. **Medir la consulta, no el clic**. La web nueva está preparada para contar cada llamada, cada WhatsApp, cada formulario enviado y cada conversación del chat. Conectado a Google Ads, la campaña aprende qué búsquedas traen clientes y deja de gastar en las que no.
 
 **Lo que ya hemos dejado preparado**: las direcciones /acoso y /incapacidad que usan los anuncios redirigen a sus páginas nuevas, para que el día del cambio de web **ningún anuncio lleve a una página rota**.
 
@@ -708,7 +709,7 @@ Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y puls
 **Por qué van a convertir mucho mejor** (cada decisión tiene un porqué):
 
 1. **El titular repite lo que la persona ha buscado**: "Abogados de incapacidad permanente en Madrid" (unas 1.900 búsquedas al mes entre todas sus variantes), y encima la duda con la que llega: "¿Te han denegado la incapacidad permanente y no puedes trabajar?" ("me han denegado la incapacidad permanente" se busca 210 veces al mes y "...y no puedo trabajar", 110). Quien llega siente "esto es lo mío" en un segundo.
-2. **El formulario se ve nada más entrar** y pide solo tres cosas: situación, nombre y teléfono. Al lado, llamar y WhatsApp.
+2. **El formulario se ve nada más entrar** y pide solo tres cosas: situación, nombre y teléfono (el correo es opcional, para recibir los pasos de su caso). Al lado, llamar y WhatsApp.
 3. **Sin menú**: no hay por dónde irse. Todo lleva a contactar.
 4. **El plazo bien visible** ("30 días hábiles para la reclamación previa"): la urgencia es real y ayuda a decidir hoy.
 5. **"¿En qué situación estás?"**: denegada, grado menor, tribunal médico, baja que se agota, ya concedida. Cada persona encuentra su caso.
@@ -723,7 +724,7 @@ Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y puls
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
-Tu web actual ya tiene instalados **Google Analytics 4** y **Google Tag Manager**. Lo sabemos porque cualquier web deja ver qué herramientas carga: en el código público de tiernocentella.es aparecen tu contenedor de Tag Manager (GTM-WLPRXMHR) y tu Analytics (G-8F0ER92P9J). Son identificadores, no claves: verlos no da acceso a nada. Para entrar a los datos necesitamos que nos invites (apartado 23). Es buena noticia: hay historial. La pregunta es si alguien lo mira y lo convierte en decisiones. Con la web nueva lo hacemos nosotros y te lo contamos en un informe sencillo.
+Tu web actual ya tiene puesto el contador de visitas de Google (**Google Analytics**) y la "caja" donde se enchufan las herramientas (**Tag Manager**). Lo sabemos porque cualquier web deja ver qué herramientas usa; verlo no da acceso a nada. Así que hay historial guardado: para verlo solo necesitamos que nos invites (apartado 23).
 
 **Lo que ya está conectado en la web nueva**:
 
@@ -739,7 +740,7 @@ Tu web actual ya tiene instalados **Google Analytics 4** y **Google Tag Manager*
 
 Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activa si la persona acepta las cookies de medición, como exige la ley.
 
-**Un detalle técnico, para ser transparentes**: las visitas y la velocidad en Vercel son gratis. Contar en Vercel cada llamada, WhatsApp o formulario necesita su plan Pro, que es de pago. Si no queremos pagarlo, esas mismas acciones se cuentan gratis en Clarity y en Google Analytics, que es lo que proponemos.
+**Para ser transparentes**: contar las visitas es gratis. Contar cada llamada o WhatsApp en Vercel cuesta dinero (su plan Pro), así que lo contamos gratis con Clarity y Google Analytics.
 
 **Lo que podemos conectar si nos das acceso**: Google Analytics, Search Console, Google Ads, Semrush (ya lo usamos), tu ficha de Google, Meta, Instagram, Facebook, LinkedIn y el correo de seguimiento. Con todo conectado, el informe deja de ser una opinión y pasa a ser un dato.
 
@@ -752,7 +753,7 @@ Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activ
 | Dónde se pierden | "En móvil, la mitad de la gente no llega al botón de llamar de la página de incapacidad: lo subimos" |
 | Fallos que nadie cuenta | "Clarity detecta clics de rabia en la tabla de plazos: la gente cree que se puede pulsar. Lo cambiamos" |
 | Qué pregunta la gente al asistente | "Muchas preguntas sobre bajas por ansiedad: preparamos un artículo" |
-| Reseñas y ficha de Google | "Dos reseñas nuevas de cinco estrellas; la nota sube a 4,3" |
+| Reseñas y ficha de Google | "Dos reseñas nuevas de cinco estrellas: ya sois 61 y la media va subiendo" |
 | Campañas | "Cada consulta por Google Ads ha costado 18 €; la palabra 'mobbing' trae lectores, no clientes: la pausamos" |
 
 (Las cifras de la tabla son ejemplos de cómo te lo contaríamos, no datos tuyos.)
@@ -806,14 +807,14 @@ Tu web actual no se tira: todo su contenido aprovechable está dentro de la nuev
 | Qué | Para qué | Cómo |
 | --- | --- | --- |
 | Google Analytics | Medir visitas | Administrar > Gestión de acceso > añadir nuestro correo como lector |
-| Google Tag Manager | Mantener el mismo contenedor en la web nueva | Administrador > Gestión de usuarios > añadir nuestro correo como lector |
+| Google Tag Manager | Mantener el mismo contenedor en la web nueva | Administrador > Gestión de usuarios > añadir nuestro correo con permiso para publicar (solo en este contenedor) |
 | Google Ads | Ver cuánto cuesta cada consulta y proponer mejoras | Herramientas > Acceso y seguridad > añadir nuestro correo con acceso de solo lectura |
 | Search Console | Ver búsquedas y redirecciones | Configuración > Usuarios y permisos > añadir usuario |
 | Ficha de Google | Responder reseñas y publicar | Perfil de Empresa > Gestores > añadir gestor |
 | Dominio tiernocentella.es | Hacer el cambio de web | Nos dices dónde está contratado y lo hacemos contigo |
 | Instagram, Facebook y LinkedIn | Programar y medir (si quieres) | Meta Business Suite y administrador de la página de LinkedIn |
 
-Todos son de solo lectura salvo que tú decidas otra cosa. Ninguno nos da acceso a tu dinero ni a tus datos de clientes, y los puedes retirar cuando quieras.
+Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, la ficha de Google y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras.
 
 ## 24. Preguntas para ti
 
@@ -839,7 +840,7 @@ Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía n
 
 **Lo único que va aparte**: los **vídeos profesionales** con equipo de grabación, si los quieres. Los vídeos sencillos para redes y los guiones entran en la cuota.
 
-Para ajustarte la cuota a lo que de verdad necesitas, me ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Lo hablamos con un café cuando quieras.
+Para ajustarte la cuota a lo que de verdad necesitas, me ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Cuando contestes las preguntas del apartado 24, te preparo una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
 
 Y si prefieres seguir como hasta ahora, fenomenal también: la web y la guía son tuyas. Sin ninguna presión.
 
