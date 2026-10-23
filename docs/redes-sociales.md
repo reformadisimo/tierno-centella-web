@@ -70,3 +70,17 @@ Conclusión: lo que funciona es **Jesús hablando a cámara de acoso**. Los text
 1. Página "En redes y en los medios" con los mejores reels incrustados (se cargan solo al pulsar, sin cookies de Meta hasta entonces), la aparición en Onda Cero y las jornadas de Comillas.
 2. Los casos recientes pasan a la página de sentencias, con la fuente.
 3. Las cuentas abandonadas no se enlazan en la demo; en la guía se explica por qué.
+
+## LinkedIn (revisado el 23/10/2026)
+
+- **Perfil de Jesús Tierno Centella**: "Socio fundador en Tierno Centella Abogados | Abogado laboralista". Más de 500 contactos y **2.371 seguidores**: es la red con más audiencia profesional después de Instagram. Publica muy poco: la última publicación es una oferta de empleo (busca abogado o abogada laboralista con experiencia, presencial en Madrid) y la anterior, de hace 8 meses, sobre las jornadas de Comillas.
+- **Irene Ramos Agudo** figura como "Abogada Laboralista en Tierno Centella Abogados". Confirmado.
+- **Dos páginas de empresa duplicadas**: "Tierno Centella" (224 seguidores) y "TIERNO CENTELLA ABOGADOS" (80 seguidores, con el texto antiguo de "servicio jurídico integral" y "centros educativos y tercer sector"). Hay que fusionarlas en una.
+- Oportunidad clara: LinkedIn es donde están directores de colegios, responsables de recursos humanos, sindicatos y otros abogados. Es el canal para las campañas a colegios, instituciones y despachos que derivan casos de acoso.
+- La oferta de empleo da pie a una página "Trabaja con nosotros" en la web.
+
+## Otras webs y notas de prensa encontradas
+
+- **acosomoral.es**: web antigua del despacho (BaseKit), sin fechas, con un widget de Twitter que no carga. Dispersa la marca: conviene redirigirla a la web nueva.
+- **abogadoespecializadoenacosolaboral.com**: aparece en los resultados de Google con el nombre del despacho; bloquea la lectura automática. Preguntar a Jesús si es suya.
+- Notas de prensa (2022-2023), con pinta de contenido patrocinado: Que.es (30/11/2023 y 11/12/2023), Merca2 (20/10/2023), Moncloa.com (23/10/2023 y 09/02/2022) y Majadahonda Magazin. Preguntar cuánto costaron y si trajeron clientes.

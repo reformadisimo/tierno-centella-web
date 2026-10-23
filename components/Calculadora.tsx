@@ -258,7 +258,7 @@ export default function Calculadora({ despidoInicial = '' }: { despidoInicial?: 
           </div>
           <p className="letra-pequena">
             Cálculo orientativo con la ley general. Tu convenio, los complementos salariales o una antigüedad reconocida distinta
-            pueden cambiar la cifra. La primera valoración de tu caso por teléfono o WhatsApp no tiene coste.
+            pueden cambiar la cifra. Llámanos y te decimos si tu caso necesita una consulta.
           </p>
         </section>
       )}

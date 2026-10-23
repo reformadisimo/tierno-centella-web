@@ -25,8 +25,8 @@ export default function Contacto() {
           </nav>
           <h1>Habla con un abogado</h1>
           <p className="entradilla">
-            La primera orientación por teléfono o WhatsApp no tiene coste. Si tu caso lo necesita, lo estudiamos a fondo en una consulta de una
-            hora.
+            Cuéntanos qué te pasa por teléfono o WhatsApp y te decimos con claridad si tu caso necesita una consulta y cuánto cuesta antes de
+            reservarla. Sin sorpresas.
           </p>
           <div className="acciones">
             <a className="boton" href={DESPACHO.telefonoHref}>
@@ -50,13 +50,13 @@ export default function Contacto() {
                 <tr>
                   <td>Con un abogado del despacho</td>
                   <td>
-                    <strong>{DESPACHO.precioCita} €</strong>
+                    <strong>{DESPACHO.precioCita} €{DESPACHO.iva}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td>Con Jesús Tierno</td>
                   <td>
-                    <strong>{DESPACHO.precioCitaJesus} €</strong>
+                    <strong>{DESPACHO.precioCitaJesus} €{DESPACHO.iva}</strong>
                   </td>
                 </tr>
               </tbody>

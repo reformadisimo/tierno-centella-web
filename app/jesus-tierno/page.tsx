@@ -26,7 +26,7 @@ export default function Jesus() {
             </p>
             <div className="acciones">
               <a className="boton" href={DESPACHO.citaJesus}>
-                Reservar consulta con Jesús ({DESPACHO.precioCitaJesus} €)
+                Reservar consulta con Jesús ({DESPACHO.precioCitaJesus} €{DESPACHO.iva})
               </a>
             </div>
           </div>

@@ -16,6 +16,8 @@ export const DESPACHO = {
   citaJesus: 'https://tiernocentella.es/producto/cita-jesus/',
   precioCita: 150,
   precioCitaJesus: 250,
+  // Las reseñas de Google indican que la consulta se cobra con IVA aparte. Confirmar con el despacho.
+  iva: ' + IVA',
 };
 
 export function enlaceWhatsapp(texto: string) {

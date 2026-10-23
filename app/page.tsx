@@ -299,8 +299,8 @@ export default function Inicio() {
           <div>
             <h2>En Jorge Juan, en el centro de Madrid</h2>
             <p>
-              Consulta de una hora con documentos, presencial o por videollamada: {DESPACHO.precioCita} € con un abogado del despacho o{' '}
-              {DESPACHO.precioCitaJesus} € con Jesús Tierno. La primera orientación por teléfono o WhatsApp no tiene coste.
+              Consulta de una hora con documentos, presencial o por videollamada: {DESPACHO.precioCita} €{DESPACHO.iva} con un abogado del despacho o{' '}
+              {DESPACHO.precioCitaJesus} €{DESPACHO.iva} con Jesús Tierno. Antes de reservar te decimos por teléfono o WhatsApp si tu caso la necesita.
             </p>
             <div className="acciones">
               <Link className="boton" href="/contacto">

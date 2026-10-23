@@ -126,7 +126,7 @@ export const FAQ: Pregunta[] = [
     tema: 'despacho',
     pregunta: '¿Cuánto cuesta la consulta?',
     respuesta:
-      'La primera orientación por teléfono o WhatsApp no tiene coste. Si necesitas estudiar el caso a fondo, la consulta de una hora cuesta 150 € con un abogado del despacho y 250 € con Jesús Tierno.',
+      'Por teléfono o WhatsApp te decimos si tu caso necesita una consulta y cuánto cuesta, antes de reservar. La consulta de una hora con documentos cuesta 150 € más IVA con un abogado del despacho y 250 € más IVA con Jesús Tierno.',
   },
   {
     tema: 'despacho',
