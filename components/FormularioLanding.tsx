@@ -49,7 +49,7 @@ export default function FormularioLanding({
   const [estado, setEstado] = useState<'listo' | 'enviando' | 'enviado' | 'error'>('listo');
   const [error, setError] = useState('');
   const [origen, setOrigen] = useState('');
-  const [datos, setDatos] = useState({ nombre: '', telefono: '', situacion: '', acepto: false, web: '' });
+  const [datos, setDatos] = useState({ nombre: '', telefono: '', email: '', situacion: '', acepto: false, seguimiento: false, web: '' });
   const cambiar = (k: keyof typeof datos, v: string | boolean) => setDatos((d) => ({ ...d, [k]: v }));
 
   useEffect(() => setOrigen(leerOrigen()), []);
@@ -70,6 +70,8 @@ export default function FormularioLanding({
         body: JSON.stringify({
           nombre: datos.nombre,
           telefono: datos.telefono,
+          email: datos.email,
+          seguimiento: datos.seguimiento,
           tema: `${tema}: ${datos.situacion}`,
           cuando: 'Cuanto antes',
           mensaje: '',
@@ -129,6 +131,18 @@ export default function FormularioLanding({
           onChange={(e) => cambiar('telefono', e.target.value)}
         />
       </div>
+      <div className="campo">
+        <label htmlFor={`${id}-email`}>
+          Correo <span className="lf-opcional">(opcional)</span>
+        </label>
+        <input id={`${id}-email`} type="email" autoComplete="email" value={datos.email} onChange={(e) => cambiar('email', e.target.value)} />
+      </div>
+      {datos.email.includes('@') && (
+        <label className="casilla" style={{ margin: "0 0 10px", fontSize: "0.9rem" }}>
+          <input type="checkbox" checked={datos.seguimiento} onChange={(e) => cambiar('seguimiento', e.target.checked)} />
+          <span>Quiero recibir por correo la guía de mi caso y los siguientes pasos. Puedo darme de baja cuando quiera.</span>
+        </label>
+      )}
       <input
         type="text"
         name="web"

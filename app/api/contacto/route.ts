@@ -1,3 +1,5 @@
+import { entrarEnJourney } from '@/lib/journey';
+
 // Envía la consulta del formulario por correo con Resend. Sin claves configuradas,
 // responde 503 y el formulario ofrece WhatsApp: nunca se pierde un contacto en silencio.
 export const runtime = 'nodejs';
@@ -53,5 +55,7 @@ export async function POST(req: Request) {
     console.error('Error de Resend:', r.status, await r.text().catch(() => ''));
     return Response.json({ error: 'No se pudo enviar ahora mismo.' }, { status: 502 });
   }
+  // Si dejó su correo y aceptó el seguimiento, entra en el journey de su tema.
+  if (email && datos.seguimiento) await entrarEnJourney('consulta.web', { email, nombre, tema, origen });
   return Response.json({ ok: true });
 }

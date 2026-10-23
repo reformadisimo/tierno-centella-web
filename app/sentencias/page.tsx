@@ -10,13 +10,8 @@ export const metadata: Metadata = meta({
   ruta: '/sentencias',
 });
 
-const FOTO_MATERIA: Record<string, string> = {
-  'Acoso laboral': 'abogada-escucha',
-  Despido: 'jesus-firmando',
-  Conciliación: 'abogada-sonrie',
-  'Prevención de riesgos': 'biblioteca',
-  Incapacidad: 'abogada-documentos',
-};
+// Los casos son del despacho que dirige Jesús Tierno: la cara que los acompaña es la suya.
+const FOTOS_JESUS = ['jesus-firmando', 'jesus-retrato', 'jesus-camisa', 'jesus-puerta', 'reunion-cliente'];
 
 export default function Sentencias() {
   return (
@@ -35,12 +30,12 @@ export default function Sentencias() {
       </header>
       <section className="seccion">
         <div className="contenedor fichas">
-          {CASOS.map((c) => {
-            const foto = FOTO_MATERIA[c.materia] ?? FOTO_MATERIA['Acoso laboral'];
+          {CASOS.map((c, i) => {
+            const foto = FOTOS_JESUS[i % FOTOS_JESUS.length];
             return (
               <article className="ficha" key={c.slug} id={c.slug}>
                 <div className="ficha-lado">
-                  <img src={`/img/${foto}-640.webp`} alt="" width={640} height={480} loading="lazy" />
+                  <img src={`/img/${foto}-640.webp`} alt="Jesús Tierno Centella, socio director del despacho" width={640} height={480} loading="lazy" />
                   <div className="ficha-sello">
                     <span>{c.anio || 'Caso'}</span>
                     <small>{c.materia}</small>

@@ -10,7 +10,7 @@ const TEMAS = ['Me han despedido', 'Sufro acoso laboral', 'Incapacidad o baja', 
 export default function FormularioContacto() {
   const [estado, setEstado] = useState<'listo' | 'enviando' | 'enviado' | 'error'>('listo');
   const [error, setError] = useState('');
-  const [datos, setDatos] = useState({ nombre: '', telefono: '', email: '', tema: '', cuando: 'Cuanto antes', mensaje: '', acepto: false, web: '' });
+  const [datos, setDatos] = useState({ nombre: '', telefono: '', email: '', tema: '', cuando: 'Cuanto antes', mensaje: '', acepto: false, seguimiento: false, web: '' });
   const cambiar = (k: keyof typeof datos, v: string | boolean) => setDatos((d) => ({ ...d, [k]: v }));
 
   const textoWhatsapp = `Hola, soy ${datos.nombre || '...'}. Tema: ${datos.tema || 'consulta laboral'}. ${datos.mensaje}`.trim();
@@ -86,6 +86,12 @@ export default function FormularioContacto() {
         <label htmlFor="f-msg">Cuéntanos en dos líneas qué ha pasado (opcional)</label>
         <textarea id="f-msg" rows={3} maxLength={1500} value={datos.mensaje} onChange={(e) => cambiar('mensaje', e.target.value)} />
       </div>
+      {datos.email.includes('@') && (
+        <label className="casilla" style={{ marginBottom: 10 }}>
+          <input type="checkbox" checked={datos.seguimiento} onChange={(e) => cambiar('seguimiento', e.target.checked)} />
+          <span>Quiero recibir por correo la guía de mi caso y los siguientes pasos. Puedo darme de baja cuando quiera.</span>
+        </label>
+      )}
       <input type="text" name="web" tabIndex={-1} autoComplete="off" value={datos.web} onChange={(e) => cambiar('web', e.target.value)} style={{ position: 'absolute', left: -9999 }} aria-hidden="true" />
       <label className="casilla" style={{ marginBottom: 16 }}>
         <input type="checkbox" required checked={datos.acepto} onChange={(e) => cambiar('acepto', e.target.checked)} />

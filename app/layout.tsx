@@ -6,6 +6,7 @@ import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';
 import Asistente from '@/components/Asistente';
 import AvisoCookies from '@/components/AvisoCookies';
+import AvisoSalida from '@/components/AvisoSalida';
 import Medicion from '@/components/Medicion';
 import JsonLd from '@/components/JsonLd';
 import { BASE, esquemaDespacho } from '@/lib/seo';
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BarraMovil />
         <Asistente />
         <AvisoCookies />
+        <AvisoSalida />
         <Medicion />
       </body>
     </html>

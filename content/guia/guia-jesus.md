@@ -429,17 +429,34 @@ Las sentencias son lo que más autoridad da a una web de abogados, ante Google, 
 
 ## 17. Del formulario a la consulta: el seguimiento por correo
 
-Hoy, cuando alguien rellena tu formulario, no sabemos qué pasa después. Lo que proponemos, con su permiso expreso:
+Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vuelve a saber de ti. Muchas consultas no se pierden porque la persona diga que no, sino porque nadie le vuelve a escribir. Lo que proponemos no es una newsletter: es un **acompañamiento**, un correo en el momento justo según su caso, con su permiso.
+
+**Por dónde entra la gente** (ya está montado en la web nueva):
+
+- **Todos los formularios**: el de contacto y los de las páginas de anuncios. Si deja su correo y marca la casilla, entra en el seguimiento de su tema.
+- **El aviso de salida**: cuando alguien va a irse sin haber hecho nada, le ofrecemos un último paso útil: ir a su tema (despido, acoso, incapacidad, embarazo), calcular su indemnización o su paro, preguntar al chat, llamar o recibir por correo los pasos para su caso. Sale como mucho una vez por semana y nunca en las páginas de anuncios.
+
+**Lo que recibe** (ejemplo para incapacidad; cada tema tiene el suyo):
 
 | Cuándo | Qué recibe |
 | --- | --- |
-| Al momento | "Lo hemos recibido": quién le contestará, en cuánto tiempo y el precio de la consulta, para que no haya sorpresas |
-| A las 24 horas | La guía de su tema (si preguntó por acoso, cómo reunir pruebas; si por despido, sus plazos) |
-| A los 3 días | Un recordatorio del plazo que le corre, con la fecha exacta |
-| A los 7 días | Una invitación a la consulta, con tus casos y las reseñas |
-| Después de la consulta | Un resumen con los siguientes pasos y, si quedó contento, el enlace para dejar una reseña |
+| Al momento | "Lo hemos recibido": quién le contestará, cuándo y el precio de la consulta, para que no haya sorpresas |
+| Al día siguiente | Los pasos de su caso: qué hacer si se la han denegado, qué informes reunir, cómo es el tribunal médico |
+| A los 3 días | Su plazo: los 30 días hábiles de la reclamación previa, con un enlace a la calculadora |
+| A la semana | Cómo trabajamos, quién le defendería y lo que dicen los clientes |
+| A las 2 semanas | Un caso real parecido al suyo y una invitación a la consulta |
+| Durante 3 meses | Un correo al mes con algo útil (un cambio de ley, una sentencia), por si ahora sí es el momento |
+| Después de la consulta | Un resumen de los siguientes pasos y, si quedó contento, el enlace para dejar una reseña |
 
-Es lo que hacemos en Reformadísimo y está montado con Resend, que envía desde tu dominio. Cumple la protección de datos porque la persona lo acepta al enviar el formulario y puede darse de baja con un clic. Aprovecharía los contactos que hoy se pierden y atacaría de raíz la queja de "después se desentienden".
+**Cómo funciona por dentro**: con **Resend**, la herramienta de envío de correos que usamos también en otros proyectos. La web avisa a Resend de que alguien ha entrado y de su tema, y Resend envía cada correo en su día, solo, sin que nadie tenga que acordarse. Los textos los redactamos nosotros y tú los revisas.
+
+**Coste**: el plan gratuito de Resend incluye 3.000 correos al mes, de sobra para empezar; el siguiente cuesta unos 20 dólares al mes (condiciones de octubre de 2026).
+
+**Lo legal**: la persona lo acepta con una casilla clara (no viene marcada), cada correo lleva su enlace para darse de baja y la política de privacidad lo explica.
+
+**Qué falta para encenderlo**: enviar desde tu dominio (tiernocentella.es), para lo que necesitamos acceso a donde lo tienes contratado (pregunta 22), y que revises los textos.
+
+Ataca de raíz la queja de algunas reseñas ("después se desentienden") y aprovecha los contactos que hoy se pierden.
 
 ## 18. Campañas: para el cliente final y para instituciones
 
@@ -496,6 +513,8 @@ Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y puls
 - **Acoso laboral**: [abrir la página](/consulta/acoso-laboral)
 - **Despidos**: [abrir la página](/consulta/despido)
 
+**Compáralas tú mismo, mejor desde el móvil**: [tu página actual del anuncio](https://tiernocentella.es/abogados-acoso-laboral-o-mobbing/) frente a [la nueva de incapacidad](/consulta/incapacidad-permanente) y [la nueva de acoso](/consulta/acoso-laboral). En cinco segundos se ve la diferencia: qué entiendes nada más entrar, cuánto tienes que escribir para contactar y cuántas salidas hay que no llevan a ti.
+
 **Por qué van a convertir mucho mejor** (cada decisión tiene un porqué):
 
 1. **El titular repite lo que la persona ha buscado**: "Abogados de incapacidad permanente en Madrid" (unas 1.900 búsquedas al mes entre todas sus variantes), y encima la duda con la que llega: "¿Te han denegado la incapacidad permanente y no puedes trabajar?" ("me han denegado la incapacidad permanente" se busca 210 veces al mes y "...y no puedo trabajar", 110). Quien llega siente "esto es lo mío" en un segundo.
@@ -514,14 +533,14 @@ Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y puls
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
-Tu web actual ya tiene instalados **Google Analytics 4** y **Google Tag Manager** (los hemos visto en el código de la página). Es buena noticia: hay historial. La pregunta es si alguien lo mira y lo convierte en decisiones. Con la web nueva lo hacemos nosotros y te lo contamos en un informe sencillo.
+Tu web actual ya tiene instalados **Google Analytics 4** y **Google Tag Manager**. Lo sabemos porque cualquier web deja ver qué herramientas carga: en el código público de tiernocentella.es aparecen tu contenedor de Tag Manager (GTM-WLPRXMHR) y tu Analytics (G-8F0ER92P9J). Son identificadores, no claves: verlos no da acceso a nada. Para entrar a los datos necesitamos que nos invites (apartado 23). Es buena noticia: hay historial. La pregunta es si alguien lo mira y lo convierte en decisiones. Con la web nueva lo hacemos nosotros y te lo contamos en un informe sencillo.
 
 **Lo que ya está conectado en la web nueva**:
 
 - **Vercel Analytics**: visitas, páginas más vistas, de dónde llega la gente (Google, Instagram, ChatGPT...) y desde qué dispositivo. No usa cookies ni datos personales.
 - **Medición de velocidad real**: cómo de rápida va la web en los móviles de tus visitas de verdad, no solo en una prueba.
 - **Las acciones que importan, contadas una a una**: cada pulsación en **llamar**, en **WhatsApp** o en el correo (y desde dónde: la cabecera, el pie, la barra del móvil o el texto), cada **formulario enviado** (con el tema: despido, acoso, incapacidad...) y cada vez que alguien **abre el chat** o le escribe.
-- **Microsoft Clarity** (gratuito), la lupa:
+- **Microsoft Clarity** (gratuito), la lupa. Está preparado en la web nueva y se enciende en cuanto nos des el visto bueno (crear la cuenta lleva cinco minutos):
   - **Grabaciones de sesiones**: vemos cómo navega cada visita, anónima, como si miráramos por encima del hombro. Nunca graba lo que se escribe en los formularios.
   - **Mapas de calor**: dónde pulsa la gente, hasta dónde lee cada página y qué ignora.
   - **Clics de rabia y clics muertos**: cuando alguien pulsa varias veces algo que no responde o algo que parece un botón y no lo es. Es la forma más rápida de encontrar fallos que nadie te cuenta.
@@ -610,21 +629,27 @@ CUESTIONARIO
 
 ## 25. Y ahora, tú decides
 
-Jesús, todo esto te lo he hecho como amigo y no te voy a cobrar nada por ello. Me apetecía, porque creo que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
+Jesús, **la web es tuya: te la regalo**. Todo lo que ves (la web, las guías, las herramientas, el asistente, las páginas para tus anuncios, la medición y esta guía) te lo he hecho como amigo y no te voy a cobrar nada por ello. Me apetecía, porque creo que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
 
-Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya estoy haciendo webs y campañas para algunos amigos. Si te interesa que sigamos, puedo encargarme de todo o solo de lo que quieras:
+Te cuento en qué estoy: **estoy montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya llevo webs y campañas de algunos amigos. Y me encantaría llevar la tuya.
 
-- La web: publicarla, mantenerla y mejorarla cada mes.
-- El SEO: los artículos del calendario, el seguimiento con Semrush y Search Console y las redirecciones.
-- La ficha de Google y las reseñas.
-- Las campañas de Google Ads e Instagram, con informes de lo que cuesta cada consulta.
-- Las redes: ideas, guiones de reels, LinkedIn para colegios e instituciones.
-- Notas de prensa y enlaces que sí aporten.
-- El seguimiento por correo y, si lo necesitas, un CRM sencillo.
+**Lo que te propongo a partir de aquí es un servicio 360, con una cuota mensual**: tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
 
-Para proponerte algo con sentido necesito saber con qué presupuesto cuentas y qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24).
+| Qué incluye | En la práctica |
+| --- | --- |
+| La web | Publicarla en tu dominio, mantenerla, tenerla rápida y segura, y mejorarla cada mes con lo que veamos en los datos |
+| SEO | Los artículos del calendario (tres a la semana), Semrush y Search Console, y que te recomienden las IA |
+| SEM: Google Ads | Tus campañas, las páginas de aterrizaje y lo que cuesta cada consulta, optimizado semana a semana |
+| Instagram, LinkedIn y Facebook | Ideas, guiones de reels, publicaciones y campañas, también para colegios e instituciones |
+| Ficha de Google y reseñas | Responder reseñas y conseguir más, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
+| Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
+| Medición e informes | Un informe semanal sencillo: visitas, consultas, de dónde vienen y qué cambiamos |
 
-Y si prefieres seguir como hasta ahora, fenomenal también: la guía y la demo son tuyas. Sin ninguna presión.
+**Lo único que va aparte**: los **vídeos profesionales** con equipo de grabación, si los quieres. Los vídeos sencillos para redes y los guiones entran en la cuota.
+
+Para ajustarte la cuota a lo que de verdad necesitas, me ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Lo hablamos con un café cuando quieras.
+
+Y si prefieres seguir como hasta ahora, fenomenal también: la web y la guía son tuyas. Sin ninguna presión.
 
 Un abrazo,
 
