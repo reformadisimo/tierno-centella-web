@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { leerColeccion } from '@/lib/contenido';
+import { CASOS } from '@/lib/casos';
 
 const BASE = 'https://tiernocentella.es';
 
@@ -36,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contacto',
   ].map((r) => ({ url: BASE + r }));
   const guias = [
+    ...CASOS.map((c) => ({ url: `${BASE}/sentencias/${c.slug}` })),
     ...leerColeccion('acoso').map((p) => ({ url: `${BASE}/acoso-laboral/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('despido').map((p) => ({ url: `${BASE}/despido/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...leerColeccion('incapacidad').map((p) => ({ url: `${BASE}/incapacidad-permanente/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),

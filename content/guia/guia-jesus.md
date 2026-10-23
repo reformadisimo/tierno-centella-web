@@ -290,6 +290,7 @@ Las hemos leído enteras. Casi ninguna discute el resultado jurídico: se quejan
 - **Google ordena el mapa** teniendo en cuenta la nota, el número de reseñas y si respondes.
 - **Una reseña sin respuesta dice más que la reseña**: quien la lee piensa "aquí nadie contesta", que es justo la queja.
 - **Las IA leen tu ficha** cuando alguien les pide un abogado laboralista en Madrid.
+- **Y la pondremos en tu web**: en cuanto pasemos de 4,5, la nota sale en la portada y en las páginas de anuncios. Antes no, porque un 4,2 a la vista resta.
 
 ### Las cuentas, con los pies en el suelo
 
@@ -394,7 +395,7 @@ Hemos repasado una a una las webs de los despachos que salen cuando alguien busc
 **Lo que proponemos** (lo decides tú):
 
 1. **Explicar muy bien qué incluye la consulta**: una hora, revisamos tus documentos, te decimos con sinceridad si tienes caso y te damos la hoja de ruta por escrito. Y si se descuenta de los honorarios cuando te contratan, decirlo bien grande (pregunta del apartado 24).
-2. **Una primera llamada corta sin coste**, de 5 a 10 minutos, solo para saber si el caso es de los vuestros y qué plazo corre. Sin estudiar documentos: eso ya es la consulta. Así competimos con el "gratis" sin regalar tu trabajo. Solo lo pondríamos en la web si nos dices que sí.
+2. **Una primera llamada corta sin coste**, de 5 a 10 minutos, solo para saber si el caso es de los vuestros y qué plazo corre. Sin estudiar documentos: eso ya es la consulta. Así competimos con el "gratis" sin regalar tu trabajo. La web nueva ya lo dice con cuidado ("antes de reservar te decimos por teléfono o WhatsApp si tu caso la necesita"), sin la palabra "gratis". Confírmanos que es así como trabajáis y, si quieres, lo destacamos más.
 3. **Ser el despacho del acoso laboral en Madrid**. En incapacidad, Campmany y Bufete Toro llevan años con su modelo de cobrar al ganar y estás en el puesto 27; en acoso estás en el 9, a un paso de la primera página, y nadie tiene tu historia. Ahí es donde más rápido podemos ganar. La incapacidad la trabajamos sobre todo cuando viene del acoso (bajas por ansiedad, depresión), salvo que quieras ofrecer también una parte a resultado.
 
 **Lo que nunca copiaremos**, porque el Estatuto General de la Abogacía y el Código Deontológico no lo permiten y porque no te hace falta:
@@ -415,12 +416,30 @@ Todo lo de tu web nueva está escrito con ese cuidado: informa, da plazos y herr
 - **Incapacidad permanente**: 3 guías con la Ley 2/2025 y la foto de la ventana que tanto nos gusta de tu web.
 - **Mujer y trabajo** (nueva): embarazo, conciliación, permisos, acoso sexual y brecha salarial.
 - **Herramientas**: 14, sin pedir datos.
-- **Sentencias**: fichas con tribunal, fecha, qué se consiguió y fuente. Lo que no está confirmado aparece como pendiente.
+- **Sentencias**: cada caso tiene su propia página, con tribunal, fecha, qué pasó, qué se decidió, por qué importa y la fuente. Una página por sentencia es lo que mejor demuestra experiencia ante Google y lo que más citan las IA. Lo que no está confirmado aparece como pendiente.
 - **Jesús Tierno**: tu ficha, con el libro y los vídeos con Piñuel.
 - **Redes y medios**, **Vídeos**, **Blog** (con buscador), **Preguntas frecuentes**, **Glosario** (más de 60 términos), **Empresas y colegios**, **Contacto** (formulario, WhatsApp, mapa y precios claros).
 - **Cookies, aviso legal y privacidad**, con un aviso de cookies que deja rechazar con un clic.
 
 > Todas las guías llevan la firma "Pendiente de revisión por Jesús Tierno Centella". Cuando las revises, pasará a "Revisado por".
+
+### Lo último que hemos añadido
+
+Lo hemos hecho después de estudiar a fondo cómo trabajan los despachos que más clientes captan, y lo que dicen las normas de la Abogacía:
+
+- **Un menú más claro y con fotos**: en el móvil, cada tema es una tarjeta con su foto y una línea que dice qué encontrarás; al final, tu foto y un bloque para llamar, escribir por WhatsApp o pedir cita con el precio a la vista. En el ordenador, cada desplegable lleva su foto y su resumen.
+- **Tu trayectoria nada más entrar**: debajo de la portada, una franja con la sentencia de 2005, tus más de 25 años, el libro con Bernabé Tierno y las entrevistas con Iñaki Piñuel.
+- **Botón de "Salir rápido"** en las páginas de acoso y de Mujer y trabajo, como en las webs de atención a víctimas. Quien lee puede estar en el trabajo, cerca de quien le acosa: un toque y aparece una página neutra.
+- **"Mándaselo a quien lo necesite"**: al final de cada guía, de cada artículo y de cada sentencia, un botón para enviarla por WhatsApp. Mucha gente busca para un familiar o un amigo.
+- **El WhatsApp llega con el tema ya escrito** ("escribo desde la web por un tema de acoso laboral") y el botón de herramientas del móvil cambia según la página: el test en acoso, el comprobador en incapacidad, el calendario en Mujer y trabajo.
+- **Una página de error que no pierde a nadie**: si alguien llega por un enlace roto, ve tus temas, el chat y el teléfono.
+- **Tu colegio y tu número de colegiado en el pie**, como exige el Código Deontológico. Solo nos falta que nos los digas (pregunta del apartado 24).
+- **Cookies de publicidad aparte**: quien acepta, nos deja saber si llegó desde un anuncio y si contactó, que es lo que necesita Google Ads para aprender. Con el modo de consentimiento de Google, que es obligatorio en Europa para medir los anuncios.
+
+**Lo que dejamos para más adelante, a propósito**:
+
+- **Tu nota de Google en la web**: hoy es un 4,2, y enseñarla resta. La ponemos en cuanto lleguemos a 4,5 respondiendo las reseñas y pidiéndolas a cada cliente (apartado 5).
+- **Opiniones de clientes en la web**: el Código Deontológico exige su permiso por escrito. Cuando lo tengamos, las ponemos con nombre y foto.
 
 ## 9. Mujer y trabajo: el guiño que se convierte en servicio
 

@@ -15,10 +15,17 @@ import { medir } from '@/lib/medir';
 const CLARITY = process.env.NEXT_PUBLIC_CLARITY_ID;
 const GTM = process.env.NEXT_PUBLIC_GTM_ID;
 
-function cargarGtm() {
+function cargarGtm(analitica: boolean, publicidad: boolean) {
   if (!GTM || document.getElementById('gtm')) return;
   const w = window as unknown as { dataLayer?: unknown[] };
   w.dataLayer = w.dataLayer || [];
+  // Modo de consentimiento v2 de Google (obligatorio en la UE para medir conversiones de Google Ads):
+  // todo denegado por defecto y concedido solo porque la persona ha aceptado la medición.
+  // eslint-disable-next-line prefer-rest-params
+  const gtag = function (..._a: unknown[]) { w.dataLayer!.push(arguments); };
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
+  const si = (v: boolean) => (v ? 'granted' : 'denied');
+  gtag('consent', 'update', { ad_storage: si(publicidad), ad_user_data: si(publicidad), ad_personalization: 'denied', analytics_storage: si(analitica) });
   w.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
   const s = document.createElement('script');
   s.id = 'gtm';
@@ -55,10 +62,9 @@ function cargarClarity() {
 export default function Medicion() {
   useEffect(() => {
     const revisar = () => {
-      if (leerEleccion()?.analitica) {
-        cargarClarity();
-        cargarGtm();
-      }
+      const e = leerEleccion();
+      if (e?.analitica) cargarClarity();
+      if (e?.analitica || e?.publicidad) cargarGtm(!!e.analitica, !!e.publicidad);
     };
     revisar();
     window.addEventListener('cookies-guardadas', revisar);

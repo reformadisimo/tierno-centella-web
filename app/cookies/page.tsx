@@ -28,6 +28,11 @@ export default function Pagina() {
               Medición con cookies, solo si las aceptas: Microsoft Clarity, que crea mapas de calor y grabaciones anónimas de cómo se usa la web (dónde se
               pulsa, hasta dónde se lee) para mejorarla. No graba lo que escribes en los formularios.
             </li>
+            <li>
+              Medición y publicidad con cookies, solo si las aceptas: Google Analytics y la medición de conversiones de Google Ads, a través de Google Tag
+              Manager. Sirven para saber cuántas visitas llegan desde los anuncios y si terminan en una llamada o un formulario. No se usan para mostrarte
+              anuncios personalizados. Usamos el modo de consentimiento de Google: si no aceptas, no se guarda nada.
+            </li>
             <li>Instagram: carga sus cookies solo si pulsas para ver uno de los vídeos.</li>
             <li>Servicios externos: YouTube y Google Maps instalan las suyas cuando pulsas para ver un vídeo o el mapa.</li>
           </ul>

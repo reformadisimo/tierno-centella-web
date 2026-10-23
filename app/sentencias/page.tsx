@@ -51,7 +51,9 @@ export default function Sentencias() {
                   </div>
                 </div>
                 <div className="ficha-cuerpo">
-                  <h3>{c.titulo}</h3>
+                  <h3>
+                    <Link href={`/sentencias/${c.slug}`}>{c.titulo}</Link>
+                  </h3>
                   <span className="ficha-organo">{lineaOrgano(c.organo, c.fecha)}</span>
                   <p>{c.resumen}</p>
                   <div>
@@ -70,6 +72,7 @@ export default function Sentencias() {
                     <span>{c.porQueImporta}</span>
                   </div>
                   <div className="ficha-pie">
+                    <Link href={`/sentencias/${c.slug}`}>Leer la ficha completa</Link>
                     {c.fuente && <a href={c.fuente.url}>Fuente: {c.fuente.nombre}</a>}
                     {DEMO && c.pendiente && <span className="ficha-pendiente">Pendiente de confirmar con el despacho</span>}
                   </div>

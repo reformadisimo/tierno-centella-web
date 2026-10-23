@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-type Eleccion = { analitica: boolean; externos: boolean; fecha: string };
+type Eleccion = { analitica: boolean; externos: boolean; publicidad?: boolean; fecha: string };
 const CLAVE = 'tc-cookies';
 
 export function leerEleccion(): Eleccion | null {
@@ -20,6 +20,7 @@ export default function AvisoCookies() {
   const [detalle, setDetalle] = useState(false);
   const [analitica, setAnalitica] = useState(false);
   const [externos, setExternos] = useState(true);
+  const [publicidad, setPublicidad] = useState(false);
 
   useEffect(() => {
     if (!leerEleccion()) setVisible(true);
@@ -62,17 +63,21 @@ export default function AvisoCookies() {
               <input type="checkbox" checked={externos} onChange={(e) => setExternos(e.target.checked)} />
               <span>Servicios externos. Vídeos de YouTube y mapa de Google, al pulsarlos.</span>
             </label>
+            <label className="casilla">
+              <input type="checkbox" checked={publicidad} onChange={(e) => setPublicidad(e.target.checked)} />
+              <span>Publicidad. Saber si llegaste desde un anuncio de Google y si nos contactaste, para no gastar en anuncios que no ayudan a nadie. No te mostramos anuncios personalizados.</span>
+            </label>
           </div>
         )}
         <div className="cookies-botones">
-          <button type="button" className="boton" onClick={() => guardar({ analitica: true, externos: true })}>
+          <button type="button" className="boton" onClick={() => guardar({ analitica: true, externos: true, publicidad: true })}>
             Aceptar todas
           </button>
-          <button type="button" className="boton boton-claro" onClick={() => guardar({ analitica: false, externos: false })}>
+          <button type="button" className="boton boton-claro" onClick={() => guardar({ analitica: false, externos: false, publicidad: false })}>
             Rechazar
           </button>
           {detalle ? (
-            <button type="button" className="boton boton-claro" onClick={() => guardar({ analitica, externos })}>
+            <button type="button" className="boton boton-claro" onClick={() => guardar({ analitica, externos, publicidad })}>
               Guardar mi elección
             </button>
           ) : (
