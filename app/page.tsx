@@ -140,7 +140,7 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor dos-columnas" style={{ alignItems: 'center' }}>
           <div className="foto-destacada">
-            <img src="/img/reunion-cliente.webp" srcSet="/img/reunion-cliente-640.webp 640w, /img/reunion-cliente.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno entrega documentación a una clienta en el despacho" loading="lazy" />
+            <img width={1600} height={1019} src="/img/reunion-cliente.webp" srcSet="/img/reunion-cliente-640.webp 640w, /img/reunion-cliente.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno entrega documentación a una clienta en el despacho" loading="lazy" />
             <div className="sello">
               <strong>2005</strong>
               Primera condena en España a la empresa y al acosador a la vez
@@ -279,7 +279,7 @@ export default function Inicio() {
                 const f = fotoDePieza(p);
                 return (
                   <Link key={p.slug} href={`/blog/${p.slug}`}>
-                    <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} loading="lazy" />
+                    <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} width={640} height={480} loading="lazy" />
                     <div>
                       <strong>{p.titulo}</strong>
                       <span>{p.descripcion}</span>

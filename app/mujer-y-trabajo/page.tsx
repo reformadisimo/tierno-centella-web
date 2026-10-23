@@ -52,7 +52,7 @@ export default function MujerYTrabajo() {
               const f = fotoDePieza(g);
               return (
                 <Link key={g.slug} href={`/mujer-y-trabajo/${g.slug}`}>
-                  <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} loading="lazy" />
+                  <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} width={640} height={480} loading="lazy" />
                   <div>
                     <strong>{g.titulo}</strong>
                     <span>{g.descripcion}</span>

@@ -21,7 +21,7 @@ export default function ReelInstagram({ reel }: { reel: Reel }) {
     );
   }
   return (
-    <button type="button" className="reel" onClick={() => setAbierto(true)} aria-label={`Ver en Instagram: ${reel.texto}`}>
+    <button type="button" className="reel" onClick={() => setAbierto(true)}>
       <span className="reel-tema">{reel.tema}</span>
       <span className="reel-texto">{reel.texto}</span>
       <span className="reel-pie">

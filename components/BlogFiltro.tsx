@@ -31,9 +31,9 @@ export default function BlogFiltro({ piezas }: { piezas: Ficha[] }) {
       </div>
       {vistas.length === 0 && <p>No hay artículos con esa búsqueda. Prueba con otra palabra o pregunta al asistente.</p>}
       <div className="tarjetas-foto">
-        {vistas.map((p) => (
+        {vistas.map((p, i) => (
           <Link key={p.slug} href={`/blog/${p.slug}`}>
-            <img src={p.foto.src} srcSet={p.foto.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={p.foto.alt} loading="lazy" />
+            <img src={p.foto.src} srcSet={p.foto.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={p.foto.alt} width={640} height={480} loading={i < 3 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} />
             <div>
               <small className="tarjeta-meta">
                 {NOMBRES[p.categoria] ?? 'Laboral'} · {p.minutos} min
