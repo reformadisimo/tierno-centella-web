@@ -99,7 +99,7 @@ export default function PaginaGuia({
           <article>
             {video ? (
               <div style={{ marginBottom: 32 }}>
-                <VideoYoutube id={video.id} titulo={video.titulo} />
+                <VideoYoutube id={video.id} titulo={video.titulo} prioridad />
               </div>
             ) : (
               <figure className="guia-foto">

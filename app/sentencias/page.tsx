@@ -51,9 +51,9 @@ export default function Sentencias() {
                   </div>
                 </div>
                 <div className="ficha-cuerpo">
-                  <h3>
+                  <h2 className="ficha-titulo">
                     <Link href={`/sentencias/${c.slug}`}>{c.titulo}</Link>
-                  </h3>
+                  </h2>
                   <span className="ficha-organo">{lineaOrgano(c.organo, c.fecha)}</span>
                   <p>{c.resumen}</p>
                   <div>

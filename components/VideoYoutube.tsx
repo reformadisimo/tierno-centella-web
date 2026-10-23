@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 // Carga el reproductor solo al pulsar: la página no paga el peso de YouTube hasta que alguien quiere verlo.
-export default function VideoYoutube({ id, titulo }: { id: string; titulo: string }) {
+export default function VideoYoutube({ id, titulo, prioridad = false }: { id: string; titulo: string; prioridad?: boolean }) {
   const [activo, setActivo] = useState(false);
   return (
     <div className="video">
@@ -19,7 +19,8 @@ export default function VideoYoutube({ id, titulo }: { id: string; titulo: strin
           <img
             src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
             alt=""
-            loading="lazy"
+            loading={prioridad ? 'eager' : 'lazy'}
+            fetchPriority={prioridad ? 'high' : 'auto'}
             onError={(e) => {
               // Si YouTube no sirve la miniatura (bloqueos, red lenta), ponemos una foto del despacho.
               const img = e.currentTarget;

@@ -13,6 +13,15 @@ export function generateStaticParams() {
   return CASOS.map((c) => ({ slug: c.slug }));
 }
 
+// Títulos para Google (caben en 60 caracteres con la marca o sin ella).
+const TITULO_SEO: Record<string, string> = {
+  'primera-condena-al-acosador-2005': 'Primera condena al acosador en España (2005)',
+  'acoso-administracion-educativa-castilla-y-leon-2011': 'Acoso en la educación: condena a la Junta (2011)',
+  'urjc-123000-euros-docente-2024': 'URJC condenada a pagar 123.000 € por acoso (2024)',
+  'despido-represalia-permiso-hija-2025': 'Despedida por pedir un permiso por su hija',
+  'degradada-tras-pedir-permisos-2025': 'Degradada por pedir permisos para cuidar',
+};
+
 const FOTOS_JESUS = ['jesus-firmando', 'jesus-retrato', 'jesus-camisa', 'jesus-puerta', 'reunion-cliente'];
 
 const GUIA: Record<string, { href: string; texto: string }> = {
@@ -30,6 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const i = CASOS.indexOf(c);
   return meta({
     titulo: c.titulo,
+    tituloSeo: TITULO_SEO[c.slug],
     descripcion: c.resumen,
     ruta: `/sentencias/${c.slug}`,
     tipo: 'article',

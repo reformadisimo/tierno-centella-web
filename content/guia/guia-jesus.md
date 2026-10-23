@@ -423,9 +423,9 @@ Todo lo de tu web nueva está escrito con ese cuidado: informa, da plazos y herr
 
 > Todas las guías llevan la firma "Pendiente de revisión por Jesús Tierno Centella". Cuando las revises, pasará a "Revisado por".
 
-### Lo último que hemos añadido
+### Los detalles que marcan la diferencia
 
-Lo hemos hecho después de estudiar a fondo cómo trabajan los despachos que más clientes captan, y lo que dicen las normas de la Abogacía:
+Salen del estudio de cómo trabajan los despachos que más clientes captan y de lo que piden las normas de la Abogacía:
 
 - **Un menú más claro y con fotos**: en el móvil, cada tema es una tarjeta con su foto y una línea que dice qué encontrarás; al final, tu foto y un bloque para llamar, escribir por WhatsApp o pedir cita con el precio a la vista. En el ordenador, cada desplegable lleva su foto y su resumen.
 - **Tu trayectoria nada más entrar**: debajo de la portada, una franja con la sentencia de 2005, tus más de 25 años, el libro con Bernabé Tierno y las entrevistas con Iñaki Piñuel.
@@ -596,7 +596,7 @@ Hemos revisado los 220 artículos de tu blog uno a uno:
 - **Guías** (las secciones de Acoso, Despido, Incapacidad y Mujer y trabajo): contenido de fondo que no caduca. Son las páginas que deben salir en Google.
 - **Blog**: actualidad (sentencias, cambios de ley) y respuestas a dudas concretas. Cada artículo enlaza a su guía y a su herramienta, para que la persona avance.
 
-**Ya hay 24 artículos en el blog**, 12 de ellos escritos en octubre de 2026 (despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso, canal de denuncias, qué despidos dan derecho a paro, me han denunciado por acoso y es mentira, y el expediente de incapacidad permanente). **Necesitamos que los revises**.
+**Ya hay 26 artículos en el blog**, 18 de ellos escritos en octubre de 2026. Entre ellos: despido disciplinario, papeleta de conciliación, periodo de prueba, cuánto se cobra de baja, cómo denunciar el acoso, denunciar el acoso sin pruebas, cómo es un juicio por acoso, artículo 50, cómo pedir la incapacidad, tipos de acoso, canal de denuncias, qué despidos dan derecho a paro y me han denunciado por acoso y es mentira. Los dos de acoso sin pruebas y del juicio responden a búsquedas con muy poca competencia en Google (dificultad 14 y 6 sobre 100, según Semrush). **Necesitamos que los revises**.
 
 > Una advertencia honesta: no tenemos acceso a Analytics ni a Search Console, así que no sabemos qué artículos antiguos te traen visitas hoy. Con esos datos afinaríamos las redirecciones y el orden del calendario.
 

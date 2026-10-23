@@ -246,7 +246,6 @@ function Contenido({ html }: { html: string }) {
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 const VERSION = 5;
 const NOVEDADES: { texto: string; clave: string }[] = [
-  { texto: 'Lo último que hemos añadido a tu web: menú con fotos, salida rápida, una página por sentencia y más', clave: '8' },
   { texto: 'Lo que prometen tus competidores, lo que nunca copiaremos y cómo competir con su "gratis"', clave: '7 bis' },
   { texto: 'Cómo te ven ChatGPT, Gemini y Google frente a tu competencia, y cómo vamos a mejorarlo', clave: '4 bis' },
   { texto: 'El resumen de tus 59 reseñas, cómo responderlas y cómo llegar a 4,8', clave: '5' },
