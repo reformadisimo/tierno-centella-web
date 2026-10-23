@@ -2248,3 +2248,134 @@ textarea {
 .boton-telefono {
   white-space: nowrap;
 }
+
+/* Guía para Jesús */
+.gj-portada {
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(217, 105, 77, 0.35) 0%, rgba(217, 105, 77, 0) 55%),
+    linear-gradient(160deg, #0f4c78 0%, var(--marca) 55%, #062a45 100%);
+  color: var(--blanco);
+  padding: clamp(40px, 7vw, 80px) 0;
+}
+.gj-portada img {
+  height: 56px;
+  width: auto;
+  margin-bottom: 28px;
+}
+.gj-portada h1 {
+  color: var(--blanco);
+  max-width: 18ch;
+}
+.gj-portada p {
+  color: #dbe6f0;
+  margin-top: 12px;
+}
+.guia-jesus {
+  display: grid;
+  gap: 32px;
+  padding: 32px 0 80px;
+}
+@media (min-width: 1000px) {
+  .guia-jesus {
+    grid-template-columns: 280px minmax(0, 1fr);
+    align-items: start;
+  }
+  .gj-lateral {
+    position: sticky;
+    top: 84px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+}
+.gj-buscar {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.gj-buscar input {
+  font: inherit;
+  font-weight: 400;
+  min-height: 46px;
+  padding: 8px 14px;
+  border: 2px solid var(--linea);
+  border-radius: 999px;
+  background: var(--blanco);
+}
+.gj-indice-titulo {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 0.92rem;
+}
+.gj-indice {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  display: grid;
+  gap: 4px;
+}
+.gj-indice a {
+  text-decoration: none;
+  color: var(--tinta);
+}
+.gj-indice a:hover {
+  color: var(--coral-texto);
+  text-decoration: underline;
+}
+.gj-seccion {
+  padding: 28px 0;
+  border-top: 3px solid var(--coral);
+  scroll-margin-top: 90px;
+}
+.gj-seccion:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.gj-seccion h2 {
+  margin-bottom: 14px;
+}
+.gj-seccion .prosa {
+  max-width: none;
+}
+.gj-seccion .prosa table {
+  display: block;
+  overflow-x: auto;
+}
+.gj-arriba {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--tinta-suave);
+}
+.cg-bloque {
+  margin: 26px 0 6px;
+  font-size: 1.15rem;
+}
+.cg-pregunta {
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 10px 0;
+}
+.cg-cabeza {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.cg-n {
+  flex: none;
+  font-weight: 800;
+  color: var(--coral-texto);
+}
+.cg-pregunta textarea {
+  width: 100%;
+  margin-top: 10px;
+  font: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  padding: 10px 12px;
+  resize: vertical;
+}

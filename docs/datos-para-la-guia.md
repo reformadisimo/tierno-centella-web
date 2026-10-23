@@ -26,3 +26,14 @@ Lectura: el SEO técnico es correcto; el problema es el contenido, el móvil y l
 ## Pendiente de medir
 - La demo nueva en PageSpeed móvil, para comparar en la guía.
 - Despido y test de despido de la web actual.
+
+## PageSpeed Insights, 23/10/2026 hacia las 10:20 (misma herramienta, mismo día)
+
+| | Rendimiento | Accesibilidad | Buenas prácticas | SEO | Primer contenido | Contenido principal (LCP) |
+|---|---|---|---|---|---|---|
+| Web antigua, móvil | 49 | 84 | 73 | 100 | 15,3 s | 18,3 s |
+| Web nueva, móvil | **94** | **100** | **100** | 69* | 0,9 s | 3,2 s |
+| Web antigua, ordenador | 56 | 82 | 73 | 100 | 5,7 s | 6,2 s |
+| Web nueva, ordenador | **99** | **100** | 96 | 69* | 0,3 s | 0,9 s |
+
+\* El SEO de la nueva marca 69 a propósito: es una demo y le hemos dicho a Google que no la indexe (noindex). Es lo único que penaliza; al publicarla en tiernocentella.es se quita y sube a 100.
