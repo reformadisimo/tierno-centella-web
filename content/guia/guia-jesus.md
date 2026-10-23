@@ -840,6 +840,22 @@ Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush
 - **Tus anuncios casi no se ven.** En los últimos 12 meses, Semrush solo ha detectado anuncios tuyos en **7 búsquedas**, y cada una en uno o dos meses sueltos ("abogado acoso laboral madrid" solo en abril y mayo de 2026; "abogado laboralista gratuito" solo en octubre de 2025). En ordenador, hoy no detecta ninguno. Es la huella típica de una campaña pequeña o que se enciende y se apaga: el dinero que pones apenas llega a quien te busca.
 - En la búsqueda que hicimos ("abogado acoso laboral madrid") salían patrocinados G2 Abogados y R. Sánchez Abogados, y tu anuncio no. Una sola búsqueda no es concluyente: depende de la hora, el presupuesto y quién busca.
 
+### Tú frente a la competencia en Google Ads
+
+Lo hemos mirado en Semrush el 23 de octubre de 2026: en cuántas búsquedas distintas ha detectado anuncios de cada despacho en los últimos 12 meses. No es el dinero que gasta cada uno (eso solo lo sabe Google), pero sí dice **quién está presente y quién no**.
+
+| Despacho | Búsquedas con anuncio (12 meses) | Dónde se anuncia |
+| --- | --- | --- |
+| Bufete Toro | **100** | Su marca, incapacidad y minusvalía, jubilación |
+| R. Sánchez Abogados | **58** | Laboral general, acoso, incapacidad... y "consulta gratuita abogado laboralista" |
+| Campmany | **46** | Su marca casi todos los meses, y mucha incapacidad permanente |
+| **Tierno Centella** | **7** | Meses sueltos: "abogado acoso laboral madrid" (abril y mayo), "abogado laboralista gratuito" (octubre de 2025) |
+| García de la Santa y Abogados Durán | 0 | No se anuncian: viven del posicionamiento gratuito |
+
+**Lo que dice esto**: los que más clientes captan hacen las dos cosas, o al menos una muy bien. García de la Santa y Durán no pagan anuncios porque Google ya les enseña gratis. Bufete Toro, Campmany y R. Sánchez pagan, y **con constancia**: su nombre sale cuando alguien les busca (para que no se lo lleve otro) y en las búsquedas de incapacidad, que es donde más se cobra. Tú hoy no tienes ni una cosa ni la otra: poco posicionamiento y anuncios que casi no se ven. La buena noticia: **el hueco del acoso laboral en anuncios está libre**. Nadie lo trabaja con constancia, y es tu especialidad.
+
+**Lo que haríamos**: una campaña pequeña pero continua, centrada en acoso laboral e incapacidad en Madrid, con tus páginas de aterrizaje nuevas, sin "gratis" y midiendo cada consulta. Mejor poco y todos los días que mucho y a ratos.
+
 **Lo que se puede mejorar** (con lo que se ve desde fuera):
 
 1. **Anuncios que llevan a artículos del blog**. Quien busca "cómo identificar el mobbing" suele estar informándose, no contratando. Pagas clics de lectores. Mejor: anuncios solo para búsquedas de quien quiere un abogado, y el blog para el posicionamiento gratuito.
