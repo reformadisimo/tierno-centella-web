@@ -4,6 +4,7 @@ import { videoPorId } from '@/lib/videos';
 import VideoYoutube from './VideoYoutube';
 import { DESPACHO, DEMO, enlaceWhatsapp } from '@/lib/despacho';
 import JsonLd from './JsonLd';
+import { Compartir } from './BotonesAccion';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
 
 // Fotos reales del despacho. Cada pieza sin foto propia recibe una fija según su nombre, para que no se repitan todas.
@@ -106,6 +107,7 @@ export default function PaginaGuia({
               </figure>
             )}
             <div className="prosa" dangerouslySetInnerHTML={{ __html: pieza.html }} />
+            <Compartir titulo={pieza.titulo} />
           </article>
           <aside className="guia-lateral">
             <div className="lateral-caja lateral-humana">

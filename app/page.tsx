@@ -40,6 +40,27 @@ export default function Inicio() {
         </div>
       </section>
 
+      <section className="avales" aria-label="Nuestra trayectoria">
+        <div className="contenedor avales-fila">
+          <div>
+            <strong>2005</strong>
+            <span>Primera condena en España a la empresa y al acosador a la vez</span>
+          </div>
+          <div>
+            <strong>+25 años</strong>
+            <span>Dedicados al derecho laboral, sobre todo al acoso</span>
+          </div>
+          <div>
+            <strong>Un libro</strong>
+            <span>Coautor de &quot;Valores en el trabajo&quot; con Bernabé Tierno</span>
+          </div>
+          <div>
+            <strong>Iñaki Piñuel</strong>
+            <span>Dos entrevistas con uno de los mayores expertos en mobbing</span>
+          </div>
+        </div>
+      </section>
+
       <section className="seccion">
         <div className="contenedor">
           <h2>¿Qué te está pasando?</h2>

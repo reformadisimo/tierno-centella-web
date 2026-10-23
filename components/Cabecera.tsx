@@ -39,12 +39,19 @@ export default function Cabecera() {
               <Link href={g.href} aria-current={ruta.startsWith(g.href) && g.href !== '/' ? 'page' : undefined}>
                 {g.titulo}
               </Link>
-              <div className="menu-desplegable">
+              <div className={`menu-desplegable${g.enlaces.length > 8 ? ' menu-ancho' : ''}`}>
+                <Link href={g.href} className="md-cabeza">
+                  <img src={`/img/${g.foto}-640.webp`} alt="" width={220} height={140} loading="lazy" />
+                  <strong>{g.titulo}</strong>
+                  <small>{g.sub}</small>
+                </Link>
+                <div className="md-enlaces">
                 {g.enlaces.map((e) => (
                   <Link key={e.href + e.texto} href={e.href}>
                     {e.texto}
                   </Link>
                 ))}
+                </div>
               </div>
             </div>
           ))}

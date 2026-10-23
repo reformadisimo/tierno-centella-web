@@ -16,7 +16,16 @@ export default function VideoYoutube({ id, titulo }: { id: string; titulo: strin
         />
       ) : (
         <button type="button" className="video-portada" onClick={() => setActivo(true)} aria-label={`Ver el vídeo: ${titulo}`}>
-          <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" />
+          <img
+            src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+            alt=""
+            loading="lazy"
+            onError={(e) => {
+              // Si YouTube no sirve la miniatura (bloqueos, red lenta), ponemos una foto del despacho.
+              const img = e.currentTarget;
+              if (!img.src.includes('/img/')) img.src = '/img/jesus-mesa-640.webp';
+            }}
+          />
           <span className="video-play" aria-hidden="true" />
         </button>
       )}
