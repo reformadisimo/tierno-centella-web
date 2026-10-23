@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
+import { FOTOS_PAGINA } from '@/lib/fotos-paginas';
 
 export const metadata: Metadata = meta({
   titulo: 'Herramientas gratuitas',
@@ -29,20 +31,39 @@ export default function Herramientas() {
   return (
     <>
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <h1>Herramientas gratuitas</h1>
-          <p className="entradilla">Respuestas al momento, sin dejar tu teléfono. Cuando quieras, un abogado revisa el resultado contigo.</p>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <h1>Herramientas gratuitas</h1>
+            <p className="entradilla">Respuestas al momento, sin dejar tu teléfono. Cuando quieras, un abogado revisa el resultado contigo.</p>
+          </div>
+          <FotoCabeza ruta="/herramientas" />
         </div>
       </header>
       <section className="seccion">
         <div className="contenedor">
-          <div className="rejilla-guias">
-            {HERRAMIENTAS.map((h) => (
-              <Link key={h.href} href={h.href}>
-                <strong>{h.titulo}</strong>
-                <span>{h.texto}</span>
-              </Link>
-            ))}
+          <div className="tarjetas-foto">
+            {HERRAMIENTAS.map((h) => {
+              const f = FOTOS_PAGINA[h.href];
+              return (
+                <Link key={h.href} href={h.href}>
+                  {f && (
+                    <img
+                      src={`/img/${f.foto}-640.webp`}
+                      srcSet={`/img/${f.foto}-640.webp 640w, /img/${f.foto}.webp 1200w`}
+                      sizes="(max-width: 760px) 100vw, 380px"
+                      alt={f.alt}
+                      width={640}
+                      height={480}
+                      loading="lazy"
+                    />
+                  )}
+                  <div>
+                    <strong>{h.titulo}</strong>
+                    <span>{h.texto}</span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

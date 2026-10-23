@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import VideoYoutube from '@/components/VideoYoutube';
@@ -14,12 +15,15 @@ export default function Videos() {
   return (
     <>
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <nav className="migas" aria-label="Estás en">
-            <Link href="/">Inicio</Link> / Vídeos
-          </nav>
-          <h1>Vídeos</h1>
-          <p className="entradilla">Jesús Tierno explica en vídeo lo que más preguntan quienes sufren acoso o un despido.</p>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <nav className="migas" aria-label="Estás en">
+              <Link href="/">Inicio</Link> / Vídeos
+            </nav>
+            <h1>Vídeos</h1>
+            <p className="entradilla">Jesús Tierno explica en vídeo lo que más preguntan quienes sufren acoso o un despido.</p>
+          </div>
+          <FotoCabeza ruta="/videos" />
         </div>
       </header>
       <section className="seccion">

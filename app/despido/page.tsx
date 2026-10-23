@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import Llamada from '@/components/Llamada';
@@ -16,17 +17,20 @@ export default function Despido() {
   return (
     <>
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <h1>Te han despedido. Esto es lo que tienes que saber.</h1>
-          <p className="entradilla">
-            La empresa puede despedirte, pero tiene que justificarlo y cumplir unos requisitos. Si no lo hace, el despido es
-            improcedente o nulo, y puedes reclamar.
-          </p>
-          <div className="acciones">
-            <Link className="boton boton-marcador" href="/calculadora-indemnizacion">
-              Calcular mi indemnización
-            </Link>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <h1>Te han despedido. Esto es lo que tienes que saber.</h1>
+            <p className="entradilla">
+              La empresa puede despedirte, pero tiene que justificarlo y cumplir unos requisitos. Si no lo hace, el despido es
+              improcedente o nulo, y puedes reclamar.
+            </p>
+            <div className="acciones">
+              <Link className="boton boton-marcador" href="/calculadora-indemnizacion">
+                Calcular mi indemnización
+              </Link>
+            </div>
           </div>
+          <FotoCabeza ruta="/despido" />
         </div>
       </header>
 

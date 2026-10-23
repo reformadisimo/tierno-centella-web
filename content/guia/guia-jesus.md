@@ -203,22 +203,73 @@ Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la se
 
 ## 5. Tu ficha de Google: 4,2 con 59 reseñas
 
-Hemos leído las 59. Reparto: 44 de cinco estrellas, 3 de cuatro, 1 de tres y **11 de una**. **Ninguna tiene respuesta del despacho.**
+Hemos leído las 59 reseñas una a una. Parecen un detalle, pero son lo primero que ve quien te busca: las estrellas salen antes que tu web, antes que tu experiencia y antes que tus sentencias. Y las IA también las leen.
 
-**Lo que dicen los contentos**: cercanía, trato humano, "no eran laboralistas sin más, eran especialistas", y nombran a Jesús y a Irene. Hay casos ganados de prevención de riesgos por acoso, confirmados por el Tribunal Superior.
+### El resumen, en cifras
 
-**Lo que dicen los descontentos**, y casi nunca es el resultado del caso:
+| | Cuántas |
+| --- | --- |
+| Cinco estrellas | 44 |
+| Cuatro estrellas | 3 |
+| Tres estrellas | 1 |
+| Una estrella | **11** |
+| Respondidas por el despacho | **ninguna** |
 
-1. "Me dijeron que la consulta era gratis y me cobraron." Lo provoca la propia web.
-2. Correos sin contestar y citas que no se vuelven a dar, sobre todo en verano.
-3. Sensación de abandono después de la consulta pagada.
+En el último año y medio hay unas 35 reseñas de cinco estrellas y 8 de una. La ficha está viva: lo bueno pesa mucho más que lo malo. El problema es que lo malo **está sin contestar**.
 
-**El plan, con los pies en el suelo.** Para pasar de 4,2 a 4,5 hacen falta unas 39 reseñas nuevas de cinco estrellas; para 4,8, unas 186. El 4,5 es realista en un año; el 4,8, en dos o tres. Cómo:
+### Lo que dicen los clientes contentos (44 de cinco estrellas)
 
-- Responder todas las reseñas, también las malas, con calma y sin dar datos del caso.
-- Pedir la reseña en el mejor momento (al cerrar un caso o tras una buena consulta), con un enlace directo por WhatsApp. Nunca reseñas falsas: Google las borra y castiga la ficha.
-- Arreglar lo que provoca las malas: precio claro (ya hecho en la web nueva), compromiso de respuesta en 48 horas laborables, aviso de vacaciones en agosto y un correo después de la consulta con el resumen y los siguientes pasos.
-- Completar la ficha: categoría "Abogado laboralista", servicios, fotos del equipo y una publicación a la semana con los vídeos de Instagram.
+- **Trato humano y cercano**: "profesionalidad, cercanía", "me transmitieron mucha tranquilidad y confianza", "me sentí protegido y arropado".
+- **Especialistas de verdad en acoso**: varios llegaron después de pasar por otros despachos (uno, tras tres despachos en Gran Canaria) y notaron la diferencia desde la primera conversación.
+- **Resultados**: procedimientos ganados de prevención de riesgos por acoso, un despido improcedente con su finiquito, un cese de interinidad bien asesorado.
+- **Nombres propios**: te nombran a ti varias veces ("un trato espectacular y cercano"), a Irene ("no conozco mejor abogada laboral") y a Miriam.
+- **Rapidez**, cuando la hubo: "cuando se necesitan los servicios de un abogado, suele ser urgente".
+
+### Lo que dicen los descontentos (11 de una estrella)
+
+Casi ninguna habla del resultado del caso. Se repiten tres cosas, y las tres tienen arreglo:
+
+1. **El precio y la "consulta gratuita"** (4 reseñas): "no es cierto que la primera consulta es gratuita", "solo les interesa sacarte los 180 euros". Lo provocaba la propia web antigua, que prometía una consulta gratis. **Ya está corregido en la web nueva**: el precio se dice claro antes de reservar.
+2. **Esperas y falta de respuesta** (3 reseñas): "estuvimos mes y medio llamando", "me quedé esperando la nueva cita", una consulta en agosto que se aplazó a septiembre y no se retomó.
+3. **Sensación de abandono después de la consulta** (1 reseña): "una vez te llaman se desentienden".
+
+Hay además tres reseñas muy duras sin detalles del caso y dos sin texto. Una menciona a tu padre: se contesta con calma, sin entrar.
+
+**Un aviso importante**: una de las reseñas de cinco estrellas parece escrita por alguien del equipo (el nombre coincide con el de una abogada del despacho). Google no permite reseñas de empleados y puede penalizar la ficha. Te recomendamos retirarla.
+
+### Por qué importa tanto llegar a 4,8
+
+- **Mucha gente filtra o descarta por estrellas** antes de leer nada. Entre un 4,2 y un 4,8 de la competencia, gana el 4,8 casi siempre.
+- **Google ordena el mapa** teniendo en cuenta la nota, el número de reseñas y si respondes.
+- **Una reseña sin respuesta dice más que la reseña**: quien la lee piensa "aquí nadie contesta", que es justo la queja.
+- **Las IA leen tu ficha** cuando alguien les pide un abogado laboralista en Madrid.
+
+### Las cuentas, con los pies en el suelo
+
+Hoy tu media exacta es 4,17. Sin ninguna reseña negativa nueva, harían falta:
+
+| Para que Google muestre | Reseñas nuevas de cinco estrellas |
+| --- | --- |
+| 4,5 | unas 31 |
+| 4,7 | unas 82 |
+| 4,8 | unas 137 |
+
+Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos de un año. El 4,8 es una meta a dos o tres años, y se consigue con constancia, no con trucos: nunca reseñas falsas ni a cambio de nada, porque Google las borra y castiga la ficha.
+
+### Cómo lo conseguimos
+
+- **Responder las 59**, empezando por las 11 negativas, con las plantillas de abajo. Lo podemos hacer nosotros, con tu visto bueno.
+- **Pedir la reseña en el mejor momento**: al ganar o cerrar un caso y después de una buena consulta. Con un enlace directo por WhatsApp y un código QR en la recepción.
+- **Arreglar lo que provoca las malas**: precio claro (hecho), respuesta en 48 horas laborables, aviso de vacaciones en agosto y el correo después de la consulta con el resumen y los siguientes pasos (apartado 17).
+- **Poner al día tu Perfil de Empresa de Google**, que también podemos hacer nosotros en una mañana:
+  - Categoría principal "Abogado laboralista" (hoy es "Bufete") y secundarias de acoso, despidos e incapacidad.
+  - Descripción con tus especialidades, tus años y el precio claro de la consulta.
+  - Servicios: acoso laboral, despidos, incapacidad permanente, Mujer y trabajo, empresas y colegios.
+  - Horario real, con el de verano y agosto.
+  - Fotos del equipo, de la recepción y de la fachada, y una nueva cada mes.
+  - Una publicación a la semana con tus vídeos de Instagram y los artículos nuevos.
+  - Preguntas y respuestas frecuentes (precio, videollamada, plazos).
+  - El enlace a la web y a reservar cita, medido para saber cuántas consultas llegan desde la ficha.
 
 ### Respuestas listas para copiar y pegar
 
@@ -235,6 +286,10 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 **A quien se queja de que no le contestaron**
 
 > Hola, [nombre]. Tienes razón en que no te respondimos a tiempo, y lo sentimos. Hemos cambiado la forma de trabajar para contestar siempre en un máximo de 48 horas laborables. Si todavía podemos ayudarte, llámanos al 913 24 97 97 y te atendemos personalmente.
+
+**A una reseña que habla de tu familia o de tu persona**
+
+> Hola, [nombre]. Lamentamos que te llevaras esa impresión. En el despacho trabajamos cada caso con el mismo cuidado y con un equipo especializado. Si quieres contarnos qué pasó, estaremos encantados de escucharte en el 913 24 97 97.
 
 **A una reseña muy dura sobre un caso**
 

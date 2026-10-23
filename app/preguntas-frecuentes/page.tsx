@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import FotoCabeza from '@/components/FotoCabeza';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import Llamada from '@/components/Llamada';
@@ -24,12 +25,15 @@ export default function Preguntas() {
       <JsonLd datos={esquemaFaq(FAQ)} />
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/preguntas-frecuentes', texto: 'Preguntas frecuentes' }])} />
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <nav className="migas" aria-label="Estás en">
-            <Link href="/">Inicio</Link> / Preguntas frecuentes
-          </nav>
-          <h1>Preguntas frecuentes</h1>
-          <p className="entradilla">Lo que más nos preguntan en la primera llamada.</p>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <nav className="migas" aria-label="Estás en">
+              <Link href="/">Inicio</Link> / Preguntas frecuentes
+            </nav>
+            <h1>Preguntas frecuentes</h1>
+            <p className="entradilla">Lo que más nos preguntan en la primera llamada.</p>
+          </div>
+          <FotoCabeza ruta="/preguntas-frecuentes" />
         </div>
       </header>
       <section className="seccion">

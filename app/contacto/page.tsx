@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import FotoCabeza from '@/components/FotoCabeza';
 import Link from 'next/link';
 import { meta, esquemaMigas } from '@/lib/seo';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
@@ -19,23 +20,26 @@ export default function Contacto() {
     <>
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/contacto', texto: 'Contacto' }])} />
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <nav className="migas" aria-label="Estás en">
-            <Link href="/">Inicio</Link> / Contacto
-          </nav>
-          <h1>Habla con un abogado</h1>
-          <p className="entradilla">
-            Cuéntanos qué te pasa por teléfono o WhatsApp y te decimos con claridad si tu caso necesita una consulta y cuánto cuesta antes de
-            reservarla. Sin sorpresas.
-          </p>
-          <div className="acciones">
-            <a className="boton" href={DESPACHO.telefonoHref}>
-              Llamar al {DESPACHO.telefono}
-            </a>
-            <a className="boton boton-claro" href={enlaceWhatsapp('Hola, quiero consultar un caso laboral.')}>
-              WhatsApp {DESPACHO.whatsapp}
-            </a>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <nav className="migas" aria-label="Estás en">
+              <Link href="/">Inicio</Link> / Contacto
+            </nav>
+            <h1>Habla con un abogado</h1>
+            <p className="entradilla">
+              Cuéntanos qué te pasa por teléfono o WhatsApp y te decimos con claridad si tu caso necesita una consulta y cuánto cuesta antes de
+              reservarla. Sin sorpresas.
+            </p>
+            <div className="acciones">
+              <a className="boton" href={DESPACHO.telefonoHref}>
+                Llamar al {DESPACHO.telefono}
+              </a>
+              <a className="boton boton-claro" href={enlaceWhatsapp('Hola, quiero consultar un caso laboral.')}>
+                WhatsApp {DESPACHO.whatsapp}
+              </a>
+            </div>
           </div>
+          <FotoCabeza ruta="/contacto" />
         </div>
       </header>
       <section className="seccion">

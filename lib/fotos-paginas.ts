@@ -1,0 +1,23 @@
+// Foto de cabecera de cada página que no tenía ninguna. Todas son fotos del despacho o de su propio archivo.
+export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
+  '/herramientas': { foto: 'portatil-manos', alt: 'Una persona consulta sus papeles junto al portátil' },
+  '/herramientas/test-acoso': { foto: 'mujer-agobiada', alt: 'Una trabajadora agobiada mientras alguien le entrega papeles' },
+  '/herramientas/test-nulidad': { foto: 'despido-caja', alt: 'Una persona recoge sus cosas en una caja tras un despido' },
+  '/herramientas/test-extincion': { foto: 'acuerdo', alt: 'Dos personas se dan la mano tras un acuerdo' },
+  '/herramientas/test-baja-laboral': { foto: 'mujer-cafe', alt: 'Una mujer cansada en su mesa de trabajo' },
+  '/herramientas/mapa-de-pruebas': { foto: 'documentos-mesa', alt: 'Documentos sobre una mesa del despacho' },
+  '/calculadora-indemnizacion': { foto: 'calculadora-papeles', alt: 'Cuentas con calculadora, cuaderno y portátil' },
+  '/herramientas/revisa-tu-carta-de-despido': { foto: 'documento-pluma', alt: 'Un documento y una pluma' },
+  '/herramientas/plazos': { foto: 'papeleria', alt: 'Documentación con el logotipo del despacho' },
+  '/herramientas/calculadora-finiquito': { foto: 'firma-contrato', alt: 'Una persona firma un documento' },
+  '/herramientas/calculadora-paro': { foto: 'jubilado-papeles', alt: 'Un hombre revisa sus papeles con la calculadora' },
+  '/herramientas/calculadora-reduccion-jornada': { foto: 'familia-siluetas', alt: 'Siluetas de una familia con sus hijos' },
+  '/herramientas/autodiagnostico-acoso-empresas': { foto: 'reunion-oficina', alt: 'Una reunión de empresa en una sala de oficinas' },
+  '/herramientas/calendario-permisos': { foto: 'madre-hijo', alt: 'Una madre juega con su hijo pequeño' },
+  '/herramientas/comprobador-incapacidad': { foto: 'medico-informe', alt: 'Un médico rellena un informe' },
+  '/despido': { foto: 'jefe-senala', alt: 'Un superior señala con el dedo a un trabajador' },
+  '/contacto': { foto: 'recepcion', alt: 'La recepción del despacho Tierno Centella' },
+  '/videos': { foto: 'abogada-sonrie', alt: 'Una abogada del despacho sonríe durante una reunión' },
+  '/preguntas-frecuentes': { foto: 'abogada-escucha', alt: 'Una abogada del despacho escucha a una clienta' },
+  '/glosario': { foto: 'libros-derecho', alt: 'Libros de derecho en una estantería' },
+};

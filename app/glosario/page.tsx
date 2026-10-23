@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import FotoCabeza from '@/components/FotoCabeza';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import { GLOSARIO } from '@/lib/glosario';
@@ -32,19 +33,22 @@ export default function Glosario() {
       <JsonLd datos={datos} />
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/glosario', texto: 'Glosario' }])} />
       <header className="cabeza-pagina">
-        <div className="contenedor">
-          <nav className="migas" aria-label="Estás en">
-            <Link href="/">Inicio</Link> / Glosario
-          </nav>
-          <h1>Glosario laboral</h1>
-          <p className="entradilla">Las palabras que vas a oír en tu caso, explicadas como te las explicaríamos en el despacho.</p>
-          <nav aria-label="Letras" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 16 }}>
-            {letras.map((l) => (
-              <a key={l} href={`#letra-${l}`}>
-                {l}
-              </a>
-            ))}
-          </nav>
+        <div className="contenedor cabeza-con-foto">
+          <div>
+            <nav className="migas" aria-label="Estás en">
+              <Link href="/">Inicio</Link> / Glosario
+            </nav>
+            <h1>Glosario laboral</h1>
+            <p className="entradilla">Las palabras que vas a oír en tu caso, explicadas como te las explicaríamos en el despacho.</p>
+            <nav aria-label="Letras" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 16 }}>
+              {letras.map((l) => (
+                <a key={l} href={`#letra-${l}`}>
+                  {l}
+                </a>
+              ))}
+            </nav>
+          </div>
+          <FotoCabeza ruta="/glosario" />
         </div>
       </header>
       <section className="seccion">
