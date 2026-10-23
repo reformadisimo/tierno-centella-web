@@ -35,7 +35,7 @@ export const LANDINGS: Landing[] = [
     tituloSeo: 'Abogados de incapacidad permanente en Madrid',
     descripcion:
       'Te han denegado la incapacidad permanente o te han dado un grado menor. Abogados laboralistas en Madrid: reclamación previa, tribunal médico y juicio. Plazo de 30 días hábiles.',
-    antetitulo: '¿Te la han denegado o te han dado un grado menor?',
+    antetitulo: '¿Te han denegado la incapacidad permanente y no puedes trabajar?',
     titulo: 'Abogados de incapacidad permanente en Madrid',
     subtitulo:
       'Revisamos tu resolución y tus informes, te decimos con claridad si hay caso y qué grado pedir, y lo reclamamos ante el INSS y, si hace falta, en el juzgado.',
@@ -104,7 +104,7 @@ export const LANDINGS: Landing[] = [
     ],
     preguntas: [
       {
-        p: '¿Qué hago si me han denegado la incapacidad permanente?',
+        p: 'Me han denegado la incapacidad permanente y no puedo trabajar. ¿Qué hago?',
         r: 'Presentar la reclamación previa ante el INSS en 30 días hábiles desde la notificación. Si la rechaza o no contesta en 45 días, se presenta la demanda en el juzgado de lo social. Conviene preparar desde el principio los informes que acrediten lo que no puedes hacer.',
       },
       {

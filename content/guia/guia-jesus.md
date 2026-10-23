@@ -18,6 +18,8 @@ Jesús, esta guía te cuenta qué hemos hecho con tu web, por qué y qué podrí
 | Asistente que responde a cualquier hora | No | **Sí**, con todo el contenido de la web |
 | Sección para trabajadoras: embarazo, conciliación, acoso sexual | No | **Sí** |
 | Direcciones antiguas del blog redirigidas | | **Las 220**, una a una |
+| Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 páginas** hechas para convertir: incapacidad, acoso y despido (apartado 18 ter) |
+| Medición | Analytics instalado | **Cada llamada, WhatsApp, formulario y chat contado**, mapas de calor y grabaciones (apartado 19) |
 
 **Lo que necesitamos de ti**, en tres cosas:
 
@@ -294,6 +296,27 @@ Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas vece
 
 **Lo que tus competidores tienen y tú no** (búsquedas en las que salen García de la Santa o Abogados Durán y tú no): "indemnización por despido" (12.100 al mes), "despido objetivo" (5.400), "finiquito" (3.600), "te pueden despedir estando de baja" (2.900), "despido disciplinario tiene paro" (1.600), "despido objetivo causas" (1.600), "expediente Fogasa" (1.900). Todas están en el calendario o ya tienen página nueva.
 
+**Lo que Semrush nos ha dicho para las páginas de los anuncios** (búsquedas al mes en España y lo que cuesta cada clic):
+
+| Búsqueda | Al mes | Clic | Qué hemos hecho |
+| --- | --- | --- | --- |
+| abogados incapacidad permanente | 1.000 | 1,42 € | Titular de la landing de incapacidad |
+| abogado incapacidad permanente | 720 | 1,57 € | Ídem |
+| abogado incapacidad permanente madrid | 170 | 2,46 € | Ídem, con "en Madrid" |
+| me han denegado la incapacidad permanente (y no puedo trabajar) | 320 | - | Frase exacta encima del titular y primera pregunta frecuente |
+| mejor abogado para incapacidad permanente | 320 | 1,07 € | Experiencia y quién te defiende, bien visibles |
+| abogados incapacidad solo cobran si ganan | 390 | 0,94 € | Te lo preguntamos (pregunta 29): si lo ofreces, va en la landing |
+| abogado laboralista madrid | 1.900 | 3,56 € | La búsqueda más cara: solo merece la pena con una página que convierta |
+| abogado acoso laboral madrid | 140 | 1,66 € | Landing de acoso |
+
+**Y la misma regla para que te recomiende la IA**. ChatGPT, Gemini o las respuestas de IA de Google recomiendan a quien da **datos claros y que coinciden en todas partes**. Hoy tus años de experiencia aparecen como 15, 20 y más de 25 según dónde se mire, y la web dice "consulta gratuita" mientras tus reseñas hablan de precio. Para una IA eso es ruido, y ante la duda recomienda a otro. Por eso:
+
+1. **Una sola versión de cada dato** (años, precio, dirección, especialidades) en la web, la ficha de Google, LinkedIn, los directorios y los anuncios. Dinos la cifra buena de años y la unificamos.
+2. **Respuestas que se pueden citar**: cada guía responde en las dos primeras frases, con cifras y plazos exactos y su fuente. Es lo que las IA copian y enlazan.
+3. **Preguntas frecuentes reales** sacadas de Semrush y de lo que la gente pregunta al chat de la web.
+4. **Menciones fuera de tu web**: medios, universidades, colegios profesionales. Las IA se fían más de lo que otros dicen de ti que de lo que dices tú.
+5. **Medirlo**: Semrush cuenta en cuántas respuestas de IA de Google apareces (hoy, en 10 de 579 de tus búsquedas). Es la cifra que queremos ver subir cada mes.
+
 **Lo que haríamos cada mes con Semrush**:
 
 - Seguimiento de posiciones de tus 50 búsquedas clave, con aviso si alguna cae.
@@ -448,12 +471,46 @@ Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush
 
 1. **Anuncios que llevan a artículos del blog**. Quien busca "cómo identificar el mobbing" suele estar informándose, no contratando. Pagas clics de lectores. Mejor: anuncios solo para búsquedas de quien quiere un abogado, y el blog para el posicionamiento gratuito.
 2. **"Primera consulta gratis"** en algún anuncio y la palabra "gratuito" en las búsquedas. Tu consulta tiene precio, y las reseñas ya lo reflejan: atrae a quien no va a pagar y genera opiniones negativas. Se quita, y "gratis" y "gratuito" pasan a ser **palabras negativas** (las que impiden que salga el anuncio).
-3. **Páginas de destino sin formulario**. La dirección que enseña el anuncio, tiernocentella.es/acoso, lleva hoy a un artículo sobre "acoso ascendente" sin formulario. Hay que confirmar en la cuenta la dirección final real, pero la idea es clara: cada anuncio debe aterrizar en una página que convierte, con llamada, WhatsApp, formulario y chat a la vista.
+3. **Páginas de destino que no convierten**. El anuncio de marca ("Tierno Centella Abogados - Abogados Laborales en Madrid") lleva a la página de acoso laboral de la web actual, aunque quien busca venga por un despido o una incapacidad, y la dirección que enseñan otros anuncios, tiernocentella.es/acoso, abre hoy un artículo sobre "acoso ascendente" sin formulario. Lo explicamos y lo resolvemos en el apartado siguiente.
 4. **Medir la consulta, no el clic**. En la web nueva ya contamos cada llamada, cada WhatsApp, cada formulario enviado y cada conversación del chat. Conectado a Google Ads, la campaña aprende qué búsquedas traen clientes y deja de gastar en las que no.
 
 **Lo que ya hemos dejado preparado**: las direcciones /acoso y /incapacidad que usan los anuncios redirigen a sus páginas nuevas, para que el día del cambio de web **ningún anuncio lleve a una página rota**.
 
 **Lo que necesitamos**: acceso de lectura a Google Ads (no cambiamos nada sin tu permiso) y saber cuánto inviertes al mes. Con eso te diremos cuánto cuesta hoy cada consulta y cuánto podría costar.
+
+## 18 ter. Tres páginas nuevas para que tus anuncios conviertan
+
+Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y pulsa en "Tierno Centella Abogados - Abogados Laborales en Madrid" llega a la página de **acoso laboral** de la web actual, aunque viniera por un despido o una incapacidad. Y esa página tiene problemas que cuestan dinero en cada clic:
+
+| En la página actual del anuncio | Por qué resta |
+| --- | --- |
+| Dice "15 años de experiencia", más abajo "más de 25 años", y el anuncio "Más de 20 años" | Tres cifras distintas generan desconfianza (y confunden a Google y a las IA) |
+| Promete "consulta inicial gratuita" | Tu consulta tiene precio: atrae a quien no va a pagar y acaba en reseñas negativas |
+| Un texto de relleno con "[dirección]" sin rellenar y "asunto de derecho civil" | Se nota hecho deprisa; en un despacho, la confianza lo es todo |
+| Formulario con correo y mensaje obligatorios y un menú completo arriba | Cada campo de más y cada enlace que saca de la página es una consulta menos |
+| La misma página para acoso, despido e incapacidad | Quien busca "incapacidad denegada" no se ve reflejado |
+
+**Lo que hemos creado**: tres páginas de aterrizaje, una por cada tipo de búsqueda que pagas. Están en la web nueva y no aparecen en Google (son solo para el tráfico de los anuncios):
+
+- **Incapacidad permanente**: [abrir la página](/consulta/incapacidad-permanente) (la principal: de las búsquedas que anuncias, es la que más volumen tiene)
+- **Acoso laboral**: [abrir la página](/consulta/acoso-laboral)
+- **Despidos**: [abrir la página](/consulta/despido)
+
+**Por qué van a convertir mucho mejor** (cada decisión tiene un porqué):
+
+1. **El titular repite lo que la persona ha buscado**: "Abogados de incapacidad permanente en Madrid" (unas 1.900 búsquedas al mes entre todas sus variantes), y encima la duda con la que llega: "¿Te han denegado la incapacidad permanente y no puedes trabajar?" ("me han denegado la incapacidad permanente" se busca 210 veces al mes y "...y no puedo trabajar", 110). Quien llega siente "esto es lo mío" en un segundo.
+2. **El formulario se ve nada más entrar** y pide solo tres cosas: situación, nombre y teléfono. Al lado, llamar y WhatsApp.
+3. **Sin menú**: no hay por dónde irse. Todo lleva a contactar.
+4. **El plazo bien visible** ("30 días hábiles para la reclamación previa"): la urgencia es real y ayuda a decidir hoy.
+5. **"¿En qué situación estás?"**: denegada, grado menor, tribunal médico, baja que se agota, ya concedida. Cada persona encuentra su caso.
+6. **Una herramienta útil dentro**: el comprobador de incapacidad (y el test de acoso o la calculadora de despido en las otras). La gente se queda, entiende su caso y confía.
+7. **Lo que cobrarías, en una tabla**, el precio de la consulta claro (150 € o 250 € más IVA) y quién te defiende. Filtramos a quien busca gratis y atraemos a quien quiere un buen abogado.
+8. **Rápida en el móvil**, que es de donde viene casi todo el tráfico de anuncios.
+9. **Cada consulta llega con su origen**: el correo del formulario dice si viene de Google Ads y de qué campaña. Sabrás qué anuncio te trae cada cliente.
+
+**Cómo lo demostraremos**: con un experimento en Google Ads. Durante cuatro semanas, la mitad de los clics va a la página actual y la otra mitad a la nueva, y comparamos **cuánto cuesta cada consulta** en una y otra. Sin opiniones: con datos.
+
+**Lo que haríamos además en la campaña**: separar las búsquedas de incapacidad, acoso y despido en grupos distintos, cada uno con su página; quitar "gratis" y "gratuito"; y añadir como palabras negativas las búsquedas de información ("qué es", "ejemplos", "pdf", "oposiciones").
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
