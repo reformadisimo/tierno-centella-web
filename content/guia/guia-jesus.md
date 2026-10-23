@@ -432,17 +432,48 @@ Es lo que hacemos en Reformadísimo y está montado con Resend, que envía desde
 - **Recursos humanos y empresas**: protocolos, investigación de denuncias y formación de mandos, por LinkedIn.
 - **Otros despachos** que no llevan acoso y te derivan casos.
 
-## 19. Saber qué pasa en la web cada día (y cómo se mueve cada visita)
+## 18 bis. Tus anuncios en Google hoy (lo que hemos visto desde fuera)
 
-Hoy no sabes cuánta gente entra en tu web, de dónde viene, qué lee ni dónde se va. Con la web nueva lo sabremos todo, y te lo contaremos en un informe sencillo.
+Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush y buscando en Google el 23 de octubre de 2026. Sin acceso a tu cuenta de Google Ads, así que es la foto desde fuera.
+
+**Lo que hay**:
+
+- Tu empresa, TIERNO CENTELLA SL, es anunciante verificado en Google y tiene **8 anuncios** registrados en España.
+- Hay campaña **activa**: uno de los anuncios se mostró por primera vez el 5 de abril de 2026 y por última vez el **22 de octubre de 2026**. Entre abril y julio se enseñó entre 4.000 y 5.000 veces.
+- Los anuncios son de texto: "Abogado Laboralista Experto - Reserva tu Cita", "Solicita tu Incapacidad - Reserva tu Cita" y otros que **repiten el título de artículos del blog** ("Cómo identificar el acoso laboral o mobbing ? | Tierno Centella"). Eso último es típico de los anuncios dinámicos: Google crea el anuncio a partir de tus páginas.
+- Según Semrush, en 2026 se han visto anuncios tuyos en búsquedas como "abogado acoso laboral madrid" (en primera posición, a 1,80-2,64 € el clic), "cómo denunciar acoso laboral", "cómo demostrar el acoso laboral" y "abogado laboralista gratuito".
+- En la búsqueda que hicimos ("abogado acoso laboral madrid") salían patrocinados G2 Abogados y R. Sánchez Abogados, y tu anuncio no. Una sola búsqueda no es concluyente: depende de la hora, el presupuesto y quién busca.
+
+**Lo que se puede mejorar** (con lo que se ve desde fuera):
+
+1. **Anuncios que llevan a artículos del blog**. Quien busca "cómo identificar el mobbing" suele estar informándose, no contratando. Pagas clics de lectores. Mejor: anuncios solo para búsquedas de quien quiere un abogado, y el blog para el posicionamiento gratuito.
+2. **"Primera consulta gratis"** en algún anuncio y la palabra "gratuito" en las búsquedas. Tu consulta tiene precio, y las reseñas ya lo reflejan: atrae a quien no va a pagar y genera opiniones negativas. Se quita, y "gratis" y "gratuito" pasan a ser **palabras negativas** (las que impiden que salga el anuncio).
+3. **Páginas de destino sin formulario**. La dirección que enseña el anuncio, tiernocentella.es/acoso, lleva hoy a un artículo sobre "acoso ascendente" sin formulario. Hay que confirmar en la cuenta la dirección final real, pero la idea es clara: cada anuncio debe aterrizar en una página que convierte, con llamada, WhatsApp, formulario y chat a la vista.
+4. **Medir la consulta, no el clic**. En la web nueva ya contamos cada llamada, cada WhatsApp, cada formulario enviado y cada conversación del chat. Conectado a Google Ads, la campaña aprende qué búsquedas traen clientes y deja de gastar en las que no.
+
+**Lo que ya hemos dejado preparado**: las direcciones /acoso y /incapacidad que usan los anuncios redirigen a sus páginas nuevas, para que el día del cambio de web **ningún anuncio lleve a una página rota**.
+
+**Lo que necesitamos**: acceso de lectura a Google Ads (no cambiamos nada sin tu permiso) y saber cuánto inviertes al mes. Con eso te diremos cuánto cuesta hoy cada consulta y cuánto podría costar.
+
+## 19. Lo tenemos todo controlado: qué pasa en la web cada día
+
+Tu web actual ya tiene instalados **Google Analytics 4** y **Google Tag Manager** (los hemos visto en el código de la página). Es buena noticia: hay historial. La pregunta es si alguien lo mira y lo convierte en decisiones. Con la web nueva lo hacemos nosotros y te lo contamos en un informe sencillo.
 
 **Lo que ya está conectado en la web nueva**:
 
-- **Vercel Analytics**: cuenta visitas, páginas más vistas, de dónde llega la gente (Google, Instagram, ChatGPT...) y desde qué dispositivo. No usa cookies ni datos personales.
+- **Vercel Analytics**: visitas, páginas más vistas, de dónde llega la gente (Google, Instagram, ChatGPT...) y desde qué dispositivo. No usa cookies ni datos personales.
 - **Medición de velocidad real**: cómo de rápida va la web en los móviles de tus visitas de verdad, no solo en una prueba.
-- **Microsoft Clarity** (gratuito): **mapas de calor** que enseñan dónde pulsa la gente, hasta dónde lee cada página y dónde se atasca, y grabaciones anónimas de las visitas, como si miraras por encima del hombro de quien navega. Solo se activa si la persona acepta las cookies de medición, y nunca graba lo que escribe en los formularios. Para encenderlo solo falta crear la cuenta (lo hacemos nosotros).
+- **Las acciones que importan, contadas una a una**: cada pulsación en **llamar**, en **WhatsApp** o en el correo (y desde dónde: la cabecera, el pie, la barra del móvil o el texto), cada **formulario enviado** (con el tema: despido, acoso, incapacidad...) y cada vez que alguien **abre el chat** o le escribe.
+- **Microsoft Clarity** (gratuito), la lupa:
+  - **Grabaciones de sesiones**: vemos cómo navega cada visita, anónima, como si miráramos por encima del hombro. Nunca graba lo que se escribe en los formularios.
+  - **Mapas de calor**: dónde pulsa la gente, hasta dónde lee cada página y qué ignora.
+  - **Clics de rabia y clics muertos**: cuando alguien pulsa varias veces algo que no responde o algo que parece un botón y no lo es. Es la forma más rápida de encontrar fallos que nadie te cuenta.
+  - **Errores**: si algo falla en el navegador de alguien, nos enteramos.
+- **Google Tag Manager, Analytics y Google Ads**: la web nueva está preparada para usar **tu mismo contenedor de Tag Manager**, así no se pierde el historial de Analytics y las conversiones de tus anuncios siguen contando desde el primer día.
 
-**Lo que podemos conectar si nos das acceso**: Google Analytics, Search Console, Semrush (ya lo usamos), tu ficha de Google, las campañas de Google Ads y de Meta, Instagram, Facebook, LinkedIn y el correo de seguimiento. Con todo conectado, el informe deja de ser una opinión y pasa a ser un dato.
+Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activa si la persona acepta las cookies de medición, como exige la ley.
+
+**Lo que podemos conectar si nos das acceso**: Google Analytics, Search Console, Google Ads, Semrush (ya lo usamos), tu ficha de Google, Meta, Instagram, Facebook, LinkedIn y el correo de seguimiento. Con todo conectado, el informe deja de ser una opinión y pasa a ser un dato.
 
 **Lo que recibirías** (una vez por semana, en una página y sin jerga):
 
@@ -451,11 +482,14 @@ Hoy no sabes cuánta gente entra en tu web, de dónde viene, qué lee ni dónde 
 | Visitas y contactos | "Esta semana 640 visitas y 14 consultas: 9 por WhatsApp, 3 por teléfono y 2 por el formulario" |
 | Qué buscan | "La calculadora del paro es lo más usado; la guía de acoso sexual ha entrado en la primera página de Google" |
 | Dónde se pierden | "En móvil, la mitad de la gente no llega al botón de llamar de la página de incapacidad: lo subimos" |
+| Fallos que nadie cuenta | "Clarity detecta clics de rabia en la tabla de plazos: la gente cree que se puede pulsar. Lo cambiamos" |
 | Qué pregunta la gente al asistente | "Muchas preguntas sobre bajas por ansiedad: preparamos un artículo" |
 | Reseñas y ficha de Google | "Dos reseñas nuevas de cinco estrellas; la nota sube a 4,3" |
-| Campañas, si las hay | "Cada consulta por Google Ads ha costado 18 €" |
+| Campañas | "Cada consulta por Google Ads ha costado 18 €; la palabra 'mobbing' trae lectores, no clientes: la pausamos" |
 
-**Por qué importa**: hasta ahora las decisiones sobre la web se toman a ciegas. Con los mapas de calor y las cifras de cada semana sabremos **exactamente** qué funciona y qué no, y cada mejora tendrá un porqué.
+(Las cifras de la tabla son ejemplos de cómo te lo contaríamos, no datos tuyos.)
+
+**Por qué importa**: hasta ahora las decisiones sobre la web y los anuncios se toman a ciegas. Con las grabaciones, los mapas de calor y las cifras de cada semana sabremos **exactamente** qué funciona, mejoraremos cada página y cada campaña día a día, y cada cambio tendrá un porqué.
 
 ## 20. El logo, refinado (no sustituido)
 
@@ -504,12 +538,14 @@ Tu web actual no se tira: todo su contenido aprovechable está dentro de la nuev
 | Qué | Para qué | Cómo |
 | --- | --- | --- |
 | Google Analytics | Medir visitas | Administrar > Gestión de acceso > añadir nuestro correo como lector |
+| Google Tag Manager | Mantener el mismo contenedor en la web nueva | Administrador > Gestión de usuarios > añadir nuestro correo como lector |
+| Google Ads | Ver cuánto cuesta cada consulta y proponer mejoras | Herramientas > Acceso y seguridad > añadir nuestro correo con acceso de solo lectura |
 | Search Console | Ver búsquedas y redirecciones | Configuración > Usuarios y permisos > añadir usuario |
 | Ficha de Google | Responder reseñas y publicar | Perfil de Empresa > Gestores > añadir gestor |
 | Dominio tiernocentella.es | Hacer el cambio de web | Nos dices dónde está contratado y lo hacemos contigo |
 | Instagram, Facebook y LinkedIn | Programar y medir (si quieres) | Meta Business Suite y administrador de la página de LinkedIn |
 
-Ninguno nos da acceso a tu dinero ni a tus datos de clientes, y los puedes retirar cuando quieras.
+Todos son de solo lectura salvo que tú decidas otra cosa. Ninguno nos da acceso a tu dinero ni a tus datos de clientes, y los puedes retirar cuando quieras.
 
 ## 24. Preguntas para ti
 
