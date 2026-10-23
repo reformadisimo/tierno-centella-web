@@ -46,7 +46,7 @@ export default function AvisoCookies() {
         <p>
           <strong>Tu privacidad.</strong> Usamos las cookies imprescindibles para que la web funcione. Con tu permiso, también las de
           medición de visitas y las de servicios externos como YouTube o Google Maps, que solo se cargan cuando los abres.{' '}
-          <Link href="/cookies">Más información</Link>.
+          <Link href="/cookies">Más información sobre las cookies</Link>.
         </p>
         {detalle && (
           <div className="cookies-detalle">

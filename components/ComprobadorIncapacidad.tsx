@@ -124,7 +124,7 @@ export default function ComprobadorIncapacidad() {
               {origen === 'Ansiedad o depresión por acoso laboral' && (
                 <p className="recuadro">
                   Si tu enfermedad viene del acoso, conviene pedir que se reconozca como derivada del trabajo: cambia la base reguladora y los
-                  requisitos. Es una de nuestras especialidades. <Link href="/acoso-laboral/baja-por-ansiedad-por-acoso">Más información</Link>.
+                  requisitos. Es una de nuestras especialidades. <Link href="/acoso-laboral/baja-por-ansiedad-por-acoso">Cómo pedir que tu baja sea accidente de trabajo</Link>.
                 </p>
               )}
             </>

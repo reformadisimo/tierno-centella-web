@@ -19,7 +19,7 @@ export default function Inicio() {
       <section className="portada-video">
         <picture>
           <source media="(max-width: 700px)" srcSet="/img/portada-poster-movil.webp" />
-          <img className="poster" src="/img/portada-poster.webp" alt="" />
+          <img className="poster" src="/img/portada-poster.webp" alt="" fetchPriority="high" />
         </picture>
         <video autoPlay muted loop playsInline poster="/img/portada-poster.webp" aria-hidden="true">
           <source media="(max-width: 700px)" src="/video/portada-movil.webm" type="video/webm" />
