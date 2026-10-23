@@ -13,6 +13,7 @@ export const GUIAS_TRADUCIDAS: Record<string, string> = {
   "/despido/plazo-para-reclamar-despido": "/en/dismissal/deadline-to-challenge-a-dismissal",
   "/despido/tipos-de-despido": "/en/dismissal/types-of-dismissal",
   "/despido/despido-nulo-cuando": "/en/dismissal/when-is-a-dismissal-void",
+  "/incapacidad-permanente/reclamacion-previa-y-demanda": "/en/permanent-disability/appealing-a-denied-permanent-disability",
   "/incapacidad-permanente/grados-de-incapacidad-permanente": "/en/permanent-disability/degrees-of-permanent-disability",
   "/incapacidad-permanente/incapacidad-y-contrato-ley-2-2025": "/en/permanent-disability/permanent-disability-and-your-contract",
   "/mujer-y-trabajo/permisos-por-nacimiento-y-lactancia": "/en/women-at-work/birth-and-breastfeeding-leave",

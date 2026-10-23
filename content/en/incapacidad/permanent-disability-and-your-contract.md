@@ -1,5 +1,5 @@
 ---
-titulo: "Permanent disability and your contract: what changes with Law 2/2025"
+titulo: Permanent disability and your contract: what changes with Law 2/2025
 tituloSeo: Permanent disability and Law 2/2025
 descripcion: Since May 2025, permanent disability no longer ends your contract automatically. Deadlines, reasonable adjustments and what the company can do.
 fecha: 2026-10-23
