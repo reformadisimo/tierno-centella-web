@@ -1,6 +1,6 @@
 'use client';
 
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado } from './Utiles';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -84,10 +84,13 @@ export default function Plazos() {
   let ultimo = '';
   let quedan: number | null = null;
   if (fecha && fecha <= hoy) {
-    ultimo = s.tipo === 'habiles' ? sumarHabiles(fecha, s.n) : sumarAnios(fecha, s.n);
-    if (s.tipo === 'habiles') quedan = diasHabilesRestantes(hoy > fecha ? hoy : sumarHabiles(fecha, 1), ultimo);
+    // Agosto es hábil para despidos y modificaciones (art. 43.4 LRJS) y en la vía administrativa del INSS; no para las sanciones.
+    const agostoHabil = s.id !== 'sancion';
+    ultimo = s.tipo === 'habiles' ? sumarHabiles(fecha, s.n, agostoHabil) : sumarAnios(fecha, s.n);
+    if (s.tipo === 'habiles') quedan = diasHabilesRestantes(hoy > fecha ? hoy : sumarHabiles(fecha, 1, agostoHabil), ultimo, agostoHabil);
   }
   const vencido = ultimo !== '' && ultimo < hoy;
+  useIrAlResultado(ultimo ? `${id}|${fecha}` : '');
 
   return (
     <div className="herramienta">
@@ -109,7 +112,7 @@ export default function Plazos() {
       <p>{s.explicacion}</p>
       {fecha > hoy && <p className="error">La fecha no puede ser posterior a hoy.</p>}
       {ultimo && (
-        <div className={vencido ? 'cuenta-vencida' : 'veredicto'} aria-live="polite">
+        <div className={`resultado-plazo ${vencido ? 'cuenta-vencida' : 'veredicto'}`} aria-live="polite">
           {vencido ? (
             <p style={{ margin: 0 }}>
               El plazo general terminó el {fechaLarga(ultimo)}. Llámanos de todos modos: a veces el plazo se interrumpió o no empezó a contar
@@ -139,8 +142,8 @@ export default function Plazos() {
         {ultimo && <BotonImprimir />}
       </div>
       <p className="letra-pequena">
-        Cálculo orientativo: descuenta fines de semana y festivos nacionales, no los autonómicos ni locales. Para un despido, agosto cuenta como
-        hábil. Confirma tu plazo con un abogado antes de que se agote.
+        Cálculo orientativo: descuenta fines de semana y festivos nacionales (también el Viernes Santo), no los autonómicos ni locales. Para un
+        despido o una modificación de condiciones, agosto cuenta como hábil; para una sanción, no. Confirma tu plazo con un abogado antes de que se agote.
       </p>
     </div>
   );

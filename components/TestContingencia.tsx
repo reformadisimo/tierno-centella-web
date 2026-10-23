@@ -72,7 +72,7 @@ export default function TestContingencia() {
             { href: '/acoso-laboral/baja-por-ansiedad-por-acoso', texto: 'Baja por ansiedad por acoso' },
             { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },
           ],
-          whatsapp: `Hola, he hecho el test de baja laboral. Motivo: ${texto(r, 'motivo')}. Causa: ${texto(r, 'causa')}. ${texto(r, 'medico')}. Quiero saber si mi baja debería ser accidente de trabajo.`,
+          whatsapp: ['Hola, he hecho el test de baja laboral.', texto(r, 'motivo') && `Motivo: ${texto(r, 'motivo')}.`, texto(r, 'causa') && `Causa: ${texto(r, 'causa')}.`, texto(r, 'medico') && `${texto(r, 'medico')}.`, 'Quiero saber si mi baja debería ser accidente de trabajo.'].filter(Boolean).join(' '),
         };
       }}
     />

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { BotonImprimir } from './Utiles';
@@ -36,17 +36,30 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   const [indice, setIndice] = useState(0);
   const [elegidas, setElegidas] = useState<Opcion[]>([]);
 
-  // Un paso condicional solo se descarta cuando ya están respondidos todos los anteriores;
-  // así el contador no promete menos preguntas de las que habrá.
-  const activos = useMemo(
-    () => pasos.filter((p, i) => !p.si || !pasos.slice(0, i).every((q) => q.id in resp) || p.si(resp)),
-    [pasos, resp],
-  );
+  // Un paso condicional se decide en cuanto están respondidos los pasos activos anteriores (los saltados no cuentan);
+  // mientras tanto se cuenta, para que el contador no prometa menos preguntas de las que habrá.
+  const activos = useMemo(() => {
+    const lista: Paso[] = [];
+    for (const p of pasos) {
+      const anterioresRespondidos = lista.every((q) => q.id in resp);
+      if (!p.si || !anterioresRespondidos || p.si(resp)) lista.push(p);
+    }
+    return lista;
+  }, [pasos, resp]);
   const terminado = indice >= activos.length;
   const paso = activos[indice];
+  // Al terminar, el veredicto se ve desde su título.
+  useEffect(() => {
+    if (terminado) requestAnimationFrame(() => document.getElementById('cuestionario')?.scrollIntoView({ block: 'start', behavior: 'smooth' }));
+  }, [terminado]);
 
   function responder(opciones: Opcion[]) {
-    const nuevas = { ...resp, [paso.id]: opciones };
+    // Al responder, se olvidan las respuestas de los pasos siguientes: si alguien vuelve atrás y cambia algo,
+    // no se arrastran respuestas que ya no proceden.
+    const posicion = pasos.findIndex((p) => p.id === paso.id);
+    const nuevas: Respuestas = {};
+    for (const p of pasos.slice(0, posicion)) if (p.id in resp) nuevas[p.id] = resp[p.id];
+    nuevas[paso.id] = opciones;
     setResp(nuevas);
     setElegidas([]);
     setIndice((i) => i + 1);

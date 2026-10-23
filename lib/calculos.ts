@@ -78,10 +78,34 @@ export function calcularIndemnizacion(inicioIso: string, despidoIso: string, sal
 // Agosto SÍ es hábil para reclamar un despido (art. 43.4 de la Ley de la Jurisdicción Social).
 const INHABILES_FIJOS = ['01-01', '01-06', '05-01', '08-15', '10-12', '11-01', '12-06', '12-08', '12-24', '12-25', '12-31'];
 
-export function esHabil(f: Date): boolean {
+// Viernes Santo: festivo nacional que cambia cada año (dos días antes del domingo de Pascua).
+function viernesSanto(anio: number): string {
+  const a = anio % 19, b = Math.floor(anio / 100), c = anio % 100, d = Math.floor(b / 4), e = b % 4;
+  const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const mes = Math.floor((h + l - 7 * m + 114) / 31), dia = ((h + l - 7 * m + 114) % 31) + 1;
+  const pascua = new Date(Date.UTC(anio, mes - 1, dia));
+  pascua.setUTCDate(pascua.getUTCDate() - 2);
+  return aIso(pascua);
+}
+
+// agostoHabil: true para despidos y extinciones (art. 43.4 LRJS); false para el resto de plazos procesales, como las sanciones.
+export function esHabil(f: Date, agostoHabil = true): boolean {
   const dia = f.getUTCDay();
   if (dia === 0 || dia === 6) return false;
-  return !INHABILES_FIJOS.includes(aIso(f).slice(5));
+  const iso = aIso(f);
+  if (!agostoHabil && iso.slice(5, 7) === '08') return false;
+  if (iso === viernesSanto(f.getUTCFullYear())) return false;
+  return !INHABILES_FIJOS.includes(iso.slice(5));
+}
+
+// Lee un importe escrito a la española ("28.000,50") o con punto decimal ("28000.50").
+export function leerImporte(texto: string): number {
+  const t = texto.trim().replace(/[€\s]/g, '');
+  if (!t) return NaN;
+  if (/^\d+\.\d{1,2}$/.test(t)) return Number(t);
+  if (/^\d{1,3}(,\d{3})+(\.\d{1,2})?$/.test(t)) return Number(t.replace(/,/g, ''));
+  return Number(t.replace(/\./g, '').replace(',', '.'));
 }
 
 // Último día para presentar la papeleta de conciliación: 20 días hábiles desde el día siguiente al despido.
@@ -96,25 +120,25 @@ export function ultimoDiaParaReclamar(despidoIso: string): string {
 }
 
 // Días hábiles que quedan desde hoy (sin contar hoy) hasta el último día, incluido.
-export function diasHabilesRestantes(hoyIso: string, ultimoIso: string): number {
+export function diasHabilesRestantes(hoyIso: string, ultimoIso: string, agostoHabil = true): number {
   const f = aFecha(hoyIso);
   const fin = aFecha(ultimoIso);
   if (f > fin) return -1;
-  let n = esHabil(f) ? 1 : 0; // hoy cuenta si es hábil: aún puedes presentar hoy
+  let n = esHabil(f, agostoHabil) ? 1 : 0; // hoy cuenta si es hábil: aún puedes presentar hoy
   while (f < fin) {
     f.setUTCDate(f.getUTCDate() + 1);
-    if (esHabil(f)) n += 1;
+    if (esHabil(f, agostoHabil)) n += 1;
   }
   return n;
 }
 
 // Suma n días hábiles a partir del día siguiente a la fecha dada.
-export function sumarHabiles(desdeIso: string, n: number): string {
+export function sumarHabiles(desdeIso: string, n: number, agostoHabil = true): string {
   const f = aFecha(desdeIso);
   let contados = 0;
   while (contados < n) {
     f.setUTCDate(f.getUTCDate() + 1);
-    if (esHabil(f)) contados += 1;
+    if (esHabil(f, agostoHabil)) contados += 1;
   }
   return aIso(f);
 }
@@ -181,6 +205,7 @@ export type DatosFiniquito = {
   devengoPagas: 'semestral' | 'anual';
   vacacionesAnuales: number; // días naturales al año (30 por ley)
   vacacionesDisfrutadas: number; // días naturales disfrutados este año
+  alta?: string; // fecha de entrada en la empresa, si fue este año o el anterior
 };
 
 export type ResultadoFiniquito = {
@@ -196,15 +221,21 @@ export type ResultadoFiniquito = {
 export function calcularFiniquito(d: DatosFiniquito): ResultadoFiniquito {
   const [anio, mes, dia] = d.baja.split('-').map(Number);
   const salarioMensual = d.salarioAnual / d.pagas;
-  // Mes comercial de 30 días: si te vas el 31, cobras el mes entero.
-  const diasMes = Math.min(dia, 30);
+  // Mes comercial de 30 días: si te vas el último día del mes (31, o 28 de febrero), cobras el mes entero.
+  const ultimoDelMes = new Date(Date.UTC(anio, mes, 0)).getUTCDate();
+  let diasMes = dia >= ultimoDelMes ? 30 : Math.min(dia, 30);
+  // Si entraste ese mismo mes, solo cuentan los días desde la entrada.
+  if (d.alta && d.alta.slice(0, 7) === d.baja.slice(0, 7)) diasMes = Math.min(diasMes, dia - Number(d.alta.slice(8, 10)) + 1);
   const salarioMes = redondea((salarioMensual * diasMes) / 30);
 
   const inicioAnio = `${anio}-01-01`;
+  const desde = (inicio: string) => (d.alta && d.alta > inicio ? d.alta : inicio);
   const diasAnio = diasEntre(inicioAnio, `${anio}-12-31`);
-  const generadas = (d.vacacionesAnuales * diasEntre(inicioAnio, d.baja)) / diasAnio;
+  const generadas = (d.vacacionesAnuales * diasEntre(desde(inicioAnio), d.baja)) / diasAnio;
   const diasVacaciones = Math.max(0, Math.round((generadas - d.vacacionesDisfrutadas) * 100) / 100);
-  const importeVacaciones = redondea((d.salarioAnual / 365) * diasVacaciones);
+  // 30 días naturales equivalen a 22 laborables: si el convenio cuenta en laborables, cada día vale más.
+  const valorDia = d.vacacionesAnuales <= 25 ? (d.salarioAnual / 365) * (30 / 22) : d.salarioAnual / 365;
+  const importeVacaciones = redondea(valorDia * diasVacaciones);
 
   let pagaVerano = 0;
   let pagaNavidad = 0;
@@ -213,14 +244,14 @@ export function calcularFiniquito(d: DatosFiniquito): ResultadoFiniquito {
     const primerSemestre = mes <= 6;
     if (d.devengoPagas === 'semestral') {
       // Verano: del 1 de enero al 30 de junio. Navidad: del 1 de julio al 31 de diciembre.
-      if (primerSemestre) pagaVerano = paga * (diasEntre(inicioAnio, d.baja) / diasEntre(inicioAnio, `${anio}-06-30`));
-      else pagaNavidad = paga * (diasEntre(`${anio}-07-01`, d.baja) / diasEntre(`${anio}-07-01`, `${anio}-12-31`));
+      if (primerSemestre) pagaVerano = paga * (diasEntre(desde(inicioAnio), d.baja) / diasEntre(inicioAnio, `${anio}-06-30`));
+      else pagaNavidad = paga * (diasEntre(desde(`${anio}-07-01`), d.baja) / diasEntre(`${anio}-07-01`, `${anio}-12-31`));
     } else {
       // Navidad: del 1 de enero al 31 de diciembre. Verano: del 1 de julio del año anterior al 30 de junio.
-      pagaNavidad = paga * (diasEntre(inicioAnio, d.baja) / diasAnio);
+      pagaNavidad = paga * (diasEntre(desde(inicioAnio), d.baja) / diasAnio);
       const inicioVerano = primerSemestre ? `${anio - 1}-07-01` : `${anio}-07-01`;
       const finVerano = primerSemestre ? `${anio}-06-30` : `${anio + 1}-06-30`;
-      pagaVerano = paga * (diasEntre(inicioVerano, d.baja) / diasEntre(inicioVerano, finVerano));
+      pagaVerano = paga * (diasEntre(desde(inicioVerano), d.baja) / diasEntre(inicioVerano, finVerano));
     }
   }
   pagaVerano = redondea(pagaVerano);

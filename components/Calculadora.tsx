@@ -1,10 +1,10 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes } from '@/lib/calculos';
+import { calcularIndemnizacion, ultimoDiaParaReclamar, diasHabilesRestantes, leerImporte } from '@/lib/calculos';
 import { hoyMadrid, diaSiguiente } from '@/lib/hoy';
 import { DESPACHO, enlaceWhatsapp, euros, eurosConCentimos, fechaLarga } from '@/lib/despacho';
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado, avisoSalarioAnual } from './Utiles';
 
 const corta = (iso: string) => iso.split('-').reverse().join('/');
 
@@ -54,8 +54,8 @@ export default function Calculadora({ despidoInicial = '' }: { despidoInicial?: 
   const [senales, setSenales] = useState<string[]>([]);
   const [enviado, setEnviado] = useState(false);
 
-  const salarioNum = Number(salario.replace(/\./g, '').replace(',', '.'));
-  const recibidoNum = recibido ? Number(recibido.replace(/\./g, '').replace(',', '.')) : 0;
+  const salarioNum = leerImporte(salario);
+  const recibidoNum = recibido ? leerImporte(recibido) : 0;
 
   const error = useMemo(() => {
     if (!enviado) return '';
@@ -68,6 +68,8 @@ export default function Calculadora({ despidoInicial = '' }: { despidoInicial?: 
 
   const listo = enviado && !error;
   const r = listo ? calcularIndemnizacion(inicio, despido, salarioNum) : null;
+  useIrAlResultado(r ? `${inicio}|${despido}|${salarioNum}` : '');
+  const avisoSalario = listo ? avisoSalarioAnual(salarioNum) : '';
 
   let quedan = 0;
   let ultimo = '';
@@ -191,6 +193,7 @@ export default function Calculadora({ despidoInicial = '' }: { despidoInicial?: 
 
       {r && (
         <section className="resultado" aria-live="polite">
+          {avisoSalario && <p className="aviso-salario">{avisoSalario}</p>}
           <h2>Tu cálculo orientativo</h2>
           <p>
             Has trabajado {describeTiempo(t)}. Tu salario diario es de {eurosConCentimos(r.salarioDiario)}.

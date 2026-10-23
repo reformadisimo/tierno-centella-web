@@ -11,7 +11,8 @@ import { medir } from '@/lib/medir';
 // (despido, acoso, incapacidad, mujer y trabajo, sentencias, empresas...). Sale una sola vez por visita,
 // nunca encima del chat, del aviso de cookies o de un formulario, y nunca a quien ya ha escrito o llamado.
 const CLAVE = 'tc-ventana';
-const FUERA = ['/guia-jesus', '/conversaciones', '/contacto', '/en/contact', '/consulta/', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en/search'];
+// En las herramientas no sale: la persona ya está haciendo justo lo que la ventana le propondría.
+const FUERA = ['/herramientas', '/calculadora-indemnizacion', '/en/tools', '/guia-jesus', '/conversaciones', '/contacto', '/en/contact', '/consulta/', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en/search'];
 const SALIDA_RAPIDA = ['/acoso-laboral', '/mujer-y-trabajo', '/herramientas/test-acoso', '/en/workplace-harassment', '/en/women-at-work'];
 
 function yaSalio() {

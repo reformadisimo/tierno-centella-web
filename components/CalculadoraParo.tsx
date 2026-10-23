@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { calcularParo, IPREM_2026 } from '@/lib/calculos';
+import { calcularParo, IPREM_2026, leerImporte } from '@/lib/calculos';
 import { DESPACHO, enlaceWhatsapp, euros, eurosConCentimos } from '@/lib/despacho';
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado } from './Utiles';
 
-const numero = (s: string) => Number(s.replace(/\./g, '').replace(',', '.'));
+const numero = leerImporte;
 const meses = (dias: number) => Math.round(dias / 30);
 
 export default function CalculadoraParo() {
@@ -30,6 +30,7 @@ export default function CalculadoraParo() {
           : '';
   // Aproximaciones: base mensual = salario anual / 12 (las bases incluyen la prorrata de pagas); días cotizados = años x 365.
   const r = enviado && !error ? calcularParo(s / 12, hijos, Math.round(Math.min(a, 6) * 365), p) : null;
+  useIrAlResultado(r ? JSON.stringify(r) : '');
 
   return (
     <form
@@ -106,7 +107,7 @@ export default function CalculadoraParo() {
               <span className="cifra-detalle">{r.dias} días de prestación</span>
             </div>
             <div>
-              <span className="cifra-nombre">Primeros 6 meses (70 %)</span>
+              <span className="cifra-nombre">{r.dias > 180 ? 'Primeros 6 meses (70 %)' : `Los ${meses(r.dias)} meses (70 %)`}</span>
               <span className="cifra-valor">{eurosConCentimos(r.mensualPrimeros6)}</span>
               <span className="cifra-detalle">brutos al mes</span>
             </div>

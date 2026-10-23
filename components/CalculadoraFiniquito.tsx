@@ -2,15 +2,16 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { calcularFiniquito } from '@/lib/calculos';
+import { calcularFiniquito, leerImporte } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
 import { DESPACHO, enlaceWhatsapp, eurosConCentimos, fechaLarga } from '@/lib/despacho';
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado, avisoSalarioAnual } from './Utiles';
 
-const numero = (s: string) => Number(s.replace(/\./g, '').replace(',', '.'));
+const numero = leerImporte;
 
 export default function CalculadoraFiniquito() {
   const [baja, setBaja] = useState(hoyMadrid());
+  const [alta, setAlta] = useState('');
   const [salario, setSalario] = useState('');
   const [pagas, setPagas] = useState<12 | 14>(14);
   const [devengo, setDevengo] = useState<'semestral' | 'anual'>('semestral');
@@ -25,7 +26,11 @@ export default function CalculadoraFiniquito() {
       ? 'Pon la fecha de tu último día de trabajo.'
       : !(s > 0)
         ? 'Escribe tu salario bruto anual, por ejemplo 24000.'
-        : '';
+        : alta && alta > baja
+          ? 'La fecha de entrada tiene que ser anterior a la de tu último día.'
+          : !/^\d*([.,]\d+)?$/.test(vacAnuales.trim()) || !/^\d*([.,]\d+)?$/.test(vacDisfrutadas.trim())
+            ? 'En los días de vacaciones escribe solo números, por ejemplo 30 y 5.'
+            : '';
   const r =
     enviado && !error
       ? calcularFiniquito({
@@ -35,8 +40,11 @@ export default function CalculadoraFiniquito() {
           devengoPagas: devengo,
           vacacionesAnuales: numero(vacAnuales) || 30,
           vacacionesDisfrutadas: numero(vacDisfrutadas) || 0,
+          alta: alta || undefined,
         })
       : null;
+  useIrAlResultado(r ? JSON.stringify(r) : '');
+  const avisoSalario = r ? avisoSalarioAnual(s) : '';
 
   return (
     <form
@@ -51,6 +59,11 @@ export default function CalculadoraFiniquito() {
         <div className="campo">
           <label htmlFor="baja">Último día de trabajo</label>
           <input id="baja" type="date" value={baja} onChange={(e) => setBaja(e.target.value)} />
+        </div>
+        <div className="campo">
+          <label htmlFor="alta">Fecha de entrada (si fue este año o el pasado)</label>
+          <input id="alta" type="date" value={alta} onChange={(e) => setAlta(e.target.value)} />
+          <span className="campo-ayuda">Si llevas más tiempo, déjala vacía.</span>
         </div>
         <div className="campo">
           <label htmlFor="salario">Salario bruto anual (€)</label>
@@ -132,6 +145,7 @@ export default function CalculadoraFiniquito() {
 
       {r && (
         <section className="resultado" aria-live="polite">
+          {avisoSalario && <p className="aviso-salario">{avisoSalario}</p>}
           <h2>Tu finiquito orientativo: {eurosConCentimos(r.total)} brutos</h2>
           <table className="tabla">
             <tbody>

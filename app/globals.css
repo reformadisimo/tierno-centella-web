@@ -5633,3 +5633,14 @@ dl .prosa-foto { margin: 28px 0; }
   .gj-banner { min-height: 0 !important; height: auto !important; background: none !important; }
   .gj-banner figcaption { position: static !important; color: var(--tinta) !important; background: none !important; padding: 0 0 8px !important; font-style: italic; }
 }
+.herramienta { scroll-margin-top: 90px; } .resultado { scroll-margin-top: 90px; }
+.aviso-salario { background: var(--marcador-suave); border-left: 4px solid var(--marcador); padding: 10px 14px; border-radius: 8px; margin: 0 0 14px; font-weight: 600; }
+.resultado-plazo { scroll-margin-top: 90px; }
+@media print {
+  /* Herramientas: al imprimir, sin la foto grande de cabecera, para que el resultado quepa en la primera hoja. */
+  .cabeza-con-foto > div:not(:first-child), .cabeza-pagina .foto, .cabeza-pagina .foto-pie { display: none !important; }
+}
+@media (max-width: 899px) {
+  /* Que el botón "Salir rápido" no tape el final del texto */
+  body:has(.salida-rapida) main { padding-bottom: 56px; }
+}

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { sumarHabiles } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
 import { DESPACHO, enlaceWhatsapp, fechaLarga } from '@/lib/despacho';
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado } from './Utiles';
 
 const SITUACIONES = [
   { id: 'denegada', texto: 'Me la han denegado' },
@@ -39,6 +39,7 @@ export default function ComprobadorIncapacidad() {
   const listo = situacion && (situacion === 'concedida' || capacidad) && (!necesitaFecha || fecha);
   const ultimo = necesitaFecha && fecha ? sumarHabiles(fecha, 30) : '';
   const grado = GRADO[capacidad];
+  useIrAlResultado(listo ? `${situacion}|${capacidad}|${origen}|${fecha}` : '');
 
   return (
     <div className="herramienta">
@@ -86,6 +87,7 @@ export default function ComprobadorIncapacidad() {
         <div className="campo">
           <label htmlFor="fecha-inss">Fecha en que recibiste la resolución del INSS</label>
           <input id="fecha-inss" type="date" max={hoy} value={fecha} onChange={(e) => setFecha(e.target.value)} />
+          {!fecha && <span className="campo-ayuda">Pon la fecha para ver tu resultado y el último día para reclamar.</span>}
         </div>
       )}
 

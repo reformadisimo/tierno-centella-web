@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { calcularReduccion } from '@/lib/calculos';
+import { calcularReduccion, leerImporte } from '@/lib/calculos';
 import { DESPACHO, enlaceWhatsapp, euros, eurosConCentimos } from '@/lib/despacho';
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado } from './Utiles';
 
-const numero = (s: string) => Number(s.replace(/\./g, '').replace(',', '.'));
+const numero = leerImporte;
 
 export default function CalculadoraReduccion() {
   const [salario, setSalario] = useState('');
@@ -25,10 +25,13 @@ export default function CalculadoraReduccion() {
       ? 'Escribe tu salario bruto anual, por ejemplo 26000.'
       : !(a > 0)
         ? 'Indica tus horas semanales actuales.'
-        : !(n > 0 && n < a)
+        : !(n > 0)
+          ? 'Escribe las horas semanales que quieres hacer.'
+          : !(n < a)
           ? 'Las horas nuevas tienen que ser menos que las actuales.'
           : '';
   const r = enviado && !error ? calcularReduccion(s, a, n) : null;
+  useIrAlResultado(r ? JSON.stringify(r) : '');
   const minimo = a > 0 ? Math.round(a * 0.5 * 100) / 100 : 0;
   const maximo = a > 0 ? Math.round(a * 0.875 * 100) / 100 : 0;
 

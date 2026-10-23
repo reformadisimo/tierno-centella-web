@@ -41,8 +41,8 @@ const PUNTOS: Punto[] = [
   {
     id: 'igualdad',
     texto: 'Plan de igualdad registrado',
-    ayuda: 'Con 50 o más personas en plantilla.',
-    obligatorio: (t, grande) => grande,
+    ayuda: 'Con 50 o más personas en plantilla, y siempre en las Administraciones Públicas (Estatuto Básico del Empleado Público, disposición adicional 7.ª).',
+    obligatorio: (t, grande) => grande || t === 'administracion',
   },
   {
     id: 'registro',

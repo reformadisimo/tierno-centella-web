@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
-import { BotonImprimir } from './Utiles';
+import { BotonImprimir, useIrAlResultado } from './Utiles';
 
 type Pregunta = { id: string; texto: string; ayuda?: string; fallo: string; peso: 'grave' | 'revisar'; solo?: 'objetivo' | 'disciplinario' };
 
@@ -63,6 +63,11 @@ const PROTEGIDAS = [
   'Estaba de baja médica',
   'Soy representante de los trabajadores',
 ];
+
+function IrAlResultado({ activo }: { activo: boolean }) {
+  useIrAlResultado(activo ? 'si' : '');
+  return null;
+}
 
 export default function RevisaCarta() {
   const [tipo, setTipo] = useState<'objetivo' | 'disciplinario'>('disciplinario');
@@ -130,6 +135,7 @@ export default function RevisaCarta() {
         </div>
       </fieldset>
 
+      <IrAlResultado activo={contestadas === visibles.length} />
       {contestadas === visibles.length && (
         <section className="resultado" aria-live="polite">
           {graves.length > 0 ? (

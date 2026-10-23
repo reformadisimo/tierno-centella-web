@@ -213,3 +213,26 @@ export function AvisoDemo() {
   const en = idiomaDe(usePathname()) === 'en';
   return <div className="aviso-demo" role="region" aria-label={en ? 'Notice' : 'Aviso'}>{en ? "Demo version. This is not the firm's official website." : 'Versión de demostración. No es la web oficial del despacho.'}</div>;
 }
+
+
+// Tras calcular, si el resultado ha quedado por debajo de la pantalla (o detrás de la barra del móvil), se lleva a él.
+export function useIrAlResultado(clave: string) {
+  useEffect(() => {
+    if (!clave) return;
+    const t = window.setTimeout(() => {
+      const el = document.querySelector<HTMLElement>('.resultado, .resultado-plazo');
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight - 160 || r.top < 0) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+    return () => clearTimeout(t);
+  }, [clave]);
+}
+
+// Aviso si el salario parece mensual (o con un cero de más) en una casilla que pide el anual.
+export function avisoSalarioAnual(n: number) {
+  if (!(n > 0)) return '';
+  if (n < 6000) return `¿Has puesto el salario mensual? Aquí va el anual, con las pagas extra: por ejemplo, ${Math.round(n).toLocaleString('es-ES', { useGrouping: 'always' } as Intl.NumberFormatOptions)} × 14 = ${Math.round(n * 14).toLocaleString('es-ES', { useGrouping: 'always' } as Intl.NumberFormatOptions)} €.`;
+  if (n > 300000) return 'Revisa el salario: parece muy alto. Si usaste punto para los decimales, escríbelo sin ellos (por ejemplo, 28000).';
+  return '';
+}
