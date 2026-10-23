@@ -25,14 +25,13 @@ const FUENTES: [string, string][] = [
   ['Transparencia retributiva: estado de la transposición (PwC, julio de 2026)', 'https://periscopiofiscalylegal.pwc.es/por-fin-la-trasposicion-de-la-directiva-de-transparencia-retributiva/'],
   ['Prestación por desempleo 2026: porcentajes y topes (MutuaFácil)', 'https://mutuafacil.es/guias-y-recursos/cuanto-se-cobra-de-paro/'],
   ['Adaptación de jornada tras el RDL 5/2023 (Lo Entiendo)', 'https://loentiendo.com/?p=72242'],
+  ['Novedades laborales de marzo y abril de 2026, con las SSTS 62, 126, 159 y 169/2026 (Pérez-Llorca)', 'https://www.perezllorca.com/wp-content/uploads/2026/05/2603-2604-Newsletter-Laboral.pdf'],
+  ['Semrush: datos de posicionamiento de tiernocentella.es y competidores (base de datos de España, 23/10/2026)', 'https://www.semrush.com/analytics/overview/?db=es&q=tiernocentella.es'],
   ['Estudio de competencia: Bufete Toro, Campmany, García de la Santa, Jover Marben, Pedraza Laboral', 'https://www.bufetetoro.com/abogados-acoso-laboral-madrid/'],
 ];
 
 function secciones(): SeccionGuia[] {
   let md = fs.readFileSync(path.join(process.cwd(), 'content/guia/guia-jesus.md'), 'utf8');
-  md = md
-    .replace('CALENDARIO_PENDIENTE', '> Lo estamos terminando con las sentencias más recientes. Aparecerá aquí muy pronto.')
-    .replace('SENTENCIAS_PENDIENTES', '> En preparación: sentencias de 2025 y 2026 del Supremo y de los tribunales de Madrid, cada una con su fuente.');
   md = md.replace('FUENTES', FUENTES.map(([t, u]) => `- [${t}](${u})`).join('\n'));
   return md
     .split(/^## /m)

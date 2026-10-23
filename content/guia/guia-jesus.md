@@ -382,7 +382,27 @@ Tres artículos por semana (lunes, miércoles y viernes) durante 13 semanas: del
 
 ## 16. Las últimas sentencias que vamos a contar
 
-SENTENCIAS_PENDIENTES
+Las sentencias son lo que más autoridad da a una web de abogados, ante Google, ante las IA y ante el cliente. Las contaremos así: qué pasó, qué decidió el tribunal y qué significa para quien lo está viviendo. Siempre con el tribunal, la fecha y la fuente, y separando claramente **las tuyas** de **las de otros despachos**.
+
+**Del Tribunal Supremo, 2026** (ya en el calendario):
+
+| Sentencia | Qué decidió | Para quién importa |
+| --- | --- | --- |
+| STS 62/2026 | El permiso parental de 8 semanas cuenta como tiempo trabajado para generar vacaciones, y se puede disfrutar por semanas sueltas | Madres y padres con hijos menores de 8 años |
+| STS 126/2026 | El permiso de 5 días por hospitalización o enfermedad grave de un familiar puede empezar después del hecho y se cuenta en días laborables | Quien cuida de un familiar |
+| STS 159/2026 | La empresa puede reducir la prima por objetivos durante una baja si reduce también los objetivos, pero es discriminatorio exigir una permanencia que excluya a quien estuvo de baja | Trabajadores con salario variable |
+| STS 169/2026 | Una práctica que la empresa mantiene años puede convertirse en un derecho, y retirarla exige comunicarlo por escrito | Cualquier trabajador al que le quitan "lo de siempre" |
+
+**Otras que ya están en la web**: la del Supremo de 18 de noviembre de 2024 (audiencia previa antes del despido disciplinario), la Ley 2/2025 (la incapacidad ya no extingue el contrato) y el Real Decreto-ley 9/2025 (19 semanas por nacimiento).
+
+**Las tuyas, contadas por ti en Instagram** (falta que nos confirmes juzgado, fecha y cuantía):
+
+- 2025: despido declarado represalia porque la trabajadora pidió un permiso para una actividad escolar de su hija.
+- 2025: extinción con indemnización de una responsable degradada por pedir permisos para cuidar de su pareja.
+- 2025: despido "objetivo" declarado nulo por ser represalia por denunciar irregularidades.
+- 2025: sentencia por falta de prevención para una docente con discapacidad a la que no adaptaron el puesto.
+
+> Estamos completando esta lista con sentencias recientes del Tribunal Supremo y de los tribunales de Madrid sobre acoso, despido nulo e incapacidad, cada una con su fuente. Las iremos añadiendo aquí y al calendario.
 
 ## 17. Del formulario a la consulta: el seguimiento por correo
 
