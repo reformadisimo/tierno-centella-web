@@ -31,7 +31,7 @@ Te reconoce una disminución de al menos el 33 % en el rendimiento normal de tu 
 No puedes hacer todas o las tareas fundamentales de tu profesión habitual, pero sí podrías trabajar en otra distinta.
 
 - Cuánto se cobra: una pensión vitalicia del 55 % de la base reguladora.
-- Total cualificada: si tienes 55 años o más, se presume que te costará encontrar otro empleo y la pensión puede subir 20 puntos, hasta el 75 %. Hay que pedirlo y no se cobra mientras trabajes.
+- Total cualificada: si tienes 55 años o más y, por tu edad, tu formación o el lugar donde vives, te resulta difícil encontrar otro empleo, la pensión puede subir 20 puntos, hasta el 75 %. Hay que pedirlo y ese incremento no se cobra mientras trabajes.
 - Si eres menor de 60 años, en casos excepcionales puede sustituirse por un pago único.
 - Es compatible con trabajar en una profesión distinta.
 

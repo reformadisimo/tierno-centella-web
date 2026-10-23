@@ -35,7 +35,7 @@ Si no quieres firmar, la empresa puede entregártela delante de testigos. Negart
 
 El finiquito es la liquidación de lo que te deben: días trabajados del mes, vacaciones no disfrutadas, parte proporcional de las pagas extra y, si corresponde, la indemnización.
 
-Si lo firmas, añade "no conforme" junto a la firma. Así dejas claro que recibes el dinero pero no renuncias a reclamar. También tienes derecho a pedir que esté presente un representante de los trabajadores en el momento de la firma, si en tu empresa lo hay. Lo explicamos con más detalle en [firmar el finiquito como no conforme](/blog/finiquito-firmar-no-conforme).
+Si lo firmas, añade "no conforme" junto a la firma. Así dejas claro que recibes el dinero pero no renuncias a reclamar. También tienes derecho a pedir que esté presente un representante de los trabajadores en el momento de la firma, si en tu empresa lo hay.
 
 > No firmes ningún documento que diga que estás de acuerdo con el despido o que no tienes nada más que reclamar sin que lo revise antes alguien de confianza.
 
@@ -61,7 +61,7 @@ La carta tiene que decir por qué te despiden. Fíjate en tres cosas:
 - **Los hechos.** Si son concretos, con fechas, o son frases genéricas.
 - **La indemnización.** En el despido objetivo, la empresa tiene que ponerte a disposición la indemnización a la vez que te entrega la carta, salvo excepciones.
 
-Si el despido es disciplinario y es posterior al 18 de noviembre de 2024, comprueba también si la empresa te dio la oportunidad de defenderte antes. Lo explicamos en [la audiencia previa en el despido disciplinario](/blog/audiencia-previa-despido-disciplinario).
+Si el despido es disciplinario y es posterior al 18 de noviembre de 2024, comprueba también si la empresa te dio la oportunidad de defenderte antes (la llamada audiencia previa). Si no lo hizo, el Supremo ha entendido que el despido es improcedente.
 
 ## Pide el paro
 
