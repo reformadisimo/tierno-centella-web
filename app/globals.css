@@ -4686,3 +4686,83 @@ body:has(.guia-jesus) .barra-movil {
 .asistente-mensajes {
   grid-auto-rows: max-content;
 }
+
+/* Landings: el vídeo arriba, limpio y entero; solo el titular encima, sobre un degradado suave abajo.
+   El resto del texto y el formulario van debajo, sobre fondo azul, nítidos. */
+.lp-heroe {
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(340px, 58vh, 620px);
+  padding: 0;
+}
+.lp-heroe::after {
+  background: linear-gradient(180deg, rgba(4, 30, 52, 0) 0%, rgba(4, 30, 52, 0) 45%, rgba(4, 30, 52, 0.55) 75%, rgba(4, 30, 52, 0.92) 100%);
+}
+.lp-heroe-titulo {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  padding-bottom: clamp(24px, 4vw, 44px);
+  text-shadow: 0 2px 18px rgba(0, 20, 40, 0.55);
+}
+.lp-heroe-titulo h1 {
+  color: #fff;
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+.lp-heroe-titulo .lp-antetitulo {
+  color: #ffd9cc;
+  max-width: 40ch;
+}
+.lp-heroe-cuerpo {
+  background: var(--tinta);
+  color: #fff;
+  padding: clamp(28px, 4vw, 52px) 0;
+}
+.lp-heroe-cuerpo .lp-heroe-texto {
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  text-shadow: none;
+}
+.lp-heroe-cuerpo .lp-sub,
+.lp-heroe-cuerpo .lp-ventajas li {
+  color: #fff;
+}
+.lp-heroe-cuerpo .lp-plazo {
+  background: rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 939px) {
+  .lp-heroe {
+    min-height: clamp(300px, 52vh, 460px);
+  }
+  .lp-heroe::after {
+    background: linear-gradient(180deg, rgba(4, 30, 52, 0) 0%, rgba(4, 30, 52, 0) 35%, rgba(4, 30, 52, 0.6) 70%, rgba(4, 30, 52, 0.95) 100%);
+  }
+}
+.lp-heroe-titulo {
+  width: 100%;
+}
+.lp-heroe-cuerpo .lp-heroe-rejilla {
+  align-items: start;
+}
+@media (min-width: 940px) {
+  .lp-heroe {
+    min-height: clamp(320px, 46vh, 500px);
+  }
+  .lp-heroe-titulo h1 {
+    max-width: 22ch;
+  }
+  .lp-heroe::after {
+    background: linear-gradient(180deg, rgba(4, 30, 52, 0) 0%, rgba(4, 30, 52, 0) 30%, rgba(4, 30, 52, 0.55) 65%, rgba(4, 30, 52, 0.92) 100%);
+  }
+  .lp-heroe-cuerpo .lp-heroe-texto {
+    padding-top: 8px;
+  }
+}

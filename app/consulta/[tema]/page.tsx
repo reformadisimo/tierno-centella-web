@@ -63,10 +63,15 @@ export default async function Landing({ params }: { params: Promise<{ tema: stri
           fetchPriority="high"
         />
         <VideoPortada />
+        <div className="contenedor lp-heroe-titulo">
+          <p className="lp-antetitulo">{l.antetitulo}</p>
+          <h1>{l.titulo}</h1>
+        </div>
+      </section>
+
+      <section className="lp-heroe-cuerpo">
         <div className="contenedor lp-heroe-rejilla">
           <div className="lp-heroe-texto">
-            <p className="lp-antetitulo">{l.antetitulo}</p>
-            <h1>{l.titulo}</h1>
             <p className="lp-sub">{l.subtitulo}</p>
             <ul className="lp-ventajas">
               {l.ventajas.map((v) => (
