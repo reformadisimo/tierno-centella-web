@@ -278,6 +278,30 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     ayudamos: 'La web nueva cuenta cada llamada, WhatsApp, formulario y conversación del chat, y te lo contamos en un informe sencillo cada semana.',
     ancla: '19',
   },
+  {
+    titulo: 'No sabes dónde va cada euro que inviertes',
+    icono: 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6',
+    hoyDato: 'A ciegas',
+    hoy: 'sin informes de anuncios, redes, SEO ni visitas',
+    luegoDato: 'Cada día',
+    luego: 'informes diarios, semanales y mensuales de todo',
+    visto: 'Hoy inviertes en Google Ads, y quizá en Instagram o Facebook, pero no hay un informe que diga qué campaña trae clientes, cuál no, qué mensaje funciona mejor ni cuánto te cuesta cada consulta.',
+    cuesta: 'Sin esos datos se sigue pagando lo que no funciona y no se refuerza lo que sí. Cada euro que no sabes dónde va es un euro que puede estar perdiéndose.',
+    ayudamos: 'Con nosotros sabrás dónde va cada euro: Analytics, SEO, Google Ads, Instagram y Facebook, con informes diarios, semanales y mensuales. Qué convierte, qué no, y lo que cambiamos para que rinda más.',
+    ancla: '19',
+  },
+  {
+    titulo: 'No sabes dónde va cada euro que inviertes',
+    icono: 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6',
+    hoyDato: 'A ciegas',
+    hoy: 'sin informes de anuncios, redes, SEO ni visitas',
+    luegoDato: 'Cada día',
+    luego: 'informes diarios, semanales y mensuales de todo',
+    visto: 'Hoy inviertes en Google Ads, y quizá en Instagram o Facebook, pero no hay un informe que diga qué campaña trae clientes, cuál no, qué mensaje funciona mejor ni cuánto te cuesta cada consulta.',
+    cuesta: 'Sin esos datos se sigue pagando lo que no funciona y no se refuerza lo que sí. Cada euro que no sabes dónde va es un euro que puede estar perdiéndose.',
+    ayudamos: 'Con nosotros sabrás dónde va cada euro: Analytics, SEO, Google Ads, Instagram y Facebook, con informes diarios, semanales y mensuales. Qué convierte, qué no, y lo que cambiamos para que rinda más.',
+    ancla: '19',
+  },
 ];
 
 function BloqueDolor() {

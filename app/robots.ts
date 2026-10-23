@@ -8,8 +8,8 @@ export default function robots(): MetadataRoute.Robots {
   if (DEMO) return { rules: [{ userAgent: '*', disallow: '/' }] };
   return {
     rules: [
-      { userAgent: '*', allow: '/', disallow: ['/api/', '/guia-jesus'] },
-      { userAgent: ['OAI-SearchBot', 'ChatGPT-User', 'PerplexityBot', 'Claude-SearchBot', 'Claude-User', 'Bingbot', 'Googlebot'], allow: '/', disallow: ['/api/', '/guia-jesus'] },
+      { userAgent: '*', allow: '/', disallow: ['/api/', '/guia-jesus', '/conversaciones'] },
+      { userAgent: ['OAI-SearchBot', 'ChatGPT-User', 'PerplexityBot', 'Claude-SearchBot', 'Claude-User', 'Bingbot', 'Googlebot'], allow: '/', disallow: ['/api/', '/guia-jesus', '/conversaciones'] },
     ],
     sitemap: `${BASE}/sitemap.xml`,
   };

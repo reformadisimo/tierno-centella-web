@@ -14,7 +14,7 @@ Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 e
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son ocho cosas que hoy te están costando clientes sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son nueve cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -532,11 +532,19 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **No pierde nada y te lo pasa todo**: la conversación se guarda mientras la persona navega, así que si pulsa una guía que le recomienda, el chat sigue ahí al volver. Y dentro del chat hay un botón **"Que te llamemos"**: deja su nombre y su teléfono, y al despacho le llega un correo con **toda la conversación**. Cuando la llaméis, ya sabréis su caso, su tema y su plazo, sin hacerle repetir nada. Las preguntas que sugiere cambian según la página (en despido, "¿Cuánto me corresponde?"; en incapacidad, "Me la han denegado, ¿qué hago?"), y si alguien escribe en inglés, contesta en inglés.
 
+**Al principio tendrá pocas conversaciones, y es normal.** Nos encantaría que este chat, que creemos que es estupendo, tuviera ya miles de conversaciones. Pero hay que darlo a conocer: que el SEO empiece a traer visitas, que las campañas de Google Ads y de Instagram lleven gente a la web. Poco a poco irá teniendo más, y esas conversaciones son de lo más valioso que vas a tener: **es cuando el cliente te cuenta su caso sin miedo**, con sus palabras, a cualquier hora, antes de atreverse a llamar.
+
+**Al principio tendrá pocas conversaciones, y es normal.** Nos encantaría que este chat, que creemos que es estupendo, tuviera ya miles de conversaciones. Pero hay que darlo a conocer: que el SEO empiece a traer visitas, que las campañas de Google Ads y de Instagram lleven gente a la web. Poco a poco irá teniendo más, y esas conversaciones son de lo más valioso que vas a tener: **es cuando el cliente te cuenta su caso sin miedo**, con sus palabras, a cualquier hora, antes de atreverse a llamar.
+
 **Cada conversación, guardada y aprovechada**: todas las conversaciones del chat se guardan en la base de datos de tu despacho, solo para vosotros y avisando a quien escribe. Las vemos como una hoja de cálculo: qué pregunta la gente, a qué hora, desde qué página, quién pidió que le llamarais. Eso nos sirve para tres cosas:
 
 - **Llamar sabiendo de qué va**: cuando alguien pide que le llaméis, ya tenéis su conversación delante.
 - **Hacerle seguimiento**: con su permiso, un correo al día siguiente, otro a la semana, como hacen las grandes herramientas de seguimiento de clientes (apartado 17). Nada de boletines que nadie lee: mensajes útiles a la persona adecuada.
 - **Mejorar cada día**: si muchos preguntan por bajas por ansiedad, escribimos esa guía; si el asistente contesta algo flojo, lo corregimos ese mismo día.
+
+**Y las puedes ver tú cuando quieras**: [aquí tienes todas las conversaciones del chat](/conversaciones?clave=HXq4Htivnx6V). Es una página privada, solo para ti: ves cada conversación con su fecha, la página desde la que escribieron y si pidieron que les llamarais, y puedes descargarlas en Excel.
+
+**Y las puedes ver tú cuando quieras**, en una página privada: [tus conversaciones del chat](/conversaciones). Entras con una contraseña que te damos aparte, ves cada conversación con su fecha, la página desde la que escribieron y si pidieron que les llamarais, y puedes descargarlas en Excel.
 
 **Acompaña sin presionar**: primero ayuda de verdad; después propone el siguiente paso que encaja (una herramienta si solo se está informando, llamar hoy si tiene un plazo corriendo). Una sola invitación por mensaje. Dentro del chat hay además botones fijos para llamar, escribir por WhatsApp o pedir que le llaméis.
 
