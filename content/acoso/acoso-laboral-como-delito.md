@@ -1,6 +1,6 @@
 ---
 titulo: El acoso laboral como delito
-descripcion: Cuándo el acoso laboral es delito según el artículo 173.1 del Código Penal: requisitos, penas, cómo denunciar, prescripción y compatibilidad con la vía laboral.
+descripcion: Cuándo el acoso laboral es delito según el artículo 173.1 del Código Penal: requisitos, penas, denuncia, prescripción y relación con la vía laboral.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

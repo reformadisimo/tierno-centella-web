@@ -1,6 +1,6 @@
 ---
 titulo: Dejar el trabajo por acoso sin perder tus derechos
-descripcion: Por qué no debes darte de baja voluntaria si sufres acoso y cómo pedir al juez la extinción del contrato con indemnización y paro. Y qué pasa si te despiden por denunciar.
+descripcion: Por qué no debes dimitir si sufres acoso, cómo pedir al juez la extinción del contrato con indemnización y paro, y qué pasa si te despiden por denunciar.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

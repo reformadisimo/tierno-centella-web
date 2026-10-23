@@ -1,6 +1,6 @@
 ---
 titulo: Cómo demostrar el acoso laboral
-descripcion: Qué pruebas sirven para demostrar el acoso laboral: diario de hechos, correos, WhatsApp, grabaciones, testigos, informes médicos, Inspección de Trabajo y pericial.
+descripcion: Qué pruebas sirven para demostrar el acoso laboral: diario de hechos, correos, WhatsApp, grabaciones, testigos, informes médicos e Inspección.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

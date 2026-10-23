@@ -1,6 +1,6 @@
 ---
 titulo: Acoso horizontal entre compañeros
-descripcion: Qué hacer si te acosan tus compañeros de trabajo, por qué la empresa responde si no actúa y cómo comunicarlo por escrito para que quede constancia y te proteja.
+descripcion: Qué hacer si te acosan tus compañeros de trabajo, por qué la empresa responde si no actúa y cómo comunicarlo por escrito para que quede constancia.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

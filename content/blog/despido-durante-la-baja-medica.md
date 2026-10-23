@@ -78,4 +78,4 @@ La readmisión en tu puesto, los salarios que dejaste de cobrar desde el despido
 
 ### ¿Sigo cobrando la baja después del despido?
 
-Sí. Si estás de baja cuando se extingue el contrato, sigues cobrando la prestación de incapacidad temporal mientras dure la baja.
+Sí. Si estás de baja cuando se extingue el contrato, sigues cobrando la incapacidad temporal mientras dure la baja. Si la baja es por enfermedad común, la cuantía pasa a ser la del paro y ese tiempo se descuenta del paro que te corresponda después.

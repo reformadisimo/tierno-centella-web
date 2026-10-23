@@ -1,6 +1,6 @@
 ---
 titulo: Baja por ansiedad o depresión por acoso laboral
-descripcion: Cómo conseguir que la baja por ansiedad o depresión causada por acoso se reconozca como accidente de trabajo, qué decir al médico y qué pasa si te despiden de baja.
+descripcion: Cómo lograr que la baja por ansiedad o depresión causada por acoso sea accidente de trabajo, qué decir al médico y qué pasa si te despiden de baja.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

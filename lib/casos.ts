@@ -96,7 +96,7 @@ export const CASOS: Caso[] = [
 export const JURISPRUDENCIA = [
   {
     titulo: 'Tres años de prisión a un alcalde por acoso laboral',
-    organo: 'Juzgado de lo Penal de Don Benito (Badajoz), 2021',
+    organo: 'Juzgado de lo Penal n.º 1 de Don Benito (Badajoz), 2020',
     texto:
       'Condenó al alcalde de Castuera por acoso laboral y lesiones al arquitecto municipal, con 33.100 euros de indemnización. Ejemplo de la vía penal del artículo 173.1 del Código Penal.',
     enlace: '/acoso-laboral/acoso-laboral-como-delito',

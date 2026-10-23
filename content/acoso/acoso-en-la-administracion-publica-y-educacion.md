@@ -1,6 +1,6 @@
 ---
 titulo: Acoso laboral en la administración pública y en educación
-descripcion: Qué puede hacer un funcionario, interino o personal laboral que sufre acoso en la administración o en un centro educativo: vías, protocolos, plazos y casos reales.
+descripcion: Qué puede hacer un funcionario, interino o personal laboral que sufre acoso en la administración o en un centro educativo: vías, protocolos y plazos.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

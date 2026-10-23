@@ -93,7 +93,7 @@ La incapacidad permanente la reconoce el INSS y se refiere a tu capacidad para t
 
 ### ¿La pensión de incapacidad paga IRPF?
 
-Las pensiones por incapacidad permanente absoluta y gran incapacidad están exentas de IRPF. La total y la parcial, en general, tributan, aunque hay excepciones. Conviene revisarlo con tu asesor.
+Las pensiones por incapacidad permanente absoluta y gran incapacidad están exentas de IRPF. La total y la parcial, en general, tributan. Conviene revisarlo con tu asesor.
 
 ### ¿El 75 % de la total cualificada es automático a los 55 años?
 

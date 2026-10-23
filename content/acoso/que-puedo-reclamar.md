@@ -1,6 +1,6 @@
 ---
 titulo: Qué puedes reclamar si sufres acoso laboral
-descripcion: Las vías para reclamar por acoso laboral: tutela de derechos fundamentales, extinción del contrato con indemnización, daños morales, responsabilidad del acosador y plazos.
+descripcion: Qué reclamar por acoso laboral: tutela de derechos fundamentales, extinción del contrato con indemnización, daños morales, acosador y plazos.
 fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: acoso

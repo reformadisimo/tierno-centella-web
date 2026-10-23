@@ -1,5 +1,5 @@
 ---
-titulo: El protocolo de acoso: qué es y qué exigir
+titulo: Qué exigir del protocolo de acoso
 descripcion: Qué es el protocolo de acoso, cuándo es obligatorio para la empresa, qué debe incluir, cómo activarlo y qué puedes hacer si no lo tiene o no lo aplica.
 fecha: 2026-10-23
 actualizado: 2026-10-23
