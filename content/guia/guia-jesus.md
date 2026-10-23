@@ -269,6 +269,39 @@ Medido con PageSpeed Insights (la herramienta oficial de Google) el 23 de octubr
 
 **Lo que no hace tanto como se dice**: comprar enlaces, repetir palabras clave o publicar artículos genéricos escritos sin cuidado. Google y las IA premian la experiencia real, y tú la tienes.
 
+## 13 bis. Cómo usamos Semrush y la IA para mejorar cada texto
+
+Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas veces al mes y quién sale por delante**. La IA nos ayuda a convertir eso en textos claros, completos y bien estructurados. Tú pones lo que nadie más tiene: la experiencia. Así trabajamos cada texto:
+
+1. **Elegimos la búsqueda.** Por ejemplo, "despido improcedente" se busca 18.100 veces al mes en España; "calcular paro", 6.600; "papeleta de conciliación", 1.900.
+2. **Miramos quién sale arriba** y qué responde, para hacerlo mejor y más claro.
+3. **Sacamos las preguntas reales** que hace la gente alrededor de esa búsqueda.
+4. **Escribimos** con la IA y con los datos del despacho, respondiendo primero en dos frases y después con detalle, preguntas frecuentes y fuentes.
+5. **Lo revisas tú** (o quien tú digas) antes de publicar.
+6. **Medimos** cada mes si sube, y lo reforzamos si no.
+
+**Lo que ya hemos aplicado hoy con los datos de Semrush**:
+
+| Lo que descubrimos | Lo que hemos hecho |
+| --- | --- |
+| "Con despido procedente/disciplinario ¿tengo derecho a paro?" suma más de 1.500 búsquedas al mes y es fácil de posicionar | Artículo nuevo: "¿Con un despido procedente o disciplinario tienes derecho a paro?" |
+| "Me han denunciado por acoso laboral y es mentira": búsqueda casi sin competencia, y tú tienes un caso así | Artículo nuevo con tu caso de acusaciones falsas desmontadas |
+| Mucha gente busca qué significa el aviso "tiene iniciado un expediente de incapacidad permanente" (unas 570 búsquedas al mes) | Artículo nuevo que lo explica y prepara para el tribunal médico |
+| "¿Te pueden despedir estando de baja?" se busca 2.900 veces al mes | Hemos ajustado el título del artículo a esa pregunta exacta |
+| "¿Se cobra el 100 % estando de baja por enfermedad común?", 1.900 al mes | Respuesta añadida en el artículo de la baja |
+| "¿Es obligatorio ir al SMAC en caso de despido?", 170 al mes | Respuesta añadida en el artículo de la papeleta |
+| Las calculadoras de indemnización suman más de 20.000 búsquedas al mes (muchas buscan la del Poder Judicial) | Título y descripción de tu calculadora reescritos para esas búsquedas |
+
+**Lo que tus competidores tienen y tú no** (búsquedas en las que salen García de la Santa o Abogados Durán y tú no): "indemnización por despido" (12.100 al mes), "despido objetivo" (5.400), "finiquito" (3.600), "te pueden despedir estando de baja" (2.900), "despido disciplinario tiene paro" (1.600), "despido objetivo causas" (1.600), "expediente Fogasa" (1.900). Todas están en el calendario o ya tienen página nueva.
+
+**Lo que haríamos cada mes con Semrush**:
+
+- Seguimiento de posiciones de tus 50 búsquedas clave, con aviso si alguna cae.
+- Recuento de en cuántas respuestas de IA de Google apareces.
+- Auditoría técnica de la web (enlaces rotos, páginas lentas, errores).
+- Nuevas preguntas que empieza a hacer la gente, para el calendario del mes siguiente.
+- Análisis de los enlaces de tus competidores, para conseguir los que te faltan.
+
 ## 14. El blog: qué hemos hecho con el antiguo
 
 Hemos revisado los 220 artículos de tu blog uno a uno:
