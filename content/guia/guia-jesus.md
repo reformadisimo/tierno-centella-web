@@ -203,7 +203,7 @@ Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la se
 
 ## 5. Tu ficha de Google: 4,2 con 59 reseñas
 
-Hemos leído las 59 reseñas una a una. Parecen un detalle, pero son lo primero que ve quien te busca: las estrellas salen antes que tu web, antes que tu experiencia y antes que tus sentencias. Y las IA también las leen.
+Hemos leído enteras las 59 reseñas de Google y hemos buscado en otras webs. Parecen un detalle, pero son lo primero que ve quien te busca: las estrellas salen antes que tu web, antes que tu experiencia y antes que tus sentencias. Y las IA también las leen.
 
 ### El resumen, en cifras
 
@@ -217,25 +217,48 @@ Hemos leído las 59 reseñas una a una. Parecen un detalle, pero son lo primero 
 
 En el último año y medio hay unas 35 reseñas de cinco estrellas y 8 de una. La ficha está viva: lo bueno pesa mucho más que lo malo. El problema es que lo malo **está sin contestar**.
 
+### Fuera de Google
+
+- **Facebook**: recomendado por el 100 % (5 opiniones).
+- **elAbogado.com**: una opinión, de cinco estrellas ("gracias a él he tenido un resultado justo").
+- **Infobel** repite las 59 de Google. En portales de empleo no hay opiniones reales.
+
+Así que la nota que de verdad ve la gente, y la que leen las IA, es la de Google.
+
 ### Lo que dicen los clientes contentos (44 de cinco estrellas)
 
-- **Trato humano y cercano**: "profesionalidad, cercanía", "me transmitieron mucha tranquilidad y confianza", "me sentí protegido y arropado".
-- **Especialistas de verdad en acoso**: varios llegaron después de pasar por otros despachos (uno, tras tres despachos en Gran Canaria) y notaron la diferencia desde la primera conversación.
-- **Resultados**: procedimientos ganados de prevención de riesgos por acoso, un despido improcedente con su finiquito, un cese de interinidad bien asesorado.
-- **Nombres propios**: te nombran a ti varias veces ("un trato espectacular y cercano"), a Irene ("no conozco mejor abogada laboral") y a Miriam.
-- **Rapidez**, cuando la hubo: "cuando se necesitan los servicios de un abogado, suele ser urgente".
+- **Trato humano y cercano**: "me transmitieron mucha tranquilidad y confianza", "me he sentido protegido y arropado", "empatía, sensibilidad y paciencia con mi situación y la de mi familia".
+- **Especialistas de verdad en acoso**: varios llegaron después de pasar por otros despachos. Una clienta, tras tres despachos en Gran Canaria, cuenta que en una llamada de cinco minutos contigo supo que quería que la representaras tú, y que antes de la cita le avisasteis de lo que costaba. **Eso es exactamente lo que hay que hacer siempre.**
+- **Resultados**: procedimientos de prevención de riesgos por acoso ganados y confirmados por el Tribunal Superior, una extinción del contrato por falta de medidas con daños y perjuicios, un despido con vulneración de derechos fundamentales, un caso de acoso en una universidad desde 2023.
+- **También como segunda opinión**: alguien con otro abogado pidió cita para reforzar su estrategia y salió con una nueva demanda.
+- **Nombres propios**: te nombran a ti muchas veces ("un trato espectacular y cercano", "una autoridad reconocida en este tema"), a Irene ("no conozco mejor abogada laboral") y a Miriam.
 
 ### Lo que dicen los descontentos (11 de una estrella)
 
-Casi ninguna habla del resultado del caso. Se repiten tres cosas, y las tres tienen arreglo:
+Las hemos leído enteras. Casi ninguna discute el resultado jurídico: se quejan de **cómo se sintieron tratados**. Por temas:
 
-1. **El precio y la "consulta gratuita"** (4 reseñas): "no es cierto que la primera consulta es gratuita", "solo les interesa sacarte los 180 euros". Lo provocaba la propia web antigua, que prometía una consulta gratis. **Ya está corregido en la web nueva**: el precio se dice claro antes de reservar.
-2. **Esperas y falta de respuesta** (3 reseñas): "estuvimos mes y medio llamando", "me quedé esperando la nueva cita", una consulta en agosto que se aplazó a septiembre y no se retomó.
-3. **Sensación de abandono después de la consulta** (1 reseña): "una vez te llaman se desentienden".
+| Qué cuentan | Cuántas | De cuándo |
+| --- | --- | --- |
+| **El precio les pilló por sorpresa**: creían que la consulta era gratis (lo decía la web antigua), o pagaron 150 € más IVA (unos 181 €) por una llamada de 10 a 20 minutos | 4 | de hace 4 años a hace 1 |
+| **No les contestaban**: mes y medio llamando, una cita que nunca se volvió a dar, una consulta de agosto que en febrero seguía sin fecha | 3 | hace 1 año |
+| **Contrataron por ti y les llevó otra persona**, con correos sin respuesta y un final tenso por una diferencia de honorarios | 1 | hace 5 meses |
+| **No están contentos con el resultado del juicio** | 2 | hace 7 meses |
+| Muy duras, sin detalles (una menciona a tu padre y habla de "afectados") | 2 | hace 1 y 2 años |
+| Sin texto | 1 | hace 1 año |
 
-Hay además tres reseñas muy duras sin detalles del caso y dos sin texto. Una menciona a tu padre: se contesta con calma, sin entrar.
+(Algunas reseñas tocan más de un tema; las contamos por el principal.)
 
-**Un aviso importante**: una de las reseñas de cinco estrellas parece escrita por alguien del equipo (el nombre coincide con el de una abogada del despacho). Google no permite reseñas de empleados y puede penalizar la ficha. Te recomendamos retirarla.
+**Lo que nos dicen entre líneas**:
+
+1. **Decir el precio siempre antes**, como se hizo con la clienta de Gran Canaria. La web nueva ya lo hace.
+2. **Contestar siempre, aunque sea para decir "esta semana no podemos"**. Un compromiso de respuesta en 48 horas laborables y un aviso claro en agosto evitan casi la mitad de las malas.
+3. **Si alguien te contrata a ti, que sepa desde el principio quién llevará el día a día** y que tú supervisas. Las expectativas claras evitan desilusiones.
+4. **Explicar bien qué incluye la consulta**: una hora, con documentos, y qué pasa después.
+
+**Dos avisos importantes**:
+
+- Una de las reseñas de cinco estrellas parece escrita por alguien del equipo (el nombre coincide con el de una abogada del despacho). Google no permite reseñas de empleados y puede penalizar la ficha. Te recomendamos retirarla.
+- Uno de los clientes descontentos cuenta que Google le retiró la reseña y la volvió a publicar. Denunciar reseñas negativas que no incumplen las normas suele salir peor: la persona se enfada más y la reseña vuelve. Lo que funciona es responder con calma.
 
 ### Por qué importa tanto llegar a 4,8
 
@@ -286,6 +309,14 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 **A quien se queja de que no le contestaron**
 
 > Hola, [nombre]. Tienes razón en que no te respondimos a tiempo, y lo sentimos. Hemos cambiado la forma de trabajar para contestar siempre en un máximo de 48 horas laborables. Si todavía podemos ayudarte, llámanos al 913 24 97 97 y te atendemos personalmente.
+
+**A quien no está contento con el resultado del juicio**
+
+> Hola, [nombre]. Sentimos de verdad que el resultado no fuera el que esperabas; sabemos lo que te jugabas. Por confidencialidad no podemos hablar del caso aquí, pero si quieres revisarlo con nosotros, llámanos al 913 24 97 97 y lo vemos con calma.
+
+**A quien contrató contigo y sintió que le llevaba otra persona**
+
+> Hola, [nombre]. Gracias por contarlo con tanto detalle. Trabajamos en equipo y yo superviso cada caso, pero entendemos que eso hay que explicarlo bien desde el primer día, y lo estamos haciendo. Siento que no lo vivieras así. Mi teléfono es el 913 24 97 97: me gustaría hablarlo contigo personalmente. Jesús Tierno.
 
 **A una reseña que habla de tu familia o de tu persona**
 
