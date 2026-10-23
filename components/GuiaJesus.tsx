@@ -274,13 +274,22 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
             <p className="etiqueta-calida">Hola, Jesús</p>
             <h2 id="gj-aviso-titulo">Bienvenido a tu guía</h2>
             <p>
-              Aquí te contamos tu web nueva sin tecnicismos. Cada apartado empieza con una foto y una frase; si quieres más, pulsa &quot;Ver el
-              detalle&quot;.
+              Aquí te contamos tu web nueva sin tecnicismos. Arriba tienes el <strong>índice</strong>; cada apartado empieza con una foto y una
+              frase, y si quieres más, pulsas &quot;Ver el detalle&quot;.
             </p>
-            <p>
-              <strong>Pregúntanos todo lo que quieras.</strong> Debajo de cada apartado puedes decirnos qué te parece y escribirnos: nos llega al
-              momento y te contestamos rápido. Y si prefieres hablarlo, una llamada de diez minutos y listo.
-            </p>
+            <ul className="gj-bienvenida-lista">
+              <li>
+                <strong>La guía está viva.</strong> Irá cambiando, y cada novedad te la contaremos aquí mismo, al entrar.
+              </li>
+              <li>
+                <strong>Pregúntanos lo que quieras</strong> debajo de cada apartado: nos llega al momento, y verás nuestras respuestas en la propia
+                guía, en &quot;Tus dudas, respondidas&quot;.
+              </li>
+              <li>
+                <strong>Todo online, para no quitarte tiempo.</strong> Sin reuniones ni llamadas innecesarias: tu tiempo es para tus clientes.
+                Nuestro objetivo es que tengas la máxima visibilidad y el máximo trabajo, ocupándote de nosotros lo menos posible.
+              </li>
+            </ul>
           </>
         ) : (
           <>

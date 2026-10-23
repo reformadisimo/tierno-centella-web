@@ -4766,3 +4766,12 @@ body:has(.guia-jesus) .barra-movil {
     padding-top: 8px;
   }
 }
+.gj-bienvenida-lista {
+  display: grid;
+  gap: 10px;
+  margin: 4px 0 18px;
+  padding-left: 20px;
+}
+.gj-bienvenida-lista li {
+  line-height: 1.45;
+}

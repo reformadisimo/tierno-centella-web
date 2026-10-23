@@ -54,9 +54,9 @@ Son objetivos de trabajo, no promesas: dependen de Google y de la constancia.
 3. Si te convence, los accesos del apartado 23 para medir y seguir mejorando.
 4. **Tu tiempo**: unas 3 o 4 horas repartidas en dos semanas para revisar las guías (te las podemos ir pasando por bloques), 15 minutos para los accesos y, si seguimos, unos 30 minutos a la semana para leer los artículos antes de publicarlos.
 
-> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online: nos escribes cuando te venga bien y te contestamos rápido. Y cuando algo se explica mejor hablando, una llamada o una videollamada de diez minutos y listo.
+> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online y por escrito: nos escribes cuando te venga bien y te contestamos rápido, sin reuniones ni llamadas que no hagan falta. Las novedades de la guía te las contamos aquí mismo, y las respuestas a tus dudas quedan en el apartado 24 bis. Y si algún día algo se explica mejor hablando, diez minutos y listo. **Nuestro objetivo es ese: que tengas la máxima visibilidad y el máximo trabajo, ocupándote de nosotros lo menos posible.**
 
-> **Y trabajamos al momento.** Con una agencia normal, lo sabemos todos, cualquier cambio tarda días, semanas y a veces meses: un ajuste en una campaña, un cambio en la imagen, un formulario nuevo. Nosotros no trabajamos así. Lo normal es que lo que nos pidas esté hecho **el mismo día**, muchas veces **en las tres o cuatro horas siguientes**. Lo más tarde, **24 a 48 horas**, y para nosotros eso ya sería tarde. Vale para todo: la web, los textos, las campañas, los formularios, las fotos, el chat.
+> **Y trabajamos al momento.** Con una agencia normal, lo sabemos todos, cualquier cambio tarda días, semanas y a veces meses: un ajuste en una campaña, un cambio en la imagen, un formulario nuevo. Nosotros no trabajamos así. Lo normal es que lo que nos pidas esté hecho **el mismo día**, muchas veces **en las tres o cuatro horas siguientes**. Lo más tarde, **24 a 48 horas**, y para nosotros eso ya sería tarde. Vale para todo: la web, los textos, las campañas, los formularios, las fotos, el chat. Y nada se queda quieto: medimos cada visita y mejoramos cada página y cada campaña de forma continua (apartado 19 bis). Para hacer todo esto harían falta 21 oficios distintos; nosotros lo hacemos con un solo equipo (apartado 8 bis).
 
 > Cualquier duda, por pequeña que sea, pregúntanos: para eso estamos. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
 
@@ -444,6 +444,36 @@ Salen del estudio de cómo trabajan los despachos que más clientes captan y de 
 
 - **Tu nota de Google en la web**: hoy es un 4,2, y enseñarla resta. La ponemos en cuanto lleguemos a 4,5 respondiendo las reseñas y pidiéndolas a cada cliente (apartado 5).
 - **Opiniones de clientes en la web**: el Código Deontológico exige su permiso por escrito. Cuando lo tengamos, las ponemos con nombre y foto.
+
+## 8 bis. Lo que hace falta para hacer esto: 21 oficios
+
+Una web como la tuya no la hace una persona. Si la encargaras como se hace normalmente, tendrías que contratar y coordinar a todos estos profesionales, cada uno por su lado:
+
+| # | Oficio | Qué ha hecho en tu web |
+| --- | --- | --- |
+| 1 | Diseño gráfico | La imagen, los colores, las fotos y el logo refinado |
+| 2 | Experiencia de usuario | Que quien llega angustiado encuentre en dos toques qué hacer y cómo hablar contigo |
+| 3 | Programación web | Una web rápida, segura y que funciona igual en cualquier móvil u ordenador |
+| 4 | Herramientas a medida | Las 14 calculadoras y tests |
+| 5 | Inteligencia artificial | El asistente que conoce toda tu web y atiende a cualquier hora |
+| 6 | Redacción jurídica divulgativa | Guías y artículos claros, con plazos y fuentes, sin jerga |
+| 7 | SEO de contenidos | Qué busca la gente y cómo lo busca, para escribir lo que de verdad se lee |
+| 8 | SEO técnico | Datos para Google, mapa de la web y las 220 direcciones antiguas redirigidas |
+| 9 | SEO local | Tu ficha de Google, los directorios y las reseñas |
+| 10 | Visibilidad en IA | Que ChatGPT, Gemini y Google te citen cuando alguien pregunta |
+| 11 | Campañas de Google Ads | Tus anuncios, sus palabras y lo que cuesta cada consulta |
+| 12 | Páginas de conversión | Las tres páginas para tus anuncios, pensadas para que llamen |
+| 13 | Fotografía y vídeo | Elegir, recortar y tratar tus fotos y vídeos para que luzcan y carguen rápido |
+| 14 | Análisis y medición | Contar cada llamada, WhatsApp y formulario, y saber de dónde viene |
+| 15 | Automatización | El seguimiento por correo de cada consulta |
+| 16 | Estudio de la competencia | Qué hacen y qué prometen los despachos que compiten contigo |
+| 17 | Legal y cumplimiento | Cookies, privacidad, la norma europea de IA y las reglas de publicidad de la Abogacía |
+| 18 | Redes sociales | Instagram, LinkedIn y Facebook con un mismo mensaje |
+| 19 | Pruebas y calidad | Velocidad, accesibilidad y pruebas en móvil, tableta y ordenador |
+| 20 | Dirección del proyecto | Que todo encaje y salga a tiempo |
+| 21 | Seguridad y mantenimiento | Alojamiento, copias de seguridad y versiones guardadas |
+
+**Normalmente serían varias empresas**: una agencia de diseño, un programador, una agencia de SEO, otra de anuncios, alguien para redes, un redactor... Cada una con sus plazos, sus reuniones y sus facturas, y tú en medio coordinando. **Nosotros lo hemos hecho todo con nuestro propio equipo**, más rápido y con todas las piezas hablando entre sí: lo que aprendamos en los anuncios mejora la web, lo que pregunte la gente al asistente se convierte en un artículo, y lo que veamos en los mapas de calor cambia la página al día siguiente.
 
 ## 9. Mujer y trabajo: el guiño que se convierte en servicio
 
@@ -843,6 +873,23 @@ Todo lo que no es imprescindible (Clarity, Analytics, Tag Manager) solo se activ
 
 **Por qué importa**: hasta ahora las decisiones sobre la web y los anuncios se toman a ciegas. Con las grabaciones, los mapas de calor y las cifras de cada semana sabremos **exactamente** qué funciona, mejoraremos cada página y cada campaña día a día, y cada cambio tendrá un porqué.
 
+## 19 bis. Mejora continua: tu web nunca se queda quieta
+
+Lo normal es que una agencia haga una web o una página para anuncios, la entregue y ahí se quede, igual durante años. **Nosotros no trabajamos así.** Para nosotros la web es el principio, no el final.
+
+**Cómo funciona**:
+
+1. **Medimos todo**: cuántas visitas llegan y de dónde, quién llama, quién escribe por WhatsApp, quién rellena el formulario y quién no.
+2. **Miramos cómo se mueve la gente**: con los mapas de calor y las grabaciones anónimas vemos dónde pulsa, hasta dónde lee, dónde duda y en qué punto abandona el formulario.
+3. **Cambiamos lo que no funciona**: si en el móvil nadie llega al botón de llamar, lo subimos; si un campo del formulario hace que la gente se vaya, lo quitamos; si un anuncio trae curiosos y no clientes, lo pausamos.
+4. **Comprobamos que ha mejorado**: con datos, no con opiniones. Y si no mejora, volvemos atrás.
+
+**Y así con todo**: las páginas de tus anuncios, las campañas de Google Ads, el SEO, el blog, el asistente, la ficha de Google y las redes. En cuanto nos des los accesos (apartado 23), trabajamos conectados a todas las herramientas, y cada mejora queda demostrada.
+
+**Informes cuando los quieras**: un vistazo diario si hay campaña activa, el informe semanal sencillo del apartado 19 y un resumen mensual con lo que hemos cambiado y lo que ha mejorado.
+
+**Una visión 360 y al momento**: todo conectado, todo medido y cada cambio hecho el mismo día. No hemos encontrado ninguna agencia, ni en Madrid ni en España, que ofrezca un servicio así a un despacho como el tuyo.
+
 ## 20. El logo, refinado (no sustituido)
 
 Hemos actualizado el logotipo **respetando su identidad, no sustituyéndola**. Conservamos el círculo azul con las iniciales TC, el nombre completo y la composición horizontal, para que siga siendo reconocible.
@@ -903,6 +950,16 @@ Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, la ficha d
 
 CUESTIONARIO
 
+## 24 bis. Tus dudas, respondidas
+
+Aquí irán apareciendo **tus preguntas y nuestras respuestas**, para que lo tengas todo en un mismo sitio y no tengas que buscar en el correo ni en el WhatsApp.
+
+Escríbenos debajo de cualquier apartado: nos llega al momento, te contestamos lo antes posible y la respuesta queda aquí, para ti.
+
+> Así trabajamos: **todo online y por escrito**, sin reuniones ni llamadas que no hagan falta. Nuestro objetivo es que tengas la máxima visibilidad y el máximo trabajo, y que te ocupes de nosotros lo menos posible. Tu tiempo es para tus clientes.
+
+*Todavía no nos has escrito ninguna pregunta.*
+
 ## 25. Y ahora, tú decides
 
 Jesús, **la web es tuya: te la regalamos**. Todo lo que ves (la web, las guías, las herramientas, el asistente, las páginas para tus anuncios, la medición y esta guía) te lo hemos hecho como amigos y no te vamos a cobrar nada por ello. Nos apetecía, porque creemos que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
@@ -920,6 +977,8 @@ Te contamos en qué estamos: **estamos montando una agencia de marketing**. Toda
 | Ficha de Google y reseñas | Responder reseñas y conseguir más, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
 | Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
 | Medición e informes | Un informe semanal sencillo: visitas, consultas, de dónde vienen y qué cambiamos |
+
+**Y mejorando cada semana**: nada se entrega y se olvida; medimos, cambiamos lo que no funciona y te lo demostramos con datos (apartado 19 bis). Todo con un solo equipo, en lugar de las cuatro o cinco empresas que harían falta normalmente (apartado 8 bis).
 
 **Y todo, al momento**: lo que nos pidas (un cambio en una campaña, en la web, en un formulario, en una foto) lo normal es tenerlo hecho el mismo día, muchas veces en tres o cuatro horas. Como muy tarde, en 24 a 48 horas. Nada de esperar semanas, como pasa con las agencias de siempre.
 
