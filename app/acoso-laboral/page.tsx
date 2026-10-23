@@ -68,7 +68,7 @@ export default function Acoso() {
       <section className="seccion seccion-blanca">
         <div className="contenedor">
           <h2>Todo lo que necesitas saber</h2>
-          <p>Guías escritas para quien lo está viviendo, revisadas por Jesús Tierno.</p>
+          <p>Guías escritas para quien lo está viviendo, con la experiencia de más de 25 años del despacho.</p>
           <div className="rejilla-guias">
             {guias.map((g) => (
               <Link key={g.slug} href={`/acoso-laboral/${g.slug}`}>

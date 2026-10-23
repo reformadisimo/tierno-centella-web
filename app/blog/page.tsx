@@ -1,15 +1,14 @@
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
-import Link from 'next/link';
 import { leerColeccion } from '@/lib/contenido';
+import BlogFiltro from '@/components/BlogFiltro';
+import { fotoDePieza } from '@/components/PaginaGuia';
 
 export const metadata: Metadata = meta({
   titulo: 'Blog de derecho laboral',
-  descripcion: 'Novedades y guías prácticas sobre despidos, acoso laboral e incapacidad permanente, revisadas por Jesús Tierno.',
+  descripcion: 'Novedades y guías prácticas sobre despidos, acoso laboral, incapacidad permanente y conciliación, explicadas sin jerga.',
   ruta: '/blog',
 });
-
-const NOMBRES: Record<string, string> = { acoso: 'Acoso laboral', despido: 'Despido', incapacidad: 'Incapacidad', empresas: 'Empresas' };
 
 export default function Blog() {
   const piezas = leerColeccion('blog').sort((a, b) => b.fecha.localeCompare(a.fecha));
@@ -23,17 +22,16 @@ export default function Blog() {
       </header>
       <section className="seccion">
         <div className="contenedor">
-          <div className="rejilla-guias">
-            {piezas.map((p) => (
-              <Link key={p.slug} href={`/blog/${p.slug}`}>
-                <span className="campo-ayuda">
-                  {NOMBRES[p.categoria ?? ''] ?? 'Laboral'} · {p.minutos} min
-                </span>
-                <strong>{p.titulo}</strong>
-                <span>{p.descripcion}</span>
-              </Link>
-            ))}
-          </div>
+          <BlogFiltro
+            piezas={piezas.map((p) => ({
+              slug: p.slug,
+              titulo: p.titulo,
+              descripcion: p.descripcion,
+              categoria: p.categoria ?? '',
+              minutos: p.minutos,
+              foto: fotoDePieza(p),
+            }))}
+          />
         </div>
       </section>
     </>
