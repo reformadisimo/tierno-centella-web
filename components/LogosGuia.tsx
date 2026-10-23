@@ -6,7 +6,7 @@ const FICHERO: Record<string, string> = {
   'Search Console': 'google-search-console.png',
   'Tag Manager': 'googletagmanager.svg',
   'Google Ads': 'google-ads-icono.png',
-  'Ficha de Google': 'google-business-profile.jpg',
+  'Ficha de Google': 'google-business-profile-icono.png',
   Semrush: 'semrush.svg',
   PageSpeed: 'pagespeedinsights.svg',
   Pingdom: 'pingdom.svg',
