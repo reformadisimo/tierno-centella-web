@@ -54,7 +54,11 @@ Son objetivos de trabajo, no promesas: dependen de Google y de la constancia.
 3. Si te convence, los accesos del apartado 23 para medir y seguir mejorando.
 4. **Tu tiempo**: unas 3 o 4 horas repartidas en dos semanas para revisar las guías (te las podemos ir pasando por bloques), 15 minutos para los accesos y, si seguimos, unos 30 minutos a la semana para leer los artículos antes de publicarlos.
 
-> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online: nos escribes cuando te venga bien y te contestamos rápido. Y cuando algo se explica mejor hablando, una llamada o una videollamada de diez minutos y listo. Cualquier duda, por pequeña que sea, pregúntanos: para eso estamos. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
+> **Cómo trabajamos**: de forma muy sencilla para ti. Nuestro trabajo es robarte el menor tiempo posible para que tú te dediques a lo tuyo, que es llevar tu despacho. La comunicación es prácticamente 100 % online: nos escribes cuando te venga bien y te contestamos rápido. Y cuando algo se explica mejor hablando, una llamada o una videollamada de diez minutos y listo.
+
+> **Y trabajamos al momento.** Con una agencia normal, lo sabemos todos, cualquier cambio tarda días, semanas y a veces meses: un ajuste en una campaña, un cambio en la imagen, un formulario nuevo. Nosotros no trabajamos así. Lo normal es que lo que nos pidas esté hecho **el mismo día**, muchas veces **en las tres o cuatro horas siguientes**. Lo más tarde, **24 a 48 horas**, y para nosotros eso ya sería tarde. Vale para todo: la web, los textos, las campañas, los formularios, las fotos, el chat.
+
+> Cualquier duda, por pequeña que sea, pregúntanos: para eso estamos. Al final de cada apartado puedes decirnos si te encanta, si tienes una duda o si no lo ves claro, y escribirnos lo que quieras: nos llega al momento y te contestamos. Nada más. Está escrita sin tecnicismos: si aparece una palabra rara, la explicamos en el apartado 2. Puedes leerla a trozos, buscar cualquier palabra en el buscador de arriba y, al final, contestar unas preguntas que nos ayudan a afinar.
 
 > Todo lo que ves es una **demostración**: la web nueva vive en una dirección de prueba, Google no la indexa y tu web actual sigue funcionando igual. No hemos tocado nada tuyo.
 
@@ -916,6 +920,8 @@ Te contamos en qué estamos: **estamos montando una agencia de marketing**. Toda
 | Ficha de Google y reseñas | Responder reseñas y conseguir más, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
 | Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
 | Medición e informes | Un informe semanal sencillo: visitas, consultas, de dónde vienen y qué cambiamos |
+
+**Y todo, al momento**: lo que nos pidas (un cambio en una campaña, en la web, en un formulario, en una foto) lo normal es tenerlo hecho el mismo día, muchas veces en tres o cuatro horas. Como muy tarde, en 24 a 48 horas. Nada de esperar semanas, como pasa con las agencias de siempre.
 
 **Lo único que va aparte**: los **vídeos profesionales** con equipo de grabación, si los quieres. Los vídeos sencillos para redes y los guiones entran en la cuota.
 
