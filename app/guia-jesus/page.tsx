@@ -29,6 +29,11 @@ const FUENTES: [string, string][] = [
   ['Adaptación de jornada tras el RDL 5/2023 (Lo Entiendo)', 'https://loentiendo.com/?p=72242'],
   ['Novedades laborales de marzo y abril de 2026, con las SSTS 62, 126, 159 y 169/2026 (Pérez-Llorca)', 'https://www.perezllorca.com/wp-content/uploads/2026/05/2603-2604-Newsletter-Laboral.pdf'],
   ['Semrush: datos de posicionamiento de tiernocentella.es y competidores (base de datos de España, 23/10/2026)', 'https://www.semrush.com/analytics/overview/?db=es&q=tiernocentella.es'],
+  ['BrightLocal, Local Consumer Review Survey 2026 (reseñas y confianza)', 'https://www.brightlocal.com/research/local-consumer-review-survey/'],
+  ['BrightLocal, estudio de visibilidad local en IA (septiembre de 2026)', 'https://www.brightlocal.com/research/local-ai-visibility-study/'],
+  ['Estatuto General de la Abogacía Española (RD 135/2021), arts. 19 y 20: publicidad', 'https://noticias.juridicas.com/base_datos/Laboral/692644-real-decreto-135-2021-de-2-de-marzo-por-el-que-se-aprueba-el-estatuto-general.html'],
+  ['Código Deontológico de la Abogacía Española (2019), arts. 5, 6 y 21', 'https://vlex.es/vid/codigo-deontologico-abogacia-174147'],
+  ['Ofertas de la competencia: Bufete Toro, Campmany, García de la Santa, Labormind, acoso-laboral.es y Arpa Legal (revisadas en octubre de 2026)', 'https://www.bufetetoro.com/abogados-laboralistas-madrid/'],
   ['Estudio de competencia: Bufete Toro, Campmany, García de la Santa, Jover Marben, Pedraza Laboral', 'https://www.bufetetoro.com/abogados-acoso-laboral-madrid/'],
 ];
 
@@ -52,6 +57,7 @@ const EXTRA: Record<string, Extra> = {
   '5': { foto: 'recepcion', frase: 'Tu ficha de Google es tu escaparate. Vamos a sacarle brillo.', grupo: 'hoy' },
   '6': { foto: 'equipo-pasillo', frase: 'Tienes muchas historias que contar. Las redes son el altavoz.', grupo: 'hoy' },
   '7': { foto: 'libros-derecho', frase: 'Mirar a los demás sirve para saber dónde brillar.', grupo: 'hoy' },
+  '7 bis': { foto: 'mujer-pensativa', frase: 'Todos dicen "gratis". Tú tienes algo mejor que contar.', grupo: 'hoy' },
   '8': { foto: 'despacho-mesa', frase: 'Una web pensada para quien lo está pasando mal en su trabajo.', grupo: 'web' },
   '9': { foto: 'reunion-equipo', frase: 'Un guiño a las trabajadoras que se convierte en servicio.', grupo: 'web' },
   '10': { foto: 'abogado-joven', frase: 'Como hablar con ChatGPT, pero de tu despacho.', grupo: 'web' },

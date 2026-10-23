@@ -117,7 +117,7 @@ Lo hemos medido todo el mismo día con las herramientas de Google y de Pingdom. 
 
 **Blog.** 220 artículos de 2016 a 2022. Casi la mitad (104) están fuera de tu especialidad (seguros, hipotecas, mercantil, divorcios) o se han quedado caducados (los ERTE de 2020). Hay errores de WordPress: una página que debería hablar de las bajas muestra un texto de cuentas bancarias; otra, de canales de denuncia, habla de horas extra; una entrada de la papelera sigue publicada.
 
-**Redes y otras webs.** Facebook y LinkedIn no están enlazados. Las dos cuentas de X están abandonadas (2017 y 2020). Hay dos páginas de empresa en LinkedIn y una web antigua, acosomoral.es, con un módulo de Twitter que no carga. Todo eso dispersa la marca.
+**Redes y otras webs.** Facebook y LinkedIn no están enlazados. Las dos cuentas de X están abandonadas (2017 y 2020). Hay dos páginas de empresa en LinkedIn y una web antigua, acosomoral.es, con un módulo de Twitter que no carga. Todo eso dispersa la marca. Y fuera de tu web hay más sitios que hablan del despacho y que hay que revisar: otra web, abogadoespecializadoenacosolaboral.com, que según una revisión externa menciona sedes en Madrid y Bilbao, y notas en medios como que.es o Majadahonda Magazin. Si alguno dice "consulta gratuita" o da datos distintos, **confunde a Google, a las IA y a tus futuros clientes**. Lo repasamos todo y lo dejamos igual en todas partes.
 
 **Test de viabilidad.** Pide datos antes de dar nada a cambio y no orienta: la persona no sabe qué le pasa ni qué plazo tiene.
 
@@ -219,9 +219,9 @@ Estar en el puesto 18 es estar en la segunda página, y casi nadie llega a la se
 2. **Los mismos datos en todas partes**: años de experiencia, precio, dirección y especialidades iguales en la web, la ficha de Google, LinkedIn y los directorios. Ante datos que no cuadran, la IA recomienda a otro.
 3. **Que te encuentre también Bing**, porque ChatGPT busca sobre todo ahí. Es darte de alta, y es gratis.
 4. **Dejar entrar a las IA en tu web** cuando la publiquemos, para que puedan leerla y citarte (la ficha especial para ellas, llms.txt, ya está hecha).
-5. **Que hablen de ti fuera de tu web**: entrevistas, colegios profesionales, universidades, artículos de Jesús en LinkedIn y directorios jurídicos. Semrush nos marca más de 3.000 sitios donde tus competidores aparecen y tú no.
+5. **Que hablen de ti fuera de tu web**: entrevistas, colegios profesionales, universidades, artículos de Jesús en LinkedIn y directorios jurídicos (elAbogado, Lawi, Mundojuridico, Iberley, el censo del Consejo General de la Abogacía y la ficha del Colegio), además de Bing Places y Apple Business Connect. Cuando una IA recomienda abogados, más de la mitad de las veces cita algún directorio. Semrush nos marca más de 3.000 sitios donde tus competidores aparecen y tú no.
 6. **Reseñas**: las IA también leen tu ficha de Google. Cada reseña nueva suma.
-7. **Medirlo cada mes** en el proyecto de Semrush que ya hemos creado. Semrush mide ChatGPT, Gemini y las respuestas de IA de Google; Claude no lo mide, pero lee las mismas fuentes, así que lo que funciona para los demás funciona para Claude.
+7. **Medirlo cada mes** en el proyecto de Semrush que ya hemos creado, y además con nuestras propias pruebas: unas 25 preguntas fijas ("mejor abogado de acoso laboral en Madrid", "abogado mobbing Madrid opiniones"...) repetidas varias veces en cada IA, porque la misma pregunta no da siempre la misma respuesta. Semrush mide ChatGPT, Gemini y las respuestas de IA de Google; Claude no lo mide, pero lee las mismas fuentes, así que lo que funciona para los demás funciona para Claude.
 
 > **Un estudio de la competencia completo**: lo hemos hecho internamente para diseñarte la mejor web posible (quién sale, qué ofrecen, qué precios y qué herramientas tienen, cómo les ven las IA). Si quieres, te lo preparamos por escrito para ti.
 
@@ -306,7 +306,7 @@ Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos d
 ### Cómo lo conseguimos
 
 - **Responder las 59**, empezando por las 11 negativas, con las plantillas de abajo. Lo podemos hacer nosotros, con tu visto bueno.
-- **Pedir la reseña en el mejor momento**: al ganar o cerrar un caso y después de una buena consulta. Con un enlace directo por WhatsApp y un código QR en la recepción.
+- **Pedir la reseña a todos los clientes**, al cerrar su asunto o después de la consulta, sin elegir solo a los contentos: Google prohíbe filtrar a quién se le pide. Con un enlace directo por WhatsApp y un código QR en la recepción.
 - **Arreglar lo que provoca las malas**: precio claro (hecho), respuesta en 48 horas laborables, aviso de vacaciones en agosto y el correo después de la consulta con el resumen y los siguientes pasos (apartado 17).
 - **Poner al día tu Perfil de Empresa de Google**, que también podemos hacer nosotros en una mañana:
   - Categoría principal "Abogado laboralista" (hoy es "Bufete") y secundarias de acoso, despidos e incapacidad.
@@ -322,7 +322,7 @@ Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos d
 
 > Antes de usarlas: la del precio, cuando hayamos quitado el "gratis" de la web actual y de los anuncios; y la del plazo de respuesta, cuando nos confirmes que te comprometes a esas 48 horas (pregunta del apartado 24).
 
-Responder a las reseñas, también a las malas, es lo que más confianza da a quien está decidiendo. Estas plantillas sirven tal cual; solo hay que cambiar el nombre. Nunca damos datos del caso.
+Responder a las reseñas, también a las malas, es lo que más confianza da a quien está decidiendo. Estas plantillas sirven tal cual; solo hay que cambiar el nombre. **Por el secreto profesional, ninguna confirma en público que esa persona fue cliente ni da datos de ningún asunto**: agradecen, lamentan la experiencia, explican cómo trabajáis y llevan la conversación al teléfono.
 
 **A una reseña de cinco estrellas**
 
@@ -338,11 +338,11 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 **A quien no está contento con el resultado del juicio**
 
-> Hola, [nombre]. Sentimos de verdad que el resultado no fuera el que esperabas; sabemos lo que te jugabas. Por confidencialidad no podemos hablar del caso aquí, pero si quieres revisarlo con nosotros, llámanos al 913 24 97 97 y lo vemos con calma.
+> Hola, [nombre]. Sentimos de verdad que te hayas llevado esta impresión. Por secreto profesional no podemos confirmar ni comentar ningún asunto en público, pero si quieres hablarlo con nosotros, llámanos al 913 24 97 97 y lo vemos con calma.
 
 **A quien contrató contigo y sintió que le llevaba otra persona**
 
-> Hola, [nombre]. Gracias por contarlo con tanto detalle. Trabajamos en equipo y yo superviso cada caso, pero entendemos que eso hay que explicarlo bien desde el primer día, y lo estamos haciendo. Siento que no lo vivieras así. Mi teléfono es el 913 24 97 97: me gustaría hablarlo contigo personalmente. Jesús Tierno.
+> Hola, [nombre]. Gracias por contarlo con tanto detalle. En el despacho trabajamos en equipo y yo superviso cada asunto, y entendemos que eso hay que explicarlo bien desde el primer día; lo estamos haciendo. Siento que te hayas llevado esa impresión. Mi teléfono es el 913 24 97 97: me gustaría hablarlo contigo personalmente. Jesús Tierno.
 
 **A una reseña que habla de tu familia o de tu persona**
 
@@ -375,6 +375,37 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 | Pedraza Laboral | Sentencias fechadas en portada | Visualmente pobre |
 
 **En una frase**: nadie en Madrid tiene a la vez una sentencia pionera, un libro, a Piñuel y herramientas para la víctima de acoso. Ese es tu hueco. Lo que te falta frente a ellos son **reseñas** y **constancia** en publicar.
+
+## 7 bis. Lo que prometen tus competidores (y lo que nunca copiaremos)
+
+Hemos repasado una a una las webs de los despachos que salen cuando alguien busca un abogado de acoso, despido o incapacidad en Madrid. Casi todos venden lo mismo: **"no arriesgas nada"**.
+
+| Despacho | Lo que ofrecen en su web |
+| --- | --- |
+| Bufete Toro | "Primera visita gratuita"; en incapacidad, "sólo cobramos si ganamos" con una aportación inicial |
+| Campmany | "Valorar mi caso gratis" |
+| García de la Santa | Primera consulta gratuita con cita previa |
+| Labormind | "Consulta gratuita" en el propio título de la página |
+| Ayala & González (acoso-laboral.es) | Primera consulta gratis y "solo cobramos si tú cobras" |
+| Arpa Legal | Consulta gratuita y "solo cobramos si ganamos" |
+
+**Tú cobras 150 € más IVA por la primera consulta. Y está bien**: es una hora de un especialista estudiando tu caso. Pero quien compara en el móvil ve "gratis" en cinco pestañas y "150 €" en la tuya. Si no le explicamos por qué merece la pena, se va. Y eso con los anuncios es peor, porque **pagas el clic y se lo lleva otro**.
+
+**Lo que proponemos** (lo decides tú):
+
+1. **Explicar muy bien qué incluye la consulta**: una hora, revisamos tus documentos, te decimos con sinceridad si tienes caso y te damos la hoja de ruta por escrito. Y si se descuenta de los honorarios cuando te contratan, decirlo bien grande (pregunta del apartado 24).
+2. **Una primera llamada corta sin coste**, de 5 a 10 minutos, solo para saber si el caso es de los vuestros y qué plazo corre. Sin estudiar documentos: eso ya es la consulta. Así competimos con el "gratis" sin regalar tu trabajo. Solo lo pondríamos en la web si nos dices que sí.
+3. **Ser el despacho del acoso laboral en Madrid**. En incapacidad, Campmany y Bufete Toro llevan años con su modelo de cobrar al ganar y estás en el puesto 27; en acoso estás en el 9, a un paso de la primera página, y nadie tiene tu historia. Ahí es donde más rápido podemos ganar. La incapacidad la trabajamos sobre todo cuando viene del acoso (bajas por ansiedad, depresión), salvo que quieras ofrecer también una parte a resultado.
+
+**Lo que nunca copiaremos**, porque el Estatuto General de la Abogacía y el Código Deontológico no lo permiten y porque no te hace falta:
+
+- Prometer resultados: "ganamos tu caso", "conseguimos la máxima indemnización".
+- Superlativos y porcentajes sin base: "Nº 1", "el mejor", "95 % de éxito". Los hemos visto en webs del sector.
+- Hablar de clientes o empresas sin su autorización por escrito.
+- Presionar a quien lo está pasando mal ("¡denuncia ya!").
+- Artículos pagados en medios que no digan que son publicidad.
+
+Todo lo de tu web nueva está escrito con ese cuidado: informa, da plazos y herramientas, y deja que la persona decida. Aun así, antes de publicar, **lo repasas tú**, que eres quien firma.
 
 ## 8. La web nueva, sección a sección
 
@@ -745,7 +776,11 @@ Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y puls
 
 **Cómo lo demostraremos**: con un experimento en Google Ads. Durante cuatro semanas, la mitad de los clics va a la página actual y la otra mitad a la nueva, y comparamos **cuánto cuesta cada consulta** en una y otra. Sin opiniones: con datos.
 
-**Lo que haríamos además en la campaña**: separar las búsquedas de incapacidad, acoso y despido en grupos distintos, cada uno con su página; quitar "gratis" y "gratuito"; y añadir como palabras negativas las búsquedas de información ("qué es", "ejemplos", "pdf", "oposiciones").
+**Lo que haríamos además en la campaña**: separar las búsquedas de incapacidad, acoso y despido en grupos distintos, cada uno con su página; poner el precio en el anuncio ("Consulta 150 € + IVA"), que quita curiosos y trae a quien de verdad quiere un abogado; una campaña de marca barata, para que nadie se anuncie con tu nombre; y una lista de palabras negativas desde el primer día:
+
+> gratis, gratuito, gratuita, de oficio, justicia gratuita, sindicato, CCOO, UGT, curso, máster, oposiciones, empleo, sueldo, prácticas, qué es, definición, wikipedia, pdf, modelo, plantilla, ejemplo, TFG, película, serie, Barcelona, Valencia (en la campaña de Madrid).
+
+Si decides ofrecer la llamada corta sin coste (apartado 7 bis), "gratis" deja de ser negativa y pasa a ser el reclamo, siempre explicando qué es gratis y qué no.
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 

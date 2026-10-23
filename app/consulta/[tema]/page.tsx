@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { meta } from '@/lib/seo';
 import { LANDINGS, landing } from '@/lib/landings';
-import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { DESPACHO, enlaceWhatsapp, lineaColegiado } from '@/lib/despacho';
 import FormularioLanding from '@/components/FormularioLanding';
 import ComprobadorIncapacidad from '@/components/ComprobadorIncapacidad';
 import TestAcoso from '@/components/TestAcoso';
@@ -240,6 +240,7 @@ export default async function Landing({ params }: { params: Promise<{ tema: stri
             <Link href="/">Web del despacho</Link>
           </p>
           <p className="lp-nota">La información de esta página es general y no sustituye al estudio de tu caso por un abogado.</p>
+          {lineaColegiado() && <p className="lp-nota">{lineaColegiado()}</p>}
         </div>
       </footer>
     </div>

@@ -18,7 +18,13 @@ export const DESPACHO = {
   precioCitaJesus: 250,
   // Las reseñas de Google indican que la consulta se cobra con IVA aparte. Confirmar con el despacho.
   iva: ' + IVA',
+  // El Código Deontológico (art. 21) obliga a identificar en internet el colegio y el número de colegiado.
+  // Pendiente de que nos lo confirme el despacho, p. ej. 'Colegiado en el ICAM, n.º 00.000'.
+  colegiado: '',
 };
+
+export const lineaColegiado = () =>
+  DESPACHO.colegiado || (DEMO ? 'Colegio y número de colegiado: pendiente de confirmar con el despacho' : '');
 
 export function enlaceWhatsapp(texto: string) {
   return `https://wa.me/${DESPACHO.whatsappNumero}?text=${encodeURIComponent(texto)}`;

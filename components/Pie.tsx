@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { DESPACHO } from '@/lib/despacho';
+import { DESPACHO, lineaColegiado } from '@/lib/despacho';
 import { REDES } from '@/lib/seo';
 
 export default function Pie() {
@@ -74,6 +74,7 @@ export default function Pie() {
         <p className="pie-legal">
           La información de esta web es orientativa y no sustituye el consejo de un abogado sobre tu caso concreto.
         </p>
+        {lineaColegiado() && <p className="pie-legal">{lineaColegiado()}</p>}
       </div>
     </footer>
   );

@@ -8,6 +8,7 @@ import Asistente from '@/components/Asistente';
 import AvisoCookies from '@/components/AvisoCookies';
 import AvisoSalida from '@/components/AvisoSalida';
 import Medicion from '@/components/Medicion';
+import SalidaRapida from '@/components/SalidaRapida';
 import JsonLd from '@/components/JsonLd';
 import { BASE, esquemaDespacho } from '@/lib/seo';
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Asistente />
         <AvisoCookies />
         <AvisoSalida />
+        <SalidaRapida />
         <Medicion />
       </body>
     </html>

@@ -38,5 +38,8 @@ export const PREGUNTAS_GUIA: PreguntaGuia[] = [
   { n: 34, bloque: 'Lo que haríamos contigo', pregunta: '¿Encendemos Clarity (mapas de calor y grabaciones anónimas)?', opciones: ['Sí', 'Todavía no', 'Quiero saber más'] },
   { n: 35, bloque: 'Lo que haríamos contigo', pregunta: '¿Dónde prefieres que esté alojada la web: en nuestra cuenta o a tu nombre?', opciones: ['En la vuestra', 'A mi nombre', 'No sé'] },
   { n: 36, bloque: 'Lo que haríamos contigo', pregunta: '¿Quieres el estudio de la competencia por escrito?', opciones: ['Sí', 'No', 'Más adelante'] },
+  { n: 38, bloque: 'Hasta dónde quieres llegar', pregunta: 'Si después de la consulta te contratan, ¿se descuenta lo que pagaron?', opciones: ['Sí, se descuenta', 'No', 'Depende del caso'], pista: 'Si es que sí, lo ponemos bien grande: es nuestro mejor argumento frente al "gratis" de la competencia' },
+  { n: 39, bloque: 'Hasta dónde quieres llegar', pregunta: '¿Ofreceríais una primera llamada corta sin coste (5-10 minutos) para saber si el caso es vuestro?', opciones: ['Sí', 'No', 'Lo hablamos'], pista: 'Sin estudiar documentos: eso sigue siendo la consulta de pago (apartado 7 bis)' },
+  { n: 40, bloque: 'Datos que hay que unificar', pregunta: '¿Tenéis sede o colaboración en Bilbao? ¿Y cuál es tu colegio y número de colegiado?', pista: 'La web debe mostrar el colegio y el número de colegiado (lo exige el Código Deontológico), y los datos deben ser iguales en todas partes' },
   { n: 37, bloque: 'Hasta dónde quieres llegar', pregunta: '¿Algo más que quieras contarnos o preguntarnos?', opcional: true },
 ];
