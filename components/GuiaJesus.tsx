@@ -1,5 +1,6 @@
 'use client';
 
+import { BloqueWeb, BloqueLandings } from './EnlacesGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
@@ -422,6 +423,8 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-velocidad': MockupVelocidad,
   'mock-aviso': MockupAvisoChat,
   'mock-informe': MockupInforme,
+  web: BloqueWeb,
+  landings: BloqueLandings,
 };
 
 function Contenido({ html }: { html: string }) {

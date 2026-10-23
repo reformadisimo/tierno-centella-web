@@ -5820,3 +5820,25 @@ dl .prosa-foto { margin: 28px 0; }
 
 .lg-por{margin:8px 0 0;padding:8px 10px;border-radius:8px;background:#eef3fa;color:#0d2c48;font-size:.92rem;line-height:1.45}
 .lg-por b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+
+/* Accesos directos de la guía a la web nueva y a las landings */
+.ew{margin:18px 0 22px}
+.ew a{text-decoration:none;color:inherit}
+.ew-grande,.ew-actual{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-radius:14px;background:#0d2c48;color:#fff!important;margin-bottom:14px}
+.ew-grande small,.ew-actual small{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.ew-grande strong,.ew-actual strong{display:block;font-size:1.15rem}
+.ew-grande em,.ew-actual em{display:block;font-style:normal;font-size:.88rem;opacity:.85}
+.ew-actual{background:#fff;color:#a8442c!important;border:2px dashed #a8442c;margin:14px 0 0}
+.ew-rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.ew-tarjeta,.ew-landing{display:flex;flex-direction:column;border:1px solid #d8e0ea;border-radius:12px;overflow:hidden;background:#fff;transition:transform .15s,box-shadow .15s}
+.ew-tarjeta:hover,.ew-landing:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(13,44,72,.12)}
+.ew-tarjeta img,.ew-landing img{width:100%;height:90px;object-fit:cover;display:block;margin:0}
+.ew-texto{display:flex;flex-direction:column;gap:2px;padding:9px 11px 11px}
+.ew-texto strong{display:flex;align-items:center;gap:4px;color:#0d2c48;font-size:.98rem;line-height:1.25}
+.ew-texto small{color:#5a6878;font-size:.8rem;line-height:1.3}
+.ew-landings{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.ew-landing img{height:130px}
+.ew-landing .ew-texto span{font-size:.9rem;color:#33414f}
+.ew-boton{margin-top:8px;align-self:flex-start;background:#a8442c;color:#fff;border-radius:999px;padding:7px 14px;font-size:.88rem}
+@media (max-width:420px){.ew-rejilla{grid-template-columns:1fr 1fr}.ew-tarjeta img{height:76px}}
+@media print{.ew img{display:none}}

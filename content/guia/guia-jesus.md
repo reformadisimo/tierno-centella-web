@@ -34,7 +34,7 @@ Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada d
 | Asistente que responde a cualquier hora | No | **Sí**, con todo el contenido de la web |
 | Sección para trabajadoras: embarazo, conciliación, acoso sexual | No | **Sí** |
 | Direcciones antiguas del blog redirigidas | | **Las 220**, una a una |
-| Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 páginas** hechas para convertir: incapacidad, acoso y despido (apartado 18 ter) |
+| Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 landings** hechas para convertir: [incapacidad](/consulta/incapacidad-permanente), [acoso](/consulta/acoso-laboral) y [despido](/consulta/despido) (apartado 18 ter) |
 | Medición | Analytics instalado | **Preparada para contar** cada llamada, WhatsApp, formulario y chat, con mapas de calor y grabaciones en cuanto des el visto bueno (apartado 19) |
 
 ###  Adónde te podemos llevar en un año
@@ -432,6 +432,10 @@ Hemos repasado una a una las webs de los despachos que salen cuando alguien busc
 Todo lo de tu web nueva está escrito con ese cuidado: informa, da plazos y herramientas, y deja que la persona decida. Aun así, antes de publicar, **lo repasas tú**, que eres quien firma.
 
 ## 8. La web nueva, sección a sección
+
+Pulsa cualquier tarjeta para verla: se abre en otra pestaña y no pierdes la guía.
+
+[[web]]
 
 - **Portada**: vídeo luminoso, tu especialidad en una frase, "¿Qué te está pasando?" con el contador de plazo, la sección Mujer y trabajo, tus casos, el equipo, las herramientas, los vídeos de Instagram y el blog.
 - **Acoso laboral**: 9 guías (cómo saber si es acoso, cómo demostrarlo, qué reclamar, baja por ansiedad, Administración y educación, vía penal...).
@@ -879,7 +883,7 @@ Para que lo veas con tus ojos: así se ven hoy tus anuncios, los de quienes comp
 
 **Lo que necesitamos**: acceso de lectura a Google Ads (no cambiamos nada sin tu permiso) y saber cuánto inviertes al mes. Con eso te diremos cuánto cuesta hoy cada consulta y cuánto podría costar.
 
-## 18 ter. Tres páginas nuevas para que tus anuncios conviertan
+## 18 ter. Tus tres landings: páginas nuevas para que tus anuncios conviertan
 
 Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y pulsa en "Tierno Centella Abogados - Abogados Laborales en Madrid" llega a la página de **acoso laboral** de la web actual, aunque viniera por un despido o una incapacidad. Y esa página tiene problemas que cuestan dinero en cada clic:
 
@@ -891,13 +895,11 @@ Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y puls
 | Formulario con correo y mensaje obligatorios y un menú completo arriba | Cada campo de más y cada enlace que saca de la página es una consulta menos |
 | La misma página para acoso, despido e incapacidad | Quien busca "incapacidad denegada" no se ve reflejado |
 
-**Lo que hemos creado**: tres páginas de aterrizaje, una por cada tipo de búsqueda que pagas. Están en la web nueva y no aparecen en Google (son solo para el tráfico de los anuncios):
+**Lo que hemos creado**: tres páginas de aterrizaje, una por cada tipo de búsqueda que pagas. Están en la web nueva y no aparecen en Google (son solo para el tráfico de los anuncios). Ábrelas desde aquí:
 
-- **Incapacidad permanente**: [abrir la página](/consulta/incapacidad-permanente) (la principal: de las búsquedas que anuncias, es la que más volumen tiene)
-- **Acoso laboral**: [abrir la página](/consulta/acoso-laboral)
-- **Despidos**: [abrir la página](/consulta/despido)
+[[landings]]
 
-**Compáralas tú mismo, mejor desde el móvil**: [tu página actual del anuncio](https://tiernocentella.es/abogados-acoso-laboral-o-mobbing/) frente a [la nueva de incapacidad](/consulta/incapacidad-permanente) y [la nueva de acoso](/consulta/acoso-laboral). En cinco segundos se ve la diferencia: qué entiendes nada más entrar, cuánto tienes que escribir para contactar y cuántas salidas hay que no llevan a ti.
+En cinco segundos se ve la diferencia: qué entiendes nada más entrar, cuánto tienes que escribir para contactar y cuántas salidas hay que no llevan a ti.
 
 **Por qué van a convertir mucho mejor** (cada decisión tiene un porqué):
 
