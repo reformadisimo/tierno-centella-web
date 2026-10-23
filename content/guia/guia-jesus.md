@@ -8,7 +8,7 @@ Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Se
 
 [[competencia]]
 
-García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú. Le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 14.000 dólares al mes. Tú tienes lo que ellos no tienen (la primera condena en España a empresa y acosador, en 2005, y años siendo la referencia en acoso), pero hoy **Google y las IA no lo saben**.
+García de la Santa, un despacho laboralista de Madrid como el tuyo, recibe **38 veces más visitas** que tú. Le llegan gratis; si tuviera que pagarlas en anuncios, le costarían unos 12.700 euros al mes. Tú tienes lo que ellos no tienen (la primera condena en España a empresa y acosador, en 2005, y años siendo la referencia en acoso), pero hoy **Google y las IA no lo saben**.
 
 Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 en julio a 239 en septiembre). Así está cada frente, y lo que haremos en cada uno:
 
@@ -716,7 +716,7 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 
 **Cómo funciona por dentro**: con **Resend**, la herramienta de envío de correos que usamos también en otros proyectos. La web avisa a Resend de que alguien ha entrado y de su tema, y Resend envía cada correo en su día, solo, sin que nadie tenga que acordarse. Los textos los redactamos nosotros y tú los revisas.
 
-**Coste**: el plan gratuito de Resend incluye 3.000 correos al mes, de sobra para empezar; el siguiente cuesta unos 20 dólares al mes (condiciones de octubre de 2026).
+**Coste**: el plan gratuito de Resend incluye 3.000 correos al mes, de sobra para empezar; el siguiente cuesta unos 18 euros al mes (condiciones de octubre de 2026).
 
 **Lo legal**: la persona lo acepta con una casilla clara (no viene marcada), cada correo lleva su enlace para darse de baja y la política de privacidad lo explica.
 
