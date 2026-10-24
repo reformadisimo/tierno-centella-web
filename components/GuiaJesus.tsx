@@ -3,6 +3,7 @@
 import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace } from './EnlacesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
+import CostesGuia from './CostesGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
@@ -467,6 +468,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'correos-enlace': BloqueCorreosEnlace,
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
+  costes: CostesGuia,
   web: BloqueWeb,
   landings: BloqueLandings,
 };

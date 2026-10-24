@@ -44,6 +44,7 @@ type Extra = { foto: string; frase: string; grupo: string; abierta?: boolean };
 
 // Dónde estás hoy y dónde podemos estar, en una línea, para los apartados donde hay algo que mejorar.
 const FRANJAS: Record<string, { hoy: string; luego: string }> = {
+  '25 bis': { hoy: 'Varios proveedores, varias facturas, y cada cambio con su presupuesto', luego: 'Una sola cuota: herramientas gratis y todo el trabajo incluido' },
   '4': { hoy: '18,3 segundos en cargar en el móvil, 49 sobre 100 y "consulta gratuita" que no lo es', luego: '3,2 segundos, 94 sobre 100 y el precio claro desde el principio' },
   '4 bis': { hoy: '239 visitas al mes desde Google (un 38 % menos que en julio) y 14 sobre 100 en las IA', luego: 'Objetivo a un año: unas 2.500 visitas al mes y más de 30 en las IA' },
   '5': { hoy: '4,2 estrellas, ninguna reseña contestada y el 31 % de la gente solo contrata con 4,5 o más', luego: 'Todas respondidas con tu aprobación, campañas de WhatsApp y camino del 4,8' },
@@ -103,6 +104,7 @@ const EXTRA: Record<string, Extra> = {
   '24': { foto: 'abogada-escucha', frase: 'Unas preguntas cortas para afinar. Contesta solo las que quieras.', grupo: 'seguir', abierta: true },
   '24 bis': { foto: 'abogada-sonrie', frase: 'Tus preguntas y nuestras respuestas, todo en un mismo sitio.', grupo: 'seguir', abierta: true },
   '25': { foto: 'jesus-retrato', frase: 'La web es tuya. Lo demás, cuando quieras.', grupo: 'seguir', abierta: true },
+  '25 bis': { foto: 'calculadora-papeles', frase: 'Una sola cuota. Todo lo demás, incluido.', grupo: 'seguir' },
   '26': { foto: 'libros', frase: 'De dónde sale cada dato.', grupo: 'seguir' },
 };
 

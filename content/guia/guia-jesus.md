@@ -1154,6 +1154,16 @@ Un abrazo,
 
 **Ignacio de la Rubia y el equipo**
 
+## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
+
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes... Sin facturas sueltas ni presupuestos por cada cambio.
+
+Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
+
+[[costes]]
+
+**Para ponerle cifras a tu ahorro** nos falta saber cuánto pagas hoy a quien te lleva la web, el SEO y los anuncios, y cuánto inviertes en ellos (preguntas 9, 10 y 18). Con eso te preparamos la comparación exacta, euro a euro.
+
 ## 26. Fuentes
 
 FUENTES
