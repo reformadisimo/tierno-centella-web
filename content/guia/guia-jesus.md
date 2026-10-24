@@ -333,15 +333,11 @@ Es uno de los objetivos más importantes de todo el plan, porque **casi todo el 
 
 ### Las cuentas, con los pies en el suelo
 
-Hoy tu media exacta es 4,17. Sin ninguna reseña negativa nueva, harían falta:
+Hemos contado una a una las reseñas de tu ficha (24 de octubre de 2026): **44 de cinco estrellas, 3 de cuatro, 1 de tres, ninguna de dos y 11 de una**.
 
-| Para que Google muestre | Reseñas nuevas de cinco estrellas |
-| --- | --- |
-| 4,5 | unas 31 |
-| 4,7 | unas 82 |
-| 4,8 | unas 137 |
+[[resenas]]
 
-Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos de un año. El 4,8 es una meta a dos o tres años, y se consigue con constancia, no con trucos: nunca reseñas falsas ni a cambio de nada, porque Google las borra y castiga la ficha.
+El 4,8 es una meta a dos años, y se consigue con constancia, no con trucos: nunca reseñas falsas ni a cambio de nada, porque Google las borra y castiga la ficha.
 
 ### No contestar también te resta
 
