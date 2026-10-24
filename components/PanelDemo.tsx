@@ -30,6 +30,7 @@ const CONECTADO: [string, string][] = [
   ['YouTube', 'Vídeos'],
   ['WhatsApp', 'Consultas'],
   ['Resend', 'Correos'],
+  ['Bing', 'Ficha y búsquedas'],
   ['Semrush', 'Posiciones e IA'],
   ['ChatGPT', 'Visibilidad IA'],
   ['PageSpeed', 'Velocidad'],
@@ -735,6 +736,27 @@ export default function PanelDemo() {
               </p>
             </Caja>
           </section>
+          <Caja titulo="Bing" fuente="Bing Webmaster Tools y Bing Places · cada día">
+            <div className="pn-tres pn-cuatro">
+              <div>
+                <b>96</b>
+                <small>visitas desde Bing este mes</small>
+              </div>
+              <div>
+                <b>11,7 %</b>
+                <small>de las búsquedas en ordenador en España</small>
+              </div>
+              <div>
+                <b>4</b>
+                <small>consultas desde Bing</small>
+              </div>
+              <div>
+                <b>3.º</b>
+                <small>en "abogado acoso laboral madrid"</small>
+              </div>
+            </div>
+            <p className="pn-nota-peq">Tu ficha de Bing, completa y enlazada a la web nueva. ChatGPT y Copilot buscan en Bing: estar arriba aquí también ayuda a que te recomienden.</p>
+          </Caja>
           <Caja titulo="Tus reseñas" fuente="Ficha de Google · hoy">
             <div className="pn-resenas">
               <p className="pn-ia-cifra">

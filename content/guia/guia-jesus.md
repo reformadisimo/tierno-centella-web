@@ -683,6 +683,18 @@ Nadie está libre de un ataque informático, y quien diga lo contrario no dice l
 
 **Lo que no hace tanto como se dice**: comprar enlaces, repetir palabras clave o publicar artículos genéricos escritos sin cuidado. Google y las IA premian la experiencia real, y tú la tienes.
 
+### Y también en Bing
+
+Google se lleva casi todas las búsquedas, pero no todas. **Bing tiene en España el 3,5 % de las búsquedas**, y en el ordenador sube al **11,7 %** (StatCounter, septiembre de 2026): es el buscador que viene de serie en los ordenadores con Windows y en Edge, así que lo usa mucha gente desde la oficina. Además, ChatGPT y Copilot buscan sobre todo en Bing, así que estar bien en Bing también ayuda a que las IA te recomienden. Hay que estar en todas partes.
+
+**Tu ficha en Bing ya existe**, pero está sin trabajar: aparece con una categoría genérica ("Servicios jurídicos en Madrid"), sin tu especialidad y enlazando a la web antigua.
+
+**Lo que haríamos**, incluido en la cuota:
+
+- **Reclamar y completar tu ficha de Bing** (Bing Places): categoría de abogado laboralista, especialidades, horario, fotos y el enlace a la web nueva. Se puede importar casi todo desde tu ficha de Google.
+- **Dar de alta la web en Bing Webmaster Tools**, el equivalente a Search Console, para que Bing la lea entera y saber con qué búsquedas sales.
+- **Campañas en Microsoft Advertising** (los anuncios de Bing), si quieres: se pueden copiar de Google Ads en minutos. Hay menos búsquedas, pero el clic suele salir bastante más barato. En Estados Unidos, en servicios jurídicos, cerca de un 46 % menos que en Google, y aunque convierte algo menos, cada consulta sale más barata (WordStream y Merkle, 2025-2026; en España aún no hay datos públicos fiables, así que lo mediríamos con una prueba pequeña).
+
 ## 13 bis. Cómo usamos Semrush y la IA para mejorar cada texto
 
 Semrush nos dice **qué busca la gente, con qué palabras exactas, cuántas veces al mes y quién sale por delante**. La IA nos ayuda a convertir eso en textos claros, completos y bien estructurados. Tú pones lo que nadie más tiene: la experiencia. Así trabajamos cada texto:
@@ -1127,9 +1139,11 @@ Tu web actual no se tira: todo su contenido aprovechable está dentro de la nuev
 
 ## 23. Los accesos que necesitamos (y cómo darlos)
 
+**Solo si quieres ir más allá.** Todo lo que ves en esta guía lo hemos hecho desde fuera, sin entrar en ninguna de tus cuentas. Si quieres que hagamos un estudio todavía más profundo y te digamos exactamente en qué situación estás (qué te traen hoy los anuncios, qué búsquedas te dan clientes, qué visitas se pierden), necesitamos estos accesos. Si no, no pasa nada: la web nueva y la guía siguen siendo tuyas.
+
 [[accesos]]
 
-Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, la ficha de Google y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras. **Las cuentas siguen siendo tuyas**: tú eres el propietario y nosotros, invitados. Si alguna hoy no está a tu nombre, lo primero que hacemos es ponerla a tu nombre.
+Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, las fichas de Google y de Bing y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras. **Las cuentas siguen siendo tuyas**: tú eres el propietario y nosotros, invitados. Si alguna hoy no está a tu nombre, lo primero que hacemos es ponerla a tu nombre.
 
 ## 24. Preguntas para ti
 

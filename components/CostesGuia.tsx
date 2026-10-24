@@ -47,7 +47,8 @@ const INCLUIDO: [string, string, string[]][] = [
     'SEO fuera de tu web: estrategia de enlaces, medios, universidades y colegios profesionales',
     'Elegir y negociar las notas de prensa, si decides comprarlas',
     'Directorios jurídicos con tus datos iguales en todas partes',
-    'Alta y cuidado en Bing y Apple, además de Google',
+    'Bing: tu ficha, Bing Webmaster Tools y, si quieres, anuncios en Microsoft Advertising',
+    'Alta y cuidado en Apple Maps, además de Google',
   ]],
   ['Que te recomienden las IA', 'M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z', [
     'Textos que ChatGPT, Gemini y Google puedan citar',
@@ -143,6 +144,7 @@ const NOCOBRAMOS = [
   'El SEO, con las herramientas de IA que más rinden',
   'Tu posicionamiento, vigilado cada día',
   'Tu ficha de Google al día',
+  'Tu ficha y tus campañas en Bing',
   'Que te recomienden las IA',
   'Un artículo de más',
   'Rediseñar el logo',

@@ -30,6 +30,8 @@ const FUENTES: [string, string][] = [
   ['Adaptación de jornada tras el RDL 5/2023 (Lo Entiendo)', 'https://loentiendo.com/?p=72242'],
   ['Novedades laborales de marzo y abril de 2026, con las SSTS 62, 126, 159 y 169/2026 (Pérez-Llorca)', 'https://www.perezllorca.com/wp-content/uploads/2026/05/2603-2604-Newsletter-Laboral.pdf'],
   ['Semrush: datos de posicionamiento de tiernocentella.es y competidores (base de datos de España, 23/10/2026)', 'https://www.semrush.com/analytics/overview/?db=es&q=tiernocentella.es'],
+  ['StatCounter: cuota de mercado de los buscadores en España, septiembre de 2026 (Bing 3,49 %; 11,72 % en ordenador)', 'https://gs.statcounter.com/search-engine-market-share/all/spain'],
+  ['Microsoft Ads frente a Google Ads: coste por clic y por conversión (resumen de WordStream y Merkle, 2026)', 'https://searchlab.nl/en/statistics/microsoft-ads-statistics-2026'],
   ['BrightLocal, Local Consumer Review Survey 2026 (reseñas y confianza)', 'https://www.brightlocal.com/research/local-consumer-review-survey/'],
   ['Skeepers, Informe de los consumidores 2025: el 89 % de los españoles consulta reseñas (ESdiario, 10/03/2025)', 'https://www.esdiario.com/economia/250310/154547/90-ciento-espanoles-leen-resenas-online-comprar.html'],
   ['BrightLocal, estudio de visibilidad local en IA (septiembre de 2026)', 'https://www.brightlocal.com/research/local-ai-visibility-study/'],
