@@ -1121,17 +1121,15 @@ El resultado sigue siendo Tierno Centella, pero con una imagen más definida y c
 
 **Y si algún día quieres ir más allá, también entra en la cuota.** Un rediseño del logo, cuando nos lo pidas, no se cobra aparte: está incluido en el servicio, como todo lo demás.
 
-## 21. Cómo se haría el cambio de web
+## 21. Cómo se haría el cambio: fácil, sin cortes y con todo bajo tu control
 
-Cuando quieras, y sin prisa:
+Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y si se pierden los anuncios?", "¿y si mi proveedor no me da las claves?". Por eso **el cambio lo llevamos nosotros**, paso a paso, y a ti solo te pedimos lo imprescindible: **unas dos horas en total, repartidas en un par de semanas**. Ni un solo día sin web, sin anuncios ni sin correo.
 
-1. Revisas los textos y nos dices qué cambiar.
-2. Elegimos dónde alojarla: en nuestra cuenta, gestionada por nosotros, o en una cuenta a tu nombre.
-3. Apuntamos tiernocentella.es a la web nueva. Las 220 redirecciones entran en funcionamiento ese mismo día.
-4. Quitamos el "no indexar" y avisamos a Google con el mapa del sitio.
-5. Vigilamos Search Console las primeras semanas por si algo se escapa.
+[[cambio]]
 
-Tu web actual no se tira: todo su contenido aprovechable está dentro de la nueva.
+**Tu web actual no se tira**: todo su contenido aprovechable ya está dentro de la nueva, y las 220 direcciones antiguas llevan a su página nueva, para que Google y tus clientes ni lo noten. **Tus campañas de Google Ads tampoco se tiran**: seguimos con la misma cuenta y todo su historial, que vale dinero.
+
+> **Una cosa que conviene mirar antes**: si con algún proveedor firmaste permanencia o un preaviso, lo respetamos y planificamos el cambio para esa fecha. Si no lo sabes, te ayudamos a revisarlo.
 
 ## 22. Plan de 30 días y cuánto tarda en notarse
 
