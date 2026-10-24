@@ -146,6 +146,30 @@ export default function CorreosAcoso() {
       </header>
 
       <div className="contenedor">
+        <section className="cj-dolor">
+          <div className="cj-dolor-hoy">
+            <small>Hoy</small>
+            <b>¿Le escribes algo a quien deja sus datos y no reserva?</b>
+            <span>
+              Si la respuesta es &quot;no&quot; o &quot;depende de quién lo coja&quot;, es muy probable que se estén yendo a otro despacho personas que ya te habían
+              elegido una vez. Nadie las pierde a propósito: simplemente, nadie tiene tiempo de acordarse de escribirles.
+            </span>
+          </div>
+          <div className="cj-dolor-luego">
+            <small>Con nosotros</small>
+            <b>Los escribimos, los enviamos y los medimos. Tú solo los apruebas.</b>
+            <span>
+              Preparamos una secuencia para cada tema (despido, acoso, incapacidad, Mujer y trabajo y empresas), la conectamos a tu web y a tu dominio, y cada
+              semana te contamos cuántas personas acaban en consulta gracias a ella.
+            </span>
+          </div>
+        </section>
+
+        <p className="cj-ejemplo">
+          <b>Esto es solo un ejemplo.</b> Los correos se hacen a tu medida: cuántos, cada cuánto, con qué tono, con tu firma o la del equipo, con tus vídeos y
+          tus casos. Si quieres menos correos, otro orden o hablar más de algo concreto, se cambia.
+        </p>
+
         <section className="cj-razones">
           <h2>Por qué funciona tan bien</h2>
           <p>
@@ -201,6 +225,17 @@ export default function CorreosAcoso() {
             </div>
           </div>
           <p>Probamos dos asuntos distintos en el mismo correo y nos quedamos con el que más se abre. Te lo contamos en el informe semanal.</p>
+        </section>
+
+        <section className="cj-servicio">
+          <h2>Todo esto entra en el servicio, sin que tengas que hacer nada</h2>
+          <p>
+            Escribir las secuencias, conectarlas a la web, enviarlas desde tu dominio, medir qué funciona y mejorarlas cada mes: lo hacemos nosotros, dentro
+            del servicio 360. Tú solo revisas los textos la primera vez.
+          </p>
+          <a className="boton boton-marcador" href="/guia-jesus#25-y-ahora-tu-decides">
+            Ver qué incluye el servicio
+          </a>
         </section>
 
         <section className="cj-legal">

@@ -833,7 +833,9 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 
 [[mock-correos]]
 
-**Te lo hemos preparado completo para tu tema estrella, el acoso laboral**: los ocho correos que recibiría una persona como Laura, con su texto, sus fotos, un vídeo tuyo y sus botones para llamar, escribir por WhatsApp o reservar.
+**¿Hoy le escribes algo a quien deja sus datos y no reserva?** Si no, es fácil que esa persona acabe en otro despacho. Nosotros escribimos estos correos, los enviamos y los medimos; tú solo los apruebas.
+
+**Te lo hemos preparado completo para tu tema estrella, el acoso laboral**: los ocho correos que recibiría una persona como Laura, con su texto, sus fotos, un vídeo tuyo y sus botones para llamar, escribir por WhatsApp o reservar. Es solo un ejemplo: los hacemos a tu medida.
 
 [[correos-enlace]]
 
