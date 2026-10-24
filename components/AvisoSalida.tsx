@@ -30,7 +30,17 @@ const CALCULOS = [
   { href: '/herramientas', texto: 'Todas' },
 ];
 
+// Para enseñarlo en una demostración: añadir ?salida=1 a la dirección lo muestra siempre.
+const demo = () => {
+  try {
+    return new URLSearchParams(location.search).get('salida') === '1';
+  } catch {
+    return false;
+  }
+};
+
 function puedeSalir(): boolean {
+  if (demo()) return true;
   try {
     if (!localStorage.getItem('tc-cookies')) return false;
     const ultima = Number(localStorage.getItem(CLAVE) || 0);
@@ -66,8 +76,8 @@ export default function AvisoSalida() {
     document.addEventListener('submit', enviado, true);
 
     const mostrar = (motivo: string) => {
-      if (hecho.current || Date.now() - inicio < 8000 || !puedeSalir()) return;
-      if (document.querySelector('.asistente-panel, .cookies')) return;
+      if (hecho.current || Date.now() - inicio < (demo() ? 1500 : 8000) || !puedeSalir()) return;
+      if (document.querySelector('.asistente-panel') || (!demo() && document.querySelector('.cookies'))) return;
       hecho.current = true;
       try {
         localStorage.setItem(CLAVE, String(Date.now()));
@@ -90,7 +100,7 @@ export default function AvisoSalida() {
       const alto = document.documentElement.scrollHeight - window.innerHeight;
       if (alto > 0) maxLeido = Math.max(maxLeido, y / alto);
       const velocidad = (ultimaY - y) / Math.max(1, t - ultimaT);
-      if (window.innerWidth < 900 && maxLeido > 0.4 && velocidad > 2.5 && Date.now() - inicio > 25000) mostrar('movil');
+      if (window.innerWidth < 900 && maxLeido > (demo() ? 0.1 : 0.4) && velocidad > 2.5 && Date.now() - inicio > (demo() ? 3000 : 25000)) mostrar('movil');
       ultimaY = y;
       ultimaT = t;
     };
@@ -174,6 +184,15 @@ export default function AvisoSalida() {
               </a>
               <a href={enlaceWhatsapp('Hola, quiero consultar mi caso.')} onClick={() => elegir('whatsapp')}>
                 Escribir por WhatsApp
+              </a>
+              <a
+                href="#lp-herramienta"
+                onClick={() => {
+                  elegir('herramienta landing');
+                  setVisible(false);
+                }}
+              >
+                {ruta.includes('incapacidad') ? 'Comprobar qué grado me corresponde' : ruta.includes('acoso') ? 'Hacer el test: ¿es acoso?' : 'Calcular mi indemnización'}
               </a>
             </div>
             <div className="salida-fila">

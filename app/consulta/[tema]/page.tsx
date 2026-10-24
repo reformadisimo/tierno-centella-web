@@ -123,7 +123,7 @@ export default async function Landing({ params }: { params: Promise<{ tema: stri
         </div>
       </section>
 
-      <section className="seccion lp-herramienta">
+      <section className="seccion lp-herramienta" id="lp-herramienta">
         <div className="contenedor lp-estrecho">
           <h2>{l.herramientaTitulo}</h2>
           <p>{l.herramientaTexto}</p>

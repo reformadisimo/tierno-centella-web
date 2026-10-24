@@ -6125,3 +6125,14 @@ a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-
   .sg-hoy small{color:#a8442c}
   .sg-luego small{color:#17602f}
 }
+
+/* Buscador grande de la guía */
+.gj-buscador{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #0d2c48;border-radius:14px;padding:6px 8px 6px 14px;margin:0 0 8px;color:#0d2c48;box-shadow:0 6px 18px rgba(13,44,72,.08)}
+.gj-buscador input{flex:1;min-width:0;border:0;outline:0;font-size:1.05rem;padding:10px 4px;background:transparent;color:#0d2c48}
+.gj-buscador:focus-within{box-shadow:0 0 0 4px rgba(27,111,209,.18)}
+.gj-buscador button{border:0;background:#eef3fa;color:#0d2c48;font-weight:700;border-radius:10px;padding:8px 12px;cursor:pointer}
+.gj-buscador-res{margin:0 0 8px;font-weight:700;color:#0d2c48}
+.gj-buscador-sugerencias{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+.gj-buscador-sugerencias button{border:1px solid #d5dde7;background:#fff;color:#33414f;border-radius:999px;padding:6px 12px;font-size:.88rem;cursor:pointer}
+.gj-buscador-sugerencias button.activo,.gj-buscador-sugerencias button:hover{background:#0d2c48;color:#fff;border-color:#0d2c48}
+.gj-buscador input::-webkit-search-cancel-button{display:none}

@@ -852,7 +852,7 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 **Por dónde entra la gente** (ya está montado en la web nueva):
 
 - **Todos los formularios**: el de contacto y los de las páginas de anuncios. Si deja su correo y marca la casilla, entra en el seguimiento de su tema.
-- **El aviso de salida**: cuando alguien va a irse sin haber hecho nada, le ofrecemos un último paso útil: ir a su tema (despido, acoso, incapacidad, embarazo), calcular su indemnización o su paro, preguntar al chat, llamar o recibir por correo los pasos para su caso. Sale como mucho una vez por semana y nunca en las páginas de anuncios.
+- **El aviso de salida**: cuando alguien va a irse sin haber hecho nada, le ofrecemos un último paso útil: ir a su tema (despido, acoso, incapacidad, embarazo), calcular su indemnización o su paro, preguntar al chat, llamar o recibir por correo los pasos para su caso. Sale como mucho una vez por semana. En las páginas de anuncios sale una versión que no saca a nadie de la página: que le llamemos, WhatsApp, la herramienta de esa misma página o el chat.
 
 **Lo que recibe** (ejemplo para incapacidad; cada tema tiene el suyo):
 
