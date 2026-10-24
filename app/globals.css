@@ -6767,7 +6767,9 @@ section.pn-caja{margin-bottom:12px}
 .mg-todo li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:9px 12px;font-size:.94rem}
 .mg-todo li b{color:#fff}
 .mg-todo-pie{margin:12px 0 0!important;color:#b9cde3;font-size:.86rem!important;line-height:1.5}
-.mg-cuatro{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px}
+.mg-cuatro{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.mg-cuatro{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.mg-cuatro{grid-template-columns:1fr}}
 .mg-cuatro>div{background:#fff;border:1px solid #e3e8ee;border-top:4px solid #0d2c48;border-radius:12px;padding:12px 14px}
 .mg-cuatro>div:first-child{border-top-color:#b3261e}
 .mg-cuatro>div:nth-child(2){border-top-color:#1b6fd1}

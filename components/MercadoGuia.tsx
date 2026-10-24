@@ -17,7 +17,7 @@ const UNA_VEZ: Fila[] = [
   { que: 'Montar un CRM a medida', rango: 'desde 5.000 €', tipico: 5000, nota: 'Conectado a tus formularios, con plazos de laboral e informes. Fuera de España, uno básico a medida parte de unos 24.000 dólares.', fuente: 'RaftLabs, 2026, y estimación nuestra' },
 ];
 
-const eur = (n: number) => `${n.toLocaleString('es-ES')} €`;
+const eur = (n: number) => `${String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.')} €`;
 
 export default function MercadoGuia() {
   const totalMes = MES.reduce((s, f) => s + f.tipico, 0);
