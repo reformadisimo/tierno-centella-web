@@ -284,3 +284,35 @@ export function MockupResenaWhatsApp() {
     </div>
   );
 }
+
+export function MockupCorreos() {
+  const correos: [string, string, string, boolean][] = [
+    ['Ahora', 'Hemos recibido tu consulta, Ana', 'Te llamará un abogado en 48 horas laborables. Precio de la consulta, sin sorpresas.', true],
+    ['Mañana', 'Los pasos si te han denegado la incapacidad', 'Qué informes reunir y cómo es el tribunal médico.', true],
+    ['En 3 días', 'Tu plazo: 30 días hábiles', 'Calcula aquí hasta qué día tienes para la reclamación previa.', false],
+    ['En 1 semana', 'Quién te defendería y cómo trabajamos', 'El equipo, cómo es la primera consulta y qué dicen los clientes.', false],
+    ['En 2 semanas', 'Un caso parecido al tuyo', 'Cómo lo resolvimos, y una invitación a hablarlo.', false],
+  ];
+  return (
+    <div className="gm-rejilla">
+      <Movil tono="bien" titulo="Lo que ve Ana en su correo después de dejar sus datos: cada mensaje llega solo, en su día, con Resend y desde tu dominio. (Ejemplo para incapacidad.)">
+        <div className="mk-bandeja">
+          <p className="mk-correo-barra">Recibidos</p>
+          {correos.map(([cuando, asunto, texto, nuevo]) => (
+            <div key={asunto} className={`mk-bandeja-fila${nuevo ? ' nuevo' : ''}`}>
+              <span className="mk-bandeja-avatar">TC</span>
+              <span className="mk-bandeja-texto">
+                <span className="mk-bandeja-cabeza">
+                  <b>Tierno Centella Abogados</b>
+                  <small>{cuando}</small>
+                </span>
+                <b className="mk-bandeja-asunto">{asunto}</b>
+                <small>{texto}</small>
+              </span>
+            </div>
+          ))}
+        </div>
+      </Movil>
+    </div>
+  );
+}

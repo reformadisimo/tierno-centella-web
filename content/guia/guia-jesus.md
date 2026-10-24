@@ -14,7 +14,7 @@ Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son diez cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son once cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -825,9 +825,13 @@ Las sentencias son lo que más autoridad da a una web de abogados, ante Google, 
 
 **Una pregunta importante para ti**: en las fichas de sentencias hemos puesto tu foto, porque eres la cara del despacho. Si algún caso lo llevó otra abogada o abogado del equipo, dínoslo y ponemos su nombre y su foto: es justo y además da confianza. Te lo preguntamos también en el apartado 24.
 
-## 17. Del formulario a la consulta: el seguimiento por correo
+## 17. Del formulario a la consulta: correos que acompañan a cada contacto
 
 Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vuelve a saber de ti. Muchas consultas no se pierden porque la persona diga que no, sino porque nadie le vuelve a escribir. Lo que proponemos no es una newsletter: es un **acompañamiento**, un correo en el momento justo según su caso, con su permiso.
+
+**Cómo es el camino de un cliente** hasta que te contrata: te encuentra en Google o en un anuncio, lee una guía o usa una herramienta, deja sus datos (o se va a comparar con otros despachos)... y decide. Ese "decide" puede tardar días o semanas. **En cuanto deja su correo, empezamos a acompañarle** con una serie de correos que preparamos para su tema, enviados con Resend desde tu dominio, para que cuando decida, te elija a ti.
+
+[[mock-correos]]
 
 **Por dónde entra la gente** (ya está montado en la web nueva):
 
@@ -844,7 +848,7 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 | A la semana | Cómo trabajamos, quién le defendería y lo que dicen los clientes |
 | A las 2 semanas | Un caso real parecido al suyo y una invitación a la consulta |
 | Durante 3 meses | Un correo al mes con algo útil (un cambio de ley, una sentencia), por si ahora sí es el momento |
-| Después de la consulta | Un resumen de los siguientes pasos y, si quedó contento, el enlace para dejar una reseña |
+| Después de la consulta | Un resumen de los siguientes pasos y el enlace para dejar su opinión en Google (a todos, sin filtrar: es lo que exige Google) |
 
 **Así sería el primer correo** (ejemplo para alguien con una incapacidad denegada):
 

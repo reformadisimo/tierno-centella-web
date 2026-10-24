@@ -5905,3 +5905,13 @@ a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-
 .rg-amable{background:#fff8ec;border:1px solid #f1dfb8;border-radius:12px;padding:14px 16px;color:#4a3a1a}
 .rg-amable p{margin:0 0 8px}
 .rg-amable p:last-child{margin:0}
+
+.mk-bandeja{display:flex;flex-direction:column;background:#fff;height:100%}
+.mk-bandeja-fila{display:grid;grid-template-columns:30px minmax(0,1fr);gap:8px;padding:9px 10px;border-bottom:1px solid #eef1f4}
+.mk-bandeja-fila.nuevo{background:#f2f7fd}
+.mk-bandeja-avatar{width:30px;height:30px;border-radius:50%;background:#0d2c48;color:#fff;font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+.mk-bandeja-texto{display:flex;flex-direction:column;gap:1px;min-width:0}
+.mk-bandeja-cabeza{display:flex;justify-content:space-between;gap:6px;font-size:.72rem;color:#33414f}
+.mk-bandeja-cabeza small{color:#1a73e8;white-space:nowrap}
+.mk-bandeja-asunto{font-size:.78rem;color:#0d2c48;line-height:1.25}
+.mk-bandeja-texto>small{font-size:.7rem;color:#5a6878;line-height:1.3}

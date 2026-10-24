@@ -7,7 +7,7 @@ import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
 import OficiosGuia from './OficiosGuia';
 import { BloqueAccesos, BloqueConexiones, BloquePrompts, BloqueRedes } from './LogosGuia';
-import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupResenaWhatsApp, MockupVelocidad } from './MockupsGuia';
+import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupCorreos, MockupResenaWhatsApp, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
   id: string;
@@ -290,6 +290,18 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     ancla: '11',
   },
   {
+    titulo: 'Quien te escribe y no contrata, se pierde',
+    icono: 'M4 4h16v16H4zM4 6l8 7 8-7',
+    hoyDato: '0 correos',
+    hoy: 'después de que alguien deja sus datos o se va sin decidirse',
+    luegoDato: '7 correos',
+    luego: 'en el momento justo, según su caso, durante su decisión',
+    visto: 'Hoy, cuando alguien rellena el formulario o se va de la web sin reservar, no vuelve a saber del despacho hasta que alguien le llama, si le llaman.',
+    cuesta: 'Muchas consultas no se pierden porque digan que no, sino porque nadie les vuelve a escribir mientras comparan con otros despachos. Y alguna acaba en una reseña de "no me contestaron".',
+    ayudamos: 'En cuanto deja sus datos, recibe por correo, con Resend y desde tu dominio, una serie de mensajes que preparamos para su tema: el acuse al momento, sus pasos, su plazo, cómo trabajáis y un caso parecido. Tú revisas los textos y medimos cuántos acaban en consulta.',
+    ancla: '17',
+  },
+  {
     titulo: 'No sabes de dónde vienen tus clientes',
     icono: 'M12 20V10M18 20V4M6 20v-4',
     hoyDato: 'Sin medir',
@@ -394,6 +406,7 @@ const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; 
   { area: 'Reseñas', color: 'ambar', hoy: '4,2 con 59 reseñas: 44 de cinco estrellas, pero 11 de una sin contestar.', haremos: 'Responderlas todas con tu aprobación, pedirlas por WhatsApp al cerrar cada caso y llegar a 4,5.' },
   { area: 'Blog', color: 'rojo', hoy: 'Parado desde 2022, con temas que no son tuyos.', haremos: 'Tres artículos a la semana sobre lo que de verdad busca la gente.' },
   { area: 'Redes sociales', color: 'ambar', hoy: 'Instagram con buenos vídeos pero un parón de 2021 a 2024; dos cuentas de X abandonadas.', haremos: 'Un ritmo constante, reels con tus casos y LinkedIn para colegios e instituciones.' },
+  { area: 'Seguimiento de cada contacto', color: 'rojo', hoy: 'Quien deja sus datos o se va sin decidirse no vuelve a saber de ti.', haremos: 'Una serie de correos automáticos con Resend, según su tema, desde que deja sus datos hasta la consulta.' },
   { area: 'Saber de dónde vienen tus clientes', color: 'rojo', hoy: 'No se mide.', haremos: 'Cada llamada, WhatsApp y formulario con su origen, y un informe sencillo cada semana.' },
 ];
 
@@ -437,6 +450,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-aviso': MockupAvisoChat,
   'mock-informe': MockupInforme,
   'mock-resena': MockupResenaWhatsApp,
+  'mock-correos': MockupCorreos,
   resenas: ResenasGuia,
   web: BloqueWeb,
   landings: BloqueLandings,
