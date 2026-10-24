@@ -4,6 +4,7 @@ import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, Bloq
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
 import CostesGuia from './CostesGuia';
+import MercadoGuia from './MercadoGuia';
 import TodoGuia from './TodoGuia';
 import SeguridadGuia from './SeguridadGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -482,6 +483,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'correos-enlace': BloqueCorreosEnlace,
   'panel-enlace': BloquePanelEnlace,
   'crm-enlace': BloqueCrmEnlace,
+  mercado: MercadoGuia,
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
   costes: CostesGuia,

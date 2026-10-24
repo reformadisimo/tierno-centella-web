@@ -1206,9 +1206,17 @@ Un abrazo,
 
 ## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
 
-Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
 
 Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
+
+### Lo que te costaría por separado
+
+Para que veas lo que de verdad estás comparando: esto es lo que se cobra en el mercado por cada cosa, si la contratas a un proveedor distinto. **Suma mucho más que nuestra cuota, y nuestra cuota lo incluye todo**: también la web nueva y el CRM, que ya tienes hechos.
+
+[[mercado]]
+
+### Qué entra exactamente
 
 [[costes]]
 
