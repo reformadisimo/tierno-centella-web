@@ -18,6 +18,7 @@ const GRATIS: [string, string][] = [
   ['Mapas de calor y grabaciones (Clarity)', 'Para ver cómo se mueve la gente por tu web'],
   ['Redes sociales', 'Instagram, LinkedIn, Facebook y TikTok, sin anuncios'],
   ['Reseñas', 'Responderlas y pedirlas no cuesta nada'],
+  ['Sin plugins ni licencias', 'Formularios, calculadoras, cookies, SEO y chat están programados dentro de la web: nada que comprar'],
   ['El alojamiento de la web', 'En nuestro servidor. Puedes dejar de pagar el alojamiento actual, conservando tu dominio y tu correo'],
 ];
 
@@ -28,7 +29,8 @@ const INCLUIDO: [string, string, string[]][] = [
     'Páginas nuevas cuando las necesites (un servicio, una campaña, un caso)',
     'Herramientas nuevas: calculadoras, tests, comprobadores',
     'Velocidad vigilada: que siga cargando en unos 3 segundos en el móvil',
-    'Seguridad, copias de seguridad y versiones guardadas para volver atrás',
+    'Seguridad, sin plugins que actualizar ni licencias que pagar',
+    'Cada versión de la web guardada: volver a la de hace un mes en minutos',
     'Que funcione en todos los móviles, tabletas y navegadores',
     'Accesibilidad: que la pueda usar todo el mundo',
     'La versión en inglés, al día',
@@ -122,6 +124,7 @@ const COMO: [string, string, string, string][] = [
   ['Redes sociales', 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z', 'Buenos vídeos, pero a ratos: tres años de silencio en Instagram y dos cuentas de X abandonadas.', 'Calendario, guiones, montaje de tus vídeos y publicación constante en Instagram, LinkedIn, Facebook y TikTok.'],
   ['Datos e informes', 'M3 3v18h18M7 15l4-4 3 3 5-6', 'No sabes de dónde viene cada cliente ni dónde va cada euro.', 'Cada llamada, WhatsApp y formulario con su origen, e informes diarios, semanales y mensuales.'],
   ['Tu tiempo', 'M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z', 'Coordinar a varios proveedores, repetir lo mismo a cada uno y perseguir cada cambio.', 'Una sola persona de contacto. Tú apruebas; nosotros hacemos todo lo demás.'],
+  ['Seguridad', 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z', 'WordPress con su panel abierto, plugins que actualizar y licencias que pagar. Si te hackean, días para limpiarlo.', 'Sin WordPress ni plugins. Cada versión de la web guardada: volvemos a la de hace un mes en minutos.'],
   ['Tu dinero', 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6', 'Varias facturas, presupuestos por cada cambio y sin saber qué rinde.', 'Una sola cuota, herramientas gratis y cada euro medido.'],
 ];
 

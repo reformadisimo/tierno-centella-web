@@ -14,7 +14,7 @@ Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son doce cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son trece cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -629,7 +629,7 @@ Todas las cifras de las calculadoras están comprobadas a mano con casos de ejem
 
 **Y siempre se pueden crear nuevas**: si en el despacho os preguntan mucho por algo (cuánto se cobra de baja por ansiedad, qué pasa con las vacaciones durante una baja, cuánto tiempo puede durar un ERTE...), lo convertimos en una herramienta. Dinos cuál echas de menos.
 
-## 12. Velocidad y notas de Google
+## 12. Velocidad, seguridad y notas de Google
 
 La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu teléfono, y Google lo nota. Lo hemos medido con las dos herramientas que más se usan: **PageSpeed Insights**, la nota oficial de Google, y **Pingdom**, que cronometra lo que tarda en cargar.
 
@@ -657,6 +657,16 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 **En resumen**: la web nueva carga en la mitad de tiempo, pesa bastante menos (1,0 MB frente a 1,8) y hace un tercio de las peticiones.
 
 **¿Por qué 18 segundos en un sitio y 3 en otro?** PageSpeed simula un móvil normal con una conexión normal; Pingdom mide desde un ordenador con una conexión muy rápida. Las dos dicen lo mismo: la nueva va mucho más rápida (casi seis veces en PageSpeed, el doble en Pingdom). En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
+
+### Y mucho más segura
+
+Nadie está libre de un ataque informático, y quien diga lo contrario no dice la verdad. Pero no todas las webs son igual de fáciles de atacar, ni igual de fáciles de arreglar.
+
+[[seguridad]]
+
+**Aquí no se compran plugins.** En WordPress, casi todo es un plugin que hay que instalar, actualizar y muchas veces pagar cada año: los formularios, las calculadoras, el aviso de cookies, el SEO, el chat, las copias de seguridad. En la web nueva todo eso lo programamos nosotros dentro de la propia web. No depende de nadie de fuera y no hay que pagar ninguna licencia.
+
+**En la práctica**: cada vez que cambiamos algo, la versión anterior queda guardada con su fecha. Si un día algo no está bien, sea un error nuestro o un ataque, ponemos la web como estaba en el momento que elijas.
 
 **Y lo que queda por pulir**: al publicarla en tu dominio, el SEO sube a 100. Las fotos y el vídeo ya se guardan en el navegador de cada visita, así que la segunda vez va todavía más rápida.
 

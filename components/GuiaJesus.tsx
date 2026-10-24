@@ -4,6 +4,7 @@ import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace } from './EnlacesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
 import CostesGuia from './CostesGuia';
+import SeguridadGuia from './SeguridadGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
@@ -217,6 +218,18 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     visto: 'Hemos medido tu web con las herramientas de Google y de Pingdom: en el móvil tarda más de 18 segundos en enseñar lo importante.',
     cuesta: 'Quien busca un abogado con prisa no espera tanto: se vuelve a Google y entra en el siguiente. Google, además, coloca peor a las webs lentas.',
     ayudamos: 'La web nueva ya carga en unos 3 segundos y saca 94 de velocidad. Este punto ya está resuelto.',
+    ancla: '12',
+  },
+  {
+    titulo: 'Tu web está más expuesta de lo que parece',
+    icono: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+    hoyDato: 'WordPress',
+    hoy: 'con su panel abierto, plugins que actualizar y licencias que pagar',
+    luegoDato: 'Cada versión',
+    luego: 'guardada: volver a la web de hace un mes en minutos',
+    visto: 'Tu web actual está hecha con WordPress, como muchas. Es el sistema que más se ataca en internet: tiene un panel de entrada conocido por todos y depende de plugins de terceros que hay que actualizar sin parar (y muchos se pagan cada año).',
+    cuesta: 'Un plugin sin actualizar basta para que entren. Y si entran, limpiar un WordPress hackeado lleva días, cuesta dinero y mientras tanto la web puede caerse o enseñar cosas que no son tuyas. Nadie está libre de un ataque, pero no todas las webs son igual de fáciles de atacar.',
+    ayudamos: 'La web nueva no tiene panel de WordPress ni plugins: no hay nada que actualizar ni licencias que pagar. Cada cambio queda guardado, así que podemos volver a la web de hace un mes, tres o cuatro en unos minutos. Si algo pasa, se arregla en el momento.',
     ancla: '12',
   },
   {
@@ -469,6 +482,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
   costes: CostesGuia,
+  seguridad: SeguridadGuia,
   web: BloqueWeb,
   landings: BloqueLandings,
 };
