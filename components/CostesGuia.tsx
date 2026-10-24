@@ -129,6 +129,21 @@ const COMO: [string, string, string, string][] = [
   ['Tu dinero', 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6', 'Varias facturas, presupuestos por cada cambio y sin saber qué rinde.', 'Una sola cuota, herramientas gratis y cada euro medido.'],
 ];
 
+const NOCOBRAMOS = [
+  'Responder tus reseñas',
+  'Las campañas de WhatsApp para pedir reseñas',
+  'Los correos de seguimiento',
+  'Cada cambio en la web',
+  'Una calculadora o herramienta nueva',
+  'Una página para una campaña',
+  'Un artículo de más',
+  'Rediseñar el logo',
+  'Un banner, un carrusel o un diseño',
+  'Montar tus vídeos',
+  'Un informe extra',
+  'Conectar una red o una herramienta nueva',
+];
+
 const SEMANA: [string, string[]][] = [
   ['Cada día', ['Revisamos las campañas de anuncios', 'Leemos las consultas y las conversaciones del chat', 'Vigilamos que la web funcione y cargue rápido', 'Te pasamos las respuestas a las reseñas nuevas para tu visto bueno', 'Aviso inmediato si pasa algo importante']],
   ['Cada lunes', ['Informe de la semana en tu móvil: visitas, consultas y de dónde vienen', 'Lo que hemos cambiado y por qué', 'El plan de la semana']],
@@ -177,6 +192,26 @@ export default function CostesGuia() {
           </p>
           <p>Las herramientas son gratis, los cambios en la web no se cobran aparte y no hay sorpresas a final de mes.</p>
         </div>
+      </div>
+
+      <div className="cs-promesa">
+        <p className="cs-promesa-pregunta">&quot;¿Y luego me cobraréis aparte por…?&quot;</p>
+        <p className="cs-promesa-no">No.</p>
+        <p className="cs-promesa-texto">
+          Cobramos una sola cuota y está <b>absolutamente todo incluido</b>. Puedes soñar y pedirnos lo que quieras: te lo haremos.
+        </p>
+        <ul className="cs-promesa-lista">
+          {NOCOBRAMOS.map((x) => (
+            <li key={x}>
+              <span>{x}</span>
+              <b>Incluido</b>
+            </li>
+          ))}
+        </ul>
+        <p className="cs-promesa-pie">
+          Lo único que no es nuestro: lo que decidas invertir en anuncios (lo pagas tú directamente a Google o a Meta), el uso del asistente de IA si sigue
+          (unos pocos euros al mes) y los vídeos profesionales con equipo de grabación, si un día los quieres.
+        </p>
       </div>
 
       <div className="cs-como">

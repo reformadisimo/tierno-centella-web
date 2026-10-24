@@ -1156,6 +1156,8 @@ Te contamos en qué estamos: **estamos montando una agencia de marketing**. Toda
 
 **Y todo, al momento**: lo que nos pidas (un cambio en una campaña, en la web, en un formulario, en una foto) lo normal es tenerlo hecho el mismo día, muchas veces en tres o cuatro horas. Como muy tarde, en 24 a 48 horas. Nada de esperar semanas, como pasa con las agencias de siempre.
 
+**Y no te cobraremos luego por nada más.** Ni por responder tus reseñas, ni por una página nueva, ni por rediseñar el logo, ni por una calculadora. Solo la cuota, con absolutamente todo incluido: puedes soñar y pedirnos lo que quieras, que te lo haremos.
+
 **Lo único que no hacemos es grabar vídeos.** Sí entran en la cuota las ideas y los guiones, las indicaciones para grabarlos bien con el móvil y el montaje (cortes, subtítulos y portada) para redes y para la web. Si quieres un vídeo profesional con equipo de grabación, trabajamos con una agencia audiovisual que te lo hace aparte.
 
 Para ajustarte la cuota a lo que de verdad necesitas, nos ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparamos una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
