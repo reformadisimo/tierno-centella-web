@@ -6136,3 +6136,13 @@ a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-
 .gj-buscador-sugerencias button{border:1px solid #d5dde7;background:#fff;color:#33414f;border-radius:999px;padding:6px 12px;font-size:.88rem;cursor:pointer}
 .gj-buscador-sugerencias button.activo,.gj-buscador-sugerencias button:hover{background:#0d2c48;color:#fff;border-color:#0d2c48}
 .gj-buscador input::-webkit-search-cancel-button{display:none}
+
+.gj-buscador-caja{background:linear-gradient(135deg,#0d2c48,#17456f);border-radius:18px;padding:20px 20px 14px;margin:0 0 20px;color:#fff}
+.gj-buscador-titulo{margin:0;font-size:1.35rem;font-weight:800;color:#fff}
+.gj-buscador-texto{margin:2px 0 12px;color:#cfe0f2;font-size:.98rem}
+.gj-buscador-caja .gj-buscador{border-color:#f5c04a;margin-bottom:10px}
+.gj-buscador-caja .gj-buscador-res{color:#f5c04a}
+.gj-buscador-caja .gj-buscador-sugerencias{margin:0;align-items:center}
+.gj-buscador-sugerencias>span{color:#cfe0f2;font-size:.85rem;margin-right:2px}
+.gj-buscador-caja .gj-buscador-sugerencias button{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+.gj-buscador-caja .gj-buscador-sugerencias button.activo,.gj-buscador-caja .gj-buscador-sugerencias button:hover{background:#f5c04a;color:#3a2a00;border-color:#f5c04a}

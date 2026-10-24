@@ -872,6 +872,9 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
         </div>
       </aside>
       <div className="gj-cuerpo">
+        <div className="gj-buscador-caja">
+        <p className="gj-buscador-titulo">¿Buscas algo concreto?</p>
+        <p className="gj-buscador-texto">Escribe una palabra y te enseñamos solo los apartados que hablan de ello. Es la forma más rápida de leer la guía.</p>
         <div className="gj-buscador" role="search">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3" />
@@ -880,7 +883,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Busca en la guía: reseñas, precio, anuncios, correos, TikTok..."
+            placeholder="Por ejemplo: reseñas, precio, TikTok..."
             aria-label="Buscar en la guía"
           />
           {q && (
@@ -897,11 +900,13 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
           </p>
         )}
         <div className="gj-buscador-sugerencias">
-          {['Reseñas', 'Precio', 'Anuncios', 'Correos', 'Seguridad', 'Inglés', 'Redes'].map((t) => (
+          <span>Lo más buscado:</span>
+          {['Reseñas', 'Precio', 'Anuncios', 'Correos', 'Seguridad', 'IA', 'Inglés'].map((t) => (
             <button key={t} type="button" onClick={() => setQ(t.toLowerCase())} className={busca === normal(t) ? 'activo' : ''}>
               {t}
             </button>
           ))}
+        </div>
         </div>
         {busca.length >= 2 && <span id="indice" />}
         {busca.length < 2 && (
