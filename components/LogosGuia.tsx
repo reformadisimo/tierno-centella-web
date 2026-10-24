@@ -21,6 +21,7 @@ const FICHERO: Record<string, string> = {
   TikTok: 'tiktok.png',
   ChatGPT: 'openai.svg',
   Gemini: 'googlegemini.svg',
+  Bing: 'bing.svg',
 };
 
 export function Logo({ nombre, tam = 28 }: { nombre: string; tam?: number }) {
@@ -97,7 +98,7 @@ const ACCESOS: { nombre: string; logos: string[]; para: string; como: string; pe
   { nombre: 'Google Ads', logos: ['Google Ads'], para: 'Ver cuánto cuesta cada consulta y proponer mejoras', como: 'Herramientas > Acceso y seguridad > añadir nuestro correo con acceso de solo lectura', permiso: 'Solo lectura' },
   { nombre: 'Search Console', logos: ['Search Console'], para: 'Ver búsquedas y redirecciones', como: 'Configuración > Usuarios y permisos > añadir usuario', permiso: 'Solo lectura' },
   { nombre: 'Ficha de Google', logos: ['Ficha de Google'], para: 'Responder reseñas y publicar', como: 'Perfil de Empresa > Gestores > añadir gestor', permiso: 'Gestor' },
-  { nombre: 'Bing (ficha, Webmaster Tools y anuncios)', logos: [], para: 'Mejorar tu ficha en Bing y, si quieres, anunciarte allí', como: 'Bing Places y Bing Webmaster Tools: añadir nuestro correo como usuario. Microsoft Advertising, solo si hacemos campañas', permiso: 'Gestor' },
+  { nombre: 'Bing (ficha, Webmaster Tools y anuncios)', logos: ['Bing'], para: 'Mejorar tu ficha en Bing y, si quieres, anunciarte allí', como: 'Bing Places y Bing Webmaster Tools: añadir nuestro correo como usuario. Microsoft Advertising, solo si hacemos campañas', permiso: 'Gestor' },
   { nombre: 'Dominio tiernocentella.es', logos: [], para: 'Hacer el cambio de web', como: 'Nos dices dónde está contratado y lo hacemos contigo', permiso: 'Contigo' },
   { nombre: 'Instagram, Facebook y LinkedIn', logos: ['Instagram', 'Facebook', 'LinkedIn'], para: 'Programar, anunciar y medir (si quieres)', como: 'Meta Business Suite y administrador de la página de LinkedIn', permiso: 'Si quieres' },
 ];

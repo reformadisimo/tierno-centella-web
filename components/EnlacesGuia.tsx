@@ -119,3 +119,18 @@ export function BloquePanelEnlace() {
     </div>
   );
 }
+
+export function BloqueCrmEnlace() {
+  return (
+    <div className="ew">
+      <a className="ew-grande" href="/guia-jesus/crm" target="_blank" rel="noopener">
+        <span>
+          <small>Ejemplo · datos inventados</small>
+          <strong>Ver cómo sería tu CRM</strong>
+          <em>Las consultas entrando solas, de dónde viene cada una, los plazos vigilados y qué canal te trae clientes. Puedes tocarlo todo. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
+    </div>
+  );
+}

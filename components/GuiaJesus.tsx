@@ -1,6 +1,6 @@
 'use client';
 
-import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace } from './EnlacesGuia';
+import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace } from './EnlacesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
 import CostesGuia from './CostesGuia';
@@ -481,6 +481,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-correos': MockupCorreos,
   'correos-enlace': BloqueCorreosEnlace,
   'panel-enlace': BloquePanelEnlace,
+  'crm-enlace': BloqueCrmEnlace,
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
   costes: CostesGuia,

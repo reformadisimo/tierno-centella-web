@@ -1226,6 +1226,8 @@ Lo de cada mes es solo el principio. ¿Quieres una campaña de radio? Te la hace
 
 **Qué es un CRM y por qué te lo recomendamos.** Hoy, cuando alguien llama o escribe, la información se queda en el teléfono, en el correo o en la memoria de quien lo atendió. Un CRM es una agenda de clientes con memoria: cada consulta que llega de la web, del chat, de WhatsApp o del formulario entra sola, con su nombre, su tema y de dónde vino. Tu equipo apunta en qué punto está (llamado, consulta reservada, cliente) y, con eso, sabremos por fin **qué anuncio, qué artículo o qué red te trae los clientes que de verdad contratan**, no solo los que preguntan. Si ya usas uno, nos conectamos a él; si no, te lo montamos sencillo, para que tu equipo lo use sin esfuerzo. Es opcional, pero es lo que más nos ayudaría a invertir mejor tu dinero.
 
+[[crm-enlace]]
+
 ## 26. Fuentes
 
 FUENTES

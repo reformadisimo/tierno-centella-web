@@ -502,6 +502,9 @@ export default function PanelDemo() {
 
       {pestana === 'clientes' && (
         <div className="pn-vista" key="clientes">
+          <a className="pn-crm-enlace" href="/guia-jesus/crm" target="_blank" rel="noopener">
+            <b>Abrir tu CRM</b> <span>Cada consulta con su ficha, su origen y sus plazos</span>
+          </a>
           <Caja titulo="El camino hasta cliente" fuente="Últimos 30 días">
             <div className="pn-embudo">
               {[
