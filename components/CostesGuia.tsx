@@ -158,6 +158,8 @@ const NOCOBRAMOS = [
   'Pruebas para mejorar cada página',
   'Revisar a tu competencia',
   'Preparar y gestionar una campaña de radio',
+  'Crear tu CRM o conectarnos al tuyo',
+  'Tu presupuesto de marketing, mensual y anual',
   'Lo que se te ocurra',
 ];
 
@@ -174,8 +176,8 @@ const TOTAL = INCLUIDO.reduce((a, [, , l]) => a + l.length, 0);
 const APARTE: [string, string, string][] = [
   ['La inversión en anuncios', 'Lo que decidas', 'La pagas tú directamente a Google o a Meta, con tu tarjeta. No pasa por nosotros y lo ves todo.'],
   ['El asistente de IA, si sigue', 'Unos pocos euros al mes', 'Se paga por uso: unos céntimos por conversación. Con un tope de gasto que pones tú. Durante la prueba lo pagamos nosotros.'],
-  ['Notas de prensa y artículos en medios', 'Solo si los quieres', 'En medios digitales, para conseguir enlaces de calidad hacia tu web. Te proponemos el medio y el precio antes, y no se compra nada sin tu visto bueno. Prensa en papel no hacemos.'],
-  ['La emisión en radio', 'Solo si la quieres', 'Preparamos la campaña y negociamos con las emisoras dentro de la cuota; la emisión la pagas tú directamente a la emisora.'],
+  ['Notas de prensa y artículos en medios', 'Solo si los quieres', 'Sobre todo en medios digitales, para conseguir enlaces de calidad hacia tu web. Te proponemos el medio y el precio antes, y no se compra nada sin tu visto bueno.'],
+  ['La emisión en radio', 'Solo si la quieres', 'Preparamos la campaña, la cuña con voces profesionales y negociamos con las emisoras dentro de la cuota; la emisión y los locutores los pagas tú directamente, sin comisión nuestra.'],
   ['Vídeos profesionales', 'Solo si los quieres', 'Con equipo de grabación, a través de una agencia audiovisual con la que trabajamos.'],
   ['Tu correo profesional', 'Lo que ya pagas', 'El correo del equipo (Google Workspace, Microsoft 365...) sigue igual y a tu nombre. Si quieres, revisamos si estás pagando de más.'],
   ['Alojamiento en una cuenta tuya', 'Unos 20 $ al mes', 'Solo si prefieres tener la web en tu propia cuenta de pago de Vercel en lugar de en la nuestra.'],
