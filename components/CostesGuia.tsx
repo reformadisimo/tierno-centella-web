@@ -93,7 +93,8 @@ const INCLUIDO: [string, string, string[]][] = [
     'Imagen coherente en la web, las redes y los anuncios',
     'Banners, portadas y creatividades para campañas',
     'Tratamiento de tus fotos para que luzcan y carguen rápido',
-    'El logo, refinado, en todos sus formatos',
+    'Rediseño del logo cuando lo pidas, incluido',
+    'El logo en todos sus formatos: web, redes, documentos y firma de correo',
   ]],
   ['Medición e informes', 'M3 3v18h18M7 15l4-4 3 3 5-6', [
     'Clarity: mapas de calor y grabaciones para ver cómo navega la gente',
@@ -133,7 +134,7 @@ const SEMANA: [string, string[]][] = [
   ['Cada lunes', ['Informe de la semana en tu móvil: visitas, consultas y de dónde vienen', 'Lo que hemos cambiado y por qué', 'El plan de la semana']],
   ['Cada semana', ['Tres artículos nuevos en el blog', 'Publicaciones en tus redes y en tu ficha de Google', 'Ajuste de palabras y pujas en los anuncios', 'Cambios en la web según lo que vemos en Clarity']],
   ['Cada mes', ['Balance completo: Google, IA, anuncios, redes, reseñas y coste por cliente', 'Cómo te nombran las IA', 'Estudio rápido de la competencia', 'Plan del mes siguiente']],
-  ['Cuando lo pidas', ['Cualquier cambio en la web, el mismo día', 'Una calculadora o herramienta nueva', 'Una página para una campaña', 'Una secuencia de correos nueva', 'Lo que necesites, sin presupuesto aparte']],
+  ['Cuando lo pidas', ['Cualquier cambio en la web, el mismo día', 'Una calculadora o herramienta nueva', 'Una página para una campaña', 'Una secuencia de correos nueva', 'Un rediseño del logo', 'Lo que necesites, sin presupuesto aparte']],
 ];
 
 const TOTAL = INCLUIDO.reduce((a, [, , l]) => a + l.length, 0);

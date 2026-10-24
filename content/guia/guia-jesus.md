@@ -1085,6 +1085,8 @@ El resultado sigue siendo Tierno Centella, pero con una imagen más definida y c
 - **El detalle dorado** da un punto de distinción discreto, y combina con el toque cálido de la web.
 - **Funciona en claro y en oscuro**: ya tienes la versión blanca para fondos azules, fotos y vídeos.
 
+**Y si algún día quieres ir más allá, también entra en la cuota.** Un rediseño del logo, cuando nos lo pidas, no se cobra aparte: está incluido en el servicio, como todo lo demás.
+
 ## 21. Cómo se haría el cambio de web
 
 Cuando quieras, y sin prisa:
@@ -1166,7 +1168,7 @@ Un abrazo,
 
 ## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
 
-Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes... Sin facturas sueltas ni presupuestos por cada cambio.
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
 
 Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
 
