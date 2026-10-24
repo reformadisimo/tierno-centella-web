@@ -552,7 +552,7 @@ Hay algo que para nosotros no es negociable: **tú tienes el control de todo**. 
 
 - **Ves todo lo que hacemos**, cuando quieras, sin tener que pedírnoslo.
 - **Nada depende de nosotros para funcionar.** Ni una clave, ni una cuenta, ni un historial.
-- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos permiso**, ni claves, ni accesos. Ya lo tienes todo. Nos quitas el acceso y listo.
+- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. Pedimos un compromiso mínimo de 6 meses, el tiempo que hace falta para que se noten los resultados; después, sigues mes a mes y nos quitas el acceso cuando quieras.
 
 No queremos trabajar de otra manera con ningún cliente. Nos parece la única forma honesta de hacerlo: que sigas con nosotros porque te compensa, no porque no puedas irte.
 
@@ -1204,7 +1204,7 @@ Un abrazo,
 
 ## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
 
-Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. El compromiso mínimo es de **6 meses**, el tiempo justo para que veas resultados; después, sigues mes a mes. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
 
 Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
 
