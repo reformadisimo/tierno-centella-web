@@ -775,7 +775,7 @@ function useVistos(ids: string[], version: string) {
   return vistos;
 }
 
-export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
+export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: SeccionGuia[]; actualizada?: string }) {
   useAvisoVisita();
   // Los enlaces internos de la guía ("apartado 17", "pregunta 34") abren el detalle plegado antes de llevar al sitio.
   useEffect(() => {
@@ -830,6 +830,7 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
         <button
           type="button"
           className="gj-pdf"
+          id="descargar-guia"
           onClick={() => {
             if (q) setQ('');
             setTimeout(() => {
@@ -838,7 +839,15 @@ export default function GuiaJesus({ secciones }: { secciones: SeccionGuia[] }) {
             }, 80);
           }}
         >
-          Descargar en PDF o imprimir
+          <span className="gj-pdf-icono" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+            </svg>
+          </span>
+          <span className="gj-pdf-texto">
+            <b>Descargar la guía en PDF</b>
+            <small>Siempre la versión más reciente{actualizada ? ` · actualizada el ${actualizada}` : ''}</small>
+          </span>
         </button>
         <button type="button" className="gj-indice-boton" aria-expanded={indice} onClick={() => setIndice((v) => !v)}>
           {indice ? 'Ocultar el índice' : `Ver el índice (${total} apartados)`}

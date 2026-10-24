@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
+import BotonPdfPortada from '@/components/BotonPdfPortada';
 import GuiaJesus, { type SeccionGuia } from '@/components/GuiaJesus';
 
 // Página privada: no se indexa, no está en el menú ni en el mapa del sitio.
@@ -181,6 +182,7 @@ export default function Pagina() {
             <a className="boton gj-boton-claro" href="#empieza-aqui-tu-guia-en-5-minutos">
               Empezar a leer
             </a>
+            <BotonPdfPortada />
           </div>
           <ul className="gj-portada-cifras">
             <li>
@@ -199,7 +201,7 @@ export default function Pagina() {
         </div>
       </header>
       <div className="contenedor">
-        <GuiaJesus secciones={secciones()} />
+        <GuiaJesus secciones={secciones()} actualizada={new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', timeZone: 'Europe/Madrid' }).format(new Date())} />
       </div>
     </>
   );
