@@ -110,6 +110,19 @@ const INCLUIDO: [string, string, string[]][] = [
   ]],
 ];
 
+const COMO: [string, string, string, string][] = [
+  ['Tu web', 'M3 4h18v12H3zM8 20h8M12 16v4', 'Cada cambio es un correo, un presupuesto y días de espera. La web tarda 18 segundos en cargar en el móvil y nadie la mejora.', 'Pides el cambio por WhatsApp y está hecho el mismo día. La web carga en 3 segundos y la mejoramos cada semana con datos.'],
+  ['Google (SEO)', 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3', 'Blog parado desde 2022, artículos que no son de tu especialidad y puesto 18 en "abogado laboralista madrid".', 'Tres artículos a la semana sobre lo que de verdad busca tu cliente, tus sentencias en su página y la posición vigilada cada día.'],
+  ['Inteligencia artificial', 'M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z', 'ChatGPT y Gemini casi nunca te nombran, y nadie lo mide.', 'Textos que las IA pueden citar, la ficha para IA al día y 15 preguntas medidas cada semana.'],
+  ['Anuncios', 'M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 9a3 3 0 0 1 0 6', 'Anuncios que llevan a una página genérica, sin saber qué consulta trae cada uno ni cuánto cuesta.', 'Una página por tipo de búsqueda, campañas revisadas cada día y el coste de cada consulta, no de cada clic.'],
+  ['Reseñas', 'M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z', '4,2 estrellas y ninguna reseña contestada.', 'Todas contestadas con tu visto bueno, campañas de WhatsApp para pedirlas y camino del 4,8.'],
+  ['Quien te escribe', 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z', 'Fuera de horario nadie contesta, y quien deja sus datos y no reserva no vuelve a saber de ti.', 'Un asistente que atiende a cualquier hora y una serie de correos que le acompaña hasta que decide.'],
+  ['Redes sociales', 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z', 'Buenos vídeos, pero a ratos: tres años de silencio en Instagram y dos cuentas de X abandonadas.', 'Calendario, guiones, montaje de tus vídeos y publicación constante en Instagram, LinkedIn, Facebook y TikTok.'],
+  ['Datos e informes', 'M3 3v18h18M7 15l4-4 3 3 5-6', 'No sabes de dónde viene cada cliente ni dónde va cada euro.', 'Cada llamada, WhatsApp y formulario con su origen, e informes diarios, semanales y mensuales.'],
+  ['Tu tiempo', 'M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z', 'Coordinar a varios proveedores, repetir lo mismo a cada uno y perseguir cada cambio.', 'Una sola persona de contacto. Tú apruebas; nosotros hacemos todo lo demás.'],
+  ['Tu dinero', 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6', 'Varias facturas, presupuestos por cada cambio y sin saber qué rinde.', 'Una sola cuota, herramientas gratis y cada euro medido.'],
+];
+
 const SEMANA: [string, string[]][] = [
   ['Cada día', ['Revisamos las campañas de anuncios', 'Leemos las consultas y las conversaciones del chat', 'Vigilamos que la web funcione y cargue rápido', 'Te pasamos las respuestas a las reseñas nuevas para tu visto bueno', 'Aviso inmediato si pasa algo importante']],
   ['Cada lunes', ['Informe de la semana en tu móvil: visitas, consultas y de dónde vienen', 'Lo que hemos cambiado y por qué', 'El plan de la semana']],
@@ -157,6 +170,34 @@ export default function CostesGuia() {
           </p>
           <p>Las herramientas son gratis, los cambios en la web no se cobran aparte y no hay sorpresas a final de mes.</p>
         </div>
+      </div>
+
+      <div className="cs-como">
+        <div className="cs-como-cabeza">
+          <span />
+          <b className="cs-como-hoy-t">Cómo lo haces hoy</b>
+          <b className="cs-como-luego-t">Cómo lo harías con nosotros</b>
+        </div>
+        {COMO.map(([area, icono, hoy, luego]) => (
+          <div key={area} className="cs-como-fila">
+            <span className="cs-como-area">
+              <span className="cs-icono" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={icono} />
+                </svg>
+              </span>
+              {area}
+            </span>
+            <span className="cs-como-hoy">
+              <small>Hoy</small>
+              {hoy}
+            </span>
+            <span className="cs-como-luego">
+              <small>Con nosotros</small>
+              {luego}
+            </span>
+          </div>
+        ))}
       </div>
 
       <div className="cs-coordina">

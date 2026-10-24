@@ -6084,3 +6084,24 @@ a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-
 .cs-conexiones b{color:#fff;font-size:1.02rem}
 @media (max-width:999px){.cs-semana{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.cs-semana{grid-template-columns:minmax(0,1fr)}}
+
+.cs-como{background:#fff;border:1px solid #dde4ec;border-radius:16px;overflow:hidden}
+.cs-como-cabeza,.cs-como-fila{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) minmax(0,1fr)}
+.cs-como-cabeza b{padding:12px 16px;font-size:1rem}
+.cs-como-hoy-t{background:#a8442c;color:#fff}
+.cs-como-luego-t{background:#17602f;color:#fff}
+.cs-como-cabeza span{background:#0d2c48}
+.cs-como-fila{border-top:1px solid #eef1f4}
+.cs-como-area{display:flex;align-items:center;gap:10px;padding:12px 14px;font-weight:800;color:#0d2c48;background:#f7f9fb}
+.cs-como-hoy,.cs-como-luego{padding:12px 16px;font-size:.92rem;line-height:1.5}
+.cs-como-hoy{background:#fdf5f3;color:#5b1f12}
+.cs-como-luego{background:#f1f9f4;color:#1d3d29;font-weight:600}
+.cs-como small{display:none}
+@media (max-width:760px){
+  .cs-como-cabeza{display:none}
+  .cs-como-fila{grid-template-columns:minmax(0,1fr)}
+  .cs-como small{display:block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+  .cs-como-hoy small{color:#a8442c}
+  .cs-como-luego small{color:#17602f}
+}
+.cs-semana{grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr))!important}
