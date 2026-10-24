@@ -1007,7 +1007,18 @@ Si decides ofrecer la llamada corta sin coste (apartado 7 bis), "gratis" deja de
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
-**Tu panel de control, siempre a mano.** Además de los informes, tendrás una página privada donde ver, prácticamente en tiempo real, las consultas que entran y de dónde vienen, lo que inviertes en anuncios y lo que te cuesta cada consulta, tus posiciones en Google, si te nombran las IA y tus reseñas. Y todo lo que hemos hecho por ti, con su fecha. Va incluido en la cuota.
+**Tu panel de control, siempre a mano.** Además de los informes, tendrás una página privada, con tu usuario y contraseña, para ver desde el móvil o el ordenador cómo va todo, prácticamente en tiempo real. Va incluido en la cuota. Tiene ocho pestañas:
+
+- **Resumen**: las consultas y visitas de hoy, lo que está pasando en tu web en ese momento, de dónde vienen las consultas, lo que llevas gastado este mes y si la web está bien.
+- **Clientes**: el camino desde la visita hasta el cliente, las últimas consultas con su origen, cuántas personas abren los correos de seguimiento, qué preguntan en el chat y qué herramientas se usan más.
+- **Anuncios**: Google Ads campaña a campaña y Meta, con lo que cuesta cada consulta y lo que hemos ajustado.
+- **Google e IA**: tus posiciones en las búsquedas que importan, si te nombran ChatGPT y Google, y tus reseñas.
+- **Redes**: cómo crecen tus seguidores en Instagram, LinkedIn, Facebook y TikTok.
+- **Tu web**: velocidad, seguridad, copias guardadas y lo que vemos en Clarity.
+- **Gastos**: todo lo que te cuesta el marketing cada mes, en un solo sitio. La cuota; el servidor y el SEO, que van incluidos; lo que inviertes en Google Ads y en Meta; las notas de prensa, si las compras, y el asistente. Mes a mes, y lo que te cuesta cada consulta.
+- **Nuestro trabajo**: todo lo que hemos hecho por ti, con su fecha.
+
+Y si echas algún dato de menos o quieres otro informe, lo pides desde el propio panel y lo añadimos. Ábrelo y prueba las pestañas: los datos son de ejemplo, pero así lo verás con los tuyos.
 
 [[panel-enlace]]
 
