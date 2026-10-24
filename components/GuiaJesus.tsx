@@ -2,6 +2,7 @@
 
 import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace } from './EnlacesGuia';
 import ResenasGuia from './ResenasGuia';
+import ProveedoresGuia from './ProveedoresGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
@@ -326,6 +327,18 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     ancla: '19',
   },
   {
+    titulo: 'Demasiados proveedores para tu marketing',
+    icono: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8',
+    hoyDato: '5 o 6',
+    hoy: 'proveedores: SEO, anuncios, diseñador, programador, redes...',
+    luegoDato: '1',
+    luego: 'un solo proveedor que lo hace todo, con informes diarios, semanales y mensuales',
+    visto: 'Lo normal en un despacho es tener un SEO, alguien para los anuncios, un diseñador, un programador para la web y otra persona para las redes. Cada uno con su factura, sus plazos y su informe.',
+    cuesta: 'Tu tiempo, sobre todo: coordinar a todos, repetir lo mismo a cada uno y esperar a que uno termine para que empiece el siguiente. Y cuando algo no funciona, nadie es responsable del todo.',
+    ayudamos: 'Con nosotros trabajas con un solo proveedor, de forma sencilla: lo hacemos todo para darte el menor trabajo posible, con informes diarios, semanales y mensuales. Lo único que no hacemos es grabar vídeos, y para eso te damos guiones, los montamos y tenemos una agencia audiovisual si hace falta.',
+    ancla: '25',
+  },
+  {
     titulo: '¿Tienes tú las llaves de todo?',
     icono: 'M15 7a4 4 0 1 1-3.9 5H9v2H7v2H4v-3l5.1-5.1A4 4 0 0 1 15 7z',
     hoyDato: '¿?',
@@ -453,6 +466,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-correos': MockupCorreos,
   'correos-enlace': BloqueCorreosEnlace,
   resenas: ResenasGuia,
+  proveedores: ProveedoresGuia,
   web: BloqueWeb,
   landings: BloqueLandings,
 };

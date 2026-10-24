@@ -14,7 +14,7 @@ Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son once cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son doce cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -1134,15 +1134,17 @@ Te contamos en qué estamos: **estamos montando una agencia de marketing**. Toda
 | Ficha de Google y reseñas | Responder todas las reseñas (siempre con tu aprobación: te mandamos cada respuesta antes de publicarla) y tener la ficha al día, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
 | Campañas de WhatsApp | Pedir la reseña a cada cliente al cerrar su asunto, con el enlace directo a tu ficha y un recordatorio; medido cada mes (apartado 5) |
 | Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
-| Medición e informes | Un informe semanal sencillo: visitas, consultas, de dónde vienen y qué cambiamos |
+| Medición e informes | Informes diarios, semanales y mensuales, sencillos y en tu móvil: visitas, consultas, de dónde vienen, lo que cuesta cada cliente y qué cambiamos |
 
-**Un solo proveedor para todo**: en lugar de un SEO, un SEM, un diseñador, un programador, alguien para redes y así hasta 25 oficios (apartado 8 bis), tienes a uno solo, nosotros. Con todo controlado, informes claros y actuación inmediata. Es pasar a otro nivel.
+**Un solo proveedor para todo**: lo normal es trabajar con un SEO, alguien para los anuncios, un diseñador, un programador y otra persona para las redes, y así hasta 25 oficios (apartado 8 bis). Con nosotros tienes a uno solo, de forma sencilla: lo hacemos todo para darte el menor trabajo posible, con todo controlado, informes claros y actuación inmediata. Es pasar a otro nivel.
+
+[[proveedores]]
 
 **Y mejorando cada semana**: nada se entrega y se olvida; medimos, cambiamos lo que no funciona y te lo demostramos con datos (apartado 19 bis).
 
 **Y todo, al momento**: lo que nos pidas (un cambio en una campaña, en la web, en un formulario, en una foto) lo normal es tenerlo hecho el mismo día, muchas veces en tres o cuatro horas. Como muy tarde, en 24 a 48 horas. Nada de esperar semanas, como pasa con las agencias de siempre.
 
-**Lo único que va aparte**: los **vídeos profesionales** con equipo de grabación, si los quieres. Los vídeos sencillos para redes y los guiones entran en la cuota.
+**Lo único que no hacemos es grabar vídeos.** Sí entran en la cuota las ideas y los guiones, las indicaciones para grabarlos bien con el móvil y el montaje (cortes, subtítulos y portada) para redes y para la web. Si quieres un vídeo profesional con equipo de grabación, trabajamos con una agencia audiovisual que te lo hace aparte.
 
 Para ajustarte la cuota a lo que de verdad necesitas, nos ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparamos una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
 
