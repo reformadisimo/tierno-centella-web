@@ -17,6 +17,19 @@ export default function CrmReal() {
   const [cargando, setCargando] = useState(false);
 
   useEffect(() => {
+    // Enlace de acceso directo (#acceso=...): entra sin escribir nada y la sesión queda guardada en este navegador.
+    const h = location.hash.match(/^#acceso=([^&]+)/);
+    if (h) {
+      history.replaceState(null, '', location.pathname);
+      try {
+        const [correo, ...resto] = atob(decodeURIComponent(h[1])).split(':');
+        sb.auth.signInWithPassword({ email: correo, password: resto.join(':') }).then(({ error }) => {
+          if (error) setMsg('El enlace de acceso no es válido o ha caducado.');
+        });
+      } catch {
+        setMsg('El enlace de acceso no es válido.');
+      }
+    }
     sb.auth.getSession().then(({ data }) => setSesion(data.session));
     const { data } = sb.auth.onAuthStateChange((_e, s) => setSesion(s));
     return () => data.subscription.unsubscribe();

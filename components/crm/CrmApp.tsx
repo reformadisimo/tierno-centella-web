@@ -256,6 +256,14 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
         </div>
       )}
 
+      {almacen.modo === 'real' && datos.contactos.length === 0 && (
+        <div className="cr-prueba">
+          <span>
+            <b>Tu CRM está listo y vacío.</b> Las consultas de la web entrarán solas; también puedes dar de alta una con el botón de arriba. Para verlo lleno de ejemplos, abre el <a href="/guia-jesus/crm">modo prueba</a>.
+          </span>
+        </div>
+      )}
+
       <header className="cr-cabeza">
         <div>
           <p className="cr-marca">Tierno Centella Abogados · CRM</p>
