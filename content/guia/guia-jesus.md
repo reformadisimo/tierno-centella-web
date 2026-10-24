@@ -833,6 +833,10 @@ Hoy, cuando alguien rellena tu formulario o se va de la web sin decidirse, no vu
 
 [[mock-correos]]
 
+**Te lo hemos preparado completo para tu tema estrella, el acoso laboral**: los ocho correos que recibiría una persona como Laura, con su texto, sus fotos, un vídeo tuyo y sus botones para llamar, escribir por WhatsApp o reservar.
+
+[[correos-enlace]]
+
 **Por dónde entra la gente** (ya está montado en la web nueva):
 
 - **Todos los formularios**: el de contacto y los de las páginas de anuncios. Si deja su correo y marca la casilla, entra en el seguimiento de su tema.

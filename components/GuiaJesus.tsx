@@ -1,6 +1,6 @@
 'use client';
 
-import { BloqueWeb, BloqueLandings } from './EnlacesGuia';
+import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace } from './EnlacesGuia';
 import ResenasGuia from './ResenasGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CuestionarioGuia from './CuestionarioGuia';
@@ -451,6 +451,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-informe': MockupInforme,
   'mock-resena': MockupResenaWhatsApp,
   'mock-correos': MockupCorreos,
+  'correos-enlace': BloqueCorreosEnlace,
   resenas: ResenasGuia,
   web: BloqueWeb,
   landings: BloqueLandings,

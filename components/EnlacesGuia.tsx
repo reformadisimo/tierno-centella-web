@@ -89,3 +89,18 @@ export function BloqueLandings() {
     </div>
   );
 }
+
+export function BloqueCorreosEnlace() {
+  return (
+    <div className="ew">
+      <a className="ew-grande" href="/guia-jesus/correos" target="_blank" rel="noopener">
+        <span>
+          <small>Ejemplo completo · Acoso laboral</small>
+          <strong>Ver los 8 correos de Laura, uno a uno</strong>
+          <em>Cuándo llega cada uno, qué dice, sus fotos, su vídeo y sus botones. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
+    </div>
+  );
+}
