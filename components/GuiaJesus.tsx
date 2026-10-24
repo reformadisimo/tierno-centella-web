@@ -7,6 +7,9 @@ import CostesGuia from './CostesGuia';
 import MercadoGuia from './MercadoGuia';
 import CambioGuia from './CambioGuia';
 import CompromisoVelocidad from './CompromisoVelocidad';
+import ComisionesGuia from './ComisionesGuia';
+import GarantiaGuia from './GarantiaGuia';
+import PlazosWeb from './PlazosWeb';
 import TodoGuia from './TodoGuia';
 import SeguridadGuia from './SeguridadGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -488,6 +491,9 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   mercado: MercadoGuia,
   cambio: CambioGuia,
   'compromiso-velocidad': CompromisoVelocidad,
+  comisiones: ComisionesGuia,
+  garantia: GarantiaGuia,
+  'plazos-web': PlazosWeb,
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
   costes: CostesGuia,

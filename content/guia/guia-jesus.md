@@ -552,7 +552,7 @@ Hay algo que para nosotros no es negociable: **tú tienes el control de todo**. 
 
 - **Ves todo lo que hacemos**, cuando quieras, sin tener que pedírnoslo.
 - **Nada depende de nosotros para funcionar.** Ni una clave, ni una cuenta, ni un historial.
-- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. Pedimos un compromiso mínimo de 6 meses, el tiempo que hace falta para que se noten los resultados; después, sigues mes a mes y nos quitas el acceso cuando quieras.
+- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. Pedimos un compromiso mínimo de 6 meses, porque la web va regalada; después, te vas cuando quieras y te lo llevas todo a tu nombre.
 
 No queremos trabajar de otra manera con ningún cliente. Nos parece la única forma honesta de hacerlo: que sigas con nosotros porque te compensa, no porque no puedas irte.
 
@@ -646,7 +646,7 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 
 ### Nuestro compromiso: 100 en todo y menos de 2 segundos
 
-Esto sí te lo prometemos, porque sabemos hacerlo: **tu web tendrá 100 en las cuatro notas de PageSpeed Insights** (velocidad, accesibilidad, buenas prácticas y SEO), **en el móvil y en el ordenador**, y el **3 de 3** en navegación para agentes de IA. Y **cargará en menos de 2 segundos**, aunque nuestro objetivo es que lo haga en menos de uno.
+Esto sí te lo prometemos, porque sabemos hacerlo: **tu web tendrá 100 en las cuatro notas de PageSpeed Insights** (velocidad, accesibilidad, buenas prácticas y SEO), **en el móvil y en el ordenador**, y el **3 de 3** en navegación para agentes de IA. Y **cargará en 2 segundos como máximo**; lo ideal, y a lo que apuntamos, es menos de medio segundo.
 
 ¿Por qué tanto empeño? Porque **Google lo tiene en cuenta**: su documentación oficial dice que usa estas métricas de experiencia para ordenar los resultados. Ante dos despachos parecidos, la web rápida tiene ventaja. Y, sobre todo, porque **quien espera, se va**: más de la mitad de la gente abandona una web que tarda más de 3 segundos, y una página rápida convierte hasta tres veces más visitas en consultas.
 
@@ -675,9 +675,9 @@ Hoy, antes incluso de publicarla, la web nueva ya saca 94 de velocidad y 100 en 
 
 **¿Por qué 18 segundos en un sitio y 3 en otro?** PageSpeed simula un móvil normal con una conexión normal; Pingdom mide desde un ordenador con una conexión muy rápida. Las dos dicen lo mismo: la nueva va mucho más rápida (casi seis veces en PageSpeed, el doble en Pingdom). En el móvil, que es desde donde te buscan casi todos, pasa de 49 a 94 sobre 100.
 
-### Y mucho más segura
+### Tecnología limpia, sin lastre (y mucho más segura)
 
-Nadie está libre de un ataque informático, y quien diga lo contrario no dice la verdad. Pero no todas las webs son igual de fáciles de atacar, ni igual de fáciles de arreglar.
+Tu web nueva está hecha con **código propio, sin WordPress ni plugins**, y se sirve desde la red mundial de Vercel, con servidores repartidos por todo el mundo para que cargue rápido esté donde esté quien la abre. Nadie está libre de un ataque informático, y quien diga lo contrario no dice la verdad. Pero no todas las webs son igual de fáciles de atacar, ni igual de fáciles de arreglar.
 
 [[seguridad]]
 
@@ -1133,6 +1133,10 @@ El resultado sigue siendo Tierno Centella, pero con una imagen más definida y c
 
 ## 21. Cómo se haría el cambio: fácil, sin cortes y con todo bajo tu control
 
+**Primero, la web: en días, no en meses.** Lo habitual es que una web nueva tarde de tres a cinco meses. Nosotros la hacemos en unos días.
+
+[[plazos-web]]
+
 Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y si se pierden los anuncios?", "¿y si mi proveedor no me da las claves?". Por eso **el cambio lo llevamos nosotros**, paso a paso, y a ti solo te pedimos lo imprescindible: **unas dos horas en total, repartidas en un par de semanas**. Ni un solo día sin web, sin anuncios ni sin correo.
 
 [[cambio]]
@@ -1177,9 +1181,9 @@ Escríbenos debajo de cualquier apartado: nos llega al momento, te contestamos l
 
 Jesús, **la web es tuya: te la regalamos**. Todo lo que ves (la web, las guías, las herramientas, el asistente, las páginas para tus anuncios, la medición y esta guía) te lo hemos hecho como amigos y no te vamos a cobrar nada por ello. Nos apetecía, porque creemos que lo que haces (estar del lado de quien lo está pasando mal en su trabajo) merece una web a la altura.
 
-Te contamos en qué estamos: **estamos montando una agencia de marketing**. Todavía no tiene nombre ni web, pero ya llevamos webs y campañas de algunos amigos. Y nos encantaría acompañarte a ti.
+Te contamos en qué estamos: **hemos montado una agencia de marketing, Casiopea 360**. Somos un equipo de profesionales con más de 22 años de experiencia, que ha gestionado cuentas de Google Ads de hasta 60.000 € al mes. Y nos encantaría acompañarte a ti.
 
-**Lo que te proponemos a partir de aquí es un servicio 360, un mantenimiento con una cuota mensual que cubre todo** (el precio lo definimos juntos, según lo que quieras abarcar): tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
+**Lo que te proponemos a partir de aquí es un servicio 360, con una sola cuota mensual fija que cubre todo**, la misma para cualquier empresa, grande o pequeña, y sin comisiones sobre lo que inviertas en anuncios: tú te dedicas a tus casos y nosotros a que te lleguen más y mejores.
 
 | Qué incluye | En la práctica |
 | --- | --- |
@@ -1192,29 +1196,31 @@ Te contamos en qué estamos: **estamos montando una agencia de marketing**. Toda
 | Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
 | Medición e informes | Informes diarios, semanales y mensuales, sencillos y en tu móvil: visitas, consultas, de dónde vienen, lo que cuesta cada cliente y qué cambiamos |
 
-**Un solo proveedor para todo**: lo normal es trabajar con un SEO, alguien para los anuncios, un diseñador, un programador y otra persona para las redes, y así hasta 25 oficios (apartado 8 bis). Con nosotros tienes a uno solo, de forma sencilla: lo hacemos todo para darte el menor trabajo posible, con todo controlado, informes claros y actuación inmediata. Es pasar a otro nivel.
+**Un solo proveedor para todo**: lo normal es trabajar con un SEO, alguien para los anuncios, un diseñador, un programador y otra persona para las redes, y así hasta 25 oficios (apartado 8 bis). Con nosotros tienes a un solo equipo, de forma sencilla: lo hacemos todo para darte el menor trabajo posible, con todo controlado, informes claros y actuación inmediata. Es pasar a otro nivel.
 
 [[proveedores]]
 
 **Y mejorando cada semana**: nada se entrega y se olvida; medimos, cambiamos lo que no funciona y te lo demostramos con datos (apartado 19 bis).
 
-**Y todo, al momento**: lo que nos pidas (un cambio en una campaña, en la web, en un formulario, en una foto) lo normal es tenerlo hecho el mismo día, muchas veces en tres o cuatro horas. Como muy tarde, en 24 a 48 horas. Nada de esperar semanas, como pasa con las agencias de siempre.
+**Y todo, al momento**: lo que nos pidas (un cambio en una campaña, en la web, en un formulario, en una foto) lo normal es tenerlo hecho el mismo día, muchas veces en tres o cuatro horas. Como muy tarde, en 24 a 48 horas. Nada de esperar semanas.
 
 **Y no te cobraremos luego por nada más.** Ni por responder tus reseñas, ni por una página nueva, ni por rediseñar el logo, ni por una calculadora. Solo la cuota, con absolutamente todo incluido: puedes soñar y pedirnos lo que quieras, que te lo haremos.
 
 **Lo único que no hacemos es grabar vídeos.** Sí entran en la cuota las ideas y los guiones, las indicaciones para grabarlos bien con el móvil y el montaje (cortes, subtítulos y portada) para redes y para la web. Si quieres un vídeo profesional con equipo de grabación, trabajamos con una agencia audiovisual que te lo hace aparte.
 
-Para ajustarte la cuota a lo que de verdad necesitas, nos ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparamos una propuesta cerrada con dos o tres opciones de cuota y la vemos con un café.
+Para enseñarte con números lo que ganas, nos ayuda saber qué estás gastando hoy, en qué y con qué resultados (lo preguntamos en el apartado 24). Con tus respuestas te preparamos una propuesta cerrada y la vemos con un café.
+
+[[garantia]]
 
 Y si prefieres seguir como hasta ahora, fenomenal también: la web y la guía son tuyas. Sin ninguna presión.
 
 Un abrazo,
 
-**Ignacio de la Rubia y el equipo**
+**El equipo de Casiopea 360**
 
 ## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
 
-Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota, la que acordemos, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. El compromiso mínimo es de **6 meses**, el tiempo justo para que veas resultados; después, sigues mes a mes. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota fija, la misma para cualquier empresa, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. **Una sola cuota fija, la misma para cualquier empresa y sin comisiones** sobre lo que inviertas en anuncios. El compromiso mínimo es de **6 meses**, porque la web te la regalamos: en ese tiempo ya tienes web, CRM, calculadoras y mucho más, que por separado valdría muchísimo más. Después, te quedas porque quieres, y si te vas, te lo llevas todo a tu nombre. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
 
 Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
 
@@ -1223,6 +1229,12 @@ Y casi todas las herramientas que usamos para ti son **gratis**: el envío de co
 Para que veas lo que de verdad estás comparando: esto es lo que se cobra en el mercado por cada cosa, si la contratas a un proveedor distinto. **Suma mucho más que nuestra cuota, y nuestra cuota lo incluye todo**: también la web nueva y el CRM, que ya tienes hechos.
 
 [[mercado]]
+
+### Sin comisiones sobre tus anuncios
+
+Muchas agencias cobran un porcentaje de lo que inviertes en publicidad. Nosotros no: **una cuota fija, la misma para todos, y 0 € de comisión**. Mira lo que supone en tu caso:
+
+[[comisiones]]
 
 ### Qué entra exactamente
 

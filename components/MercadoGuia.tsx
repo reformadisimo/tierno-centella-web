@@ -73,7 +73,7 @@ export default function MercadoGuia() {
           <small>Con nosotros</small>
           <b>Una sola cuota al mes</b>
           <span>
-            El precio lo concretamos contigo, pero ya te podemos asegurar dos cosas: solo pagarás una cuota mensual (con un compromiso mínimo de 6 meses), y será <strong>mucho menos que la suma de todo esto</strong>. Lo que nos pagarás en un año, con todo incluido, se parece a lo que otro proveedor te cobraría solo por hacerte la web y el CRM.
+            El precio lo concretamos contigo, pero ya te podemos asegurar dos cosas: solo pagarás una cuota mensual fija, la misma para cualquier empresa y sin comisiones (con un compromiso mínimo de 6 meses, porque la web va regalada), y será <strong>mucho menos que la suma de todo esto</strong>. Lo que nos pagarás en un año, con todo incluido, se parece a lo que otro proveedor te cobraría solo por hacerte la web y el CRM.
           </span>
         </div>
       </div>

@@ -49,7 +49,7 @@ const CONTROL: [string, string][] = [
   ['Informes cada día, semana y mes', 'Te llegan solos. Y si echas de menos un dato, lo pides y lo añadimos.'],
   ['Nada importante sin tu visto bueno', 'Las respuestas a reseñas, las campañas nuevas y lo que cuesta dinero, siempre contigo antes.'],
   ['Cada versión de la web, guardada', 'Ves qué ha cambiado y cuándo, y volvemos a cualquier versión anterior en minutos.'],
-  ['Seis meses y, después, libre', 'Un compromiso mínimo de 6 meses, el tiempo justo para que veas resultados. Después, sigues mes a mes y te vas cuando quieras, sin pedirnos claves: todo es tuyo.'],
+  ['Seis meses y, después, libre', 'Un compromiso mínimo de 6 meses, porque la web va regalada. Después, te vas cuando quieras y te lo llevas todo a tu nombre, sin pedirnos claves.'],
 ];
 
 const MENSAJE = `Hola, [nombre]:
