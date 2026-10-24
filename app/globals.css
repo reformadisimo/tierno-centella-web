@@ -5901,3 +5901,7 @@ a.gj-barra-nombre { color: inherit; text-decoration: underline; text-decoration-
   .rg-escalon{min-height:0}
   .rg-causa{grid-template-columns:1fr}
 }
+
+.rg-amable{background:#fff8ec;border:1px solid #f1dfb8;border-radius:12px;padding:14px 16px;color:#4a3a1a}
+.rg-amable p{margin:0 0 8px}
+.rg-amable p:last-child{margin:0}

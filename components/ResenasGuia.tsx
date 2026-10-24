@@ -103,6 +103,17 @@ export default function ResenasGuia() {
       </p>
 
       <p className="rg-titulo">Por qué te ponen una estrella, y cómo lo hemos cortado en la web nueva</p>
+      <div className="rg-amable">
+        <p>
+          Jesús, te lo contamos con todo el cariño, porque esto es lo que más vale de toda la guía.{' '}
+          <b>Casi ninguna de estas reseñas habla mal de cómo defiendes a tus clientes</b>: hablan de una web que prometía algo que no era, de llamadas que se
+          quedaron sin devolver y de expectativas que nadie aclaró a tiempo. Es decir, de cosas que tienen arreglo, y muchas ya lo tienen en la web nueva.
+        </p>
+        <p>
+          Y lo bueno pesa mucho más: 44 personas te han dado cinco estrellas, y muchas cuentan que se sintieron arropadas en uno de los peores momentos de su
+          vida. Lo que queda es que todas las que vengan lo cuenten igual.
+        </p>
+      </div>
       <div className="rg-causas">
         {CAUSAS.map((c) => (
           <div key={c.causa} className="rg-causa">
