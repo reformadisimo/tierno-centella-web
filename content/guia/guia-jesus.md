@@ -183,6 +183,13 @@ Cada vez más gente no busca en Google: le pregunta a ChatGPT, a Gemini o a la p
 
 [[mock-ia]]
 
+**¿Cuánta gente busca ya en la IA?** Todavía se busca muchísimo más en Google: las búsquedas en ChatGPT son aún una parte pequeña (menos del 1 % del volumen de Google, según Internet República en 2025), aunque crecen cada mes. Pero hay dos datos que lo cambian todo:
+
+- **La IA ya está dentro de Google.** En tus propias búsquedas, en 579 de las 710 en las que apareces sale una respuesta de IA arriba del todo, antes que cualquier web. Ser la fuente que cita esa respuesta es ya parte del SEO.
+- **Quien llega desde una IA convierte mucho mejor.** Llega con la duda resuelta y una recomendación en la mano: según Similarweb (2026), el 11,4 % de las visitas que llegan desde una IA acaban en conversión, frente al 5,3 % del resto, más del doble. Semrush calcula que esa visita vale 4,4 veces más que la que llega desde Google.
+
+Por eso hay que estar ahí desde ya: hoy son pocas visitas, pero son las que más se convierten en clientes, y cada mes son más.
+
 **Lo medimos, no lo suponemos**: desde hoy, Semrush pregunta cada día a ChatGPT, desde Madrid, lo mismo que preguntaría alguien que te necesita. Es tu punto de partida: cuando la web nueva esté publicada, veremos semana a semana si la IA empieza a nombrarte.
 
 [[prompts]]
@@ -1209,7 +1216,11 @@ Y casi todas las herramientas que usamos para ti son **gratis**: el envío de co
 
 En muchas agencias se paga cada mes una cuota solo por el SEO, a menudo de varios cientos de euros, y aun así los enlaces que consiguen hacia tu web suelen ser de poca calidad. **Con nosotros, ese dinero te lo ahorras**: todo el trabajo de SEO, dentro y fuera de tu web, va en la cuota (los contenidos, la parte técnica, la ficha de Google, los directorios, la estrategia de enlaces y la relación con medios, universidades y colegios profesionales).
 
-Lo único que puede tener un coste aparte es **comprar una nota de prensa o un artículo en un medio** para conseguir un enlace de calidad, que es de lo que más ayuda a subir en Google. Siempre es opcional: te proponemos el medio, te decimos lo que cuesta y no se compra nada sin tu visto bueno. Así, si pagas algo, es solo por enlaces que de verdad valen la pena, no por las horas de una agencia.
+Lo único que puede tener un coste aparte es **comprar una nota de prensa o un artículo en un medio digital** para conseguir un enlace de calidad, que es de lo que más ayuda a subir en Google. Siempre es opcional: te proponemos el medio, te decimos lo que cuesta y no se compra nada sin tu visto bueno. Así, si pagas algo, es solo por enlaces que de verdad valen la pena, no por las horas de una agencia. Trabajamos la prensa digital; la prensa en papel no la hacemos, porque no da enlaces ni se puede medir.
+
+### Y si un día quieres salir en la radio
+
+También podemos **preparar y gestionar una campaña de radio**: la idea, el guion de la cuña, a qué emisoras y en qué horarios llegar a tu público, y la negociación con ellas, porque tenemos contactos. Todo ese trabajo entra en la cuota. Lo único que pagarías aparte es la emisión, directamente a la emisora y siempre con tu visto bueno.
 
 **Para hacerte una propuesta a tu medida necesitamos saber lo que te cuesta todo hoy**: el SEO, quien te lleva los anuncios y lo que inviertes en ellos, el diseño, las redes, el mantenimiento de la web, el alojamiento o servidor (IONOS u otro), el dominio y el correo del equipo (Google Workspace, Microsoft 365...). Te lo preguntamos línea a línea en la pregunta 8, y quién te lleva cada cosa en las preguntas 9, 18 y 23. Con eso te preparamos la comparación exacta, euro a euro, y te decimos qué puedes dejar de pagar.
 

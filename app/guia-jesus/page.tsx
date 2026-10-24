@@ -30,6 +30,8 @@ const FUENTES: [string, string][] = [
   ['Adaptación de jornada tras el RDL 5/2023 (Lo Entiendo)', 'https://loentiendo.com/?p=72242'],
   ['Novedades laborales de marzo y abril de 2026, con las SSTS 62, 126, 159 y 169/2026 (Pérez-Llorca)', 'https://www.perezllorca.com/wp-content/uploads/2026/05/2603-2604-Newsletter-Laboral.pdf'],
   ['Semrush: datos de posicionamiento de tiernocentella.es y competidores (base de datos de España, 23/10/2026)', 'https://www.semrush.com/analytics/overview/?db=es&q=tiernocentella.es'],
+  ['Internet República, Situación de los buscadores en 2025 (Merca2, 22/04/2025): las búsquedas en ChatGPT, menos del 1 % del volumen de Google', 'https://www.merca2.es/2025/04/22/radiografia-de-los-buscadores-en-2025-la-ia-crece-pero-google-sigue-mandando-segun-internet-republica-2183432/'],
+  ['Conversión de las visitas que llegan desde la IA: Similarweb 2026 (11,4 % frente a 5,3 %) y Semrush (4,4 veces), resumen comparado', 'https://dev.to/mr_manushukla/ai-search-converts-23x-44x-or-215x-what-the-2026-studies-mean-for-your-geo-budget-5h0k'],
   ['StatCounter: cuota de mercado de los buscadores en España, septiembre de 2026 (Bing 3,49 %; 11,72 % en ordenador)', 'https://gs.statcounter.com/search-engine-market-share/all/spain'],
   ['Microsoft Ads frente a Google Ads: coste por clic y por conversión (resumen de WordStream y Merkle, 2026)', 'https://searchlab.nl/en/statistics/microsoft-ads-statistics-2026'],
   ['BrightLocal, Local Consumer Review Survey 2026 (reseñas y confianza)', 'https://www.brightlocal.com/research/local-consumer-review-survey/'],
