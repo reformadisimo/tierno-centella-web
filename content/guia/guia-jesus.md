@@ -1007,6 +1007,10 @@ Si decides ofrecer la llamada corta sin coste (apartado 7 bis), "gratis" deja de
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
+**Tu panel de control, siempre a mano.** Además de los informes, tendrás una página privada donde ver, prácticamente en tiempo real, las consultas que entran y de dónde vienen, lo que inviertes en anuncios y lo que te cuesta cada consulta, tus posiciones en Google, si te nombran las IA y tus reseñas. Y todo lo que hemos hecho por ti, con su fecha. Va incluido en la cuota.
+
+[[panel-enlace]]
+
 Tu web actual ya tiene puesto el contador de visitas de Google (**Google Analytics**) y la "caja" donde se enchufan las herramientas (**Tag Manager**). Lo sabemos porque cualquier web deja ver qué herramientas usa; verlo no da acceso a nada. Así que hay historial guardado: para verlo solo necesitamos que nos invites (apartado 23).
 
 **Lo que ya está conectado en la web nueva**:

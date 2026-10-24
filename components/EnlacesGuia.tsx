@@ -104,3 +104,18 @@ export function BloqueCorreosEnlace() {
     </div>
   );
 }
+
+export function BloquePanelEnlace() {
+  return (
+    <div className="ew">
+      <a className="ew-grande" href="/guia-jesus/panel" target="_blank" rel="noopener">
+        <span>
+          <small>Demostración · datos de ejemplo</small>
+          <strong>Ver tu panel de control</strong>
+          <em>Consultas, anuncios, Google, IA y reseñas en una sola pantalla, también en el móvil. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
+    </div>
+  );
+}
