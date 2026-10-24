@@ -71,8 +71,10 @@ export default function MercadoGuia() {
         </div>
         <div className="mg-suma-nos">
           <small>Con nosotros</small>
-          <b>Una sola cuota</b>
-          <span>Bastante menos que solo lo de cada mes, y con la web y el CRM ya hechos y dentro.</span>
+          <b>Una sola cuota al mes</b>
+          <span>
+            El precio lo concretamos contigo, pero ya te podemos asegurar dos cosas: solo pagarás una cuota mensual, y será <strong>mucho menos que la suma de todo esto</strong>. Lo que nos pagarás en un año, con todo incluido, se parece a lo que otro proveedor te cobraría solo por hacerte la web y el CRM.
+          </span>
         </div>
       </div>
 
