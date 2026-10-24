@@ -44,7 +44,8 @@ const INCLUIDO: [string, string, string[]][] = [
     'SEO técnico: mapa de la web, datos para Google, enlaces rotos, redirecciones',
     'Seguimiento de tu posición en las 50 búsquedas clave',
     'Search Console: errores, páginas indexadas y búsquedas',
-    'Enlaces de calidad: medios, universidades, colegios profesionales',
+    'SEO fuera de tu web: estrategia de enlaces, medios, universidades y colegios profesionales',
+    'Elegir y negociar las notas de prensa, si decides comprarlas',
     'Directorios jurídicos con tus datos iguales en todas partes',
     'Alta y cuidado en Bing y Apple, además de Google',
   ]],
@@ -126,6 +127,7 @@ const COMO: [string, string, string, string][] = [
   ['Datos e informes', 'M3 3v18h18M7 15l4-4 3 3 5-6', 'No sabes de dónde viene cada cliente ni dónde va cada euro.', 'Cada llamada, WhatsApp y formulario con su origen, e informes diarios, semanales y mensuales.'],
   ['Tu tiempo', 'M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z', 'Coordinar a varios proveedores, repetir lo mismo a cada uno y perseguir cada cambio.', 'Una sola persona de contacto. Tú apruebas; nosotros hacemos todo lo demás.'],
   ['Seguridad', 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z', 'WordPress con su panel abierto, plugins que actualizar y licencias que pagar. Si te hackean, días para limpiarlo.', 'Sin WordPress ni plugins. Cada versión de la web guardada: volvemos a la de hace un mes en minutos.'],
+  ['SEO fuera de tu web', 'M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7', 'Se paga una cuota de SEO cada mes y aun así los enlaces que llegan suelen ser de poca calidad.', 'El trabajo de SEO va en la cuota. Si inviertes algo, es solo en notas de prensa o artículos en medios de calidad, y decides tú.'],
   ['Tu dinero', 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6', 'Varias facturas, presupuestos por cada cambio y sin saber qué rinde.', 'Una sola cuota, herramientas gratis y cada euro medido.'],
 ];
 
@@ -169,6 +171,7 @@ const TOTAL = INCLUIDO.reduce((a, [, , l]) => a + l.length, 0);
 const APARTE: [string, string, string][] = [
   ['La inversión en anuncios', 'Lo que decidas', 'La pagas tú directamente a Google o a Meta, con tu tarjeta. No pasa por nosotros y lo ves todo.'],
   ['El asistente de IA, si sigue', 'Unos pocos euros al mes', 'Se paga por uso: unos céntimos por conversación. Con un tope de gasto que pones tú. Durante la prueba lo pagamos nosotros.'],
+  ['Notas de prensa y artículos en medios', 'Solo si los quieres', 'Para conseguir enlaces de calidad hacia tu web. Te proponemos el medio y el precio antes, y no se compra nada sin tu visto bueno.'],
   ['Vídeos profesionales', 'Solo si los quieres', 'Con equipo de grabación, a través de una agencia audiovisual con la que trabajamos.'],
   ['Tu correo profesional', 'Lo que ya pagas', 'El correo del equipo (Google Workspace, Microsoft 365...) sigue igual y a tu nombre. Si quieres, revisamos si estás pagando de más.'],
   ['Alojamiento en una cuenta tuya', 'Unos 20 $ al mes', 'Solo si prefieres tener la web en tu propia cuenta de pago de Vercel en lugar de en la nuestra.'],
@@ -222,7 +225,7 @@ export default function CostesGuia() {
         </ul>
         <p className="cs-promesa-pie">
           Lo único que no es nuestro: lo que decidas invertir en anuncios (lo pagas tú directamente a Google o a Meta), el uso del asistente de IA si sigue
-          (unos pocos euros al mes) y los vídeos profesionales con equipo de grabación, si un día los quieres.
+          (unos pocos euros al mes) y, solo si los quieres, las notas de prensa o artículos en medios para conseguir enlaces de calidad y los vídeos profesionales con equipo de grabación.
         </p>
       </div>
 
