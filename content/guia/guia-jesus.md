@@ -1162,7 +1162,7 @@ Y casi todas las herramientas que usamos para ti son **gratis**: el envío de co
 
 [[costes]]
 
-**Para ponerle cifras a tu ahorro** nos falta saber cuánto pagas hoy a quien te lleva la web, el SEO y los anuncios, y cuánto inviertes en ellos (preguntas 9, 10 y 18). Con eso te preparamos la comparación exacta, euro a euro.
+**Para hacerte una propuesta a tu medida necesitamos saber lo que te cuesta todo hoy**: el SEO, quien te lleva los anuncios y lo que inviertes en ellos, el diseño, las redes, el mantenimiento de la web, el alojamiento o servidor (IONOS u otro), el dominio y el correo del equipo (Google Workspace, Microsoft 365...). Te lo preguntamos línea a línea en la pregunta 8, y quién te lleva cada cosa en las preguntas 9, 18 y 23. Con eso te preparamos la comparación exacta, euro a euro, y te decimos qué puedes dejar de pagar.
 
 ## 26. Fuentes
 

@@ -6,6 +6,8 @@ const HOY = [
   'Quien te lleva los anuncios de Google, con la suya (y la inversión en anuncios aparte)',
   'Si haces redes o diseño, otra persona más',
   'Cada cambio en la web, un presupuesto y una espera',
+  'El alojamiento o servidor de la web (IONOS u otro) y su mantenimiento',
+  'El correo del equipo (Google Workspace, Microsoft 365...)',
   'Informes: pocos, tarde o ninguno',
 ];
 
@@ -16,7 +18,7 @@ const GRATIS: [string, string][] = [
   ['Mapas de calor y grabaciones (Clarity)', 'Para ver cómo se mueve la gente por tu web'],
   ['Redes sociales', 'Instagram, LinkedIn, Facebook y TikTok, sin anuncios'],
   ['Reseñas', 'Responderlas y pedirlas no cuesta nada'],
-  ['El alojamiento de la web', 'Mientras esté en nuestro servidor'],
+  ['El alojamiento de la web', 'En nuestro servidor. Puedes dejar de pagar el alojamiento actual, conservando tu dominio y tu correo'],
 ];
 
 const INCLUIDO: [string, string, string[]][] = [
@@ -137,6 +139,7 @@ const APARTE: [string, string, string][] = [
   ['La inversión en anuncios', 'Lo que decidas', 'La pagas tú directamente a Google o a Meta, con tu tarjeta. No pasa por nosotros y lo ves todo.'],
   ['El asistente de IA, si sigue', 'Unos pocos euros al mes', 'Se paga por uso: unos céntimos por conversación. Con un tope de gasto que pones tú. Durante la prueba lo pagamos nosotros.'],
   ['Vídeos profesionales', 'Solo si los quieres', 'Con equipo de grabación, a través de una agencia audiovisual con la que trabajamos.'],
+  ['Tu correo profesional', 'Lo que ya pagas', 'El correo del equipo (Google Workspace, Microsoft 365...) sigue igual y a tu nombre. Si quieres, revisamos si estás pagando de más.'],
   ['Alojamiento en una cuenta tuya', 'Unos 20 $ al mes', 'Solo si prefieres tener la web en tu propia cuenta de pago de Vercel en lugar de en la nuestra.'],
 ];
 
