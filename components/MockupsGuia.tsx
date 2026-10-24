@@ -235,3 +235,52 @@ export function MockupInforme() {
     </div>
   );
 }
+
+export function MockupResenaWhatsApp() {
+  return (
+    <div className="gm-rejilla">
+      <Movil tono="bien" titulo="Al cerrar el asunto le llega esto, desde el número del despacho. Un toque en el enlace y ya está escribiendo. (Mensaje de ejemplo.)">
+        <div className="mk-whatsapp">
+          <p className="mk-wa-barra">
+            <b className="lg-barra">
+              <Logo nombre="WhatsApp" tam={20} /> Tierno Centella Abogados
+            </b>
+            <small>cuenta de empresa</small>
+          </p>
+          <p className="mk-burbuja mk-wa-yo">
+            Hola, María. Soy Jesús Tierno. Gracias por confiar en nosotros estos meses. Si tienes un minuto, tu opinión en Google ayuda mucho a otras
+            personas que están pasando por lo mismo. Te dejo el enlace directo:
+          </p>
+          <div className="mk-wa-enlace">
+            <Logo nombre="Ficha de Google" tam={28} />
+            <span>
+              <b>Tierno Centella Abogados</b>
+              <small>Escribe una reseña en Google</small>
+            </span>
+          </div>
+          <p className="mk-burbuja mk-wa-ella">¡Claro que sí! Ahora mismo.</p>
+        </div>
+      </Movil>
+      <Movil tono="bien" titulo="Y en tu ficha: su reseña, contestada con tu visto bueno. Así se ve un despacho que cuida a sus clientes. (Ejemplo.)">
+        <>
+          <p className="mk-ficha-nombre lg-barra">
+            <Logo nombre="Ficha de Google" tam={22} /> Tierno Centella Abogados
+          </p>
+          <p className="mk-ficha-nota">
+            <b>4,5</b> <Estrellas n={5} /> <small>(90)</small>
+          </p>
+          <div className="mk-resena">
+            <p className="mk-resena-cabeza">
+              <b>María · hace 2 horas</b> <Estrellas n={5} />
+            </p>
+            <p className="mk-resena-texto">&quot;Me sentí escuchada desde el primer día y me explicaron cada paso. Muy agradecida.&quot;</p>
+            <div className="mk-respuesta">
+              <b>Respuesta del propietario</b>
+              <p>Muchas gracias, María. Nos alegra mucho haberte acompañado. Un abrazo de todo el equipo.</p>
+            </div>
+          </div>
+        </>
+      </Movil>
+    </div>
+  );
+}

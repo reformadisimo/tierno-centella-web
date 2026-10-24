@@ -306,9 +306,26 @@ Las hemos leído enteras. Casi ninguna discute el resultado jurídico: se quejan
 - Una de las reseñas de cinco estrellas parece escrita por alguien del equipo (el nombre coincide con el de una abogada del despacho). Google no permite reseñas de empleados y puede penalizar la ficha. Te recomendamos retirarla.
 - Uno de los clientes descontentos cuenta que Google le retiró la reseña y la volvió a publicar. Denunciar reseñas negativas que no incumplen las normas suele salir peor: la persona se enfada más y la reseña vuelve. Lo que funciona es responder con calma.
 
-### Por qué importa tanto llegar a 4,8
+### Por qué importa tanto pasar de 4,2 a 4,8
 
-- **Mucha gente filtra o descarta por estrellas** antes de leer nada. Entre un 4,2 y un 4,8 de la competencia, gana el 4,8 casi siempre.
+Es uno de los objetivos más importantes de todo el plan, porque **casi todo el mundo lee las reseñas antes de elegir abogado**. Los datos más recientes:
+
+| Lo que hace la gente | Cuántos |
+| --- | --- |
+| Españoles que consultan reseñas antes de comprar o contratar | **89 %** |
+| Personas que leen reseñas antes de elegir un negocio de su zona | **97 %** (y el 41 %, siempre) |
+| Solo contratan si el negocio tiene **4 estrellas o más** | **68 %** |
+| Solo contratan si tiene **4,5 o más** | **31 %** (casi el doble que hace un año) |
+| Esperan que el negocio **responda** a las reseñas | **89 %** |
+| No contratarían a un negocio que **nunca responde** | **42 %** |
+| Se fijan sobre todo en las reseñas de los **últimos tres meses** | **74 %** |
+
+*Fuentes: Skeepers, Informe de los consumidores 2025 (10.000 consumidores en España); BrightLocal, Local Consumer Review Survey 2026.*
+
+**Lo que significa para ti**: con un 4,2, **casi una de cada tres personas te puede descartar antes de leer nada**, porque solo mira negocios de 4,5 o más (según BrightLocal). Y con ninguna reseña respondida, a cuatro de cada diez les basta eso para irse a otro despacho. Para un abogado pesa todavía más que para una tienda: nadie elige a quien le va a llevar el despido o el acoso sin mirar qué dicen otros que pasaron por lo mismo.
+
+- **Mucha gente filtra o descarta por estrellas** antes de leer nada. Entre un 4,2 y un 4,8 de la competencia (García de la Santa tiene 4,9 con 609 reseñas), gana el 4,8 casi siempre.
+- **Las reseñas recientes cuentan más**: por eso pedirlas de forma constante, cada semana, vale más que una tanda de golpe.
 - **Google ordena el mapa** teniendo en cuenta la nota, el número de reseñas y si respondes.
 - **Una reseña sin respuesta dice más que la reseña**: quien la lee piensa "aquí nadie contesta", que es justo la queja.
 - **Las IA leen tu ficha** cuando alguien les pide un abogado laboralista en Madrid.
@@ -326,10 +343,20 @@ Hoy tu media exacta es 4,17. Sin ninguna reseña negativa nueva, harían falta:
 
 Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos de un año. El 4,8 es una meta a dos o tres años, y se consigue con constancia, no con trucos: nunca reseñas falsas ni a cambio de nada, porque Google las borra y castiga la ficha.
 
+### No contestar también te resta
+
+Hoy **ninguna de tus 59 reseñas tiene respuesta**, ni las buenas ni las malas. Y eso pesa:
+
+- **Google lo tiene en cuenta**: recomienda responder a las reseñas y lo valora al decidir a quién enseña primero en el mapa. Una ficha que nunca contesta parece una ficha abandonada.
+- **Quien te busca lo ve**: una reseña de una estrella sin respuesta confirma la queja ("aquí nadie contesta"). La misma reseña con una respuesta amable y profesional, en cambio, da confianza.
+- **Las IA también lo leen**: cuando alguien pregunta por un abogado laboralista en Madrid, leen tus reseñas y si respondes.
+- **Y a los contentos también hay que contestarles**: un "gracias" con tu nombre anima a otros a escribir.
+
 ### Cómo lo conseguimos
 
-- **Responder las 59**, empezando por las 11 negativas, con las plantillas de abajo. Lo podemos hacer nosotros, con tu visto bueno.
-- **Pedir la reseña a todos los clientes**, al cerrar su asunto o después de la consulta, sin elegir solo a los contentos: Google prohíbe filtrar a quién se le pide. Con un enlace directo por WhatsApp y un código QR en la recepción.
+- **Responder las 59, siempre con tu aprobación.** Te mandamos el listado completo, cada reseña con la respuesta que proponemos (empezando por las 11 negativas), para que la leas tranquilamente en el móvil. Tú nos dices "adelante" o cambias lo que quieras, y la publicamos. **Nunca sale nada en tu nombre sin que lo hayas visto.**
+- **Y a partir de ahí, cada reseña nueva contestada en 48 horas**: en cuanto entra, te llega la respuesta propuesta por WhatsApp; con un "ok" se publica. Si un día no puedes mirarlo, esperamos a tu visto bueno.
+- **Campañas de WhatsApp para conseguir más reseñas** (lo explicamos justo debajo).
 - **Arreglar lo que provoca las malas**: precio claro (hecho), respuesta en 48 horas laborables, aviso de vacaciones en agosto y el correo después de la consulta con el resumen y los siguientes pasos (apartado 17).
 - **Poner al día tu Perfil de Empresa de Google**, que también podemos hacer nosotros en una mañana:
   - Categoría principal "Abogado laboralista" (hoy es "Bufete") y secundarias de acoso, despidos e incapacidad.
@@ -340,6 +367,29 @@ Con un cliente contento a la semana que deje su reseña, el 4,5 llega en menos d
   - Una publicación a la semana con tus vídeos de Instagram y los artículos nuevos.
   - Preguntas y respuestas frecuentes (precio, videollamada, plazos).
   - El enlace a la web y a reservar cita, medido para saber cuántas consultas llegan desde la ficha.
+
+### Campañas de WhatsApp para pedir reseñas
+
+La forma más sencilla de pasar de 59 a 100 reseñas es **pedirlas en el momento bueno, por el canal que todo el mundo usa**. Un WhatsApp corto, con el enlace directo a tu ficha: un toque y la persona ya está escribiendo su opinión, sin buscar nada.
+
+[[mock-resena]]
+
+**Cómo funciona**:
+
+1. **Al cerrar cada asunto** (o unos días después de la consulta), sale un WhatsApp desde el número del despacho con el enlace directo para dejar la opinión en Google. Lo preparamos nosotros; tú solo nos dices qué asuntos se han cerrado.
+2. **Un solo recordatorio**, a la semana, a quien no la haya dejado. Ni uno más: no queremos agobiar a nadie.
+3. **Una campaña de arranque** con los clientes de los últimos meses que ya han terminado, para coger ritmo desde el primer mes.
+4. **Un código QR en la recepción** y en el correo después de la consulta (apartado 17), para quien prefiera hacerlo en el momento.
+5. **Medido**: cada mes te decimos cuántos mensajes salieron, cuántas reseñas nuevas llegaron y cómo va la nota.
+
+**Con cuidado, porque es tu despacho**:
+
+- **A todos los clientes, sin filtrar.** Google prohíbe pedir reseñas solo a los contentos y puede castigar la ficha si lo detecta. La campaña va a todos los que terminan su asunto; como la gran mayoría acaba contenta (44 de cada 59 reseñas ya son de cinco estrellas), la nota sube sola.
+- **Nunca a cambio de nada** (ni descuentos ni regalos): también lo prohíbe Google.
+- **Solo a quien ha aceptado que le escribáis por WhatsApp**, y el mensaje no menciona nunca su asunto, por el secreto profesional.
+- **Desde el número del despacho**, con WhatsApp Business, para que la persona reconozca quién le escribe.
+
+**Lo que puede dar**: si de cada diez clientes que terminan su asunto, tres dejan la reseña, con unos cuatro asuntos cerrados a la semana son unas cinco reseñas nuevas al mes. A ese ritmo, el **4,5 llega en unos seis meses**, la mitad que pidiéndolas de palabra. Son cuentas orientativas: dependen de cuántos asuntos cerréis.
 
 ### Respuestas listas para copiar y pegar
 
@@ -1075,7 +1125,8 @@ Te contamos en qué estamos: **estamos montando una agencia de marketing**. Toda
 | SEO | Los artículos del calendario (tres a la semana), Semrush y Search Console, y que te recomienden las IA |
 | SEM: Google Ads | Tus campañas, las páginas de aterrizaje y lo que cuesta cada consulta, optimizado semana a semana |
 | Instagram, LinkedIn y Facebook | Ideas, guiones de reels, publicaciones y campañas, también para colegios e instituciones |
-| Ficha de Google y reseñas | Responder reseñas y conseguir más, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
+| Ficha de Google y reseñas | Responder todas las reseñas (siempre con tu aprobación: te mandamos cada respuesta antes de publicarla) y tener la ficha al día, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
+| Campañas de WhatsApp | Pedir la reseña a cada cliente al cerrar su asunto, con el enlace directo a tu ficha y un recordatorio; medido cada mes (apartado 5) |
 | Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
 | Medición e informes | Un informe semanal sencillo: visitas, consultas, de dónde vienen y qué cambiamos |
 

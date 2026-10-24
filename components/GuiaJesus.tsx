@@ -6,7 +6,7 @@ import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
 import OficiosGuia from './OficiosGuia';
 import { BloqueAccesos, BloqueConexiones, BloquePrompts, BloqueRedes } from './LogosGuia';
-import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupVelocidad } from './MockupsGuia';
+import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupResenaWhatsApp, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
   id: string;
@@ -249,7 +249,7 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     luego: 'objetivo en un año, con todas respondidas',
     visto: 'Hemos leído las 59. Casi ninguna mala discute tu trabajo: hablan del precio que no esperaban o de que nadie les contestó.',
     cuesta: 'Las estrellas se ven antes que tu web y que tus sentencias. Mucha gente descarta por debajo de 4,5, y una mala sin respuesta pesa el doble.',
-    ayudamos: 'Responderlas todas con plantillas cuidadas, pedir reseña a cada cliente y arreglar lo que provoca las malas.',
+    ayudamos: 'Responderlas todas (te mandamos cada respuesta para que la apruebes), pedir la reseña a cada cliente por WhatsApp al cerrar su asunto y arreglar lo que provoca las malas.',
     ancla: '5',
   },
   {
@@ -390,7 +390,7 @@ const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; 
   { area: 'Autoridad (quién te enlaza)', color: 'rojo', hoy: '8 sobre 100. García de la Santa tiene 30 y Bufete Toro, 37.', haremos: 'Enlaces de medios, universidades y colegios profesionales, donde ya tienes relación.' },
   { area: 'Tu web', color: 'rojo', hoy: '18 segundos en cargar en el móvil, 49 sobre 100 de velocidad, "consulta gratuita" que no lo es.', haremos: 'Hecho: 94 de velocidad, 14 herramientas, asistente, precio claro.' },
   { area: 'Anuncios de Google', color: 'rojo', hoy: 'Activos, pero llevan a una página genérica y no se sabe qué consulta trae cada anuncio.', haremos: 'Hecho: tres páginas por tema. Falta medir cada consulta y ajustar las campañas.' },
-  { area: 'Reseñas', color: 'ambar', hoy: '4,2 con 59 reseñas: 44 de cinco estrellas, pero 11 de una sin contestar.', haremos: 'Responderlas todas, pedir reseñas al cerrar cada caso y llegar a 4,5 en un año.' },
+  { area: 'Reseñas', color: 'ambar', hoy: '4,2 con 59 reseñas: 44 de cinco estrellas, pero 11 de una sin contestar.', haremos: 'Responderlas todas con tu aprobación, pedirlas por WhatsApp al cerrar cada caso y llegar a 4,5.' },
   { area: 'Blog', color: 'rojo', hoy: 'Parado desde 2022, con temas que no son tuyos.', haremos: 'Tres artículos a la semana sobre lo que de verdad busca la gente.' },
   { area: 'Redes sociales', color: 'ambar', hoy: 'Instagram con buenos vídeos pero un parón de 2021 a 2024; dos cuentas de X abandonadas.', haremos: 'Un ritmo constante, reels con tus casos y LinkedIn para colegios e instituciones.' },
   { area: 'Saber de dónde vienen tus clientes', color: 'rojo', hoy: 'No se mide.', haremos: 'Cada llamada, WhatsApp y formulario con su origen, y un informe sencillo cada semana.' },
@@ -435,6 +435,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-velocidad': MockupVelocidad,
   'mock-aviso': MockupAvisoChat,
   'mock-informe': MockupInforme,
+  'mock-resena': MockupResenaWhatsApp,
   web: BloqueWeb,
   landings: BloqueLandings,
 };

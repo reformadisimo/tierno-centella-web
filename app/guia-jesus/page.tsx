@@ -31,6 +31,7 @@ const FUENTES: [string, string][] = [
   ['Novedades laborales de marzo y abril de 2026, con las SSTS 62, 126, 159 y 169/2026 (Pérez-Llorca)', 'https://www.perezllorca.com/wp-content/uploads/2026/05/2603-2604-Newsletter-Laboral.pdf'],
   ['Semrush: datos de posicionamiento de tiernocentella.es y competidores (base de datos de España, 23/10/2026)', 'https://www.semrush.com/analytics/overview/?db=es&q=tiernocentella.es'],
   ['BrightLocal, Local Consumer Review Survey 2026 (reseñas y confianza)', 'https://www.brightlocal.com/research/local-consumer-review-survey/'],
+  ['Skeepers, Informe de los consumidores 2025: el 89 % de los españoles consulta reseñas (ESdiario, 10/03/2025)', 'https://www.esdiario.com/economia/250310/154547/90-ciento-espanoles-leen-resenas-online-comprar.html'],
   ['BrightLocal, estudio de visibilidad local en IA (septiembre de 2026)', 'https://www.brightlocal.com/research/local-ai-visibility-study/'],
   ['Estatuto General de la Abogacía Española (RD 135/2021), arts. 19 y 20: publicidad', 'https://noticias.juridicas.com/base_datos/Laboral/692644-real-decreto-135-2021-de-2-de-marzo-por-el-que-se-aprueba-el-estatuto-general.html'],
   ['Código Deontológico de la Abogacía Española (2019), arts. 5, 6 y 21', 'https://vlex.es/vid/codigo-deontologico-abogacia-174147'],
@@ -45,7 +46,7 @@ type Extra = { foto: string; frase: string; grupo: string; abierta?: boolean };
 const FRANJAS: Record<string, { hoy: string; luego: string }> = {
   '4': { hoy: '18,3 segundos en cargar en el móvil, 49 sobre 100 y "consulta gratuita" que no lo es', luego: '3,2 segundos, 94 sobre 100 y el precio claro desde el principio' },
   '4 bis': { hoy: '239 visitas al mes desde Google (un 38 % menos que en julio) y 14 sobre 100 en las IA', luego: 'Objetivo a un año: unas 2.500 visitas al mes y más de 30 en las IA' },
-  '5': { hoy: '4,2 estrellas y 11 reseñas de una estrella sin contestar', luego: 'Todas respondidas y hacia el 4,5 en un año' },
+  '5': { hoy: '4,2 estrellas, ninguna reseña contestada y el 31 % de la gente solo contrata con 4,5 o más', luego: 'Todas respondidas con tu aprobación, campañas de WhatsApp y camino del 4,8' },
   '6': { hoy: 'Instagram con un parón de 2021 a 2024 y dos cuentas de X abandonadas', luego: 'Un ritmo constante: reels con tus casos, LinkedIn para colegios e instituciones' },
   '7': { hoy: 'García de la Santa recibe 38 veces más visitas que tú', luego: 'Ser el despacho de referencia en acoso laboral en Madrid' },
   '7 bis': { hoy: 'Casi todos tus competidores dicen "gratis" y tu precio no se explica', luego: 'Qué incluye tu consulta, contado mejor que nadie' },
