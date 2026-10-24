@@ -6,6 +6,7 @@ import ProveedoresGuia from './ProveedoresGuia';
 import CostesGuia from './CostesGuia';
 import MercadoGuia from './MercadoGuia';
 import CambioGuia from './CambioGuia';
+import CompromisoVelocidad from './CompromisoVelocidad';
 import TodoGuia from './TodoGuia';
 import SeguridadGuia from './SeguridadGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -220,7 +221,7 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     luego: 'en la web nueva (94 sobre 100)',
     visto: 'Hemos medido tu web con las herramientas de Google y de Pingdom: en el móvil tarda más de 18 segundos en enseñar lo importante.',
     cuesta: 'Quien busca un abogado con prisa no espera tanto: se vuelve a Google y entra en el siguiente. Google, además, coloca peor a las webs lentas.',
-    ayudamos: 'La web nueva ya carga en unos 3 segundos y saca 94 de velocidad. Este punto ya está resuelto.',
+    ayudamos: 'La web nueva ya carga en unos 3 segundos y saca 94 de velocidad. Nos comprometemos a 100 en todo y a menos de 2 segundos.',
     ancla: '12',
   },
   {
@@ -486,6 +487,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'crm-enlace': BloqueCrmEnlace,
   mercado: MercadoGuia,
   cambio: CambioGuia,
+  'compromiso-velocidad': CompromisoVelocidad,
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
   costes: CostesGuia,

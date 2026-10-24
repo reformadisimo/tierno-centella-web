@@ -28,7 +28,7 @@ const INCLUIDO: [string, string, string[]][] = [
     'Todos los cambios que pidas: textos, fotos, precios, horarios, el mismo día',
     'Páginas nuevas cuando las necesites (un servicio, una campaña, un caso)',
     'Herramientas nuevas: calculadoras, tests, comprobadores',
-    'Velocidad vigilada: que siga cargando en unos 3 segundos en el móvil',
+    'Compromiso de velocidad: 100 en las cuatro notas de PageSpeed, en móvil y ordenador, y menos de 2 segundos de carga, vigilado cada semana',
     'Seguridad, sin plugins que actualizar ni licencias que pagar',
     'Cada versión de la web guardada: volver a la de hace un mes en minutos',
     'Que funcione en todos los móviles, tabletas y navegadores',

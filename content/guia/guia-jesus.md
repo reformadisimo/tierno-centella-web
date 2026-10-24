@@ -644,6 +644,16 @@ La velocidad no es un capricho: si la web tarda, la gente se va antes de leer tu
 
 [[mock-velocidad]]
 
+### Nuestro compromiso: 100 en todo y menos de 2 segundos
+
+Esto sí te lo prometemos, porque sabemos hacerlo: **tu web tendrá 100 en las cuatro notas de PageSpeed Insights** (velocidad, accesibilidad, buenas prácticas y SEO), **en el móvil y en el ordenador**, y el **3 de 3** en navegación para agentes de IA. Y **cargará en menos de 2 segundos**, aunque nuestro objetivo es que lo haga en menos de uno.
+
+¿Por qué tanto empeño? Porque **Google lo tiene en cuenta**: su documentación oficial dice que usa estas métricas de experiencia para ordenar los resultados. Ante dos despachos parecidos, la web rápida tiene ventaja. Y, sobre todo, porque **quien espera, se va**: más de la mitad de la gente abandona una web que tarda más de 3 segundos, y una página rápida convierte hasta tres veces más visitas en consultas.
+
+Hoy, antes incluso de publicarla, la web nueva ya saca 94 de velocidad y 100 en el resto, y carga en 3,2 segundos frente a los 18,3 de la actual. El último tramo es el que más trabajo cuesta, y es el que nos comprometemos a recorrer contigo.
+
+[[compromiso-velocidad]]
+
 **Y preparada para los agentes de IA**: Google ya puntúa si los asistentes de IA que navegan por las webs (los que buscan, comparan o piden cita por la persona) pueden entender la tuya. Lo hemos medido el 23 de octubre de 2026 en tu web y en la de nueve despachos de Madrid. **Ninguno saca la nota completa. La web nueva, sí.**
 
 | Web (en el móvil) | Navegación agéntica |
