@@ -18,17 +18,17 @@ function caja(titulo: string, cuerpo: string, enlace: string) {
 
 type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
 
-function preparar(a: Aviso) {
+function preparar(a: Aviso, donde = '') {
   const hora = new Intl.DateTimeFormat('es-ES', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(new Date());
   if (a.tipo === 'visita') {
     return {
-      asunto: `Tierno Centella: Jesús ha abierto la guía (${a.dispositivo ?? 'dispositivo'}, ${hora})`,
+      asunto: `Tierno Centella: Jesús ha abierto la guía (${a.dispositivo ?? 'dispositivo'}${donde ? `, ${donde.split(' · ')[0]}` : ''}, ${hora})`,
       html: caja(
         'Jesús ha abierto la guía',
-        `<p>Desde el <b>${esc(a.dispositivo ?? '')}</b>, el ${hora}.</p><p style="color:#3b5168">Avisa una vez cada 4 horas por dispositivo. Si has sido tú, abre la guía una vez con <b>?yo=1</b> al final de la dirección en ese navegador y no volverá a avisarte.</p>`,
+        `<p>Desde el <b>${esc(a.dispositivo ?? '')}</b>, el ${hora}.</p>${donde ? `<p>Desde: <b>${esc(donde)}</b></p>` : ''}<p style="color:#3b5168">Avisa una vez cada 4 horas por dispositivo. Si has sido tú, abre la guía una vez con <b>?yo=1</b> al final de la dirección en ese navegador y no volverá a avisarte.</p>`,
         GUIA,
       ),
-      texto: `Jesús ha abierto la guía (${a.dispositivo}), ${hora}.`,
+      texto: `Jesús ha abierto la guía (${a.dispositivo}), ${hora}.${donde ? ` Desde: ${donde}.` : ''}`,
     };
   }
   if (a.tipo === 'reaccion') {
@@ -85,7 +85,14 @@ export async function POST(req: Request) {
     return Response.json({ ok: false }, { status: 400 });
   }
   if (['respuestas', 'comentario'].includes(aviso.tipo) && (aviso.texto ?? '').trim().length < 2) return Response.json({ ok: false }, { status: 400 });
-  const { asunto, html, texto } = preparar(aviso);
+  // Ciudad aproximada (la da Vercel) y aparato, para distinguir si quien abre es Jesús o Ignacio.
+  const ciudad = decodeURIComponent(req.headers.get('x-vercel-ip-city') ?? '');
+  const region = decodeURIComponent(req.headers.get('x-vercel-ip-country-region') ?? '');
+  const ua = req.headers.get('user-agent') ?? '';
+  const so = /iPhone|iPad/.test(ua) ? 'iPhone o iPad' : /Android/.test(ua) ? 'Android' : /Mac OS X/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : '';
+  const nav = /Edg\//.test(ua) ? 'Edge' : /CriOS|Chrome\//.test(ua) ? 'Chrome' : /Firefox\//.test(ua) ? 'Firefox' : /Safari\//.test(ua) ? 'Safari' : '';
+  const donde = [ciudad && `${ciudad}${region ? ` (${region})` : ''}`, [so, nav].filter(Boolean).join(', ')].filter(Boolean).join(' · ');
+  const { asunto, html, texto } = preparar(aviso, aviso.tipo === 'visita' ? donde : '');
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' },
