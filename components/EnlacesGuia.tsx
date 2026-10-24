@@ -125,9 +125,9 @@ export function BloqueCrmEnlace() {
     <div className="ew">
       <a className="ew-grande" href="/guia-jesus/crm" target="_blank" rel="noopener">
         <span>
-          <small>Ejemplo · datos inventados</small>
-          <strong>Ver cómo sería tu CRM</strong>
-          <em>Las consultas entrando solas, de dónde viene cada una, los plazos vigilados y qué canal te trae clientes. Puedes tocarlo todo. Se abre en otra pestaña.</em>
+          <small>Funciona de verdad · modo prueba con datos inventados</small>
+          <strong>Probar tu CRM</strong>
+          <em>Da de alta una consulta, arrástrala de fase, apunta una llamada, mira los plazos de despido y qué canal te trae clientes. No rompes nada. Se abre en otra pestaña.</em>
         </span>
         <Flecha />
       </a>

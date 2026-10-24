@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import CrmDemo from '@/components/CrmDemo';
+import CrmPrueba from '@/components/crm/CrmPrueba';
 
 export const metadata: Metadata = {
-  title: 'Tu CRM (ejemplo) | Guía para Jesús',
-  description: 'Así entrarían y se seguirían las consultas del despacho en un CRM sencillo. Datos inventados.',
+  title: 'Tu CRM (modo prueba) | Guía para Jesús',
+  description: 'El CRM del despacho con datos inventados: da de alta, mueve y apunta para probarlo.',
   robots: { index: false, follow: false },
 };
 
 export default function Crm() {
-  return <CrmDemo />;
+  return <CrmPrueba />;
 }

@@ -14,7 +14,7 @@ import { temaActual, VENTANAS } from '@/lib/contexto';
 // ni si ya escribió al chat, envió un formulario o todavía no ha elegido las cookies.
 const CLAVE = 'tc-salida';
 const DIAS = 7;
-const RUTAS_FUERA = ['/guia-jesus', '/contacto', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en', '/conversaciones'];
+const RUTAS_FUERA = ['/guia-jesus', '/crm', '/contacto', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en', '/conversaciones'];
 
 const TEMAS = [
   { href: '/despido', texto: 'Me han despedido' },

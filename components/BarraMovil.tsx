@@ -22,6 +22,7 @@ const SEGUN_TEMA: { ruta: string; tema: string; boton: string; href: string }[] 
 
 export default function BarraMovil() {
   const ruta = usePathname();
+  if (ruta?.startsWith('/crm') || ruta?.startsWith('/guia-jesus/crm')) return null;
   // En las landings de anuncios no sacamos a nadie de la página: el tercer botón lleva al formulario.
   const enLanding = ruta.startsWith('/consulta/');
   const tema = SEGUN_TEMA.find((t) => ruta.startsWith(t.ruta));

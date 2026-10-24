@@ -1,5 +1,6 @@
 import { entrarEnJourney } from '@/lib/journey';
 import { marcarLlamada } from '@/lib/conversaciones';
+import { entrarEnCrm } from '@/lib/crm-entrada';
 
 // Envía la consulta del formulario por correo con Resend. Sin claves configuradas,
 // responde 503 y el formulario ofrece WhatsApp: nunca se pierde un contacto en silencio.
@@ -28,10 +29,14 @@ export async function POST(req: Request) {
     return Response.json({ error: 'Faltan tu nombre, un teléfono o correo, o aceptar la política de privacidad.' }, { status: 400 });
   }
 
+  // Primero, al CRM: así la consulta queda apuntada aunque el correo falle.
+  const enCrm = await entrarEnCrm({ nombre, telefono, email, tema, origen, mensaje: [mensaje, cuando && `Cuándo llamar: ${cuando}`].filter(Boolean).join(' · '), chat: Boolean(datos.conversacion) });
+
   const clave = process.env.RESEND_API_KEY;
   const destino = process.env.CONTACTO_EMAIL;
   const remitente = process.env.CONTACTO_REMITENTE || 'Web Tierno Centella <onboarding@resend.dev>';
   if (!clave || !destino) {
+    if (enCrm) return Response.json({ ok: true });
     return Response.json({ error: 'El envío por correo aún no está activado en la demo.' }, { status: 503 });
   }
 
@@ -54,6 +59,7 @@ export async function POST(req: Request) {
   });
   if (!r.ok) {
     console.error('Error de Resend:', r.status, await r.text().catch(() => ''));
+    if (enCrm) return Response.json({ ok: true });
     return Response.json({ error: 'No se pudo enviar ahora mismo.' }, { status: 502 });
   }
   // Si viene del chat, la conversación guardada queda marcada como "pidió llamada", con su nombre y teléfono.
