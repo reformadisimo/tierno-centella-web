@@ -377,8 +377,10 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 6;
+const VERSION = 7;
 const NOVEDADES: { texto: string; clave: string }[] = [
+  { clave: '10', texto: 'El chat de la web ahora se puede usar hablando: un botón de micrófono para dictar la pregunta sin escribir. Además sabe mucho más de ti, del despacho y de tus sentencias.' },
+  { clave: '11', texto: 'Las fotos de las herramientas y de las guías ahora se mueven: clips cortos en bucle, con tu equipo y tu despacho siempre como fotos reales.' },
   { clave: '6', texto: 'Facebook y LinkedIn: hemos encontrado dos páginas de Facebook (una parada desde 2017, con el piso y el teléfono mal) y tres de LinkedIn sin publicaciones. Te enseñamos lo que ve quien te busca en Google, cómo quedarían y por qué ahí se pueden hacer anuncios muy bien dirigidos.' },
   { clave: '8', texto: 'La web está cambiando de imagen: barra superior con tus datos y redes, menús con iconos, portada con las áreas y el equipo. No es la definitiva: la estamos puliendo cada día.' },
   { clave: '19 bis', texto: 'Cómo mejora la web sola cada semana: miramos por dónde navega la gente (mapas de calor), qué pregunta en el chat y dónde se atasca, y cambiamos lo que haga falta.' },

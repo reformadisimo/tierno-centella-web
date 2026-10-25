@@ -1,3 +1,5 @@
+import FotoVideo from '@/components/FotoVideo';
+import { videoDeFoto } from '@/lib/video-foto';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
@@ -68,7 +70,11 @@ export default function Despido() {
           </p>
 
           <figure className="prosa-foto">
-            <img src="/img/firma-contrato-640.webp" srcSet="/img/firma-contrato-640.webp 640w, /img/firma-contrato.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona firma un documento" width={1200} height={800} loading="lazy" decoding="async" />
+            {videoDeFoto('firma-contrato') ? (
+              <FotoVideo foto="firma-contrato" alt="Una pareja firma un documento sobre una mesa" video={videoDeFoto('firma-contrato')!} sizes="(max-width: 1000px) 100vw, 720px" />
+            ) : (
+              <img src="/img/firma-contrato-640.webp" srcSet="/img/firma-contrato-640.webp 640w, /img/firma-contrato.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona firma un documento" width={1200} height={800} loading="lazy" decoding="async" />
+            )}
           </figure>
           <h2>Qué puede decidir el juez</h2>
           <table className="tabla">
@@ -101,7 +107,11 @@ export default function Despido() {
           </table>
 
           <figure className="prosa-foto">
-            <img src="/img/despido-caja-640.webp" srcSet="/img/despido-caja-640.webp 640w, /img/despido-caja.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona recoge sus cosas en una caja tras un despido" width={1200} height={800} loading="lazy" decoding="async" />
+            {videoDeFoto('despido-caja') ? (
+              <FotoVideo foto="despido-caja" alt="Una persona recoge sus cosas en una caja tras un despido" video={videoDeFoto('despido-caja')!} sizes="(max-width: 1000px) 100vw, 720px" />
+            ) : (
+              <img src="/img/despido-caja-640.webp" srcSet="/img/despido-caja-640.webp 640w, /img/despido-caja.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona recoge sus cosas en una caja tras un despido" width={1200} height={800} loading="lazy" decoding="async" />
+            )}
           </figure>
           <h2>Cuándo un despido puede ser nulo</h2>
           <p>La ley protege especialmente a quien estaba en alguna de estas situaciones al ser despedido:</p>

@@ -32,6 +32,10 @@ const TEXTOS = {
     herramientasHref: '/herramientas',
     placeholder: 'Escribe aquí tu pregunta',
     enviar: 'Enviar',
+    hablar: 'Hablar',
+    escuchando: 'Te escucho... pulsa de nuevo para parar',
+    sinVoz: 'Tu navegador no permite dictar. Puedes escribir tu pregunta.',
+    vozError: 'No he podido usar el micrófono. Revisa el permiso del navegador o escribe tu pregunta.',
     tuMensaje: 'Tu mensaje',
     aviso: 'Es una inteligencia artificial y puede equivocarse; no sustituye a un abogado. Guardamos la conversación para atenderte mejor; no escribas datos personales que no sean necesarios.',
     errorBase: 'No he podido responder.',
@@ -71,6 +75,10 @@ const TEXTOS = {
     herramientasHref: '/en/tools',
     placeholder: 'Type your question here',
     enviar: 'Send',
+    hablar: 'Speak',
+    escuchando: 'Listening... tap again to stop',
+    sinVoz: 'Your browser does not support dictation. You can type your question.',
+    vozError: 'The microphone could not be used. Check the browser permission or type your question.',
     tuMensaje: 'Your message',
     aviso: 'This is an AI and it can make mistakes; it does not replace a lawyer. We keep the conversation to help you better; please do not share personal data you do not need to.',
     errorBase: "I couldn't answer.",
@@ -180,6 +188,49 @@ export default function Asistente() {
   const [mensajes, setMensajes] = useState<Mensaje[]>([]);
   const [texto, setTexto] = useState('');
   const [escribiendo, setEscribiendo] = useState(false);
+  const [oyendo, setOyendo] = useState(false);
+  const [avisoVoz, setAvisoVoz] = useState('');
+  const reconocedor = useRef<any>(null);
+  const textoBase = useRef('');
+  function hablar() {
+    setAvisoVoz('');
+    if (oyendo) {
+      reconocedor.current?.stop();
+      return;
+    }
+    const w = window as any;
+    const SR = w.SpeechRecognition || w.webkitSpeechRecognition;
+    if (!SR) {
+      setAvisoVoz(t.sinVoz);
+      return;
+    }
+    const r = new SR();
+    r.lang = idioma === 'en' ? 'en-GB' : 'es-ES';
+    r.interimResults = true;
+    r.continuous = true;
+    textoBase.current = texto ? texto.trim() + ' ' : '';
+    r.onresult = (e: any) => {
+      let dicho = '';
+      for (let i = 0; i < e.results.length; i++) dicho += e.results[i][0].transcript;
+      setTexto(textoBase.current + dicho);
+    };
+    r.onerror = (e: any) => {
+      if (e.error !== 'no-speech' && e.error !== 'aborted') setAvisoVoz(t.vozError);
+    };
+    r.onend = () => {
+      setOyendo(false);
+      reconocedor.current = null;
+      campo.current?.focus();
+    };
+    try {
+      r.start();
+      reconocedor.current = r;
+      setOyendo(true);
+    } catch {
+      setAvisoVoz(t.vozError);
+    }
+  }
+  useEffect(() => () => reconocedor.current?.abort?.(), []);
   const [cargado, setCargado] = useState(false);
   const [conversacion, setConversacion] = useState('');
   const [llamada, setLlamada] = useState(false);
@@ -449,10 +500,21 @@ export default function Asistente() {
                 }
               }}
             />
+            <button type="button" className={`asistente-mic${oyendo ? ' oyendo' : ''}`} onClick={hablar} aria-pressed={oyendo} aria-label={oyendo ? t.escuchando : t.hablar} title={oyendo ? t.escuchando : t.hablar}>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="9" y="3" width="6" height="11" rx="3" />
+                <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+              </svg>
+            </button>
             <button type="submit" className="boton" disabled={escribiendo || !texto.trim()}>
               {t.enviar}
             </button>
           </form>
+          {(oyendo || avisoVoz) && (
+            <p className="asistente-aviso asistente-voz" role="status">
+              {oyendo ? t.escuchando : avisoVoz}
+            </p>
+          )}
           <p className="asistente-aviso">{t.aviso}</p>
         </div>
       )}

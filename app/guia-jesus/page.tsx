@@ -182,6 +182,13 @@ export default function Pagina() {
         <img className="gj-portada-foto" src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo-960.webp 960w, /img/equipo.webp 1600w" sizes="100vw" alt="" />
         <div className="contenedor">
           <img src="/img/logo-tc-blanco.webp" alt="Tierno Centella Abogados" width={260} height={62} />
+          <a className="gj-ver-web" href="/" target="_blank" rel="noopener">
+            <span>
+              <strong>Si quieres ver la web ya, aquí la tienes.</strong>
+              <small>Todo lo que cuenta esta guía está hecho y puedes probarlo ahora: el chat con micrófono, los tests y las calculadoras.</small>
+            </span>
+            <span className="boton boton-marcador">Abrir la web nueva</span>
+          </a>
           <h1>Jesús, esta es tu web nueva. Te la contamos sin prisas.</h1>
           <p className="gj-portada-gancho">
             Hoy te encuentran en Google <strong>239 personas al mes</strong>. A García de la Santa, <strong>9.164</strong>. Te contamos por qué, lo

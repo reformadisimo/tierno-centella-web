@@ -7438,3 +7438,35 @@ body{padding-bottom:58px}
 
 .gj-banner .foto-video{height:100%}
 .gj-banner .foto-video img{width:100%;height:100%;object-fit:cover}
+
+.asistente-mic{flex:none;width:48px;min-height:48px;border-radius:var(--radio);border:2px solid var(--linea);background:var(--blanco);color:var(--tinta);display:grid;place-items:center;cursor:pointer}
+.asistente-mic:hover{border-color:var(--tinta)}
+.asistente-mic.oyendo{background:#d9694d;border-color:#d9694d;color:#fff;animation:mic-pulso 1.4s ease-in-out infinite}
+.asistente-voz{color:var(--tinta);font-weight:600}
+@keyframes mic-pulso{0%,100%{box-shadow:0 0 0 0 rgba(217,105,77,.5)}50%{box-shadow:0 0 0 8px rgba(217,105,77,0)}}
+@media (prefers-reduced-motion:reduce){.asistente-mic.oyendo{animation:none}}
+
+.gj-ver-web{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:16px 20px;border-radius:16px;background:rgba(255,255,255,.14);border:2px solid #f2c14e;color:#fff;text-decoration:none}
+.gj-ver-web strong{display:block;font-size:1.15rem}
+.gj-ver-web small{display:block;margin-top:4px;opacity:.9;font-size:.95rem;max-width:56ch}
+.gj-ver-web:hover{background:rgba(255,255,255,.22)}
+
+/* Guías para tu caso: tarjetas con más gracia, icono en burbuja y un color distinto por tarjeta */
+.rejilla-guias.con-icono a{border-radius:22px;border:1px solid #efdfe8;background:linear-gradient(135deg,#fff 55%,#fcf1f6);padding:18px 20px;box-shadow:0 2px 0 rgba(217,105,77,.08);transition:transform .18s,box-shadow .18s,border-color .18s}
+.rejilla-guias.con-icono a:hover{transform:translateY(-3px);border-color:#e9a9bf;box-shadow:0 14px 28px rgba(194,71,122,.14)}
+.rejilla-guias.con-icono .icono-guia{width:56px;height:56px;border-radius:22px 22px 22px 6px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.06)}
+.rejilla-guias.con-icono a:nth-child(5n+1) .icono-guia{background:#fbe9ef;color:#c2477a}
+.rejilla-guias.con-icono a:nth-child(5n+2) .icono-guia{background:#fff3d6;color:#a8741a}
+.rejilla-guias.con-icono a:nth-child(5n+3) .icono-guia{background:#f3edfa;color:#7a4fb3}
+.rejilla-guias.con-icono a:nth-child(5n+4) .icono-guia{background:#fdf0ed;color:#c0553a}
+.rejilla-guias.con-icono a:nth-child(5n+5) .icono-guia{background:#e6f4ea;color:#17602f}
+.rejilla-guias.con-icono a:hover .icono-guia{transform:rotate(-6deg) scale(1.08)}
+.rejilla-guias.con-icono a strong{color:#0d2c48}
+
+/* Menú de escritorio: el desplegable se queda un momento al salir con el ratón y el puente es más ancho */
+@media (min-width:1100px){
+  .menu-desplegable{display:grid !important;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .15s .3s,visibility 0s .45s}
+  .menu-grupo:hover .menu-desplegable,.menu-grupo:focus-within .menu-desplegable{visibility:visible;opacity:1;pointer-events:auto;transition-delay:0s;animation:none}
+  .menu-desplegable::before{display:none}
+  .menu-grupo:hover{z-index:5}
+}
