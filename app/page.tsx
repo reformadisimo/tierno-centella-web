@@ -1,3 +1,5 @@
+import FotoVideo from '@/components/FotoVideo';
+import { videoDeFoto } from '@/lib/video-foto';
 import Link from 'next/link';
 import IconoMenu, { tipoIcono } from '@/components/IconoMenu';
 import Icono from '@/components/Iconos';
@@ -394,7 +396,11 @@ export default function Inicio() {
             </div>
           </div>
           <div className="foto-viva">
-            <img className="foto" width={1600} height={1067} src="/img/fachada.webp" srcSet="/img/fachada-640.webp 640w, /img/fachada-960.webp 960w, /img/fachada.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Edificios del centro de Madrid" loading="lazy" />
+            {videoDeFoto('fachada') ? (
+              <FotoVideo foto="fachada" alt="Vista desde el despacho de Jorge Juan, en Madrid" video={videoDeFoto('fachada')!} sizes="(max-width: 860px) 100vw, 50vw" />
+            ) : (
+              <img className="foto" width={1600} height={1067} src="/img/fachada.webp" srcSet="/img/fachada-640.webp 640w, /img/fachada-960.webp 960w, /img/fachada.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Edificios del centro de Madrid" loading="lazy" />
+            )}
           </div>
         </div>
       </section>
