@@ -29,7 +29,7 @@ La diferencia en lo que cobras es real:
 
 | Qué cambia | Accidente de trabajo | Enfermedad común |
 | --- | --- | --- |
-| Día de la baja | Salario a cargo de la empresa | Salario a cargo de la empresa |
+| Día de la baja | Salario a cargo de la empresa | Nada por ley (salvo mejora del convenio) |
 | Días 2 y 3 | 75 % | Nada por ley (salvo mejora del convenio) |
 | Días 4 a 20 | 75 % | 60 % |
 | Desde el día 21 | 75 % | 75 % |

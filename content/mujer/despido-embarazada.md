@@ -37,7 +37,7 @@ La empresa no puede cambiar la readmisión por dinero, como sí ocurre en el des
 
 ### "No superas el periodo de prueba"
 
-Desde 2019, si la empresa da por terminado tu periodo de prueba estando embarazada (o de baja por nacimiento), esa decisión es nula salvo que demuestre que el motivo no tiene relación con el embarazo. Guarda las fechas: cuándo lo comunicaste y cuándo te echaron.
+Hoy, si la empresa da por terminado tu periodo de prueba estando embarazada (o de baja por nacimiento), esa decisión es nula salvo que demuestre que el motivo no tiene relación con el embarazo. Guarda las fechas: cuándo lo comunicaste y cuándo te echaron.
 
 ### "Se acaba tu contrato temporal"
 

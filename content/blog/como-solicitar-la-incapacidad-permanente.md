@@ -23,7 +23,7 @@ La incapacidad permanente se pide al Instituto Nacional de la Seguridad Social (
 1. **Reúne los informes**: de tu médico de cabecera, de los especialistas, pruebas, tratamientos y su resultado. Cuanto más concretos sobre lo que no puedes hacer, mejor.
 2. **Presenta la solicitud** al INSS con tus datos, la descripción de tu profesión habitual y los informes.
 3. **Equipo de Valoración de Incapacidades (EVI)**: es el "tribunal médico". Te examinan y emiten un dictamen. Lleva toda la documentación y explica con sinceridad tu día a día en el trabajo.
-4. **Resolución**: el INSS decide si reconoce la incapacidad y en qué grado. Si no responde en el plazo legal (135 días), se entiende denegada.
+4. **Resolución**: el INSS decide si reconoce la incapacidad y en qué grado. Si no responde en el plazo legal (135 días hábiles), se entiende denegada.
 
 ## Si te la deniegan
 
@@ -41,7 +41,7 @@ Para la solicitud no es obligatorio, pero preparar bien los informes desde el pr
 
 ### ¿Cuánto tarda el INSS en resolver?
 
-El plazo máximo es de 135 días. En la práctica varía según la provincia.
+El plazo máximo es de 135 días hábiles. En la práctica varía según la provincia.
 
 ### ¿Puedo pedirla por ansiedad o depresión?
 

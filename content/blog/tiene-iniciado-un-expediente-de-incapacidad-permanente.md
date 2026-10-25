@@ -17,7 +17,7 @@ Ese aviso significa que el Instituto Nacional de la Seguridad Social (INSS) ha a
 
 1. **Citación del Equipo de Valoración de Incapacidades (EVI)**, el "tribunal médico". Te examinan y revisan tus informes.
 2. **Dictamen del EVI**: propone si hay incapacidad y en qué grado.
-3. **Resolución del INSS**: reconoce un grado, lo deniega o te da el alta. El plazo máximo es de 135 días; si no contesta, se entiende denegada.
+3. **Resolución del INSS**: reconoce un grado, lo deniega o te da el alta. El plazo máximo es de 135 días hábiles; si no contesta, se entiende denegada.
 
 ## Cómo prepararte
 
@@ -43,7 +43,7 @@ Que el INSS te ha enviado una notificación sobre tu expediente: una citación, 
 
 ### ¿Cuánto tarda en resolverse?
 
-Hasta 135 días como máximo. En la práctica depende de la provincia y de si te citan pronto al tribunal médico.
+Hasta 135 días hábiles como máximo. En la práctica depende de la provincia y de si te citan pronto al tribunal médico.
 
 ### ¿Qué es mejor, jubilarse o la incapacidad permanente total?
 

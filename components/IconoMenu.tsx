@@ -20,12 +20,20 @@ const P: Record<string, string> = {
   lupa: 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3M8 11h6M11 8v6',
   documento: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5',
   flecha: 'M5 12h14M13 6l6 6-6 6',
+  pin: 'M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z',
   salud: 'M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10zM9 11h2l1-2 2 4 1-2h2',
 };
 
 export function tipoIcono(href: string, texto = ''): string {
   const h = href.toLowerCase();
   const t = texto.toLowerCase();
+  if (h.includes('mi-caso')) return 'lupa';
+  if (h.includes('donde-ir')) return 'pin';
+  if (h.includes('acompanar')) return 'salud';
+  if (h.includes('tramites')) return 'documento';
+  if (h.includes('primera-consulta')) return 'persona';
+  if (h.includes('barometro')) return 'comprobador';
+  if (h.includes('glosario')) return 'guia';
   if (h.includes('test') || t.startsWith('¿')) return 'test';
   if (h.includes('calculadora')) return 'calc';
   if (h.includes('mapa')) return 'mapa';

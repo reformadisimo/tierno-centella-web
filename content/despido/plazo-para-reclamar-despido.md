@@ -42,7 +42,7 @@ Antes de ir al juzgado, la ley exige intentar un acuerdo con la empresa. En Madr
 ### Dónde y cómo presentarla
 
 - Por internet, en la Oficina Virtual de Empleo de la Comunidad de Madrid, con certificado digital, DNI electrónico o Cl@ve.
-- En persona, en los registros del SMAC (calle Princesa, 5, y calle Ventura Rodríguez, 7, con cita previa), donde suelen darte en el momento la fecha del acto de conciliación.
+- En persona, en los registros del SMAC (calle Princesa, 5, calle Ventura Rodríguez, 7, y la Oficina de Atención al Ciudadano de la Carrera de San Jerónimo, 13, con cita previa en los dos primeros; consulta los detalles en [dónde ir en Madrid](/donde-ir)), donde suelen darte en el momento la fecha del acto de conciliación.
 - En otros registros oficiales o por correo administrativo. En ese caso te llegará la citación por correo.
 
 Guarda siempre el justificante con la fecha y hora de presentación. Es la prueba de que llegaste a tiempo.

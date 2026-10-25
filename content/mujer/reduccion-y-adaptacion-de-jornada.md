@@ -35,7 +35,7 @@ El artículo 34.8 te permite pedir cambios en cómo trabajas, sin reducir horas 
 
 Puedes pedirla para cuidar a hijos menores de 12 años, y también a tu pareja, a familiares hasta segundo grado o a otras personas dependientes que vivan contigo, explicando la necesidad.
 
-La empresa tiene que abrir una negociación contigo durante un **máximo de 15 días** y contestarte **por escrito**: aceptando, proponiendo otra alternativa o rechazando la petición con razones objetivas. Cuando terminen las circunstancias, puedes volver a tu jornada anterior.
+La empresa tiene que abrir una negociación contigo durante un **máximo de 30 días** y contestarte **por escrito**: aceptando, proponiendo otra alternativa o rechazando la petición con razones objetivas. Cuando terminen las circunstancias, puedes volver a tu jornada anterior.
 
 ## Si la empresa te lo niega
 

@@ -14,7 +14,7 @@ El Convenio 190 de la Organización Internacional del Trabajo es el primer trata
 
 ## Qué es el Convenio 190
 
-La OIT lo aprobó en Ginebra el 21 de junio de 2019. España se adhirió el 8 de marzo de 2022, se publicó en el BOE el 16 de junio de 2022 y entró en vigor para España el 25 de mayo de 2023.
+La OIT lo aprobó en Ginebra el 21 de junio de 2019. España lo ratificó en 2022, se publicó en el BOE el 16 de junio de 2022 y entró en vigor para España el 25 de mayo de 2023.
 
 Al ser un tratado internacional publicado en el BOE, forma parte del ordenamiento español. Los jueces pueden aplicarlo y usarlo para interpretar nuestras leyes.
 

@@ -7727,3 +7727,10 @@ html.a11y-quieto video { display: none !important; }
 .buzon-notas button{width:44px;height:44px;border-radius:50%;border:1px solid #c9c2b2;background:#fff;font:inherit;font-weight:700;color:#0d2c48;cursor:pointer}
 .buzon-notas button.activa{background:#0d2c48;color:#fff;border-color:#0d2c48}
 .buzon-ok{background:#eaf5ee;border-color:#b7dcc4}
+
+/* Con el grupo "Te ayudamos" el menú es más largo: se aprieta un poco según el ancho */
+@media (min-width:1100px) and (max-width:1279px){.cabecera .menu a{padding:8px 3px;font-size:.82rem}.cabecera-acciones{gap:4px}}
+@media (min-width:1280px) and (max-width:1399px){.cabecera .menu a{padding:8px 3px;font-size:.86rem}.cabecera-acciones{gap:5px}}
+@media (min-width:1400px) and (max-width:1599px){.cabecera .menu a{padding:8px 5px;font-size:.88rem}.cabecera-acciones{gap:6px}}
+@media (min-width:1100px) and (max-width:1199px){.cabecera .menu a{padding:8px 2px;font-size:.78rem}.cabecera-acciones{gap:3px}}
+@media (min-width:1400px) and (max-width:1499px){.cabecera .menu a{padding:8px 3px;font-size:.86rem}}
