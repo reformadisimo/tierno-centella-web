@@ -19,13 +19,12 @@ export const DESPACHO = {
   // Las reseñas de Google indican que la consulta se cobra con IVA aparte. Confirmar con el despacho.
   iva: ' + IVA',
   // El Código Deontológico (art. 21) obliga a identificar en internet el colegio y el número de colegiado.
-  // Pendiente de que nos lo confirme el despacho, p. ej. 'Colegiado en el ICAM, n.º 00.000'.
   colegiado: 'Colegiado en el Ilustre Colegio de Abogados de Madrid, n.º 64865',
-  // Número tomado de una ficha de un directorio externo (buscar-abogados.com). No es oficial hasta que Jesús lo confirme.
+  // Número confirmado por el despacho (consta también en el BOCM).
   colegiadoNumero: '64865',
 };
 
-export const COLEGIADO_CONFIRMADO = false;
+export const COLEGIADO_CONFIRMADO = true;
 export const lineaColegiado = () =>
   DESPACHO.colegiado ? DESPACHO.colegiado + (COLEGIADO_CONFIRMADO ? '' : ' (pendiente de confirmar con el despacho)') : '';
 
