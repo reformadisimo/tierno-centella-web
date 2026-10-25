@@ -7831,3 +7831,8 @@ html.a11y-quieto video { display: none !important; }
 
 /* Móvil: menos capas arriba. Las redes están en el pie; el teléfono, en la barra de abajo */
 @media (max-width: 760px) { .barra-sup-redes { display: none; } }
+
+/* Mujer y trabajo: titular largo en menos líneas para que los botones se vean sin bajar */
+@media (min-width: 900px) {
+  .cabeza-mujer h1 { max-width: 28ch; font-size: clamp(2.1rem, 3.3vw, 3.1rem); }
+}

@@ -5,8 +5,8 @@ fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: mujer
 orden: 3
-imagen: familia-siluetas
-imagenAlt: Siluetas de una familia con sus hijos
+imagen: mujer-cafe
+imagenAlt: Una trabajadora cansada entre papeles y portátil, intentando conciliar
 ---
 
 Tienes dos herramientas distintas para conciliar. La **reducción de jornada** es un derecho que la empresa no puede negarte: trabajas menos horas y cobras menos. La **adaptación de jornada** es pedir otra forma de trabajar (otro horario, teletrabajo, jornada continua) sin reducir horas; la empresa tiene que negociarla contigo y solo puede rechazarla con razones objetivas.

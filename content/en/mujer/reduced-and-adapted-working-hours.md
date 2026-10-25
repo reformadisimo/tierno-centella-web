@@ -6,8 +6,8 @@ fecha: 2026-10-23
 actualizado: 2026-10-23
 categoria: mujer
 orden: 3
-imagen: familia-siluetas
-imagenAlt: Silhouettes of a family with their children
+imagen: mujer-cafe
+imagenAlt: A tired worker at her desk, trying to balance work and family
 es: reduccion-y-adaptacion-de-jornada
 ---
 
