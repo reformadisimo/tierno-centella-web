@@ -44,7 +44,7 @@ export default function Acoso() {
           </div>
           <div>
             {videoDeFoto('acoso-tension') ? (
-              <FotoVideo foto="acoso-tension" alt="Un superior señala con el dedo a una trabajadora que se lleva la mano a la cabeza" video={videoDeFoto('acoso-tension')!} sizes="(max-width: 860px) 100vw, 50vw" prioridad />
+              <FotoVideo foto="acoso-tension" alt="Una trabajadora agotada se lleva la mano a la cara en la oficina" video={videoDeFoto('acoso-tension')!} sizes="(max-width: 860px) 100vw, 50vw" prioridad />
             ) : (
               <img className="foto" src="/img/acoso-tension.webp" srcSet="/img/acoso-tension-640.webp 640w, /img/acoso-tension.webp 1254w" sizes="(max-width: 860px) 100vw, 50vw" alt="Un superior señala con el dedo a una trabajadora que se lleva la mano a la cabeza" />
             )}
