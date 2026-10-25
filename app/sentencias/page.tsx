@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
@@ -43,6 +44,7 @@ function lineaOrgano(organo: string, fecha: string) {
 export default function Sentencias() {
   return (
     <>
+      <EsquemaPagina ruta="/sentencias" />
       <header className="cabeza-pagina cabeza-sentencias">
         <div className="contenedor">
           <nav className="migas" aria-label="Estás en">

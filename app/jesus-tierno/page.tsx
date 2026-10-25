@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
@@ -14,6 +15,7 @@ export const metadata: Metadata = meta({
 export default function Jesus() {
   return (
     <>
+      <EsquemaPagina ruta="/jesus-tierno" />
       <header className="cabeza-pagina cabeza-jesus">
         <div className="contenedor cabeza-con-foto">
           <div>

@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -19,6 +20,7 @@ export default function MujerYTrabajo() {
   const guias = leerColeccion('mujer');
   return (
     <>
+      <EsquemaPagina ruta="/mujer-y-trabajo" />
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/mujer-y-trabajo', texto: 'Mujer y trabajo' }])} />
       <header className="cabeza-pagina cabeza-mujer">
         <div className="contenedor cabeza-con-foto">

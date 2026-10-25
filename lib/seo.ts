@@ -123,6 +123,7 @@ export function esquemaDespacho() {
         name: DESPACHO.nombre,
         inLanguage: 'es-ES',
         publisher: { '@id': ID_DESPACHO },
+        potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${BASE}/buscar?q={search_term_string}` }, 'query-input': 'required name=search_term_string' },
       },
     ],
   };

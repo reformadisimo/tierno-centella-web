@@ -4,6 +4,7 @@ import { videoPorId } from '@/lib/videos';
 import VideoYoutube from './VideoYoutube';
 import { DESPACHO, DEMO, enlaceWhatsapp } from '@/lib/despacho';
 import JsonLd from './JsonLd';
+import { GLOSARIO, slugTermino } from '@/lib/glosario';
 import { Compartir } from './BotonesAccion';
 import { Escuchar } from './Utiles';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
@@ -115,6 +116,9 @@ export default function PaginaGuia({
     publisher: { '@id': ID_DESPACHO },
     inLanguage: en ? 'en' : 'es-ES',
     mainEntityOfPage: BASE + ruta,
+    isAccessibleForFree: true,
+    timeRequired: `PT${pieza.minutos}M`,
+    ...(en ? {} : { mentions: terminosMencionados(pieza.html) }),
     image: video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : `${BASE}${foto.src}`,
     ...(video
       ? { video: { '@type': 'VideoObject', name: video.titulo, description: video.descripcion, thumbnailUrl: `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`, embedUrl: `https://www.youtube.com/embed/${video.id}`, ...(video.fecha ? { uploadDate: video.fecha } : {}) } }
@@ -229,4 +233,13 @@ export default function PaginaGuia({
 export function Miniatura({ pieza }: { pieza: Pieza }) {
   const f = fotoDePieza(pieza);
   return <img className="miniatura" src={f.src.replace('.webp', '-640.webp')} alt="" width={640} height={427} loading="lazy" decoding="async" />;
+}
+
+// Términos del glosario que el texto enlaza: Google los entiende como los temas que trata la guía.
+function terminosMencionados(html: string) {
+  const slugs = Array.from(html.matchAll(/href="\/glosario\/([a-z0-9-]+)"/g)).map((m) => m[1]);
+  return Array.from(new Set(slugs))
+    .map((slug) => GLOSARIO.find((t) => slugTermino(t.termino) === slug))
+    .filter((t): t is NonNullable<typeof t> => !!t)
+    .map((t) => ({ '@type': 'DefinedTerm', name: t.termino, url: `${BASE}/glosario/${slugTermino(t.termino)}` }));
 }

@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
@@ -15,6 +16,7 @@ export const metadata: Metadata = meta({
 export default function Videos() {
   return (
     <>
+      <EsquemaPagina ruta="/videos" />
       <header className="cabeza-pagina cabeza-videos">
         <div className="contenedor cabeza-con-foto">
           <div>

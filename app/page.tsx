@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import FotoVideo from '@/components/FotoVideo';
 import { videoDeFoto } from '@/lib/video-foto';
 import Link from 'next/link';
@@ -22,6 +23,7 @@ export default function Inicio() {
 
   return (
     <>
+      <EsquemaPagina ruta="/" />
       <section className="portada-video">
         <picture>
           <source media="(max-width: 700px)" srcSet="/img/portada-poster-movil.webp" />

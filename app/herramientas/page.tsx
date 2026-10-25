@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { HERRAMIENTAS } from '@/lib/herramientas';
@@ -20,6 +21,7 @@ export const metadata: Metadata = meta({
 export default function Herramientas() {
   return (
     <>
+      <EsquemaPagina ruta="/herramientas" />
       <header className="cabeza-pagina cabeza-herramientas">
         <div className="contenedor cabeza-con-foto">
           <div>

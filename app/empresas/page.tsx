@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
@@ -41,6 +42,7 @@ const SERVICIOS = [
 export default function Empresas() {
   return (
     <>
+      <EsquemaPagina ruta="/empresas" />
       <header className="cabeza-pagina cabeza-empresas">
         <div className="contenedor cabeza-con-foto">
           <div>

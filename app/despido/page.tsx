@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import LineaDespido from '@/components/LineaDespido';
 import FotoVideo from '@/components/FotoVideo';
 import { videoDeFoto } from '@/lib/video-foto';
@@ -21,6 +22,7 @@ export const metadata: Metadata = meta({
 export default function Despido() {
   return (
     <>
+      <EsquemaPagina ruta="/despido" />
       <header className="cabeza-pagina cabeza-despido">
         <div className="contenedor cabeza-con-foto">
           <div>

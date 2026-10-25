@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   creator: 'Tierno Centella Abogados',
   publisher: 'Tierno Centella Abogados',
   formatDetection: { telephone: true, email: true, address: true },
-  alternates: { canonical: BASE },
+  alternates: { canonical: BASE, types: { 'application/rss+xml': `${BASE}/feed.xml` } },
   openGraph: { siteName: 'Tierno Centella Abogados', locale: 'es_ES', type: 'website' },
   twitter: { card: 'summary_large_image', site: '@TiernoCentella1' },
   title: {

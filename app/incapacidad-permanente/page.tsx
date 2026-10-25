@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import Link from 'next/link';
 import IconoGuia from '@/components/IconoGuia';
@@ -18,6 +19,7 @@ export const metadata: Metadata = meta({
 export default function Incapacidad() {
   return (
     <>
+      <EsquemaPagina ruta="/incapacidad-permanente" />
       <header className="cabeza-pagina cabeza-incapacidad">
         <div className="contenedor cabeza-con-foto">
           <div>

@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
@@ -15,6 +16,7 @@ export default function Blog() {
   const piezas = leerColeccion('blog').sort((a, b) => b.fecha.localeCompare(a.fecha));
   return (
     <>
+      <EsquemaPagina ruta="/blog" />
       <header className="cabeza-pagina cabeza-blog">
         <div className="contenedor">
           <Etiqueta icono="documento" tono="oro">Blog</Etiqueta>

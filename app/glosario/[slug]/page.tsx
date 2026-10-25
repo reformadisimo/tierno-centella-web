@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import { GLOSARIO, relacionados, slugTermino } from '@/lib/glosario';
-import { BASE, esquemaMigas, meta } from '@/lib/seo';
+import { BASE, esquemaFaq, esquemaMigas, meta } from '@/lib/seo';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 
 export function generateStaticParams() {
@@ -39,6 +39,7 @@ export default async function Pagina({ params }: { params: Promise<{ slug: strin
   return (
     <>
       <JsonLd datos={datos} />
+      <JsonLd datos={esquemaFaq([{ pregunta: `¿Qué es ${t.termino.toLowerCase()} en derecho laboral?`, respuesta: t.definicion }])} />
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/glosario', texto: 'Glosario' }, { href: ruta, texto: t.termino }])} />
       <header className="cabeza-pagina">
         <div className="contenedor">

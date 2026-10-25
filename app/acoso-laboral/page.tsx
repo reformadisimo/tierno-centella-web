@@ -1,3 +1,4 @@
+import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import FotoVideo from '@/components/FotoVideo';
@@ -21,6 +22,7 @@ export default function Acoso() {
   const casosAcoso = CASOS.filter((c) => c.materia === 'Acoso laboral');
   return (
     <>
+      <EsquemaPagina ruta="/acoso-laboral" />
       <header className="cabeza-pagina cabeza-acoso">
         <div className="contenedor cabeza-con-foto">
           <div>
