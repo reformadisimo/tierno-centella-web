@@ -31,7 +31,7 @@ export default function Acoso() {
               <Link href="/">Inicio</Link> / Acoso laboral
             </nav>
             <Etiqueta icono="personas" tono="oro">Acoso laboral</Etiqueta>
-            <h1>Acoso laboral: se puede demostrar y se puede ganar.</h1>
+            <h1>Acoso laboral: se puede demostrar y se puede reclamar.</h1>
             <p className="entradilla">
               Llevamos más de 25 años centrados en el acoso laboral. En 2005 conseguimos que, por primera vez en España, un juez condenara
               a la empresa y al propio acosador a pagar a la víctima.

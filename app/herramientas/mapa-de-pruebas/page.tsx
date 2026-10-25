@@ -23,7 +23,7 @@ export default function Pagina() {
               <Link href="/">Inicio</Link> / <Link href="/herramientas">Herramientas</Link>
             </nav>
             <h1>Mapa de pruebas del acoso</h1>
-            <p className="entradilla">El acoso se gana con pruebas. Marca las que ya tienes y te decimos cuáles faltan y por dónde empezar hoy.</p>
+            <p className="entradilla">En el acoso, lo que pesa son las pruebas. Marca las que ya tienes y te decimos cuáles faltan y por dónde empezar hoy.</p>
           </div>
           <FotoCabeza ruta="/herramientas/mapa-de-pruebas" />
         </div>

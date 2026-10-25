@@ -22,7 +22,7 @@ export default function Pagina() {
               <Link href="/">Inicio</Link> / <Link href="/herramientas">Herramientas</Link>
             </nav>
             <h1>¿Qué tengo que guardar?</h1>
-            <p className="entradilla">Lo que guardes hoy puede ganar tu caso mañana. Elige tu situación y ve marcando lo que ya tienes.</p>
+            <p className="entradilla">Lo que guardes hoy puede marcar la diferencia en tu caso. Elige tu situación y ve marcando lo que ya tienes.</p>
           </div>
           <FotoCabeza ruta="/herramientas/que-guardar" />
         </div>

@@ -1250,7 +1250,7 @@ input:focus {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 38, 64, 0.66) 0%, rgba(0, 38, 64, 0.38) 42%, rgba(0, 38, 64, 0) 72%);
+  background: linear-gradient(90deg, rgba(0, 38, 64, 0.78) 0%, rgba(0, 38, 64, 0.62) 40%, rgba(0, 38, 64, 0.28) 60%, rgba(0, 38, 64, 0) 80%);
 }
 
 @media (max-width: 700px) {
@@ -6977,7 +6977,7 @@ section.pn-caja{margin-bottom:12px}
 .herr-tarjetas a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(13,44,72,.12);border-color:var(--ht)}
 .ht-c0{--ht:#a8442c;--ht-claro:#fdf0ed}
 .ht-c1{--ht:#1b6fd1;--ht-claro:#e8f1fc}
-.ht-c2{--ht:#b07a00;--ht-claro:#fdf5e1}
+.ht-c2{--ht:#8a6000;--ht-claro:#fdf5e1}
 .ht-c3{--ht:#17602f;--ht-claro:#e6f4ea}
 .ht-icono{width:46px;height:46px;border-radius:13px;background:var(--ht-claro);color:var(--ht);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
 .herr-tarjetas strong{font-size:1.12rem;color:var(--tinta)}
@@ -7721,7 +7721,7 @@ html.a11y-quieto video { display: none !important; }
 
 /* Buzón de sugerencias */
 .buzon{background:#fff;border:1px solid #e3ddd0;border-radius:18px;padding:20px 22px;margin:24px 0;position:relative;max-width:720px}
-.buzon h3{margin:0 0 6px;font-size:1.15rem}
+.buzon h2,.buzon h3{margin:0 0 6px;font-size:1.15rem}
 .buzon textarea,.buzon input[type=text]{width:100%;font:inherit;padding:11px 14px;border:1px solid #c9c2b2;border-radius:12px;margin:0 0 10px;background:#fff;color:inherit}
 .buzon-notas{display:flex;gap:8px;margin:8px 0 12px}
 .buzon-notas button{width:44px;height:44px;border-radius:50%;border:1px solid #c9c2b2;background:#fff;font:inherit;font-weight:700;color:#0d2c48;cursor:pointer}
@@ -7766,7 +7766,7 @@ html.a11y-quieto video { display: none !important; }
 @media (max-width: 799px) {
   .lp-fija { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--tinta); box-shadow: 0 -4px 14px rgba(0,0,0,.18); }
   .lp-fija a { color: #fff; text-align: center; padding: 14px 6px; font-weight: 700; text-decoration: none; border-right: 1px solid rgba(255,255,255,.18); }
-  .lp-fija a:last-child { background: var(--coral); border-right: 0; }
+  .lp-fija a:last-child { background: #b9462c; border-right: 0; }
   .lp-pie { padding-bottom: 76px; }
 }
 

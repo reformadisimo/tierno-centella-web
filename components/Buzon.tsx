@@ -28,14 +28,14 @@ export default function Buzon({ titulo = 'Cuéntanos qué tal ha ido' }: { titul
   if (estado === 'ok')
     return (
       <div className="buzon buzon-ok" role="status">
-        <h3>Gracias, de verdad</h3>
+        <h2>Gracias, de verdad</h2>
         <p>Lo leemos todos. Si has dejado una forma de contacto, te contestaremos nosotros.</p>
       </div>
     );
 
   return (
     <form className="buzon" onSubmit={enviar}>
-      <h3>{titulo}</h3>
+      <h2>{titulo}</h2>
       <p className="campo-ayuda">¿Qué te ha servido? ¿Qué has echado en falta? Escribe lo que quieras, con tus palabras. No hace falta que dejes tu nombre.</p>
       <div className="buzon-notas" role="group" aria-label="Valoración, de 1 a 5 (opcional)">
         {[1, 2, 3, 4, 5].map((n) => (
