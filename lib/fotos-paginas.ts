@@ -32,5 +32,8 @@ export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
   '/herramientas/con-cuanto-me-quedo': { foto: 'calculadora-papeles', alt: 'Una calculadora y unos papeles sobre la mesa' },
   '/mi-caso': { foto: 'abogada-escucha', alt: 'Una abogada del despacho escucha a una clienta' },
   '/glosario/facil': { foto: 'abogada-escucha', alt: 'Una abogada del despacho escucha con atención a una clienta' },
+  '/en/procedures': { foto: 'portatil-manos', alt: 'A pair of hands working on a laptop' },
+  '/en/first-consultation': { foto: 'recepcion', alt: 'The reception of the Tierno Centella law firm' },
+  '/en/faq': { foto: 'abogada-escucha', alt: 'A lawyer from the firm listens to a client' },
   '/glosario': { foto: 'libros-derecho', alt: 'Libros de derecho en una estantería' },
 };

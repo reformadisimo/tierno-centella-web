@@ -30,4 +30,4 @@ img[src$="/img/reunion-equipo.webp"],img[src$="/img/reunion-equipo-640.webp"],im
 img[src$="/img/reunion-oficina.webp"],img[src$="/img/reunion-oficina-640.webp"],img[src$="/img/reunion-oficina-960.webp"],.foto-video:has(img[src$="/img/reunion-oficina.webp"]) video,.foto-video:has(img[src$="/img/reunion-oficina-640.webp"]) video{object-position:100.0% 45.5%!important;animation-name:foto-cara!important;transform-origin:100.0% 45.5%!important}
 img[src$="/img/trabajador-portatil.webp"],img[src$="/img/trabajador-portatil-640.webp"],img[src$="/img/trabajador-portatil-960.webp"],.foto-video:has(img[src$="/img/trabajador-portatil.webp"]) video,.foto-video:has(img[src$="/img/trabajador-portatil-640.webp"]) video{object-position:58.7% 0.0%!important;animation-name:foto-cara!important;transform-origin:58.7% 0.0%!important}
 
-@keyframes foto-cara{from{transform:scale(1)}to{transform:scale(1.12)}}
+@keyframes foto-cara{from{transform:scale(1)}to{transform:scale(1.13)}}

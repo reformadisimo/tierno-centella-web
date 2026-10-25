@@ -17,6 +17,9 @@ export const RUTAS_ES_EN: Record<string, string> = {
   '/herramientas': '/en/tools',
   '/buscar': '/en/search',
   '/blog': '/en/blog',
+  '/tramites': '/en/procedures',
+  '/primera-consulta': '/en/first-consultation',
+  '/preguntas-frecuentes': '/en/faq',
 };
 
 export const AREAS_ES_EN: Record<string, { en: string; carpeta: string }> = {

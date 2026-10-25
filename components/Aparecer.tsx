@@ -10,6 +10,10 @@ const TITULOS = 'main h2';
 
 export default function Aparecer() {
   const ruta = usePathname();
+  // Idioma del documento según la sección (la versión inglesa vive bajo /en).
+  useEffect(() => {
+    document.documentElement.lang = ruta === '/en' || ruta?.startsWith('/en/') ? 'en' : 'es';
+  }, [ruta]);
   // Los carruseles con scroll horizontal se pueden recorrer también con el teclado.
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.pasando, .herr-tarjetas, .tarjetas-foto, .hitos, .cifras-oro, .equipo-valores, .rejilla-reels, .equipo-retratos, .linea-pasos').forEach((el) => {

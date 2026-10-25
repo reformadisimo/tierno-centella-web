@@ -184,6 +184,7 @@ export const MENU_EN: Grupo[] = [
       { href: '/en/tools/compensation-calculator', texto: 'Compensation calculator' },
       { href: '/en/tools/deadlines', texto: 'Deadlines' },
       { href: '/en/tools/permanent-disability-checker', texto: 'Disability checker' },
+      { href: '/en/procedures', texto: 'Procedures you can do yourself' },
     ],
   },
   {
@@ -195,6 +196,8 @@ export const MENU_EN: Grupo[] = [
       { href: '/en/jesus-tierno', texto: 'Jesús Tierno' },
       { href: '/en/rulings', texto: 'Rulings won' },
       { href: '/en/blog', texto: 'Blog' },
+      { href: '/en/first-consultation', texto: 'Your first consultation' },
+      { href: '/en/faq', texto: 'Frequently asked questions' },
       { href: '/en/contact', texto: 'Contact' },
     ],
   },

@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const guias = [
     ...GLOSARIO.map((t) => ({ url: `${BASE}/glosario/${slugTermino(t.termino)}` })),
     ...CASOS.map((c) => ({ url: `${BASE}/sentencias/${c.slug}` })),
-    ...['/en', '/en/contact', '/en/jesus-tierno', '/en/rulings', '/en/tools', '/en/blog'].map((r) => ({ url: BASE + r })),
+    ...['/en', '/en/contact', '/en/jesus-tierno', '/en/rulings', '/en/tools', '/en/blog', '/en/procedures', '/en/first-consultation', '/en/faq'].map((r) => ({ url: BASE + r })),
     ...HERRAMIENTAS_EN.map((h) => ({ url: BASE + h.href })),
     ...leerColeccion('en/blog').map((p) => ({ url: `${BASE}/en/blog/${p.slug}`, lastModified: p.actualizado ?? p.fecha })),
     ...CASOS.map((c) => ({ url: `${BASE}/en/rulings/${c.slug}` })),

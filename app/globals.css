@@ -7361,7 +7361,7 @@ body{padding-bottom:58px}
   .foto-cabeza img,.prosa-foto img{animation:foto-zoom 15s ease-in-out infinite alternate;transform-origin:60% 40%}
   .prosa-foto:nth-of-type(even) img{animation-name:foto-zoom-b;transform-origin:35% 50%}
 }
-@keyframes foto-zoom{from{transform:scale(1)}to{transform:scale(1.16) translate(-2.5%,-1.5%)}}
+@keyframes foto-zoom{from{transform:scale(1)}to{transform:scale(1.22) translate(-2.5%,-1.5%)}}
 @keyframes foto-zoom-b{from{transform:scale(1.16) translate(2%,0)}to{transform:scale(1)}}
 
 /* Banda de llamada a la acción con cara amable */
@@ -8066,5 +8066,5 @@ html.a11y-quieto video { display: none !important; }
 
 /* Movimiento de las fotos a un ritmo que se perciba en los primeros segundos */
 @media (prefers-reduced-motion: no-preference) {
-  .foto-cabeza img, .prosa-foto img, .foto-viva img, .guia-foto img, .lateral-foto img, .pj-foto img, .ficha-lado img, .bloque-foto img, .faq-foto img, .cabeza-con-foto > img.foto, .tarjetas-foto img { animation-duration: 9s !important; }
+  .foto-cabeza img, .prosa-foto img, .foto-viva img, .guia-foto img, .lateral-foto img, .pj-foto img, .ficha-lado img, .bloque-foto img, .faq-foto img, .cabeza-con-foto > img.foto, .tarjetas-foto img { animation-duration: 7s !important; }
 }
