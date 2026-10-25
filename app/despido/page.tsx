@@ -1,3 +1,4 @@
+import LineaDespido from '@/components/LineaDespido';
 import FotoVideo from '@/components/FotoVideo';
 import { videoDeFoto } from '@/lib/video-foto';
 import { Etiqueta } from '@/components/Etiqueta';
@@ -53,6 +54,8 @@ export default function Despido() {
               sábados, los domingos ni los festivos; agosto sí cuenta. Si se pasa el plazo, el despido ya no se puede impugnar.
             </p>
           </div>
+
+          <LineaDespido />
 
           <h2>Los dos tipos de despido</h2>
           <h3>Despido objetivo</h3>

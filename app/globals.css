@@ -7602,3 +7602,41 @@ body{padding-bottom:58px}
   .foto-cabeza .foto-video,.foto-cabeza img.foto{height:190px}
   .foto-cabeza img.foto{width:100%;object-fit:cover}
 }
+
+/* Recursos útiles, buscador del glosario y recorrido del despido */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.recursos-grupo { margin-top: 36px; scroll-margin-top: 90px; }
+.recursos-intro { color: var(--tinta-suave, #4a5b6c); margin: 4px 0 16px; }
+.recursos-lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.recurso-tarjeta { background: var(--blanco); border: 1px solid var(--linea); border-top: 4px solid #c2477a; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.recurso-tarjeta:nth-child(3n+2) { border-top-color: #f2c14e; }
+.recurso-tarjeta:nth-child(3n) { border-top-color: #7a4fb3; }
+.recurso-tarjeta h3 { margin: 0; font-size: 1.05rem; }
+.recurso-tarjeta p { margin: 0; }
+.recurso-tarjeta .boton { margin-top: auto; align-self: flex-start; }
+.recurso-consejo { background: #fbe9ef; border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+.recursos-telefonos { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.recursos-telefonos h3 { font-size: 2rem; color: #c2477a; }
+.glosario-buscador { margin-top: 18px; max-width: 520px; }
+.glosario-buscador label { display: block; font-weight: 700; margin-bottom: 6px; }
+.glosario-buscador input { width: 100%; min-height: 48px; padding: 0 16px; border-radius: 999px; border: 2px solid var(--linea); font: inherit; background: var(--blanco); }
+.glosario-buscador input:focus { outline: 3px solid #f2c14e; border-color: #c2477a; }
+.glosario-buscador p { margin: 6px 4px 0; font-size: .9rem; color: var(--tinta-suave, #4a5b6c); }
+.glosario-ancla { margin-left: 8px; text-decoration: none; color: #c2477a; opacity: .5; font-weight: 700; }
+.glosario-ancla:hover, .glosario-ancla:focus { opacity: 1; }
+.linea-despido { background: #fbe9ef; border-radius: 20px; padding: 20px; margin: 8px 0 32px; }
+.linea-despido .linea-titulo { margin: 0; }
+.linea-ayuda { margin: 4px 0 14px; }
+.linea-pasos { list-style: none; padding: 0; margin: 0 0 14px; display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 6px; }
+.linea-pasos li { flex: 0 0 auto; scroll-snap-align: start; }
+.linea-pasos button { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 14px 6px 6px; border-radius: 999px; border: 2px solid transparent; background: var(--blanco); font: inherit; font-size: .9rem; cursor: pointer; }
+.linea-pasos button b { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--linea); }
+.linea-pasos button.hecho b { background: #17602f; color: #fff; }
+.linea-pasos button.activo { border-color: #c2477a; font-weight: 700; }
+.linea-pasos button.activo b { background: #c2477a; color: #fff; }
+.linea-detalle { background: var(--blanco); border-radius: 16px; padding: 18px; animation: lineaEntra .3s ease both; }
+.linea-detalle small { color: #c2477a; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.linea-detalle h3 { margin: 2px 0 6px; }
+@keyframes lineaEntra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .linea-detalle { animation: none; } }
+.prosa h2.glosario-letra[hidden], .prosa-foto[hidden], [data-termino][hidden] { display: none !important; }

@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/preguntas-frecuentes',
     '/glosario',
+    '/recursos',
     '/contacto',
     '/reservar',
   ].map((r) => ({ url: BASE + r }));

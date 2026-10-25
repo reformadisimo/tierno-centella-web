@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import { GLOSARIO } from '@/lib/glosario';
 import { Fragment } from 'react';
+import BuscadorGlosario from '@/components/BuscadorGlosario';
 
 const FOTOS_GLOSARIO: [string, string][] = [
   ['abogada-escucha', 'Una abogada del despacho escucha a una clienta'],
@@ -54,6 +55,7 @@ export default function Glosario() {
             </nav>
             <h1>Glosario laboral</h1>
             <p className="entradilla">Las palabras que vas a oír en tu caso, explicadas como te las explicaríamos en el despacho.</p>
+            <BuscadorGlosario total={GLOSARIO.length} />
             <nav aria-label="Letras" className="glosario-letras">
               {letras.map((l) => (
                 <a key={l} href={`#letra-${l}`}>
@@ -83,10 +85,11 @@ export default function Glosario() {
                     {t.termino[0].toUpperCase()}
                   </h2>
                 )}
-                <dl id={slug(t.termino)} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)', margin: 0 }}>
+                <dl id={slug(t.termino)} data-termino={`${t.termino} ${t.definicion}`} data-letra={t.termino[0].toUpperCase()} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)', margin: 0 }}>
                   <dt style={{ fontWeight: 700, fontSize: '1.1rem' }}>{t.termino}</dt>
                   <dd style={{ margin: '4px 0 0' }}>
                     {t.definicion} {t.enlace && <Link href={t.enlace}>Saber más</Link>}
+                    <a className="glosario-ancla" href={`#${slug(t.termino)}`} aria-label={`Enlace a ${t.termino}`}>#</a>
                   </dd>
                 </dl>
                 </Fragment>

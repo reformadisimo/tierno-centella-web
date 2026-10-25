@@ -80,6 +80,7 @@ export default function Pie() {
         <nav className="pie-redes pie-redes-texto" aria-label={en ? 'Other versions' : 'Otras versiones'}>
           <a href={en ? '/' : '/en'} hrefLang={en ? 'es' : 'en'}>{en ? 'Versión en español' : 'English version'}</a>
           <Link href="/glosario">{en ? 'Glossary (ES)' : 'Glosario laboral'}</Link>
+          {!en && <Link href="/recursos">Recursos útiles</Link>}
         </nav>
         <nav className="pie-redes" aria-label={en ? 'Legal information' : 'Información legal'} style={{ marginTop: 16 }}>
           <Link href="/aviso-legal">{en ? 'Legal notice (ES)' : 'Aviso legal'}</Link>
