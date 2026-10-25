@@ -378,8 +378,9 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 11;
+const VERSION = 12;
 const NOVEDADES: { texto: string; clave: string }[] = [
+  { clave: '21 bis', texto: 'Apartado nuevo: lo que NO vamos a tocar (tu trato con los clientes, tu equipo, tu voz, tus proveedores actuales si te funcionan, tu ritmo), y arriba, "Si solo tienes un minuto", con lo esencial en tres frases.' },
   { clave: '22 ter', texto: 'Apartado nuevo: lo que hemos aprendido mirando despachos laboralistas de Estados Unidos, Reino Unido, Francia e Italia, y lo que ya hemos traído: ajustes de lectura para quien ve o lee con dificultad, "Genera tu carta", "¿Es buena la oferta de la empresa?" un aviso inmediato al despacho cuando alguien deja su teléfono en el chat y el barómetro del acoso, con los datos anónimos de los tests (política de privacidad ya actualizada).' },
   { clave: '22 bis', texto: 'Apartado nuevo: qué resultados creemos que se pueden conseguir (3, 6 y 12 meses), con cifras honestas, sin promesas, y por qué hacerlo todo junto rinde más que cinco proveedores por separado.' },
   { clave: '2', texto: 'Hemos puesto tu número de colegiado (64865, Colegio de Abogados de Madrid) en el pie de toda la web, marcado como pendiente de confirmar: lo hemos sacado de una ficha pública de internet. Importa por credibilidad: el Código Deontológico lo exige, a Google le sirve para saber que detrás hay un abogado real y verificable, y a quien duda le da confianza. Confírmanos que es correcto y quitamos el aviso.' },

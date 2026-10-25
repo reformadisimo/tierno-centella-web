@@ -1,4 +1,5 @@
 import EsquemaPagina from '@/components/EsquemaPagina';
+import LineaIncapacidad from '@/components/LineaIncapacidad';
 import { Etiqueta } from '@/components/Etiqueta';
 import Link from 'next/link';
 import IconoGuia from '@/components/IconoGuia';
@@ -80,6 +81,8 @@ export default function Incapacidad() {
               pedir seguir en la empresa, y esta debe intentar adaptar tu puesto o recolocarte.
             </p>
           </div>
+
+          <LineaIncapacidad />
 
           <h2>Los cuatro grados y lo que se cobra</h2>
           <table className="tabla tabla-fichas">

@@ -1,4 +1,5 @@
 import EsquemaPagina from '@/components/EsquemaPagina';
+import LineaAcoso from '@/components/LineaAcoso';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import FotoVideo from '@/components/FotoVideo';
@@ -83,6 +84,12 @@ export default function Acoso() {
               <img src="/img/mazo-640.webp" srcSet="/img/mazo-640.webp 640w, /img/mazo.webp 1200w" sizes="(max-width: 1000px) 100vw, 820px" alt="Un mazo de juez" width={1200} height={514} loading="lazy" decoding="async" />
             )}
           </figure>
+        </div>
+      </section>
+
+      <section className="seccion">
+        <div className="contenedor">
+          <LineaAcoso />
         </div>
       </section>
 

@@ -4,6 +4,8 @@ Jesús, qué ilusión enseñarte esto. En cinco minutos vas a ver **dónde está
 
 > **Una cosa antes de seguir, entre amigos.** Sabemos que esta guía es larga y que a veces usa palabras técnicas: es lo que tiene explicar bien un trabajo que, de verdad, es mucho. Te pedimos que te tomes el tiempo de entenderla, porque es un esfuerzo que haces **una sola vez**: cuando lo has comprendido, todo lo demás va rodado y no tienes que volver a pensar en ello. Y queremos que nuestros clientes entiendan **cómo trabajamos y qué valor añadimos**, porque solo así puedes decidir con tranquilidad. Por eso hemos puesto un resumen de cinco minutos arriba y el detalle debajo, para que leas lo que quieras y vayas al ritmo que te venga bien.
 
+> **Si solo tienes un minuto, lee esto.** Tres cosas. **Uno:** la web nueva ya está hecha y es tuya; verla no te compromete a nada. **Dos:** no te pedimos que cambies tu forma de trabajar ni la de tu equipo; lo que cambia es lo que ocurre alrededor (que Google te encuentre, que quien te busque se sienta acompañado, que sepamos de dónde viene cada consulta). **Tres:** lo que prometemos es método y constancia, no resultados garantizados, y lo iremos demostrando mes a mes con los datos de tu propia cuenta. Para lo demás, está el resto de la guía.
+
 ###  Dónde estás hoy
 
 Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Semrush, octubre de 2026):
@@ -1190,6 +1192,17 @@ Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y s
 > **Una cosa que conviene mirar antes**: si con algún proveedor firmaste permanencia o un preaviso, lo respetamos y planificamos el cambio para esa fecha. Si no lo sabes, te ayudamos a revisarlo.
 
 **Y una cosa más, con todo el cariño.** Sabemos que llevas años trabajando con personas de confianza, y que han hecho su trabajo con esfuerzo y buena fe. Nada de esto es una crítica a nadie: cada uno ha hecho lo que podía con lo que tenía. Y tampoco hay prisa ni nada que decidir hoy. Mira la web, pruébala con calma, enséñasela a quien quieras, y quédate con lo que te guste. Si un día decides dar el paso, lo hacemos con el mismo cuidado con el que cuidamos a quienes ya trabajan contigo.
+
+## 21 bis. Lo que no vamos a tocar
+
+Antes de decidir nada, queremos decirte lo que **se queda exactamente como está**, porque creemos que tranquiliza más que cualquier argumento.
+
+- **Cómo atiendes a tus clientes.** Tu trato, tu criterio y tu manera de llevar cada caso no cambian. Nada de lo que hacemos entra en una consulta ni en un expediente.
+- **Tu equipo y su forma de trabajar.** Nadie tiene que aprender un programa nuevo ni cambiar sus horarios. Lo que os pedimos es poco y está en el apartado 24.
+- **Tu voz.** Todo lo que se publique pasa antes por ti, y se escribe con tu forma de explicar las cosas: clara, cercana y rigurosa.
+- **Tus proveedores actuales, mientras te funcionen.** Si hay alguien que hace bien su trabajo y quieres seguir con él, lo respetamos y nos coordinamos con esa persona. Lo único que te pedimos es que no haya cinco personas tomando decisiones sobre lo mismo sin hablar entre sí.
+- **Tu ritmo.** No hay fechas de entrega impuestas ni decisiones para hoy. Puedes quedarte con una parte y dejar el resto.
+- **Tus datos y tu web.** Todo lo que hacemos es tuyo: la web, las cuentas y el histórico quedan a tu nombre, y si algún día quieres dejarlo, te lo llevas todo.
 
 ## 22. Plan de 30 días y cuánto tarda en notarse
 
