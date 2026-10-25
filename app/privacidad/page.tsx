@@ -40,6 +40,12 @@ export default function Pagina() {
             esos datos agregados elaboramos el <a href="/barometro">barómetro</a>, que solo publica un test cuando tiene al menos 30 respuestas. Puedes
             desactivarlo antes de empezar un test con el botón "No guardarlo". Al ser datos anónimos, no podemos localizar ni borrar el tuyo.
           </p>
+          <h2>Progreso de los tests y preferencias en tu dispositivo</h2>
+          <p>
+            Si dejas un test a medias, tu avance se guarda solo en tu propio dispositivo (en el almacenamiento local del navegador) para que puedas retomarlo. Lo mismo
+            ocurre con tus ajustes de lectura, tu plazo recordado y tus listas de "qué guardar". No se envía a ningún servidor ni lo vemos nosotros; puedes borrarlo
+            limpiando los datos del sitio en tu navegador.
+          </p>
           <h2>Buzón de sugerencias</h2>
           <p>
             Si nos escribes en el buzón de sugerencias, guardamos tu mensaje, la valoración si la pones y la página desde la que escribes. Si dejas un teléfono o un

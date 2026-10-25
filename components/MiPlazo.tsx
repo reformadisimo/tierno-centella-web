@@ -8,7 +8,7 @@ import { hoyMadrid } from '@/lib/hoy';
 import { DESPACHO, fechaLarga } from '@/lib/despacho';
 
 export const CLAVE_PLAZO = 'tc-mi-plazo';
-type Guardado = { nombre: string; ultimo: string; agostoHabil: boolean };
+type Guardado = { nombre: string; ultimo: string; agostoHabil: boolean; madrid?: boolean };
 
 export default function MiPlazo() {
   const ruta = usePathname();
@@ -27,7 +27,7 @@ export default function MiPlazo() {
     return () => window.removeEventListener('tc-plazo', leer);
   }, []);
   if (!p || ruta.startsWith('/guia-jesus') || ruta.startsWith('/en') || ruta === '/crm') return null;
-  const quedan = diasHabilesRestantes(hoyMadrid(), p.ultimo, p.agostoHabil);
+  const quedan = diasHabilesRestantes(hoyMadrid(), p.ultimo, p.agostoHabil, Boolean(p.madrid));
   if (quedan < 0) return null;
   const urgente = quedan <= 5;
   return (

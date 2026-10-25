@@ -79,6 +79,7 @@ const SITUACIONES: Situacion[] = [
 export default function Plazos() {
   const [id, setId] = useState('despido');
   const [fecha, setFecha] = useState('');
+  const [madrid, setMadrid] = useState(true);
   const s = SITUACIONES.find((x) => x.id === id)!;
   const hoy = hoyMadrid();
 
@@ -87,14 +88,14 @@ export default function Plazos() {
   if (fecha && fecha <= hoy) {
     // Agosto es hábil para despidos y modificaciones (art. 43.4 LRJS) y en la vía administrativa del INSS; no para las sanciones.
     const agostoHabil = s.id !== 'sancion';
-    ultimo = s.tipo === 'habiles' ? sumarHabiles(fecha, s.n, agostoHabil) : sumarAnios(fecha, s.n);
-    if (s.tipo === 'habiles') quedan = diasHabilesRestantes(hoy > fecha ? hoy : sumarHabiles(fecha, 1, agostoHabil), ultimo, agostoHabil);
+    ultimo = s.tipo === 'habiles' ? sumarHabiles(fecha, s.n, agostoHabil, madrid) : sumarAnios(fecha, s.n);
+    if (s.tipo === 'habiles') quedan = diasHabilesRestantes(hoy > fecha ? hoy : sumarHabiles(fecha, 1, agostoHabil, madrid), ultimo, agostoHabil, madrid);
   }
   const vencido = ultimo !== '' && ultimo < hoy;
   const [recordado, setRecordado] = useState(false);
   function recordar() {
     try {
-      localStorage.setItem(CLAVE_PLAZO, JSON.stringify({ nombre: s.nombre, ultimo, agostoHabil: s.id !== 'sancion' }));
+      localStorage.setItem(CLAVE_PLAZO, JSON.stringify({ nombre: s.nombre, ultimo, agostoHabil: s.id !== 'sancion', madrid }));
       window.dispatchEvent(new Event('tc-plazo'));
       setRecordado(true);
     } catch {}
@@ -118,6 +119,12 @@ export default function Plazos() {
         <label htmlFor="fecha-plazo">{s.fechaDe}</label>
         <input id="fecha-plazo" type="date" value={fecha} max={hoy} onChange={(e) => setFecha(e.target.value)} />
       </div>
+      {s.tipo === 'habiles' && (
+        <label className="opcion" style={{ margin: '4px 0 10px' }}>
+          <input type="checkbox" checked={madrid} onChange={(e) => setMadrid(e.target.checked)} />
+          <span>Descontar también los festivos de Madrid (Comunidad y capital)</span>
+        </label>
+      )}
       <p>{s.explicacion}</p>
       {fecha > hoy && <p className="error">La fecha no puede ser posterior a hoy.</p>}
       {ultimo && (
@@ -156,7 +163,7 @@ export default function Plazos() {
         {ultimo && <BotonImprimir />}
       </div>
       <p className="letra-pequena">
-        Cálculo orientativo: descuenta fines de semana y festivos nacionales (también el Viernes Santo), no los autonómicos ni locales. Para un
+        Cálculo orientativo: descuenta fines de semana y festivos nacionales (también el Viernes Santo) y, si lo dejas marcado, los de Madrid: Jueves Santo, 2 y 15 de mayo, 9 de noviembre y los traslados de 2026 (comprobado con el calendario de 2026; en otros años es aproximado). Si tu juzgado está en otra localidad, los festivos locales serán otros. Para un
         despido o una modificación de condiciones, agosto cuenta como hábil; para una sanción, no. Confirma tu plazo con un abogado antes de que se agote.
       </p>
     </div>

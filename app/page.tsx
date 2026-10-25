@@ -403,6 +403,21 @@ export default function Inicio() {
         </section>
       )}
 
+      <section className="seccion">
+        <div className="contenedor">
+          <div className="llamada-banda" style={{ alignItems: 'flex-start' }}>
+            <div className="llamada-texto">
+              <h2>¿Diriges una empresa o un colegio?</h2>
+              <p>Un acoso mal gestionado cuesta mucho: personas, ambiente y dinero. En unos minutos puedes ver si tu protocolo, tu canal de denuncias y tu plan de igualdad están al día.</p>
+              <div className="acciones">
+                <Link className="boton boton-marcador" href="/herramientas/autodiagnostico-acoso-empresas">Hacer el autodiagnóstico</Link>
+                <Link className="boton boton-claro" href="/empresas">Ver qué hacemos por las empresas</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="seccion seccion-blanca">
         <div className="contenedor dos-columnas">
           <div>

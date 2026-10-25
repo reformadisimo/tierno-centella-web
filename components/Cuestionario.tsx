@@ -41,6 +41,18 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   const ruta = usePathname() || '';
   const [guardar, setGuardar] = useState(true);
   const enviado = useRef(false);
+  // Progreso: se guarda solo en este dispositivo (localStorage), nunca se envía. Permite retomar un test dejado a medias.
+  const claveProgreso = `tc-progreso:${ruta}`;
+  const [retomar, setRetomar] = useState<Record<string, string[]> | null>(null);
+  useEffect(() => {
+    try {
+      const g = localStorage.getItem(claveProgreso);
+      if (g) {
+        const o = JSON.parse(g) as Record<string, string[]>;
+        if (o && Object.keys(o).length) setRetomar(o);
+      }
+    } catch {}
+  }, [claveProgreso]);
 
   // Un paso condicional se decide en cuanto están respondidos los pasos activos anteriores (los saltados no cuentan);
   // mientras tanto se cuenta, para que el contador no prometa menos preguntas de las que habrá.
@@ -53,6 +65,37 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
     return lista;
   }, [pasos, resp]);
   const terminado = indice >= activos.length;
+  useEffect(() => {
+    try {
+      if (terminado || !Object.keys(resp).length) {
+        if (terminado) localStorage.removeItem(claveProgreso);
+        return;
+      }
+      const o: Record<string, string[]> = {};
+      for (const [id, ops] of Object.entries(resp)) o[id] = ops.map((x) => x.texto);
+      localStorage.setItem(claveProgreso, JSON.stringify(o));
+    } catch {}
+  }, [resp, terminado, claveProgreso]);
+  function retomarTest(o: Record<string, string[]>) {
+    const nuevas: Respuestas = {};
+    for (const p of pasos) {
+      const t = o[p.id];
+      if (!t) continue;
+      const ops = p.opciones.filter((x) => t.includes(x.texto));
+      if (ops.length) nuevas[p.id] = ops;
+    }
+    // Continúa en el primer paso activo sin respuesta.
+    const lista: Paso[] = [];
+    for (const p of pasos) if (!p.si || p.si(nuevas) || p.id in nuevas) lista.push(p);
+    const i = lista.findIndex((p) => !(p.id in nuevas));
+    setResp(nuevas);
+    setIndice(i === -1 ? Math.max(0, lista.length - 1) : i);
+    setRetomar(null);
+  }
+  function descartarProgreso() {
+    try { localStorage.removeItem(claveProgreso); } catch {}
+    setRetomar(null);
+  }
   const paso = activos[indice];
   // Al terminar, el veredicto se ve desde su título.
   useEffect(() => {
@@ -81,6 +124,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   }
 
   function reiniciar() {
+    try { localStorage.removeItem(claveProgreso); } catch {}
     setResp({});
     setElegidas([]);
     setIndice(0);
@@ -113,8 +157,19 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
             </span>
           </div>
           <p className="campo-ayuda" style={{ marginTop: -8 }}>
-            Pregunta {indice + 1} de {activos.length}. Sin datos personales.
+            Pregunta {indice + 1} de {activos.length}. Sin datos personales. Si te vas, tu avance se queda guardado solo en este dispositivo.
           </p>
+          {indice === 0 && retomar && Object.keys(resp).length === 0 && (
+            <div className="recuadro cq-retomar" role="region" aria-label="Retomar el test">
+              <p style={{ margin: 0 }}>
+                <strong>Dejaste este test a medias.</strong> ¿Quieres seguir donde lo dejaste? Tu progreso solo está en este dispositivo.
+              </p>
+              <div className="acciones" style={{ marginTop: 8 }}>
+                <button type="button" className="boton" onClick={() => retomarTest(retomar)}>Seguir donde lo dejé</button>
+                <button type="button" className="boton boton-claro" onClick={descartarProgreso}>Empezar de cero</button>
+              </div>
+            </div>
+          )}
           {indice === 0 && (
             <p className="campo-ayuda cq-barometro">
               Al terminar guardamos, sin ningún dato que te identifique, el tipo de resultado para nuestras estadísticas (<a href="/barometro">el barómetro</a>).{' '}
@@ -233,6 +288,11 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
               Empezar de nuevo
             </button>
           </div>
+          <p className="campo-ayuda cq-guardado">
+            {guardar && ['test-acoso', 'test-nulidad', 'test-extincion', 'test-baja-laboral'].includes(ruta.split('/').filter(Boolean).pop() || '')
+              ? 'Esto es lo que hemos anotado: solo el tipo de resultado y unas etiquetas generales, de forma anónima, para el barómetro. No guardamos tus respuestas ni quién eres. Lo demás se queda en tu pantalla.'
+              : 'No hemos guardado nada de tu test: se queda en tu pantalla.'}
+          </p>
           <Buzon titulo="¿Te ha servido? Cuéntanoslo" />
           <p className="letra-pequena">
             Resultado orientativo, no sustituye la valoración de un abogado. Si en algún momento piensas en hacerte daño, llama al 024: es

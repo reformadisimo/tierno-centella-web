@@ -90,12 +90,22 @@ function viernesSanto(anio: number): string {
 }
 
 // agostoHabil: true para despidos y extinciones (art. 43.4 LRJS); false para el resto de plazos procesales, como las sanciones.
-export function esHabil(f: Date, agostoHabil = true): boolean {
+// madrid: añade los festivos de la Comunidad y de la capital (2 y 15 de mayo, 9 de noviembre, Jueves Santo) y los traslados de 2026 (2 de noviembre y 7 de diciembre).
+// Comprobado con el calendario laboral de Madrid de 2026; en otros años es una aproximación.
+const MADRID_FIJOS = ['05-02', '05-15', '11-09'];
+const MADRID_ESPECIFICOS = ['2026-11-02', '2026-12-07'];
+function juevesSanto(anio: number): string {
+  const f = aFecha(viernesSanto(anio));
+  f.setUTCDate(f.getUTCDate() - 1);
+  return aIso(f);
+}
+export function esHabil(f: Date, agostoHabil = true, madrid = false): boolean {
   const dia = f.getUTCDay();
   if (dia === 0 || dia === 6) return false;
   const iso = aIso(f);
   if (!agostoHabil && iso.slice(5, 7) === '08') return false;
   if (iso === viernesSanto(f.getUTCFullYear())) return false;
+  if (madrid && (iso === juevesSanto(f.getUTCFullYear()) || MADRID_FIJOS.includes(iso.slice(5)) || MADRID_ESPECIFICOS.includes(iso))) return false;
   return !INHABILES_FIJOS.includes(iso.slice(5));
 }
 
@@ -120,25 +130,25 @@ export function ultimoDiaParaReclamar(despidoIso: string): string {
 }
 
 // Días hábiles que quedan desde hoy (sin contar hoy) hasta el último día, incluido.
-export function diasHabilesRestantes(hoyIso: string, ultimoIso: string, agostoHabil = true): number {
+export function diasHabilesRestantes(hoyIso: string, ultimoIso: string, agostoHabil = true, madrid = false): number {
   const f = aFecha(hoyIso);
   const fin = aFecha(ultimoIso);
   if (f > fin) return -1;
-  let n = esHabil(f, agostoHabil) ? 1 : 0; // hoy cuenta si es hábil: aún puedes presentar hoy
+  let n = esHabil(f, agostoHabil, madrid) ? 1 : 0; // hoy cuenta si es hábil: aún puedes presentar hoy
   while (f < fin) {
     f.setUTCDate(f.getUTCDate() + 1);
-    if (esHabil(f, agostoHabil)) n += 1;
+    if (esHabil(f, agostoHabil, madrid)) n += 1;
   }
   return n;
 }
 
 // Suma n días hábiles a partir del día siguiente a la fecha dada.
-export function sumarHabiles(desdeIso: string, n: number, agostoHabil = true): string {
+export function sumarHabiles(desdeIso: string, n: number, agostoHabil = true, madrid = false): string {
   const f = aFecha(desdeIso);
   let contados = 0;
   while (contados < n) {
     f.setUTCDate(f.getUTCDate() + 1);
-    if (esHabil(f, agostoHabil)) contados += 1;
+    if (esHabil(f, agostoHabil, madrid)) contados += 1;
   }
   return aIso(f);
 }
