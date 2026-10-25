@@ -56,9 +56,8 @@ export default function AvisoCookies() {
             </>
           ) : (
             <>
-              <strong>Tu privacidad.</strong> Usamos las cookies imprescindibles para que la web funcione. Con tu permiso, también las de
-              medición de visitas y las de servicios externos como YouTube o Google Maps, que solo se cargan cuando los abres.{' '}
-              <Link href="/cookies">Más información sobre las cookies</Link>.
+              <strong>Tu privacidad.</strong> Solo usamos las cookies necesarias; con tu permiso, también las que miden visitas y los servicios externos.{' '}
+              <Link href="/cookies">Más información</Link>.
             </>
           )}
         </p>

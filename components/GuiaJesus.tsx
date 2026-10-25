@@ -1,6 +1,7 @@
 'use client';
 
 import FotoVideo from './FotoVideo';
+import ProgresoGuia from './ProgresoGuia';
 import { DOLORES } from '@/lib/guia-dolores';
 import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace } from './EnlacesGuia';
 import RedesHoyLuego, { GoogleNombre } from './RedesGuia';
@@ -757,6 +758,7 @@ export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: 
     <div className="guia-jesus">
       <Lupa pantalla="guia" />
       <AvisoGuia secciones={secciones} />
+      <ProgresoGuia />
       <aside className="gj-lateral" id="gj-indice">
         <div className="gj-progreso" aria-label={`Has visto ${hechos} de ${total} apartados`}>
           <div>

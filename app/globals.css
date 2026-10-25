@@ -7555,3 +7555,27 @@ body{padding-bottom:58px}
 .mc-flor{font-size:1.9rem;color:#e9a9bf;line-height:1}
 @media (max-width:1240px){.mensaje-calido{margin-inline:var(--margen);max-width:none}}
 @media print{.mensaje-calido{display:none}}
+
+/* Progreso de lectura de la guía */
+.gj-progreso{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);z-index:40;display:flex;align-items:center;gap:12px;padding:10px 18px;border-radius:999px;background:#0d2c48;color:#fff;box-shadow:0 12px 30px rgba(13,44,72,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;font-size:.9rem;white-space:nowrap}
+.gj-progreso.visible{opacity:1;transform:translate(-50%,0)}
+.gj-prog-num{font-weight:800;color:#f2c14e;min-width:3.2ch}
+.gj-prog-barra{width:110px;height:8px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden}
+.gj-prog-barra i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#d9694d,#f2c14e);transition:width .25s}
+.gj-prog-resto{opacity:.9}
+@media (max-width:640px){.gj-progreso{bottom:84px;left:12px;right:12px;transform:translateY(20px);justify-content:center;padding:8px 14px;font-size:.82rem}.gj-progreso.visible{transform:none}.gj-prog-barra{width:70px}}
+@media print{.gj-progreso,.gj-retomar{display:none}}
+.gj-retomar{position:fixed;left:50%;top:92px;transform:translateX(-50%);z-index:45;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;background:#fff;border:2px solid #f2c14e;border-radius:18px;padding:12px 16px;box-shadow:0 16px 34px rgba(13,44,72,.22);max-width:min(92vw,560px)}
+.gj-retomar .boton{padding:8px 16px;min-height:0}
+
+/* Aviso de cookies más discreto */
+@media (max-width:640px){
+  .cookies-caja{padding:12px 14px !important}
+  .cookies-caja p{font-size:.86rem !important;line-height:1.4 !important}
+  .cookies-botones{gap:8px !important}
+  .cookies-botones .boton{padding:8px 14px !important;min-height:40px !important;font-size:.9rem !important}
+}
+@media (min-width:900px){
+  .cookies-caja:not(:has(.cookies-detalle)){max-width:980px;display:flex;align-items:center;gap:24px;padding:14px 22px}
+  .cookies-caja:not(:has(.cookies-detalle)) p{margin:0;flex:1}
+}
