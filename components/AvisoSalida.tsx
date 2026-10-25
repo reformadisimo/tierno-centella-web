@@ -158,7 +158,21 @@ export default function AvisoSalida() {
   const cuenta = useCuenta(cifra.n, visible);
   if (!visible) return null;
   const temaLeido = temaActual(ruta);
-  const propio = ['despido', 'acoso', 'incapacidad', 'mujer', 'sentencias', 'empresas'].includes(temaLeido) ? VENTANAS[temaLeido] : null;
+  const base = ['despido', 'acoso', 'incapacidad', 'mujer', 'sentencias', 'empresas'].includes(temaLeido) ? VENTANAS[temaLeido] : null;
+  // En una herramienta, quien se va ya tiene su cifra: le ofrecemos que la revise un abogado, sin mandarle a la página en la que ya está.
+  const enHerramienta = ruta.startsWith('/herramientas/') || ruta === '/calculadora-indemnizacion';
+  const propio = enHerramienta
+    ? {
+        etiqueta: 'Sobre tu cálculo',
+        titulo: 'Esta cifra es orientativa',
+        texto: `Un abogado la revisa con tu carta y tus nóminas en una consulta de una hora (${DESPACHO.precioCita} € + IVA). Antes, por teléfono o WhatsApp, te decimos si de verdad la necesitas.`,
+        principal: { href: '/contacto', texto: 'Que me llamen' },
+        secundaria: ruta === '/herramientas/plazos' ? { href: '/calculadora-indemnizacion', texto: 'Mi indemnización' } : { href: '/herramientas/plazos', texto: 'Calcular mi plazo' },
+        whatsapp: 'Hola, he hecho un cálculo en vuestra web y me gustaría que lo revisarais.',
+      }
+    : base && base.secundaria?.href === ruta
+      ? { ...base, secundaria: undefined }
+      : base;
 
   const elegir = (opcion: string) => {
     medir('salida_opcion', { opcion });
@@ -204,7 +218,7 @@ export default function AvisoSalida() {
         </div>
 
         <div className="sx-cuerpo">
-          <h2 id="salida-titulo">{!enLanding && propio ? (temaLeido === 'despido' ? 'No dejes pasar tu plazo' : propio.titulo) : tituloLanding}</h2>
+          <h2 id="salida-titulo">{!enLanding && propio ? (temaLeido === 'despido' && !enHerramienta ? 'No dejes pasar tu plazo' : propio.titulo) : tituloLanding}</h2>
           <p className="sx-texto">
             {enLanding
               ? 'Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.'

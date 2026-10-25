@@ -33,12 +33,12 @@ export default function OfertaAcuerdo() {
       </div>
       <div className="campo">
         <label htmlFor="of-salario">Salario bruto anual, con pagas extra (€)</label>
-        <input id="of-salario" inputMode="decimal" value={salario} onChange={(e) => setSalario(e.target.value)} placeholder="Por ejemplo, 28000" />
+        <input type="text" id="of-salario" inputMode="decimal" value={salario} onChange={(e) => setSalario(e.target.value)} placeholder="Por ejemplo, 28000" />
         {aviso && <p className="campo-ayuda">{aviso}</p>}
       </div>
       <div className="campo">
         <label htmlFor="of-oferta">Lo que te ofrece la empresa (€)</label>
-        <input id="of-oferta" inputMode="decimal" value={oferta} onChange={(e) => setOferta(e.target.value)} placeholder="Por ejemplo, 9000" />
+        <input type="text" id="of-oferta" inputMode="decimal" value={oferta} onChange={(e) => setOferta(e.target.value)} placeholder="Por ejemplo, 9000" />
       </div>
       {r && (
         <section aria-live="polite" className={`veredicto ${dif >= 0 ? '' : 'veredicto-alto'}`}>

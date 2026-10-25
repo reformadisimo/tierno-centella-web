@@ -59,7 +59,7 @@ export default function FormularioContactoEn() {
       </div>
       <div className="campo">
         <label htmlFor="en-nombre">Name</label>
-        <input id="en-nombre" autoComplete="name" value={datos.nombre} onChange={cambia('nombre')} />
+        <input type="text" id="en-nombre" autoComplete="name" value={datos.nombre} onChange={cambia('nombre')} />
       </div>
       <div className="campo">
         <label htmlFor="en-tel">Phone</label>

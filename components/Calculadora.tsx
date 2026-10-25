@@ -192,7 +192,7 @@ export default function Calculadora({ despidoInicial = '' }: { despidoInicial?: 
       )}
 
       {r && (
-        <section className="resultado" aria-live="polite">
+        <section className="resultado con-euro" aria-live="polite">
           {avisoSalario && <p className="aviso-salario">{avisoSalario}</p>}
           <h2>Tu cálculo orientativo</h2>
           <p>

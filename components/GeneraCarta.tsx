@@ -139,17 +139,17 @@ export default function GeneraCarta() {
       <p>{m.intro}</p>
       <div className="campo">
         <label htmlFor="c-yo">Tu nombre completo</label>
-        <input id="c-yo" value={yo} onChange={(e) => setYo(e.target.value)} autoComplete="name" />
+        <input type="text" id="c-yo" value={yo} onChange={(e) => setYo(e.target.value)} autoComplete="name" />
       </div>
       {m.id !== 'no-conforme' && (
         <>
           <div className="campo">
             <label htmlFor="c-empresa">Nombre de la empresa</label>
-            <input id="c-empresa" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
+            <input type="text" id="c-empresa" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
           </div>
           <div className="campo">
             <label htmlFor="c-ciudad">Ciudad</label>
-            <input id="c-ciudad" value={ciudad} onChange={(e) => setCiudad(e.target.value)} />
+            <input type="text" id="c-ciudad" value={ciudad} onChange={(e) => setCiudad(e.target.value)} />
           </div>
         </>
       )}
@@ -159,7 +159,7 @@ export default function GeneraCarta() {
           {c.area ? (
             <textarea id={`c-${c.id}`} rows={4} value={vals[c.id] ?? ''} onChange={(e) => setVals({ ...vals, [c.id]: e.target.value })} />
           ) : (
-            <input id={`c-${c.id}`} value={vals[c.id] ?? ''} onChange={(e) => setVals({ ...vals, [c.id]: e.target.value })} />
+            <input type="text" id={`c-${c.id}`} value={vals[c.id] ?? ''} onChange={(e) => setVals({ ...vals, [c.id]: e.target.value })} />
           )}
           {c.ayuda && <p className="campo-ayuda">{c.ayuda}</p>}
         </div>

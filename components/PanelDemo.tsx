@@ -1001,7 +1001,7 @@ export default function PanelDemo() {
             <p className="pn-pide-ok">Recibido. Lo tendrás en tu panel en 24 a 48 horas. (Demostración: no se ha enviado nada.)</p>
           ) : (
             <>
-              <input value={peticion} onChange={(e) => setPeticion(e.target.value)} placeholder="Por ejemplo: consultas de Bilbao, o un informe solo de incapacidad" aria-label="Qué quieres añadir a tu panel" />
+              <input type="text" value={peticion} onChange={(e) => setPeticion(e.target.value)} placeholder="Por ejemplo: consultas de Bilbao, o un informe solo de incapacidad" aria-label="Qué quieres añadir a tu panel" />
               <button type="submit">Pedirlo</button>
             </>
           )}

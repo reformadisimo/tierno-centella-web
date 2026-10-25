@@ -86,7 +86,7 @@ export default function CalculadoraParo() {
       )}
 
       {r && r.dias === 0 && (
-        <section className="resultado" aria-live="polite">
+        <section className="resultado con-euro" aria-live="polite">
           <h2>Con menos de un año cotizado no hay prestación contributiva</h2>
           <p>
             Hacen falta al menos 360 días cotizados en los últimos seis años. Puede que tengas derecho a un subsidio: consúltalo en el SEPE o llámanos al{' '}
@@ -96,7 +96,7 @@ export default function CalculadoraParo() {
       )}
 
       {r && r.dias > 0 && (
-        <section className="resultado" aria-live="polite">
+        <section className="resultado con-euro" aria-live="polite">
           <h2>
             Unos {euros(r.mensualPrimeros6)} al mes durante {Math.min(6, meses(r.dias))} meses
           </h2>

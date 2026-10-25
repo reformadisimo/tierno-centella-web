@@ -81,7 +81,7 @@ export default function CalculadoraReduccion() {
       )}
 
       {r && (
-        <section className="resultado" aria-live="polite">
+        <section className="resultado con-euro" aria-live="polite">
           <h2>
             Reduces tu jornada un {r.porcentaje.toLocaleString('es-ES')} %: cobrarías unos {euros(r.salarioAnual)} brutos al año
           </h2>

@@ -526,7 +526,7 @@ function Tareas({ datos, abrir, crear, cambiar, borrar, usuario }: { datos: Dato
     <div className="cr-caja">
       <div className="cr-caja-cabeza"><h2>Tareas</h2><span>Al dar de alta una consulta se crea sola la tarea de llamar</span></div>
       <form className="cr-nueva-tarea" onSubmit={(e) => { e.preventDefault(); if (!texto.trim()) return; crear({ contacto_id: null, texto: texto.trim(), vence, hecha: false, responsable: usuario }); setTexto(''); }}>
-        <input value={texto} onChange={(e) => setTexto(e.target.value)} placeholder="Nueva tarea, por ejemplo: preparar la demanda de Elena" aria-label="Nueva tarea" />
+        <input type="text" value={texto} onChange={(e) => setTexto(e.target.value)} placeholder="Nueva tarea, por ejemplo: preparar la demanda de Elena" aria-label="Nueva tarea" />
         <input type="date" value={vence} onChange={(e) => setVence(e.target.value)} aria-label="Fecha" />
         <button type="submit" className="cr-btn">Añadir</button>
       </form>
@@ -728,7 +728,7 @@ function Alta({ cerrar, crear, usuario }: { cerrar: () => void; crear: (n: Nuevo
         <h2>Nueva consulta</h2>
         <p className="cr-sub">Solo el nombre es obligatorio. Lo demás se puede completar después.</p>
         <div className="cr-campos">
-          <label className="cr-ancho"><span>Nombre *</span><input ref={primero} required value={f.nombre} onChange={(e) => set('nombre', e.target.value)} autoComplete="off" /></label>
+          <label className="cr-ancho"><span>Nombre *</span><input type="text" ref={primero} required value={f.nombre} onChange={(e) => set('nombre', e.target.value)} autoComplete="off" /></label>
           <label><span>Teléfono</span><input type="tel" value={f.telefono} onChange={(e) => set('telefono', e.target.value)} autoComplete="off" /></label>
           <label><span>Correo</span><input type="email" value={f.email} onChange={(e) => set('email', e.target.value)} autoComplete="off" /></label>
           <div className="cr-ancho">
@@ -745,7 +745,7 @@ function Alta({ cerrar, crear, usuario }: { cerrar: () => void; crear: (n: Nuevo
           <label><span>Etapa</span>
             <select value={f.etapa} onChange={(e) => set('etapa', e.target.value)}>{ETAPAS.map((x) => <option key={x.id} value={x.id}>{x.nombre}</option>)}</select>
           </label>
-          <label className="cr-ancho"><span>Detalle del origen (opcional)</span><input value={f.detalle} onChange={(e) => set('detalle', e.target.value)} placeholder="Por ejemplo: le recomendó María, vio el vídeo de Instagram..." /></label>
+          <label className="cr-ancho"><span>Detalle del origen (opcional)</span><input type="text" value={f.detalle} onChange={(e) => set('detalle', e.target.value)} placeholder="Por ejemplo: le recomendó María, vio el vídeo de Instagram..." /></label>
           <label className="cr-ancho"><span>¿Qué le pasa?</span><textarea rows={3} value={f.mensaje} onChange={(e) => set('mensaje', e.target.value)} placeholder="Lo que te ha contado, en dos líneas" /></label>
           <label><span>Plazo</span>
             <select value={f.tipo_plazo} onChange={(e) => set('tipo_plazo', e.target.value)}>{PLAZOS.map((p) => <option key={p.id} value={p.id}>{p.nombre}</option>)}</select>
@@ -880,7 +880,7 @@ function Ficha({
             {TIPOS_ACT.map(([t, n]) => <button key={t} type="button" className={tipo === t ? 'activo' : ''} onClick={() => setTipo(t)}>{n}</button>)}
           </div>
           <div className="cr-apuntar-fila">
-            <input value={texto} onChange={(e) => setTexto(e.target.value)} placeholder={tipo === 'llamada' ? 'Por ejemplo: no contesta, volver a llamar a las 17:00' : 'Qué ha pasado'} aria-label="Qué ha pasado" />
+            <input type="text" value={texto} onChange={(e) => setTexto(e.target.value)} placeholder={tipo === 'llamada' ? 'Por ejemplo: no contesta, volver a llamar a las 17:00' : 'Qué ha pasado'} aria-label="Qué ha pasado" />
             <button type="submit" className="cr-btn">Apuntar</button>
           </div>
         </form>
@@ -905,7 +905,7 @@ function Ficha({
           ))}
         </ul>
         <form className="cr-apuntar-fila" onSubmit={(e) => { e.preventDefault(); if (!tarea.trim()) return; crearTarea({ contacto_id: c.id, texto: tarea.trim(), vence: tareaVence, hecha: false, responsable: usuario }); setTarea(''); }}>
-          <input value={tarea} onChange={(e) => setTarea(e.target.value)} placeholder="Nueva tarea" aria-label="Nueva tarea" />
+          <input type="text" value={tarea} onChange={(e) => setTarea(e.target.value)} placeholder="Nueva tarea" aria-label="Nueva tarea" />
           <input type="date" value={tareaVence} onChange={(e) => setTareaVence(e.target.value)} aria-label="Fecha de la tarea" className="cr-fecha" />
           <button type="submit" className="cr-btn cr-btn-claro">Añadir</button>
         </form>
@@ -919,7 +919,7 @@ function Ficha({
           ))}
         </ul>
         <form className="cr-apuntar-fila" onSubmit={(e) => { e.preventDefault(); if (!nuevoDoc.trim()) return; actualizar({ docs: [...c.docs, [nuevoDoc.trim(), false]] }); setNuevoDoc(''); }}>
-          <input value={nuevoDoc} onChange={(e) => setNuevoDoc(e.target.value)} placeholder="Otro documento que haga falta" aria-label="Otro documento" />
+          <input type="text" value={nuevoDoc} onChange={(e) => setNuevoDoc(e.target.value)} placeholder="Otro documento que haga falta" aria-label="Otro documento" />
           <button type="submit" className="cr-btn cr-btn-claro">Añadir</button>
         </form>
 

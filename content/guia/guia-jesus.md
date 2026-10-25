@@ -234,7 +234,7 @@ Hemos creado tu proyecto en Semrush para vigilar, mes a mes, cómo te recomienda
 | Stop Acoso Laboral | 14 (baja) | 1 | 1 |
 | **Tierno Centella** | **14 (baja)** | **2** | **19** |
 
-Campmany y Bufete Toro no son mejores abogados: tienen cientos de páginas que responden preguntas concretas, y las IA las citan. Es exactamente lo que estamos construyendo para ti.
+Campmany y Bufete Toro salen más porque tienen cientos de páginas que responden preguntas concretas, y las IA las citan. Es exactamente lo que estamos construyendo para ti.
 
 **En Google** (tu puesto hoy en las búsquedas que más importan):
 
@@ -495,15 +495,15 @@ Esto es lo que ve hoy quien te busca, y cómo quedaría:
 
 ## 7. Tus competidores en Madrid
 
-| Despacho | Qué hace bien | Dónde le ganas |
+| Despacho | Qué hace bien | Dónde puedes destacar tú |
 | --- | --- | --- |
 | Bufete Toro | Muchas reseñas, 8 calculadoras, logos de prensa | Sus cifras no tienen fuente; tú tienes sentencias pioneras propias |
 | Campmany | Calculadora de incapacidad, contadores grandes | No tiene nada específico de acoso |
 | García de la Santa | 4,9 con 609 reseñas | Sin herramientas de acoso ni autoridad propia |
-| Jover Marben | Test de acoso, cara de los socios | Tu test y tu mapa de pruebas son mejores |
-| Pedraza Laboral | Sentencias fechadas en portada | Visualmente pobre |
+| Jover Marben | Test de acoso, cara de los socios | Tu test va acompañado de un mapa de pruebas y de un diario de hechos |
+| Pedraza Laboral | Sentencias fechadas en portada | Herramientas y guías para quien todavía no sabe si tiene caso |
 
-**En una frase**: nadie en Madrid tiene a la vez una sentencia pionera, un libro, a Piñuel y herramientas para la víctima de acoso. Ese es tu hueco. Lo que te falta frente a ellos son **reseñas** y **constancia** en publicar.
+**En una frase**: nadie en Madrid tiene a la vez una sentencia pionera, un libro, a Piñuel y herramientas para la víctima de acoso. Ese es tu hueco. Con los pies en el suelo: hoy ellos van por delante en **reseñas** (García de la Santa tiene 609) y en **constancia** al publicar, y desde fuera no podemos ver cuántos clientes reciben. Eso es lo que hay que trabajar.
 
 ## 7 bis. Lo que prometen tus competidores (y lo que nunca copiaremos)
 
@@ -1319,6 +1319,18 @@ CUESTIONARIO
 Aquí irán apareciendo **tus preguntas y nuestras respuestas**, para que lo tengas todo en un mismo sitio y no tengas que buscar en el correo ni en el WhatsApp.
 
 Escríbenos debajo de cualquier apartado: nos llega al momento, te contestamos lo antes posible y la respuesta queda aquí, para ti.
+
+Mientras tanto, te dejamos contestadas las dudas que suelen tener los despachos al ver algo así:
+
+**¿El chat da consejos legales? ¿Y si se equivoca?** Da orientación general, nunca un veredicto sobre un caso. Dice desde el primer mensaje que es una inteligencia artificial y que puede equivocarse, no promete resultados y, cuando hay un plazo o una decisión delicada, deriva al despacho. Las conversaciones quedan guardadas, así que podéis revisarlas y corregir sus instrucciones cuando queráis.
+
+**¿Encaja con nuestras normas profesionales?** Está pensada para ello: no promete resultados, no habla de otros despachos, nunca llama gratuita a la consulta y da siempre su precio. Aun así, la última palabra es tuya: revisa lo que quieras y cualquier texto se cambia el mismo día.
+
+**¿Y los datos de salud que alguien cuente en el chat?** El chat no los pide y, si alguien los da, no los repite. Quien escribe sabe que la conversación se guarda, y la política de privacidad lo explica. Con la web oficial, esa base de datos pasa a una cuenta a tu nombre.
+
+**¿Quién revisa los artículos?** Tú. Cada guía lleva el aviso "Pendiente de revisión por Jesús Tierno Centella" hasta que le des el visto bueno.
+
+**¿No es demasiado para un despacho como el nuestro?** Nada es obligatorio. Quitar una herramienta, un artículo o una sección es fácil; lo difícil es crearlo, y eso ya está hecho. Y si un día no dais abasto, se pone un aviso o se pausa el formulario en minutos.
 
 > Así trabajamos: **todo online y por escrito**, sin reuniones ni llamadas que no hagan falta. Nuestro objetivo es que tengas la máxima visibilidad y el máximo trabajo, y que te ocupes de nosotros lo menos posible. Tu tiempo es para tus clientes.
 

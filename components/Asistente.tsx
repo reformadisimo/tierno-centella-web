@@ -51,7 +51,7 @@ const TEXTOS = {
     privacidadHref: '/privacidad',
     pedirLlamada: 'Quiero que me llaméis',
     enviando: 'Enviando...',
-    hecho: 'Hecho. Un abogado del despacho te llamará en cuanto pueda, con esta conversación delante.',
+    hecho: 'Hecho. Un abogado del despacho te llamará en horario de despacho, con esta conversación delante. Si te corre un plazo, no esperes: llámanos tú también.',
     errorLlamada: 'No se ha podido enviar. Llámanos o escríbenos por WhatsApp, por favor.',
     faltan: 'Escribe tu nombre y un teléfono, y acepta la casilla.',
     nueva: 'Empezar de nuevo',
@@ -94,7 +94,7 @@ const TEXTOS = {
     privacidadHref: '/privacidad',
     pedirLlamada: 'Please call me',
     enviando: 'Sending...',
-    hecho: 'Done. A lawyer from the firm will call you as soon as possible, with this conversation in front of them.',
+    hecho: 'Done. A lawyer from the firm will call you during office hours, with this conversation in front of them. If a deadline is running, do not wait: call us too.',
     errorLlamada: "It couldn't be sent. Please call us or message us on WhatsApp.",
     faltan: 'Please write your name and a phone number, and tick the box.',
     nueva: 'Start again',
@@ -265,6 +265,14 @@ export default function Asistente() {
     window.addEventListener('abrir-asistente', abrir);
     return () => window.removeEventListener('abrir-asistente', abrir);
   }, []);
+
+  // La tecla Escape cierra el chat.
+  useEffect(() => {
+    if (!abierto) return;
+    const tecla = (e: KeyboardEvent) => { if (e.key === 'Escape') setAbierto(false); };
+    window.addEventListener('keydown', tecla);
+    return () => window.removeEventListener('keydown', tecla);
+  }, [abierto]);
 
   useEffect(() => {
     // Al abrir sin conversación, se ve el principio (la foto del equipo); después, siempre lo último.

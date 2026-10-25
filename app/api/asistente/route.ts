@@ -50,7 +50,7 @@ export async function POST(req: Request) {
   }
   while (mensajes[0]?.role === 'assistant') mensajes.shift();
 
-  const hoy = new Intl.DateTimeFormat('es-ES', { dateStyle: 'full', timeZone: 'Europe/Madrid' }).format(new Date());
+  const hoy = new Intl.DateTimeFormat('es-ES', { dateStyle: 'full', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(new Date());
   const cliente = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const codificador = new TextEncoder();

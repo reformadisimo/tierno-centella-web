@@ -64,12 +64,12 @@ export default function CalculadoraNeto() {
       </div>
       <div className="campo">
         <label htmlFor="n-salario">Salario bruto anual, con pagas extra (€)</label>
-        <input id="n-salario" inputMode="decimal" value={salario} onChange={(e) => setSalario(e.target.value)} placeholder="Por ejemplo, 30000" />
+        <input type="text" id="n-salario" inputMode="decimal" value={salario} onChange={(e) => setSalario(e.target.value)} placeholder="Por ejemplo, 30000" />
         {aviso && <p className="campo-ayuda">{aviso}</p>}
       </div>
       <div className="campo">
         <label htmlFor="n-cobrado">Indemnización que cobras o te ofrecen (€ brutos)</label>
-        <input id="n-cobrado" inputMode="decimal" value={cobrado} onChange={(e) => setCobrado(e.target.value)} placeholder="Por ejemplo, 30000" />
+        <input type="text" id="n-cobrado" inputMode="decimal" value={cobrado} onChange={(e) => setCobrado(e.target.value)} placeholder="Por ejemplo, 30000" />
       </div>
       <div className="campo">
         <label htmlFor="n-tipo">Tu tipo aproximado de IRPF (lo que pagas por cada euro extra)</label>
@@ -82,7 +82,7 @@ export default function CalculadoraNeto() {
       </div>
 
       {r && (
-        <section aria-live="polite" className="veredicto">
+        <section aria-live="polite" className="veredicto con-euro">
           <h3>Te quedarían aproximadamente {euros(neto)} netos</h3>
           <table className="tabla">
             <tbody>

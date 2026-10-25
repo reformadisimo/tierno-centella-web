@@ -151,7 +151,7 @@ export default function CalculadoraFiniquito() {
       )}
 
       {r && (
-        <section className="resultado" aria-live="polite">
+        <section className="resultado con-euro" aria-live="polite">
           {avisoSalario && <p className="aviso-salario">{avisoSalario}</p>}
           <h2>Tu finiquito orientativo: {eurosConCentimos(r.total)} brutos</h2>
           <table className="tabla">
