@@ -13,6 +13,9 @@ import SalidaRapida from '@/components/SalidaRapida';
 import { CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
 import BarraSuperior from '@/components/BarraSuperior';
 import JsonLd from '@/components/JsonLd';
+import ProgresoLectura from '@/components/ProgresoLectura';
+import Aparecer from '@/components/Aparecer';
+import IndicePagina from '@/components/IndicePagina';
 import { BASE, esquemaDespacho } from '@/lib/seo';
 
 const fuente = localFont({
@@ -59,7 +62,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BarraSuperior />
         <CabeceraImpresion />
         <Cabecera />
-        <main id="contenido">{children}</main>
+        <ProgresoLectura />
+        <Aparecer />
+        <main id="contenido">
+          <IndicePagina />
+          {children}
+        </main>
         <Pie />
         <BarraMovil />
         <AvisoCookies />

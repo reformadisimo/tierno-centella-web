@@ -7470,3 +7470,23 @@ body{padding-bottom:58px}
   .menu-desplegable::before{display:none}
   .menu-grupo:hover{z-index:5}
 }
+
+/* Barra de progreso de lectura bajo la cabecera */
+.progreso-lectura{position:fixed;left:0;right:0;top:0;height:4px;z-index:60;pointer-events:none}
+.progreso-lectura div{height:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#d9694d,#f2c14e);border-radius:0 4px 4px 0}
+
+/* Aparición suave de tarjetas */
+@media (prefers-reduced-motion:no-preference){
+  .ap-oculto{opacity:0;transform:translateY(18px)}
+  .ap-visto{opacity:1;transform:none;transition:opacity .55s ease var(--ap-retraso,0ms),transform .55s ease var(--ap-retraso,0ms)}
+}
+
+/* Índice de página: fila que se desliza, fija bajo la cabecera */
+.indice-pagina{position:sticky;z-index:15;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);margin:0}
+.indice-fila{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:8px max(16px,calc((100vw - 1180px)/2));scrollbar-width:none}
+.indice-fila::-webkit-scrollbar{display:none}
+.indice-etiqueta{flex:none;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-suave);margin-right:4px}
+.indice-fila a{flex:none;white-space:nowrap;padding:7px 14px;border-radius:999px;font-size:.88rem;font-weight:600;color:var(--tinta);text-decoration:none;background:#f3edf2;border:1px solid transparent;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.indice-fila a:hover{background:#fbe9ef}
+.indice-fila a[aria-current="true"]{background:var(--tinta);color:#fff}
+@media print{.indice-pagina,.progreso-lectura{display:none}}
