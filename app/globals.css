@@ -8240,3 +8240,16 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
   .portada-video .pv-sello b{background:var(--marcador);color:var(--tinta);border-radius:999px;padding:6px 12px}
 }
 @media (max-width:700px){.portada-video .pv-marca{display:block;margin:0 0 10px;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#f2c14e}}
+
+/* Portada con más luz: velo solo donde va el texto, el resto de la imagen limpia y luminosa */
+.portada-video video,.portada-video .poster{filter:brightness(1.12) contrast(1.06) saturate(1.1)}
+@media (min-width:701px){
+  .portada-video::after{background:linear-gradient(90deg,rgba(0,26,46,.66) 0%,rgba(0,26,46,.46) 38%,rgba(0,26,46,.14) 68%,rgba(0,26,46,0) 100%)}
+  .portada-video h1,.portada-video .pv-corto,.portada-video .pv-marca{text-shadow:0 2px 16px rgba(0,15,30,.55),0 1px 3px rgba(0,15,30,.4)}
+}
+@media (max-width:700px){
+  .portada-video::after{background:linear-gradient(180deg,rgba(0,30,52,.38) 0%,rgba(0,30,52,.52) 55%,rgba(0,30,52,.72) 100%)}
+}
+.portada-video .pv-sello{background:rgba(0,26,46,.6) !important;border-color:rgba(255,255,255,.3)}
+.portada-video .boton-claro{background:rgba(0,26,46,.5)}
+.portada-video .boton-claro:hover{background:rgba(0,26,46,.7)}
