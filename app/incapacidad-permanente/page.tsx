@@ -41,12 +41,12 @@ export default function Incapacidad() {
           </div>
           <div>
             {videoDeFoto('incapacidad-ventana') ? (
-              <FotoVideo foto="incapacidad-ventana" alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra" video={videoDeFoto('incapacidad-ventana')!} sizes="(max-width: 860px) 100vw, 50vw" prioridad />
+              <FotoVideo foto="incapacidad-ventana" alt="Una mujer agobiada ante su portátil en una oficina, de noche, con la ciudad al fondo" video={videoDeFoto('incapacidad-ventana')!} sizes="(max-width: 860px) 100vw, 50vw" prioridad />
             ) : (
               <img
                 className="foto"
                 src="/img/incapacidad-ventana.webp" srcSet="/img/incapacidad-ventana-640.webp 640w, /img/incapacidad-ventana.webp 1000w" sizes="(max-width: 860px) 100vw, 50vw"
-                alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra"
+                alt="Una mujer agobiada ante su portátil en una oficina, de noche, con la ciudad al fondo"
                 width={1000}
                 height={676}
                 fetchPriority="high"
