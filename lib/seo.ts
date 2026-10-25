@@ -109,6 +109,7 @@ export function esquemaDespacho() {
         '@id': ID_JESUS,
         name: 'Jesús Tierno Centella',
         jobTitle: 'Abogado laboralista, socio director',
+        ...(COLEGIADO_CONFIRMADO && DESPACHO.colegiadoNumero ? { identifier: { '@type': 'PropertyValue', name: 'Número de colegiado (ICAM)', value: DESPACHO.colegiadoNumero } } : {}),
         // El número de colegiado entra en los datos de Google solo cuando Jesús lo confirme.
         ...(COLEGIADO_CONFIRMADO && DESPACHO.colegiadoNumero ? { identifier: { '@type': 'PropertyValue', name: 'Número de colegiado (ICAM)', value: DESPACHO.colegiadoNumero } } : {}),
         worksFor: { '@id': ID_DESPACHO },

@@ -1198,6 +1198,47 @@ Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y s
 
 **Esto no es magia**: la velocidad y la imagen se notan el primer día; las reseñas, en semanas; el posicionamiento en Google, entre tres y seis meses de publicar con constancia. Lo bueno es que partes de una autoridad que muy pocos tienen.
 
+## 22 bis. Qué resultados creemos que se pueden conseguir (sin prometerte nada)
+
+Jesús, la pregunta honesta que te harás es: "¿y esto cuánto me va a dar?". No podemos garantizarte nada, y desconfía de quien lo haga: nadie controla Google, ni a los jueces, ni a la gente que decide llamar. Pero sí te podemos decir lo que **creemos, por nuestra experiencia con otras empresas**, y cómo lo hemos calculado.
+
+**El punto de partida.** Una web antigua, sin chat ni herramientas, un Facebook parado desde 2017 y un LinkedIn sin publicaciones. Desde una base así, mejorar es relativamente fácil: los porcentajes salen grandes porque la base es pequeña, y eso conviene decirlo claro.
+
+Nuestra estimación para **las consultas cualificadas** (no las visitas: las personas que de verdad te contactan), comparadas con lo que tienes hoy:
+
+| Plazo | Qué esperamos | De dónde viene |
+| --- | --- | --- |
+| 3 meses | De un 20 % a un 40 % más | Sobre todo de convertir mejor a quien ya te visita: chat, herramientas, WhatsApp, velocidad |
+| 6 meses | De un 50 % a un 100 % más | Se suma el primer efecto del posicionamiento en Google y en las IA |
+| 12 meses | Lo más probable, el doble (un 100 % más); con un rango razonable del 50 % al 200 % | El SEO maduro, las reseñas, los anuncios afinados y la presencia en LinkedIn y prensa |
+
+**Llegar a tres o cuatro veces más es posible, pero solo si se dan tres cosas a la vez**: una inversión seria en anuncios con seguimiento de cada contacto, reseñas reales de tus clientes en Google, y que tú des la cara en vídeo y en prensa. Sin ellas, lo realista es la parte baja del rango.
+
+**Lo que puede frenarlo**, para que lo sepas de antemano: Madrid es un mercado caro y muy competido; el posicionamiento tarda (lo publicado hoy rinde a partir del cuarto o quinto mes); más contactos no son más clientes, porque depende de cómo se atiendan; y todo requiere un poco de tu tiempo (un vídeo, las reseñas, tus cifras reales). **Medimos el primer mes antes de nada**, para tener tu punto de partida real y no solo el que calculamos desde fuera, y cada trimestre te enseñamos dónde estamos frente a esta tabla, con cifras, sin maquillar.
+
+### Una estimación que hay que demostrar, y que iremos afinando
+
+Estos porcentajes son una **estimación objetiva, no una promesa**, y como tal nos toca demostrarla. Hoy la hacemos mirando tu web desde fuera. Para afinarla necesitamos tus **accesos** (apartado 23): con Search Console y Analytics sabremos cuánta gente te encuentra y cuánta te contacta de verdad, y la estimación será mucho más precisa. Después:
+
+- **A los 3 meses**, con datos reales de tu web, la afinamos bastante.
+- **A los 6 meses**, mucho más.
+- **Al año**, ya no habrá estimación: tendremos el resultado, y te lo enseñaremos tal cual sea.
+
+
+### La inteligencia artificial: impredecible, pero ya funciona
+
+Las IA (ChatGPT, Gemini, Claude) cambian de criterio cada pocas semanas, y por eso no te prometemos que te recomienden. Pero sabemos que lo que hacemos **funciona**: en otros proyectos, como Reformadísimo, las IA ya nos recomiendan. Y lo hacen por cuatro o cinco cosas muy concretas que hemos trabajado (datos estructurados, un llms.txt, contenido que responde preguntas reales, un glosario enlazado, presencia en Bing) y que **casi nadie en tu sector está haciendo todavía**.
+
+### Por qué esto no lo consigue la suma de cinco proveedores
+
+Es natural pensar: "si contrato al mejor diseñador, al mejor experto en SEO, al mejor gestor de anuncios, al mejor redactor y al mejor programador, tendré lo mejor". Pero no funciona así, por una razón sencilla: **cada uno hace bien lo suyo, y nadie hace bien lo que hay entre ellos**. El diseñador no sabe qué buscan tus clientas; el del SEO no ve lo que pasa en los anuncios; el de los anuncios no sabe qué responde el chat; y ninguno ve el conjunto.
+
+Nosotros hacemos el trabajo de esos cinco proveedores, y lo hacemos, creemos, **mejor que cada uno por separado, porque todo está pensado a la vez**: el glosario alimenta el SEO y las IA, las herramientas traen contactos, esos contactos entran en el CRM y reciben tu seguimiento por correo, los anuncios llevan a páginas hechas para convertir, y todo se mide en un mismo panel para mejorar cada semana. Cada pieza empuja a las demás. Eso es lo que no se consigue coordinando a cinco proveedores que no se hablan entre sí, y por experiencia sabemos que marca la diferencia.
+
+### Un voto de confianza, si te parece oportuno
+
+Te pedimos que confíes en nosotros: que nos des ese voto de confianza para empezar, **solo si lo ves oportuno y sin ninguna presión**. Somos amigos, y preferimos que lo pienses con calma a que te lleves algo que no quieres. La web ya la tienes, es tuya, y lo que decidas después, lo decides tú.
+
 ## 23. Los accesos que necesitamos (y cómo darlos)
 
 **Solo si quieres ir más allá.** Todo lo que ves en esta guía lo hemos hecho desde fuera, sin entrar en ninguna de tus cuentas. Si quieres que hagamos un estudio todavía más profundo y te digamos exactamente en qué situación estás (qué te traen hoy los anuncios, qué búsquedas te dan clientes, qué visitas se pierden), necesitamos estos accesos. Si no, no pasa nada: la web nueva y la guía siguen siendo tuyas.

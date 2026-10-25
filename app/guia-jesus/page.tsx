@@ -117,6 +117,7 @@ const EXTRA: Record<string, Extra> = {
   '20': { foto: 'empresas-firma', frase: 'Tu logo de siempre, un poco más fino.', grupo: 'clientes' },
   '21': { foto: 'documento-pluma', frase: 'Un cambio sin sustos: lo llevamos nosotros y tú mantienes el control de todo.', grupo: 'seguir' },
   '22': { foto: 'manos-unidas', frase: 'Lo que pasará en los próximos meses, sin promesas vacías.', grupo: 'seguir' },
+  '22 bis': { foto: 'jesus-con-abogada', frase: 'Lo que creemos que se puede conseguir, con cifras honestas y sin promesas.', grupo: 'seguir' },
   '23': { foto: 'reunion-cliente', frase: 'Un cuarto de hora tuyo, y nosotros hacemos el resto.', grupo: 'seguir' },
   '24': { foto: 'abogada-escucha', frase: 'Unas preguntas cortas para afinar. Contesta solo las que quieras.', grupo: 'seguir', abierta: true },
   '24 bis': { foto: 'abogada-sonrie', frase: 'Tus preguntas y nuestras respuestas, todo en un mismo sitio.', grupo: 'seguir', abierta: true },
