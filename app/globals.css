@@ -8199,3 +8199,29 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
 .rs2-mas>summary::after{content:'+';float:right;font-size:1.3rem;line-height:1;color:#d9694d}
 .rs2-mas[open]>summary::after{content:'−'}
 .rs2-mas .rs2-lista{padding:0 14px 14px}
+
+/* Menú de escritorio con más carácter: texto con peso, flecha en los que despliegan, color de cada sección al pasar, Herramientas destacada y Contacto como pastilla */
+@media (min-width:1100px){
+  .cabecera .menu > .menu-grupo > a, .cabecera .menu > a.mg-contacto{font-weight:650;color:var(--tinta);display:inline-flex;align-items:center;gap:4px;border-radius:999px;transition:background .18s,color .18s}
+  .mg-flecha{opacity:.55;transition:transform .2s,opacity .2s;flex:none}
+  .menu-grupo:hover > a .mg-flecha,.menu-grupo:focus-within > a .mg-flecha{transform:rotate(180deg);opacity:1}
+  .cabecera .menu > .menu-grupo:hover > a,.cabecera .menu > .menu-grupo:focus-within > a{background:var(--md-claro,#eef2f6);color:var(--md,#0d2c48)}
+  .cabecera .menu > .menu-grupo > a[aria-current='page']{box-shadow:none;background:var(--md-claro,#eef2f6);color:var(--md,#0d2c48)}
+  .cabecera .menu > .mg-destacado > a{color:#8a6000}
+  .cabecera .menu > .mg-destacado > a::before{content:'';width:7px;height:7px;border-radius:50%;background:#f2c14e;margin-right:2px;flex:none}
+  .cabecera .menu > a.mg-contacto{border:2px solid var(--tinta);padding-block:6px;margin-left:4px}
+  .cabecera .menu > a.mg-contacto:hover{background:var(--tinta);color:#fff}
+  .cabecera .menu > a.mg-contacto[aria-current='page']{box-shadow:none;background:var(--tinta);color:#fff}
+}
+@media (min-width:1100px) and (max-width:1439px){.mg-flecha{display:none}}
+@media (min-width:1100px){
+  .cabecera .menu > .menu-grupo > a, .cabecera .menu > a.mg-contacto{font-weight:600;letter-spacing:-.01em}
+  .cabecera .menu{gap:0}
+}
+@media (min-width:1100px) and (max-width:1599px){
+  .cabecera .menu > .mg-destacado > a::before{display:none}
+  .cabecera .menu > a.mg-contacto{border-width:1.5px;padding-inline:8px;margin-left:2px}
+}
+@media (min-width:1100px) and (max-width:1959px){.mg-flecha{display:none}}
+@media (min-width:1600px) and (max-width:1899px){.cabecera .menu a{padding:8px 6px;font-size:.9rem}.cabecera-acciones{gap:6px}}
+@media (min-width:1440px) and (max-width:1599px){.cabecera .menu a{padding:8px 4px;font-size:.86rem}}

@@ -68,9 +68,10 @@ export default function Cabecera() {
 
         <nav className="menu" aria-label={t.principal}>
           {menu.map((g, i) => (
-            <div className="menu-grupo" key={g.titulo}>
+            <div className={`menu-grupo md-c${MENU_COLOR[i] ?? 0}${/herramientas|tools/.test(g.href) ? ' mg-destacado' : ''}`} key={g.titulo}>
               <Link href={g.href} aria-current={ruta.startsWith(g.href) && g.href !== '/' ? 'page' : undefined}>
                 {g.titulo}
+                <svg className="mg-flecha" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
               </Link>
               <div className={`menu-desplegable md-c${MENU_COLOR[i] ?? 0}${g.enlaces.length > 8 ? ' menu-ancho' : ''}`}>
                 <Link href={g.href} className="md-cabeza">
@@ -91,7 +92,7 @@ export default function Cabecera() {
               </div>
             </div>
           ))}
-          <Link href={t.contactoHref} aria-current={ruta === t.contactoHref ? 'page' : undefined}>
+          <Link href={t.contactoHref} className="mg-contacto" aria-current={ruta === t.contactoHref ? 'page' : undefined}>
             {t.contacto}
           </Link>
         </nav>
