@@ -26,6 +26,11 @@ export type Landing = {
   opcionesFormulario: string[];
   whatsapp: string;
   guia: { texto: string; href: string };
+  // Opcionales: bloques de empatía y de claridad para las landings más trabajadas.
+  dolor?: { titulo: string; frases: string[]; cierre: string };
+  noHagas?: { titulo: string; items: { t: string; r: string }[] };
+  consulta?: { titulo: string; items: string[] };
+  confidencial?: string;
 };
 
 export const LANDINGS: Landing[] = [
@@ -197,6 +202,39 @@ export const LANDINGS: Landing[] = [
     opcionesFormulario: ['Me acosa mi jefe', 'Me acosan compañeros', 'Estoy de baja por esto', 'Me han despedido', 'Acoso sexual', 'Otra situación'],
     whatsapp: 'Hola, quiero consultar un caso de acoso laboral.',
     guia: { texto: 'Guía completa: cómo saber si sufres acoso', href: '/acoso-laboral/como-saber-si-sufro-acoso' },
+    confidencial: 'Todo lo que nos cuentes es confidencial, incluso si todavía no sabes si quieres reclamar.',
+    dolor: {
+      titulo: 'Si te suena algo de esto, no estás exagerando',
+      frases: [
+        'Me han quitado funciones y nadie me explica por qué.',
+        'Entro en una sala y se hace el silencio.',
+        'Me corrigen a gritos delante de todos.',
+        'Me llegan correos a las once de la noche y me da miedo abrirlos.',
+        'Me han insinuado que lo mejor es que me vaya.',
+        'Los domingos por la tarde ya me duele el estómago.',
+        'A veces pienso que la culpa es mía.',
+      ],
+      cierre: 'No es culpa tuya. Lo que describes tiene nombre, tiene ley y, bien documentado, se puede probar. No tienes que aguantarlo ni decidir deprisa.',
+    },
+    noHagas: {
+      titulo: 'Antes de hacer nada, evita estos cuatro errores',
+      items: [
+        { t: 'Dimitir por tu cuenta', r: 'Si te vas voluntariamente, puedes perder el paro y la indemnización. Hay otras vías, como pedir al juez que extinga tu contrato por incumplimiento grave de la empresa.' },
+        { t: 'Firmar un papel sin leerlo', r: 'Un acuerdo o un finiquito que parece un simple trámite puede cerrar tu reclamación. Pide copia y consúltalo antes de firmar.' },
+        { t: 'Dejar que se pierdan las pruebas', r: 'Anota con fecha lo que ocurre y guarda capturas y mensajes en un lugar que no sea el equipo de la empresa. Lo que no se guarda, no se puede probar.' },
+        { t: 'Contarlo a todo el mundo o en redes', r: 'Comentarlo por los pasillos o publicarlo puede volverse en tu contra. Cuéntanoslo primero y decidimos cómo y cuándo.' },
+      ],
+    },
+    consulta: {
+      titulo: 'Qué te llevas de la primera consulta',
+      items: [
+        'Una opinión clara: si lo que vives es acoso y qué fuerza tiene tu caso.',
+        'Un plan de pruebas: qué guardar, cómo ordenarlo y qué no hacer.',
+        'Las vías posibles, con sus ventajas y sus riesgos: protocolo de la empresa, Inspección de Trabajo, extinción del contrato y demanda.',
+        'Qué plazos corren y qué conviene hacer primero.',
+        'Un presupuesto cerrado por escrito, si decides seguir adelante.',
+      ],
+    },
   },
   {
     slug: 'despido',

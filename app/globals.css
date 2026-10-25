@@ -7742,3 +7742,30 @@ html.a11y-quieto video { display: none !important; }
 .facil-tarjeta h2 { font-size: 1.15rem; margin: 0 0 4px; }
 .facil-tarjeta p { margin: 0 0 4px; font-size: 1.05rem; line-height: 1.5; }
 .aviso-correo { max-width: 460px; }
+
+/* Landing de anuncios: empatía, errores a evitar, lo que te llevas y barra fija en móvil */
+.lp-dolor { background: var(--tinta); color: #fff; }
+.lp-dolor h2 { color: #fff; margin-bottom: 18px; }
+.lp-frases { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 10px; }
+.lp-frases li { position: relative; padding: 14px 18px 14px 46px; background: rgba(255,255,255,.08); border-radius: 12px; font-size: 1.12rem; line-height: 1.45; }
+.lp-frases li::before { content: "\201C"; position: absolute; left: 16px; top: 4px; font-size: 2.4rem; line-height: 1; color: var(--marcador); font-family: Georgia, serif; }
+.lp-dolor-cierre { font-size: 1.25rem; line-height: 1.5; margin: 0 0 20px; font-weight: 600; }
+.lp-confidencial { margin: 14px 0 0; font-size: .95rem; color: rgba(255,255,255,.8); }
+.lp-errores { list-style: none; counter-reset: err; margin: 18px 0 0; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 760px) { .lp-errores { grid-template-columns: repeat(2, 1fr); } }
+.lp-errores li { counter-increment: err; position: relative; background: #fff; border: 1px solid var(--linea); border-radius: 14px; padding: 18px 18px 18px 64px; }
+.lp-errores li::before { content: counter(err); position: absolute; left: 16px; top: 16px; width: 34px; height: 34px; border-radius: 50%; background: var(--coral); color: #fff; font-weight: 700; display: grid; place-items: center; }
+.lp-errores h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.lp-errores p { margin: 0; line-height: 1.5; color: var(--tinta-media); }
+.lp-consulta { background: #fff; border: 1px solid var(--linea); border-left: 4px solid var(--coral); border-radius: 12px; padding: 18px 20px; margin: 22px 0; }
+.lp-consulta h3 { margin: 0 0 10px; }
+.lp-consulta ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.lp-consulta li { position: relative; padding-left: 26px; line-height: 1.5; }
+.lp-consulta li::before { content: ""; position: absolute; left: 4px; top: .45em; width: 7px; height: 12px; border: solid var(--coral); border-width: 0 3px 3px 0; transform: rotate(40deg); }
+.lp-fija { display: none; }
+@media (max-width: 799px) {
+  .lp-fija { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--tinta); box-shadow: 0 -4px 14px rgba(0,0,0,.18); }
+  .lp-fija a { color: #fff; text-align: center; padding: 14px 6px; font-weight: 700; text-decoration: none; border-right: 1px solid rgba(255,255,255,.18); }
+  .lp-fija a:last-child { background: var(--coral); border-right: 0; }
+  .lp-pie { padding-bottom: 76px; }
+}

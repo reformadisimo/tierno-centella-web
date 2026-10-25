@@ -1051,6 +1051,33 @@ Para que lo veas con tus ojos: así se ven hoy tus anuncios, los de quienes comp
 
 ## 18 ter. Tus tres landings: páginas nuevas para que tus anuncios conviertan
 
+### Adónde llega hoy quien pincha en un anuncio de acoso laboral
+
+Seguimos un clic de Google Ads hasta el final. Quien busca un abogado de acoso laboral y pulsa en el anuncio llega a una página de tu web actual (tiernocentella.es/abogados-expertos-en-acoso-laboral-3/). Esto es lo que se ve, según las capturas que tenemos:
+
+- **En la primera pantalla**: el titular "Abogados expertos en acoso laboral" sobre una ilustración de muñecos con un megáfono. No se ve formulario, ni tu cara, ni una cifra, ni un botón de llamar o de WhatsApp. El teléfono está solo en la cabecera pequeña.
+- **Más abajo**: texto largo, en formato de artículo ("¿Cómo diferencio el acoso laboral de una disputa laboral?", "Presentar a la empresa un problema de acoso laboral"), con el menú completo arriba, que invita a irse a otras páginas.
+- **Lo que cuesta**: según Semrush, un clic en "abogado acoso laboral madrid" sale entre 1,80 y 2,64 €. Cada persona que llega ahí ha pagado ese clic para encontrar un abogado, y se encuentra con algo pensado para **leer**, no para **contar su caso**.
+
+No es un fallo de nadie: es una cuestión de diseño. **Una página de blog informa; una página de anuncio tiene que ayudar a decidir.** Quien busca un abogado por acoso suele estar mal, con miedo y con prisa. Necesita entender en cinco segundos que está en el sitio correcto y poder llamar o escribir sin buscar. Y con una ilustración de dibujos y un muro de texto, no lo siente.
+
+**Lo que hemos construido en su lugar**, como ejemplo de lo que puede ser una landing de verdad. Más abajo tienes los enlaces para abrirlas; mejor en el móvil, que es de donde llegan casi todos los clics.
+
+La de acoso laboral es la más trabajada. Está pensada en este orden, el de la persona que llega:
+
+1. **Una frase que la reconoce**: "¿Te están haciendo la vida imposible en el trabajo?", y debajo, el formulario de tres datos, llamar y WhatsApp, siempre a la vista.
+2. **Tus pruebas, en tres cifras**: la condena de 2005, los 122.963 € de la catedrática de la URJC y tu presencia en Comillas y Onda Cero.
+3. **"Si te suena algo de esto, no estás exagerando"**: siete frases que dice quien sufre acoso ("entro en una sala y se hace el silencio", "a veces pienso que la culpa es mía"). Es el punto de dolor, dicho con respeto. Termina con "no es culpa tuya" y la confidencialidad.
+4. **"¿En qué situación estás?"**: cinco casos con su siguiente paso, para que cada persona se vea reflejada.
+5. **El test de acoso dentro de la página**: se queda, entiende su caso y confía antes de llamar.
+6. **"Antes de hacer nada, evita estos cuatro errores"**: dimitir, firmar sin leer, perder las pruebas y contarlo a todo el mundo. Es útil, demuestra que sabes y reduce el riesgo de que alguien se haga daño antes de llamarte.
+7. **"Qué te llevas de la primera consulta"**: lo que se lleva a casa, con el precio claro. Quita el miedo a "¿y qué me van a decir?".
+8. **Tú y tu historia, preguntas frecuentes y, otra vez, el formulario**. En el móvil, una barra fija abajo con Llamar, WhatsApp y "Te llamamos", siempre al alcance del pulgar.
+
+**Todas las landings que hagan falta van incluidas en la cuota**: una por cada campaña, por cada tema o por cada barrio. No se cobran aparte ni por unidad. Las que ves son el principio, y la idea es que cada anuncio que pongas tenga su propia página, con el titular exacto de lo que la persona ha buscado. Y se prueban, como explicamos al final de este apartado.
+
+### Lo que encontramos al pinchar en el anuncio de marca
+
 Hemos pinchado en tu propio anuncio. Quien busca "Jesús Tierno Centella" y pulsa en "Tierno Centella Abogados - Abogados Laborales en Madrid" llega a la página de **acoso laboral** de la web actual, aunque viniera por un despido o una incapacidad. Y esa página tiene problemas que cuestan dinero en cada clic:
 
 | En la página actual del anuncio | Por qué resta |
@@ -1339,7 +1366,7 @@ Un abrazo,
 
 ## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
 
-Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota fija, la misma para cualquier empresa, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. **Una sola cuota fija, la misma para cualquier empresa y sin comisiones** sobre lo que inviertas en anuncios. El compromiso mínimo es de **6 meses**, porque la web te la regalamos: en ese tiempo ya tienes web, CRM, calculadoras y mucho más, que por separado valdría muchísimo más. Después, te quedas porque quieres, y si te vas, te lo llevas todo a tu nombre. Si un día nos pides rediseñar el logo, una página nueva, una calculadora o una campaña distinta, entra en la cuota.
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota fija, la misma para cualquier empresa, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. **Una sola cuota fija, la misma para cualquier empresa y sin comisiones** sobre lo que inviertas en anuncios. El compromiso mínimo es de **6 meses**, porque la web te la regalamos: en ese tiempo ya tienes web, CRM, calculadoras y mucho más, que por separado valdría muchísimo más. Después, te quedas porque quieres, y si te vas, te lo llevas todo a tu nombre. Si un día nos pides rediseñar el logo, una página nueva, una calculadora, **todas las landings de anuncios que hagan falta** o una campaña distinta, entra en la cuota.
 
 Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
 
