@@ -54,11 +54,12 @@ export default function Resumen() {
 
       <header className="rs2-cab">
         <h1>Tu guía en una sola página</h1>
-        <p>
-          Jesús, aquí tienes todo en un vistazo: <strong>qué le pasa hoy a tu despacho en internet, qué cambia con nosotros y qué necesitamos de ti</strong>. Tienes
-          lo más difícil de conseguir: la primera condena en España a empresa y acosador (2005), 44 reseñas de cinco estrellas y años de experiencia. Lo que falla
-          tiene arreglo, y parte ya está arreglado.
-        </p>
+        <a className="rs2-web" href="https://tierno-centella-web.vercel.app/">
+          <span className="rs2-web-et">Lo primero: tu web nueva</span>
+          <span className="rs2-web-url">tierno-centella-web.vercel.app</span>
+          <span className="rs2-web-boton">Ver mi web</span>
+        </a>
+        <p>Ábrela en el móvil y pregúntale algo al chat, como si fueras un cliente. Debajo, en un vistazo: dónde se pierden hoy tus clientes y qué cambia.</p>
         <ul className="rs2-cuenta">
           {(['hecho', 'preparado', 'marcha', 'tu'] as Estado[]).map((e) => (
             <li key={e} className={`rs2-estado rs2-${e}`}>
@@ -82,8 +83,8 @@ export default function Resumen() {
         </div>
       </section>
 
-      <section aria-labelledby="rs2-14">
-        <h2 id="rs2-14">Los {DOLORES.length} puntos, uno por uno</h2>
+      <details className="rs2-mas">
+        <summary>Ver los {DOLORES.length} puntos, uno por uno</summary>
         <div className="rs2-lista">
           {DOLORES.map((d, i) => {
             const e = ESTADO[i];
@@ -105,9 +106,9 @@ export default function Resumen() {
             );
           })}
         </div>
-      </section>
+      </details>
 
-      <section aria-labelledby="rs2-cobro" className="rs2-nota">
+      <section aria-labelledby="rs2-cobro" className="rs2-nota" hidden>
         <h2 id="rs2-cobro">Y una cosa más: el cobro de la reserva</h2>
         <p>
           La reserva nueva ya recoge día, modalidad y motivo, y te avisa. Para que además <strong>cobre</strong> (PayPal, tarjeta o Bizum) hay que configurarlo, y no
@@ -119,10 +120,8 @@ export default function Resumen() {
       <section aria-labelledby="rs2-nec">
         <h2 id="rs2-nec">Lo que necesitamos de ti</h2>
         <ol className="rs2-nec">
-          <li>Que revises los textos, sobre todo los casos y las guías.</li>
-          <li>Que contestes las preguntas cortas del apartado 24.</li>
-          <li>Los accesos del apartado 23, si te convence: para medir y para responder reseñas.</li>
-          <li>Qué tienes hoy para cobrar (PayPal u otro).</li>
+          <li>Que veas la web y nos digas qué te parece.</li>
+          <li>Si te convence: que revises los textos y nos des los accesos (Google, ficha, anuncios).</li>
           <li>Tu tiempo: unas 3 o 4 horas en dos semanas y, después, unos 30 minutos a la semana.</li>
         </ol>
         <p className="rs2-cierre">Nada de esto es grave y todo tiene arreglo. Todo queda a tu nombre, y tú puedes marcharte cuando quieras sin pedirnos nada.</p>

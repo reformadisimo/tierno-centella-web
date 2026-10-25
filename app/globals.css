@@ -8186,3 +8186,16 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
 .mm-donde-botones{display:flex;flex-wrap:wrap;gap:8px}
 .mm-donde-botones a{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;font-weight:800;font-size:.9rem;text-decoration:none;border:2px solid #d9694d;color:#a8442c;background:#fff}
 .mm-donde-botones a:first-child{background:#d9694d;color:#fff}
+
+/* Resumen de la guía: la web lo primero, y lo largo plegado */
+.rs2-web{display:grid;gap:4px;margin:14px 0 12px;padding:20px 22px;border-radius:20px;background:#0d2c48;color:#fff;text-decoration:none;box-shadow:0 14px 34px rgba(13,44,72,.25)}
+.rs2-web-et{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f2c14e}
+.rs2-web-url{font-size:clamp(1.15rem,3.6vw,1.5rem);font-weight:800;word-break:break-word}
+.rs2-web-boton{justify-self:start;margin-top:10px;background:#f2c14e;color:#0d2c48;font-weight:800;padding:10px 20px;border-radius:999px}
+.rs2-web:hover .rs2-web-boton{filter:brightness(1.05)}
+.rs2-mas{margin:28px 0;border:1px solid var(--linea);border-radius:16px;background:#fff}
+.rs2-mas>summary{cursor:pointer;padding:16px 18px;font-weight:800;color:var(--tinta);list-style:none}
+.rs2-mas>summary::-webkit-details-marker{display:none}
+.rs2-mas>summary::after{content:'+';float:right;font-size:1.3rem;line-height:1;color:#d9694d}
+.rs2-mas[open]>summary::after{content:'−'}
+.rs2-mas .rs2-lista{padding:0 14px 14px}

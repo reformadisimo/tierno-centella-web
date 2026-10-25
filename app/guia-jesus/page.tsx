@@ -186,10 +186,10 @@ export default function Pagina() {
           <img src="/img/logo-tc-blanco.webp" alt="Tierno Centella Abogados" width={260} height={62} />
           <a className="gj-ver-web" href="/" target="_blank" rel="noopener">
             <span>
-              <strong>Si quieres ver la web ya, aquí la tienes.</strong>
-              <small>Todo lo que cuenta esta guía está hecho y puedes probarlo ahora: el chat con micrófono, los tests y las calculadoras.</small>
+              <strong>Lo primero: tu web nueva, tierno-centella-web.vercel.app</strong>
+              <small>Ábrela en el móvil y pregúntale algo al chat, como si fueras un cliente. Todo lo que cuenta esta guía está hecho y puedes probarlo ya.</small>
             </span>
-            <span className="boton boton-marcador">Abrir la web nueva</span>
+            <span className="boton boton-marcador">Ver mi web</span>
           </a>
           <h1>Jesús, esta es tu web nueva. Te la contamos sin prisas.</h1>
           <p className="gj-portada-gancho">
