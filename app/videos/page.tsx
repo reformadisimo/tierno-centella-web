@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
@@ -14,12 +15,13 @@ export const metadata: Metadata = meta({
 export default function Videos() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-videos">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Vídeos
             </nav>
+            <Etiqueta icono="video" tono="oro">Vídeos</Etiqueta>
             <h1>Vídeos</h1>
             <p className="entradilla">Jesús Tierno explica en vídeo lo que más preguntan quienes sufren acoso o un despido.</p>
           </div>

@@ -1,5 +1,6 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import Link from 'next/link';
-import { Miniatura } from '@/components/PaginaGuia';
+import IconoGuia from '@/components/IconoGuia';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Llamada from '@/components/Llamada';
@@ -15,12 +16,13 @@ export const metadata: Metadata = meta({
 export default function Incapacidad() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-incapacidad">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Incapacidad permanente
             </nav>
+            <Etiqueta icono="sillaRuedas" tono="oro">Incapacidad permanente</Etiqueta>
             <h1>Te han denegado la incapacidad. Se puede recurrir.</h1>
             <p className="entradilla">
               Muchas incapacidades que la Seguridad Social deniega se acaban reconociendo en el juzgado. Revisamos tu expediente y te
@@ -103,7 +105,7 @@ export default function Incapacidad() {
             <img src="/img/medico-informe-640.webp" srcSet="/img/medico-informe-640.webp 640w, /img/medico-informe.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Un médico rellena un informe" width={1200} height={800} loading="lazy" decoding="async" />
           </figure>
           <h2>Cómo trabajamos un caso de incapacidad</h2>
-          <ol>
+          <ol className="pasos-numerados">
             <li>Estudiamos la resolución del INSS y tus informes médicos.</li>
             <li>Te decimos qué grado es realista pedir y qué informes faltan.</li>
             <li>Presentamos la reclamación previa dentro de plazo.</li>
@@ -116,10 +118,10 @@ export default function Incapacidad() {
       <section className="seccion seccion-blanca">
         <div className="contenedor">
           <h2>Guías para tu caso</h2>
-          <div className="rejilla-guias con-miniatura">
+          <div className="rejilla-guias con-icono">
             {leerColeccion('incapacidad').map((g) => (
               <Link key={g.slug} href={`/incapacidad-permanente/${g.slug}`}>
-                <Miniatura pieza={g} />
+                <IconoGuia pieza={g} tono="morado" />
                 <div><strong>{g.titulo}</strong>
                 <span>{g.descripcion}</span></div>
               </Link>
@@ -128,7 +130,7 @@ export default function Incapacidad() {
               .filter((g) => g.categoria === 'incapacidad')
               .map((g) => (
                 <Link key={g.slug} href={`/blog/${g.slug}`}>
-                  <Miniatura pieza={g} />
+                  <IconoGuia pieza={g} tono="morado" />
                   <div><strong>{g.titulo}</strong>
                   <span>{g.descripcion}</span></div>
                 </Link>

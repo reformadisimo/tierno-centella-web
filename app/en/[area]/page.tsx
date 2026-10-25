@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Miniatura } from '@/components/PaginaGuia';
+import IconoGuia from '@/components/IconoGuia';
 import { notFound } from 'next/navigation';
 import { meta } from '@/lib/seo';
 import { leerColeccion } from '@/lib/contenido';
@@ -81,10 +81,10 @@ export default async function Area({ params }: { params: Promise<{ area: string 
           <h2>Guides in English</h2>
           <p>Written for people going through it, with the firm&apos;s experience of over 25 years.</p>
           {guias.length ? (
-            <div className="rejilla-guias con-miniatura">
+            <div className="rejilla-guias con-icono">
               {guias.map((g) => (
                 <Link key={g.slug} href={`/en/${a.slug}/${g.slug}`}>
-                  <Miniatura pieza={g} />
+                  <IconoGuia pieza={g} tono="coral" />
                   <div><strong>{g.titulo}</strong>
                   <span>{g.descripcion}</span></div>
                 </Link>

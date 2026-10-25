@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
@@ -13,12 +14,13 @@ export const metadata: Metadata = meta({
 export default function Jesus() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-jesus">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Jesús Tierno
             </nav>
+            <Etiqueta icono="premio" tono="oro">El despacho</Etiqueta>
             <h1>Jesús Tierno Centella</h1>
             <p className="entradilla">
               Abogado laboralista y socio director del despacho. Lleva más de 25 años defendiendo a trabajadores, y la mayor parte de ellos

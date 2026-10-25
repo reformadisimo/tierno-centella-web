@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import { leerColeccion } from '@/lib/contenido';
@@ -14,8 +15,9 @@ export default function Blog() {
   const piezas = leerColeccion('blog').sort((a, b) => b.fecha.localeCompare(a.fecha));
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-blog">
         <div className="contenedor">
+          <Etiqueta icono="documento" tono="oro">Blog</Etiqueta>
           <h1>Blog</h1>
           <p className="entradilla">Lo que cambia en la ley laboral y cómo te afecta, explicado sin jerga.</p>
         </div>

@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { meta, esquemaMigas, REDES } from '@/lib/seo';
@@ -18,12 +19,13 @@ export default function RedesYMedios() {
   return (
     <>
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/redes-y-medios', texto: 'Redes y medios' }])} />
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-videos">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Redes y medios
             </nav>
+            <Etiqueta icono="micro" tono="oro">Redes y medios</Etiqueta>
             <h1>Lo que contamos fuera del despacho.</h1>
             <p className="entradilla">
               Vídeos de un minuto para entender tus derechos, la radio, las jornadas y las conversaciones con especialistas. Todo con el mismo

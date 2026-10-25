@@ -1,8 +1,9 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
-import { Miniatura } from '@/components/PaginaGuia';
+import IconoGuia from '@/components/IconoGuia';
 import Llamada from '@/components/Llamada';
 import LateralHub from '@/components/LateralHub';
 import { leerColeccion } from '@/lib/contenido';
@@ -17,9 +18,10 @@ export const metadata: Metadata = meta({
 export default function Despido() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-despido">
         <div className="contenedor cabeza-con-foto">
           <div>
+            <Etiqueta icono="caja" tono="oro">Despido</Etiqueta>
             <h1>Te han despedido. Esto es lo que tienes que saber.</h1>
             <p className="entradilla">
               La empresa puede despedirte, pero tiene que justificarlo y cumplir unos requisitos. Si no lo hace, el despido es
@@ -112,7 +114,7 @@ export default function Despido() {
           </ul>
 
           <h2>Qué hacer hoy</h2>
-          <ol>
+          <ol className="pasos-numerados">
             <li>Firma la carta como “recibido, no conforme”. Firmar no significa aceptar el despido.</li>
             <li>Guarda la carta, tus últimas nóminas y el contrato.</li>
             <li>No firmes el finiquito como conforme sin que lo revise un abogado.</li>
@@ -125,10 +127,10 @@ export default function Despido() {
       <section className="seccion seccion-blanca">
         <div className="contenedor">
           <h2>Guías para tu caso</h2>
-          <div className="rejilla-guias con-miniatura">
+          <div className="rejilla-guias con-icono">
             {leerColeccion('despido').map((g) => (
               <Link key={g.slug} href={`/despido/${g.slug}`}>
-                <Miniatura pieza={g} />
+                <IconoGuia pieza={g} tono="azul" />
                 <div><strong>{g.titulo}</strong>
                 <span>{g.descripcion}</span></div>
               </Link>
@@ -137,7 +139,7 @@ export default function Despido() {
               .filter((g) => g.categoria === 'despido')
               .map((g) => (
                 <Link key={g.slug} href={`/blog/${g.slug}`}>
-                  <Miniatura pieza={g} />
+                  <IconoGuia pieza={g} tono="azul" />
                   <div><strong>{g.titulo}</strong>
                   <span>{g.descripcion}</span></div>
                 </Link>

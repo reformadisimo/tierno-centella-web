@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
@@ -13,6 +14,22 @@ export const metadata: Metadata = meta({
 
 // Los casos son del despacho que dirige Jesús Tierno: la cara que los acompaña es la suya.
 const FOTOS_JESUS = ['jesus-firmando', 'jesus-retrato', 'jesus-camisa', 'jesus-puerta', 'reunion-cliente'];
+// Cada ficha lleva una foto de su tema; Jesús solo en la primera, para no repetirlo cinco veces seguidas.
+const FOTOS_MATERIA: Record<string, string[]> = {
+  'Acoso laboral': ['mujer-pensativa', 'acoso-ventana', 'hombre-estres', 'jefe-senala'],
+  Despido: ['despido-caja', 'documentos-mesa'],
+  Incapacidad: ['incapacidad-ventana', 'medico-informe'],
+  Conciliación: ['madre-hijo', 'familia-siluetas'],
+  'Prevención de riesgos': ['obrero-grua', 'placa'],
+};
+const usadas: Record<string, number> = {};
+const fotoDeCaso = (materia: string, i: number) => {
+  if (i === 0) return FOTOS_JESUS[1];
+  const lista = FOTOS_MATERIA[materia] || ['mazo'];
+  const n = usadas[materia] || 0;
+  usadas[materia] = n + 1;
+  return lista[n % lista.length];
+};
 
 // Quita los avisos internos del órgano y la fecha: el aviso de "pendiente" ya va en su etiqueta (y solo en la demo).
 function lineaOrgano(organo: string, fecha: string) {
@@ -25,11 +42,12 @@ function lineaOrgano(organo: string, fecha: string) {
 export default function Sentencias() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-sentencias">
         <div className="contenedor">
           <nav className="migas" aria-label="Estás en">
             <Link href="/">Inicio</Link> / Sentencias
           </nav>
+          <Etiqueta icono="balanza" tono="oro">Sentencias</Etiqueta>
           <h1>Casos que han abierto camino</h1>
           <p className="entradilla">
             Cada ficha cuenta qué pasó, qué decidió el tribunal y por qué importa a quien hoy está en una situación parecida. Sin nombres de
@@ -40,11 +58,11 @@ export default function Sentencias() {
       <section className="seccion">
         <div className="contenedor fichas">
           {CASOS.map((c, i) => {
-            const foto = FOTOS_JESUS[i % FOTOS_JESUS.length];
+            const foto = fotoDeCaso(c.materia, i);
             return (
               <article className="ficha" key={c.slug} id={c.slug}>
                 <div className="ficha-lado">
-                  <img src={`/img/${foto}-640.webp`} alt="Jesús Tierno Centella, socio director del despacho" width={640} height={480} loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} sizes="(max-width: 700px) 100vw, 300px" />
+                  <img src={`/img/${foto}-640.webp`} alt={i === 0 ? "Jesús Tierno Centella, socio director del despacho" : ""} width={640} height={480} loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} sizes="(max-width: 700px) 100vw, 300px" />
                   <div className="ficha-sello">
                     <span>{c.anio || 'Caso'}</span>
                     <small>{c.materia}</small>

@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
@@ -40,12 +41,13 @@ const SERVICIOS = [
 export default function Empresas() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-empresas">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Empresas
             </nav>
+            <Etiqueta icono="edificio" tono="oro">Empresas y colegios</Etiqueta>
             <h1>Prevenir el acoso cuesta mucho menos que perder un juicio.</h1>
             <p className="entradilla">
               Llevamos décadas viendo el acoso desde el lado de la víctima. Por eso sabemos qué falla en las empresas y en los colegios, y

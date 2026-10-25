@@ -7124,3 +7124,71 @@ body{padding-bottom:58px}
 .tf-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px;font-size:.78rem!important;color:var(--tinta-suave)!important}
 .tf-meta small{display:inline-flex;align-items:center;gap:4px;font-size:.78rem}
 .tf-chip{font-style:normal;font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:.68rem;background:var(--marcador-suave);color:#6b4e00;border-radius:999px;padding:3px 8px}
+
+/* ===== Interiores: cabeceras con tinte suave y una forma decorativa ===== */
+.cabeza-pagina{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--blanco) 0%,var(--cp-tinte,#f6f1ea) 100%)}
+.cabeza-pagina::before{content:'';position:absolute;width:420px;height:420px;border-radius:50%;right:-140px;top:-180px;background:var(--cp-forma,rgba(212,175,90,.14));pointer-events:none}
+.cabeza-pagina::after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;left:-70px;bottom:-90px;background:var(--cp-forma2,rgba(217,105,77,.08));pointer-events:none}
+.cabeza-pagina>.contenedor{position:relative;z-index:1}
+.cabeza-acoso{--cp-tinte:#fbeee9;--cp-forma:rgba(217,105,77,.14);--cp-forma2:rgba(212,175,90,.12)}
+.cabeza-despido{--cp-tinte:#e9f1fb;--cp-forma:rgba(27,111,209,.12);--cp-forma2:rgba(212,175,90,.12)}
+.cabeza-incapacidad{--cp-tinte:#f1ebf9;--cp-forma:rgba(122,79,179,.13);--cp-forma2:rgba(212,175,90,.12)}
+.cabeza-mujer{--cp-tinte:#fbe9ef;--cp-forma:rgba(194,71,122,.14);--cp-forma2:rgba(212,175,90,.14)}
+.cabeza-empresas{--cp-tinte:#e8f4ec;--cp-forma:rgba(23,96,47,.12)}
+.cabeza-sentencias,.cabeza-jesus{--cp-tinte:#f6efe2;--cp-forma:rgba(212,175,90,.18)}
+.cabeza-contacto{--cp-tinte:#e9f1fb;--cp-forma:rgba(31,157,85,.12);--cp-forma2:rgba(27,111,209,.08)}
+.cabeza-herramientas{--cp-tinte:#fdf5e1;--cp-forma:rgba(242,193,78,.2)}
+.cabeza-videos,.cabeza-blog{--cp-tinte:#f3f0fa;--cp-forma:rgba(122,79,179,.1)}
+.cabeza-con-foto img.foto,.cabeza-con-foto .foto{border-radius:20px;box-shadow:0 18px 40px rgba(13,44,72,.14)}
+.cabeza-con-foto>div:last-child{position:relative}
+.cabeza-con-foto>div:last-child::before{content:'';position:absolute;inset:14px -14px -14px 14px;border-radius:22px;border:2px solid rgba(212,175,90,.45);pointer-events:none}
+@media (max-width:899px){.cabeza-con-foto>div:last-child::before{display:none}.cabeza-pagina::before{width:260px;height:260px;right:-120px;top:-140px}}
+@media print{.cabeza-pagina::before,.cabeza-pagina::after{display:none}}
+
+/* Listas de guías con icono (sustituyen a las miniaturas repetidas) */
+.rejilla-guias.con-icono a{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:start}
+.icono-guia{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.rejilla-guias a:hover .icono-guia{transform:scale(1.06)}
+.ig-coral{background:#fdf0ed;color:#a8442c}
+.ig-azul{background:#e8f1fc;color:#1b6fd1}
+.ig-morado{background:#f3edfa;color:#7a4fb3}
+.ig-rosa{background:#fbe9ef;color:#c2477a}
+.ig-verde{background:#e6f4ea;color:#17602f}
+
+/* Pasos numerados con círculo */
+.pasos-numerados{list-style:none;margin:16px 0 0;padding:0;counter-reset:paso;display:grid;gap:12px}
+.pasos-numerados li{counter-increment:paso;position:relative;padding:12px 14px 12px 60px;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;line-height:1.5}
+.pasos-numerados li::before{content:counter(paso);position:absolute;left:12px;top:10px;width:36px;height:36px;border-radius:50%;background:var(--tinta);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.pasos-numerados li:not(:last-child)::after{content:'';position:absolute;left:29px;top:50px;bottom:-14px;width:2px;background:var(--linea)}
+.cabeza-acoso ~ * .pasos-numerados li::before,.pasos-acoso li::before{background:var(--coral-texto)}
+
+/* Hitos: tarjetas con rayita dorada */
+.hitos li{border-left:0;padding:16px 18px 16px 18px;background:var(--blanco);border:1px solid var(--linea);border-top:4px solid var(--coral);border-radius:14px;box-shadow:0 4px 14px rgba(13,44,72,.05)}
+
+/* Contacto: tres formas de hablar, precios e incluye */
+.formas-seccion{padding-top:28px!important;padding-bottom:28px!important}
+.formas-contacto{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.formas-contacto a{display:flex;flex-direction:column;gap:4px;height:100%;box-sizing:border-box;background:var(--blanco);border:1px solid var(--linea);border-radius:18px;padding:20px;text-decoration:none;color:var(--tinta);transition:transform .15s,box-shadow .15s}
+.formas-contacto a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(13,44,72,.12)}
+.fc-icono{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:6px;color:#fff}
+.fc-tel .fc-icono{background:var(--tinta)}
+.fc-wa .fc-icono{background:#25d366}
+.fc-cita .fc-icono{background:var(--marcador);color:var(--tinta)}
+.formas-contacto strong{font-size:1.1rem}
+.formas-contacto span:not(.fc-icono){font-weight:700;color:var(--tinta-media)}
+.formas-contacto small{color:var(--tinta-suave);font-size:.88rem;line-height:1.45}
+@media (max-width:860px){.formas-contacto{grid-template-columns:1fr}}
+.boton-wa{background:#25d366;border-color:#25d366;color:#fff}
+.boton-wa:hover{background:#1ebe5b}
+.precios-cita{list-style:none;margin:16px 0;padding:0;display:grid;gap:10px}
+.precios-cita li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:12px 14px}
+.pc-icono{width:44px;height:44px;border-radius:12px;background:var(--marcador-suave);color:#6b4e00;display:flex;align-items:center;justify-content:center}
+.pc-texto{display:flex;flex-direction:column}
+.pc-texto small{color:var(--tinta-suave);font-size:.84rem}
+.precios-cita strong{font-size:1.15rem}
+.incluye-cita{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:7px}
+.incluye-cita li{display:flex;align-items:center;gap:8px;font-size:.95rem;color:var(--tinta-media)}
+.incluye-cita svg{color:#1f9d55;flex:none}
+.donde-lista{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.donde-lista li{display:flex;align-items:center;gap:12px}
+.donde-lista svg{flex:none;color:#b8902e}

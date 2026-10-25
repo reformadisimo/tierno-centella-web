@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { HERRAMIENTAS } from '@/lib/herramientas';
 import FotoCabeza from '@/components/FotoCabeza';
@@ -16,9 +17,10 @@ export const metadata: Metadata = meta({
 export default function Herramientas() {
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-herramientas">
         <div className="contenedor cabeza-con-foto">
           <div>
+            <Etiqueta icono="calculadora" tono="oro">Herramientas</Etiqueta>
             <h1>Herramientas gratuitas</h1>
             <p className="entradilla">Respuestas al momento, sin dejar tu teléfono. Cuando quieras, un abogado revisa el resultado contigo.</p>
           </div>

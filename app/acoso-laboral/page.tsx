@@ -1,7 +1,8 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
-import { Miniatura } from '@/components/PaginaGuia';
+import IconoGuia from '@/components/IconoGuia';
 import Llamada from '@/components/Llamada';
 import VideoYoutube from '@/components/VideoYoutube';
 import { leerColeccion } from '@/lib/contenido';
@@ -18,12 +19,13 @@ export default function Acoso() {
   const casosAcoso = CASOS.filter((c) => c.materia === 'Acoso laboral');
   return (
     <>
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-acoso">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Acoso laboral
             </nav>
+            <Etiqueta icono="personas" tono="oro">Acoso laboral</Etiqueta>
             <h1>Acoso laboral: se puede demostrar y se puede ganar.</h1>
             <p className="entradilla">
               Llevamos más de 25 años centrados en el acoso laboral. En 2005 conseguimos que, por primera vez en España, un juez condenara
@@ -73,10 +75,10 @@ export default function Acoso() {
         <div className="contenedor">
           <h2>Todo lo que necesitas saber</h2>
           <p>Guías escritas para quien lo está viviendo, con la experiencia de más de 25 años del despacho.</p>
-          <div className="rejilla-guias con-miniatura">
+          <div className="rejilla-guias con-icono">
             {guias.map((g) => (
               <Link key={g.slug} href={`/acoso-laboral/${g.slug}`}>
-                <Miniatura pieza={g} />
+                <IconoGuia pieza={g} tono="coral" />
                 <div><strong>{g.titulo}</strong>
                 <span>{g.descripcion}</span></div>
               </Link>
@@ -89,7 +91,7 @@ export default function Acoso() {
         <div className="contenedor dos-columnas">
           <div>
             <h2>Lo que hacemos cuando nos llamas</h2>
-            <ol className="prosa">
+            <ol className="pasos-numerados">
               <li>Te escuchamos y vemos si lo que vives es acoso o un conflicto de otro tipo. Las dos cosas tienen salida, pero distinta.</li>
               <li>Te decimos qué pruebas conviene reunir desde hoy y cómo hacerlo sin ponerte en riesgo.</li>
               <li>Si te afecta a la salud, te orientamos para que la baja se reconozca como accidente de trabajo.</li>

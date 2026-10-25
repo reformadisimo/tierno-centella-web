@@ -1,3 +1,4 @@
+import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { meta, esquemaMigas } from '@/lib/seo';
@@ -19,13 +20,13 @@ export default function MujerYTrabajo() {
   return (
     <>
       <JsonLd datos={esquemaMigas([{ href: '/', texto: 'Inicio' }, { href: '/mujer-y-trabajo', texto: 'Mujer y trabajo' }])} />
-      <header className="cabeza-pagina">
+      <header className="cabeza-pagina cabeza-mujer">
         <div className="contenedor cabeza-con-foto">
           <div>
             <nav className="migas" aria-label="Estás en">
               <Link href="/">Inicio</Link> / Mujer y trabajo
             </nav>
-            <span className="etiqueta-calida">Mujer y trabajo</span>
+            <Etiqueta icono="corazon" tono="rosa">Mujer y trabajo</Etiqueta>
             <h1>Embarazo, conciliación, acoso sexual: tus derechos no se negocian.</h1>
             <p className="entradilla">
               Muchas de las consultas que llegan al despacho tienen que ver con ser madre, con cuidar o con un trato distinto por ser mujer. Aquí tienes
@@ -76,7 +77,7 @@ export default function MujerYTrabajo() {
           <img src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
           <div>
             <h2>Cinco cosas que conviene saber hoy</h2>
-            <ol className="prosa">
+            <ol className="pasos-numerados">
               <li>
                 Si te despiden embarazada, el despido es nulo salvo causa real y ajena, <strong>aunque la empresa no supiera</strong> que lo estabas.
               </li>
