@@ -7709,3 +7709,12 @@ html.a11y-quieto video { display: none !important; }
 .barometro-barras b { text-align: right; }
 @media (max-width: 600px) { .barometro-barras li { grid-template-columns: 1fr 48px; } .barometro-barras .barra { grid-column: 1 / -1; order: 3; } }
 .cq-barometro .boton-enlace { font: inherit; text-decoration: underline; color: inherit; cursor: pointer; background: none; border: 0; padding: 4px 0; }
+
+/* Un pelín de movimiento en el resto de fotos fijas: zoom lento y suave, solo con transform */
+@media (prefers-reduced-motion:no-preference){
+  :where(*:has(> img.foto)):not(.foto-cabeza):not(.prosa-foto):not(.foto-viva){overflow:hidden;border-radius:14px}
+  :where(*:has(> img.foto)):not(.foto-cabeza):not(.prosa-foto):not(.foto-viva) > img.foto{animation:foto-zoom 30s ease-in-out infinite alternate;transform-origin:55% 45%;border-radius:0}
+  .tarjetas-foto img,.galeria img{animation:foto-zoom 32s ease-in-out infinite alternate;transform-origin:50% 45%}
+  .tarjetas-foto a:nth-child(even) img,.galeria figure:nth-child(even) img{animation-name:foto-zoom-b}
+  .tarjetas-foto a:hover img,.galeria figure:hover img{animation-play-state:paused}
+}
