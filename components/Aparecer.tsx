@@ -4,7 +4,7 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-const OBJETIVOS = '.pasando-tarjeta, .herr-tarjetas > li, .tarjetas-foto > a, .hitos > li, .equipo-valores > li, .rejilla-guias > a, .ficha, .tarjeta, .tarjeta-situacion, .paso, .cifra, .rejilla-herramientas > a, .sentencia, .faq-item, .pasos-numerados > li';
+const OBJETIVOS = '.lp-situacion, .equipo-retratos > li, .cifras-oro > li, .rejilla-reels > *, .galeria figure, .lista-enlaces li, .rejilla-guias > a, .pasando-tarjeta, .herr-tarjetas > li, .tarjetas-foto > a, .hitos > li, .equipo-valores > li, .rejilla-guias > a, .ficha, .tarjeta, .tarjeta-situacion, .paso, .cifra, .rejilla-herramientas > a, .sentencia, .faq-item, .pasos-numerados > li';
 
 export default function Aparecer() {
   const ruta = usePathname();

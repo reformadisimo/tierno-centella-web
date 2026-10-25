@@ -7579,3 +7579,26 @@ body{padding-bottom:58px}
   .cookies-caja:not(:has(.cookies-detalle)){max-width:980px;display:flex;align-items:center;gap:24px;padding:14px 22px}
   .cookies-caja:not(:has(.cookies-detalle)) p{margin:0;flex:1}
 }
+
+/* Móvil, segunda pasada: menos altura en la portada (equipo, trayectoria, vídeos, galería) */
+@media (max-width:760px){
+  .cifras-oro,.equipo-valores,.rejilla-reels,.equipo-retratos{
+    display:flex !important;flex-wrap:nowrap;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin-inline:calc(var(--margen) * -1);padding:4px var(--margen) 12px;scroll-padding-inline:var(--margen);scrollbar-width:none;list-style:none
+  }
+  .cifras-oro::-webkit-scrollbar,.equipo-valores::-webkit-scrollbar,.rejilla-reels::-webkit-scrollbar,.equipo-retratos::-webkit-scrollbar{display:none}
+  .cifras-oro>li,.equipo-valores>li{flex:0 0 78%;scroll-snap-align:start}
+  .rejilla-reels>*{flex:0 0 78%;scroll-snap-align:start;min-width:0}
+  .equipo-retratos>li{flex:0 0 108px;scroll-snap-align:start}
+  .galeria-mini{display:none !important}
+  .bloque-foto img{max-height:230px;width:100%;object-fit:cover;border-radius:18px}
+  .seccion{padding:34px 0}
+  .equipo-grupo figcaption{font-size:.85rem}
+}
+
+/* Móvil: la foto o clip de cabecera es una franja, no una pantalla entera; así el test o el contenido se ve antes */
+@media (max-width:760px){
+  .foto-cabeza{max-height:190px;overflow:hidden}
+  .foto-cabeza .foto-video,.foto-cabeza img.foto{height:190px}
+  .foto-cabeza img.foto{width:100%;object-fit:cover}
+}
