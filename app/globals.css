@@ -7352,3 +7352,33 @@ body{padding-bottom:58px}
 .rs .escala label{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:9px 15px;font-weight:600}
 .rs .escala label:has(input:checked){background:#d9694d;border-color:#d9694d;color:#fff}
 .rs-hecho .boton{margin-top:6px}
+
+/* Movimiento suave en las fotos grandes (zoom lento, solo transform: no pesa ni mueve nada) */
+.foto-cabeza,.prosa-foto{overflow:hidden;border-radius:20px}
+.foto-cabeza img,.prosa-foto img{border-radius:0}
+@media (prefers-reduced-motion:no-preference){
+  .foto-cabeza img,.prosa-foto img{animation:foto-zoom 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+  .prosa-foto:nth-of-type(even) img{animation-name:foto-zoom-b;transform-origin:35% 50%}
+}
+@keyframes foto-zoom{from{transform:scale(1)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
+@keyframes foto-zoom-b{from{transform:scale(1.1) translate(1.2%,0)}to{transform:scale(1)}}
+
+/* Banda de llamada a la acción con cara amable */
+.llamada-seccion{padding-block:48px}
+.llamada-banda{display:flex;gap:28px;align-items:center;background:linear-gradient(120deg,#0d2c48,#17456b);color:#fff;border-radius:28px;padding:clamp(22px,4vw,40px);position:relative;overflow:hidden;box-shadow:0 22px 50px rgba(13,44,72,.25)}
+.llamada-banda::after{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(242,193,78,.18)}
+.llamada-avatar{flex:none;width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #f2c14e;box-shadow:0 10px 24px rgba(0,0,0,.3);position:relative;z-index:1}
+.llamada-texto{position:relative;z-index:1}
+.llamada-texto h2{color:#fff;margin:0 0 8px}
+.llamada-texto h2::after{display:none}
+.llamada-texto p{color:#dce8f3;margin:0 0 16px;max-width:60ch}
+.llamada-texto .boton{border-radius:999px}
+.llamada-texto .boton-claro{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+@media (max-width:700px){.llamada-banda{flex-direction:column;align-items:flex-start}.llamada-avatar{width:84px;height:84px}}
+
+/* Sentencias: el año como pastilla */
+.hito-anio{display:inline-block;background:#f2c14e;color:#0d2c48;font-weight:800;border-radius:999px;padding:3px 12px;margin-right:10px;font-size:.9em;vertical-align:1px}
+
+/* Toque más amable: botones en píldora y un velo rosado suave en las secciones azules */
+.boton{border-radius:999px}
+.seccion-cielo{background:linear-gradient(180deg,#e8f1f8 0,#f6eef4 100%)}

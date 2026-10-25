@@ -140,9 +140,7 @@ export default function Inicio() {
           <ul className="hitos">
             {hitos.map((c) => (
               <li key={c.slug}>
-                <strong>
-                  {c.anio}. {c.titulo}
-                </strong>
+                <strong><span className="hito-anio">{c.anio}</span>{c.titulo}</strong>
                 <span>{c.resumen}</span>
               </li>
             ))}
