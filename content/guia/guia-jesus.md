@@ -42,7 +42,7 @@ Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada d
 | Sección para trabajadoras: embarazo, conciliación, acoso sexual | No | **Sí** |
 | Direcciones antiguas del blog redirigidas | | **Las 220**, una a una |
 | Páginas para los anuncios de Google | Una página de acoso para todo, con "consulta gratuita" | **3 landings** hechas para convertir: [incapacidad](/consulta/incapacidad-permanente), [acoso](/consulta/acoso-laboral) y [despido](/consulta/despido) (apartado 18 ter) |
-| Para quien busca ayuda | Un buscador de guías | **"Mi caso es..."** (busca su situación y va directo a la guía), recorridos paso a paso del despido, el acoso y la incapacidad, y **dónde ir en Madrid** con Google Maps |
+| Para quien busca ayuda | Un buscador de guías | **"Mi caso es..."** (busca su situación y va directo a la guía), recorridos paso a paso del despido, el acoso y la incapacidad, **dónde ir en Madrid** con Google Maps y una tabla de **plazos para reclamar** (despido, dinero que te deben, accidente, incapacidad), con los festivos de Madrid |
 | Cartas y ofertas | No | **"Genera tu carta"** y **"¿Es buena la oferta?"**, un aviso al instante cuando alguien deja su teléfono en el chat y ajustes de lectura para quien ve con dificultad |
 | Medición | Analytics instalado | **Preparada para contar** cada llamada, WhatsApp, formulario y chat, con mapas de calor y grabaciones en cuanto des el visto bueno (apartado 19) |
 
@@ -982,6 +982,8 @@ Ataca de raíz la queja de algunas reseñas ("después se desentienden") y aprov
 - **Sindicatos y colegios profesionales**: AMYTS, SAE, SIETeSS ya te han invitado. Jornadas, formaciones y guías para sus afiliados.
 - **Recursos humanos y empresas**: protocolos, investigación de denuncias y formación de mandos, por LinkedIn.
 - **Otros despachos** que no llevan acoso y te derivan casos.
+
+**Y si un día quieres ir a por otro tipo de cliente** (colegios, empresas, un sindicato concreto), se puede hacer siempre **una web o una landing hecha a medida para ese público**, con su campaña propia. Sería cuestión de hablar de qué clientes quieres y montarlo, sin tocar nada de lo que ya funciona.
 
 ## 18 bis. Tus anuncios en Google hoy (lo que hemos visto desde fuera)
 
