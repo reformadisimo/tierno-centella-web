@@ -29,7 +29,12 @@ export default function Cabecera() {
   const [abierto, setAbierto] = useState(false);
   const cabecera = useRef<HTMLElement>(null);
 
-  useEffect(() => setAbierto(false), [ruta]);
+  useEffect(() => {
+    setAbierto(false);
+    // Al navegar desde el menú, se quita el foco del enlace pulsado para que su desplegable no se quede abierto.
+    const activo = document.activeElement as HTMLElement | null;
+    if (activo && activo.closest('.menu')) activo.blur();
+  }, [ruta]);
   useEffect(() => {
     document.body.style.overflow = abierto ? 'hidden' : '';
     // El menú empieza justo debajo de la cabecera, esté donde esté (con o sin la franja de demo encima).

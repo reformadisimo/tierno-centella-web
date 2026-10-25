@@ -8052,3 +8052,10 @@ html.a11y-quieto video { display: none !important; }
   .con-euro { animation: euro-entra .5s cubic-bezier(.2,.7,.2,1); }
 }
 @keyframes euro-entra { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+
+/* Menú: tras hacer clic con el ratón, el desplegable no se queda abierto tapando a los demás.
+   Con teclado (foco visible) sigue abriéndose al tabular. */
+@media (min-width: 900px) {
+  .menu-grupo:focus-within:not(:hover):not(:has(:focus-visible)) .menu-desplegable { visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+}
+
