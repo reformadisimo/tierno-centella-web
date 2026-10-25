@@ -96,7 +96,7 @@ export default function Pie() {
             : 'La información de esta web es orientativa y no sustituye el consejo de un abogado sobre tu caso concreto.'}
         </p>
         {lineaColegiado() && (
-          <p className="pie-legal">{en && lineaColegiado().startsWith('Colegio y número') ? 'Bar association and membership number: pending confirmation with the firm' : lineaColegiado()}</p>
+          <p className="pie-legal">{en ? `Member of the Madrid Bar Association (ICAM), no. ${DESPACHO.colegiadoNumero} (pending confirmation with the firm)` : lineaColegiado()}</p>
         )}
       </div>
     </footer>

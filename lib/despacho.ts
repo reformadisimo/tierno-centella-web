@@ -20,11 +20,14 @@ export const DESPACHO = {
   iva: ' + IVA',
   // El Código Deontológico (art. 21) obliga a identificar en internet el colegio y el número de colegiado.
   // Pendiente de que nos lo confirme el despacho, p. ej. 'Colegiado en el ICAM, n.º 00.000'.
-  colegiado: '',
+  colegiado: 'Colegiado en el Ilustre Colegio de Abogados de Madrid, n.º 64865',
+  // Número tomado de una ficha de un directorio externo (buscar-abogados.com). No es oficial hasta que Jesús lo confirme.
+  colegiadoNumero: '64865',
 };
 
+export const COLEGIADO_CONFIRMADO = false;
 export const lineaColegiado = () =>
-  DESPACHO.colegiado || (DEMO ? 'Colegio y número de colegiado: pendiente de confirmar con el despacho' : '');
+  DESPACHO.colegiado ? DESPACHO.colegiado + (COLEGIADO_CONFIRMADO ? '' : ' (pendiente de confirmar con el despacho)') : '';
 
 export function enlaceWhatsapp(texto: string) {
   return `https://wa.me/${DESPACHO.whatsappNumero}?text=${encodeURIComponent(texto)}`;

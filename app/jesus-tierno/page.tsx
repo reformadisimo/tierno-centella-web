@@ -61,7 +61,7 @@ export default function Jesus() {
             </p>
             {DEMO && (
               <div className="recuadro">
-                <p>Pendiente de completar con Jesús: número de colegiado, ponencias, apariciones en prensa y casos que se puedan contar.</p>
+                <p>Pendiente de completar con Jesús: ponencias, apariciones en prensa y casos que se puedan contar.</p>
               </div>
             )}
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DESPACHO } from './despacho';
+import { COLEGIADO_CONFIRMADO, DESPACHO } from './despacho';
 import { idiomaDe, rutaEnOtroIdioma } from './idioma';
 
 // Dominio definitivo. Mientras sea demo, robots lo bloquea, pero todo apunta ya a la web oficial.
@@ -109,6 +109,8 @@ export function esquemaDespacho() {
         '@id': ID_JESUS,
         name: 'Jesús Tierno Centella',
         jobTitle: 'Abogado laboralista, socio director',
+        // El número de colegiado entra en los datos de Google solo cuando Jesús lo confirme.
+        ...(COLEGIADO_CONFIRMADO && DESPACHO.colegiadoNumero ? { identifier: { '@type': 'PropertyValue', name: 'Número de colegiado (ICAM)', value: DESPACHO.colegiadoNumero } } : {}),
         worksFor: { '@id': ID_DESPACHO },
         alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidad de Alcalá' },
         image: `${BASE}/img/jesus-retrato.webp`,
