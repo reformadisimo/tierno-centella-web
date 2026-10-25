@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { anotarVisita, recorrido, temaActual, VENTANAS, VENTANAS_EN, type Tema, type Ventana } from '@/lib/contexto';
 import { enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
+import Icono from './Iconos';
 
 // Tarjeta discreta que aparece mientras se lee, adaptada a lo que la persona está buscando según su navegación
 // (despido, acoso, incapacidad, mujer y trabajo, sentencias, empresas...). Sale una sola vez por visita,
@@ -14,6 +15,21 @@ const CLAVE = 'tc-ventana';
 // En las herramientas no sale: la persona ya está haciendo justo lo que la ventana le propondría.
 const FUERA = ['/herramientas', '/calculadora-indemnizacion', '/en/tools', '/guia-jesus', '/conversaciones', '/contacto', '/en/contact', '/consulta/', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en/search'];
 const SALIDA_RAPIDA = ['/acoso-laboral', '/mujer-y-trabajo', '/herramientas/test-acoso', '/en/workplace-harassment', '/en/women-at-work'];
+
+// Icono y color de cada tema, para que la tarjeta no sea solo texto.
+const ICONO_TEMA: Record<Tema, string> = { despido: 'caja', acoso: 'personas', incapacidad: 'sillaRuedas', mujer: 'corazon', sentencias: 'balanza', empresas: 'edificio', herramientas: 'calculadora', general: 'sol' };
+const TEMAS_RAPIDOS = [
+  { href: '/despido', icono: 'caja', texto: 'Me han despedido', clase: 'vt-azul' },
+  { href: '/acoso-laboral', icono: 'personas', texto: 'Sufro acoso', clase: 'vt-coral' },
+  { href: '/incapacidad-permanente', icono: 'sillaRuedas', texto: 'Incapacidad o baja', clase: 'vt-morado' },
+  { href: '/mujer-y-trabajo', icono: 'corazon', texto: 'Embarazo o conciliación', clase: 'vt-rosa' },
+];
+const TEMAS_RAPIDOS_EN = [
+  { href: '/en/dismissal', icono: 'caja', texto: 'I was dismissed', clase: 'vt-azul' },
+  { href: '/en/workplace-harassment', icono: 'personas', texto: 'Harassment at work', clase: 'vt-coral' },
+  { href: '/en/permanent-disability', icono: 'sillaRuedas', texto: 'Disability or sick leave', clase: 'vt-morado' },
+  { href: '/en/women-at-work', icono: 'corazon', texto: 'Pregnancy or family', clase: 'vt-rosa' },
+];
 
 function yaSalio() {
   try {
@@ -92,40 +108,57 @@ export default function VentanaContextual() {
   const conSalida = SALIDA_RAPIDA.some((r) => ruta.startsWith(r));
 
   return (
-    <div className={`ventana-contexto${conSalida ? ' ventana-alta' : ''}`} role="dialog" aria-labelledby="ventana-titulo" aria-modal="false">
+    <div className={`ventana-contexto vc-${tema}${conSalida ? ' ventana-alta' : ''}`} role="dialog" aria-labelledby="ventana-titulo" aria-modal="false">
       <button type="button" className="ventana-cerrar" onClick={() => cerrar('cerrar')} aria-label={en ? 'Close' : 'Cerrar'}>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18" />
         </svg>
       </button>
-      <p className="ventana-etiqueta">{v.etiqueta}</p>
-      <p className="ventana-titulo" id="ventana-titulo">
-        {v.titulo}
-      </p>
-      <p className="ventana-texto">{v.texto}</p>
-      <div className="ventana-botones">
-        <Link className="boton boton-marcador" href={v.principal.href} onClick={() => cerrar(v.principal.texto)}>
-          {v.principal.texto}
-        </Link>
-        {v.secundaria && (
-          <Link className="boton boton-claro" href={v.secundaria.href} onClick={() => cerrar(v.secundaria!.texto)}>
-            {v.secundaria.texto}
-          </Link>
-        )}
+      <div className="ventana-cabeza">
+        <img className="ventana-avatar" src="/img/abogada-sonrie-640.webp" alt="" width={56} height={56} loading="lazy" />
+        <span className="ventana-icono"><Icono nombre={ICONO_TEMA[tema]} tam={18} /></span>
+        <div>
+          <p className="ventana-etiqueta">{v.etiqueta}</p>
+          <p className="ventana-titulo" id="ventana-titulo">
+            {v.titulo}
+          </p>
+        </div>
       </div>
+      <p className="ventana-texto">{v.texto}</p>
+      {tema === 'general' ? (
+        <div className="ventana-temas">
+          {(en ? TEMAS_RAPIDOS_EN : TEMAS_RAPIDOS).map((t) => (
+            <Link key={t.href} href={t.href} className={t.clase} onClick={() => cerrar(t.texto)}>
+              <Icono nombre={t.icono} tam={18} />
+              <span>{t.texto}</span>
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div className="ventana-botones">
+          <Link className="boton boton-marcador" href={v.principal.href} onClick={() => cerrar(v.principal.texto)}>
+            <Icono nombre={tema === 'herramientas' || tema === 'sentencias' ? 'telefono' : 'checkCirculo'} tam={17} /> {v.principal.texto}
+          </Link>
+          {v.secundaria && (
+            <Link className="boton boton-claro" href={v.secundaria.href} onClick={() => cerrar(v.secundaria!.texto)}>
+              {v.secundaria.texto}
+            </Link>
+          )}
+        </div>
+      )}
       <div className="ventana-pie">
-        <a href={enlaceWhatsapp(v.whatsapp)} onClick={() => cerrar('whatsapp')}>
-          {en ? 'WhatsApp us' : 'Por WhatsApp'}
+        <a href={enlaceWhatsapp(v.whatsapp)} className="ventana-wa" onClick={() => cerrar('whatsapp')}>
+          <Icono nombre="whatsapp" tam={17} /> {en ? 'WhatsApp us' : 'Por WhatsApp'}
         </a>
         <button
           type="button"
-          className="boton-enlace"
+          className="boton-enlace ventana-chat"
           onClick={() => {
             cerrar('chat');
             window.dispatchEvent(new Event('abrir-asistente'));
           }}
         >
-          {en ? 'Ask the chat' : 'Preguntar al chat'}
+          <Icono nombre="chat" tam={17} /> {en ? 'Ask the chat' : 'Preguntar al chat'}
         </button>
       </div>
     </div>

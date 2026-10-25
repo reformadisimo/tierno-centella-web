@@ -14,6 +14,7 @@ import PlazosWeb from './PlazosWeb';
 import TodoGuia from './TodoGuia';
 import SeguridadGuia from './SeguridadGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import Lupa, { enviarLupa } from './Lupa';
 import CuestionarioGuia from './CuestionarioGuia';
 import AnunciosGuia from './AnunciosGuia';
 import OficiosGuia from './OficiosGuia';
@@ -646,12 +647,19 @@ const esYo = () => {
     return false;
   }
 };
-const avisar = (datos: Record<string, string>) =>
-  esYo()
+const avisar = (datos: Record<string, string>) => {
+  // Cada reacción, duda, respuesta o visita queda también en la lupa (si es Ignacio, marcada como propia).
+  if (datos.tipo !== 'tiempo') {
+    try {
+      enviarLupa({ pantalla: 'guia', evento: { tipo: datos.tipo, seccion: datos.seccion ?? '', texto: [datos.reaccion, datos.texto].filter(Boolean).join(' · ') } });
+    } catch {}
+  }
+  return esYo()
     ? Promise.resolve(true)
     : fetch('/api/respuestas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos), keepalive: true })
-    .then((r) => r.ok)
-    .catch(() => false);
+        .then((r) => r.ok)
+        .catch(() => false);
+};
 
 // Aviso de visita: no avisa si quien abre es Ignacio (?yo=1 una vez en ese navegador) ni más de una vez cada 4 horas.
 function useAvisoVisita() {
@@ -912,6 +920,7 @@ export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: 
   };
   return (
     <div className="guia-jesus">
+      <Lupa pantalla="guia" />
       <AvisoGuia secciones={secciones} />
       <aside className="gj-lateral" id="gj-indice">
         <div className="gj-progreso" aria-label={`Has visto ${hechos} de ${total} apartados`}>

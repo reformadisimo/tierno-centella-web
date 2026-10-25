@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
 import { temaActual, VENTANAS } from '@/lib/contexto';
+import Icono from './Iconos';
 
 // Aviso de salida: cuando alguien se va sin haber hecho nada, le ofrecemos un último paso útil
 // (su tema, una calculadora, el chat, una llamada o los pasos de su caso por correo).
@@ -17,10 +18,10 @@ const DIAS = 7;
 const RUTAS_FUERA = ['/guia-jesus', '/crm', '/contacto', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en', '/conversaciones'];
 
 const TEMAS = [
-  { href: '/despido', texto: 'Me han despedido' },
-  { href: '/acoso-laboral', texto: 'Sufro acoso en el trabajo' },
-  { href: '/incapacidad-permanente', texto: 'Incapacidad o baja larga' },
-  { href: '/mujer-y-trabajo', texto: 'Embarazo o conciliación' },
+  { href: '/despido', texto: 'Me han despedido', icono: 'caja', clase: 'vt-azul' },
+  { href: '/acoso-laboral', texto: 'Sufro acoso en el trabajo', icono: 'personas', clase: 'vt-coral' },
+  { href: '/incapacidad-permanente', texto: 'Incapacidad o baja larga', icono: 'sillaRuedas', clase: 'vt-morado' },
+  { href: '/mujer-y-trabajo', texto: 'Embarazo o conciliación', icono: 'corazon', clase: 'vt-rosa' },
 ];
 
 const CALCULOS = [
@@ -167,8 +168,13 @@ export default function AvisoSalida() {
             <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
-        <p className="etiqueta-calida">{propio ? `Antes de irte · ${propio.etiqueta}` : 'Antes de irte'}</p>
-        <h2 id="salida-titulo">{!enLanding && propio ? propio.titulo : '¿Te ayudamos con tu caso?'}</h2>
+        <div className="salida-cabeza">
+          <img className="salida-avatar" src="/img/abogada-sonrie-640.webp" alt="" width={64} height={64} loading="lazy" />
+          <div>
+            <p className="etiqueta-calida">{propio ? `Antes de irte · ${propio.etiqueta}` : 'Antes de irte'}</p>
+            <h2 id="salida-titulo">{!enLanding && propio ? propio.titulo : '¿Te ayudamos con tu caso?'}</h2>
+          </div>
+        </div>
         {enLanding ? (
           <>
             <p className="salida-intro">Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.</p>
@@ -231,8 +237,8 @@ export default function AvisoSalida() {
                   {propio.secundaria.texto}
                 </Link>
               )}
-              <a href={enlaceWhatsapp(propio.whatsapp)} onClick={() => elegir('whatsapp')}>
-                Escribir por WhatsApp
+              <a href={enlaceWhatsapp(propio.whatsapp)} className="salida-wa" onClick={() => elegir('whatsapp')}>
+                <Icono nombre="whatsapp" tam={18} /> Escribir por WhatsApp
               </a>
             </div>
             <p className="salida-intro" style={{ marginTop: 18 }}>¿Es otra cosa?</p>
@@ -241,9 +247,10 @@ export default function AvisoSalida() {
           <p className="salida-intro">Elige lo que más se parece a lo tuyo y te llevamos directo.</p>
         )}
 
-            <div className="salida-temas">
+            <div className="salida-temas salida-temas-iconos">
               {TEMAS.filter((t) => !propio || !ruta.startsWith(t.href)).map((t) => (
-                <Link key={t.href} href={t.href} onClick={() => elegir(t.texto)}>
+                <Link key={t.href} href={t.href} className={t.clase} onClick={() => elegir(t.texto)}>
+                  <span className="st-icono"><Icono nombre={t.icono} tam={18} /></span>
                   {t.texto}
                 </Link>
               ))}
@@ -269,10 +276,10 @@ export default function AvisoSalida() {
                     window.dispatchEvent(new Event('abrir-asistente'));
                   }}
                 >
-                  Preguntar al chat
+                  <Icono nombre="chat" tam={17} /> Preguntar al chat
                 </button>
                 <a className="boton boton-marcador" href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
-                  Llamar
+                  <Icono nombre="telefono" tam={17} /> Llamar
                 </a>
               </div>
             </div>

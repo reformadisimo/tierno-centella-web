@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Lupa from '@/components/Lupa';
 import { FacebookHoy, FacebookLuego, LinkedinHoy, LinkedinLuego, PerfilJesus } from '@/components/RedesGuia';
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ const SEMANA: { icono: string; titulo: string; texto: string }[] = [
 export default function Pagina() {
   return (
     <main className="rd-pagina">
+      <Lupa pantalla="redes" selector="section[id], [data-lupa]" />
       <header className="rd-portada-pagina">
         <div className="contenedor">
           <p className="rd-ante">Facebook y LinkedIn · Hoy y con nosotros</p>

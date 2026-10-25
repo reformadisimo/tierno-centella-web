@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PanelDemo from '@/components/PanelDemo';
+import Lupa from '@/components/Lupa';
 
 export const metadata: Metadata = {
   title: 'Tu panel de control (demostración) | Guía para Jesús',
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function Panel() {
-  return <PanelDemo />;
+  return (
+    <>
+      <Lupa pantalla="panel" selector="section[id], [data-lupa]" />
+      <PanelDemo />
+    </>
+  );
 }

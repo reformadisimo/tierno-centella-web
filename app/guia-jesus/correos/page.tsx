@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Lupa from '@/components/Lupa';
 import { SECUENCIA_ACOSO, TRAS_CONSULTA, type Correo } from '@/lib/correos-acoso';
 
 export const metadata: Metadata = {
@@ -121,6 +122,7 @@ export default function CorreosAcoso() {
   const total = SECUENCIA_ACOSO.length;
   return (
     <div className="cj">
+      <Lupa pantalla="correos" selector="section[id], [data-lupa]" />
       <header className="cj-portada">
         <div className="contenedor">
           <a className="cj-volver" href="/guia-jesus#17-del-formulario-a-la-consulta-correos-que-acompanan-a-cada-contacto">
