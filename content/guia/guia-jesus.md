@@ -2,6 +2,8 @@
 
 Jesús, qué ilusión enseñarte esto. En cinco minutos vas a ver **dónde estás hoy, lo que ya te hemos hecho y adónde te podemos llevar**. Cada apartado de la guía empieza con una foto y una frase; si quieres más, pulsa "Ver el detalle".
 
+> **Una cosa antes de seguir, entre amigos.** Sabemos que esta guía es larga y que a veces usa palabras técnicas: es lo que tiene explicar bien un trabajo que, de verdad, es mucho. Te pedimos que te tomes el tiempo de entenderla, porque es un esfuerzo que haces **una sola vez**: cuando lo has comprendido, todo lo demás va rodado y no tienes que volver a pensar en ello. Y queremos que nuestros clientes entiendan **cómo trabajamos y qué valor añadimos**, porque solo así puedes decidir con tranquilidad. Por eso hemos puesto un resumen de cinco minutos arriba y el detalle debajo, para que leas lo que quieras y vayas al ritmo que te venga bien.
+
 ###  Dónde estás hoy
 
 Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Semrush, octubre de 2026):
