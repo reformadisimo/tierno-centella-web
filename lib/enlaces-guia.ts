@@ -63,6 +63,13 @@ const WEB: [string, string][] = [
   ['4.007 seguidores en Instagram', 'https://www.instagram.com/tiernocentella_abogados/'],
   ['2.371 en tu LinkedIn personal', 'https://www.linkedin.com/in/jes%C3%BAs-tierno-centella-13ba92188/'],
   ['285 en Facebook', 'https://www.facebook.com/TiernoCentellaAbogados/'],
+  ['la página activa de Facebook', 'https://www.facebook.com/TiernoCentellaAbogados/'],
+  ['la página antigua de Facebook', 'https://www.facebook.com/tiernocentella/'],
+  ['TIERNO CENTELLA ABOGADOS (80 seguidores)', 'https://www.linkedin.com/company/tierno-centella-abogados/'],
+  ['Tierno Centella (224 seguidores)', 'https://www.linkedin.com/company/tierno-centella-tc/'],
+  ['Tierno Centella Abogados (154 seguidores)', 'https://www.linkedin.com/company/tierno-centella-abogados-contacto/'],
+  ['tu perfil personal de LinkedIn', 'https://www.linkedin.com/in/jes%C3%BAs-tierno-centella-13ba92188/'],
+  ['Así quedarían tu Facebook y tu LinkedIn', '/guia-jesus/redes'],
   ['tu web actual', 'https://tiernocentella.es/'],
   ['Biblioteca de anuncios de Meta', 'https://www.facebook.com/ads/library/'],
 ];

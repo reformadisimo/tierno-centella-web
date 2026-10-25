@@ -134,3 +134,18 @@ export function BloqueCrmEnlace() {
     </div>
   );
 }
+
+export function BloqueRedesEnlace() {
+  return (
+    <div className="ew">
+      <a className="ew-grande" href="/guia-jesus/redes" target="_blank" rel="noopener">
+        <span>
+          <small>Hoy y con nosotros · publicaciones de ejemplo</small>
+          <strong>Ver cómo quedarían tu Facebook y tu LinkedIn</strong>
+          <em>Tus páginas tal y como están hoy, al lado de cómo quedarían: una sola página por red, datos correctos y publicaciones cada semana. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
+    </div>
+  );
+}
