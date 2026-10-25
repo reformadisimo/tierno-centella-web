@@ -3,6 +3,7 @@ import Link from 'next/link';
 import FotoCabeza from '@/components/FotoCabeza';
 import JsonLd from '@/components/JsonLd';
 import { DESPACHO } from '@/lib/despacho';
+import Icono from '@/components/Iconos';
 import { esquemaMigas, meta } from '@/lib/seo';
 
 export const metadata: Metadata = meta({
@@ -12,11 +13,11 @@ export const metadata: Metadata = meta({
 });
 
 const PASOS = [
-  { t: 'Nos cuentas qué te pasa', d: 'Por teléfono o por WhatsApp, con tus palabras y sin papeles. Te decimos con claridad si tu caso necesita una consulta y cuánto cuesta antes de reservar. Si tu situación tiene un plazo corriendo, te lo decimos en ese momento.' },
-  { t: 'Eliges cómo y cuándo', d: 'Presencial en Jorge Juan o por videollamada, con un abogado del despacho o con Jesús Tierno. Puedes reservar tú misma o tú mismo en la web, o lo hacemos nosotros por teléfono.' },
-  { t: 'Preparas lo poco que hace falta', d: 'Lo que tengas a mano: contrato, últimas nóminas, la carta de despido o los correos y mensajes importantes. Si no tienes algo, no pasa nada: lo vemos juntos.' },
-  { t: 'La consulta: te escuchamos primero', d: 'Dura aproximadamente una hora. Empezamos escuchando, sin interrumpirte. Después te hacemos preguntas concretas y miramos tus documentos.' },
-  { t: 'Sales con un mapa', d: 'Te explicamos tus opciones, los plazos, lo que puedes reclamar y lo que no, con palabras normales. Y, si decides seguir, qué haríamos y cómo trabajamos. Si prefieres pensártelo, también está bien.' },
+  { i: 'chat', t: 'Nos cuentas qué te pasa', d: 'Por teléfono o por WhatsApp, con tus palabras y sin papeles. Te decimos con claridad si tu caso necesita una consulta y cuánto cuesta antes de reservar. Si tu situación tiene un plazo corriendo, te lo decimos en ese momento.' },
+  { i: 'calendario', t: 'Eliges cómo y cuándo', d: 'Presencial en Jorge Juan o por videollamada, con un abogado del despacho o con Jesús Tierno. Puedes reservar tú misma o tú mismo en la web, o lo hacemos nosotros por teléfono.' },
+  { i: 'documento', t: 'Preparas lo poco que hace falta', d: 'Lo que tengas a mano: contrato, últimas nóminas, la carta de despido o los correos y mensajes importantes. Si no tienes algo, no pasa nada: lo vemos juntos.' },
+  { i: 'personas', t: 'La consulta: te escuchamos primero', d: 'Dura aproximadamente una hora. Empezamos escuchando, sin interrumpirte. Después te hacemos preguntas concretas y miramos tus documentos.' },
+  { i: 'mapa', t: 'Sales con un mapa', d: 'Te explicamos tus opciones, los plazos, lo que puedes reclamar y lo que no, con palabras normales. Y, si decides seguir, qué haríamos y cómo trabajamos. Si prefieres pensártelo, también está bien.' },
 ];
 
 export default function PrimeraConsulta() {
@@ -43,26 +44,42 @@ export default function PrimeraConsulta() {
       <section className="seccion">
         <div className="contenedor prosa">
           <h2>Cómo es, minuto a minuto</h2>
-          <ol className="pasos-numerados">
-            {PASOS.map((p) => (
+          <ol className="pc-pasos">
+            {PASOS.map((p, n) => (
               <li key={p.t}>
-                <strong>{p.t}.</strong> {p.d}
+                <span className="pc-icono" aria-hidden="true"><Icono nombre={p.i} tam={24} /></span>
+                <div>
+                  <span className="pc-n">Paso {n + 1}</span>
+                  <strong>{p.t}</strong>
+                  <p>{p.d}</p>
+                </div>
               </li>
             ))}
           </ol>
 
           <h2>Cuánto cuesta</h2>
-          <p>
-            La consulta con un abogado del despacho cuesta <strong>{DESPACHO.precioCita} €{DESPACHO.iva}</strong> y con Jesús Tierno, <strong>{DESPACHO.precioCitaJesus} €{DESPACHO.iva}</strong>. Antes de reservar te decimos si
-            tu caso la necesita, y si seguís adelante, te explicamos cómo se trabaja y cuánto costaría.
-          </p>
+          <div className="pc-precios">
+            <div className="pc-precio">
+              <span className="pc-euro" aria-hidden="true">€</span>
+              <span className="pc-quien">Con un abogado del despacho</span>
+              <span className="pc-cifra">{DESPACHO.precioCita} €<small>{DESPACHO.iva}</small></span>
+              <span className="pc-detalle">Consulta de una hora, presencial o por videollamada</span>
+            </div>
+            <div className="pc-precio pc-precio-jesus">
+              <span className="pc-euro" aria-hidden="true">€</span>
+              <span className="pc-quien">Con Jesús Tierno</span>
+              <span className="pc-cifra">{DESPACHO.precioCitaJesus} €<small>{DESPACHO.iva}</small></span>
+              <span className="pc-detalle">Consulta de una hora, presencial o por videollamada</span>
+            </div>
+          </div>
+          <p>Antes de reservar te decimos si tu caso la necesita, y si seguís adelante, te explicamos cómo se trabaja y cuánto costaría.</p>
 
           <h2>Lo que NO tienes que hacer</h2>
-          <ul>
-            <li>No tienes que traerlo todo ordenado. Con lo que tengas, empezamos.</li>
-            <li>No tienes que saber derecho ni usar palabras técnicas.</li>
-            <li>No tienes que decidir nada en la consulta: puedes llevarte lo que te contemos y pensarlo.</li>
-            <li>No tienes que firmar nada como conforme (carta, finiquito, acuerdo) antes de hablar con un abogado.</li>
+          <ul className="pc-no">
+            <li><strong>No tienes que traerlo todo ordenado.</strong> Con lo que tengas, empezamos.</li>
+            <li><strong>No tienes que saber derecho</strong> ni usar palabras técnicas.</li>
+            <li><strong>No tienes que decidir nada en la consulta:</strong> puedes llevarte lo que te contemos y pensarlo.</li>
+            <li><strong>No tienes que firmar nada como conforme</strong> (carta, finiquito, acuerdo) antes de hablar con un abogado.</li>
           </ul>
 
           <h2>Si vienes acompañando a otra persona</h2>

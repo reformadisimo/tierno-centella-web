@@ -4,7 +4,9 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-const OBJETIVOS = '.lp-situacion, .equipo-retratos > li, .cifras-oro > li, .rejilla-reels > *, .galeria figure, .lista-enlaces li, .rejilla-guias > a, .pasando-tarjeta, .herr-tarjetas > li, .tarjetas-foto > a, .hitos > li, .equipo-valores > li, .rejilla-guias > a, .ficha, .tarjeta, .tarjeta-situacion, .paso, .cifra, .rejilla-herramientas > a, .sentencia, .faq-item, .pasos-numerados > li';
+const OBJETIVOS = '.lp-situacion, .equipo-retratos > li, .cifras-oro > li, .rejilla-reels > *, .galeria figure, .lista-enlaces li, .rejilla-guias > a, .pasando-tarjeta, .herr-tarjetas > li, .tarjetas-foto > a, .hitos > li, .equipo-valores > li, .rejilla-guias > a, .ficha, .tarjeta, .tarjeta-situacion, .paso, .cifra, .rejilla-herramientas > a, .sentencia, .faq-item, .pasos-numerados > li, .pc-pasos > li, .pc-precio, .pc-no > li, .tr-tarjeta, .faq-tema .pregunta-faq, .faq-lateral, .lateral-caja, .prosa > p, .prosa > ul, .prosa > ol, .prosa > h3, .prosa > blockquote, .prosa > table, .prosa > aside, .prosa > div, .prosa > details, .recuadro, .acciones, .formas-contacto > *, .bloque-foto > *, .linea-pasos > *, .linea-tiempo > li, .resultado, .herramienta';
+const FOTOS = '.prosa-foto, .guia-foto, .foto-viva, .galeria-foto, figure:not(.faq-foto)';
+const TITULOS = 'main h2';
 
 export default function Aparecer() {
   const ruta = usePathname();
@@ -30,12 +32,21 @@ export default function Aparecer() {
       { rootMargin: '0px 0px -8% 0px' },
     );
     let i = 0;
-    document.querySelectorAll<HTMLElement>(OBJETIVOS).forEach((el) => {
-      if (el.getBoundingClientRect().top < alto) return;
-      el.style.setProperty('--ap-retraso', `${(i++ % 4) * 70}ms`);
-      el.classList.add('ap-oculto');
-      io.observe(el);
-    });
+    const marcar = (sel: string, extra: string) => {
+      document.querySelectorAll<HTMLElement>(sel).forEach((el) => {
+        if (el.classList.contains('ap-oculto') || el.classList.contains('ap-visto')) return;
+        if (el.parentElement?.closest('.ap-oculto, .ap-visto')) return;
+        if (el.closest('header, nav, .chat-ventana, .sx-ventana, [role="dialog"]')) return;
+        if (el.getBoundingClientRect().top < alto) return;
+        el.style.setProperty('--ap-retraso', `${(i++ % 4) * 70}ms`);
+        el.classList.add('ap-oculto');
+        if (extra) el.classList.add(extra);
+        io.observe(el);
+      });
+    };
+    marcar(TITULOS, 'ap-titulo');
+    marcar(FOTOS, 'ap-foto');
+    marcar(OBJETIVOS, '');
     return () => io.disconnect();
   }, [ruta]);
   return null;

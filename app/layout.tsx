@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import './herramientas.css';
 import './guia-redes.css';
+import './fotos-foco.css';
 import Cabecera from '@/components/Cabecera';
 import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';

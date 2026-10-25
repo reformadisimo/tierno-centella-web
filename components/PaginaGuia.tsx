@@ -97,7 +97,7 @@ export default function PaginaGuia({
   const foto = fotoDePieza(pieza);
   const ruta = migas[migas.length - 1].href + '/' + pieza.slug;
   const wa = enlaceWhatsapp(en ? `Hello, I have read "${pieza.titulo}" and I would like to ask about my case.` : `Hola, he leído "${pieza.titulo}" y quiero consultar mi caso.`);
-  const tarjeta = `<div class="prosa-jesus"><img src="/img/jesus-mesa-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="${en ? 'Jesús Tierno Centella at his desk' : 'Jesús Tierno Centella en su mesa del despacho'}"><div><p class="prosa-jesus-titulo">${
+  const tarjeta = `<div class="prosa-jesus"><div class="pj-foto"><img src="/img/jesus-mesa-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="${en ? 'Jesús Tierno Centella at his desk' : 'Jesús Tierno Centella en su mesa del despacho'}"></div><div><p class="prosa-jesus-titulo">${
     en ? 'Does your case sound like this?' : '¿Tu caso se parece a esto?'
   }</p><p>${
     en
@@ -187,9 +187,9 @@ export default function PaginaGuia({
           <div className="guia-lateral">
             <div className="lateral-caja lateral-humana">
               {foto.src.includes('abogada-escucha') ? (
-                <img src="/img/abogada-sonrie-640.webp" alt={en ? "A lawyer from the firm smiles during a consultation" : "Una abogada del despacho sonríe durante una consulta"} loading="lazy" />
+                <div className="lateral-foto"><img src="/img/abogada-sonrie-640.webp" alt={en ? "A lawyer from the firm smiles during a consultation" : "Una abogada del despacho sonríe durante una consulta"} loading="lazy" /></div>
               ) : (
-                <img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt={en ? "A lawyer from the firm during a consultation" : "Una abogada del despacho atiende una consulta"} loading="lazy" />
+                <div className="lateral-foto"><img src="/img/abogada-escucha.webp" srcSet="/img/abogada-escucha-640.webp 640w, /img/abogada-escucha.webp 872w" sizes="(max-width: 860px) 100vw, 50vw" alt={en ? "A lawyer from the firm during a consultation" : "Una abogada del despacho atiende una consulta"} loading="lazy" /></div>
               )}
               <h2>{en ? 'Shall we talk about your case?' : '¿Hablamos de tu caso?'}</h2>
               <p style={{ fontSize: '0.95rem' }}>
