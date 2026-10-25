@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DESPACHO } from '@/lib/despacho';
 import { usePathname } from 'next/navigation';
 import { idiomaDe } from '@/lib/idioma';
@@ -9,6 +9,13 @@ import { idiomaDe } from '@/lib/idioma';
 export default function Mapa() {
   const en = idiomaDe(usePathname()) === 'en';
   const [activo, setActivo] = useState(false);
+  const [video, setVideo] = useState(false);
+  useEffect(() => {
+    const nav = navigator as Navigator & { connection?: { saveData?: boolean } };
+    if (nav.connection?.saveData || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const t = window.setTimeout(() => setVideo(true), 1500);
+    return () => window.clearTimeout(t);
+  }, []);
   const q = encodeURIComponent('Tierno Centella Abogados, Calle de Jorge Juan 78, 28009 Madrid');
   return activo ? (
     <iframe
@@ -20,6 +27,13 @@ export default function Mapa() {
     />
   ) : (
     <button type="button" className="mapa mapa-boton" onClick={() => setActivo(true)}>
+      {video && (
+        <video className="mapa-video" autoPlay muted loop playsInline aria-hidden="true">
+          <source src="/video/paginas/fachada.webm" type="video/webm" />
+          <source src="/video/paginas/fachada.mp4" type="video/mp4" />
+        </video>
+      )}
+      <span className="mapa-velo" aria-hidden="true" />
       <span>
         <strong>{DESPACHO.direccion}</strong>
         <br />

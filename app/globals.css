@@ -7428,3 +7428,10 @@ body{padding-bottom:58px}
 .rs2-nec{line-height:1.7;padding-left:22px}
 .rs2-cierre{background:#fbe9ef;border-radius:14px;padding:14px 16px;font-weight:600}
 @media (max-width:640px){.rs2-cifras{grid-template-columns:1fr}.rs2-flecha{text-align:center}}
+
+.prosa-foto-ancha .foto-video{aspect-ratio:1200/514;overflow:hidden;border-radius:inherit}
+.prosa-foto-ancha .foto-video img{width:100%;height:100%;object-fit:cover}
+.mapa-boton{position:relative;overflow:hidden}
+.mapa-boton .mapa-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.mapa-boton .mapa-velo{position:absolute;inset:0;background:rgba(244,247,251,.86);z-index:1}
+.mapa-boton>span:not(.mapa-velo){position:relative;z-index:2}
