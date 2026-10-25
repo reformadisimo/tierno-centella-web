@@ -4,6 +4,7 @@ import { BotonImprimir, useIrAlResultado } from './Utiles';
 
 import { useState } from 'react';
 import { CLAVE_PLAZO } from './MiPlazo';
+import AvisoCorreo from './AvisoCorreo';
 import Link from 'next/link';
 import { sumarHabiles, sumarAnios, diasHabilesRestantes } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
@@ -147,6 +148,7 @@ export default function Plazos() {
                   {recordado ? 'Hecho: te lo recordaremos en esta web' : 'Recordármelo en esta web'}
                 </button>
               )}
+              {s.tipo === 'habiles' && <AvisoCorreo nombre={s.nombre} ultimo={ultimo} agostoHabil={s.id !== 'sancion'} madrid={madrid} />}
             </>
           )}
         </div>

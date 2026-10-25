@@ -54,7 +54,7 @@ export default function Glosario() {
               <Link href="/">Inicio</Link> / Glosario
             </nav>
             <h1>Glosario laboral</h1>
-            <p className="entradilla">Las palabras que vas a oír en tu caso, explicadas como te las explicaríamos en el despacho.</p>
+            <p className="entradilla">Las palabras que vas a oír en tu caso, explicadas como te las explicaríamos en el despacho. ¿Prefieres frases muy cortas y dibujos? Mira el <Link href="/glosario/facil">glosario con dibujos</Link>.</p>
             <BuscadorGlosario total={GLOSARIO.length} />
             <nav aria-label="Letras" className="glosario-letras">
               {letras.map((l) => (

@@ -7734,3 +7734,11 @@ html.a11y-quieto video { display: none !important; }
 @media (min-width:1400px) and (max-width:1599px){.cabecera .menu a{padding:8px 5px;font-size:.88rem}.cabecera-acciones{gap:6px}}
 @media (min-width:1100px) and (max-width:1199px){.cabecera .menu a{padding:8px 2px;font-size:.78rem}.cabecera-acciones{gap:3px}}
 @media (min-width:1400px) and (max-width:1499px){.cabecera .menu a{padding:8px 3px;font-size:.86rem}}
+
+/* Glosario en lenguaje fácil */
+.facil-lista { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.facil-tarjeta { display: flex; gap: 16px; align-items: flex-start; padding: 16px; border: 1px solid var(--linea); border-radius: 12px; background: #fff; }
+.facil-pic { flex: none; width: 72px; height: 72px; display: grid; place-items: center; background: #f4f7fa; border-radius: 12px; }
+.facil-tarjeta h2 { font-size: 1.15rem; margin: 0 0 4px; }
+.facil-tarjeta p { margin: 0 0 4px; font-size: 1.05rem; line-height: 1.5; }
+.aviso-correo { max-width: 460px; }

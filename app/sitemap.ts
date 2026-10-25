@@ -41,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/preguntas-frecuentes',
     '/glosario',
+    '/glosario/facil',
     '/barometro',
     '/recursos',
     '/mi-caso',

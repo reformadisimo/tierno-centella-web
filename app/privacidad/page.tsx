@@ -52,6 +52,13 @@ export default function Pagina() {
             correo, lo usamos solo para contestarte. Si no dejas ninguno, es anónimo: no guardamos tu IP ni usamos cookies. Te pedimos que no escribas datos
             sensibles de tu caso; para eso, llámanos o escríbenos por el formulario de contacto. Puedes pedir que borremos tu mensaje escribiendo a {DESPACHO.email}.
           </p>
+          <h2>Avisos de plazo por correo</h2>
+          <p>
+            Si pides que te avisemos por correo de tu plazo para reclamar, guardamos tu correo y la fecha límite calculada, y te enviamos primero un mensaje para confirmar que el
+            correo es tuyo. Después te escribimos cuando queden unos 10, 5 y 2 días hábiles. Solo los usamos para eso, no los cedemos ni los usamos para publicidad. Cada mensaje
+            lleva un enlace para darte de baja, y al hacerlo borramos tu correo. Si no confirmas, o cuando pasa el plazo, también lo borramos. Para ello usamos un servicio de envío
+            de correo (Resend) y una base de datos alojada en la Unión Europea.
+          </p>
           <h2>Tus derechos</h2>
           <p>
             Puedes pedir acceso, rectificación o supresión de tus datos escribiendo a {DESPACHO.email}. También puedes reclamar ante la Agencia
