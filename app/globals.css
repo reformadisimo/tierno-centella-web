@@ -7649,3 +7649,24 @@ body{padding-bottom:58px}
 .th-test .th-chip { background: #b8452a; }
 .pie-boton.boton-marcador, .pie-boton[class*="marcador"] { color: #0d2c48; }
 .pasando, .herr-tarjetas, .tarjetas-foto, .hitos, .cifras-oro, .equipo-valores, .rejilla-reels, .equipo-retratos, .linea-pasos { scrollbar-width: thin; }
+
+/* Mi plazo: franja bajo la cabecera */
+.mi-plazo { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 16px; padding: 8px var(--margen, 16px); background: #fbe9ef; border-bottom: 2px solid #c2477a; font-size: .92rem; }
+.mi-plazo p { margin: 0; }
+.mi-plazo.urgente { background: #d9694d; color: #fff; border-color: #a83a1f; }
+.mi-plazo.urgente a, .mi-plazo.urgente button { color: #fff; }
+.mi-plazo-acciones { display: inline-flex; gap: 14px; }
+.mi-plazo a, .mi-plazo button { font: inherit; font-weight: 700; background: none; border: 0; padding: 6px 4px; min-height: 32px; text-decoration: underline; cursor: pointer; color: #0d2c48; }
+@media print { .mi-plazo { display: none; } }
+
+/* Qué guardar */
+.qg-progreso { height: 10px; background: var(--linea); border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
+.qg-progreso span { display: block; height: 100%; background: linear-gradient(90deg, #c2477a, #f2c14e); border-radius: 99px; transition: width .4s ease; }
+.qg-cuenta { margin: 0 0 12px; font-weight: 700; }
+.qg-lista { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
+.qg-lista label { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; background: var(--blanco); border: 1px solid var(--linea); border-radius: 14px; cursor: pointer; min-height: 48px; }
+.qg-lista label.hecho { background: #eaf5ee; border-color: #17602f; }
+.qg-lista label.hecho b { text-decoration: line-through; text-decoration-color: rgba(23,96,47,.5); }
+.qg-lista input { width: 22px; height: 22px; margin-top: 2px; flex: 0 0 auto; accent-color: #17602f; }
+.qg-lista small { display: block; color: var(--tinta-suave, #4a5b6c); margin-top: 2px; }
+@media (prefers-reduced-motion: reduce) { .qg-progreso span { transition: none; } }

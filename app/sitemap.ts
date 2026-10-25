@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/herramientas/test-baja-laboral',
     '/herramientas/mapa-de-pruebas',
     '/herramientas/plazos',
+    '/herramientas/que-guardar',
     '/herramientas/revisa-tu-carta-de-despido',
     '/herramientas/comprobador-incapacidad',
     '/sentencias',

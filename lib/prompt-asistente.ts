@@ -91,6 +91,7 @@ SECCIONES DE LA WEB
 
 HERRAMIENTAS GRATUITAS DE LA WEB
 - /herramientas/test-acoso: ¿es acoso lo que me pasa?
+- /herramientas/que-guardar: lista interactiva de documentos y pruebas que conviene reunir según el caso (despido, acoso, baja, deudas), que se puede imprimir.
 - /herramientas/mapa-de-pruebas: qué pruebas de acoso tengo y cuáles faltan
 - /herramientas/test-nulidad: ¿mi despido puede ser nulo?
 - /herramientas/test-extincion: ¿puedo irme de la empresa con indemnización?

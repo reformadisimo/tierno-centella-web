@@ -7,6 +7,7 @@ export const HERRAMIENTAS = [
   { href: '/herramientas/mapa-de-pruebas', titulo: 'Mapa de pruebas del acoso', texto: 'Marca lo que tienes y descubre qué te falta para demostrarlo.' },
   { href: '/calculadora-indemnizacion', titulo: 'Calculadora de indemnización', texto: 'Cuánto te corresponde por despido objetivo o improcedente, al momento.' },
   { href: '/herramientas/revisa-tu-carta-de-despido', titulo: 'Revisa tu carta de despido', texto: 'Los defectos de forma que pueden hacer improcedente tu despido.' },
+  { href: '/herramientas/que-guardar', titulo: '¿Qué tengo que guardar?', texto: 'La lista de documentos y pruebas de tu caso, para marcar lo que ya tienes e imprimirla.' },
   { href: '/herramientas/plazos', titulo: 'Plazos para reclamar', texto: 'El último día para reclamar un despido, una sanción, una deuda o una incapacidad.' },
   { href: '/herramientas/calculadora-finiquito', titulo: 'Calculadora de finiquito', texto: 'Los días del último mes, las vacaciones pendientes y la parte de las pagas extra.' },
   { href: '/herramientas/calculadora-paro', titulo: 'Calculadora del paro', texto: 'Cuánto cobrarás y durante cuántos meses, con los topes de 2026.' },

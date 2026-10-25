@@ -3,6 +3,7 @@
 import { BotonImprimir, useIrAlResultado } from './Utiles';
 
 import { useState } from 'react';
+import { CLAVE_PLAZO } from './MiPlazo';
 import Link from 'next/link';
 import { sumarHabiles, sumarAnios, diasHabilesRestantes } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
@@ -90,6 +91,14 @@ export default function Plazos() {
     if (s.tipo === 'habiles') quedan = diasHabilesRestantes(hoy > fecha ? hoy : sumarHabiles(fecha, 1, agostoHabil), ultimo, agostoHabil);
   }
   const vencido = ultimo !== '' && ultimo < hoy;
+  const [recordado, setRecordado] = useState(false);
+  function recordar() {
+    try {
+      localStorage.setItem(CLAVE_PLAZO, JSON.stringify({ nombre: s.nombre, ultimo, agostoHabil: s.id !== 'sancion' }));
+      window.dispatchEvent(new Event('tc-plazo'));
+      setRecordado(true);
+    } catch {}
+  }
   useIrAlResultado(ultimo ? `${id}|${fecha}` : '');
 
   return (
@@ -125,6 +134,11 @@ export default function Plazos() {
                 <p style={{ margin: 0 }}>
                   Te {quedan === 1 ? 'queda 1 día hábil' : `quedan ${quedan} días hábiles`}, contando hoy si es hábil.
                 </p>
+              )}
+              {s.tipo === 'habiles' && (
+                <button type="button" className="boton boton-claro" style={{ marginTop: 12 }} onClick={recordar} disabled={recordado}>
+                  {recordado ? 'Hecho: te lo recordaremos en esta web' : 'Recordármelo en esta web'}
+                </button>
               )}
             </>
           )}

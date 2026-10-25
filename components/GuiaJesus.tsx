@@ -378,8 +378,9 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 8;
+const VERSION = 9;
 const NOVEDADES: { texto: string; clave: string }[] = [
+  { clave: '15', texto: 'Dos herramientas nuevas que hacen que la gente vuelva: "Mi plazo" (si calculas tu plazo para reclamar, la web te lo recuerda en una franja con los días hábiles que te quedan) y "Qué tengo que guardar" (una lista de documentos y pruebas que se marca, se imprime y se comparte por WhatsApp). Además hemos revisado toda la web: 266 páginas sin un solo enlace roto, sin errores y con la accesibilidad corregida.' },
   { clave: '14', texto: 'Glosario pensado para Google: cada una de las más de 100 palabras del derecho laboral (finiquito, preaviso, incapacidad...) tiene su propia página y su buscador. Es lo que la gente teclea cuando tiene una duda, y así llegan a ti antes que a otros. Cada guía del blog enlaza sola sus palabras clave al glosario (cientos de enlaces internos), que es lo que Google premia. Por dentro, la web habla el idioma de Google y de las inteligencias artificiales (ChatGPT, Perplexity, Claude): datos estructurados en todas las páginas, un llms.txt con todo el contenido y un feed para que lo lean los agregadores. Además, una página de recursos con enlaces oficiales (CENDOJ, BOE, SEPE...) y un recorrido paso a paso del despido.' },
   { clave: '10', texto: 'El chat de la web ahora se puede usar hablando: un botón de micrófono para dictar la pregunta sin escribir. Además sabe mucho más de ti, del despacho y de tus sentencias.' },
   { clave: '11', texto: 'Las fotos de las herramientas y de las guías ahora se mueven: clips cortos en bucle, con tu equipo y tu despacho siempre como fotos reales.' },

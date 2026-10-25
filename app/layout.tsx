@@ -13,6 +13,7 @@ import SalidaRapida from '@/components/SalidaRapida';
 import { CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
 import BarraSuperior from '@/components/BarraSuperior';
 import JsonLd from '@/components/JsonLd';
+import MiPlazo from '@/components/MiPlazo';
 import ProgresoLectura from '@/components/ProgresoLectura';
 import Aparecer from '@/components/Aparecer';
 import IndicePagina from '@/components/IndicePagina';
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BarraSuperior />
         <CabeceraImpresion />
         <Cabecera />
+        <MiPlazo />
         <ProgresoLectura />
         <Aparecer />
         <main id="contenido">

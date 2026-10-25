@@ -8,6 +8,7 @@ export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
   '/herramientas/mapa-de-pruebas': { foto: 'documentos-mesa', alt: 'Documentos sobre una mesa del despacho' },
   '/calculadora-indemnizacion': { foto: 'calculadora-papeles', alt: 'Unas manos hacen cuentas con una calculadora' },
   '/herramientas/revisa-tu-carta-de-despido': { foto: 'documento-pluma', alt: 'Una mano escribe sobre un documento' },
+  '/herramientas/que-guardar': { foto: 'documento-pluma', alt: 'Una mano escribe sobre un documento' },
   '/herramientas/plazos': { foto: 'papeleria', alt: 'Un bolígrafo rodea una fecha en un calendario' },
   '/herramientas/calculadora-finiquito': { foto: 'firma-contrato', alt: 'Una persona firma un documento' },
   '/herramientas/calculadora-paro': { foto: 'jubilado-papeles', alt: 'Un hombre mayor escribe una carta con sus papeles delante' },

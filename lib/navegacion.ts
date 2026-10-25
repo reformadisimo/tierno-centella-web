@@ -72,6 +72,7 @@ export const MENU: Grupo[] = [
       { href: '/herramientas/calculadora-paro', texto: 'Calculadora del paro' },
       { href: '/herramientas/revisa-tu-carta-de-despido', texto: 'Revisa tu carta de despido' },
       { href: '/herramientas/plazos', texto: 'Plazos para reclamar' },
+      { href: '/herramientas/que-guardar', texto: '¿Qué tengo que guardar?' },
       { href: '/herramientas/comprobador-incapacidad', texto: 'Comprobador de incapacidad' },
       { href: '/herramientas/calendario-permisos', texto: 'Calendario de permisos por nacimiento' },
       { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Calculadora de reducción de jornada' },
