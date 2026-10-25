@@ -61,7 +61,7 @@ export default function ContactEn() {
                 </tr>
               </tbody>
             </table>
-            <p>After the consultation, if we take your case, you receive a fixed quote in writing before we start.</p>
+            <p>After the consultation, if we take your case, you receive a written quote before we start.</p>
           </div>
         </div>
       </section>

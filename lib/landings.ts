@@ -126,7 +126,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         p: '¿Cuánto cuesta la consulta?',
-        r: 'La primera consulta de una hora cuesta 150 € + IVA con un abogado del despacho y 250 € + IVA con Jesús Tierno. Después te damos un presupuesto cerrado por escrito antes de empezar.',
+        r: 'La primera consulta de una hora cuesta 150 € + IVA con un abogado del despacho y 250 € + IVA con Jesús Tierno. Después te damos un presupuesto por escrito antes de empezar.',
       },
       {
         p: '¿Qué tengo que traer?',
@@ -196,7 +196,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         p: '¿Cuánto cuesta la consulta?',
-        r: 'La primera consulta de una hora cuesta 150 € + IVA con un abogado del despacho y 250 € + IVA con Jesús Tierno. Después te damos un presupuesto cerrado por escrito.',
+        r: 'La primera consulta de una hora cuesta 150 € + IVA con un abogado del despacho y 250 € + IVA con Jesús Tierno. Después te damos un presupuesto por escrito.',
       },
     ],
     opcionesFormulario: ['Me acosa mi jefe', 'Me acosan compañeros', 'Estoy de baja por esto', 'Me han despedido', 'Acoso sexual', 'Otra situación'],
@@ -232,7 +232,7 @@ export const LANDINGS: Landing[] = [
         'Un plan de pruebas: qué guardar, cómo ordenarlo y qué no hacer.',
         'Las vías posibles, con sus ventajas y sus riesgos: protocolo de la empresa, Inspección de Trabajo, extinción del contrato y demanda.',
         'Qué plazos corren y qué conviene hacer primero.',
-        'Un presupuesto cerrado por escrito, si decides seguir adelante.',
+        'Un presupuesto por escrito, si decides seguir adelante.',
       ],
     },
   },
@@ -271,7 +271,7 @@ export const LANDINGS: Landing[] = [
     prueba: [
       { titulo: 'Más de 25 años', texto: 'de ejercicio de Jesús Tierno Centella en derecho laboral' },
       { titulo: '2025', texto: 'despido "objetivo" declarado nulo por ser una represalia' },
-      { titulo: 'Transparencia', texto: 'precio de la consulta claro y presupuesto cerrado por escrito' },
+      { titulo: 'Transparencia', texto: 'precio de la consulta claro y presupuesto por escrito' },
     ],
     preguntas: [
       {
@@ -288,7 +288,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         p: '¿Cuánto cuesta la consulta?',
-        r: 'La primera consulta de una hora cuesta 150 € + IVA con un abogado del despacho y 250 € + IVA con Jesús Tierno. Después te damos un presupuesto cerrado por escrito.',
+        r: 'La primera consulta de una hora cuesta 150 € + IVA con un abogado del despacho y 250 € + IVA con Jesús Tierno. Después te damos un presupuesto por escrito.',
       },
     ],
     opcionesFormulario: ['Disciplinario', 'Objetivo', 'Estaba embarazada o de permiso', 'Estaba de baja', 'No sé qué tipo es'],

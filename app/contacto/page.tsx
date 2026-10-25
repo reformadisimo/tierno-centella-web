@@ -97,7 +97,7 @@ export default function Contacto() {
             <ul className="incluye-cita">
               <li><Icono nombre="check" tam={16} /> Revisión de tus documentos antes de la cita</li>
               <li><Icono nombre="check" tam={16} /> Plazos y vías posibles, explicados sin tecnicismos</li>
-              <li><Icono nombre="check" tam={16} /> Presupuesto cerrado si decides seguir adelante</li>
+              <li><Icono nombre="check" tam={16} /> Presupuesto por escrito si decides seguir adelante</li>
               <li><Icono nombre="check" tam={16} /> Por videollamada, desde cualquier punto de España</li>
             </ul>
             <div className="acciones">

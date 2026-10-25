@@ -92,7 +92,7 @@ export default function ProgresoGuia() {
           </button>
         </div>
       )}
-      <div className={`gj-progreso${visible ? ' visible' : ''}`} aria-hidden={!visible} role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} aria-label="Lo que llevas leído de la guía">
+      <div className={`gj-flota${visible ? ' visible' : ''}`} aria-hidden={!visible} role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} aria-label="Lo que llevas leído de la guía">
         <span className="gj-prog-num">{pct} %</span>
         <span className="gj-prog-barra">
           <i style={{ width: `${pct}%` }} />

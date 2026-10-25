@@ -218,7 +218,7 @@ export default async function Landing({ params }: { params: Promise<{ tema: stri
               <strong>Primera consulta de una hora</strong>
               <p>
                 {DESPACHO.precioCita} €{DESPACHO.iva} con un abogado del despacho · {DESPACHO.precioCitaJesus} €{DESPACHO.iva} con Jesús Tierno.
-                Después, presupuesto cerrado por escrito antes de empezar.
+                Después, presupuesto por escrito antes de empezar.
               </p>
             </div>
             <Telefono />
