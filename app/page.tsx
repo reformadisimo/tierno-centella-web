@@ -81,6 +81,16 @@ export default function Inicio() {
               <span className="pt-icono"><Icono nombre="personas" tam={26} /></span>
               <h3>Sufro acoso en el trabajo</h3>
               <p>No es un mal día ni un mal jefe: es un trato hostil que se repite. Se puede demostrar, y aquí te enseñamos cómo.</p>
+              <div className="pt-panel pt-panel-acoso">
+                <strong>Señales que suelen repetirse</strong>
+                <ul>
+                  <li>Te aíslan o dejan de hablarte</li>
+                  <li>Te quitan funciones sin explicación</li>
+                  <li>Críticas o burlas delante de otros</li>
+                  <li>Órdenes que cambian para que falles</li>
+                </ul>
+                <small>Si te suena, el test te dice en dos minutos qué pasos tienes.</small>
+              </div>
               <div className="acciones">
                 <Link className="boton" href="/herramientas/test-acoso"><Icono nombre="checkCirculo" tam={17} /> Hacer el test</Link>
                 <Link className="boton boton-claro" href="/acoso-laboral">Guía del acoso laboral</Link>
@@ -90,6 +100,16 @@ export default function Inicio() {
               <span className="pt-icono"><Icono nombre="escudo" tam={26} /></span>
               <h3>Me han denegado la incapacidad</h3>
               <p>Tienes 30 días hábiles para la reclamación previa. Muchas incapacidades denegadas se ganan después en el juzgado.</p>
+              <div className="pt-panel pt-panel-incap">
+                <strong>Qué suele venir después</strong>
+                <ul>
+                  <li>Reclamación previa al INSS (30 días hábiles)</li>
+                  <li>Si te la deniegan, demanda en el juzgado de lo social</li>
+                  <li>Informes médicos al día y bien explicados</li>
+                  <li>Te decimos qué grado podría corresponderte</li>
+                </ul>
+                <small>El comprobador te orienta en un minuto, sin dejar datos.</small>
+              </div>
               <div className="acciones">
                 <Link className="boton" href="/herramientas/comprobador-incapacidad"><Icono nombre="escudo" tam={17} /> Comprobar mi caso</Link>
                 <Link className="boton boton-claro" href="/incapacidad-permanente">Guía de incapacidad</Link>

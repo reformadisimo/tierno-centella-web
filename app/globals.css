@@ -7490,3 +7490,15 @@ body{padding-bottom:58px}
 .indice-fila a:hover{background:#fbe9ef}
 .indice-fila a[aria-current="true"]{background:var(--tinta);color:#fff}
 @media print{.indice-pagina,.progreso-lectura{display:none}}
+
+/* Tarjetas de situación de la portada: panel de relleno para que no queden huecos blancos */
+.pt-panel{border-radius:16px;padding:16px 18px;margin:14px 0 18px;display:grid;gap:8px}
+.pt-panel strong{font-size:1rem;color:var(--tinta)}
+.pt-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.pt-panel li{position:relative;padding-left:26px;font-size:.96rem;line-height:1.4}
+.pt-panel li::before{content:'';position:absolute;left:0;top:.2em;width:16px;height:16px;border-radius:50%;background:var(--c)}
+.pt-panel li::after{content:'';position:absolute;left:5px;top:calc(.2em + 4px);width:5px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+.pt-panel small{color:var(--tinta-suave);font-size:.86rem}
+.pt-panel-acoso{background:#fbece7;--c:#c0553a}
+.pt-panel-incap{background:#f3edfa;--c:#7a4fb3}
+.pt-panel li{color:var(--tinta)}
