@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { MENU, MENU_EN } from '@/lib/navegacion';
+import IconoMenu, { tipoIcono } from './IconoMenu';
 import { GUIAS_ES_EN, idiomaDe, rutaEnOtroIdioma } from '@/lib/idioma';
 
 // En inglés, solo se enlazan las guías que ya están traducidas.
@@ -15,6 +16,9 @@ const T = {
   es: { inicio: '/', inicioAria: 'Tierno Centella Abogados, inicio', principal: 'Principal', contacto: 'Contacto', contactoHref: '/contacto', llamarAria: 'Llamar al', menu: 'Menú', cerrar: 'Cerrar', pasando: '¿Qué te está pasando?', jesusHref: '/jesus-tierno', jesusSub: 'Más de 25 años defendiendo a trabajadores', hablamos: '¿Hablamos de tu caso?', consulta: 'Primera consulta de una hora:', video: 'Madrid, o por videollamada.', llamar: 'Llamar', cita: 'Pedir cita', wa: 'Hola, quiero consultar mi caso.', buscar: 'Buscar en la web', buscarHref: '/buscar', otro: 'EN', otroAria: 'EN, English version', otroLang: 'en' },
   en: { inicio: '/en', inicioAria: 'Tierno Centella Abogados, home', principal: 'Main', contacto: 'Contact', contactoHref: '/en/contact', llamarAria: 'Call', menu: 'Menu', cerrar: 'Close', pasando: 'What is happening to you?', jesusHref: '/en/jesus-tierno', jesusSub: 'Over 25 years defending workers', hablamos: 'Shall we talk about your case?', consulta: 'One-hour first consultation:', video: 'Madrid, or by video call. We speak English.', llamar: 'Call', cita: 'Book a consultation', wa: 'Hello, I would like to ask about my case.', buscar: 'Search the website', buscarHref: '/en/search', otro: 'ES', otroAria: 'ES, versión en español', otroLang: 'es' },
 };
+
+// Un color por grupo del menú: acoso, despido, incapacidad, mujer y trabajo, herramientas y el despacho.
+const MENU_COLOR = [0, 1, 2, 3, 4, 5];
 
 export default function Cabecera() {
   const ruta = usePathname() || '/';
@@ -47,21 +51,25 @@ export default function Cabecera() {
         </Link>
 
         <nav className="menu" aria-label={t.principal}>
-          {menu.map((g) => (
+          {menu.map((g, i) => (
             <div className="menu-grupo" key={g.titulo}>
               <Link href={g.href} aria-current={ruta.startsWith(g.href) && g.href !== '/' ? 'page' : undefined}>
                 {g.titulo}
               </Link>
-              <div className={`menu-desplegable${g.enlaces.length > 8 ? ' menu-ancho' : ''}`}>
+              <div className={`menu-desplegable md-c${MENU_COLOR[i] ?? 0}${g.enlaces.length > 8 ? ' menu-ancho' : ''}`}>
                 <Link href={g.href} className="md-cabeza">
                   <img src={`/img/${g.foto}-640.webp`} alt="" width={220} height={140} loading="lazy" />
-                  <strong>{g.titulo}</strong>
-                  <small>{g.sub}</small>
+                  <span className="md-cabeza-texto">
+                    <strong>{g.titulo}</strong>
+                    <small>{g.sub}</small>
+                    <em>Ver todo</em>
+                  </span>
                 </Link>
                 <div className="md-enlaces">
                 {g.enlaces.map((e) => (
                   <Link key={e.href + e.texto} href={e.href}>
-                    {e.texto}
+                    <span className="md-icono"><IconoMenu tipo={tipoIcono(e.href, e.texto)} /></span>
+                    <span>{e.texto}</span>
                   </Link>
                 ))}
                 </div>

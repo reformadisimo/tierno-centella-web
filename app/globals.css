@@ -6936,3 +6936,54 @@ section.pn-caja{margin-bottom:12px}
 .cv-hoy b{display:inline-block;min-width:34px;text-align:center;border-radius:7px;padding:1px 6px;background:#4ade80;color:#0b3d24;margin:0 2px}
 .cv-hoy .cv-mal{background:#f87171;color:#3b0a0a}
 .cv-hoy .cv-medio{background:#fbbf24;color:#3b2a00}
+
+/* Logo de la cabecera: que no se encoja nunca */
+.cabecera .marca{flex:none}
+.cabecera .marca img{width:auto;max-width:none;height:46px}
+@media (min-width:1100px) and (max-width:1380px){.boton-telefono .tel-numero{display:none}.menu a{padding:8px 7px}}
+
+/* Desplegables del menú con más vida */
+.md-c0{--md:#a8442c;--md-claro:#fdf0ed}
+.md-c1{--md:#1b6fd1;--md-claro:#e8f1fc}
+.md-c2{--md:#7a4fb3;--md-claro:#f3edfa}
+.md-c3{--md:#c2477a;--md-claro:#fcedf3}
+.md-c4{--md:#b07a00;--md-claro:#fdf5e1}
+.md-c5{--md:#17602f;--md-claro:#e6f4ea}
+.menu-grupo:hover .menu-desplegable,.menu-grupo:focus-within .menu-desplegable{border-top:4px solid var(--md,#0d2c48);box-shadow:0 18px 40px rgba(13,44,72,.18);padding:12px}
+.menu-desplegable .md-cabeza{position:relative;padding:0;min-height:200px;background:var(--md,#0d2c48);justify-content:flex-end}
+.md-cabeza img{position:absolute;inset:0;width:100%;height:100%;margin:0;object-fit:cover}
+.md-cabeza::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 20%,var(--md,#0d2c48) 92%)}
+.md-cabeza-texto{position:relative;z-index:1;display:flex;flex-direction:column;gap:3px;padding:12px}
+.md-cabeza-texto strong{color:#fff!important;font-size:1.1rem!important;padding:0!important}
+.md-cabeza-texto small{color:rgba(255,255,255,.88)!important;padding:0!important}
+.md-cabeza-texto em{font-style:normal;font-weight:800;font-size:.82rem;color:#fff;margin-top:4px}
+.md-cabeza-texto em::after{content:' →'}
+.menu-desplegable .md-enlaces a{display:flex;align-items:center;gap:10px;padding:7px 10px;transition:background .15s,transform .15s}
+.menu-desplegable .md-enlaces a:hover{background:var(--md-claro,var(--cielo));transform:translateX(2px)}
+.md-icono{flex:none;width:32px;height:32px;border-radius:9px;background:var(--md-claro,#eef1f4);color:var(--md,#0d2c48);display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
+.md-enlaces a:hover .md-icono{background:var(--md,#0d2c48);color:#fff}
+/* El desplegable ancho (Herramientas) se centra en la cabecera para no salirse por la izquierda */
+@media (min-width:1100px){
+  .cabecera-fila{position:relative}
+  .menu-grupo:has(.menu-ancho){position:static}
+  .menu-grupo:hover .menu-ancho,.menu-grupo:focus-within .menu-ancho{left:50%;right:auto;transform:translateX(-50%);max-width:calc(100vw - 32px)}
+}
+
+/* Herramientas de la portada: tarjetas con icono y color */
+.herr-tarjetas{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.herr-tarjetas li{margin:0}
+.herr-tarjetas a{display:flex;flex-direction:column;gap:6px;height:100%;box-sizing:border-box;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:18px;text-decoration:none;color:var(--tinta);transition:transform .15s,box-shadow .15s,border-color .15s;position:relative;overflow:hidden}
+.herr-tarjetas a::before{content:'';position:absolute;left:0;top:0;right:0;height:4px;background:var(--ht)}
+.herr-tarjetas a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(13,44,72,.12);border-color:var(--ht)}
+.ht-c0{--ht:#a8442c;--ht-claro:#fdf0ed}
+.ht-c1{--ht:#1b6fd1;--ht-claro:#e8f1fc}
+.ht-c2{--ht:#b07a00;--ht-claro:#fdf5e1}
+.ht-c3{--ht:#17602f;--ht-claro:#e6f4ea}
+.ht-icono{width:46px;height:46px;border-radius:13px;background:var(--ht-claro);color:var(--ht);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.herr-tarjetas strong{font-size:1.12rem;color:var(--tinta)}
+.herr-tarjetas span:not(.ht-icono){color:var(--tinta-suave);font-size:.94rem;line-height:1.45;flex:1}
+.herr-tarjetas em{font-style:normal;font-weight:800;font-size:.9rem;color:var(--ht);margin-top:4px}
+.herr-tarjetas em::after{content:' →';transition:margin .15s}
+.herr-tarjetas a:hover em::after{margin-left:4px}
+@media (max-width:1000px){.herr-tarjetas{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.herr-tarjetas{grid-template-columns:1fr}.herr-tarjetas a{flex-direction:row;flex-wrap:wrap;align-items:center;column-gap:12px}.ht-icono{margin:0}.herr-tarjetas strong{flex:1}.herr-tarjetas span:not(.ht-icono){flex-basis:100%}}

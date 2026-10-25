@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import IconoMenu, { tipoIcono } from '@/components/IconoMenu';
 import Plazo from '@/components/Plazo';
 import VideoYoutube from '@/components/VideoYoutube';
 import { DESPACHO } from '@/lib/despacho';
@@ -220,53 +221,69 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor">
           <h2>Herramientas gratuitas, sin dejar tu teléfono</h2>
-          <ul className="servicios">
-            <li>
+          <ul className="herr-tarjetas">
+            <li className="ht-c0">
               <Link href="/herramientas/test-acoso">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/test-acoso', '¿Es acoso?')} tam={24} /></span>
                 <strong>¿Es acoso?</strong>
                 <span>Siete preguntas para saber si lo que vives es acoso laboral.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c1">
               <Link href="/calculadora-indemnizacion">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/calculadora-indemnizacion', 'Indemnización')} tam={24} /></span>
                 <strong>Indemnización</strong>
                 <span>Lo que te corresponde por despido objetivo o improcedente.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c2">
               <Link href="/herramientas/calculadora-finiquito">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/calculadora-finiquito', 'Finiquito')} tam={24} /></span>
                 <strong>Finiquito</strong>
                 <span>Último mes, vacaciones y pagas extra que te deben.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c3">
               <Link href="/herramientas/calculadora-paro">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/calculadora-paro', 'Paro')} tam={24} /></span>
                 <strong>Paro</strong>
                 <span>Cuánto cobrarás y durante cuántos meses.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c0">
               <Link href="/herramientas/plazos">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/plazos', 'Plazos')} tam={24} /></span>
                 <strong>Plazos</strong>
                 <span>El último día para reclamar, calculado con los días hábiles.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c1">
               <Link href="/herramientas/calendario-permisos">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/calendario-permisos', 'Permisos por nacimiento')} tam={24} /></span>
                 <strong>Permisos por nacimiento</strong>
                 <span>Las fechas de tus 19 semanas y de la protección de tu puesto.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c2">
               <Link href="/herramientas/mapa-de-pruebas">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/mapa-de-pruebas', 'Mapa de pruebas')} tam={24} /></span>
                 <strong>Mapa de pruebas</strong>
                 <span>Qué pruebas de acoso tienes y cuáles te faltan.</span>
+                <em>Probar</em>
               </Link>
             </li>
-            <li>
+            <li className="ht-c3">
               <Link href="/herramientas/revisa-tu-carta-de-despido">
+                <span className="ht-icono"><IconoMenu tipo={tipoIcono('/herramientas/revisa-tu-carta-de-despido', 'Revisa tu carta')} tam={24} /></span>
                 <strong>Revisa tu carta</strong>
                 <span>Los defectos que pueden hacer improcedente tu despido.</span>
+                <em>Probar</em>
               </Link>
             </li>
           </ul>
