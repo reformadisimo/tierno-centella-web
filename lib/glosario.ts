@@ -3,7 +3,7 @@
 
 export type Termino = { termino: string; definicion: string; enlace?: string };
 
-export const GLOSARIO: Termino[] = [
+const GLOSARIO_BASE: Termino[] = [
   {
     termino: "Accidente de trabajo",
     definicion:
@@ -359,6 +359,9 @@ export const GLOSARIO: Termino[] = [
     enlace: "/acoso-laboral",
   },
 ];
+
+import { GLOSARIO_EXTRA } from './glosario-extra';
+export const GLOSARIO: Termino[] = [...GLOSARIO_BASE, ...GLOSARIO_EXTRA].sort((a, b) => a.termino.localeCompare(b.termino, 'es'));
 
 export const slugTermino = (t: string) =>
   t

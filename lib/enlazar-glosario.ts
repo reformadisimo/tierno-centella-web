@@ -28,7 +28,7 @@ const patron = new RegExp(
 
 const corta = (t: string) => (t.length <= 150 ? t : t.slice(0, t.lastIndexOf(' ', 147)) + '...').replace(/"/g, '&quot;');
 
-export function enlazarGlosario(html: string, max = 6): string {
+export function enlazarGlosario(html: string, max = 8): string {
   const usados = new Set<string>();
   let total = 0;
   let profundidad = { a: 0, h: 0, bloque: 0 };
