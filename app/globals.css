@@ -7354,9 +7354,10 @@ body{padding-bottom:58px}
 .rs-hecho .boton{margin-top:6px}
 
 /* Movimiento suave en las fotos grandes (zoom lento, solo transform: no pesa ni mueve nada) */
-.foto-cabeza,.prosa-foto{overflow:hidden;border-radius:20px}
-.foto-cabeza img,.prosa-foto img{border-radius:0}
+.foto-cabeza,.prosa-foto,.foto-viva{overflow:hidden;border-radius:20px;line-height:0}
+.foto-cabeza img,.prosa-foto img,.foto-viva img{border-radius:0}
 @media (prefers-reduced-motion:no-preference){
+  .foto-viva img{animation:foto-zoom 22s ease-in-out infinite alternate;transform-origin:55% 45%}
   .foto-cabeza img,.prosa-foto img{animation:foto-zoom 26s ease-in-out infinite alternate;transform-origin:60% 40%}
   .prosa-foto:nth-of-type(even) img{animation-name:foto-zoom-b;transform-origin:35% 50%}
 }
