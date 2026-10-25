@@ -2,6 +2,8 @@ import { Etiqueta } from '@/components/Etiqueta';
 import Link from 'next/link';
 import IconoGuia from '@/components/IconoGuia';
 import type { Metadata } from 'next';
+import FotoVideo from '@/components/FotoVideo';
+import { videoDeFoto } from '@/lib/video-foto';
 import { meta } from '@/lib/seo';
 import Llamada from '@/components/Llamada';
 import LateralHub from '@/components/LateralHub';
@@ -38,14 +40,18 @@ export default function Incapacidad() {
             </div>
           </div>
           <div>
-            <img
-              className="foto"
-              src="/img/incapacidad-ventana.webp" srcSet="/img/incapacidad-ventana-640.webp 640w, /img/incapacidad-ventana.webp 1000w" sizes="(max-width: 860px) 100vw, 50vw"
-              alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra"
-              width={1000}
-              height={676}
-              fetchPriority="high"
-            />
+            {videoDeFoto('incapacidad-ventana') ? (
+              <FotoVideo foto="incapacidad-ventana" alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra" video={videoDeFoto('incapacidad-ventana')!} sizes="(max-width: 860px) 100vw, 50vw" prioridad />
+            ) : (
+              <img
+                className="foto"
+                src="/img/incapacidad-ventana.webp" srcSet="/img/incapacidad-ventana-640.webp 640w, /img/incapacidad-ventana.webp 1000w" sizes="(max-width: 860px) 100vw, 50vw"
+                alt="Una mujer, a contraluz junto a una ventana de oficina, se lleva la mano a la frente con un café en la otra"
+                width={1000}
+                height={676}
+                fetchPriority="high"
+              />
+            )}
             <p className="foto-pie">Imagen ilustrativa.</p>
           </div>
         </div>
