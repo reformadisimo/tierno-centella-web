@@ -75,15 +75,19 @@ export default function Inicio() {
           <Etiqueta icono="corazon">Empieza por aquí</Etiqueta>
           <h2>¿Qué te está pasando?</h2>
           <p className="intro-seccion">Elige tu situación y te decimos, sin dejar datos, cuál es tu siguiente paso.</p>
-          <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
+          <nav className="pasando-chips" aria-label="Elige tu situación">
+            <a href="#pt-despido" className="pc-despido"><Icono nombre="caja" tam={16} /> Despido</a>
+            <a href="#pt-acoso" className="pc-acoso"><Icono nombre="personas" tam={16} /> Acoso</a>
+            <a href="#pt-incapacidad" className="pc-incap"><Icono nombre="escudo" tam={16} /> Incapacidad</a>
+          </nav>
           <div className="pasando">
-            <article className="pasando-tarjeta pt-despido">
+            <article className="pasando-tarjeta pt-despido" id="pt-despido">
               <span className="pt-icono"><Icono nombre="caja" tam={26} /></span>
               <h3>Me han despedido</h3>
               <p>Tienes 20 días hábiles para reclamar. Pon la fecha de tu carta y te decimos cuántos te quedan.</p>
               <Plazo />
             </article>
-            <article className="pasando-tarjeta pt-acoso">
+            <article className="pasando-tarjeta pt-acoso" id="pt-acoso">
               <span className="pt-icono"><Icono nombre="personas" tam={26} /></span>
               <h3>Sufro acoso en el trabajo</h3>
               <p>No es un mal día ni un mal jefe: es un trato hostil que se repite. Se puede demostrar, y aquí te enseñamos cómo.</p>
@@ -102,7 +106,7 @@ export default function Inicio() {
                 <Link className="boton boton-claro" href="/acoso-laboral">Guía del acoso laboral</Link>
               </div>
             </article>
-            <article className="pasando-tarjeta pt-incapacidad">
+            <article className="pasando-tarjeta pt-incapacidad" id="pt-incapacidad">
               <span className="pt-icono"><Icono nombre="escudo" tam={26} /></span>
               <h3>Me han denegado la incapacidad</h3>
               <p>Tienes 30 días hábiles para la reclamación previa. Muchas incapacidades denegadas se ganan después en el juzgado.</p>

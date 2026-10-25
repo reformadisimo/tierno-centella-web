@@ -8158,3 +8158,22 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
 .mm-grupo li a{border-top:1px solid rgba(13,44,72,.06)}
 .mm-grupo li a:active{background:var(--mm-claro)}
 .mm-grupo li a[aria-current='page']{background:var(--mm-claro);color:var(--mm)}
+
+/* Portada, "¿Qué te está pasando?": en el móvil, las tres situaciones a la vista como botones que llevan a su tarjeta */
+.pasando-chips{display:none}
+@media (max-width:760px){
+  .pasando-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 14px}
+  .pasando-chips a{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 6px;border-radius:999px;font-weight:800;font-size:.9rem;text-decoration:none;border:2px solid currentColor;background:#fff}
+  .pc-despido{color:#1b6fd1}.pc-acoso{color:#a8442c}.pc-incap{color:#7a4fb3}
+  .pasando-tarjeta{scroll-margin-top:170px}
+  .seccion:has(.pasando-chips) .desliza-pista{display:none !important}
+}
+/* Pasos interactivos (acoso, despido...): en el móvil, los números en una fila que se ve entera */
+@media (max-width:760px){
+  .linea-pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:6px;overflow:visible;position:relative}
+  .linea-pasos button{width:100%;justify-content:center;padding:4px;min-height:44px;border-radius:14px}
+  .linea-pasos button span{display:none}
+  .linea-pasos button b{width:32px;height:32px}
+}
+/* Salida rápida a la derecha en el móvil: los botones del contenido van a la izquierda */
+@media (max-width:899px){.salida-rapida{left:auto;right:12px}}
