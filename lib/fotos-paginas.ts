@@ -1,13 +1,13 @@
 // Foto de cabecera de cada página que no tenía ninguna. Todas son fotos del despacho o de su propio archivo.
 export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
   '/herramientas': { foto: 'portatil-manos', alt: 'Una persona consulta sus papeles junto al portátil' },
-  '/herramientas/test-acoso': { foto: 'mujer-agobiada', alt: 'Una trabajadora agobiada mientras alguien le entrega papeles' },
+  '/herramientas/test-acoso': { foto: 'mujer-agobiada', alt: 'Una trabajadora agobiada ante su portátil' },
   '/herramientas/test-nulidad': { foto: 'despido-caja', alt: 'Una persona recoge sus cosas en una caja tras un despido' },
   '/herramientas/test-extincion': { foto: 'acuerdo', alt: 'Dos personas se dan la mano tras un acuerdo' },
   '/herramientas/test-baja-laboral': { foto: 'mujer-cafe', alt: 'Una mujer cansada en su mesa de trabajo' },
   '/herramientas/mapa-de-pruebas': { foto: 'documentos-mesa', alt: 'Documentos sobre una mesa del despacho' },
   '/calculadora-indemnizacion': { foto: 'calculadora-papeles', alt: 'Unas manos hacen cuentas con una calculadora' },
-  '/herramientas/revisa-tu-carta-de-despido': { foto: 'documento-pluma', alt: 'Un documento y una pluma' },
+  '/herramientas/revisa-tu-carta-de-despido': { foto: 'documento-pluma', alt: 'Una mano escribe sobre un documento' },
   '/herramientas/plazos': { foto: 'papeleria', alt: 'Un bolígrafo rodea una fecha en un calendario' },
   '/herramientas/calculadora-finiquito': { foto: 'firma-contrato', alt: 'Una persona firma un documento' },
   '/herramientas/calculadora-paro': { foto: 'jubilado-papeles', alt: 'Un hombre revisa sus papeles con la calculadora' },
