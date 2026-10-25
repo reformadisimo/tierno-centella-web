@@ -462,6 +462,8 @@ Fíjate en tres cosas. **Primero**, antes que tu web aparece un directorio de ab
 
 **En LinkedIn tienes tres páginas de empresa, y ninguna ha publicado nunca nada.** TIERNO CENTELLA ABOGADOS (80 seguidores), Tierno Centella (224 seguidores) y Tierno Centella Abogados (154 seguidores): **458 personas que decidieron seguirte, repartidas en tres escaparates vacíos**. Tu perfil personal de LinkedIn tiene 2.371 seguidores, pero publicas muy poco. Y LinkedIn es, con diferencia, el sitio donde están tus futuros clientes de más calidad: **los trabajadores en activo**, los que mañana sufrirán un despido o un acoso; y **los directores de recursos humanos, las empresas y los colegios** que necesitan un protocolo, una investigación o una formación. Es el canal natural para las campañas a instituciones del apartado 18.
 
+**Tu perfil personal sale el tercero cuando alguien busca tu nombre en Google**, justo debajo de tu web. Es tu segunda tarjeta de visita y hoy está casi parado. Lo que cuenta (más de 25 años, sentencias pioneras, los 123.000 € de la Universidad Rey Juan Carlos) es lo mismo que cuenta la web nueva, y eso es bueno: Google y las IA ven los mismos datos en todas partes. Te proponemos ponerlo a punto (titular, extracto, experiencia y enlaces a la web) y darle vida con una o dos publicaciones al mes a partir de tus casos y tus vídeos, escritas por nosotros y revisadas por ti.
+
 Dos páginas de Facebook y tres de LinkedIn, además, **confunden a Google y a las IA**, que no saben cuál es la buena, y reparten entre cinco sitios una autoridad que debería sumar en uno solo.
 
 Esto es lo que ve hoy quien te busca, y cómo quedaría:
@@ -551,7 +553,7 @@ Pulsa cualquier tarjeta para verla: se abre en otra pestaña y no pierdes la gu�
 - **[Sentencias](/sentencias)**: cada caso tiene su propia página, con tribunal, fecha, qué pasó, qué se decidió, por qué importa y la fuente. Una página por sentencia es lo que mejor demuestra experiencia ante Google y lo que más citan las IA. Lo que no está confirmado aparece como pendiente.
 - **[Jesús Tierno](/jesus-tierno)**: tu ficha, con el libro y los vídeos con Piñuel.
 - **[Redes y medios](/redes-y-medios)**, **[Vídeos](/videos)**, **[Blog](/blog)** (con buscador), **[Preguntas frecuentes](/preguntas-frecuentes)**, **[Glosario](/glosario)** (más de 60 términos), **[Empresas y colegios](/empresas)**, **[Contacto](/contacto)** (formulario, WhatsApp, mapa y precios claros).
-- **[Cookies](/cookies), [aviso legal](/aviso-legal) y [privacidad](/privacidad)**, con un aviso de cookies que deja rechazar con un clic.
+- **[Cookies](/cookies), [aviso legal](/aviso-legal) y [privacidad](/privacidad)**, con un aviso de cookies que deja rechazar con un clic. En la web actual, al entrar desde el móvil no nos ha salido ningún aviso de cookies (lo miramos el 25 de octubre de 2026); si la web usa cookies de medición o de terceros, la ley pide ese aviso, y la nueva lo trae de serie.
 
 > Todas las guías llevan la firma "Pendiente de revisión por Jesús Tierno Centella". Cuando las revises, pasará a "Revisado por".
 
@@ -997,6 +999,7 @@ Lo hemos mirado en el Centro de Transparencia Publicitaria de Google, en Semrush
 - Los anuncios son de texto: "Abogado Laboralista Experto - Reserva tu Cita", "Solicita tu Incapacidad - Reserva tu Cita" y otros que **repiten el título de artículos del blog** ("Cómo identificar el acoso laboral o mobbing ? | Tierno Centella"). Eso pasa cuando Google crea los anuncios solo, a partir de tus páginas, y suele traer gente que solo quiere leer, no contratar.
 - Según Semrush, en 2026 se han visto anuncios tuyos en búsquedas como "abogado acoso laboral madrid" (en primera posición, a 1,80-2,64 € el clic), "cómo denunciar acoso laboral", "cómo demostrar el acoso laboral" y "abogado laboralista gratuito".
 - **Tus anuncios casi no se ven.** En los últimos 12 meses, Semrush solo ha detectado anuncios tuyos en **7 búsquedas**, y cada una en uno o dos meses sueltos ("abogado acoso laboral madrid" solo en abril y mayo de 2026; "abogado laboralista gratuito" solo en octubre de 2025). En ordenador, hoy no detecta ninguno. Es la huella típica de una campaña pequeña o que se enciende y se apaga: el dinero que pones apenas llega a quien te busca.
+- **Quien busca tu nombre ve antes el anuncio de otro despacho.** El 25 de octubre de 2026, buscando "jesus tierno centella" en el móvil, lo primero que salía era un anuncio patrocinado de otro abogado laboralista de Madrid, con 4,5 estrellas y 930 reseñas, y después tu ficha y tu web. Es habitual que otros despachos pujen por nombres conocidos. Se evita con una pequeña campaña de marca: anuncios por tu propio nombre, que suelen costar céntimos por clic porque Google premia que el anuncio sea tuyo, y que dejan arriba tu teléfono y tu web.
 - En la búsqueda que hicimos ("abogado acoso laboral madrid") salían patrocinados G2 Abogados y R. Sánchez Abogados, y tu anuncio no. Una sola búsqueda no es concluyente: depende de la hora, el presupuesto y quién busca.
 
 ### Tú frente a la competencia en Google Ads

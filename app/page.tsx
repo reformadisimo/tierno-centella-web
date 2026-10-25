@@ -33,10 +33,12 @@ export default function Inicio() {
         <VideoPortada />
         <div className="contenedor">
           <h1>Abogados laboralistas en Madrid, especialistas en acoso laboral.</h1>
-          <p className="entradilla">
+          <p className="entradilla pv-largo">
             Más de 25 años con despidos, acoso e incapacidad permanente. En 2005 conseguimos la primera condena en España a la empresa y al acosador a la vez. Hoy seguimos
             defendiendo a trabajadoras y trabajadores de toda España, en nuestro despacho de Jorge Juan o por videollamada.
           </p>
+          <p className="entradilla pv-corto">Más de 25 años a tu lado, en Jorge Juan o por videollamada.</p>
+          <p className="pv-sello"><b>2005</b> Primera condena en España a la empresa y al acosador a la vez</p>
           <div className="acciones">
             <Link className="boton boton-marcador" href="/herramientas/test-acoso">
               <Icono nombre="checkCirculo" tam={18} /> ¿Es acoso lo que me pasa?

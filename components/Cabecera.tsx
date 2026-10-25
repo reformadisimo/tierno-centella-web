@@ -20,6 +20,16 @@ const T = {
 
 // Un color por grupo del menú: acoso, despido, incapacidad, mujer y trabajo, herramientas y el despacho.
 const MENU_COLOR = [0, 1, 2, 3, 4, 5];
+// Icono y color de cada bloque del menú del móvil, según su sección.
+function visualGrupo(href: string): { icono: string; c: number } {
+  if (/acoso|harassment/.test(href)) return { icono: 'personas', c: 0 };
+  if (/despido|dismissal/.test(href)) return { icono: 'caja', c: 1 };
+  if (/incapacidad|disability/.test(href)) return { icono: 'sillaRuedas', c: 2 };
+  if (/mujer|women/.test(href)) return { icono: 'corazon', c: 3 };
+  if (/herramientas|tools/.test(href)) return { icono: 'calculadora', c: 4 };
+  if (/mi-caso/.test(href)) return { icono: 'mano', c: 5 };
+  return { icono: 'balanza', c: 6 };
+}
 
 export default function Cabecera() {
   const ruta = usePathname() || '/';
@@ -121,11 +131,17 @@ export default function Cabecera() {
       {abierto && (
         <div id="menu-movil" className="menu-movil">
           <div className="contenedor">
+            <div className="mm-rapido">
+              <a href={DESPACHO.telefonoHref} className="mm-r-tel"><Icono nombre="telefono" tam={20} /><span>{t.llamar}</span></a>
+              <a href={enlaceWhatsapp(t.wa)} className="mm-r-wa"><Icono nombre="whatsapp" tam={20} /><span>WhatsApp</span></a>
+              <Link href={t.citaHref} className="mm-r-cita"><Icono nombre="calendario" tam={20} /><span>{t.cita}</span></Link>
+            </div>
             <p className="mm-intro">{t.pasando}</p>
             <div className="mm-grupos">
-              {menu.map((g) => (
-                <details key={g.titulo} className="mm-grupo" open={g.titulo === grupoActual}>
+              {menu.map((g, n) => (
+                <details key={g.titulo} className={`mm-grupo mm-c${visualGrupo(g.href).c}`} open={g.titulo === grupoActual} style={{ '--mm-i': n } as React.CSSProperties}>
                   <summary>
+                    <span className="mm-icono" aria-hidden="true"><Icono nombre={visualGrupo(g.href).icono} tam={22} /></span>
                     <span className="mm-texto">
                       <strong>{g.titulo}</strong>
                       <small>{g.sub}</small>
@@ -138,6 +154,7 @@ export default function Cabecera() {
                     {g.enlaces.map((e) => (
                       <li key={e.href + e.texto}>
                         <Link href={e.href} aria-current={ruta === e.href ? 'page' : undefined}>
+                          <span className="mm-li-icono" aria-hidden="true"><IconoMenu tipo={tipoIcono(e.href, e.texto)} tam={16} /></span>
                           {e.texto}
                         </Link>
                       </li>
