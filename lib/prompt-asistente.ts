@@ -8,6 +8,7 @@ import { IPREM_2026, TOPES_PARO } from './calculos';
 import { PLAZOS_RECLAMAR } from './plazos-reclamar';
 import { SEDES } from './sedes';
 import { GRUPOS_CASO } from './mi-caso';
+import { TRAMITES } from './tramites';
 
 export const NOMBRE_ASISTENTE = 'Asistente de Tierno Centella';
 
@@ -87,6 +88,7 @@ export function conocimientoWeb() {
   const plazos = PLAZOS_RECLAMAR.map((p) => `- ${p.que}: ${p.plazo}. ${p.desde}${p.nota ? ' ' + p.nota : ''}`).join('\n');
   const sedes = SEDES.map((x) => `- ${x.nombre}: ${x.direccion}. ${x.para}${x.telefono ? ' Teléfono: ' + x.telefono + '.' : ''}${x.nota ? ' ' + x.nota : ''}`).join('\n');
   const situaciones = GRUPOS_CASO.map((g) => `${g.titulo}:\n` + g.situaciones.map((x) => `  - ${x.titulo} -> ` + x.enlaces.map((e) => `${e.texto} (${e.href})`).join(', ')).join('\n')).join('\n');
+  const tramites = TRAMITES.map((t) => `- ${t.titulo}: ${t.para} Pasos: ${t.pasos.join(' ')} Necesitas: ${t.llevas.join('; ')}.`).join('\n');
   const glosario = GLOSARIO.map((g) => `- ${g.termino}: ${g.definicion}`).join('\n');
   const reels = REELS.map((r) => `- ${r.texto} (${r.quien}, ${r.fecha})`).join('\n');
   const medios = MEDIOS.map((m) => `- ${m.fecha}: ${m.titulo}. ${m.texto}`).join('\n');
@@ -166,6 +168,8 @@ ${situaciones}
 ${plazos}
 - /donde-ir: dónde hacer los trámites en Madrid, con botón de Google Maps (comprobado en octubre de 2026; si la citación indica otro edificio, vale lo que diga la citación):
 ${sedes}
+- /tramites: trámites que la persona puede hacer por su cuenta, sin abogado:
+${tramites}
 - /primera-consulta: cómo es la primera consulta paso a paso, qué llevar, cuánto cuesta y qué no hay que hacer.
 - /acompanar: para quien acompaña a una persona despedida, acosada o de baja.
 - La herramienta /herramientas/plazos descuenta por defecto los festivos de Madrid (calendario de 2026 comprobado; en otros años es aproximado).

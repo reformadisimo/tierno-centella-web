@@ -28,6 +28,7 @@ export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
   '/primera-consulta': { foto: 'recepcion', alt: 'La recepción del despacho Tierno Centella' },
   '/acompanar': { foto: 'manos-unidas', alt: 'Dos personas se dan la mano en señal de apoyo' },
   '/plazos-para-reclamar': { foto: 'documento-pluma', alt: 'Una mano escribe sobre un documento' },
+  '/tramites': { foto: 'portatil-manos', alt: 'Unas manos trabajan con un portátil' },
   '/mi-caso': { foto: 'abogada-escucha', alt: 'Una abogada del despacho escucha a una clienta' },
   '/glosario': { foto: 'libros-derecho', alt: 'Libros de derecho en una estantería' },
 };
