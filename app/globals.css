@@ -7357,12 +7357,12 @@ body{padding-bottom:58px}
 .foto-cabeza,.prosa-foto,.foto-viva{overflow:hidden;border-radius:20px;line-height:0}
 .foto-cabeza img,.prosa-foto img,.foto-viva img{border-radius:0}
 @media (prefers-reduced-motion:no-preference){
-  .foto-viva img{animation:foto-zoom 22s ease-in-out infinite alternate;transform-origin:55% 45%}
-  .foto-cabeza img,.prosa-foto img{animation:foto-zoom 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+  .foto-viva img{animation:foto-zoom 14s ease-in-out infinite alternate;transform-origin:55% 45%}
+  .foto-cabeza img,.prosa-foto img{animation:foto-zoom 15s ease-in-out infinite alternate;transform-origin:60% 40%}
   .prosa-foto:nth-of-type(even) img{animation-name:foto-zoom-b;transform-origin:35% 50%}
 }
-@keyframes foto-zoom{from{transform:scale(1)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
-@keyframes foto-zoom-b{from{transform:scale(1.1) translate(1.2%,0)}to{transform:scale(1)}}
+@keyframes foto-zoom{from{transform:scale(1)}to{transform:scale(1.16) translate(-2.5%,-1.5%)}}
+@keyframes foto-zoom-b{from{transform:scale(1.16) translate(2%,0)}to{transform:scale(1)}}
 
 /* Banda de llamada a la acción con cara amable */
 .llamada-seccion{padding-block:48px}
@@ -7713,7 +7713,7 @@ html.a11y-quieto video { display: none !important; }
 /* Un pelín de movimiento en el resto de fotos fijas: zoom lento y suave, solo con transform */
 @media (prefers-reduced-motion:no-preference){
   :where(*:has(> img.foto)):not(.foto-cabeza):not(.prosa-foto):not(.foto-viva){overflow:hidden;border-radius:14px}
-  :where(*:has(> img.foto)):not(.foto-cabeza):not(.prosa-foto):not(.foto-viva) > img.foto{animation:foto-zoom 30s ease-in-out infinite alternate;transform-origin:55% 45%;border-radius:0}
+  :where(*:has(> img.foto)):not(.foto-cabeza):not(.prosa-foto):not(.foto-viva) > img.foto{animation:foto-zoom 18s ease-in-out infinite alternate;transform-origin:55% 45%;border-radius:0}
   .tarjetas-foto img,.galeria img{animation:foto-zoom 32s ease-in-out infinite alternate;transform-origin:50% 45%}
   .tarjetas-foto a:nth-child(even) img,.galeria figure:nth-child(even) img{animation-name:foto-zoom-b}
   .tarjetas-foto a:hover img,.galeria figure:hover img{animation-play-state:paused}
