@@ -42,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/glosario',
     '/barometro',
     '/recursos',
+    '/mi-caso',
+    '/donde-ir',
     '/contacto',
     '/reservar',
   ].map((r) => ({ url: BASE + r }));

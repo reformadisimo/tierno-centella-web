@@ -97,6 +97,8 @@ export const MENU: Grupo[] = [
       { href: '/glosario', texto: 'Glosario laboral' },
       { href: '/barometro', texto: 'Barómetro del acoso' },
       { href: '/recursos', texto: 'Recursos útiles' },
+      { href: '/mi-caso', texto: 'Mi caso es...' },
+      { href: '/donde-ir', texto: 'Dónde ir en Madrid' },
     ],
   },
 ];

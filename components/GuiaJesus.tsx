@@ -379,23 +379,7 @@ function Contenido({ html }: { html: string }) {
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
 const VERSION = 12;
-const NOVEDADES: { texto: string; clave: string }[] = [
-  { clave: '21 bis', texto: 'Apartado nuevo: lo que NO vamos a tocar (tu trato con los clientes, tu equipo, tu voz, tus proveedores actuales si te funcionan, tu ritmo), y arriba, "Si solo tienes un minuto", con lo esencial en tres frases.' },
-  { clave: '22 ter', texto: 'Apartado nuevo: lo que hemos aprendido mirando despachos laboralistas de Estados Unidos, Reino Unido, Francia e Italia, y lo que ya hemos traído: ajustes de lectura para quien ve o lee con dificultad, "Genera tu carta", "¿Es buena la oferta de la empresa?" un aviso inmediato al despacho cuando alguien deja su teléfono en el chat y el barómetro del acoso, con los datos anónimos de los tests (política de privacidad ya actualizada).' },
-  { clave: '22 bis', texto: 'Apartado nuevo: qué resultados creemos que se pueden conseguir (3, 6 y 12 meses), con cifras honestas, sin promesas, y por qué hacerlo todo junto rinde más que cinco proveedores por separado.' },
-  { clave: '2', texto: 'Hemos puesto tu número de colegiado (64865, Colegio de Abogados de Madrid) en el pie de toda la web, marcado como pendiente de confirmar: lo hemos sacado de una ficha pública de internet. Importa por credibilidad: el Código Deontológico lo exige, a Google le sirve para saber que detrás hay un abogado real y verificable, y a quien duda le da confianza. Confírmanos que es correcto y quitamos el aviso.' },
-  { clave: '15', texto: 'Dos herramientas nuevas que hacen que la gente vuelva: "Mi plazo" (si calculas tu plazo para reclamar, la web te lo recuerda en una franja con los días hábiles que te quedan) y "Qué tengo que guardar" (una lista de documentos y pruebas que se marca, se imprime y se comparte por WhatsApp). Además hemos revisado toda la web: 266 páginas sin un solo enlace roto, sin errores y con la accesibilidad corregida.' },
-  { clave: '14', texto: 'Glosario pensado para Google: cada una de las más de 100 palabras del derecho laboral (finiquito, preaviso, incapacidad...) tiene su propia página y su buscador. Es lo que la gente teclea cuando tiene una duda, y así llegan a ti antes que a otros. Cada guía del blog enlaza sola sus palabras clave al glosario (cientos de enlaces internos), que es lo que Google premia. Por dentro, la web habla el idioma de Google y de las inteligencias artificiales (ChatGPT, Perplexity, Claude): datos estructurados en todas las páginas, un llms.txt con todo el contenido y un feed para que lo lean los agregadores. Además, una página de recursos con enlaces oficiales (CENDOJ, BOE, SEPE...) y un recorrido paso a paso del despido.' },
-  { clave: '10', texto: 'El chat de la web ahora se puede usar hablando: un botón de micrófono para dictar la pregunta sin escribir. Además sabe mucho más de ti, del despacho y de tus sentencias.' },
-  { clave: '11', texto: 'Las fotos de las herramientas y de las guías ahora se mueven: clips cortos en bucle, con tu equipo y tu despacho siempre como fotos reales.' },
-  { clave: '6', texto: 'Facebook y LinkedIn: hemos encontrado dos páginas de Facebook (una parada desde 2017, con el piso y el teléfono mal) y tres de LinkedIn sin publicaciones. Te enseñamos lo que ve quien te busca en Google, cómo quedarían y por qué ahí se pueden hacer anuncios muy bien dirigidos.' },
-  { clave: '8', texto: 'La web está cambiando de imagen: barra superior con tus datos y redes, menús con iconos, portada con las áreas y el equipo. No es la definitiva: la estamos puliendo cada día.' },
-  { clave: '19 bis', texto: 'Cómo mejora la web sola cada semana: miramos por dónde navega la gente (mapas de calor), qué pregunta en el chat y dónde se atasca, y cambiamos lo que haga falta.' },
-  { clave: '13', texto: 'Por qué que tu nombre, dirección y teléfono sean iguales en todas partes te hace subir en Google (y por qué Facebook hoy te resta).' },
-  { clave: '25 bis', texto: 'Lo que te costaría contratar cada cosa por separado, con precios de mercado, y la calculadora de comisiones sobre anuncios.' },
-  { clave: '21', texto: 'Cómo se haría el cambio desde tus proveedores actuales, paso a paso y sin cortes.' },
-  { clave: '12', texto: 'Nuestro compromiso de velocidad por escrito: 100 en todo y menos de 2 segundos.' },
-];
+const NOVEDADES: { texto: string; clave: string }[] = [];
 
 function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
   const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades'>('');
