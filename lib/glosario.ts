@@ -359,3 +359,31 @@ export const GLOSARIO: Termino[] = [
     enlace: "/acoso-laboral",
   },
 ];
+
+export const slugTermino = (t: string) =>
+  t
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+const norm = (t: string) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+// Términos relacionados: los que se mencionan entre sí o comparten guía.
+export function relacionados(t: Termino, max = 6): Termino[] {
+  const n = norm(t.termino);
+  return GLOSARIO.filter((o) => o !== t)
+    .map((o) => {
+      const on = norm(o.termino);
+      let p = 0;
+      if (norm(t.definicion).includes(on)) p += 3;
+      if (norm(o.definicion).includes(n)) p += 3;
+      if (t.enlace && o.enlace === t.enlace) p += 1;
+      return { o, p };
+    })
+    .filter((x) => x.p > 0)
+    .sort((a, b) => b.p - a.p)
+    .slice(0, max)
+    .map((x) => x.o);
+}

@@ -378,8 +378,9 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 7;
+const VERSION = 8;
 const NOVEDADES: { texto: string; clave: string }[] = [
+  { clave: '14', texto: 'Glosario pensado para Google: cada palabra del derecho laboral (finiquito, preaviso, incapacidad...) tiene su propia página y su buscador. Es lo que la gente teclea cuando tiene una duda, y así llegan a ti antes que a otros. Además, una página de recursos con enlaces oficiales (CENDOJ, BOE, SEPE...) y un recorrido paso a paso del despido.' },
   { clave: '10', texto: 'El chat de la web ahora se puede usar hablando: un botón de micrófono para dictar la pregunta sin escribir. Además sabe mucho más de ti, del despacho y de tus sentencias.' },
   { clave: '11', texto: 'Las fotos de las herramientas y de las guías ahora se mueven: clips cortos en bucle, con tu equipo y tu despacho siempre como fotos reales.' },
   { clave: '6', texto: 'Facebook y LinkedIn: hemos encontrado dos páginas de Facebook (una parada desde 2017, con el piso y el teléfono mal) y tres de LinkedIn sin publicaciones. Te enseñamos lo que ve quien te busca en Google, cómo quedarían y por qué ahí se pueden hacer anuncios muy bien dirigidos.' },

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { leerColeccion } from '@/lib/contenido';
+import { GLOSARIO, slugTermino } from '@/lib/glosario';
 import { CASOS } from '@/lib/casos';
 import { AREAS_EN } from '@/lib/areas-en';
 import { HERRAMIENTAS_EN } from '@/lib/herramientas-en';
@@ -41,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/reservar',
   ].map((r) => ({ url: BASE + r }));
   const guias = [
+    ...GLOSARIO.map((t) => ({ url: `${BASE}/glosario/${slugTermino(t.termino)}` })),
     ...CASOS.map((c) => ({ url: `${BASE}/sentencias/${c.slug}` })),
     ...['/en', '/en/contact', '/en/jesus-tierno', '/en/rulings', '/en/tools', '/en/blog'].map((r) => ({ url: BASE + r })),
     ...HERRAMIENTAS_EN.map((h) => ({ url: BASE + h.href })),

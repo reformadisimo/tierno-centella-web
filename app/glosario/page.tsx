@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import { GLOSARIO } from '@/lib/glosario';
+import { GLOSARIO, slugTermino } from '@/lib/glosario';
 import { Fragment } from 'react';
 import BuscadorGlosario from '@/components/BuscadorGlosario';
 
@@ -86,7 +86,7 @@ export default function Glosario() {
                   </h2>
                 )}
                 <dl id={slug(t.termino)} data-termino={`${t.termino} ${t.definicion}`} data-letra={t.termino[0].toUpperCase()} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)', margin: 0 }}>
-                  <dt style={{ fontWeight: 700, fontSize: '1.1rem' }}>{t.termino}</dt>
+                  <dt style={{ fontWeight: 700, fontSize: '1.1rem' }}><Link href={`/glosario/${slug(t.termino)}`} style={{ color: 'inherit' }}>{t.termino}</Link></dt>
                   <dd style={{ margin: '4px 0 0' }}>
                     {t.definicion} {t.enlace && <Link href={t.enlace}>Saber más</Link>}
                     <a className="glosario-ancla" href={`#${slug(t.termino)}`} aria-label={`Enlace a ${t.termino}`}>#</a>
