@@ -7382,3 +7382,7 @@ body{padding-bottom:58px}
 /* Toque más amable: botones en píldora y un velo rosado suave en las secciones azules */
 .boton{border-radius:999px}
 .seccion-cielo{background:linear-gradient(180deg,#e8f1f8 0,#f6eef4 100%)}
+
+/* Guía larga: el navegador solo pinta los apartados que se ven (mucho menos trabajo en el móvil) */
+.guia-jesus section.gj-seccion{content-visibility:auto;contain-intrinsic-size:auto 900px}
+@media print{.guia-jesus section.gj-seccion{content-visibility:visible}}
