@@ -18,6 +18,7 @@ export default function CalculadoraFiniquito() {
   const [vacAnuales, setVacAnuales] = useState('30');
   const [vacDisfrutadas, setVacDisfrutadas] = useState('0');
   const [enviado, setEnviado] = useState(false);
+  const [pagado, setPagado] = useState('');
 
   const s = numero(salario);
   const error = !enviado
@@ -134,6 +135,12 @@ export default function CalculadoraFiniquito() {
         </div>
       </div>
 
+      <div className="campo">
+        <label htmlFor="pagado">Lo que te han pagado de finiquito, en bruto (opcional)</label>
+        <input id="pagado" type="text" inputMode="decimal" value={pagado} onChange={(e) => setPagado(e.target.value)} placeholder="Por ejemplo: 1.250,00" />
+        <span className="campo-ayuda">Si lo pones, te decimos cuánto podría faltarte. Míralo en tu nómina de liquidación.</span>
+      </div>
+
       <button type="submit" className="boton boton-marcador">
         Calcular mi finiquito
       </button>
@@ -171,6 +178,20 @@ export default function CalculadoraFiniquito() {
               )}
             </tbody>
           </table>
+          {(() => {
+            const p = leerImporte(pagado);
+            if (!pagado.trim() || !Number.isFinite(p)) return null;
+            const dif = Math.round((r.total - p) * 100) / 100;
+            return (
+              <p className="recuadro" role="status">
+                {dif > 0.5
+                  ? `Según este cálculo orientativo, podrían faltarte unos ${eurosConCentimos(dif)} brutos. Puede haber diferencias legítimas (tu convenio, pluses, otras fechas), así que conviene que un abogado lo revise antes de firmar.`
+                  : dif < -0.5
+                    ? `Lo que te han pagado es unos ${eurosConCentimos(-dif)} más que este cálculo. Es buena señal, aunque no incluye pluses ni atrasos de convenio.`
+                    : 'Lo que te han pagado coincide con este cálculo orientativo.'}
+              </p>
+            );
+          })()}
           <p className="recuadro">
             El finiquito no es la indemnización: es lo que ya te debían. Si te han despedido, la indemnización va aparte. Calcúlala en{' '}
             <Link href="/calculadora-indemnizacion">la calculadora de indemnización</Link>. Y al firmar, escribe <strong>"no conforme"</strong> si no estás de

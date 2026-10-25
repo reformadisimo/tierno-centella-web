@@ -60,6 +60,28 @@ const MODELOS: Modelo[] = [
       `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de documentación laboral\n\nYo, ${f.yo}, les solicito copia de la siguiente documentación relativa a mi relación laboral:\n\n${v(x.cuales, 'documentos')}\n\nLes agradeceré que me la entreguen en un plazo razonable.\n\nAtentamente,\n${f.yo}`,
   },
   {
+    id: 'jornada',
+    nombre: 'Pedir reducción o adaptación de mi jornada para cuidar',
+    intro: 'Si cuidas de un hijo o de un familiar, la ley te permite pedir reducir o adaptar tu jornada. Una solicitud por escrito y fechada deja constancia y abre la negociación con la empresa.',
+    campos: [
+      { id: 'motivo', etiqueta: 'A quién cuidas y desde cuándo', area: true, ayuda: 'Por ejemplo: mi hija, de 6 años, con la que convivo' },
+      { id: 'peticion', etiqueta: 'Qué pides exactamente', area: true, ayuda: 'Por ejemplo: reducir mi jornada en un tercio, con salida a las 15:00' },
+      { id: 'desde', etiqueta: 'Desde qué fecha lo pides' },
+    ],
+    aviso: 'Pide que te sellen o firmen una copia, o envíala de forma que quede constancia. La empresa debe contestar y, si lo rechaza, argumentarlo. Antes de enviarla, conviene que un abogado la revise: los derechos y plazos dependen de tu situación y de tu convenio.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de reducción o adaptación de jornada por cuidado\n\nYo, ${f.yo}, trabajador/a de su empresa, les comunico que ${v(x.motivo, 'a quién cuidas y desde cuándo')}.\n\nPor este motivo, y al amparo de lo previsto en el Estatuto de los Trabajadores, les solicito: ${v(x.peticion, 'qué pides exactamente')}, a partir del ${v(x.desde, 'fecha')}.\n\nQuedo a su disposición para acordar los detalles y les ruego que me contesten por escrito.\n\nFdo.: ${f.yo}`,
+  },
+  {
+    id: 'registro',
+    nombre: 'Pedir copia de mi registro de jornada',
+    intro: 'Las empresas deben registrar la jornada diaria de cada persona. Si crees que te deben horas extra, esa información es clave.',
+    campos: [{ id: 'periodo', etiqueta: 'De qué periodo la necesitas', ayuda: 'Por ejemplo: de enero a septiembre de 2026' }],
+    aviso: 'Guarda también tus propios apuntes de horas, aunque sean en el móvil. Si la empresa no te lo da, cuéntanoslo: eso también tiene importancia.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de copia del registro de jornada\n\nYo, ${f.yo}, trabajador/a de su empresa, les solicito copia de mi registro de jornada correspondiente a ${v(x.periodo, 'periodo')}.\n\nLes agradezco que me la entreguen por escrito en un plazo razonable.\n\nFdo.: ${f.yo}`,
+  },
+  {
     id: 'acoso',
     nombre: 'Comunicar una situación de acoso a la empresa',
     intro: 'Una queja formal pide a la empresa que investigue y proteja. Es un paso importante: conviene que un abogado la lea antes de enviarla.',
@@ -83,6 +105,17 @@ export default function GeneraCarta() {
   const m = MODELOS.find((x) => x.id === id)!;
   const fecha = useMemo(() => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Madrid' }).format(new Date(`${hoyMadrid()}T12:00:00Z`)), []);
   const texto = m.texto(vals, { yo: v(yo, 'tu nombre completo'), empresa: v(empresa, 'nombre de la empresa'), ciudad: v(ciudad, 'ciudad'), fecha });
+  function descargar() {
+    const html = `<html><head><meta charset="utf-8"></head><body style="font-family:Calibri,Arial,sans-serif;font-size:12pt;line-height:1.5">${texto.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\n/g, '<br>')}</body></html>`;
+    const url = URL.createObjectURL(new Blob(['\ufeff', html], { type: 'application/msword' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `carta-${m.id}.doc`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
   async function copiar() {
     try {
       await navigator.clipboard.writeText(texto);
@@ -136,6 +169,7 @@ export default function GeneraCarta() {
       {m.aviso && <p className="recuadro">{m.aviso}</p>}
       <div className="acciones">
         <button type="button" className="boton" onClick={copiar}>{copiada ? 'Copiada' : 'Copiar la carta'}</button>
+        <button type="button" className="boton boton-claro" onClick={descargar}>Descargar en Word</button>
         <BotonImprimir />
         <a className="boton boton-claro" href={enlaceWhatsapp(`Hola, he preparado una carta (${m.nombre}) y me gustaría que un abogado la revisara antes de enviarla.`)}>Que la revise un abogado</a>
         <a className="boton boton-claro" href={DESPACHO.telefonoHref}>Llamar al {DESPACHO.telefono}</a>
