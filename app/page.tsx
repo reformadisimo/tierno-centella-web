@@ -387,7 +387,7 @@ export default function Inicio() {
               {DESPACHO.precioCitaJesus} €{DESPACHO.iva} con Jesús Tierno. Antes de reservar te decimos por teléfono o WhatsApp si tu caso la necesita.
             </p>
             <div className="acciones">
-              <Link className="boton" href="/contacto">
+              <Link className="boton" href="/reservar">
                 <Icono nombre="calendario" tam={17} /> Pedir cita
               </Link>
               <a className="boton boton-claro" href={DESPACHO.telefonoHref}>

@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/preguntas-frecuentes',
     '/glosario',
     '/contacto',
+    '/reservar',
   ].map((r) => ({ url: BASE + r }));
   const guias = [
     ...CASOS.map((c) => ({ url: `${BASE}/sentencias/${c.slug}` })),

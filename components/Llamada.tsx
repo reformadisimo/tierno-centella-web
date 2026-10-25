@@ -14,7 +14,7 @@ export default function Llamada({ asunto }: { asunto: string }) {
           <a className="boton boton-claro" href={enlaceWhatsapp(`Hola, quiero consultar un caso de ${asunto}.`)}>
             Escribir por WhatsApp
           </a>
-          <Link className="boton boton-claro" href="/contacto">
+          <Link className="boton boton-claro" href="/reservar">
             Pedir cita
           </Link>
         </div>

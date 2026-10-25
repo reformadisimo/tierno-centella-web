@@ -14,8 +14,8 @@ const EN_EXISTEN = new Set(Object.values(GUIAS_ES_EN));
 const MENU_EN_VISIBLE = MENU_EN.map((g) => ({ ...g, enlaces: g.enlaces.filter((e) => e.href.split('/').length < 4 || !e.href.startsWith('/en/') || EN_EXISTEN.has(e.href)) }));
 
 const T = {
-  es: { inicio: '/', inicioAria: 'Tierno Centella Abogados, inicio', principal: 'Principal', contacto: 'Contacto', contactoHref: '/contacto', llamarAria: 'Llamar al', menu: 'Menú', cerrar: 'Cerrar', pasando: '¿Qué te está pasando?', jesusHref: '/jesus-tierno', jesusSub: 'Más de 25 años defendiendo a trabajadores', hablamos: '¿Hablamos de tu caso?', consulta: 'Primera consulta de una hora:', video: 'Madrid, o por videollamada.', llamar: 'Llamar', cita: 'Pedir cita', wa: 'Hola, quiero consultar mi caso.', buscar: 'Buscar en la web', buscarHref: '/buscar', otro: 'EN', otroAria: 'EN, English version', otroLang: 'en' },
-  en: { inicio: '/en', inicioAria: 'Tierno Centella Abogados, home', principal: 'Main', contacto: 'Contact', contactoHref: '/en/contact', llamarAria: 'Call', menu: 'Menu', cerrar: 'Close', pasando: 'What is happening to you?', jesusHref: '/en/jesus-tierno', jesusSub: 'Over 25 years defending workers', hablamos: 'Shall we talk about your case?', consulta: 'One-hour first consultation:', video: 'Madrid, or by video call. We speak English.', llamar: 'Call', cita: 'Book a consultation', wa: 'Hello, I would like to ask about my case.', buscar: 'Search the website', buscarHref: '/en/search', otro: 'ES', otroAria: 'ES, versión en español', otroLang: 'es' },
+  es: { inicio: '/', inicioAria: 'Tierno Centella Abogados, inicio', principal: 'Principal', contacto: 'Contacto', contactoHref: '/contacto', citaHref: '/reservar', llamarAria: 'Llamar al', menu: 'Menú', cerrar: 'Cerrar', pasando: '¿Qué te está pasando?', jesusHref: '/jesus-tierno', jesusSub: 'Más de 25 años defendiendo a trabajadores', hablamos: '¿Hablamos de tu caso?', consulta: 'Primera consulta de una hora:', video: 'Madrid, o por videollamada.', llamar: 'Llamar', cita: 'Pedir cita', wa: 'Hola, quiero consultar mi caso.', buscar: 'Buscar en la web', buscarHref: '/buscar', otro: 'EN', otroAria: 'EN, English version', otroLang: 'en' },
+  en: { inicio: '/en', inicioAria: 'Tierno Centella Abogados, home', principal: 'Main', contacto: 'Contact', contactoHref: '/en/contact', citaHref: '/en/contact', llamarAria: 'Call', menu: 'Menu', cerrar: 'Close', pasando: 'What is happening to you?', jesusHref: '/en/jesus-tierno', jesusSub: 'Over 25 years defending workers', hablamos: 'Shall we talk about your case?', consulta: 'One-hour first consultation:', video: 'Madrid, or by video call. We speak English.', llamar: 'Call', cita: 'Book a consultation', wa: 'Hello, I would like to ask about my case.', buscar: 'Search the website', buscarHref: '/en/search', otro: 'ES', otroAria: 'ES, versión en español', otroLang: 'es' },
 };
 
 // Un color por grupo del menú: acoso, despido, incapacidad, mujer y trabajo, herramientas y el despacho.
@@ -92,7 +92,7 @@ export default function Cabecera() {
               <path d="m20 20-3.5-3.5" />
             </svg>
           </Link>
-          <Link className="boton boton-marcador cabecera-cita" href={t.contactoHref}>
+          <Link className="boton boton-marcador cabecera-cita" href={t.citaHref}>
             <Icono nombre="calendario" tam={17} />
             <span>{t.cita}</span>
           </Link>
@@ -164,7 +164,7 @@ export default function Cabecera() {
                 <a className="boton mm-wa" href={enlaceWhatsapp(t.wa)}>
                   WhatsApp
                 </a>
-                <Link className="boton mm-cita" href={t.contactoHref}>
+                <Link className="boton mm-cita" href={t.citaHref}>
                   {t.cita}
                 </Link>
               </div>

@@ -7341,3 +7341,14 @@ body{padding-bottom:58px}
 .th-chip svg{color:#d9694d}
 .th-test .th-chip{background:#d9694d;color:#fff}.th-test .th-chip svg{color:#fff}
 .th-calc .th-chip{background:#f2c14e}.th-calc .th-chip svg{color:#0d2c48}
+
+/* Reserva de consulta */
+.rs{max-width:none}
+.rs .paso-opcion{justify-content:flex-start}
+.rs-precio{margin-left:auto;white-space:nowrap;color:#a8442c;font-size:1.05rem}
+.rs-resumen{display:flex;gap:8px;align-items:center;background:#fff6dc;border-radius:14px;padding:10px 14px;margin:10px 0 16px;font-size:.95rem}
+.rs-resumen svg{color:#b8902e;flex:none}
+.rs .rs-enviar{width:100%;justify-content:center;font-size:1.05rem;padding-block:15px}
+.rs .escala label{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:9px 15px;font-weight:600}
+.rs .escala label:has(input:checked){background:#d9694d;border-color:#d9694d;color:#fff}
+.rs-hecho .boton{margin-top:6px}

@@ -60,7 +60,7 @@ export default function Pie() {
               <li><span>{en ? 'With a lawyer of the firm' : 'Con un abogado del despacho'}</span><b>{DESPACHO.precioCita} €{DESPACHO.iva}</b></li>
               <li><span>{en ? 'With Jesús Tierno' : 'Con Jesús Tierno'}</span><b>{DESPACHO.precioCitaJesus} €{DESPACHO.iva}</b></li>
             </ul>
-            <Link className="boton boton-marcador pie-boton" href={en ? '/en/contact' : '/contacto'}>
+            <Link className="boton boton-marcador pie-boton" href={en ? '/en/contact' : '/reservar'}>
               <Icono nombre="calendario" tam={17} /> {en ? 'Book a consultation' : 'Pedir cita'}
             </Link>
           </div>

@@ -33,6 +33,7 @@ export function indiceEs(): Resultado[] {
   for (const g of GLOSARIO) r.push({ href: `/glosario#${g.termino.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`, titulo: g.termino, tipo: 'Glosario', resumen: g.definicion.slice(0, 180), texto: g.definicion });
   for (const f of FAQ) r.push({ href: '/preguntas-frecuentes', titulo: f.pregunta, tipo: 'Pregunta frecuente', resumen: f.respuesta.slice(0, 180), texto: f.respuesta });
   const fijas: [string, string, string][] = [
+    ['/reservar', 'Reservar una consulta', 'Reserva tu consulta de una hora, online o en Jorge Juan, con un abogado del despacho o con Jesús Tierno.'],
     ['/contacto', 'Contacto y cita', 'Teléfono, WhatsApp, dirección en Jorge Juan 78 (Madrid), precio de la consulta y formulario.'],
     ['/jesus-tierno', 'Jesús Tierno Centella', 'Abogado laboralista, socio director: trayectoria, libro y entrevistas.'],
     ['/empresas', 'Para empresas y centros educativos', 'Protocolos de acoso, canal de denuncias, plan de igualdad y formación.'],
