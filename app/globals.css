@@ -8059,3 +8059,7 @@ html.a11y-quieto video { display: none !important; }
   .menu-grupo:focus-within:not(:hover):not(:has(:focus-visible)) .menu-desplegable { visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
 }
 
+.prosa .pc-despues { list-style: none; padding: 0; display: grid; gap: 10px; margin: 14px 0 32px; }
+.prosa .pc-despues li { position: relative; margin: 0; padding: 16px 16px 16px 58px; background: #fff; border-radius: 16px; box-shadow: 0 6px 18px rgba(13,44,72,.06); line-height: 1.45; }
+.prosa .pc-despues li::before { content: ''; position: absolute; left: 16px; top: 16px; width: 30px; height: 30px; border-radius: 50%; background: #2c7a5b; }
+.prosa .pc-despues li::after { content: ''; position: absolute; left: 27px; top: 22px; width: 7px; height: 13px; border-right: 3px solid #fff; border-bottom: 3px solid #fff; transform: rotate(45deg); }

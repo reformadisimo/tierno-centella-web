@@ -74,6 +74,13 @@ export default function PrimeraConsulta() {
           </div>
           <p>Antes de reservar te decimos si tu caso la necesita, y si seguís adelante, te explicamos cómo se trabaja y cuánto costaría.</p>
 
+          <h2>Si después decides seguir</h2>
+          <ul className="pc-despues">
+            <li><strong>Antes de empezar, todo por escrito:</strong> qué vamos a hacer, cómo se calculan los honorarios y qué opciones tienes. Sin letra pequeña.</li>
+            <li><strong>Nada empieza sin tu firma.</strong> Si prefieres pensártelo o buscar otra opinión, también está bien.</li>
+            <li><strong>Sabrás en qué punto está tu caso</strong> sin tener que preguntar, y con quién hablar en cada momento.</li>
+          </ul>
+
           <h2>Lo que NO tienes que hacer</h2>
           <ul className="pc-no">
             <li><strong>No tienes que traerlo todo ordenado.</strong> Con lo que tengas, empezamos.</li>
