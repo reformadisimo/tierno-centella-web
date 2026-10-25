@@ -9,7 +9,7 @@ imagenAlt: Law books on a shelf
 es: que-hacer-si-el-inss-deniega-la-incapacidad
 ---
 
-If the social security office (INSS) denies your permanent disability (incapacidad permanente) or recognises a lower degree than you believe you are entitled to, you have 30 working days (días hábiles) from notification to file a prior administrative claim (reclamación previa). If it rejects it or does not reply within 45 days, you can sue before the Social Court (Juzgado de lo Social). A refusal is not the end: many disabilities are recognised at trial.
+If the social security office (INSS) denies your permanent disability (incapacidad permanente) or recognises a lower degree than you believe you are entitled to, you have 30 working days (días hábiles) from notification to file a prior administrative claim (reclamación previa). If it rejects it or does not reply within 45 working days, you can sue before the Social Court (Juzgado de lo Social). A refusal is not the end: many disabilities are recognised at trial.
 
 ## Read the decision carefully
 
@@ -40,10 +40,10 @@ Anything you do not raise here may be harder to introduce later, so this is an i
 
 ## Step 2: the INSS's reply
 
-The INSS has 45 days to reply. Two things can happen:
+The INSS has 45 working days to reply. Two things can happen:
 
 - **It replies in writing.** If it agrees with you, the problem is over. If it rejects the claim, the period for suing opens.
-- **It does not reply.** After 45 days, the claim is deemed rejected by administrative silence (silencio). There is no need to wait any longer.
+- **It does not reply.** After 45 working days, the claim is deemed rejected by administrative silence (silencio). There is no need to wait any longer.
 
 ## Step 3: the court claim before the Social Court
 

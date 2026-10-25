@@ -19,7 +19,7 @@ It is the situation of someone who, after treatment, still has serious and fores
 - **Partial (parcial).** You perform less well in your profession, but you can carry on. A single lump sum of 24 months' pay is paid.
 - **Total (total).** You cannot do your usual profession, but you can do another. A pension of 55% of the regulatory base (base reguladora), which can rise to 75% from the age of 55 if you are not working.
 - **Absolute (absoluta).** You cannot do any work. A pension of 100%.
-- **Severe disability (gran incapacidad).** In addition, you need another person's help for basic activities such as eating, dressing or washing. A pension of 100% plus a supplement.
+- **Severe disability (gran incapacidad).** In addition, you need another person's help for basic activities such as eating, dressing or washing. The pension that applies plus a supplement to pay the person who helps you.
 
 In anxiety and depressive disorders, when it is granted, the most common degrees are total or absolute.
 

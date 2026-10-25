@@ -8063,3 +8063,8 @@ html.a11y-quieto video { display: none !important; }
 .prosa .pc-despues li { position: relative; margin: 0; padding: 16px 16px 16px 58px; background: #fff; border-radius: 16px; box-shadow: 0 6px 18px rgba(13,44,72,.06); line-height: 1.45; }
 .prosa .pc-despues li::before { content: ''; position: absolute; left: 16px; top: 16px; width: 30px; height: 30px; border-radius: 50%; background: #2c7a5b; }
 .prosa .pc-despues li::after { content: ''; position: absolute; left: 27px; top: 22px; width: 7px; height: 13px; border-right: 3px solid #fff; border-bottom: 3px solid #fff; transform: rotate(45deg); }
+
+/* Movimiento de las fotos a un ritmo que se perciba en los primeros segundos */
+@media (prefers-reduced-motion: no-preference) {
+  .foto-cabeza img, .prosa-foto img, .foto-viva img, .guia-foto img, .lateral-foto img, .pj-foto img, .ficha-lado img, .bloque-foto img, .faq-foto img, .cabeza-con-foto > img.foto, .tarjetas-foto img { animation-duration: 9s !important; }
+}

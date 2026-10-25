@@ -53,7 +53,7 @@ The INSS has 45 working days to reply. It can:
 - Accept it and recognise what you are asking for.
 - Accept it in part.
 - Reject it.
-- Not reply. Once the 45 days have passed, it is treated as rejected by administrative silence and you can go to court without waiting any longer.
+- Not reply. Once the 45 working days have passed, it is treated as rejected by administrative silence and you can go to court without waiting any longer.
 
 ## Step 3: the lawsuit at the Labour Court
 

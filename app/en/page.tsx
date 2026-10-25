@@ -29,7 +29,7 @@ export default function InicioEn() {
         <div className="contenedor">
           <h1>Employment lawyers in Madrid, specialists in workplace harassment.</h1>
           <p className="entradilla">
-            Over 25 years with dismissals, harassment and permanent disability. In 2005 we obtained the first ruling in Spain against the harasser personally.
+            Over 25 years with dismissals, harassment and permanent disability. In 2005 we obtained the first ruling in Spain against both the company and the harasser.
             We help workers from all over Spain, in English, at our office on Jorge Juan street or by video call.
           </p>
           <div className="acciones">

@@ -8,7 +8,7 @@ export const metadata: Metadata = meta({
   titulo: 'Jesús Tierno Centella, workplace harassment lawyer in Madrid',
   tituloSeo: 'Jesús Tierno Centella, employment lawyer',
   descripcion:
-    'Managing partner of Tierno Centella Abogados. Over 25 years in employment law, behind the first ruling in Spain against a workplace harasser (2005) and co-author of a book on work values.',
+    'Managing partner of Tierno Centella Abogados. Over 25 years in employment law, who obtained in 2005 the first ruling in Spain against both the company and the harasser and co-author of a book on work values.',
   ruta: '/en/jesus-tierno',
 });
 
