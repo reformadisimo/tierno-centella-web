@@ -7268,3 +7268,76 @@ body{padding-bottom:58px}
 .lp-eventos li{display:flex;flex-direction:column;gap:2px;background:#fbe9ef;border-radius:12px;padding:10px 12px}
 .lp-eventos small{color:#7a4fb3}
 @media (max-width:640px){.lp-barras li{grid-template-columns:1fr 70px}.lp-barra{grid-column:1/-1;order:3}}
+
+/* Puente invisible entre el enlace del menú y su desplegable: al bajar el ratón no se cierra */
+@media (min-width:1100px){
+  .menu-desplegable::before{content:'';position:absolute;left:0;right:0;top:-18px;height:18px}
+  .menu-grupo:hover .menu-desplegable,.menu-grupo:focus-within .menu-desplegable{animation:menu-entra .16s ease-out}
+}
+@keyframes menu-entra{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* Tests paso a paso: una pregunta cada vez, tarjetas con letra, barra con marcador y veredicto con sello */
+.cq{max-width:760px;background:linear-gradient(180deg,#fff 0,#fff 55%,var(--cielo,#e8f1f8) 140%);border:1px solid #dbe6f0;border-radius:24px;box-shadow:0 18px 44px rgba(13,44,72,.1);padding:clamp(20px,4vw,34px)}
+.cq-progreso{height:10px;background:#e6eef6;border-radius:999px;margin:6px 0 14px;position:relative}
+.cq-progreso span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#f2c14e,#d9694d);position:relative;transition:width .35s cubic-bezier(.4,0,.2,1)}
+.cq-progreso i{position:absolute;right:-10px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:#fff;border:4px solid #d9694d;box-shadow:0 3px 8px rgba(217,105,77,.4)}
+.cq .campo-ayuda{font-weight:600;color:#6a7c8d}
+.cq .paso-pregunta{font-size:clamp(1.35rem,3.4vw,1.8rem);font-weight:800;color:#0d2c48}
+.cq .paso-opciones{gap:12px;margin-top:18px}
+.cq .paso-opcion{align-items:center;gap:14px;border:2px solid #dbe6f0;border-radius:18px;padding:14px 18px;min-height:64px;font-size:1.05rem;font-weight:600;transition:transform .15s,border-color .15s,box-shadow .15s,background .15s}
+.cq .paso-opcion:hover{border-color:#d9694d;transform:translateY(-2px);box-shadow:0 10px 22px rgba(13,44,72,.1)}
+.cq .paso-opcion small{font-weight:400}
+.cq .paso-opcion.elegida,.cq .paso-opcion:has(input:checked){border-color:#d9694d;background:#fff4ef;box-shadow:0 0 0 3px rgba(217,105,77,.18)}
+.cq .paso-opcion input{position:absolute;opacity:0;pointer-events:none}
+.cq .paso-opcion:has(input:focus-visible){outline:3px solid var(--foco,#1b6fd1);outline-offset:2px}
+.cq-letra{flex:none;width:38px;height:38px;border-radius:12px;background:#e8f1f8;color:#0d2c48;display:flex;align-items:center;justify-content:center;font-weight:800;transition:background .15s,color .15s}
+.cq .paso-opcion:hover .cq-letra{background:#fbe9ef;color:#a8442c}
+.cq .paso-opcion.elegida .cq-letra,.cq .paso-opcion:has(input:checked) .cq-letra{background:#d9694d;color:#fff}
+.cq .acciones .boton{border-radius:999px}
+.cq-veredicto{position:relative;border:0;border-radius:20px;padding:22px 22px 22px 86px;background:#e8f1f8;margin:8px 0 20px}
+.cq-veredicto h3{margin:0 0 8px;font-size:1.35rem;color:#0d2c48}
+.cq-sello{position:absolute;left:20px;top:20px;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#17602f;color:#fff}
+.cq-medio{background:#fff6dc}.cq-medio .cq-sello{background:#b8902e}
+.cq-alto,.cq-veredicto.veredicto-alto{background:#fde8e4}.cq-alto .cq-sello{background:#a8442c}
+@media (prefers-reduced-motion:no-preference){.cq-veredicto{animation:aparece .4s ease-out}.cq-sello{animation:sello-pop .5s .15s both cubic-bezier(.3,1.6,.5,1)}}
+@keyframes sello-pop{from{transform:scale(.3);opacity:0}to{transform:none;opacity:1}}
+@media (max-width:520px){.cq-veredicto{padding:80px 18px 18px}.cq .paso-opcion{padding:12px 14px}}
+
+/* Formulario "Te llamamos" */
+.fl{background:linear-gradient(180deg,#fff,#fbf7f0);border:1px solid #eadfca;border-radius:24px;box-shadow:0 18px 44px rgba(13,44,72,.1);position:relative;overflow:hidden}
+.fl::before{content:'';position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,#f2c14e,#d9694d,#c2477a)}
+.fl-cabeza{display:flex;gap:14px;align-items:center;margin:6px 0 18px}
+.fl-cabeza h2{font-size:1.4rem;margin:0 0 2px}
+.fl-cabeza .campo-ayuda{margin:0}
+.fl-icono{flex:none;width:52px;height:52px;border-radius:16px;background:#0d2c48;color:#f2c14e;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(13,44,72,.25)}
+.fl .escala{gap:10px}
+.fl .escala label{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 16px;font-weight:600;background:#fff;transition:transform .15s,border-color .15s,box-shadow .15s}
+.fl .escala label svg{color:#d9694d}
+.fl .escala label:hover{border-color:#d9694d;transform:translateY(-1px)}
+.fl .escala label:has(input:checked){background:#d9694d;border-color:#d9694d;color:#fff;box-shadow:0 8px 18px rgba(217,105,77,.35)}
+.fl .escala label:has(input:checked) svg{color:#fff}
+.fl input[type='text'],.fl input[type='tel'],.fl input[type='email'],.fl select,.fl textarea{border-radius:14px;border-width:2px;background:#fff}
+.fl input:focus,.fl select:focus,.fl textarea:focus{border-color:#d9694d;outline:0;box-shadow:0 0 0 4px rgba(217,105,77,.18)}
+.fl .boton-marcador{width:100%;justify-content:center;border-radius:999px;font-size:1.05rem;padding-block:15px}
+.fl-pie{display:flex;gap:8px;align-items:center;justify-content:center;margin:12px 0 0;font-size:.88rem;color:#6a7c8d}
+.fl-hecho{background:linear-gradient(180deg,#eefaf1,#fff);border:1px solid #bfe3c9;border-radius:24px;padding:34px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.fl-hecho h3{margin:0;font-size:1.5rem}.fl-hecho p{margin:0 0 8px;max-width:420px}
+.fl-hecho-sello{width:64px;height:64px;border-radius:50%;background:#1f9d55;color:#fff;display:flex;align-items:center;justify-content:center}
+@media (prefers-reduced-motion:no-preference){.fl-hecho-sello{animation:sello-pop .5s both cubic-bezier(.3,1.6,.5,1)}}
+
+/* Calculadoras y demás herramientas: tarjeta más viva, campos y resultados con cuerpo */
+.herramienta:not(.cq):not(.fl){border-radius:24px;border-color:#dbe6f0;box-shadow:0 14px 36px rgba(13,44,72,.08);background:linear-gradient(180deg,#fff 60%,#f3f8fc)}
+.herramienta:not(.cq):not(.fl) .boton{border-radius:999px}
+.herramienta input[type='date'],.herramienta input[type='number'],.herramienta input[type='text'],.herramienta input[type='tel'],.herramienta input[type='email'],.herramienta select{border-radius:14px}
+.herramienta input:focus,.herramienta select:focus{border-color:#d9694d;outline:0;box-shadow:0 0 0 4px rgba(217,105,77,.18)}
+.herramienta .resultado{border-top:0;background:#fff6dc;border-radius:20px;padding:22px;margin-top:24px}
+.herramienta .escala label{border-radius:999px;font-weight:600}
+.herramienta .escala label:has(input:checked){background:#d9694d;border-color:#d9694d}
+
+/* Índice de herramientas: etiqueta de tipo sobre la foto y tarjetas con más cuerpo */
+.tarjetas-foto a{position:relative;border-radius:20px;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.tarjetas-foto a:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(13,44,72,.16)}
+.th-chip{position:absolute;z-index:2;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;background:#fff;color:#0d2c48;font-size:.78rem;font-weight:800;letter-spacing:.02em;padding:6px 12px;border-radius:999px;box-shadow:0 4px 12px rgba(13,44,72,.2)}
+.th-chip svg{color:#d9694d}
+.th-test .th-chip{background:#d9694d;color:#fff}.th-test .th-chip svg{color:#fff}
+.th-calc .th-chip{background:#f2c14e}.th-calc .th-chip svg{color:#0d2c48}

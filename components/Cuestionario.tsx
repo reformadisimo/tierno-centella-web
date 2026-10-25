@@ -35,6 +35,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   const [resp, setResp] = useState<Respuestas>({});
   const [indice, setIndice] = useState(0);
   const [elegidas, setElegidas] = useState<Opcion[]>([]);
+  const [pulsada, setPulsada] = useState('');
 
   // Un paso condicional se decide en cuanto están respondidos los pasos activos anteriores (los saltados no cuentan);
   // mientras tanto se cuenta, para que el contador no prometa menos preguntas de las que habrá.
@@ -62,6 +63,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
     nuevas[paso.id] = opciones;
     setResp(nuevas);
     setElegidas([]);
+    setPulsada('');
     setIndice((i) => i + 1);
     requestAnimationFrame(() => document.getElementById('cuestionario')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }));
   }
@@ -82,11 +84,13 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   const res = terminado ? resultado(resp) : null;
 
   return (
-    <div className="herramienta" id="cuestionario">
+    <div className="herramienta cq" id="cuestionario">
       {!terminado && paso && (
         <>
-          <div className="progreso" aria-hidden="true">
-            <span style={{ width: `${(indice / activos.length) * 100}%` }} />
+          <div className="cq-progreso" aria-hidden="true">
+            <span style={{ width: `${Math.max(4, (indice / activos.length) * 100)}%` }}>
+              <i />
+            </span>
           </div>
           <p className="campo-ayuda" style={{ marginTop: -8 }}>
             Pregunta {indice + 1} de {activos.length}. Sin datos personales.
@@ -97,9 +101,10 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
             </legend>
             {paso.ayuda && <p className="campo-ayuda">{paso.ayuda}</p>}
             <div className="paso-opciones">
-              {paso.opciones.map((o) =>
+              {paso.opciones.map((o, n) =>
                 paso.multiple ? (
                   <label key={o.texto} className="paso-opcion">
+                    <b className="cq-letra" aria-hidden="true">{String.fromCharCode(65 + n)}</b>
                     <input
                       type="checkbox"
                       checked={elegidas.some((e) => e.texto === o.texto)}
@@ -116,9 +121,14 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
                   <button
                     key={o.texto}
                     type="button"
-                    className={`paso-opcion${(resp[paso.id] ?? []).some((e) => e.texto === o.texto) ? ' elegida' : ''}`}
-                    onClick={() => responder([o])}
+                    className={`paso-opcion${(resp[paso.id] ?? []).some((e) => e.texto === o.texto) || pulsada === o.texto ? ' elegida' : ''}`}
+                    onClick={() => {
+                      if (pulsada) return;
+                      setPulsada(o.texto);
+                      setTimeout(() => responder([o]), 240);
+                    }}
                   >
+                    <b className="cq-letra" aria-hidden="true">{String.fromCharCode(65 + n)}</b>
                     <span>
                       {o.texto}
                       {o.ayuda && <small>{o.ayuda}</small>}
@@ -145,7 +155,12 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
 
       {res && (
         <section aria-live="polite">
-          <div className={`veredicto${res.nivel === 'alto' ? ' veredicto-alto' : ''}`}>
+          <div className={`veredicto cq-veredicto cq-${res.nivel}${res.nivel === 'alto' ? ' veredicto-alto' : ''}`}>
+            <span className="cq-sello" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                {res.nivel === 'alto' ? <path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /> : res.nivel === 'medio' ? <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01" /> : <path d="M20 6L9 17l-5-5" />}
+              </svg>
+            </span>
             <h3>{res.titulo}</h3>
             <p style={{ margin: 0 }}>{res.texto}</p>
           </div>

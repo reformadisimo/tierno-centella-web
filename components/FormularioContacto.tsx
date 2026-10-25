@@ -4,8 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { medir } from '@/lib/medir';
+import Icono from './Iconos';
 
 const TEMAS = ['Me han despedido', 'Sufro acoso laboral', 'Incapacidad o baja', 'Me deben dinero', 'Soy una empresa', 'Otro tema'];
+const ICONO_TEMA: Record<string, string> = { 'Me han despedido': 'caja', 'Sufro acoso laboral': 'escudo', 'Incapacidad o baja': 'corazon', 'Me deben dinero': 'euro', 'Soy una empresa': 'edificio', 'Otro tema': 'chat' };
 
 export default function FormularioContacto() {
   const [estado, setEstado] = useState<'listo' | 'enviando' | 'enviado' | 'error'>('listo');
@@ -45,18 +47,23 @@ export default function FormularioContacto() {
 
   if (estado === 'enviado')
     return (
-      <div className="veredicto">
-        <h3>Recibido, {datos.nombre.split(' ')[0]}</h3>
-        <p style={{ margin: 0 }}>Te llamamos en horario de despacho. Si tu plazo vence en días, llámanos tú ahora al {DESPACHO.telefono}.</p>
+      <div className="fl-hecho" role="status">
+        <span className="fl-hecho-sello" aria-hidden="true"><Icono nombre="check" tam={34} /></span>
+        <h3>Recibido{datos.nombre.trim() ? `, ${datos.nombre.trim().split(' ')[0]}` : ''}</h3>
+        <p>Te llamamos en horario de despacho. Si tu plazo vence en días, llámanos tú ahora al {DESPACHO.telefono}.</p>
+        <a className="boton" href={DESPACHO.telefonoHref}><Icono nombre="telefono" tam={17} /> Llamar ahora</a>
       </div>
     );
 
   return (
-    <form className="herramienta" onSubmit={enviar} noValidate={false}>
-      <h2 style={{ fontSize: '1.3rem', marginBottom: 6 }}>Te llamamos nosotros</h2>
-      <p className="campo-ayuda" style={{ marginBottom: 16 }}>
-        Cuatro datos y te llamamos. Si tu caso tiene plazo corriendo, lo vemos primero.
-      </p>
+    <form className="herramienta fl" onSubmit={enviar} noValidate={false}>
+      <div className="fl-cabeza">
+        <span className="fl-icono" aria-hidden="true"><Icono nombre="telefono" tam={24} /></span>
+        <div>
+          <h2>Te llamamos nosotros</h2>
+          <p className="campo-ayuda">Cuatro datos y te llamamos. Si tu caso tiene plazo corriendo, lo vemos primero.</p>
+        </div>
+      </div>
       <fieldset id="f-tema" className={`pregunta-test${faltaTema ? ' campo-error' : ''}`} style={{ marginBottom: 14 }} aria-describedby={faltaTema ? 'f-tema-error' : undefined}>
         <legend className="campo">
           <strong>¿Sobre qué es?</strong>
@@ -65,6 +72,7 @@ export default function FormularioContacto() {
           {TEMAS.map((t) => (
             <label key={t}>
               <input type="radio" name="tema" checked={datos.tema === t} onChange={() => { cambiar('tema', t); setFaltaTema(false); }} />
+              <Icono nombre={ICONO_TEMA[t]} tam={17} />
               {t}
             </label>
           ))}
@@ -117,8 +125,9 @@ export default function FormularioContacto() {
         </span>
       </label>
       <button type="submit" className="boton boton-marcador" disabled={estado === 'enviando'}>
-        {estado === 'enviando' ? 'Enviando...' : 'Quiero que me llaméis'}
+        <Icono nombre="telefono" tam={17} /> {estado === 'enviando' ? 'Enviando...' : 'Quiero que me llaméis'}
       </button>
+      <p className="fl-pie"><Icono nombre="reloj" tam={15} /> Te contestamos en el mismo día laborable.</p>
       {estado === 'error' && (
         <div className="recuadro" role="alert">
           <p>

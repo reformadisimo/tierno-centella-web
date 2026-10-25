@@ -5,6 +5,9 @@ import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
 import { FOTOS_PAGINA } from '@/lib/fotos-paginas';
+import IconoMenu, { tipoIcono } from '@/components/IconoMenu';
+
+const ETIQUETA: Record<string, string> = { test: 'Test', calc: 'Calculadora', comprobador: 'Comprobador', carta: 'Revisión', plazo: 'Plazos', calendario: 'Calendario', mapa: 'Guía' };
 
 export const metadata: Metadata = meta({
   titulo: 'Herramientas gratuitas',
@@ -32,8 +35,10 @@ export default function Herramientas() {
           <div className="tarjetas-foto">
             {HERRAMIENTAS.map((h) => {
               const f = FOTOS_PAGINA[h.href];
+              const tipo = tipoIcono(h.href, h.titulo);
               return (
-                <Link key={h.href} href={h.href}>
+                <Link key={h.href} href={h.href} className={`th-${tipo}`}>
+                  <span className="th-chip"><IconoMenu tipo={tipo} tam={15} /> {ETIQUETA[tipo] ?? 'Herramienta'}</span>
                   {f && (
                     <img
                       src={`/img/${f.foto}-640.webp`}
