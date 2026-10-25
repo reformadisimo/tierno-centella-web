@@ -7,6 +7,7 @@ import { PLAZOS_RECLAMAR } from '@/lib/plazos-reclamar';
 
 export const metadata: Metadata = meta({
   titulo: 'Plazos para reclamar: despido, indemnización, dinero que te deben, accidente',
+  tituloSeo: 'Plazos para reclamar en lo laboral',
   descripcion: 'Cuánto tiempo tienes para reclamar un despido, una indemnización por accidente de trabajo, una sanción, el dinero que te deben o una incapacidad permanente. Tabla clara y calculadora.',
   ruta: '/plazos-para-reclamar',
 });

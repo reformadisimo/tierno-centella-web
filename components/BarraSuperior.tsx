@@ -32,7 +32,7 @@ export default function BarraSuperior() {
         </div>
         <div className="barra-sup-dcha">
           <Accesibilidad en={en} />
-          <IconosRedes urls={REDES} tono="claro" tam={15} etiqueta={en ? 'Social media' : 'Redes sociales'} />
+          <span className="barra-sup-redes"><IconosRedes urls={REDES} tono="claro" tam={15} etiqueta={en ? 'Social media' : 'Redes sociales'} /></span>
           {DEMO && <span className="barra-sup-demo">{en ? 'Demo version' : 'Versión de demostración'}</span>}
         </div>
       </div>

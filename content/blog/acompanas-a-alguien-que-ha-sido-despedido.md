@@ -1,5 +1,6 @@
 ---
 titulo: Acompañas a alguien que ha sido despedido: cómo ayudarle de verdad
+tituloSeo: Acompañar a alguien que ha sido despedido
 descripcion: Si un familiar, tu pareja o un amigo acaba de ser despedido, estas son las cosas que sí ayudan (y las que no): escuchar, ordenar papeles, vigilar el plazo y acompañar a la consulta.
 fecha: 2026-10-25
 actualizado: 2026-10-25

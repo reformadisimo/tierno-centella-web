@@ -7,6 +7,7 @@ import { esquemaMigas, meta } from '@/lib/seo';
 
 export const metadata: Metadata = meta({
   titulo: 'Acompaño a alguien que está pasando por un despido, un acoso o una baja',
+  tituloSeo: 'Cómo acompañar a quien sufre un despido o un acoso',
   descripcion: 'Si ayudas a un familiar, a tu pareja o a un amigo con un problema laboral: qué puedes hacer, qué conviene evitar y cómo acompañarle a una consulta.',
   ruta: '/acompanar',
 });

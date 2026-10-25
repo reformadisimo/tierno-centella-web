@@ -7828,3 +7828,6 @@ html.a11y-quieto video { display: none !important; }
 @keyframes sx-entra { from { opacity: 0; transform: translateY(26px) scale(.94); } }
 @keyframes sx-pulso { 0%, 100% { box-shadow: 0 0 0 0 rgba(217, 105, 77, .5); } 50% { box-shadow: 0 0 0 12px rgba(217, 105, 77, 0); } }
 @media (prefers-reduced-motion: reduce) { .sx-fondo, .sx, .sx-principal { animation: none; } }
+
+/* Móvil: menos capas arriba. Las redes están en el pie; el teléfono, en la barra de abajo */
+@media (max-width: 760px) { .barra-sup-redes { display: none; } }

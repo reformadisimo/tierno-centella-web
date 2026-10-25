@@ -7,6 +7,7 @@ import { TRAMITES } from '@/lib/tramites';
 
 export const metadata: Metadata = meta({
   titulo: 'Trámites que puedes hacer tú: paro, conciliación, vida laboral, Inspección',
+  tituloSeo: 'Trámites laborales que puedes hacer tú',
   descripcion: 'Cómo pedir el paro, presentar la papeleta de conciliación, pedir tu vida laboral o denunciar ante la Inspección de Trabajo, paso a paso, sin abogado y sin coste.',
   ruta: '/tramites',
 });

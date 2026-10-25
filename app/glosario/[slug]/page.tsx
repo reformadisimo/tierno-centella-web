@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!t) return {};
   return meta({
     titulo: `Qué es ${t.termino.toLowerCase()} en derecho laboral`,
-    tituloSeo: `${t.termino}: qué es y cómo te afecta`,
+    tituloSeo: `${t.termino}: qué es y cómo te afecta`.length <= 60 ? `${t.termino}: qué es y cómo te afecta` : t.termino,
     descripcion: t.definicion,
     ruta: `/glosario/${slugTermino(t.termino)}`,
   });
