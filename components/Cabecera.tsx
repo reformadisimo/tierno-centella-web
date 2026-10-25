@@ -164,6 +164,22 @@ export default function Cabecera() {
               ))}
             </div>
 
+            <div className="mm-donde">
+              <span className="mm-donde-icono" aria-hidden="true"><Icono nombre="pin" tam={22} /></span>
+              <div>
+                <strong>{idioma === 'en' ? 'Contact and how to get here' : 'Contacto y cómo llegar'}</strong>
+                <small>{DESPACHO.direccion}, {DESPACHO.ciudad}</small>
+                <div className="mm-donde-botones">
+                  <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Tierno Centella Abogados, Calle de Jorge Juan 78, 28009 Madrid')}`} target="_blank" rel="noopener noreferrer">
+                    <Icono nombre="mapa" tam={16} /> {idioma === 'en' ? 'Directions' : 'Cómo llegar'}
+                  </a>
+                  <Link href={t.contactoHref}>
+                    <Icono nombre="correo" tam={16} /> {idioma === 'en' ? 'Contact page' : 'Ver contacto'}
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <Link href={t.jesusHref} className="mm-jesus">
               <img src="/img/jesus-avatar.webp" alt="" width={56} height={56} loading="lazy" />
               <span>

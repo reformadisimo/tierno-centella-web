@@ -123,6 +123,11 @@ export default function Contacto() {
               <li><Icono nombre="correo" tam={18} /><a href={`mailto:${DESPACHO.email}`}>{DESPACHO.email}</a></li>
               <li><Icono nombre="video" tam={18} /><span>Atendemos casos de toda España por videollamada.</span></li>
             </ul>
+            <div className="acciones">
+              <a className="boton" href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Tierno Centella Abogados, Calle de Jorge Juan 78, 28009 Madrid')}`} target="_blank" rel="noopener noreferrer">
+                <Icono nombre="mapa" tam={18} /> Cómo llegar
+              </a>
+            </div>
           </div>
           <Mapa />
         </div>

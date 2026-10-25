@@ -8177,3 +8177,12 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
 }
 /* Salida rápida a la derecha en el móvil: los botones del contenido van a la izquierda */
 @media (max-width:899px){.salida-rapida{left:auto;right:12px}}
+
+/* Menú del móvil: contacto y cómo llegar */
+.mm-donde{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-left:5px solid #d9694d;border-radius:16px;padding:14px 16px;margin:14px 0 0}
+.mm-donde-icono{flex:0 0 44px;height:44px;border-radius:14px;background:#fcebe4;color:#a8442c;display:flex;align-items:center;justify-content:center}
+.mm-donde strong{display:block;color:var(--tinta);font-size:1.05rem}
+.mm-donde small{display:block;color:var(--tinta-media);font-size:.92rem;margin:2px 0 10px}
+.mm-donde-botones{display:flex;flex-wrap:wrap;gap:8px}
+.mm-donde-botones a{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;font-weight:800;font-size:.9rem;text-decoration:none;border:2px solid #d9694d;color:#a8442c;background:#fff}
+.mm-donde-botones a:first-child{background:#d9694d;color:#fff}

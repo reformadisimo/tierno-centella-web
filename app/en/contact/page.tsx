@@ -80,6 +80,9 @@ export default function ContactEn() {
               <a href={`mailto:${DESPACHO.email}`}>{DESPACHO.email}</a>
             </p>
             <p>We handle cases from all over Spain by video call.</p>
+            <div className="acciones">
+              <a className="boton" href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Tierno Centella Abogados, Calle de Jorge Juan 78, 28009 Madrid')}`} target="_blank" rel="noopener noreferrer">Directions</a>
+            </div>
           </div>
           <Mapa />
         </div>
