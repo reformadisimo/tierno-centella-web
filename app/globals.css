@@ -7699,3 +7699,13 @@ html.a11y-quieto video { display: none !important; }
 /* Genera tu carta */
 .carta-texto { white-space: pre-wrap; word-break: break-word; font: inherit; font-size: .98rem; line-height: 1.6; background: #fffdf8; border: 1px dashed #c2477a; border-radius: 14px; padding: 18px; margin: 0 0 12px; }
 @media print { .carta .pregunta-test, .carta .campo, .carta h2:first-of-type { display: none; } }
+
+/* Barómetro */
+.barometro-bloque { margin-bottom: 32px; }
+.barometro-barras { list-style: none; padding: 0; margin: 8px 0 16px; display: grid; gap: 10px; }
+.barometro-barras li { display: grid; grid-template-columns: minmax(120px, 42%) 1fr 48px; gap: 10px; align-items: center; font-size: .95rem; }
+.barometro-barras .barra { height: 12px; background: var(--linea); border-radius: 99px; overflow: hidden; display: block; }
+.barometro-barras .barra i { display: block; height: 100%; background: linear-gradient(90deg, #c2477a, #f2c14e); border-radius: 99px; }
+.barometro-barras b { text-align: right; }
+@media (max-width: 600px) { .barometro-barras li { grid-template-columns: 1fr 48px; } .barometro-barras .barra { grid-column: 1 / -1; order: 3; } }
+.cq-barometro .boton-enlace { font: inherit; text-decoration: underline; color: inherit; cursor: pointer; background: none; border: 0; padding: 4px 0; }

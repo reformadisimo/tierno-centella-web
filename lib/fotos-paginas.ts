@@ -22,6 +22,7 @@ export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
   '/contacto': { foto: 'recepcion', alt: 'La recepción del despacho Tierno Centella' },
   '/videos': { foto: 'abogada-sonrie', alt: 'Una abogada del despacho sonríe durante una reunión' },
   '/preguntas-frecuentes': { foto: 'abogada-escucha', alt: 'Una abogada del despacho escucha a una clienta' },
+  '/barometro': { foto: 'reunion-oficina', alt: 'Una reunión de empresa en una sala de oficinas' },
   '/recursos': { foto: 'biblioteca', alt: 'Reunión en la biblioteca del despacho' },
   '/glosario': { foto: 'libros-derecho', alt: 'Libros de derecho en una estantería' },
 };

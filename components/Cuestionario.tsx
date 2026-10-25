@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { BotonImprimir } from './Utiles';
@@ -36,6 +37,9 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   const [indice, setIndice] = useState(0);
   const [elegidas, setElegidas] = useState<Opcion[]>([]);
   const [pulsada, setPulsada] = useState('');
+  const ruta = usePathname() || '';
+  const [guardar, setGuardar] = useState(true);
+  const enviado = useRef(false);
 
   // Un paso condicional se decide en cuanto están respondidos los pasos activos anteriores (los saltados no cuentan);
   // mientras tanto se cuenta, para que el contador no prometa menos preguntas de las que habrá.
@@ -82,6 +86,14 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   }
 
   const res = terminado ? resultado(resp) : null;
+  // Barómetro: al terminar, y salvo que la persona lo desactive, se guarda de forma anónima el nivel del resultado y unas etiquetas generales.
+  useEffect(() => {
+    if (!res || !guardar || enviado.current) return;
+    const herramienta = ruta.split('/').filter(Boolean).pop() || '';
+    if (!['test-acoso', 'test-nulidad', 'test-extincion', 'test-baja-laboral'].includes(herramienta)) return;
+    enviado.current = true;
+    fetch('/api/barometro', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ herramienta, nivel: res.nivel, marcas: Array.from(marcas(resp)) }) }).catch(() => {});
+  }, [res, guardar, ruta, resp]);
   function compartir() {
     const url = typeof window !== 'undefined' ? window.location.href.split('#')[0] : '';
     const texto = 'Mira esta herramienta gratuita de Tierno Centella Abogados, a mí me ha servido para entender mi situación:';
@@ -102,6 +114,14 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
           <p className="campo-ayuda" style={{ marginTop: -8 }}>
             Pregunta {indice + 1} de {activos.length}. Sin datos personales.
           </p>
+          {indice === 0 && (
+            <p className="campo-ayuda cq-barometro">
+              Al terminar guardamos, sin ningún dato que te identifique, el tipo de resultado para nuestras estadísticas (<a href="/barometro">el barómetro</a>).{' '}
+              <button type="button" className="boton-enlace" onClick={() => setGuardar(!guardar)} aria-pressed={!guardar}>
+                {guardar ? 'No guardarlo' : 'No se guardará. Pulsa para permitirlo'}
+              </button>
+            </p>
+          )}
           <fieldset className="pregunta-test paso" key={paso.id}>
             <legend>
               <span className="paso-pregunta">{paso.pregunta}</span>

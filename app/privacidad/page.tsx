@@ -32,6 +32,14 @@ export default function Pagina() {
             nos llamas o nos pides que te llamemos, y para mejorar las respuestas. Solo las ve el despacho. Si dejas tu nombre y tu teléfono en el
             chat, los usamos únicamente para llamarte. Puedes pedir que borremos tu conversación escribiendo a {DESPACHO.email}.
           </p>
+          <h2>Barómetro de los tests (datos anónimos)</h2>
+          <p>
+            Cuando terminas uno de los tests de la web (acoso, despido nulo, extinción o baja laboral), guardamos de forma anónima el tipo de resultado
+            (alto, medio o bajo), la semana en que se hizo y unas etiquetas generales de tus respuestas, por ejemplo si el acoso viene de un superior.
+            No guardamos tu nombre, tu dirección IP, tus respuestas literales, cookies ni ningún identificador, así que no podemos saber quién eres. Con
+            esos datos agregados elaboramos el <a href="/barometro">barómetro</a>, que solo publica un test cuando tiene al menos 30 respuestas. Puedes
+            desactivarlo antes de empezar un test con el botón "No guardarlo". Al ser datos anónimos, no podemos localizar ni borrar el tuyo.
+          </p>
           <h2>Tus derechos</h2>
           <p>
             Puedes pedir acceso, rectificación o supresión de tus datos escribiendo a {DESPACHO.email}. También puedes reclamar ante la Agencia

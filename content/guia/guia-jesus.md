@@ -1261,7 +1261,7 @@ Antes de enseñarte nada, hemos mirado cómo trabajan despachos laboralistas de 
 
 Dos ideas más, de las que casi nadie hace en España y que creemos que te darían mucha visibilidad:
 
-- **Un barómetro propio del acoso laboral en Madrid**, con los datos anónimos de nuestros tests, publicado cada trimestre. Es lo que más buscan los periodistas, porque son cifras nuevas, y lo que más enlaces de calidad consigue.
+- **Un barómetro propio del acoso laboral y los despidos**, con los datos anónimos de nuestros tests. **Ya está hecho y funcionando** (`/barometro`): cada test guarda, sin ningún dato personal, el tipo de resultado y unas etiquetas generales, y la página publica cada test cuando tiene al menos 30 respuestas. Es lo que más buscan los periodistas, porque son cifras nuevas, y lo que más enlaces de calidad consigue. Ya hemos actualizado la política de privacidad y quien hace un test puede desactivarlo con un botón.
 - **Herramientas que colegios, sindicatos y empresas puedan poner en su propia web** (con un enlace a ti). Es una forma limpia de que otros hablen de ti.
 
 Y algo que nos ha llamado la atención: **la rapidez de respuesta pesa más que casi nada**. Muchas fuentes del sector coinciden en que quien contesta primero se lleva al cliente, aunque las cifras exactas que dan los vendedores de herramientas no están verificadas, y no te las vamos a repetir. Por eso el chat que contesta a cualquier hora y el aviso inmediato al despacho son de lo que más nos importa.
