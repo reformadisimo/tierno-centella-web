@@ -7642,3 +7642,10 @@ body{padding-bottom:58px}
 .prosa h2.glosario-letra[hidden], .prosa-foto[hidden], [data-termino][hidden] { display: none !important; }
 .prosa a.enlace-glosario { text-decoration: underline dotted #c2477a; text-underline-offset: 4px; color: inherit; }
 .prosa a.enlace-glosario:hover { text-decoration-style: solid; color: #c2477a; }
+
+/* Revisión de accesibilidad y desbordes (oct. 2026) */
+.con-lateral > .texto, .linea-despido { min-width: 0; max-width: 100%; }
+@media (max-width: 760px) { .desliza-pista { color: #a3376a; } }
+.th-test .th-chip { background: #b8452a; }
+.pie-boton.boton-marcador, .pie-boton[class*="marcador"] { color: #0d2c48; }
+.pasando, .herr-tarjetas, .tarjetas-foto, .hitos, .cifras-oro, .equipo-valores, .rejilla-reels, .equipo-retratos, .linea-pasos { scrollbar-width: thin; }

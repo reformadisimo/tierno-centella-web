@@ -8,6 +8,12 @@ const OBJETIVOS = '.lp-situacion, .equipo-retratos > li, .cifras-oro > li, .reji
 
 export default function Aparecer() {
   const ruta = usePathname();
+  // Los carruseles con scroll horizontal se pueden recorrer también con el teclado.
+  useEffect(() => {
+    document.querySelectorAll<HTMLElement>('.pasando, .herr-tarjetas, .tarjetas-foto, .hitos, .cifras-oro, .equipo-valores, .rejilla-reels, .equipo-retratos, .linea-pasos').forEach((el) => {
+      if (el.scrollWidth > el.clientWidth + 2 && !el.hasAttribute('tabindex')) el.tabIndex = 0;
+    });
+  }, [ruta]);
   useEffect(() => {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
     const alto = window.innerHeight;
