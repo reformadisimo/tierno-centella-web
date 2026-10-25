@@ -91,6 +91,8 @@ SECCIONES DE LA WEB
 
 HERRAMIENTAS GRATUITAS DE LA WEB
 - /herramientas/test-acoso: ¿es acoso lo que me pasa?
+- /herramientas/genera-tu-carta: cartas modelo (recibí no conforme, certificado de empresa, reclamar salarios, pedir documentos, comunicar acoso), siempre orientativas.
+- /herramientas/calculadora-oferta-acuerdo: compara la oferta de la empresa con la indemnización legal de un despido improcedente, antes de firmar un acuerdo.
 - /herramientas/que-guardar: lista interactiva de documentos y pruebas que conviene reunir según el caso (despido, acoso, baja, deudas), que se puede imprimir.
 - /herramientas/mapa-de-pruebas: qué pruebas de acoso tengo y cuáles faltan
 - /herramientas/test-nulidad: ¿mi despido puede ser nulo?

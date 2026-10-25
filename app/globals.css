@@ -7695,3 +7695,7 @@ html.a11y-quieto *, html.a11y-quieto *::before, html.a11y-quieto *::after { anim
 html.a11y-quieto video { display: none !important; }
 @media print { .a11y { display: none; } }
 @media (max-width: 760px) { .a11y { position: static; } .a11y-panel { position: fixed; left: 12px; right: 12px; top: 56px; width: auto; max-height: calc(100vh - 80px); overflow: auto; } }
+
+/* Genera tu carta */
+.carta-texto { white-space: pre-wrap; word-break: break-word; font: inherit; font-size: .98rem; line-height: 1.6; background: #fffdf8; border: 1px dashed #c2477a; border-radius: 14px; padding: 18px; margin: 0 0 12px; }
+@media print { .carta .pregunta-test, .carta .campo, .carta h2:first-of-type { display: none; } }

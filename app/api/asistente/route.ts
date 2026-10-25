@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { promptAsistente, conocimientoWeb } from '@/lib/prompt-asistente';
 import { guardarConversacion } from '@/lib/conversaciones';
+import { avisarSiDejaTelefono } from '@/lib/alerta-chat';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -94,6 +95,7 @@ export async function POST(req: Request) {
         // Se guarda la conversación completa (con esta respuesta) en la base de datos del despacho, si está configurada.
         // Antes de cerrar: en el servidor, lo que va después de cerrar la respuesta puede no llegar a ejecutarse.
         if (respuesta) await guardarConversacion({ id: conversacion, idioma: ingles ? 'en' : 'es', pagina, mensajes: [...mensajes, { role: 'assistant', content: respuesta }] });
+        await avisarSiDejaTelefono(mensajes, pagina);
         controlador.close();
       }
     },

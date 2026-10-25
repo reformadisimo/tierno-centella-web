@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/herramientas/mapa-de-pruebas',
     '/herramientas/plazos',
     '/herramientas/que-guardar',
+    '/herramientas/genera-tu-carta',
+    '/herramientas/calculadora-oferta-acuerdo',
     '/herramientas/revisa-tu-carta-de-despido',
     '/herramientas/comprobador-incapacidad',
     '/sentencias',

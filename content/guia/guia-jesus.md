@@ -1250,12 +1250,12 @@ Antes de enseñarte nada, hemos mirado cómo trabajan despachos laboralistas de 
 | Idea | Dónde la hemos visto | Qué hemos hecho o proponemos |
 | --- | --- | --- |
 | Evaluación gratuita del caso desde la portada | Morgan & Morgan y otros despachos laboralistas de EE. UU. | **Hecho**: los tests (acoso, despido nulo, extinción, baja) y el chat con micrófono |
-| Generador de cartas y calculadora de acuerdos | Monaco Solicitors (Reino Unido) | **Proponemos**: "Genera tu carta" (por ejemplo, la de "recibí, no conforme") y calculadora de ofertas de acuerdo |
+| Generador de cartas y calculadora de acuerdos | Monaco Solicitors (Reino Unido) | **Hecho**: "Genera tu carta" (la de "recibí, no conforme", el certificado de empresa, reclamar salarios, pedir documentos y comunicar un acoso) y "¿Es buena la oferta de la empresa?", que compara lo que te ofrecen con la indemnización legal |
 | Ajustes de lectura para dislexia y baja visión | Despachos de EE. UU. con kit de accesibilidad | **Hecho**: botón "Aa" con tamaño de letra, letra fácil de leer, más contraste y sin animaciones |
 | Calculadora de plazos | Lewis Silkin (Reino Unido) | **Hecho**, y mejorado: "Mi plazo" te lo recuerda en toda la web |
 | Resultados con cifras y reseñas visibles | BT Law Group y otros | **Pendiente de ti**: reseñas reales y casos que podamos contar |
 | Vídeo del abogado presentándose y testimonios | Muchos despachos de EE. UU. | **Proponemos**: un vídeo tuyo de 30 segundos en la portada |
-| Responder en minutos, también fuera de horario | Despachos con IA de admisión por voz o por WhatsApp | **Proponemos**: aviso inmediato al despacho cuando alguien deja su teléfono, y más adelante WhatsApp con IA (avisando siempre de que es una IA y sin dar asesoramiento) |
+| Responder en minutos, también fuera de horario | Despachos con IA de admisión por voz o por WhatsApp | **Hecho**: aviso inmediato al despacho (correo y CRM) cuando alguien deja su teléfono en el chat o en el formulario. **Proponemos**, más adelante, WhatsApp con IA (avisando siempre de que es una IA y sin dar asesoramiento) |
 | Páginas separadas para empleados y para empresas | Taylor Jannis, PortaLaw | **Hecho**: la parte de empresas y centros educativos va aparte |
 | Botón de salida rápida | Webs de ayuda a víctimas | **Hecho**: quien está en una situación delicada puede salir de la web con un solo toque |
 

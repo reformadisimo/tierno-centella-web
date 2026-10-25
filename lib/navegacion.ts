@@ -73,6 +73,8 @@ export const MENU: Grupo[] = [
       { href: '/herramientas/revisa-tu-carta-de-despido', texto: 'Revisa tu carta de despido' },
       { href: '/herramientas/plazos', texto: 'Plazos para reclamar' },
       { href: '/herramientas/que-guardar', texto: '¿Qué tengo que guardar?' },
+      { href: '/herramientas/genera-tu-carta', texto: 'Genera tu carta' },
+      { href: '/herramientas/calculadora-oferta-acuerdo', texto: '¿Es buena la oferta de la empresa?' },
       { href: '/herramientas/comprobador-incapacidad', texto: 'Comprobador de incapacidad' },
       { href: '/herramientas/calendario-permisos', texto: 'Calendario de permisos por nacimiento' },
       { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Calculadora de reducción de jornada' },
