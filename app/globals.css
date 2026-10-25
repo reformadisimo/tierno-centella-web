@@ -8253,3 +8253,10 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
 .portada-video .pv-sello{background:rgba(0,26,46,.6) !important;border-color:rgba(255,255,255,.3)}
 .portada-video .boton-claro{background:rgba(0,26,46,.5)}
 .portada-video .boton-claro:hover{background:rgba(0,26,46,.7)}
+
+/* Glosario: pictograma por término */
+.gl-dt{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.1rem}
+.gl-picto{flex:0 0 44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
+.glosario-dd-con-picto{margin-left:56px}
+.gl-picto-grande{width:72px;height:72px;flex:none;margin:6px 0 14px;border-radius:20px}

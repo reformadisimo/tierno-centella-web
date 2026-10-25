@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import FotoCabeza from '@/components/FotoCabeza';
 import Link from 'next/link';
+import Pictograma from '@/components/Pictograma';
+import { pictoDe } from '@/lib/glosario-pictos';
 import JsonLd from '@/components/JsonLd';
 import { GLOSARIO, slugTermino } from '@/lib/glosario';
 import { Fragment } from 'react';
@@ -86,8 +88,8 @@ export default function Glosario() {
                   </h2>
                 )}
                 <dl id={slug(t.termino)} data-termino={`${t.termino} ${t.definicion}`} data-letra={t.termino[0].toUpperCase()} style={{ padding: '14px 0', borderBottom: '1px solid var(--linea)', margin: 0 }}>
-                  <dt style={{ fontWeight: 700, fontSize: '1.1rem' }}><Link href={`/glosario/${slug(t.termino)}`} style={{ color: 'inherit' }}>{t.termino}</Link></dt>
-                  <dd style={{ margin: '4px 0 0' }}>
+                  <dt className="gl-dt"><span className="gl-picto" style={{ background: pictoDe(t.termino).fondo }} aria-hidden="true"><Pictograma nombre={pictoDe(t.termino).pic} tam={30} /></span><Link href={`/glosario/${slug(t.termino)}`} style={{ color: 'inherit' }}>{t.termino}</Link></dt>
+                  <dd className="glosario-dd-con-picto" style={{ margin: '4px 0 0 56px' }}>
                     {t.definicion} {t.enlace && <Link href={t.enlace}>Saber más</Link>}
                     <a className="glosario-ancla" href={`#${slug(t.termino)}`} aria-label={`Enlace a ${t.termino}`}>#</a>
                   </dd>

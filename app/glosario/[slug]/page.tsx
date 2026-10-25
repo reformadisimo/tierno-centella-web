@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Pictograma from '@/components/Pictograma';
+import { pictoDe } from '@/lib/glosario-pictos';
 import { notFound } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import { GLOSARIO, relacionados, slugTermino } from '@/lib/glosario';
@@ -46,6 +48,7 @@ export default async function Pagina({ params }: { params: Promise<{ slug: strin
           <nav className="migas" aria-label="Estás en">
             <Link href="/">Inicio</Link> / <Link href="/glosario">Glosario</Link> / {t.termino}
           </nav>
+          <span className="gl-picto gl-picto-grande" style={{ background: pictoDe(t.termino).fondo }} aria-hidden="true"><Pictograma nombre={pictoDe(t.termino).pic} tam={48} /></span>
           <h1>{t.termino}: qué es</h1>
         </div>
       </header>
