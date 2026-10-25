@@ -8225,3 +8225,18 @@ input[type='date']::-webkit-date-and-time-value{text-align:left}
 @media (min-width:1100px) and (max-width:1959px){.mg-flecha{display:none}}
 @media (min-width:1600px) and (max-width:1899px){.cabecera .menu a{padding:8px 6px;font-size:.9rem}.cabecera-acciones{gap:6px}}
 @media (min-width:1440px) and (max-width:1599px){.cabecera .menu a{padding:8px 4px;font-size:.86rem}}
+
+/* Portada en ordenador: entrada clara como en el móvil, un mensaje, marca arriba, fondo uniforme */
+.pv-marca{display:none}
+@media (min-width:701px){
+  .portada-video{min-height:min(78vh,720px);display:flex;align-items:center}
+  .portada-video::after{background:linear-gradient(90deg,rgba(0,26,46,.82) 0%,rgba(0,26,46,.66) 45%,rgba(0,26,46,.45) 100%)}
+  .portada-video .contenedor{width:100%}
+  .portada-video .pv-marca{display:block;margin:0 0 14px;font-size:1.05rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f2c14e}
+  .portada-video h1{max-width:20ch;font-size:clamp(2.6rem,4.2vw,4rem);line-height:1.05}
+  .portada-video .pv-largo{display:none}
+  .portada-video .pv-corto{display:block;font-size:1.3rem;color:#fff;max-width:40ch;margin:0 0 20px}
+  .portada-video .pv-sello{display:inline-flex;align-items:center;gap:12px;margin:0 0 30px;padding:9px 18px 9px 9px;border-radius:999px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);font-size:1rem;color:#fff}
+  .portada-video .pv-sello b{background:var(--marcador);color:var(--tinta);border-radius:999px;padding:6px 12px}
+}
+@media (max-width:700px){.portada-video .pv-marca{display:block;margin:0 0 10px;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#f2c14e}}

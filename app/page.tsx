@@ -32,6 +32,7 @@ export default function Inicio() {
         </picture>
         <VideoPortada />
         <div className="contenedor">
+          <p className="pv-marca">Tierno Centella Abogados · Madrid</p>
           <h1>Abogados laboralistas en Madrid, especialistas en acoso laboral.</h1>
           <p className="entradilla pv-largo">
             Más de 25 años con despidos, acoso e incapacidad permanente. En 2005 conseguimos la primera condena en España a la empresa y al acosador a la vez. Hoy seguimos
