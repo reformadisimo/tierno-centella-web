@@ -26,7 +26,7 @@ export default function IndicePagina() {
   useEffect(() => {
     setItems([]);
     setActivo('');
-    if (SIN_INDICE.some((r) => ruta === r || ruta.startsWith('/guia-jesus')) || ruta.startsWith('/herramientas') || ruta.startsWith('/en')) return;
+    if (SIN_INDICE.some((r) => ruta === r || ruta.startsWith('/guia-jesus')) || ruta.startsWith('/herramientas') || ruta.startsWith('/en') || ruta.startsWith('/consulta/')) return;
     const t = window.setTimeout(() => {
       const hs = [...document.querySelectorAll<HTMLElement>('#contenido h2')].filter((h) => !h.closest('.cq, form, dialog, [role="dialog"], .asistente') && (h.textContent || '').trim().length > 2);
       if (hs.length < 4) return;

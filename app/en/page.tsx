@@ -28,10 +28,12 @@ export default function InicioEn() {
         <VideoPortada />
         <div className="contenedor">
           <h1>Employment lawyers in Madrid, specialists in workplace harassment.</h1>
-          <p className="entradilla">
+          <p className="entradilla pv-largo">
             Over 25 years with dismissals, harassment and permanent disability. In 2005 we obtained the first ruling in Spain against both the company and the harasser.
             We help workers from all over Spain, in English, at our office on Jorge Juan street or by video call.
           </p>
+          <p className="entradilla pv-corto">Over 25 years by your side, in English, on Jorge Juan street or by video call.</p>
+          <p className="pv-sello"><b>2005</b> First ruling in Spain against both the company and the harasser</p>
           <div className="acciones">
             <a className="boton boton-marcador" href={DESPACHO.telefonoHref}>
               Call +34 {DESPACHO.telefono}
