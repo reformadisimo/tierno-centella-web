@@ -8,14 +8,20 @@ export default function FotoVideo({ foto, alt, video, sizes, prioridad = false }
   const [listo, setListo] = useState(false);
   const [quiere, setQuiere] = useState(false);
   const ref = useRef<HTMLVideoElement>(null);
+  const contenedor = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const nav = navigator as Navigator & { connection?: { saveData?: boolean } };
     if (nav.connection?.saveData || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const t = window.setTimeout(() => setQuiere(true), 1200);
-    return () => window.clearTimeout(t);
+    let t = 0;
+    const io = new IntersectionObserver(([e]) => {
+      window.clearTimeout(t);
+      if (e.isIntersecting) t = window.setTimeout(() => setQuiere(true), 1200);
+    }, { rootMargin: '200px' });
+    if (contenedor.current) io.observe(contenedor.current);
+    return () => { window.clearTimeout(t); io.disconnect(); };
   }, []);
   return (
-    <div className="foto-video">
+    <div className="foto-video" ref={contenedor}>
       <img
         className="foto"
         src={`/img/${foto}.webp`}

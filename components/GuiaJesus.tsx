@@ -1,5 +1,6 @@
 'use client';
 
+import FotoVideo from './FotoVideo';
 import { DOLORES } from '@/lib/guia-dolores';
 import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace } from './EnlacesGuia';
 import RedesHoyLuego, { GoogleNombre } from './RedesGuia';
@@ -23,6 +24,7 @@ import { BloqueAccesos, BloqueConexiones, BloquePrompts, BloqueRedes } from './L
 import { MockupAvisoChat, MockupFicha, MockupIA, MockupInforme, MockupCorreos, MockupResenaWhatsApp, MockupVelocidad } from './MockupsGuia';
 
 export type SeccionGuia = {
+  video?: { webm: string; mp4?: string };
   id: string;
   titulo: string;
   html: string;
@@ -898,7 +900,11 @@ export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: 
             <span className="gj-etiqueta">{s.grupo}</span>
             <h2>{s.titulo}</h2>
             <figure className="gj-banner">
-              <img src={`/img/${s.foto}-640.webp`} srcSet={`/img/${s.foto}-640.webp 640w, /img/${s.foto}.webp 1200w`} sizes="(max-width: 900px) 100vw, 760px" alt="" loading="lazy" />
+              {s.video ? (
+                <FotoVideo foto={s.foto} alt="" video={s.video} sizes="(max-width: 900px) 100vw, 760px" />
+              ) : (
+                <img src={`/img/${s.foto}-640.webp`} srcSet={`/img/${s.foto}-640.webp 640w, /img/${s.foto}.webp 1200w`} sizes="(max-width: 900px) 100vw, 760px" alt="" loading="lazy" />
+              )}
               {s.frase && <figcaption>{s.frase}</figcaption>}
             </figure>
             {s.franja && (

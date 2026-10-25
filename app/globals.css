@@ -7435,3 +7435,6 @@ body{padding-bottom:58px}
 .mapa-boton .mapa-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .mapa-boton .mapa-velo{position:absolute;inset:0;background:rgba(244,247,251,.86);z-index:1}
 .mapa-boton>span:not(.mapa-velo){position:relative;z-index:2}
+
+.gj-banner .foto-video{height:100%}
+.gj-banner .foto-video img{width:100%;height:100%;object-fit:cover}

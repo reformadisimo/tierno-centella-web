@@ -1,6 +1,7 @@
 import { enlazarGuia } from '@/lib/enlaces-guia';
 import type { Metadata } from 'next';
 import fs from 'node:fs';
+import { videoDeFoto } from '@/lib/video-foto';
 import path from 'node:path';
 import { marked } from 'marked';
 import BotonPdfPortada from '@/components/BotonPdfPortada';
@@ -164,6 +165,7 @@ function secciones(): SeccionGuia[] {
         html,
         texto: cuerpo.replace(/[#*|>_\-[\]()]/g, ' '),
         foto: extra.foto,
+        video: videoDeFoto(extra.foto) ?? undefined,
         frase: extra.frase,
         grupo: GRUPOS[extra.grupo],
         claveGrupo: extra.grupo,
