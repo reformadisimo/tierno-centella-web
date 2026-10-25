@@ -8126,3 +8126,35 @@ html.a11y-quieto video { display: none !important; }
 .glosario-ancla { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; margin-left: 2px; }
 /* Enlaces de las cajas laterales con más espacio para el dedo */
 .lateral-caja ul a, .lateral-caja li > a { display: inline-block; padding: 5px 0; }
+
+/* Listados (blog, herramientas, guías): en el móvil, lista vertical; el deslizamiento lateral queda solo en la portada */
+@media (max-width:760px){
+  .tarjetas-foto.tf-lista{display:grid !important;overflow:visible;margin-inline:0;padding:0;scroll-snap-type:none;gap:16px}
+  .tarjetas-foto.tf-lista>a{flex:none}
+  .tarjetas-foto.tf-lista::after{display:none}
+  .tarjetas-foto.tf-lista img{aspect-ratio:16/9}
+}
+/* Fechas en iPhone: el campo no se sale de su caja */
+input[type='date']{min-width:0;max-width:100%;width:100%;display:block;-webkit-appearance:none;appearance:none;min-height:48px;background:#fff}
+input[type='date']::-webkit-date-and-time-value{text-align:left}
+
+/* Opciones de los tests y calculadoras con vida */
+.opcion{border-radius:14px;background:#fff;transition:border-color .2s,background .2s,transform .15s,box-shadow .2s;align-items:center}
+.opcion:hover{border-color:#d9694d;transform:translateY(-1px);box-shadow:0 6px 16px rgba(13,44,72,.08)}
+.opcion input{margin-top:0;accent-color:#d9694d;width:20px;height:20px}
+.opcion:has(input:checked){border-color:#d9694d;background:linear-gradient(90deg,#fcebe4,#fff 80%);box-shadow:0 8px 20px rgba(217,105,77,.18)}
+.opcion:has(input:checked) span{font-weight:700;color:var(--tinta)}
+@media (prefers-reduced-motion:no-preference){.opcion:has(input:checked){animation:fl-pop .3s ease}}
+.pregunta-test legend{font-size:1.15rem}
+
+/* Menú del móvil: "El despacho" con color propio y cada enlace con un tono distinto */
+.mm-c6{--mm:#0f7c8c;--mm-claro:#e1f3f5}
+.mm-grupo li:nth-child(6n+1) .mm-li-icono{background:#fdf0ed;color:#a8442c}
+.mm-grupo li:nth-child(6n+2) .mm-li-icono{background:#e8f1fc;color:#1b6fd1}
+.mm-grupo li:nth-child(6n+3) .mm-li-icono{background:#f3edfa;color:#7a4fb3}
+.mm-grupo li:nth-child(6n+4) .mm-li-icono{background:#fcedf3;color:#c2477a}
+.mm-grupo li:nth-child(6n+5) .mm-li-icono{background:#fdf5e1;color:#b07a00}
+.mm-grupo li:nth-child(6n+6) .mm-li-icono{background:#e6f4ee;color:#2c7a5b}
+.mm-grupo li a{border-top:1px solid rgba(13,44,72,.06)}
+.mm-grupo li a:active{background:var(--mm-claro)}
+.mm-grupo li a[aria-current='page']{background:var(--mm-claro);color:var(--mm)}

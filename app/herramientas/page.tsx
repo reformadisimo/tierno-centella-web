@@ -35,7 +35,7 @@ export default function Herramientas() {
       </header>
       <section className="seccion">
         <div className="contenedor">
-          <div className="tarjetas-foto">
+          <div className="tarjetas-foto tf-lista">
             {HERRAMIENTAS.map((h) => {
               const f = FOTOS_PAGINA[h.href];
               const tipo = tipoIcono(h.href, h.titulo);

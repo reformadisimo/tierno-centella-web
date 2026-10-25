@@ -50,7 +50,7 @@ export default function MujerYTrabajo() {
       <section className="seccion">
         <div className="contenedor">
           <h2>Las guías</h2>
-          <div className="tarjetas-foto">
+          <div className="tarjetas-foto tf-lista">
             {guias.map((g) => {
               const f = fotoDePieza(g);
               return (

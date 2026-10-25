@@ -34,7 +34,7 @@ export default function BlogFiltro({ piezas, idioma = 'es' }: { piezas: Ficha[];
         </div>
       </div>
       {vistas.length === 0 && <p>{en ? 'No articles match that search. Try another word or ask the assistant.' : 'No hay artículos con esa búsqueda. Prueba con otra palabra o pregunta al asistente.'}</p>}
-      <div className="tarjetas-foto">
+      <div className="tarjetas-foto tf-lista">
         {vistas.map((p, i) => (
           <Link key={p.slug} href={`${base}/${p.slug}`}>
             <img src={p.foto.src} srcSet={p.foto.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={p.foto.alt} width={640} height={480} loading={i < 3 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} />
