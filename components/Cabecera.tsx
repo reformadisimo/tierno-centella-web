@@ -59,7 +59,6 @@ export default function Cabecera() {
               </Link>
               <div className={`menu-desplegable md-c${MENU_COLOR[i] ?? 0}${g.enlaces.length > 8 ? ' menu-ancho' : ''}`}>
                 <Link href={g.href} className="md-cabeza">
-                  <img src={`/img/${g.foto}-640.webp`} alt="" width={220} height={140} loading="lazy" />
                   <span className="md-cabeza-texto">
                     <strong>{g.titulo}</strong>
                     <small>{g.sub}</small>
@@ -122,7 +121,6 @@ export default function Cabecera() {
               {menu.map((g) => (
                 <details key={g.titulo} className="mm-grupo" open={g.titulo === grupoActual}>
                   <summary>
-                    <img src={`/img/${g.foto}-640.webp`} alt="" width={64} height={64} loading="lazy" />
                     <span className="mm-texto">
                       <strong>{g.titulo}</strong>
                       <small>{g.sub}</small>

@@ -59,7 +59,7 @@ export const MENU: Grupo[] = [
   {
     titulo: 'Herramientas',
     foto: 'calculadora-papeles',
-    sub: '15 calculadoras y tests para tu caso',
+    sub: '18 calculadoras y tests para tu caso',
     href: '/herramientas',
     enlaces: [
       { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },

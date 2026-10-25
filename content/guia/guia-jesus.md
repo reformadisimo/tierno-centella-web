@@ -566,7 +566,7 @@ Salen del estudio de cómo trabajan los despachos que más clientes captan y de 
 - **El WhatsApp llega con el tema ya escrito** ("escribo desde la web por un tema de acoso laboral") y el botón de herramientas del móvil cambia según la página: el test en acoso, el comprobador en incapacidad, el calendario en Mujer y trabajo.
 - **Una página de error que no pierde a nadie**: si alguien llega por un enlace roto, ve tus temas, el chat y el teléfono.
 - **Tu colegio y tu número de colegiado en el pie**, como exige el Código Deontológico. Ya está puesto: el 64865 del Colegio de Abogados de Madrid.
-- **Tu web también en inglés**: un botón ES / EN arriba cambia de idioma en cualquier página. Toda la web: portada, las cuatro áreas, las 21 guías, los 26 artículos del blog, las 14 calculadoras y tests, tus sentencias, tu página y contacto, pensada para los muchos trabajadores extranjeros que viven en Madrid y buscan un abogado que les hable en su idioma. El asistente también contesta en inglés y les lleva a las herramientas en inglés. Y si te interesa otro idioma (rumano, árabe, francés, portugués... o chino, que todo se puede), lo traducimos: te lo preguntamos en el apartado 24.
+- **Tu web también en inglés**: un botón ES / EN arriba cambia de idioma en cualquier página. Toda la web: portada, las cuatro áreas, las 21 guías, los 26 artículos del blog, las 18 calculadoras y tests, tus sentencias, tu página y contacto, pensada para los muchos trabajadores extranjeros que viven en Madrid y buscan un abogado que les hable en su idioma. El asistente también contesta en inglés y les lleva a las herramientas en inglés. Y si te interesa otro idioma (rumano, árabe, francés, portugués... o chino, que todo se puede), lo traducimos: te lo preguntamos en el apartado 24.
 - **Un buscador para toda la web**: la lupa de arriba busca en todas las guías, artículos, herramientas, sentencias, el glosario y las preguntas frecuentes. Y si alguien no encuentra lo que busca, le ofrece preguntárselo al asistente.
 - **Cada guía, con su índice y para escucharla**: las guías largas empiezan con un índice "En esta guía" para saltar a lo que interesa, y un botón "Escuchar esta guía" que la lee en voz alta. Pensado para personas mayores, para quien está de baja y le cuesta leer, o para escucharla mientras conduce.
 - **"Guardar o imprimir mi resultado"** en todas las herramientas: el cálculo de la indemnización, los plazos o el resultado del test salen en una hoja limpia, con tus datos de contacto arriba, para llevarla a la consulta.
@@ -627,7 +627,7 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **Lo que sabe**:
 
-- **Toda tu web**: el texto completo de las 47 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 14 herramientas, para enlazar la que encaja con cada persona.
+- **Toda tu web**: el texto completo de las 47 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 18 herramientas, para enlazar la que encaja con cada persona.
 - **Tu despacho**: quién eres, tu equipo, tu dirección, teléfono, WhatsApp y correo, cuánto cuesta la consulta y cómo se reserva.
 - **El derecho laboral vigente en octubre de 2026**: plazos, indemnizaciones, despido nulo, permisos, incapacidad, paro.
 
@@ -664,7 +664,7 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 ## 11. Las herramientas: lo que casi nadie del sector tiene
 
-**Antes y ahora**: tu web actual tiene 3 tests, el más conocido el de viabilidad del acoso. La nueva tiene **14 herramientas**, además del asistente que contesta a cualquier hora y las tres páginas para tus anuncios. Ninguna pide datos personales para dar el resultado, y todas terminan invitando a hablar contigo.
+**Antes y ahora**: tu web actual tiene 3 tests, el más conocido el de viabilidad del acoso. La nueva tiene **18 herramientas**, además del asistente que contesta a cualquier hora y las tres páginas para tus anuncios. Ninguna pide datos personales para dar el resultado, y todas terminan invitando a hablar contigo.
 
 | Herramienta | Para qué |
 | --- | --- |
@@ -1027,7 +1027,7 @@ Para que lo veas con tus ojos: así se ven hoy tus anuncios, los de quienes comp
 - **Constancia.** Campmany sale con su nombre casi todos los meses del año; tú, en meses sueltos. Quien busca "Tierno Centella" y no ve tu anuncio arriba puede ver el de otro.
 - **Una especialidad clara en el anuncio.** Campmany es "incapacidad"; R. Sánchez, "abogado laboral en Madrid". Tus anuncios no dicen que eres el despacho del acoso laboral, que es lo que te diferencia de todos.
 - **Confianza antes del clic.** R. Sánchez pone "733 reseñas en Google" en el título. Tú aún no puedes (4,2 con 59); por eso es tan importante el trabajo de reseñas del apartado 5.
-- **Una herramienta como gancho.** Bufete Toro anuncia una calculadora; Campmany, en Instagram, otra. Tú tienes 14 herramientas gratuitas en la web nueva y ninguna anunciada.
+- **Una herramienta como gancho.** Bufete Toro anuncia una calculadora; Campmany, en Instagram, otra. Tú tienes 18 herramientas gratuitas en la web nueva y ninguna anunciada.
 - **Están en Instagram y Facebook.** Campmany tiene 24.400 seguidores en Facebook y anuncios activos; tú, 285 y ningún anuncio.
 
 **Lo que no copiaríamos**: "primera visita gratuita" y "95 % de tasa de éxito". Lo primero atrae a quien no va a pagar y acaba en reseñas malas (ya lo has vivido). Lo segundo choca con el Código Deontológico, que no permite prometer resultados. Tu ventaja es otra: **una historia real** (2005, la Universidad Rey Juan Carlos, más de 25 años) que nadie más puede contar.

@@ -51,6 +51,35 @@ function puedeSalir(): boolean {
   }
 }
 
+// La cifra grande de cada tema: lo que la persona más necesita saber en un segundo.
+const CIFRAS: Record<string, { n: number; mas?: boolean; texto: string }> = {
+  despido: { n: 20, texto: 'días hábiles para reclamar un despido' },
+  acoso: { n: 7, texto: 'preguntas para saber si es acoso' },
+  incapacidad: { n: 30, texto: 'días hábiles para reclamar si te la deniegan' },
+  mujer: { n: 19, texto: 'semanas de permiso por nacimiento para cada progenitor' },
+  sentencias: { n: 25, mas: true, texto: 'años defendiendo a trabajadoras y trabajadores' },
+  empresas: { n: 25, mas: true, texto: 'años de experiencia en derecho laboral' },
+  general: { n: 25, mas: true, texto: 'años defendiendo a trabajadoras y trabajadores' },
+};
+
+function useCuenta(objetivo: number, activo: boolean) {
+  const [v, setV] = useState(objetivo);
+  useEffect(() => {
+    if (!activo || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let f = 0;
+    const t0 = performance.now();
+    const paso = (t: number) => {
+      const k = Math.min(1, (t - t0) / 900);
+      setV(Math.round(objetivo * (1 - Math.pow(1 - k, 3))));
+      if (k < 1) f = requestAnimationFrame(paso);
+    };
+    setV(0);
+    f = requestAnimationFrame(paso);
+    return () => cancelAnimationFrame(f);
+  }, [objetivo, activo]);
+  return v;
+}
+
 export default function AvisoSalida() {
   const ruta = usePathname();
   const [visible, setVisible] = useState(false);
@@ -123,6 +152,10 @@ export default function AvisoSalida() {
     return () => window.removeEventListener('keydown', tecla);
   }, [visible]);
 
+  const [verCorreo, setVerCorreo] = useState(false);
+  const temaLeido0 = temaActual(ruta);
+  const cifra = CIFRAS[enLanding ? (ruta.includes('incapacidad') ? 'incapacidad' : ruta.includes('acoso') ? 'acoso' : 'despido') : CIFRAS[temaLeido0] ? temaLeido0 : 'general'];
+  const cuenta = useCuenta(cifra.n, visible);
   if (!visible) return null;
   const temaLeido = temaActual(ruta);
   const propio = ['despido', 'acoso', 'incapacidad', 'mujer', 'sentencias', 'empresas'].includes(temaLeido) ? VENTANAS[temaLeido] : null;
@@ -152,34 +185,38 @@ export default function AvisoSalida() {
     }
   }
 
+  const tituloLanding = '¿Te ayudamos con tu caso?';
   return (
-    <div className="salida-fondo" onClick={() => setVisible(false)}>
-      <div
-        className="salida"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="salida-titulo"
-        tabIndex={-1}
-        ref={caja}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button type="button" className="salida-cerrar" onClick={() => setVisible(false)} aria-label="Cerrar">
+    <div className="sx-fondo" onClick={() => setVisible(false)}>
+      <div className="sx" role="dialog" aria-modal="true" aria-labelledby="salida-titulo" tabIndex={-1} ref={caja} onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="sx-cerrar" onClick={() => setVisible(false)} aria-label="Cerrar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
             <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
-        <div className="salida-cabeza">
-          <img className="salida-avatar" src="/img/abogada-sonrie-640.webp" alt="" width={64} height={64} loading="lazy" />
-          <div>
-            <p className="etiqueta-calida">{propio ? `Antes de irte · ${propio.etiqueta}` : 'Antes de irte'}</p>
-            <h2 id="salida-titulo">{!enLanding && propio ? propio.titulo : '¿Te ayudamos con tu caso?'}</h2>
-          </div>
+
+        <div className="sx-cifra" aria-hidden={false}>
+          <p className="sx-antes">{propio && !enLanding ? `Antes de irte · ${propio.etiqueta}` : 'Antes de irte'}</p>
+          <p className="sx-numero" aria-label={`${cifra.n}${cifra.mas ? ' o más' : ''} ${cifra.texto}`}>
+            <span aria-hidden="true">{cuenta}{cifra.mas ? '+' : ''}</span>
+          </p>
+          <p className="sx-cifra-texto" aria-hidden="true">{cifra.texto}</p>
         </div>
-        {enLanding ? (
-          <>
-            <p className="salida-intro">Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.</p>
-            <div className="salida-temas">
+
+        <div className="sx-cuerpo">
+          <h2 id="salida-titulo">{!enLanding && propio ? (temaLeido === 'despido' ? 'No dejes pasar tu plazo' : propio.titulo) : tituloLanding}</h2>
+          <p className="sx-texto">
+            {enLanding
+              ? 'Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.'
+              : propio
+                ? propio.texto
+                : 'Elige lo que más se parece a lo tuyo y te llevamos directo a lo que necesitas.'}
+          </p>
+
+          {enLanding ? (
+            <>
               <a
+                className="boton sx-principal"
                 href="#lf-arriba"
                 onClick={() => {
                   elegir('formulario landing');
@@ -188,138 +225,104 @@ export default function AvisoSalida() {
               >
                 Que me llaméis vosotros
               </a>
-              <a href={enlaceWhatsapp('Hola, quiero consultar mi caso.')} onClick={() => elegir('whatsapp')}>
-                Escribir por WhatsApp
-              </a>
-              <a
-                href="#lp-herramienta"
-                onClick={() => {
-                  elegir('herramienta landing');
-                  setVisible(false);
-                }}
-              >
-                {ruta.includes('incapacidad') ? 'Comprobar qué grado me corresponde' : ruta.includes('acoso') ? 'Hacer el test: ¿es acoso?' : 'Calcular mi indemnización'}
-              </a>
-            </div>
-            <div className="salida-fila">
-              <div>
-                <strong>¿Prefieres preguntar primero?</strong>
-                <p className="salida-intro" style={{ margin: '4px 0 0' }}>El chat te responde al momento, a cualquier hora.</p>
-              </div>
-              <div className="salida-acciones">
-                <button
-                  type="button"
-                  className="boton"
-                  onClick={() => {
-                    elegir('chat');
-                    window.dispatchEvent(new Event('abrir-asistente'));
-                  }}
-                >
-                  Preguntar al chat
-                </button>
-                <a className="boton boton-marcador" href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
-                  Llamar
+              <div className="sx-secundarias">
+                <a href={enlaceWhatsapp('Hola, quiero consultar mi caso.')} className="sx-wa" onClick={() => elegir('whatsapp')}>
+                  <Icono nombre="whatsapp" tam={18} /> WhatsApp
+                </a>
+                <a href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
+                  <Icono nombre="telefono" tam={17} /> Llamar
+                </a>
+                <a href="#lp-herramienta" onClick={() => elegir('herramienta landing')}>
+                  {ruta.includes('incapacidad') ? 'Ver mi grado' : ruta.includes('acoso') ? 'Hacer el test' : 'Calcular indemnización'}
                 </a>
               </div>
-            </div>
-          </>
-        ) : (
-          <>
-        {propio ? (
-          <>
-            <p className="salida-intro">{propio.texto}</p>
-            <div className="salida-temas salida-propio">
-              <Link href={propio.principal.href} onClick={() => elegir(propio.principal.texto)}>
+            </>
+          ) : propio ? (
+            <>
+              <Link className="boton sx-principal" href={propio.principal.href} onClick={() => elegir(propio.principal.texto)}>
                 {propio.principal.texto}
               </Link>
-              {propio.secundaria && (
-                <Link href={propio.secundaria.href} onClick={() => elegir(propio.secundaria!.texto)}>
-                  {propio.secundaria.texto}
-                </Link>
-              )}
-              <a href={enlaceWhatsapp(propio.whatsapp)} className="salida-wa" onClick={() => elegir('whatsapp')}>
-                <Icono nombre="whatsapp" tam={18} /> Escribir por WhatsApp
-              </a>
-            </div>
-            <p className="salida-intro" style={{ marginTop: 18 }}>¿Es otra cosa?</p>
-          </>
-        ) : (
-          <p className="salida-intro">Elige lo que más se parece a lo tuyo y te llevamos directo.</p>
-        )}
-
-            <div className="salida-temas salida-temas-iconos">
-              {TEMAS.filter((t) => !propio || !ruta.startsWith(t.href)).map((t) => (
+              <div className="sx-secundarias">
+                {propio.secundaria && (
+                  <Link href={propio.secundaria.href} onClick={() => elegir(propio.secundaria!.texto)}>
+                    {propio.secundaria.texto}
+                  </Link>
+                )}
+                <a href={enlaceWhatsapp(propio.whatsapp)} className="sx-wa" onClick={() => elegir('whatsapp')}>
+                  <Icono nombre="whatsapp" tam={18} /> WhatsApp
+                </a>
+                <a href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
+                  <Icono nombre="telefono" tam={17} /> Llamar
+                </a>
+              </div>
+            </>
+          ) : (
+            <div className="sx-temas">
+              {TEMAS.map((t) => (
                 <Link key={t.href} href={t.href} className={t.clase} onClick={() => elegir(t.texto)}>
                   <span className="st-icono"><Icono nombre={t.icono} tam={18} /></span>
                   {t.texto}
                 </Link>
               ))}
             </div>
+          )}
 
-            <div className="salida-fila">
-              <div>
-                <strong>Calcula lo tuyo</strong>
-                <div className="salida-chips">
-                  {CALCULOS.map((c) => (
-                    <Link key={c.href} href={c.href} onClick={() => elegir(`calcular ${c.texto}`)}>
-                      {c.texto}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              <div className="salida-acciones">
-                <button
-                  type="button"
-                  className="boton"
-                  onClick={() => {
-                    elegir('chat');
-                    window.dispatchEvent(new Event('abrir-asistente'));
-                  }}
-                >
-                  <Icono nombre="chat" tam={17} /> Preguntar al chat
-                </button>
-                <a className="boton boton-marcador" href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
-                  <Icono nombre="telefono" tam={17} /> Llamar
-                </a>
-              </div>
-            </div>
-          </>
-        )}
-
-        {estado === 'hecho' ? (
-          <p className="salida-hecho" role="status">
-            Hecho. En unos minutos te llega el primer correo con los pasos para tu caso.
+          <p className="sx-chat">
+            ¿Prefieres preguntar primero?{' '}
+            <button
+              type="button"
+              onClick={() => {
+                elegir('chat');
+                window.dispatchEvent(new Event('abrir-asistente'));
+              }}
+            >
+              Habla con el asistente
+            </button>
           </p>
-        ) : (
-          <form className="salida-correo" onSubmit={apuntar}>
-            <strong>O te mandamos por correo los pasos para tu caso</strong>
-            <div className="salida-correo-fila">
-              <select aria-label="Tu tema" value={tema} onChange={(e) => setTema(e.target.value)} required>
-                <option value="">Tu tema</option>
-                <option>Despido</option>
-                <option>Acoso laboral</option>
-                <option>Incapacidad o baja</option>
-                <option>Embarazo o conciliación</option>
-                <option>Otro</option>
-              </select>
-              <input type="email" aria-label="Tu correo" placeholder="Tu correo" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-              <button type="submit" className="boton" disabled={estado === 'enviando'}>
-                {estado === 'enviando' ? 'Enviando...' : 'Enviármelo'}
-              </button>
-            </div>
-            <label className="casilla salida-casilla">
-              <input type="checkbox" required checked={acepto} onChange={(e) => setAcepto(e.target.checked)} />
-              <span>
-                Acepto recibir estos correos (pocos y útiles; me doy de baja con un clic). <Link href="/privacidad">Privacidad</Link>.
-              </span>
-            </label>
-            {estado === 'error' && (
-              <p className="salida-error" role="alert">
-                {error}
-              </p>
-            )}
-          </form>
-        )}
+
+          {estado === 'hecho' ? (
+            <p className="salida-hecho" role="status">
+              Hecho. En unos minutos te llega el primer correo con los pasos para tu caso.
+            </p>
+          ) : verCorreo ? (
+            <form className="salida-correo" onSubmit={apuntar}>
+              <strong>Te mandamos por correo los pasos para tu caso</strong>
+              <div className="salida-correo-fila">
+                <select aria-label="Tu tema" value={tema} onChange={(e) => setTema(e.target.value)} required>
+                  <option value="">Tu tema</option>
+                  <option>Despido</option>
+                  <option>Acoso laboral</option>
+                  <option>Incapacidad o baja</option>
+                  <option>Embarazo o conciliación</option>
+                  <option>Otro</option>
+                </select>
+                <input type="email" aria-label="Tu correo" placeholder="Tu correo" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+                <button type="submit" className="boton" disabled={estado === 'enviando'}>
+                  {estado === 'enviando' ? 'Enviando...' : 'Enviármelo'}
+                </button>
+              </div>
+              <label className="casilla salida-casilla">
+                <input type="checkbox" required checked={acepto} onChange={(e) => setAcepto(e.target.checked)} />
+                <span>
+                  Acepto recibir estos correos (pocos y útiles; me doy de baja con un clic). <Link href="/privacidad">Privacidad</Link>.
+                </span>
+              </label>
+              {estado === 'error' && (
+                <p className="salida-error" role="alert">
+                  {error}
+                </p>
+              )}
+            </form>
+          ) : (
+            <p className="sx-chat">
+              <button type="button" onClick={() => setVerCorreo(true)}>Prefiero que me lo mandéis por correo</button>
+            </p>
+          )}
+
+          <button type="button" className="sx-no" onClick={() => setVisible(false)}>
+            No, gracias
+          </button>
+        </div>
       </div>
     </div>
   );

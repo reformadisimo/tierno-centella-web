@@ -21,7 +21,7 @@ const WEB: [string, string][] = [
   ['comprobador de incapacidad', '/herramientas/comprobador-incapacidad'],
   ['Autodiagnóstico para empresas y colegios', '/herramientas/autodiagnostico-acoso-empresas'],
   ['test de acoso', '/herramientas/test-acoso'],
-  ['14 herramientas', '/herramientas'],
+  ['18 herramientas', '/herramientas'],
   // Secciones de la web
   ['Mujer y trabajo', '/mujer-y-trabajo'],
   ['Redes y medios', '/redes-y-medios'],
