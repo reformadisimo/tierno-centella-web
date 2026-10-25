@@ -1,3 +1,4 @@
+import { HERRAMIENTAS } from '@/lib/herramientas';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import FotoVideo from '@/components/FotoVideo';
 import { videoDeFoto } from '@/lib/video-foto';
@@ -354,7 +355,7 @@ export default function Inicio() {
             </li>
           </ul>
           <p style={{ marginTop: 20 }}>
-            <Link href="/herramientas">Ver todas las herramientas (14)</Link>
+            <Link href="/herramientas">Ver todas las herramientas ({HERRAMIENTAS.length})</Link>
           </p>
         </div>
       </section>
