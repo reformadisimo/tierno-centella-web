@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { meta } from '@/lib/seo';
 import { CASOS } from '@/lib/casos';
 import { CASOS_EN } from '@/lib/casos-en';
-import { DEMO, DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
+import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { Compartir } from '@/components/BotonesAccion';
 
 export const dynamicParams = false;
@@ -51,8 +51,7 @@ export default async function RulingEn({ params }: { params: Promise<{ slug: str
             </p>
             <h1>{e.titulo}</h1>
             <p className="entradilla">{e.resumen}</p>
-            <p className="ficha-organo">{[e.organo, e.fecha === 'Pending' ? '' : e.fecha].filter(Boolean).join('. ')}.</p>
-            {DEMO && c.pendiente && <span className="ficha-pendiente">Pending confirmation with the firm</span>}
+            <p className="ficha-organo">{[e.organo.replace(/^Pending confirmation with the firm\.?\s*/, ''), e.fecha === 'Pending' ? '' : e.fecha].filter(Boolean).join('. ')}.</p>
           </div>
           <figure className="foto-cabeza">
             <img src={`/img/${FOTOS_JESUS[i % FOTOS_JESUS.length]}-640.webp`} alt="Jesús Tierno Centella, managing partner" width={640} height={480} />

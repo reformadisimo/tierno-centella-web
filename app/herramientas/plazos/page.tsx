@@ -7,6 +7,7 @@ import Plazos from '@/components/Plazos';
 
 export const metadata: Metadata = meta({
   titulo: 'Plazos para reclamar en lo laboral',
+  tituloSeo: 'Calculadora de plazos para reclamar',
   descripcion: 'Calcula el último día para reclamar un despido, una sanción, una cantidad, una incapacidad denegada o los daños por acoso.',
   ruta: '/herramientas/plazos',
 });

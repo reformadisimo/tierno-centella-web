@@ -71,7 +71,7 @@ export default function Pie() {
               <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/en/rulings' : '/sentencias'}>{en ? 'Rulings' : 'Sentencias ganadas'}</Link></li>
               <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/en/tools' : '/herramientas'}>{en ? 'Free tools' : 'Herramientas gratuitas'}</Link></li>
               <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/redes-y-medios' : '/redes-y-medios'}>{en ? 'Videos and press (ES)' : 'Vídeos, radio y medios'}</Link></li>
-              <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/blog' : '/blog'}>{en ? 'Blog (ES)' : 'Blog'}</Link></li>
+              <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/en/blog' : '/blog'}>Blog</Link></li>
               <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/en/search' : '/preguntas-frecuentes'}>{en ? 'Search the website' : 'Preguntas frecuentes'}</Link></li>
               <li><Icono nombre="flecha" tam={14} /><Link href={en ? '/empresas' : '/empresas'}>{en ? 'For companies (ES)' : 'Empresas y colegios'}</Link></li>
             </ul>
@@ -96,7 +96,7 @@ export default function Pie() {
             : 'La información de esta web es orientativa y no sustituye el consejo de un abogado sobre tu caso concreto.'}
         </p>
         {lineaColegiado() && (
-          <p className="pie-legal">{en ? `Member of the Madrid Bar Association (ICAM), no. ${DESPACHO.colegiadoNumero} (pending confirmation with the firm)` : lineaColegiado()}</p>
+          <p className="pie-legal">{en ? `Member of the Madrid Bar Association (ICAM), no. ${DESPACHO.colegiadoNumero}` : lineaColegiado()}</p>
         )}
       </div>
     </footer>

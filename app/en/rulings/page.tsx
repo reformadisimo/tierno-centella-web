@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { meta } from '@/lib/seo';
 import { CASOS } from '@/lib/casos';
 import { CASOS_EN } from '@/lib/casos-en';
-import { DEMO } from '@/lib/despacho';
 
 export const metadata: Metadata = meta({
   titulo: 'Rulings and cases won by the firm',
@@ -46,14 +45,13 @@ export default function RulingsEn() {
                   <h2 className="ficha-titulo">
                     <Link href={`/en/rulings/${c.slug}`}>{e.titulo}</Link>
                   </h2>
-                  <span className="ficha-organo">{[e.organo, e.fecha === 'Pending' ? '' : e.fecha].filter(Boolean).join('. ')}.</span>
+                  <span className="ficha-organo">{[e.organo.replace(/^Pending confirmation with the firm\.?\s*/, ''), e.fecha === 'Pending' ? '' : e.fecha].filter(Boolean).join('. ')}.</span>
                   <p>{e.resumen}</p>
                   <p>
                     <strong>Outcome.</strong> {e.resultado}
                   </p>
                   <div className="ficha-pie">
                     <Link href={`/en/rulings/${c.slug}`}>Read the full case</Link>
-                    {DEMO && c.pendiente && <span className="ficha-pendiente">Pending confirmation with the firm</span>}
                   </div>
                 </div>
               </article>

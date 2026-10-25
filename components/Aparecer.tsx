@@ -13,6 +13,8 @@ export default function Aparecer() {
   // Idioma del documento según la sección (la versión inglesa vive bajo /en).
   useEffect(() => {
     document.documentElement.lang = ruta === '/en' || ruta?.startsWith('/en/') ? 'en' : 'es';
+    const salta = document.querySelector('a.salta');
+    if (salta) salta.textContent = ruta === '/en' || ruta?.startsWith('/en/') ? 'Skip to content' : 'Saltar al contenido';
   }, [ruta]);
   // Los carruseles con scroll horizontal se pueden recorrer también con el teclado.
   useEffect(() => {
