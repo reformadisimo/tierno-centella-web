@@ -108,7 +108,7 @@ export default function Incapacidad() {
           </table>
 
           <figure className="prosa-foto">
-            <img src="/img/medico-informe-640.webp" srcSet="/img/medico-informe-640.webp 640w, /img/medico-informe.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Un médico rellena un informe" width={1200} height={800} loading="lazy" decoding="async" />
+            <img src="/img/incapacidad-640.webp" srcSet="/img/incapacidad-640.webp 640w, /img/incapacidad.webp 1600w" sizes="(max-width: 1000px) 100vw, 720px" alt="Un trabajador en silla de ruedas en su puesto de trabajo" width={1200} height={800} loading="lazy" decoding="async" />
           </figure>
           <h2>Cómo trabajamos un caso de incapacidad</h2>
           <ol className="pasos-numerados">
