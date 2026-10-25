@@ -16,7 +16,7 @@ function caja(titulo: string, cuerpo: string, enlace: string) {
   );
 }
 
-type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
+type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas' | 'tiempo'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
 
 function preparar(a: Aviso, donde = '') {
   const hora = new Intl.DateTimeFormat('es-ES', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(new Date());
@@ -29,6 +29,23 @@ function preparar(a: Aviso, donde = '') {
         GUIA,
       ),
       texto: `Jesús ha abierto la guía (${a.dispositivo}), ${hora}.${donde ? ` Desde: ${donde}.` : ''}`,
+    };
+  }
+  if (a.tipo === 'tiempo') {
+    const seg = Number(a.reaccion) || 0;
+    const dura = seg >= 60 ? `${Math.floor(seg / 60)} min ${seg % 60} s` : `${seg} s`;
+    const hasta = Number(a.seccion) || 0;
+    const filas = (a.texto ?? '').split('\n').filter(Boolean);
+    return {
+      asunto: `Tierno Centella: Jesús ha leído la guía ${dura} (llegó al ${hasta} %${donde ? `, ${donde.split(' · ')[0]}` : ''})`,
+      html: caja(
+        `Jesús ha estado ${dura} leyendo la guía`,
+        `<p>Desde el <b>${esc(a.dispositivo ?? '')}</b>, hasta las ${hora}. Ha bajado hasta el <b>${hasta} %</b> de la guía.</p>${donde ? `<p>Desde: <b>${esc(donde)}</b></p>` : ''}` +
+          `<p style="margin-bottom:6px"><b>Dónde se ha parado más:</b></p><ol style="margin-top:0">${filas.map((f) => `<li>${esc(f)}</li>`).join('')}</ol>` +
+          `<p style="color:#3b5168;font-size:13px">Solo cuenta el tiempo con la guía delante. Si sigue leyendo, llegará otro resumen con el total de esta visita.</p>`,
+        GUIA,
+      ),
+      texto: `Jesús ha leído la guía ${dura}, hasta el ${hasta} %. ${filas.join('; ')}`,
     };
   }
   if (a.tipo === 'reaccion') {
@@ -79,7 +96,7 @@ export async function POST(req: Request) {
   let aviso: Aviso;
   try {
     const cuerpo = await req.json();
-    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
+    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario', 'tiempo'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
     for (const k of ['dispositivo', 'seccion', 'id', 'reaccion', 'texto'] as const) if (aviso[k] != null) aviso[k] = String(aviso[k]).slice(0, k === 'texto' ? 20000 : 200);
   } catch {
     return Response.json({ ok: false }, { status: 400 });
@@ -92,7 +109,7 @@ export async function POST(req: Request) {
   const so = /iPhone|iPad/.test(ua) ? 'iPhone o iPad' : /Android/.test(ua) ? 'Android' : /Mac OS X/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : '';
   const nav = /Edg\//.test(ua) ? 'Edge' : /CriOS|Chrome\//.test(ua) ? 'Chrome' : /Firefox\//.test(ua) ? 'Firefox' : /Safari\//.test(ua) ? 'Safari' : '';
   const donde = [ciudad && `${ciudad}${region ? ` (${region})` : ''}`, [so, nav].filter(Boolean).join(', ')].filter(Boolean).join(' · ');
-  const { asunto, html, texto } = preparar(aviso, aviso.tipo === 'visita' ? donde : '');
+  const { asunto, html, texto } = preparar(aviso, aviso.tipo === 'visita' || aviso.tipo === 'tiempo' ? donde : '');
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' },

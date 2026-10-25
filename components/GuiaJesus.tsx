@@ -639,6 +639,60 @@ function useAvisoVisita() {
   }, []);
 }
 
+// Tiempo de lectura: cuenta solo el tiempo con la guía delante (pestaña visible y sin estar parado más de 3 minutos),
+// qué apartados ha tenido en pantalla y hasta dónde ha llegado. Al salir o cambiar de pestaña manda un resumen,
+// la primera vez a partir de 20 segundos y luego solo si ha leído 2 minutos más. No avisa si quien lee es Ignacio (?yo=1).
+function useTiempoLectura() {
+  useEffect(() => {
+    if (esYo()) return;
+    let activo = 0;
+    let enviado = -1;
+    let maxScroll = 0;
+    let ultimaAccion = Date.now();
+    const porApartado: Record<string, number> = {};
+    const titulos: Record<string, string> = {};
+    const tocar = () => (ultimaAccion = Date.now());
+    const eventos = ['scroll', 'click', 'keydown', 'touchstart', 'mousemove'];
+    eventos.forEach((e) => window.addEventListener(e, tocar, { passive: true }));
+    const reloj = setInterval(() => {
+      if (document.visibilityState !== 'visible' || Date.now() - ultimaAccion > 180000) return;
+      activo++;
+      const alto = document.documentElement.scrollHeight - innerHeight;
+      if (alto > 0) maxScroll = Math.max(maxScroll, Math.round((scrollY / alto) * 100));
+      // El apartado que ocupa el centro de la pantalla suma un segundo.
+      const el = document.elementFromPoint(innerWidth / 2, innerHeight / 2)?.closest('section.gj-seccion') as HTMLElement | null;
+      if (el?.id) {
+        porApartado[el.id] = (porApartado[el.id] || 0) + 1;
+        titulos[el.id] = el.querySelector('h2')?.textContent || el.id;
+      }
+    }, 1000);
+    const enviar = () => {
+      if (activo < 20 || (enviado >= 0 && activo - enviado < 120)) return;
+      enviado = activo;
+      const lista = Object.entries(porApartado)
+        .filter(([, t]) => t >= 5)
+        .sort((a, b) => b[1] - a[1])
+        .map(([id, t]) => `${titulos[id]}: ${t >= 60 ? `${Math.floor(t / 60)} min ${t % 60} s` : `${t} s`}`);
+      avisar({
+        tipo: 'tiempo',
+        dispositivo: /Mobi|Android|iPhone/i.test(navigator.userAgent) ? 'móvil' : 'ordenador',
+        reaccion: String(activo),
+        seccion: String(maxScroll),
+        texto: lista.join('\n') || '(no se paró en ningún apartado más de 5 segundos)',
+      });
+    };
+    const alOcultar = () => document.visibilityState === 'hidden' && enviar();
+    document.addEventListener('visibilitychange', alOcultar);
+    window.addEventListener('pagehide', enviar);
+    return () => {
+      clearInterval(reloj);
+      eventos.forEach((e) => window.removeEventListener(e, tocar));
+      document.removeEventListener('visibilitychange', alOcultar);
+      window.removeEventListener('pagehide', enviar);
+    };
+  }, []);
+}
+
 // Las dudas que escribe Jesús se guardan en su navegador y aparecen al momento en "Tus dudas, respondidas".
 type Duda = { seccion: string; texto: string; tipo: string; fecha: string };
 function leerDudas(): Duda[] {
@@ -790,6 +844,7 @@ function useVistos(ids: string[], version: string) {
 
 export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: SeccionGuia[]; actualizada?: string }) {
   useAvisoVisita();
+  useTiempoLectura();
   // Los enlaces internos de la guía ("apartado 17", "pregunta 34") abren el detalle plegado antes de llevar al sitio.
   useEffect(() => {
     const abrir = () => {
