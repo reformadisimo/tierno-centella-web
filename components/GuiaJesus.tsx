@@ -1,7 +1,7 @@
 'use client';
 
 import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace } from './EnlacesGuia';
-import RedesHoyLuego from './RedesGuia';
+import RedesHoyLuego, { GoogleNombre } from './RedesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
 import CostesGuia from './CostesGuia';
@@ -502,6 +502,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'panel-enlace': BloquePanelEnlace,
   'crm-enlace': BloqueCrmEnlace,
   'redes-hoy-luego': RedesHoyLuego,
+  'google-nombre': GoogleNombre,
   'redes-enlace': BloqueRedesEnlace,
   mercado: MercadoGuia,
   cambio: CambioGuia,
@@ -542,8 +543,16 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 5;
-const NOVEDADES: { texto: string; clave: string }[] = [];
+const VERSION = 6;
+const NOVEDADES: { texto: string; clave: string }[] = [
+  { clave: '6', texto: 'Facebook y LinkedIn: hemos encontrado dos páginas de Facebook (una parada desde 2017, con el piso y el teléfono mal) y tres de LinkedIn sin publicaciones. Te enseñamos lo que ve quien te busca en Google, cómo quedarían y por qué ahí se pueden hacer anuncios muy bien dirigidos.' },
+  { clave: '8', texto: 'La web está cambiando de imagen: barra superior con tus datos y redes, menús con iconos, portada con las áreas y el equipo. No es la definitiva: la estamos puliendo cada día.' },
+  { clave: '19 bis', texto: 'Cómo mejora la web sola cada semana: miramos por dónde navega la gente (mapas de calor), qué pregunta en el chat y dónde se atasca, y cambiamos lo que haga falta.' },
+  { clave: '13', texto: 'Por qué que tu nombre, dirección y teléfono sean iguales en todas partes te hace subir en Google (y por qué Facebook hoy te resta).' },
+  { clave: '25 bis', texto: 'Lo que te costaría contratar cada cosa por separado, con precios de mercado, y la calculadora de comisiones sobre anuncios.' },
+  { clave: '21', texto: 'Cómo se haría el cambio desde tus proveedores actuales, paso a paso y sin cortes.' },
+  { clave: '12', texto: 'Nuestro compromiso de velocidad por escrito: 100 en todo y menos de 2 segundos.' },
+];
 
 function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
   const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades'>('');
@@ -598,9 +607,12 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
           </>
         ) : (
           <>
-            <p className="etiqueta-calida">Novedades</p>
-            <h2 id="gj-aviso-titulo">La guía se ha actualizado</h2>
-            <p>Desde tu última visita hemos añadido:</p>
+            <p className="etiqueta-calida">Hola de nuevo, Jesús</p>
+            <h2 id="gj-aviso-titulo">La guía ha seguido creciendo</h2>
+            <p>
+              Te dijimos que esta guía estaba viva, y es verdad: cada vez que entres encontrarás cosas nuevas, porque seguimos mirando tu caso y mejorando la web.
+              Esto es lo último que hemos añadido (pulsa en cada punto para ir directo):
+            </p>
             <ul className="gj-novedades">
               {NOVEDADES.map((n) => (
                 <li key={n.clave}>
@@ -610,7 +622,10 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
                 </li>
               ))}
             </ul>
-            <p>Cualquier duda, escríbenos debajo de cada apartado: nos llega al momento.</p>
+            <p>
+              Y una cosa importante: la web nueva tampoco se queda quieta. Cada semana vemos por dónde navega la gente, qué pregunta al chat y dónde se atasca, y
+              la vamos ajustando. Cualquier duda, escríbenos debajo de cada apartado: nos llega al momento.
+            </p>
           </>
         )}
         <button type="button" className="boton boton-marcador" onClick={cerrar}>

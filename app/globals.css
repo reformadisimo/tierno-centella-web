@@ -7003,12 +7003,18 @@ section.pn-caja{margin-bottom:12px}
 
 /* Iconos de redes en círculos */
 .redes-iconos{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.redes-iconos a{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;transition:transform .15s,background .15s,color .15s}
+.redes-iconos a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform .15s,filter .15s}
 .redes-iconos a:hover{transform:translateY(-2px)}
-.redes-claro a{background:rgba(255,255,255,.12);color:#fff}
-.redes-claro a:hover{background:var(--marcador);color:var(--tinta)}
-.redes-oscuro a{background:var(--cielo);color:var(--tinta)}
-.redes-oscuro a:hover{background:var(--tinta);color:#fff}
+/* Cada red con su color: más alegre y se reconocen al instante */
+.redes-iconos a{color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.redes-iconos a:hover{filter:brightness(1.08);transform:translateY(-2px) scale(1.06)}
+.redes-iconos .red-instagram{background:radial-gradient(circle at 30% 110%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.redes-iconos .red-youtube{background:#ff0033}
+.redes-iconos .red-facebook{background:#1877f2}
+.redes-iconos .red-linkedin{background:#0a66c2}
+.redes-iconos .red-tiktok{background:#111}
+.redes-iconos .red-whatsapp{background:#25d366}
+.redes-claro a,.redes-oscuro a{color:#fff}
 .redes-grandes-iconos a{width:44px;height:44px}
 
 /* Cabecera: botón de cita */
@@ -7044,3 +7050,77 @@ body{padding-bottom:58px}
 .pie-redes-texto{margin-top:22px}
 @media (min-width:1100px) and (max-width:1279px){.cabecera .menu a{padding:8px 5px;font-size:.87rem}.cabecera-acciones{gap:6px}}
 @media (min-width:1280px) and (max-width:1399px){.cabecera .menu a{padding:8px 6px;font-size:.9rem}.cabecera-acciones{gap:6px}}
+
+/* ===== Portada: entrada suave del texto (sin vuelos desde los lados) ===== */
+@media (prefers-reduced-motion: no-preference) {
+  .portada-video .contenedor { animation: entra-suave 650ms ease-out both; }
+  @keyframes entra-suave { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+}
+
+/* Etiquetas de sección con icono */
+.etiqueta-seccion{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:12px}
+.es-oro{background:var(--marcador-suave);color:#6b4e00}
+.es-coral{background:var(--coral-suave);color:var(--coral-texto)}
+.es-rosa{background:#fbe9ef;color:#9a2f5a}
+.es-azul{background:var(--cielo);color:var(--marca)}
+.intro-seccion{max-width:62ch;color:var(--tinta-media);margin-top:-4px}
+
+/* Franja de áreas bajo la portada (como la franja azul de su web actual) */
+.areas-franja{background:var(--tinta);color:#fff}
+.areas-fila{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:10px 0}
+.areas-fila a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;padding:9px 10px;border-radius:12px;transition:background .15s,transform .15s}
+.areas-fila a:hover{background:rgba(255,255,255,.1);transform:translateY(-1px)}
+.af-icono{flex:none;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);color:var(--marcador);display:flex;align-items:center;justify-content:center}
+.af-texto{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.af-texto strong{font-size:.95rem}
+.af-texto small{font-size:.76rem;color:rgba(255,255,255,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:1000px){.areas-fila{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.areas-fila{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:6px;padding:10px 0;scrollbar-width:none}.areas-fila::-webkit-scrollbar{display:none}.areas-fila a{flex:0 0 auto;scroll-snap-align:start;padding:7px 10px 7px 7px;background:rgba(255,255,255,.06)}.af-icono{width:36px;height:36px}.af-texto small{display:none}}
+
+/* ¿Qué te está pasando?: tres tarjetas */
+.pasando{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.pasando-tarjeta{background:var(--blanco);border:1px solid var(--linea);border-radius:18px;padding:22px 22px 24px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.pasando-tarjeta::before{content:'';position:absolute;left:0;top:0;right:0;height:5px;background:var(--pt)}
+.pt-despido{--pt:#1b6fd1;--pt-claro:#e8f1fc}
+.pt-acoso{--pt:#a8442c;--pt-claro:#fdf0ed}
+.pt-incapacidad{--pt:#7a4fb3;--pt-claro:#f3edfa}
+.pt-icono{width:52px;height:52px;border-radius:14px;background:var(--pt-claro);color:var(--pt);display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+.pasando-tarjeta h3{font-size:1.3rem;margin:0}
+.pasando-tarjeta p{margin:0;color:var(--tinta-media)}
+.pasando-tarjeta .acciones{margin-top:auto;padding-top:6px}
+.pasando-tarjeta .acciones .boton{min-height:44px;padding:0 14px;font-size:.95rem}
+.pasando-tarjeta .plazo,.pasando-tarjeta form{margin-top:4px}
+@media (max-width:1000px){.pasando{grid-template-columns:1fr}}
+
+/* Cifras con icono dorado y rayita, como las tarjetas de su web actual */
+.cifras-oro{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cifras-oro li{background:var(--blanco);border:1px solid var(--linea);border-radius:16px;padding:22px 18px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;transition:transform .15s,box-shadow .15s}
+.cifras-oro li:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(13,44,72,.1)}
+.co-icono{color:#b8902e;margin-bottom:4px}
+.cifras-oro strong{font-size:1.7rem;line-height:1.1;color:var(--tinta)}
+.cifras-oro i{display:block;width:34px;height:3px;border-radius:2px;background:#d4af5a;margin:4px 0 6px}
+.cifras-oro span:last-child{font-size:.9rem;line-height:1.4;color:var(--tinta-media)}
+@media (max-width:860px){.cifras-oro{grid-template-columns:1fr 1fr;gap:12px}.cifras-oro li{padding:16px 12px 14px}.cifras-oro strong{font-size:1.4rem}}
+
+/* El equipo */
+.equipo{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;margin-top:26px;align-items:start}
+.equipo-grupo{margin:0;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 10px 30px rgba(13,44,72,.12)}
+.equipo-grupo img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.equipo-grupo figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 14px;color:#fff;font-size:.9rem;background:linear-gradient(180deg,rgba(13,44,72,0),rgba(13,44,72,.85))}
+.equipo-retratos{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;grid-column:1/-1}
+.equipo-retratos li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
+.equipo-retratos img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:4px solid var(--blanco);box-shadow:0 6px 18px rgba(13,44,72,.14)}
+.equipo-retratos strong{font-size:.92rem;color:var(--tinta);line-height:1.2;margin-top:4px}
+.equipo-retratos small{font-size:.78rem;color:var(--tinta-suave);line-height:1.25}
+.equipo-valores{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-content:start}
+.equipo-valores li{display:flex;gap:12px;align-items:flex-start;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:12px 14px;font-size:.95rem;line-height:1.45}
+.equipo-valores svg{flex:none;margin-top:2px;color:#b8902e}
+.equipo-valores b{color:var(--tinta)}
+.galeria-mini{grid-template-columns:repeat(3,1fr)!important}
+.galeria-mini figure{aspect-ratio:4/3;margin:0}
+@media (max-width:860px){.equipo{grid-template-columns:1fr}.equipo-retratos{grid-template-columns:repeat(3,1fr);gap:12px 6px}.equipo-retratos img{width:80px;height:80px}.galeria-mini{grid-template-columns:1fr 1fr!important}.galeria-mini figure:last-child{display:none}}
+
+/* Blog: chip de tema y tiempo de lectura */
+.tf-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px;font-size:.78rem!important;color:var(--tinta-suave)!important}
+.tf-meta small{display:inline-flex;align-items:center;gap:4px;font-size:.78rem}
+.tf-chip{font-style:normal;font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:.68rem;background:var(--marcador-suave);color:#6b4e00;border-radius:999px;padding:3px 8px}

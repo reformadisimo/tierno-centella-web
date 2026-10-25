@@ -440,6 +440,14 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 Lo hemos mirado con calma (visto el 25 de octubre de 2026), y hay un problema que desde dentro no se ve, pero que ve cualquiera que te busque.
 
+**Empieza por lo más sencillo: escribe tu nombre en Google.** Es lo que hace casi todo el mundo antes de llamar a un abogado: alguien le habla de ti, teclea "Jesús Tierno Centella" y mira la primera y la segunda página con calma, porque va a confiarle a esa persona su trabajo y su dinero. Y esto es lo que se encuentra hoy:
+
+[[google-nombre]]
+
+Fíjate en tres cosas. **Primero**, antes que tu web aparece un directorio de abogados que no es tuyo. **Segundo**, Google enseña la página de Facebook equivocada: la que lleva nueve años sin publicar, con el piso mal ("78-6ºC") y un teléfono antiguo, y ahí mismo aparecen la dirección y el número para llamar. **Tercero**, un LinkedIn con 9 seguidores. Quien lo ve no piensa "qué buen abogado"; piensa "¿seguirá abierto este despacho?". Y todo eso pasa en el momento exacto en que está decidiendo si te llama.
+
+**Por qué esto también te quita posiciones en Google.** Google funciona un poco como un notario desconfiado: comprueba que tu nombre, tu dirección y tu teléfono sean **los mismos en todas partes** (tu web, tu ficha de Google, Facebook, LinkedIn, los directorios). Cuando coinciden, se fía y te enseña más; cuando no, duda y te enseña menos. Por eso arreglar Facebook y LinkedIn no es solo imagen: es parte del trabajo de SEO fuera de tu web (el que explicamos en el apartado 13), y entra en la cuota.
+
 **En Facebook tienes dos páginas.** La que usas, la página activa de Facebook (285 seguidores y cinco opiniones, todas buenas), publica de tarde en tarde y casi siempre repite los vídeos de Instagram. Pero hay otra, la página antigua de Facebook, con 161 seguidores, cuya **última publicación es del 30 de agosto de 2017**: un enlace a un artículo de Cinco Días sobre las dietas. Nueve años. Y con los datos mal: pone **"78-6ºC"** cuando el despacho está en el 5.º C, y un **teléfono antiguo, el 917 826 854**. Quien llega a esa página piensa que el despacho ha cerrado, o llama a un número que ya no es el tuyo. Y Facebook no es poca cosa para ti: **el 62 % de quien entra cada mes tiene más de 45 años**, justo la edad de muchos despidos, bajas largas e incapacidades, y la de los hijos que buscan abogado para sus padres.
 
 **En LinkedIn tienes tres páginas de empresa, y ninguna ha publicado nunca nada.** TIERNO CENTELLA ABOGADOS (80 seguidores), Tierno Centella (224 seguidores) y Tierno Centella Abogados (154 seguidores): **458 personas que decidieron seguirte, repartidas en tres escaparates vacíos**. Tu perfil personal de LinkedIn tiene 2.371 seguidores, pero publicas muy poco. Y LinkedIn es, con diferencia, el sitio donde están tus futuros clientes de más calidad: **los trabajadores en activo**, los que mañana sufrirán un despido o un acoso; y **los directores de recursos humanos, las empresas y los colegios** que necesitan un protocolo, una investigación o una formación. Es el canal natural para las campañas a instituciones del apartado 18.
@@ -1131,7 +1139,7 @@ Lo normal es que una agencia haga una web o una página para anuncios, la entreg
 **Cómo funciona**:
 
 1. **Medimos todo**: cuántas visitas llegan y de dónde, quién llama, quién escribe por WhatsApp, quién rellena el formulario y quién no.
-2. **Miramos cómo se mueve la gente**: con los mapas de calor y las grabaciones anónimas vemos dónde pulsa, hasta dónde lee, dónde duda y en qué punto abandona el formulario.
+2. **Miramos cómo se mueve la gente**: con los mapas de calor y las grabaciones anónimas vemos dónde pulsa, hasta dónde lee, dónde duda y en qué punto abandona el formulario. (Un mapa de calor es una foto de tu web en la que las zonas que más toca la gente salen en rojo y las que nadie mira, en azul. Las grabaciones son como ver por encima del hombro, sin saber quién es, cómo alguien recorre la página.)
 3. **Cambiamos lo que no funciona**: si en el móvil nadie llega al botón de llamar, lo subimos; si un campo del formulario hace que la gente se vaya, lo quitamos; si un anuncio trae curiosos y no clientes, lo pausamos.
 4. **Comprobamos que ha mejorado**: con datos, no con opiniones. Y si no mejora, volvemos atrás.
 

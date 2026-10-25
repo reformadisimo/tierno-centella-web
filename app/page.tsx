@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import IconoMenu, { tipoIcono } from '@/components/IconoMenu';
+import Icono from '@/components/Iconos';
+import { Etiqueta } from '@/components/Etiqueta';
 import Plazo from '@/components/Plazo';
 import VideoYoutube from '@/components/VideoYoutube';
 import { DESPACHO } from '@/lib/despacho';
@@ -32,75 +34,68 @@ export default function Inicio() {
           </p>
           <div className="acciones">
             <Link className="boton boton-marcador" href="/herramientas/test-acoso">
-              ¿Es acoso lo que me pasa?
+              <Icono nombre="checkCirculo" tam={18} /> ¿Es acoso lo que me pasa?
             </Link>
             <Link className="boton boton-claro" href="/calculadora-indemnizacion">
-              Calcular mi indemnización
+              <Icono nombre="calculadora" tam={18} /> Calcular mi indemnización
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="avales" aria-label="Nuestra trayectoria">
-        <div className="contenedor avales-fila">
-          <div>
-            <strong>2005</strong>
-            <span>Primera condena en España a la empresa y al acosador a la vez</span>
-          </div>
-          <div>
-            <strong>+25 años</strong>
-            <span>Dedicados al derecho laboral, sobre todo al acoso</span>
-          </div>
-          <div>
-            <strong>Un libro</strong>
-            <span>Coautor de &quot;Valores en el trabajo&quot; con Bernabé Tierno</span>
-          </div>
-          <div>
-            <strong>Iñaki Piñuel</strong>
-            <span>Dos entrevistas con uno de los mayores expertos en mobbing</span>
-          </div>
+      <nav className="areas-franja" aria-label="En qué te ayudamos">
+        <div className="contenedor areas-fila">
+          {[
+            ['/acoso-laboral', 'personas', 'Acoso laboral', 'Demostrarlo y reclamar'],
+            ['/despido', 'caja', 'Despido', 'Plazos e indemnización'],
+            ['/incapacidad-permanente', 'sillaRuedas', 'Incapacidad', 'Grados y recursos'],
+            ['/mujer-y-trabajo', 'embarazo', 'Mujer y trabajo', 'Embarazo y conciliación'],
+            ['/empresas', 'edificio', 'Empresas y colegios', 'Protocolos y formación'],
+          ].map(([href, icono, titulo, sub]) => (
+            <Link key={href} href={href}>
+              <span className="af-icono"><Icono nombre={icono} tam={22} /></span>
+              <span className="af-texto">
+                <strong>{titulo}</strong>
+                <small>{sub}</small>
+              </span>
+            </Link>
+          ))}
         </div>
-      </section>
+      </nav>
 
       <section className="seccion">
         <div className="contenedor">
+          <Etiqueta icono="corazon">Empieza por aquí</Etiqueta>
           <h2>¿Qué te está pasando?</h2>
-          <div className="dos-columnas" style={{ marginTop: 24 }}>
-            <div>
-              <h3 style={{ fontSize: '1.35rem', marginBottom: 10 }}>Me han despedido</h3>
+          <p className="intro-seccion">Elige tu situación y te decimos, sin dejar datos, cuál es tu siguiente paso.</p>
+          <div className="pasando">
+            <article className="pasando-tarjeta pt-despido">
+              <span className="pt-icono"><Icono nombre="caja" tam={26} /></span>
+              <h3>Me han despedido</h3>
               <p>Tienes 20 días hábiles para reclamar. Pon la fecha de tu carta y te decimos cuántos te quedan.</p>
               <Plazo />
-            </div>
-            <div style={{ display: 'grid', gap: 28, alignContent: 'start' }}>
-              <div>
-                <h3 style={{ fontSize: '1.35rem', marginBottom: 10 }}>Sufro acoso en el trabajo</h3>
-                <p>No es un mal día ni un mal jefe: es un trato hostil que se repite. Se puede demostrar, y aquí te enseñamos cómo.</p>
-                <div className="acciones" style={{ marginTop: 12 }}>
-                  <Link className="boton" href="/herramientas/test-acoso">
-                    Hacer el test
-                  </Link>
-                  <Link className="boton boton-claro" href="/acoso-laboral">
-                    Guía del acoso laboral
-                  </Link>
-                </div>
+            </article>
+            <article className="pasando-tarjeta pt-acoso">
+              <span className="pt-icono"><Icono nombre="personas" tam={26} /></span>
+              <h3>Sufro acoso en el trabajo</h3>
+              <p>No es un mal día ni un mal jefe: es un trato hostil que se repite. Se puede demostrar, y aquí te enseñamos cómo.</p>
+              <div className="acciones">
+                <Link className="boton" href="/herramientas/test-acoso"><Icono nombre="checkCirculo" tam={17} /> Hacer el test</Link>
+                <Link className="boton boton-claro" href="/acoso-laboral">Guía del acoso laboral</Link>
               </div>
-              <div>
-                <h3 style={{ fontSize: '1.35rem', marginBottom: 10 }}>Me han denegado la incapacidad</h3>
-                <p>Tienes 30 días hábiles para la reclamación previa. Muchas incapacidades denegadas se ganan después en el juzgado.</p>
-                <div className="acciones" style={{ marginTop: 12 }}>
-                  <Link className="boton" href="/herramientas/comprobador-incapacidad">
-                    Comprobar mi caso
-                  </Link>
-                  <Link className="boton boton-claro" href="/incapacidad-permanente">
-                    Guía de incapacidad
-                  </Link>
-                </div>
+            </article>
+            <article className="pasando-tarjeta pt-incapacidad">
+              <span className="pt-icono"><Icono nombre="escudo" tam={26} /></span>
+              <h3>Me han denegado la incapacidad</h3>
+              <p>Tienes 30 días hábiles para la reclamación previa. Muchas incapacidades denegadas se ganan después en el juzgado.</p>
+              <div className="acciones">
+                <Link className="boton" href="/herramientas/comprobador-incapacidad"><Icono nombre="escudo" tam={17} /> Comprobar mi caso</Link>
+                <Link className="boton boton-claro" href="/incapacidad-permanente">Guía de incapacidad</Link>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
-
 
       <section className="seccion seccion-arena">
         <div className="contenedor bloque-foto invertido">
@@ -128,7 +123,7 @@ export default function Inicio() {
             </ul>
             <div className="acciones">
               <Link className="boton" href="/herramientas/calendario-permisos">
-                Calcular mis permisos
+                <Icono nombre="calendario" tam={17} /> Calcular mis permisos
               </Link>
               <Link className="boton boton-claro" href="/mujer-y-trabajo">
                 Ver todo
@@ -140,6 +135,7 @@ export default function Inicio() {
 
       <section className="seccion seccion-blanca">
         <div className="contenedor">
+          <Etiqueta icono="balanza">Sentencias</Etiqueta>
           <h2>Casos que han abierto camino</h2>
           <ul className="hitos">
             {hitos.map((c) => (
@@ -169,6 +165,7 @@ export default function Inicio() {
             </div>
           </div>
           <div>
+            <Etiqueta icono="personas">El despacho</Etiqueta>
             <h2>Te atiende un equipo especialista, no una centralita</h2>
             <p>
               Jesús Tierno dirige el despacho y lleva personalmente los casos más complejos. Es coautor, con el psicólogo Bernabé Tierno, de{' '}
@@ -184,35 +181,78 @@ export default function Inicio() {
             </p>
           </div>
         </div>
+        <div className="contenedor">
+          <ul className="cifras-oro" aria-label="Nuestra trayectoria">
+            <li>
+              <span className="co-icono"><Icono nombre="premio" tam={28} /></span>
+              <strong>+25 años</strong>
+              <i />
+              <span>dedicados al derecho laboral, sobre todo al acoso</span>
+            </li>
+            <li>
+              <span className="co-icono"><Icono nombre="balanza" tam={28} /></span>
+              <strong>2005</strong>
+              <i />
+              <span>primera condena en España a la empresa y al acosador a la vez</span>
+            </li>
+            <li>
+              <span className="co-icono"><Icono nombre="libro" tam={28} /></span>
+              <strong>Un libro</strong>
+              <i />
+              <span>coautor de &quot;Valores en el trabajo&quot; con Bernabé Tierno</span>
+            </li>
+            <li>
+              <span className="co-icono"><Icono nombre="micro" tam={28} /></span>
+              <strong>Iñaki Piñuel</strong>
+              <i />
+              <span>dos entrevistas con uno de los mayores expertos en mobbing</span>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section className="seccion seccion-cielo">
         <div className="contenedor">
-          <h2>Así es el despacho</h2>
-          <p>En la calle Jorge Juan, en el barrio de Salamanca. Un equipo pequeño que conoce cada caso por su nombre.</p>
-          <div className="galeria" style={{ marginTop: 24 }}>
-            <figure className="g-grande">
-              <img src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
-              <figcaption>El equipo de Tierno Centella</figcaption>
+          <Etiqueta icono="corazon">El equipo</Etiqueta>
+          <h2>Las personas que van a llevar tu caso</h2>
+          <p className="intro-seccion">En la calle Jorge Juan, en el barrio de Salamanca. Un equipo de abogadas y abogados que conoce cada caso por su nombre y te cuenta en qué punto está sin que tengas que preguntar.</p>
+          <div className="equipo">
+            <figure className="equipo-grupo">
+              <img src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 60vw" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
+              <figcaption>El equipo de Tierno Centella, en el despacho de Jorge Juan</figcaption>
             </figure>
-            <figure className="g-alta">
-              <img src="/img/abogada-sonrie.webp" srcSet="/img/abogada-sonrie-640.webp 640w, /img/abogada-sonrie.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Una abogada del despacho sonríe durante una reunión" loading="lazy" />
+            <ul className="equipo-valores">
+              <li><Icono nombre="telefono" tam={18} /><span><b>Te llamamos nosotros.</b> Sin centralita: hablas con quien lleva tu caso.</span></li>
+              <li><Icono nombre="reloj" tam={18} /><span><b>Los plazos, vigilados.</b> Te avisamos antes de que venza cada uno.</span></li>
+              <li><Icono nombre="euro" tam={18} /><span><b>Sabes lo que vas a pagar</b> antes de empezar. Sin sorpresas.</span></li>
+              <li><Icono nombre="video" tam={18} /><span><b>Presencial o por videollamada</b>, desde cualquier punto de España.</span></li>
+            </ul>
+            <ul className="equipo-retratos" aria-label="El equipo">
+              {[
+                ['jesus-retrato', 'Jesús Tierno', 'Socio director', 'top'],
+                ['abogada-sonrie', '', 'Abogada laboralista', 'top'],
+                ['abogada-lee', '', 'Abogada laboralista', 'top'],
+                ['abogado-joven', '', 'Abogado laboralista', 'top'],
+                ['abogada-escucha', '', 'Atención a clientes', 'center'],
+              ].map(([foto, nombre, cargo, pos]) => (
+                <li key={foto}>
+                  <img src={`/img/${foto}-640.webp`} alt="" width={120} height={120} loading="lazy" style={{ objectPosition: pos }} />
+                  {nombre ? <strong>{nombre}</strong> : null}
+                  <small>{cargo}</small>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="galeria galeria-mini" style={{ marginTop: 18 }}>
+            <figure>
+              <img src="/img/biblioteca.webp" srcSet="/img/biblioteca-640.webp 640w, /img/biblioteca.webp 1080w" sizes="(max-width: 860px) 50vw, 33vw" alt="Reunión en la biblioteca del despacho" loading="lazy" />
             </figure>
             <figure>
-              <img src="/img/biblioteca.webp" srcSet="/img/biblioteca-640.webp 640w, /img/biblioteca.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="Reunión en la biblioteca del despacho" loading="lazy" />
-            </figure>
-            <figure>
-              <img src="/img/jesus-firmando.webp" srcSet="/img/jesus-firmando-640.webp 640w, /img/jesus-firmando.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno revisa un documento" loading="lazy" style={{ objectPosition: 'top' }} />
-            </figure>
-            <figure className="g-alta">
-              <img src="/img/abogado-joven.webp" srcSet="/img/abogado-joven-640.webp 640w, /img/abogado-joven.webp 1067w" sizes="(max-width: 860px) 100vw, 50vw" alt="Un abogado del despacho trabaja con documentos" loading="lazy" />
-            </figure>
-            <figure className="g-grande">
-              <img src="/img/reunion-equipo.webp" srcSet="/img/reunion-equipo-640.webp 640w, /img/reunion-equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="El equipo reunido alrededor de la mesa" loading="lazy" />
+              <img src="/img/reunion-equipo.webp" srcSet="/img/reunion-equipo-640.webp 640w, /img/reunion-equipo.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" alt="El equipo reunido alrededor de la mesa" loading="lazy" />
               <figcaption>Cada caso se estudia en equipo</figcaption>
             </figure>
-            <figure className="g-alta">
-              <img src="/img/papeleria.webp" srcSet="/img/papeleria-640.webp 640w, /img/papeleria.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Documentación con el logotipo del despacho" loading="lazy" />
+            <figure>
+              <img src="/img/papeleria.webp" srcSet="/img/papeleria-640.webp 640w, /img/papeleria.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" alt="Documentación con el logotipo del despacho" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -220,6 +260,7 @@ export default function Inicio() {
 
       <section className="seccion">
         <div className="contenedor">
+          <Etiqueta icono="calculadora">Herramientas</Etiqueta>
           <h2>Herramientas gratuitas, sin dejar tu teléfono</h2>
           <ul className="herr-tarjetas">
             <li className="ht-c0">
@@ -295,6 +336,7 @@ export default function Inicio() {
 
       <section className="seccion seccion-arena">
         <div className="contenedor">
+          <Etiqueta icono="video">Vídeos</Etiqueta>
           <h2>Un minuto para entender tus derechos</h2>
           <p>Jesús Tierno y el equipo resuelven en Instagram las dudas que más llegan al despacho.</p>
           <div className="rejilla-reels">
@@ -311,6 +353,7 @@ export default function Inicio() {
       {ultimos.length > 0 && (
         <section className="seccion">
           <div className="contenedor">
+            <Etiqueta icono="documento">Blog</Etiqueta>
             <h2>Lo último en el blog</h2>
             <div className="tarjetas-foto">
               {ultimos.map((p) => {
@@ -319,6 +362,10 @@ export default function Inicio() {
                   <Link key={p.slug} href={`/blog/${p.slug}`}>
                     <img src={f.src} srcSet={f.srcSet} sizes="(max-width: 760px) 100vw, 380px" alt={f.alt} width={640} height={480} loading="lazy" />
                     <div>
+                      <span className="tf-meta">
+                        {p.categoria && <em className="tf-chip">{p.categoria}</em>}
+                        <small><Icono nombre="reloj" tam={13} /> {p.minutos} min de lectura</small>
+                      </span>
                       <strong>{p.titulo}</strong>
                       <span>{p.descripcion}</span>
                     </div>
@@ -333,6 +380,7 @@ export default function Inicio() {
       <section className="seccion seccion-blanca">
         <div className="contenedor dos-columnas">
           <div>
+            <Etiqueta icono="pin">Contacto</Etiqueta>
             <h2>En Jorge Juan, en el centro de Madrid</h2>
             <p>
               Consulta de una hora con documentos, presencial o por videollamada: {DESPACHO.precioCita} €{DESPACHO.iva} con un abogado del despacho o{' '}
@@ -340,10 +388,10 @@ export default function Inicio() {
             </p>
             <div className="acciones">
               <Link className="boton" href="/contacto">
-                Pedir cita
+                <Icono nombre="calendario" tam={17} /> Pedir cita
               </Link>
               <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
-                {DESPACHO.telefono}
+                <Icono nombre="telefono" tam={17} /> {DESPACHO.telefono}
               </a>
             </div>
           </div>

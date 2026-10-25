@@ -453,3 +453,39 @@ export default function RedesHoyLuego() {
     </div>
   );
 }
+
+// Lo que sale en Google al buscar "jesus tierno centella" (visto el 25 de octubre de 2026): un directorio por delante,
+// la página de Facebook equivocada y un LinkedIn casi vacío. Dibujado como lo muestra Google, con sus datos tal cual.
+export function GoogleNombre() {
+  return (
+    <div className="rd-google" role="img" aria-label='Resultados de Google para "jesus tierno centella": un directorio, la página de Facebook antigua con los datos mal y un LinkedIn con 9 seguidores'>
+      <div className="rd-google-barra">
+        <span className="rd-google-g">G</span>
+        <span className="rd-google-busqueda">jesus tierno centella</span>
+      </div>
+      <div className="rd-google-res rd-google-patro">
+        <small>Resultados patrocinados</small>
+        <span>Anuncios de otros despachos que pagan por salir cuando alguien busca tu nombre</span>
+      </div>
+      <div className="rd-google-res">
+        <div className="rd-google-fuente"><i>L</i><span>Legaltica<br /><small>https://www.legaltica.com › ... › Madrid</small></span></div>
+        <b>Tierno Centella Abogados - Abogados en Madrid</b>
+        <p>Tierno Centella Abogados es un despacho de abogados expertos en derecho laboral, con una sólida trayectoria en la defensa de los derechos de trabajadores y ...</p>
+        <em className="rd-google-nota">Un directorio ajeno sale antes que tu propia web</em>
+      </div>
+      <div className="rd-google-res rd-google-mal">
+        <div className="rd-google-fuente"><i className="rd-fb">f</i><span>Facebook · Tierno Centella Abogados<br /><small>Más de 160 seguidores</small></span></div>
+        <b>Tierno Centella Abogados | Madrid</b>
+        <p><strong>Abogado especialista en Acoso Laboral y Asesoría de Centros Educativos, y Tercer Sector</strong><br />C/Jorge Juan, 78-6ºC. 28009 Madrid Tel. 917 826 854 / 608 139 337.</p>
+        <p className="rd-google-estrellas">5,0 <span aria-hidden="true">★★★★★</span> (4)</p>
+        <em className="rd-google-nota">La página parada desde 2017: piso equivocado y teléfono antiguo</em>
+      </div>
+      <div className="rd-google-res rd-google-mal">
+        <div className="rd-google-fuente"><i className="rd-in">in</i><span>LinkedIn · Jesús Tierno Centella<br /><small>9 seguidores</small></span></div>
+        <b>Jesús Tierno Centella - Abogado - SOCIO en ...</b>
+        <p>Madrid, Comunidad de Madrid, España · Abogado · SOCIO · TIERNO CENTELLA ABOGADOS</p>
+        <em className="rd-google-nota">Un LinkedIn que parece recién abierto</em>
+      </div>
+    </div>
+  );
+}
