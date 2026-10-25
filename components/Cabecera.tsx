@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { MENU, MENU_EN } from '@/lib/navegacion';
 import IconoMenu, { tipoIcono } from './IconoMenu';
+import { MENU_DESC } from '@/lib/menu-desc';
 import Icono from './Iconos';
 import { GUIAS_ES_EN, idiomaDe, rutaEnOtroIdioma } from '@/lib/idioma';
 
@@ -19,7 +20,7 @@ const T = {
 };
 
 // Un color por grupo del menú: acoso, despido, incapacidad, mujer y trabajo, herramientas y el despacho.
-const MENU_COLOR = [0, 1, 2, 3, 4, 5];
+const MENU_COLOR = [0, 1, 2, 3, 4, 5, 6];
 // Icono y color de cada bloque del menú del móvil, según su sección.
 function visualGrupo(href: string): { icono: string; c: number } {
   if (/acoso|harassment/.test(href)) return { icono: 'personas', c: 0 };
@@ -73,19 +74,20 @@ export default function Cabecera() {
                 {g.titulo}
                 <svg className="mg-flecha" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
               </Link>
-              <div className={`menu-desplegable md-c${MENU_COLOR[i] ?? 0}${g.enlaces.length > 8 ? ' menu-ancho' : ''}`}>
+              <div className={`menu-desplegable md-c${MENU_COLOR[i] ?? 0}${g.enlaces.length > 5 ? ' menu-ancho' : ''}`}>
                 <Link href={g.href} className="md-cabeza">
                   <span className="md-cabeza-texto">
                     <strong>{g.titulo}</strong>
                     <small>{g.sub}</small>
                     <em>Ver todo</em>
                   </span>
+                  <span className="md-cabeza-flecha" aria-hidden="true"><IconoMenu tipo="flecha" tam={20} /></span>
                 </Link>
                 <div className="md-enlaces">
                 {g.enlaces.map((e) => (
                   <Link key={e.href + e.texto} href={e.href}>
                     <span className="md-icono"><IconoMenu tipo={tipoIcono(e.href, e.texto)} /></span>
-                    <span>{e.texto}</span>
+                    <span className="md-txt"><b>{e.texto}</b>{MENU_DESC[e.href] && idioma !== 'en' && <small>{MENU_DESC[e.href]}</small>}</span>
                   </Link>
                 ))}
                 </div>
