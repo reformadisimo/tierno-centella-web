@@ -7,6 +7,7 @@ import { DEMO, DESPACHO } from '@/lib/despacho';
 import { REDES } from '@/lib/seo';
 import { idiomaDe } from '@/lib/idioma';
 import Icono, { IconosRedes } from './Iconos';
+import Accesibilidad from './Accesibilidad';
 
 export default function BarraSuperior() {
   const ruta = usePathname() || '/';
@@ -30,6 +31,7 @@ export default function BarraSuperior() {
           </a>
         </div>
         <div className="barra-sup-dcha">
+          <Accesibilidad en={en} />
           <IconosRedes urls={REDES} tono="claro" tam={15} etiqueta={en ? 'Social media' : 'Redes sociales'} />
           {DEMO && <span className="barra-sup-demo">{en ? 'Demo version' : 'Versión de demostración'}</span>}
         </div>

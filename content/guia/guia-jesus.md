@@ -1189,6 +1189,8 @@ Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y s
 
 > **Una cosa que conviene mirar antes**: si con algún proveedor firmaste permanencia o un preaviso, lo respetamos y planificamos el cambio para esa fecha. Si no lo sabes, te ayudamos a revisarlo.
 
+**Y una cosa más, con todo el cariño.** Sabemos que llevas años trabajando con personas de confianza, y que han hecho su trabajo con esfuerzo y buena fe. Nada de esto es una crítica a nadie: cada uno ha hecho lo que podía con lo que tenía. Y tampoco hay prisa ni nada que decidir hoy. Mira la web, pruébala con calma, enséñasela a quien quieras, y quédate con lo que te guste. Si un día decides dar el paso, lo hacemos con el mismo cuidado con el que cuidamos a quienes ya trabajan contigo.
+
 ## 22. Plan de 30 días y cuánto tarda en notarse
 
 | Semana | Qué |
@@ -1240,6 +1242,29 @@ Nosotros hacemos el trabajo de esos cinco proveedores, y lo hacemos, creemos, **
 ### Un voto de confianza, si te parece oportuno
 
 Te pedimos que confíes en nosotros: que nos des ese voto de confianza para empezar, **solo si lo ves oportuno y sin ninguna presión**. Somos amigos, y preferimos que lo pienses con calma a que te lleves algo que no quieres. La web ya la tienes, es tuya, y lo que decidas después, lo decides tú.
+
+## 22 ter. Lo que hemos aprendido de despachos de otros países
+
+Antes de enseñarte nada, hemos mirado cómo trabajan despachos laboralistas de **Estados Unidos y Reino Unido** (los más avanzados en esto), y también sitios de Francia e Italia. Buscábamos ideas que funcionen y que nadie en Madrid haya traído todavía. Esto es lo que hemos encontrado y lo que hemos hecho con cada idea:
+
+| Idea | Dónde la hemos visto | Qué hemos hecho o proponemos |
+| --- | --- | --- |
+| Evaluación gratuita del caso desde la portada | Morgan & Morgan y otros despachos laboralistas de EE. UU. | **Hecho**: los tests (acoso, despido nulo, extinción, baja) y el chat con micrófono |
+| Generador de cartas y calculadora de acuerdos | Monaco Solicitors (Reino Unido) | **Proponemos**: "Genera tu carta" (por ejemplo, la de "recibí, no conforme") y calculadora de ofertas de acuerdo |
+| Ajustes de lectura para dislexia y baja visión | Despachos de EE. UU. con kit de accesibilidad | **Hecho**: botón "Aa" con tamaño de letra, letra fácil de leer, más contraste y sin animaciones |
+| Calculadora de plazos | Lewis Silkin (Reino Unido) | **Hecho**, y mejorado: "Mi plazo" te lo recuerda en toda la web |
+| Resultados con cifras y reseñas visibles | BT Law Group y otros | **Pendiente de ti**: reseñas reales y casos que podamos contar |
+| Vídeo del abogado presentándose y testimonios | Muchos despachos de EE. UU. | **Proponemos**: un vídeo tuyo de 30 segundos en la portada |
+| Responder en minutos, también fuera de horario | Despachos con IA de admisión por voz o por WhatsApp | **Proponemos**: aviso inmediato al despacho cuando alguien deja su teléfono, y más adelante WhatsApp con IA (avisando siempre de que es una IA y sin dar asesoramiento) |
+| Páginas separadas para empleados y para empresas | Taylor Jannis, PortaLaw | **Hecho**: la parte de empresas y centros educativos va aparte |
+| Botón de salida rápida | Webs de ayuda a víctimas | **Hecho**: quien está en una situación delicada puede salir de la web con un solo toque |
+
+Dos ideas más, de las que casi nadie hace en España y que creemos que te darían mucha visibilidad:
+
+- **Un barómetro propio del acoso laboral en Madrid**, con los datos anónimos de nuestros tests, publicado cada trimestre. Es lo que más buscan los periodistas, porque son cifras nuevas, y lo que más enlaces de calidad consigue.
+- **Herramientas que colegios, sindicatos y empresas puedan poner en su propia web** (con un enlace a ti). Es una forma limpia de que otros hablen de ti.
+
+Y algo que nos ha llamado la atención: **la rapidez de respuesta pesa más que casi nada**. Muchas fuentes del sector coinciden en que quien contesta primero se lleva al cliente, aunque las cifras exactas que dan los vendedores de herramientas no están verificadas, y no te las vamos a repetir. Por eso el chat que contesta a cualquier hora y el aviso inmediato al despacho son de lo que más nos importa.
 
 ## 23. Los accesos que necesitamos (y cómo darlos)
 

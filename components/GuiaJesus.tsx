@@ -378,8 +378,9 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 10;
+const VERSION = 11;
 const NOVEDADES: { texto: string; clave: string }[] = [
+  { clave: '22 ter', texto: 'Apartado nuevo: lo que hemos aprendido mirando despachos laboralistas de Estados Unidos, Reino Unido, Francia e Italia, qué hemos traído ya (ajustes de lectura para quien ve o lee con dificultad, entre otros) y qué proponemos.' },
   { clave: '22 bis', texto: 'Apartado nuevo: qué resultados creemos que se pueden conseguir (3, 6 y 12 meses), con cifras honestas, sin promesas, y por qué hacerlo todo junto rinde más que cinco proveedores por separado.' },
   { clave: '2', texto: 'Hemos puesto tu número de colegiado (64865, Colegio de Abogados de Madrid) en el pie de toda la web, marcado como pendiente de confirmar: lo hemos sacado de una ficha pública de internet. Importa por credibilidad: el Código Deontológico lo exige, a Google le sirve para saber que detrás hay un abogado real y verificable, y a quien duda le da confianza. Confírmanos que es correcto y quitamos el aviso.' },
   { clave: '15', texto: 'Dos herramientas nuevas que hacen que la gente vuelva: "Mi plazo" (si calculas tu plazo para reclamar, la web te lo recuerda en una franja con los días hábiles que te quedan) y "Qué tengo que guardar" (una lista de documentos y pruebas que se marca, se imprime y se comparte por WhatsApp). Además hemos revisado toda la web: 266 páginas sin un solo enlace roto, sin errores y con la accesibilidad corregida.' },
