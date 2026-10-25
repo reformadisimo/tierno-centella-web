@@ -59,7 +59,7 @@ export const MENU: Grupo[] = [
   {
     titulo: 'Herramientas',
     foto: 'calculadora-papeles',
-    sub: '14 calculadoras y tests para tu caso',
+    sub: '15 calculadoras y tests para tu caso',
     href: '/herramientas',
     enlaces: [
       { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },
@@ -75,6 +75,7 @@ export const MENU: Grupo[] = [
       { href: '/herramientas/que-guardar', texto: '¿Qué tengo que guardar?' },
       { href: '/herramientas/genera-tu-carta', texto: 'Genera tu carta' },
       { href: '/herramientas/calculadora-oferta-acuerdo', texto: '¿Es buena la oferta de la empresa?' },
+      { href: '/herramientas/con-cuanto-me-quedo', texto: '¿Con cuánto me quedo de la indemnización?' },
       { href: '/herramientas/comprobador-incapacidad', texto: 'Comprobador de incapacidad' },
       { href: '/herramientas/calendario-permisos', texto: 'Calendario de permisos por nacimiento' },
       { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Calculadora de reducción de jornada' },
