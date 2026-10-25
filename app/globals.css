@@ -7640,3 +7640,5 @@ body{padding-bottom:58px}
 @keyframes lineaEntra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .linea-detalle { animation: none; } }
 .prosa h2.glosario-letra[hidden], .prosa-foto[hidden], [data-termino][hidden] { display: none !important; }
+.prosa a.enlace-glosario { text-decoration: underline dotted #c2477a; text-underline-offset: 4px; color: inherit; }
+.prosa a.enlace-glosario:hover { text-decoration-style: solid; color: #c2477a; }

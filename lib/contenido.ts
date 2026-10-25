@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
+import { enlazarGlosario } from './enlazar-glosario';
 
 // Contenido en Markdown con cabecera sencilla:
 // ---
@@ -110,7 +111,7 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
     tituloSeo: datos.tituloSeo,
     imagenAlt: datos.imagenAlt,
     orden: datos.orden ? Number(datos.orden) : undefined,
-    ...conApartados(marked.parse(cuerpo, { async: false }) as string),
+    ...conApartados(carpeta.startsWith('en') ? (marked.parse(cuerpo, { async: false }) as string) : enlazarGlosario(marked.parse(cuerpo, { async: false }) as string)),
     es: datos.es,
     minutos: Math.max(1, Math.round(palabras / 220)),
     faq,
