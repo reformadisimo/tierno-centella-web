@@ -1,4 +1,5 @@
 import EsquemaPagina from '@/components/EsquemaPagina';
+import Buzon from '@/components/Buzon';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { HERRAMIENTAS } from '@/lib/herramientas';
@@ -60,6 +61,7 @@ export default function Herramientas() {
               );
             })}
           </div>
+          <Buzon titulo="¿Echas algo en falta? Cuéntanoslo" />
         </div>
       </section>
     </>

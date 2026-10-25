@@ -7718,3 +7718,12 @@ html.a11y-quieto video { display: none !important; }
   .tarjetas-foto a:nth-child(even) img,.galeria figure:nth-child(even) img{animation-name:foto-zoom-b}
   .tarjetas-foto a:hover img,.galeria figure:hover img{animation-play-state:paused}
 }
+
+/* Buzón de sugerencias */
+.buzon{background:#fff;border:1px solid #e3ddd0;border-radius:18px;padding:20px 22px;margin:24px 0;position:relative;max-width:720px}
+.buzon h3{margin:0 0 6px;font-size:1.15rem}
+.buzon textarea,.buzon input[type=text]{width:100%;font:inherit;padding:11px 14px;border:1px solid #c9c2b2;border-radius:12px;margin:0 0 10px;background:#fff;color:inherit}
+.buzon-notas{display:flex;gap:8px;margin:8px 0 12px}
+.buzon-notas button{width:44px;height:44px;border-radius:50%;border:1px solid #c9c2b2;background:#fff;font:inherit;font-weight:700;color:#0d2c48;cursor:pointer}
+.buzon-notas button.activa{background:#0d2c48;color:#fff;border-color:#0d2c48}
+.buzon-ok{background:#eaf5ee;border-color:#b7dcc4}

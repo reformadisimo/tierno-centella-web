@@ -59,11 +59,13 @@ export default function Jesus() {
               Es coautor, con el psicólogo Bernabé Tierno, de <em>Valores en el trabajo: estrategias para afrontar y superar los nuevos retos
               laborales</em> (La Esfera de los Libros, 2002), sobre cómo el trabajo puede enriquecer a quien lo hace en lugar de destruirle.
             </p>
-            {DEMO && (
-              <div className="recuadro">
-                <p>Pendiente de completar con Jesús: ponencias, apariciones en prensa y casos que se puedan contar.</p>
-              </div>
-            )}
+            <div className="recuadro">
+              <p>
+                <strong>Una trayectoria que se explica sola:</strong> más de 25 años en derecho laboral, la primera sentencia de España que condenó a la vez a la empresa y a
+                quien acosaba (2005, confirmada por el Tribunal Superior de Justicia de Madrid), un libro publicado y la formación de futuros abogados en el Prácticum de la
+                Universidad Carlos III. Esa experiencia es la que contamos en cada guía de esta web.
+              </p>
+            </div>
           </div>
           <div style={{ display: 'grid', gap: 20, alignContent: 'start' }}>
             <img className="foto" src="/img/jesus-firmando.webp" srcSet="/img/jesus-firmando-640.webp 640w, /img/jesus-firmando.webp 1280w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno revisando un documento en su mesa" />

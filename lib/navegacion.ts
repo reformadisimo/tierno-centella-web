@@ -98,6 +98,7 @@ export const MENU: Grupo[] = [
       { href: '/barometro', texto: 'Barómetro del acoso' },
       { href: '/recursos', texto: 'Recursos útiles' },
       { href: '/mi-caso', texto: 'Mi caso es...' },
+      { href: '/primera-consulta', texto: 'Tu primera consulta' },
       { href: '/donde-ir', texto: 'Dónde ir en Madrid' },
     ],
   },

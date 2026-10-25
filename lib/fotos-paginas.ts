@@ -25,6 +25,7 @@ export const FOTOS_PAGINA: Record<string, { foto: string; alt: string }> = {
   '/barometro': { foto: 'reunion-oficina', alt: 'Una reunión de empresa en una sala de oficinas' },
   '/recursos': { foto: 'biblioteca', alt: 'Reunión en la biblioteca del despacho' },
   '/donde-ir': { foto: 'reunion-cliente', alt: 'Una abogada atiende a un cliente en una reunión' },
+  '/primera-consulta': { foto: 'recepcion', alt: 'La recepción del despacho Tierno Centella' },
   '/mi-caso': { foto: 'abogada-escucha', alt: 'Una abogada del despacho escucha a una clienta' },
   '/glosario': { foto: 'libros-derecho', alt: 'Libros de derecho en una estantería' },
 };

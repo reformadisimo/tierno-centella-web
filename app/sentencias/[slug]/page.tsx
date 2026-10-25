@@ -94,7 +94,7 @@ export default async function Sentencia({ params }: { params: Promise<{ slug: st
             <h1>{c.titulo}</h1>
             <p className="entradilla">{c.resumen}</p>
             {(organo || fecha) && <p className="ficha-organo">{[organo, fecha].filter(Boolean).join('. ')}.</p>}
-            {DEMO && c.pendiente && <span className="ficha-pendiente">Pendiente de confirmar con el despacho</span>}
+            
           </div>
           <figure className="foto-cabeza">
             <img src={`/img/${foto}-640.webp`} alt="Jesús Tierno Centella, socio director del despacho" width={640} height={480} fetchPriority="high" />

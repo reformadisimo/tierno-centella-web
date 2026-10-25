@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/barometro',
     '/recursos',
     '/mi-caso',
+    '/primera-consulta',
     '/donde-ir',
     '/contacto',
     '/reservar',

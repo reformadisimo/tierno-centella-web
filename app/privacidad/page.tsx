@@ -40,6 +40,12 @@ export default function Pagina() {
             esos datos agregados elaboramos el <a href="/barometro">barómetro</a>, que solo publica un test cuando tiene al menos 30 respuestas. Puedes
             desactivarlo antes de empezar un test con el botón "No guardarlo". Al ser datos anónimos, no podemos localizar ni borrar el tuyo.
           </p>
+          <h2>Buzón de sugerencias</h2>
+          <p>
+            Si nos escribes en el buzón de sugerencias, guardamos tu mensaje, la valoración si la pones y la página desde la que escribes. Si dejas un teléfono o un
+            correo, lo usamos solo para contestarte. Si no dejas ninguno, es anónimo: no guardamos tu IP ni usamos cookies. Te pedimos que no escribas datos
+            sensibles de tu caso; para eso, llámanos o escríbenos por el formulario de contacto. Puedes pedir que borremos tu mensaje escribiendo a {DESPACHO.email}.
+          </p>
           <h2>Tus derechos</h2>
           <p>
             Puedes pedir acceso, rectificación o supresión de tus datos escribiendo a {DESPACHO.email}. También puedes reclamar ante la Agencia

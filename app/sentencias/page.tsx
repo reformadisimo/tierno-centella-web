@@ -101,7 +101,7 @@ export default function Sentencias() {
                   <div className="ficha-pie">
                     <Link href={`/sentencias/${c.slug}`}>Leer la ficha completa</Link>
                     {c.fuente && <a href={c.fuente.url}>Fuente: {c.fuente.nombre}</a>}
-                    {DEMO && c.pendiente && <span className="ficha-pendiente">Pendiente de confirmar con el despacho</span>}
+                    
                   </div>
                 </div>
               </article>

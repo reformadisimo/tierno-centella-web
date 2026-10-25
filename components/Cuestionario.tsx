@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { BotonImprimir } from './Utiles';
+import Buzon from './Buzon';
 
 export type Opcion = { texto: string; ayuda?: string; valor?: number; marca?: string };
 export type Paso = {
@@ -232,6 +233,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
               Empezar de nuevo
             </button>
           </div>
+          <Buzon titulo="¿Te ha servido? Cuéntanoslo" />
           <p className="letra-pequena">
             Resultado orientativo, no sustituye la valoración de un abogado. Si en algún momento piensas en hacerte daño, llama al 024: es
             gratuito y atiende las 24 horas.

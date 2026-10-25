@@ -6,6 +6,8 @@ Jesús, qué ilusión enseñarte esto. En cinco minutos vas a ver **dónde está
 
 > **Si solo tienes un minuto, lee esto.** Tres cosas. **Uno:** la web nueva ya está hecha y es tuya; verla no te compromete a nada. **Dos:** no te pedimos que cambies tu forma de trabajar ni la de tu equipo; lo que cambia es lo que ocurre alrededor (que Google te encuentre, que quien te busque se sienta acompañado, que sepamos de dónde viene cada consulta). **Tres:** lo que prometemos es método y constancia, no resultados garantizados, y lo iremos demostrando mes a mes con los datos de tu propia cuenta. Y se queda exactamente como está tu trato con los clientes, tu equipo, tu voz y tus proveedores actuales mientras te funcionen. Para lo demás, está el resto de la guía.
 
+> **Lo que creemos que puedes llegar a ser.** Hay despachos que se anuncian mucho; y hay personas a las que se acude porque son **la referencia**. Tú tienes lo segundo, y no se compra: la primera condena en España a empresa y acosador (2005), más de 25 años dedicados al acoso, un libro y la formación de futuros abogados. Lo que falta es que **cuando alguien pregunte a Google o a una inteligencia artificial "quién es el abogado de acoso laboral en Madrid", salga tu nombre**, con tu cara, tus palabras y tus casos. Esa es la ambición de este proyecto: no vender más ruido, sino que se te encuentre, se te reconozca y se te cite como lo que eres. Es un objetivo, no una promesa; lo iremos midiendo contigo.
+
 ###  Dónde estás hoy
 
 Cuánta gente llega cada mes a la web de cada despacho desde Google (datos de Semrush, octubre de 2026):
