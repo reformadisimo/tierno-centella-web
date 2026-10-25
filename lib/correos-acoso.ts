@@ -105,12 +105,12 @@ export const SECUENCIA_ACOSO: Correo[] = [
     dia: 'Día 7',
     objetivo: 'Que sepa quién la defendería',
     asunto: 'Más de 25 años al lado de quien sufre acoso',
-    previa: 'En 2005 logramos una de las primeras condenas a empresa y acosador a la vez.',
+    previa: 'En 2005 logramos la primera condena en España a empresa y acosador a la vez.',
     foto: 'jesus-retrato',
     fotoAlt: 'Jesús Tierno Centella, socio director del despacho',
     video: { id: 'lVoi2ijP1bA', titulo: 'Jesús Tierno entrevista al psicólogo Iñaki Piñuel sobre el acoso laboral' },
     parrafos: [
-      'Hola, Laura. Soy Jesús Tierno. Llevo más de 25 años dedicado al acoso laboral. En 2005 conseguimos una de las primeras sentencias en España que condenó a la vez a la empresa y al acosador, y desde entonces hemos acompañado a muchas personas en tu misma situación.',
+      'Hola, Laura. Soy Jesús Tierno. Llevo más de 25 años en derecho laboral, la mayor parte dedicado al acoso. En 2005 conseguimos la primera sentencia en España que condenó a la vez a la empresa y al acosador, y desde entonces hemos acompañado a muchas personas en tu misma situación.',
       'Si quieres conocer cómo lo vemos, en esta entrevista hablo con Iñaki Piñuel, uno de los mayores expertos en mobbing, sobre cómo reconocer el acoso y cómo salir de él.',
     ],
     botones: [

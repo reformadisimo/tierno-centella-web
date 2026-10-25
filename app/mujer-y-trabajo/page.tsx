@@ -67,7 +67,7 @@ export default function MujerYTrabajo() {
               <img src="/img/biblioteca.webp" srcSet="/img/biblioteca-640.webp 640w, /img/biblioteca.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" alt="Reunión en la biblioteca del despacho" loading="lazy" />
               <div>
                 <strong>Acoso laboral</strong>
-                <span>Nuestra especialidad desde hace más de 25 años: cómo saber si lo sufres, cómo demostrarlo y qué reclamar.</span>
+                <span>Nuestra especialidad: cómo saber si lo sufres, cómo demostrarlo y qué reclamar.</span>
               </div>
             </Link>
           </div>

@@ -33,7 +33,7 @@ export default function Inicio() {
         <div className="contenedor">
           <h1>Abogados laboralistas en Madrid, especialistas en acoso laboral.</h1>
           <p className="entradilla">
-            Más de 25 años con despidos, acoso e incapacidad permanente. En 2005 conseguimos la primera condena en España al propio acosador. Hoy seguimos
+            Más de 25 años con despidos, acoso e incapacidad permanente. En 2005 conseguimos la primera condena en España a la empresa y al acosador a la vez. Hoy seguimos
             defendiendo a trabajadoras y trabajadores de toda España, en nuestro despacho de Jorge Juan o por videollamada.
           </p>
           <div className="acciones">

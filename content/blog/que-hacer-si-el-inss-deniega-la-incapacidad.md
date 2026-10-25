@@ -8,7 +8,7 @@ imagen: libros-derecho
 imagenAlt: Libros de derecho en una estantería
 ---
 
-Si el INSS te deniega la incapacidad permanente o te reconoce un grado inferior al que crees que te corresponde, tienes 30 días hábiles desde la notificación para presentar una reclamación previa. Si la rechaza o no contesta en 45 días, puedes demandar ante el Juzgado de lo Social. Una denegación no es el final: muchas incapacidades se reconocen en el juicio.
+Si el INSS te deniega la incapacidad permanente o te reconoce un grado inferior al que crees que te corresponde, tienes 30 días hábiles desde la notificación para presentar una reclamación previa. Si la rechaza o no contesta en 45 días hábiles, puedes demandar ante el Juzgado de lo Social. Una denegación no es el final: muchas incapacidades se reconocen en el juicio.
 
 ## Lee bien la resolución
 
@@ -39,10 +39,10 @@ Lo que no alegues aquí puede ser más difícil de introducir después, así que
 
 ## Paso 2: la respuesta del INSS
 
-El INSS tiene 45 días para contestar. Pueden pasar dos cosas:
+El INSS tiene 45 días hábiles para contestar. Pueden pasar dos cosas:
 
 - **Te contesta por escrito.** Si te da la razón, se acaba el problema. Si la rechaza, se abre el plazo para demandar.
-- **No contesta.** Pasados los 45 días, se entiende rechazada por silencio. No hace falta esperar más.
+- **No contesta.** Pasados los 45 días hábiles, se entiende rechazada por silencio. No hace falta esperar más.
 
 ## Paso 3: la demanda ante el Juzgado de lo Social
 

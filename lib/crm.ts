@@ -66,8 +66,8 @@ export const MOTIVOS = ['Busca abogado de oficio', 'Le parece caro', 'Se va a ot
 
 export const PLAZOS: { id: TipoPlazo; nombre: string; ayuda: string }[] = [
   { id: '', nombre: 'Sin plazo', ayuda: '' },
-  { id: 'despido', nombre: 'Despido: 20 días hábiles', ayuda: 'Desde el día siguiente al despido. Sin sábados, domingos, festivos, agosto ni 24 y 31 de diciembre.' },
-  { id: 'sancion', nombre: 'Sanción: 20 días hábiles', ayuda: 'Desde el día siguiente a la comunicación. Mismo cómputo que el despido.' },
+  { id: 'despido', nombre: 'Despido: 20 días hábiles', ayuda: 'Desde el día siguiente al despido. Sin sábados, domingos, festivos ni 24 y 31 de diciembre. Agosto sí cuenta.' },
+  { id: 'sancion', nombre: 'Sanción: 20 días hábiles', ayuda: 'Desde el día siguiente a la comunicación. Sin sábados, domingos, festivos, agosto ni 24 y 31 de diciembre.' },
   { id: 'inss', nombre: 'Reclamación previa al INSS: 30 días hábiles', ayuda: 'Desde la notificación de la resolución. Sin sábados, domingos ni festivos.' },
   { id: 'cantidad', nombre: 'Reclamación de cantidad: 1 año', ayuda: 'Desde que se pudo reclamar cada cantidad.' },
   { id: 'otro', nombre: 'Otro (fecha a mano)', ayuda: '' },
@@ -87,29 +87,33 @@ const desdeIso = (s: string) => {
   return new Date(y, m - 1, d);
 };
 
-function habil(d: Date, sinAgosto: boolean) {
+// Cómputo judicial (art. 43.4 LRJS): el 24 y el 31 de diciembre no cuentan; agosto no cuenta salvo en despidos.
+type Computo = 'despido' | 'judicial' | 'administrativo';
+function habil(d: Date, computo: Computo) {
   const dia = d.getDay();
   if (dia === 0 || dia === 6) return false;
   const s = iso(d);
   if (FESTIVOS.has(s)) return false;
-  if (sinAgosto && (d.getMonth() === 7 || s.endsWith('-12-24') || s.endsWith('-12-31'))) return false;
+  if (computo !== 'administrativo' && (s.endsWith('-12-24') || s.endsWith('-12-31'))) return false;
+  if (computo === 'judicial' && d.getMonth() === 7) return false;
   return true;
 }
+const computoDe = (tipo: TipoPlazo | null): Computo => (tipo === 'despido' ? 'despido' : tipo === 'sancion' ? 'judicial' : 'administrativo');
 
-function sumarHabiles(desde: string, n: number, sinAgosto: boolean) {
+function sumarHabiles(desde: string, n: number, computo: Computo) {
   const d = desdeIso(desde);
   let c = 0;
   while (c < n) {
     d.setDate(d.getDate() + 1);
-    if (habil(d, sinAgosto)) c++;
+    if (habil(d, computo)) c++;
   }
   return iso(d);
 }
 
 export function calcularVence(tipo: TipoPlazo | null, hecho: string | null): string | null {
   if (!tipo || !hecho || tipo === 'otro') return null;
-  if (tipo === 'despido' || tipo === 'sancion') return sumarHabiles(hecho, 20, true);
-  if (tipo === 'inss') return sumarHabiles(hecho, 30, false);
+  if (tipo === 'despido' || tipo === 'sancion') return sumarHabiles(hecho, 20, computoDe(tipo));
+  if (tipo === 'inss') return sumarHabiles(hecho, 30, 'administrativo');
   if (tipo === 'cantidad') {
     const d = desdeIso(hecho);
     d.setFullYear(d.getFullYear() + 1);
@@ -122,13 +126,13 @@ export function calcularVence(tipo: TipoPlazo | null, hecho: string | null): str
 export function habilesHasta(vence: string, tipo: TipoPlazo | null): number {
   const hoy = desdeIso(iso(new Date()));
   const fin = desdeIso(vence);
-  const sinAgosto = tipo === 'despido' || tipo === 'sancion';
+  const computo = computoDe(tipo);
   if (tipo === 'cantidad' || tipo === 'otro' || !tipo) return Math.round((fin.getTime() - hoy.getTime()) / 86400000);
   if (fin < hoy) return -1;
   let c = 0;
   const d = new Date(hoy);
   while (d <= fin) {
-    if (habil(d, sinAgosto)) c++;
+    if (habil(d, computo)) c++;
     d.setDate(d.getDate() + 1);
   }
   return c;

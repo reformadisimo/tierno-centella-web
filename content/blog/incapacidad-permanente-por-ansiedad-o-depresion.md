@@ -18,7 +18,7 @@ Es la situación de quien, después de un tratamiento, sigue teniendo limitacion
 - **Parcial.** Rindes menos en tu profesión, pero puedes seguir. Se paga una cantidad única de 24 mensualidades.
 - **Total.** No puedes hacer tu profesión habitual, pero sí otra. Pensión del 55 % de la base reguladora, que puede subir al 75 % desde los 55 años si no trabajas.
 - **Absoluta.** No puedes hacer ningún trabajo. Pensión del 100 %.
-- **Gran incapacidad.** Además, necesitas ayuda de otra persona para actos básicos como comer, vestirte o asearte. Pensión del 100 % más un complemento.
+- **Gran incapacidad.** Además, necesitas ayuda de otra persona para actos básicos como comer, vestirte o asearte. La pensión que corresponda más un complemento para pagar a quien te ayuda.
 
 En los trastornos de ansiedad y depresión, lo más habitual cuando se concede es la total o la absoluta.
 

@@ -14,7 +14,7 @@ import { CASOS } from '@/lib/casos';
 
 export const metadata: Metadata = meta({
   titulo: 'Abogados de acoso laboral en Madrid',
-  descripcion: 'Especialistas en acoso laboral desde hace más de 25 años. Cómo saber si lo sufres, cómo demostrarlo y qué puedes reclamar. Primera condena en España al acosador, en 2005.',
+  descripcion: 'Más de 25 años en derecho laboral, la mayor parte en casos de acoso. Cómo saber si lo sufres, cómo demostrarlo y qué puedes reclamar. Primera condena en España a la empresa y al acosador a la vez, en 2005.',
   ruta: '/acoso-laboral',
 });
 
@@ -33,7 +33,7 @@ export default function Acoso() {
             <Etiqueta icono="personas" tono="oro">Acoso laboral</Etiqueta>
             <h1>Acoso laboral: se puede demostrar y se puede reclamar.</h1>
             <p className="entradilla">
-              Llevamos más de 25 años centrados en el acoso laboral. En 2005 conseguimos que, por primera vez en España, un juez condenara
+              Llevamos más de 25 años en derecho laboral, la mayor parte centrados en el acoso. En 2005 conseguimos que, por primera vez en España, un juez condenara
               a la empresa y al propio acosador a pagar a la víctima.
             </p>
             <div className="acciones">

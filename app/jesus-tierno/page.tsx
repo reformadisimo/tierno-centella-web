@@ -8,7 +8,7 @@ import { DEMO, DESPACHO } from '@/lib/despacho';
 
 export const metadata: Metadata = meta({
   titulo: 'Jesús Tierno Centella, abogado especialista en acoso laboral',
-  descripcion: 'Socio director de Tierno Centella Abogados. Más de 25 años en derecho laboral, autor de la primera condena en España al acosador laboral (2005) y coautor de "Valores en el trabajo".',
+  descripcion: 'Socio director de Tierno Centella Abogados. Más de 25 años en derecho laboral, logró en 2005 la primera condena en España a la empresa y al acosador a la vez y coautor de "Valores en el trabajo".',
   ruta: '/jesus-tierno',
 });
 

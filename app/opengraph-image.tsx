@@ -15,7 +15,7 @@ export default async function Imagen() {
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 64px', width: 760 }}>
           <div style={{ fontSize: 30, color: '#f2c14e', marginBottom: 24 }}>Tierno Centella Abogados</div>
           <div style={{ fontSize: 62, fontWeight: 800, lineHeight: 1.08 }}>Abogados laboralistas en Madrid, especialistas en acoso laboral.</div>
-          <div style={{ fontSize: 28, color: '#cfdbe7', marginTop: 28 }}>Más de 25 años. Primera condena en España al acosador, en 2005.</div>
+          <div style={{ fontSize: 28, color: '#cfdbe7', marginTop: 28 }}>Más de 25 años. Primera condena en España a empresa y acosador a la vez (2005).</div>
         </div>
         <img src={`data:image/jpeg;base64,${foto}`} width={440} height={630} style={{ objectFit: 'cover', objectPosition: 'top' }} />
       </div>

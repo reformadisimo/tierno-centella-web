@@ -83,7 +83,7 @@ export function esquemaDespacho() {
         logo: `${BASE}/icon.png`,
         image: `${BASE}/img/equipo.webp`,
         description:
-          'Despacho de abogados laboralistas en Madrid especializado en acoso laboral desde hace más de 25 años. Despidos, incapacidad permanente y asesoría a empresas y centros educativos.',
+          'Despacho de abogados laboralistas en Madrid especializado en acoso laboral, con más de 25 años de experiencia en derecho laboral. Despidos, incapacidad permanente y asesoría a empresas y centros educativos.',
         telephone: '+34913249797',
         email: DESPACHO.email,
         priceRange: '150 € - 250 € la consulta de una hora',

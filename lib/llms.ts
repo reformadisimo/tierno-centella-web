@@ -7,7 +7,7 @@ import { BASE } from './seo';
 // Texto para los asistentes de IA (llms.txt). Se genera con el contenido real de la web, así nunca se queda anticuado.
 const INICIO = `# Tierno Centella Abogados
 
-> Despacho de abogados laboralistas en Madrid, especializado en acoso laboral desde hace más de 25 años. También despidos, incapacidad permanente y asesoría a empresas y centros educativos. Socio director: Jesús Tierno Centella. Atienden en toda España, presencialmente en Madrid o por videollamada.
+> Despacho de abogados laboralistas en Madrid, especializado en acoso laboral, con más de 25 años de experiencia en derecho laboral. También despidos, incapacidad permanente y asesoría a empresas y centros educativos. Socio director: Jesús Tierno Centella. Atienden en toda España, presencialmente en Madrid o por videollamada.
 
 Datos de contacto: Calle de Jorge Juan, 78, 5.º C, 28009 Madrid. Teléfono 913 24 97 97. WhatsApp 608 13 93 37. Correo info@tiernocentella.es.
 
@@ -37,7 +37,7 @@ const DESPACHO_TXT = `## El despacho
 - [Jesús Tierno Centella](https://tiernocentella.es/jesus-tierno)
 - [Sentencias](https://tiernocentella.es/sentencias)
 - [Empresas y centros educativos](https://tiernocentella.es/empresas)
-- [Contacto y citas](https://tiernocentella.es/contacto): consulta de una hora, 150 euros con un abogado del despacho y 250 euros con Jesús Tierno.
+- [Contacto y citas](https://tiernocentella.es/contacto): consulta de una hora, 150 euros más IVA con un abogado del despacho y 250 euros más IVA con Jesús Tierno.
 `;
 
 const guias = (carpeta: string, ruta: string, max = 12) =>

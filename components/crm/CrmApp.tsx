@@ -575,7 +575,7 @@ function Plazos({ contactos, abrir }: { contactos: Contacto[]; abrir: (id: strin
           </button>
         );
       })}
-      <p className="cr-nota">El CRM cuenta los días hábiles sin sábados, domingos ni festivos de la ciudad de Madrid; en despidos y sanciones tampoco cuenta agosto ni el 24 y el 31 de diciembre.</p>
+      <p className="cr-nota">El CRM cuenta los días hábiles sin sábados, domingos ni festivos de la ciudad de Madrid; en despidos y sanciones tampoco cuentan el 24 y el 31 de diciembre, y en sanciones tampoco agosto (en despidos agosto sí cuenta).</p>
     </div>
   );
 }
