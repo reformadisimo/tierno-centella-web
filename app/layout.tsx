@@ -10,7 +10,8 @@ import AvisoCookies from '@/components/AvisoCookies';
 import Medicion from '@/components/Medicion';
 import Diferidos from '@/components/Diferidos';
 import SalidaRapida from '@/components/SalidaRapida';
-import { AvisoDemo, CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
+import { CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
+import BarraSuperior from '@/components/BarraSuperior';
 import JsonLd from '@/components/JsonLd';
 import { BASE, esquemaDespacho } from '@/lib/seo';
 
@@ -55,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="salta" href="#contenido">
           Saltar al contenido
         </a>
-        <AvisoDemo />
+        <BarraSuperior />
         <CabeceraImpresion />
         <Cabecera />
         <main id="contenido">{children}</main>

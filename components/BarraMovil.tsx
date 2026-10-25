@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { idiomaDe } from '@/lib/idioma';
+import Icono from './Iconos';
 
 // El WhatsApp llega con el tema ya escrito y el tercer botón lleva a la herramienta de esa sección:
 // quien lee sobre acoso no necesita la calculadora de despido.
@@ -36,18 +37,28 @@ export default function BarraMovil() {
       : 'Hola, quiero consultar un caso laboral.';
   return (
     <nav className="barra-movil" aria-label={en ? 'Quick contact' : 'Contacto rápido'}>
-      <a href={DESPACHO.telefonoHref}>{en ? 'Call' : 'Llamar'}</a>
-      <a href={enlaceWhatsapp(mensaje)}>WhatsApp</a>
+      <a href={DESPACHO.telefonoHref}>
+        <Icono nombre="telefono" tam={20} />
+        <span>{en ? 'Call' : 'Llamar'}</span>
+      </a>
+      <a href={enlaceWhatsapp(mensaje)} className="bm-wa">
+        <Icono nombre="whatsapp" tam={21} />
+        <span>WhatsApp</span>
+      </a>
       {enLanding ? (
-        <a href="#lf-arriba">Te llamamos</a>
+        <a href="#lf-arriba">
+          <Icono nombre="campana" tam={20} />
+          <span>Te llamamos</span>
+        </a>
       ) : (
-        <a href={tema?.href || (en ? '/en/tools' : '/calculadora-indemnizacion')}>{tema?.boton || (en ? 'Tools' : 'Calcular')}</a>
+        <a href={tema?.href || (en ? '/en/tools' : '/calculadora-indemnizacion')}>
+          <Icono nombre={tema?.boton === 'Test' ? 'checkCirculo' : tema?.boton === 'Permisos' || tema?.boton === 'Leave' ? 'calendario' : tema?.boton === 'Comprobar' || tema?.boton === 'Check' ? 'escudo' : 'calculadora'} tam={20} />
+          <span>{tema?.boton || (en ? 'Tools' : 'Calcular')}</span>
+        </a>
       )}
       <button type="button" onClick={() => window.dispatchEvent(new Event('abrir-asistente'))} aria-label={en ? 'Open the chat' : 'Abrir el chat'}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ verticalAlign: '-3px', marginRight: 5 }}>
-          <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12z" />
-        </svg>
-        Chat
+        <Icono nombre="chat" tam={20} />
+        <span>Chat</span>
       </button>
     </nav>
   );
