@@ -5,3 +5,6 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .env*
+
+# Copias de trabajo de agentes
+.claude/worktrees/
