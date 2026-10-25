@@ -2,6 +2,7 @@ import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
+import FiltroSentencias from '@/components/FiltroSentencias';
 import Llamada from '@/components/Llamada';
 import { CASOS, JURISPRUDENCIA } from '@/lib/casos';
 import { DEMO } from '@/lib/despacho';
@@ -56,11 +57,14 @@ export default function Sentencias() {
         </div>
       </header>
       <section className="seccion">
+        <div className="contenedor">
+          <FiltroSentencias materias={Object.entries(CASOS.reduce<Record<string, number>>((a, c) => ((a[c.materia] = (a[c.materia] || 0) + 1), a), {})).map(([nombre, total]) => ({ nombre, total }))} />
+        </div>
         <div className="contenedor fichas">
           {CASOS.map((c, i) => {
             const foto = fotoDeCaso(c.materia, i);
             return (
-              <article className="ficha" key={c.slug} id={c.slug}>
+              <article className="ficha" key={c.slug} id={c.slug} data-materia={c.materia}>
                 <div className="ficha-lado">
                   <img src={`/img/${foto}-640.webp`} alt={i === 0 ? "Jesús Tierno Centella, socio director del despacho" : ""} width={640} height={480} loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} sizes="(max-width: 700px) 100vw, 300px" />
                   <div className="ficha-sello">
@@ -74,6 +78,8 @@ export default function Sentencias() {
                   </h2>
                   <span className="ficha-organo">{lineaOrgano(c.organo, c.fecha)}</span>
                   <p>{c.resumen}</p>
+                  <details className="ficha-mas" open={i < 2}>
+                    <summary>Qué pasó, resultado y por qué importa</summary>
                   <div>
                     <strong>Qué pasó</strong>
                     <ul>
@@ -89,6 +95,7 @@ export default function Sentencias() {
                     <strong>Por qué importa</strong>
                     <span>{c.porQueImporta}</span>
                   </div>
+                  </details>
                   <div className="ficha-pie">
                     <Link href={`/sentencias/${c.slug}`}>Leer la ficha completa</Link>
                     {c.fuente && <a href={c.fuente.url}>Fuente: {c.fuente.nombre}</a>}

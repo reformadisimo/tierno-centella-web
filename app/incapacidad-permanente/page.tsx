@@ -56,6 +56,11 @@ export default function Incapacidad() {
           </div>
         </div>
       </header>
+      <aside className="mensaje-calido">
+        <span className="mc-flor" aria-hidden="true">&#10048;</span>
+        <p><strong>Tómate el tiempo que necesites.</strong> Una denegación no es el final del camino. Mira qué grado podría corresponderte y cuánto plazo tienes para reclamar.</p>
+        <a className="boton boton-claro" href="/herramientas/comprobador-incapacidad">Comprobar mi caso</a>
+      </aside>
 
       <section className="seccion">
         <div className="contenedor con-lateral">

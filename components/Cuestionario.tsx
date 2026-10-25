@@ -82,6 +82,13 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
   }
 
   const res = terminado ? resultado(resp) : null;
+  function compartir() {
+    const url = typeof window !== 'undefined' ? window.location.href.split('#')[0] : '';
+    const texto = 'Mira esta herramienta gratuita de Tierno Centella Abogados, a mí me ha servido para entender mi situación:';
+    const nav = navigator as Navigator & { share?: (d: { title?: string; text?: string; url?: string }) => Promise<void> };
+    if (nav.share) nav.share({ title: 'Tierno Centella Abogados', text: texto, url }).catch(() => {});
+    else window.open(`https://wa.me/?text=${encodeURIComponent(texto + ' ' + url)}`, '_blank', 'noopener');
+  }
 
   return (
     <div className="herramienta cq" id="cuestionario">
@@ -156,6 +163,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
       {res && (
         <section aria-live="polite">
           <div className={`veredicto cq-veredicto cq-${res.nivel}${res.nivel === 'alto' ? ' veredicto-alto' : ''}`}>
+            <span className="cq-ola">{res.nivel === 'alto' ? 'Gracias por contarlo. No estás sola ni solo en esto.' : res.nivel === 'medio' ? 'Vamos viendo tu caso con calma.' : 'Buena noticia: esto es lo que vemos por ahora.'}</span>
             <span className="cq-sello" aria-hidden="true">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 {res.nivel === 'alto' ? <path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /> : res.nivel === 'medio' ? <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01" /> : <path d="M20 6L9 17l-5-5" />}
@@ -172,6 +180,11 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
             </ul>
           )}
           {res.aviso && <p className="recuadro">{res.aviso}</p>}
+          <ol className="cq-pasos" aria-label="Tus próximos pasos">
+            <li><b>Guarda todo</b><span>Cartas, correos, mensajes y partes médicos, tal como están.</span></li>
+            <li><b>Apunta tu fecha</b><span>Si hay un plazo corriendo, es lo primero que miramos.</span></li>
+            <li><b>Cuéntanoslo</b><span>Llámanos o escríbenos y te decimos si tu caso necesita consulta.</span></li>
+          </ol>
           {res.enlaces && res.enlaces.length > 0 && (
             <>
               <h3 style={{ margin: '20px 0 8px', fontSize: '1.1rem' }}>Para seguir</h3>
@@ -188,6 +201,9 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
             <a className="boton" href={enlaceWhatsapp(res.whatsapp)}>
               Enviar mi resultado por WhatsApp
             </a>
+            <button type="button" className="boton boton-claro" onClick={compartir}>
+              Enviarlo a una amiga
+            </button>
             <BotonImprimir />
             <a className="boton boton-claro" href={DESPACHO.telefonoHref}>
               Llamar al {DESPACHO.telefono}

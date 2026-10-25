@@ -70,6 +70,7 @@ export default function Inicio() {
           <Etiqueta icono="corazon">Empieza por aquí</Etiqueta>
           <h2>¿Qué te está pasando?</h2>
           <p className="intro-seccion">Elige tu situación y te decimos, sin dejar datos, cuál es tu siguiente paso.</p>
+          <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <div className="pasando">
             <article className="pasando-tarjeta pt-despido">
               <span className="pt-icono"><Icono nombre="caja" tam={26} /></span>
@@ -159,6 +160,7 @@ export default function Inicio() {
         <div className="contenedor">
           <Etiqueta icono="balanza">Sentencias</Etiqueta>
           <h2>Casos que han abierto camino</h2>
+          <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <ul className="hitos">
             {hitos.map((c) => (
               <li key={c.slug}>
@@ -281,7 +283,8 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor">
           <Etiqueta icono="calculadora">Herramientas</Etiqueta>
-          <h2>Herramientas gratuitas, sin dejar tu teléfono</h2>
+          <h2>Resuelve tus dudas ahora, sin dejar tu teléfono</h2>
+          <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <ul className="herr-tarjetas">
             <li className="ht-c0">
               <Link href="/herramientas/test-acoso">
@@ -374,8 +377,9 @@ export default function Inicio() {
         <section className="seccion">
           <div className="contenedor">
             <Etiqueta icono="documento">Blog</Etiqueta>
-            <h2>Lo último en el blog</h2>
-            <div className="tarjetas-foto">
+            <h2>Para leer con calma: lo último del blog</h2>
+            <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
+          <div className="tarjetas-foto">
               {ultimos.map((p) => {
                 const f = fotoDePieza(p);
                 return (

@@ -38,6 +38,11 @@ export default function Despido() {
           <FotoCabeza ruta="/despido" />
         </div>
       </header>
+      <aside className="mensaje-calido">
+        <span className="mc-flor" aria-hidden="true">&#10048;</span>
+        <p><strong>Respira.</strong> Lo primero es mirar tu plazo, y eso lo hacemos juntas: pon la fecha de tu carta en la herramienta de plazos y sabrás cuánto tiempo tienes.</p>
+        <a className="boton boton-claro" href="/herramientas/plazos">Calcular mi plazo</a>
+      </aside>
 
       <section className="seccion">
         <div className="contenedor con-lateral">

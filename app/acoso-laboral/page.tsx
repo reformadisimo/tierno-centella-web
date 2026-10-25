@@ -52,6 +52,11 @@ export default function Acoso() {
           </div>
         </div>
       </header>
+      <aside className="mensaje-calido">
+        <span className="mc-flor" aria-hidden="true">&#10048;</span>
+        <p><strong>No es una exageración tuya.</strong> Lo que sientes importa. Anota con calma lo que ha pasado y haz el test: en dos minutos sabrás si lo que vives puede ser acoso.</p>
+        <a className="boton boton-claro" href="/herramientas/test-acoso">Hacer el test</a>
+      </aside>
 
       <section className="seccion">
         <div className="contenedor">
