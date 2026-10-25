@@ -14,7 +14,7 @@ Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son trece cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son catorce cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -130,7 +130,7 @@ Lo hemos medido todo el mismo día con las herramientas de Google y de Pingdom. 
 
 **Blog.** 220 artículos de 2016 a 2022. Casi la mitad (104) están fuera de tu especialidad (seguros, hipotecas, mercantil, divorcios) o se han quedado caducados (los ERTE de 2020). Hay errores de WordPress: una página que debería hablar de las bajas muestra un texto de cuentas bancarias; otra, de canales de denuncia, habla de horas extra; una entrada de la papelera sigue publicada.
 
-**Redes y otras webs.** Facebook y LinkedIn no están enlazados. Las dos cuentas de X están abandonadas (2017 y 2020). Hay dos páginas de empresa en LinkedIn y una web antigua, acosomoral.es, con un módulo de Twitter que no carga. Todo eso dispersa la marca. Y fuera de tu web hay más sitios que hablan del despacho y que hay que revisar: otra web, abogadoespecializadoenacosolaboral.com, que según una revisión externa menciona sedes en Madrid y Bilbao, y notas en medios como que.es o Majadahonda Magazin. Si alguno dice "consulta gratuita" o da datos distintos, **confunde a Google, a las IA y a tus futuros clientes**. Lo repasamos todo y lo dejamos igual en todas partes.
+**Redes y otras webs.** Facebook y LinkedIn no están enlazados. Las dos cuentas de X están abandonadas (2017 y 2020). Hay tres páginas de empresa en LinkedIn (ninguna con publicaciones), dos de Facebook (una parada desde 2017, con el piso y el teléfono mal) y una web antigua, acosomoral.es, con un módulo de Twitter que no carga. Todo eso dispersa la marca. Y fuera de tu web hay más sitios que hablan del despacho y que hay que revisar: otra web, abogadoespecializadoenacosolaboral.com, que según una revisión externa menciona sedes en Madrid y Bilbao, y notas en medios como que.es o Majadahonda Magazin. Si alguno dice "consulta gratuita" o da datos distintos, **confunde a Google, a las IA y a tus futuros clientes**. Lo repasamos todo y lo dejamos igual en todas partes.
 
 **Test de viabilidad.** Pide datos antes de dar nada a cambio y no orienta: la persona no sabe qué le pasa ni qué plazo tiene.
 
@@ -434,9 +434,42 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 **Instagram** (4.007 seguidores, 265 publicaciones). Tres etapas: 2019-2021 con mucho contenido genérico y de otras áreas; **tres años de silencio** (2021-2024); y desde 2024, reels en el despacho con Jesús e Irene, que es lo mejor que tenéis. Los que más gustan: qué es el acoso (85 me gusta), cómo saber si lo sufro con Piñuel (76), "el andamio sin arnés" (75). En 2026 el ritmo ha bajado a uno al mes. Seguís usando #ertecoronavirus y #abogadosbilbao.
 
-**LinkedIn.** Tu perfil tiene 2.371 seguidores, pero publicas muy poco. Es donde están directores de colegios, recursos humanos, sindicatos y otros abogados: el canal para las campañas a instituciones. Hay que fusionar las dos páginas de empresa.
+**X**: dos cuentas abandonadas; o se reactivan o se dejan de enlazar.
 
-**Facebook** (285 seguidores, "recomendado por el 100 %" con 5 opiniones) repite Instagram. **X**: dos cuentas abandonadas; o se reactivan o se dejan de enlazar.
+### Facebook y LinkedIn: dos escaparates que hoy juegan en tu contra
+
+Lo hemos mirado con calma (visto el 25 de octubre de 2026), y hay un problema que desde dentro no se ve, pero que ve cualquiera que te busque.
+
+**En Facebook tienes dos páginas.** La que usas, la página activa de Facebook (285 seguidores y cinco opiniones, todas buenas), publica de tarde en tarde y casi siempre repite los vídeos de Instagram. Pero hay otra, la página antigua de Facebook, con 161 seguidores, cuya **última publicación es del 30 de agosto de 2017**: un enlace a un artículo de Cinco Días sobre las dietas. Nueve años. Y con los datos mal: pone **"78-6ºC"** cuando el despacho está en el 5.º C, y un **teléfono antiguo, el 917 826 854**. Quien llega a esa página piensa que el despacho ha cerrado, o llama a un número que ya no es el tuyo. Y Facebook no es poca cosa para ti: **el 62 % de quien entra cada mes tiene más de 45 años**, justo la edad de muchos despidos, bajas largas e incapacidades, y la de los hijos que buscan abogado para sus padres.
+
+**En LinkedIn tienes tres páginas de empresa, y ninguna ha publicado nunca nada.** TIERNO CENTELLA ABOGADOS (80 seguidores), Tierno Centella (224 seguidores) y Tierno Centella Abogados (154 seguidores): **458 personas que decidieron seguirte, repartidas en tres escaparates vacíos**. Tu perfil personal de LinkedIn tiene 2.371 seguidores, pero publicas muy poco. Y LinkedIn es, con diferencia, el sitio donde están tus futuros clientes de más calidad: **los trabajadores en activo**, los que mañana sufrirán un despido o un acoso; y **los directores de recursos humanos, las empresas y los colegios** que necesitan un protocolo, una investigación o una formación. Es el canal natural para las campañas a instituciones del apartado 18.
+
+Dos páginas de Facebook y tres de LinkedIn, además, **confunden a Google y a las IA**, que no saben cuál es la buena, y reparten entre cinco sitios una autoridad que debería sumar en uno solo.
+
+Esto es lo que ve hoy quien te busca, y cómo quedaría:
+
+[[redes-hoy-luego]]
+
+**Cómo lo tienes hoy y cómo te quedaría:**
+
+| | Hoy | Con nosotros |
+| --- | --- | --- |
+| Páginas | 2 en Facebook y 3 en LinkedIn | 1 y 1; las demás, cerradas o redirigidas |
+| Datos | Piso y teléfono mal en Facebook | Los mismos datos correctos que en la web y en tu ficha de Google |
+| Publicaciones | Facebook, de tarde en tarde; LinkedIn, nunca | Cada semana en las dos redes, programadas y con tu visto bueno |
+| De dónde sale el contenido | | Del blog, las sentencias, los vídeos de Instagram y las jornadas: un tema, cuatro canales |
+| El texto | El mismo para todo | Adaptado a cada red: LinkedIn más profesional, Facebook más cercano |
+| Mensajes y comentarios | Sin seguimiento | Respondidos en el día; las consultas, al CRM |
+| Resultados | Sin medir | En tu panel: seguidores, alcance y consultas que llegan desde cada red |
+
+**Y los anuncios que no estás haciendo.** Por lo que vemos desde fuera (la Biblioteca de anuncios de Meta y las páginas de LinkedIn), **hoy no hay campañas tuyas ni en Facebook e Instagram ni en LinkedIn**. Es dinero que se queda sin ganar, porque son dos canales distintos de Google y muy buenos para ti:
+
+- **En Facebook e Instagram** se puede llegar, con anuncios sencillos del test de acoso o de la calculadora de despido, a la gente de Madrid de 45 años en adelante que hoy no te busca en Google porque aún no sabe que tiene un caso.
+- **En LinkedIn** las campañas se segmentan muchísimo: por puesto, sector, tamaño de empresa y zona. Sirven para llegar a mandos intermedios y directivos que sufren acoso o un despido (los casos con más indemnización), y a los directores de recursos humanos, colegios e instituciones que necesitan un protocolo o una formación.
+
+**Todo esto entra en la cuota** (apartado 25 bis): crear las campañas, sus páginas de aterrizaje, vigilarlas cada día y medir qué consultas traen. Lo único que va aparte es la inversión en anuncios, que pagas tú directamente a Meta o a LinkedIn, con tu tarjeta y viéndolo todo. Y sin prometerte resultados: te enseñamos las cifras cada semana y decidimos juntos.
+
+[[redes-enlace]]
 
 **Notas de prensa.** Que.es, Merca2, Moncloa.com y Majadahonda Magazin (2022-2023). Tienen pinta de ser de pago y aportan poco prestigio. Valen más una entrevista real (Onda Cero, El Español) o una ponencia.
 

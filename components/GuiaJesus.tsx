@@ -1,6 +1,7 @@
 'use client';
 
-import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace } from './EnlacesGuia';
+import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace } from './EnlacesGuia';
+import RedesHoyLuego from './RedesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
 import CostesGuia from './CostesGuia';
@@ -276,6 +277,18 @@ const DOLORES: { titulo: string; icono: string; hoy: string; hoyDato: string; lu
     ancla: '5',
   },
   {
+    titulo: 'Tus redes hablan de un despacho de 2017',
+    icono: 'M7 10v12M15 5.9 14 10h5.8a2 2 0 0 1 1.9 2.6l-2.3 7a2 2 0 0 1-1.9 1.4H7V10l4.3-7.7A2 2 0 0 1 15 3.6z',
+    hoyDato: '2017',
+    hoy: 'última publicación de una de tus páginas de Facebook, con el piso y el teléfono mal',
+    luegoDato: '1 + 1',
+    luego: 'una sola página de Facebook y una de LinkedIn, al día cada semana',
+    visto: 'Tienes dos páginas de Facebook y tres de LinkedIn (visto el 25 de octubre de 2026). Una de Facebook lleva nueve años sin publicar y pone "6.º C" y un teléfono antiguo; las tres de LinkedIn no tienen ni una publicación, con 458 seguidores repartidos entre ellas.',
+    cuesta: 'Quien te busca en Facebook puede pensar que el despacho ha cerrado, o llamar a un número viejo. Y en LinkedIn, donde están los trabajadores en activo, las empresas y los colegios, no ven nada tuyo. Google y las IA tampoco saben cuál es la página buena.',
+    ayudamos: 'Unificamos las páginas, corregimos los datos y publicamos cada semana en las dos redes con lo que ya tienes: el blog, las sentencias, los vídeos y las jornadas. Respondemos mensajes y comentarios, y lo medimos en tu panel.',
+    ancla: '6',
+  },
+  {
     titulo: '"Consulta gratuita" que no lo es',
     icono: 'M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z',
     hoyDato: '3',
@@ -439,7 +452,7 @@ const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; 
   { area: 'Anuncios de Google', color: 'rojo', hoy: 'Activos, pero llevan a una página genérica y no se sabe qué consulta trae cada anuncio.', haremos: 'Hecho: tres páginas por tema. Falta medir cada consulta y ajustar las campañas.' },
   { area: 'Reseñas', color: 'ambar', hoy: '4,2 con 59 reseñas: 44 de cinco estrellas, pero 11 de una sin contestar.', haremos: 'Responderlas todas con tu aprobación, pedirlas por WhatsApp al cerrar cada caso y llegar a 4,5.' },
   { area: 'Blog', color: 'rojo', hoy: 'Parado desde 2022, con temas que no son tuyos.', haremos: 'Tres artículos a la semana sobre lo que de verdad busca la gente.' },
-  { area: 'Redes sociales', color: 'ambar', hoy: 'Instagram con buenos vídeos pero un parón de 2021 a 2024; dos cuentas de X abandonadas.', haremos: 'Un ritmo constante, reels con tus casos y LinkedIn para colegios e instituciones.' },
+  { area: 'Redes sociales', color: 'rojo', hoy: 'Instagram con buenos vídeos pero un parón de 2021 a 2024; una página de Facebook parada desde 2017 con el piso y el teléfono mal; tres páginas de LinkedIn sin publicaciones.', haremos: 'Un ritmo constante en Instagram, una sola página de Facebook y una de LinkedIn al día cada semana, y LinkedIn para empresas, colegios e instituciones.' },
   { area: 'Seguimiento de cada contacto', color: 'rojo', hoy: 'Quien deja sus datos o se va sin decidirse no vuelve a saber de ti.', haremos: 'Una serie de correos automáticos con Resend, según su tema, desde que deja sus datos hasta la consulta.' },
   { area: 'Saber de dónde vienen tus clientes', color: 'rojo', hoy: 'No se mide.', haremos: 'Cada llamada, WhatsApp y formulario con su origen, y un informe sencillo cada semana.' },
 ];
@@ -488,6 +501,8 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'correos-enlace': BloqueCorreosEnlace,
   'panel-enlace': BloquePanelEnlace,
   'crm-enlace': BloqueCrmEnlace,
+  'redes-hoy-luego': RedesHoyLuego,
+  'redes-enlace': BloqueRedesEnlace,
   mercado: MercadoGuia,
   cambio: CambioGuia,
   'compromiso-velocidad': CompromisoVelocidad,
