@@ -42,6 +42,16 @@ const RECORRIDO = [
   },
 ];
 
+type Clave = { t: string; d: string; icono: string; color: string; ancla?: string; href?: string; boton?: string; extra?: { href: string; texto: string } };
+const CLAVES: Clave[] = [
+  { t: 'Cómo estás hoy y cómo vas a estar', d: 'Quince puntos que hoy te hacen perder clientes, y cómo quedan con nosotros. Cada uno en dos líneas.', icono: 'M3 12h4l3-9 4 18 3-9h4', color: '#d9694d', href: '#rs2-14', boton: 'Ver los 15 puntos' },
+  { t: 'Tu web nueva ya está hecha', d: 'Rápida, clara en el móvil, con chat, tests y calculadoras. Es tuya y verla no te compromete a nada.', icono: 'M3 5h18v12H3zM8 21h8M12 17v4', color: '#1b6fd1', href: '/', boton: 'Ver la web', extra: { href: 'guia:8', texto: 'Qué tiene' } },
+  { t: 'Lo ves todo tú, en directo', d: 'Un panel de control que se actualiza cada día: consultas, campañas, Google, redes y gasto. Comparas días, semanas y meses cuando quieras.', icono: 'M3 3v18h18M7 15l4-4 4 3 5-6', color: '#7a4fb3', ancla: '19', extra: { href: '/guia-jesus/panel', texto: 'Ver el panel de ejemplo' } },
+  { t: 'Ninguna consulta se pierde', d: 'Una agenda de clientes con memoria, ya hecha e incluida en tu cuota. Cada consulta de la web, el chat, WhatsApp o el formulario entra sola, con su tema y de dónde vino. Y te cuenta los plazos de un despido.', icono: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8', color: '#2c7a5b', ancla: '25 bis', extra: { href: '/guia-jesus/crm', texto: 'Ver el CRM' } },
+  { t: '¿Miedo al cambio? Lo probamos antes', d: 'La web nueva solo para el 10 % de las visitas durante unas semanas, y decides con tus números. Y si a los tres meses no te hemos demostrado que funciona mejor, dejas de pagar desde el cuarto.', icono: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4', color: '#b07a00', ancla: '21 bis' },
+  { t: 'Todo a tu nombre, una sola cuota', d: 'La web, el dominio, Google, los anuncios y las redes, a tu nombre: nosotros entramos como invitados. Y una cuota fija con todo incluido, sin comisión sobre tus anuncios.', icono: 'M21 2l-2 2m-7.6 7.6a5.5 5.5 0 1 1-7.8 7.8 5.5 5.5 0 0 1 7.8-7.8zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4', color: '#0f7c8c', ancla: '25 bis', extra: { href: 'guia:8 bis', texto: 'Todo a tu nombre' } },
+];
+
 export default function Resumen() {
   const claves = Object.fromEntries(indiceGuia().map((a) => [a.clave, a.id]));
   const cuenta = (e: Estado) => ESTADO.filter((x) => x === e).length;
@@ -68,6 +78,26 @@ export default function Resumen() {
           ))}
         </ul>
       </header>
+
+      <section aria-labelledby="rs2-clave">
+        <h2 id="rs2-clave">Lo más importante, en seis cosas</h2>
+        <div className="rs2-claves">
+          {CLAVES.map((c) => {
+            const href = c.href ?? (claves[c.ancla!] ? `/guia-jesus#${claves[c.ancla!]}` : '/guia-jesus');
+            return (
+              <article key={c.t} className="rs2-clave" style={{ ['--rc' as string]: c.color }}>
+                <span className="rs2-clave-icono" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={c.icono} /></svg></span>
+                <h3>{c.t}</h3>
+                <p>{c.d}</p>
+                <div className="rs2-clave-links">
+                  <Link className="rs2-ver" href={href}>{c.boton ?? 'Ampliar en la guía'} &rarr;</Link>
+                  {c.extra && <Link className="rs2-ver rs2-ver-2" href={c.extra.href.startsWith('guia:') ? `/guia-jesus#${claves[c.extra.href.slice(5)] ?? ''}` : c.extra.href}>{c.extra.texto} &rarr;</Link>}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
       <section aria-labelledby="rs2-reco">
         <h2 id="rs2-reco">El camino de una clienta, y dónde se pierde hoy</h2>

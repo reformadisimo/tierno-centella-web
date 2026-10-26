@@ -8324,3 +8324,12 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 .rs2-indice li{break-inside:avoid;margin:0 0 6px}
 .rs2-indice a{color:var(--tinta);text-decoration:none;border-bottom:1px solid var(--linea)}
 .rs2-indice a:hover{color:#a8442c;border-color:#a8442c}
+.rs2-claves{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-bottom:28px}
+.rs2-clave{background:#fff;border-radius:18px;padding:18px 18px 16px;border-top:5px solid var(--rc);box-shadow:0 8px 24px rgba(13,44,72,.08);display:flex;flex-direction:column;gap:6px}
+.rs2-clave-icono{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:var(--rc);color:#fff}
+.rs2-clave h3{margin:6px 0 0;font-size:1.12rem;line-height:1.25}
+.rs2-clave p{margin:0;color:var(--tinta-media);line-height:1.5}
+.rs2-clave-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.rs2-clave .rs2-ver{margin-top:0}
+.rs2-ver-2{background:#eef2f6;color:var(--tinta)}
+#rs2-14{scroll-margin-top:90px}
