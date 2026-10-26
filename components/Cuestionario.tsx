@@ -6,12 +6,15 @@ import Link from 'next/link';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { BotonImprimir } from './Utiles';
 import Buzon from './Buzon';
+import Icono from './Iconos';
 
-export type Opcion = { texto: string; ayuda?: string; valor?: number; marca?: string };
+export type Opcion = { texto: string; ayuda?: string; valor?: number; marca?: string; icono?: string };
 export type Paso = {
   id: string;
   pregunta: string;
   ayuda?: string;
+  // Frase de ánimo que aparece encima de la pregunta.
+  animo?: string;
   opciones: Opcion[];
   multiple?: boolean;
   // Si devuelve false, el paso se salta.
@@ -157,7 +160,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
             </span>
           </div>
           <p className="campo-ayuda" style={{ marginTop: -8 }}>
-            Pregunta {indice + 1} de {activos.length}. Sin datos personales. Si te vas, tu avance se queda guardado solo en este dispositivo.
+            Pregunta {indice + 1} de {activos.length} · Nadie ve tus respuestas. Si te vas, tu avance se queda solo en este dispositivo.
           </p>
           {indice === 0 && retomar && Object.keys(resp).length === 0 && (
             <div className="recuadro cq-retomar" role="region" aria-label="Retomar el test">
@@ -178,7 +181,10 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
               </button>
             </p>
           )}
-          <fieldset className="pregunta-test paso" key={paso.id}>
+          {paso.animo && (
+            <p className="cq-animo" key={'a' + paso.id}><span aria-hidden="true"><Icono nombre="corazon" tam={16} /></span>{paso.animo}</p>
+          )}
+          <fieldset className={`pregunta-test paso${paso.multiple ? ' paso-multiple' : ''}`} key={paso.id}>
             <legend>
               <span className="paso-pregunta">{paso.pregunta}</span>
             </legend>
@@ -187,7 +193,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
               {paso.opciones.map((o, n) =>
                 paso.multiple ? (
                   <label key={o.texto} className="paso-opcion">
-                    <b className="cq-letra" aria-hidden="true">{String.fromCharCode(65 + n)}</b>
+                    <b className={`cq-letra${o.icono ? ' cq-icono' : ''}`} aria-hidden="true">{o.icono ? <Icono nombre={o.icono} tam={20} /> : String.fromCharCode(65 + n)}</b>
                     <input
                       type="checkbox"
                       checked={elegidas.some((e) => e.texto === o.texto)}
@@ -211,7 +217,7 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
                       setTimeout(() => responder([o]), 240);
                     }}
                   >
-                    <b className="cq-letra" aria-hidden="true">{String.fromCharCode(65 + n)}</b>
+                    <b className={`cq-letra${o.icono ? ' cq-icono' : ''}`} aria-hidden="true">{o.icono ? <Icono nombre={o.icono} tam={20} /> : String.fromCharCode(65 + n)}</b>
                     <span>
                       {o.texto}
                       {o.ayuda && <small>{o.ayuda}</small>}
@@ -221,6 +227,15 @@ export default function Cuestionario({ pasos, resultado }: { pasos: Paso[]; resu
               )}
             </div>
           </fieldset>
+          {paso.multiple && (
+            <p className={`cq-cuenta${elegidas.length ? ' activa' : ''}`} aria-live="polite">
+              {elegidas.length === 0
+                ? 'Marca las que te suenen. Si no te pasa ninguna, pulsa "Ninguna de estas".'
+                : elegidas.length === 1
+                  ? 'Has marcado 1. Gracias por contarlo.'
+                  : `Has marcado ${elegidas.length}. Gracias por contarlo: no es fácil.`}
+            </p>
+          )}
           <div className="acciones" style={{ marginTop: 8 }}>
             {indice > 0 && (
               <button type="button" className="boton boton-claro" onClick={atras}>

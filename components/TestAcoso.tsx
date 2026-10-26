@@ -7,24 +7,25 @@ const v = (r: Respuestas, id: string) => r[id]?.[0]?.valor ?? 0;
 const PASOS: Paso[] = [
   {
     id: 'conductas',
+    animo: 'Tómate tu tiempo. Aquí no hay respuestas buenas ni malas, y nadie más ve lo que marcas.',
     pregunta: '¿Cuáles de estas cosas te están pasando en el trabajo?',
-    ayuda: 'Marca todas las que reconozcas.',
     multiple: true,
     opciones: [
-      { texto: 'Me gritan, me insultan o me hablan con desprecio', marca: 'c' },
-      { texto: 'Me critican o ridiculizan delante de otros', marca: 'c' },
-      { texto: 'Me han quitado funciones o me dejan sin trabajo', marca: 'c' },
-      { texto: 'Me mandan tareas absurdas, imposibles o por debajo de mi puesto', marca: 'c' },
-      { texto: 'Me excluyen de reuniones, correos o información', marca: 'c' },
-      { texto: 'Me cambian de sitio, horario o turno para apartarme', marca: 'c' },
-      { texto: 'Me vigilan o controlan más que al resto', marca: 'c' },
-      { texto: 'Se difunden rumores o mentiras sobre mí', marca: 'c' },
-      { texto: 'Me amenazan con despedirme o sancionarme sin motivo', marca: 'c' },
-      { texto: 'Me niegan permisos, vacaciones o formación que a otros sí', marca: 'c' },
+      { texto: 'Me gritan, me insultan o me hablan con desprecio', marca: 'c', icono: 'chat' },
+      { texto: 'Me critican o ridiculizan delante de otros', marca: 'c', icono: 'personas' },
+      { texto: 'Me han quitado funciones o me dejan sin trabajo', marca: 'c', icono: 'caja' },
+      { texto: 'Me mandan tareas absurdas, imposibles o por debajo de mi puesto', marca: 'c', icono: 'documento' },
+      { texto: 'Me excluyen de reuniones, correos o información', marca: 'c', icono: 'correo' },
+      { texto: 'Me cambian de sitio, horario o turno para apartarme', marca: 'c', icono: 'reloj' },
+      { texto: 'Me vigilan o controlan más que al resto', marca: 'c', icono: 'lupa' },
+      { texto: 'Se difunden rumores o mentiras sobre mí', marca: 'c', icono: 'campana' },
+      { texto: 'Me amenazan con despedirme o sancionarme sin motivo', marca: 'c', icono: 'escudo' },
+      { texto: 'Me niegan permisos, vacaciones o formación que a otros sí', marca: 'c', icono: 'calendario' },
     ],
   },
   {
     id: 'frecuencia',
+    animo: 'Vas muy bien. Ya casi tenemos una idea de tu situación.',
     pregunta: '¿Con qué frecuencia te pasa?',
     si: (r) => (r.conductas ?? []).length > 0,
     opciones: [
@@ -67,6 +68,7 @@ const PASOS: Paso[] = [
   },
   {
     id: 'salud',
+    animo: 'Lo que sientes importa, y también cuenta para tu caso.',
     pregunta: '¿Te está afectando a la salud?',
     opciones: [
       { texto: 'Sí, y estoy o he estado de baja', marca: 'baja' },
@@ -76,6 +78,7 @@ const PASOS: Paso[] = [
   },
   {
     id: 'empresa',
+    animo: 'Última pregunta. Gracias por llegar hasta aquí.',
     pregunta: '¿Lo has comunicado a la empresa?',
     opciones: [
       { texto: 'Sí, por escrito', marca: 'escrito' },

@@ -8296,3 +8296,22 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 @media (min-width:1100px){.md-cabeza-flecha{display:flex}}
 .md-c6{--md:#0f7c8c;--md-claro:#e1f3f5}
 @media (min-width:1100px){.menu-desplegable .md-cabeza{flex-direction:row !important;align-items:center !important;min-height:0 !important}}
+
+/* Tests más amables: frase de ánimo, iconos en las opciones, contador que agradece, dos columnas en las listas largas */
+.cq-animo{display:flex;align-items:flex-start;gap:10px;margin:6px 0 14px;padding:12px 16px;border-radius:16px;background:#fbe9ef;color:#7a2e4c;font-weight:600;line-height:1.45}
+.cq-animo span{flex:none;color:#c2477a;margin-top:2px}
+@media (prefers-reduced-motion:no-preference){.cq-animo{animation:cq-entra .45s ease}}
+.cq-icono{background:#fcebe4 !important;color:#a8442c !important}
+.cq .paso-opcion:hover .cq-icono{transform:scale(1.08) rotate(-5deg)}
+.cq-letra{transition:background .15s,color .15s,transform .2s}
+.cq .paso-opcion.elegida .cq-icono,.cq .paso-opcion:has(input:checked) .cq-icono{background:#d9694d !important;color:#fff !important}
+@media (min-width:760px){.paso-multiple .paso-opciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
+.paso-multiple .paso-opcion{border-radius:16px;align-items:center}
+.paso-multiple .paso-opcion input{position:absolute;opacity:0;width:1px;height:1px}
+.paso-multiple .paso-opcion{position:relative;padding-right:46px}
+.paso-multiple .paso-opcion::after{content:'';position:absolute;right:14px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;border:2px solid var(--linea);background:#fff;transition:all .2s}
+.paso-multiple .paso-opcion:has(input:checked)::after{border-color:#d9694d;background:#d9694d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat}
+.paso-multiple .paso-opcion:has(input:focus-visible){outline:3px solid var(--foco);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.paso-multiple .paso-opcion:has(input:checked){animation:fl-pop .3s ease}}
+.cq-cuenta{margin:10px 0 0;padding:10px 14px;border-radius:12px;background:#f4f1ec;color:var(--tinta-media);font-size:.95rem;transition:background .2s,color .2s}
+.cq-cuenta.activa{background:#e6f4ee;color:#1f6b4b;font-weight:700}
