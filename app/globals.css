@@ -8335,3 +8335,16 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 #rs2-14{scroll-margin-top:90px}
 .lp-barras li{grid-template-columns:minmax(120px,38%) 1fr minmax(90px,auto)}
 .lp-nombre small{color:#7b8b9a;margin-left:6px}
+
+/* Portada en el móvil, más limpia (como la web actual): marca en el logo, un título claro, el sello y un solo botón */
+@media (max-width:700px){
+  .portada-video .pv-marca,.portada-video .pv-corto{display:none !important}
+  .portada-video .pv-coma{display:none}
+  .portada-video h1{font-size:clamp(2.1rem,10vw,2.6rem);line-height:1.06;margin:0 auto 12px}
+  .portada-video .pv-h1-sub{display:block;margin-top:12px;font-size:.5em;line-height:1.25;font-weight:600;letter-spacing:0;color:#f2c14e}
+  .portada-video .pv-sello{font-size:.8rem;margin:6px auto 26px;padding:6px 12px 6px 6px}
+  .portada-video .pv-sello b{font-size:.8rem;padding:4px 8px}
+  .portada-video .acciones .boton-claro,.portada-video .acciones .boton:not(:first-child){display:none}
+  .portada-video .contenedor{padding-top:24px;padding-bottom:72px}
+  .cabecera .cabecera-idioma,.cabecera .boton-buscar{display:none}
+}

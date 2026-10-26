@@ -27,7 +27,7 @@ export default function InicioEn() {
         </picture>
         <VideoPortada />
         <div className="contenedor">
-          <h1>Employment lawyers in Madrid, specialists in workplace harassment.</h1>
+          <h1>Employment lawyers in Madrid<span className="pv-coma">,</span> <span className="pv-h1-sub">specialists in workplace harassment.</span></h1>
           <p className="entradilla pv-largo">
             Over 25 years with dismissals, harassment and permanent disability. In 2005 we obtained the first ruling in Spain against both the company and the harasser.
             We help workers from all over Spain, in English, at our office on Jorge Juan street or by video call.
