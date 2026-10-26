@@ -545,6 +545,7 @@ Pulsa cualquier tarjeta para verla: se abre en otra pestaña y no pierdes la gu�
 [[web]]
 
 - **[Portada](/)**: vídeo luminoso, tu especialidad en una frase, "¿Qué te está pasando?" con el contador de plazo, la sección Mujer y trabajo, tus casos, el equipo, las herramientas, los vídeos de Instagram y el blog.
+- **Tu equipo, con cara**: en la portada hay un apartado con la foto del equipo y un retrato de cada persona. Hoy solo pone "Abogada laboralista" o "Atención a clientes". Creemos que ganaría mucho con **el nombre de cada uno y a qué se dedica** (por ejemplo, "Irene Ramos, acoso y despidos"): la gente confía más cuando sabe quién le va a atender. Eso lo decides tú, y si alguien prefiere no salir, se respeta. Te lo preguntamos en el apartado 24.
 - **[Acoso laboral](/acoso-laboral)**: 9 guías (cómo saber si es acoso, cómo demostrarlo, qué reclamar, baja por ansiedad, Administración y educación, vía penal...).
 - **[Despido](/despido)**: 4 guías y la calculadora.
 - **[Incapacidad permanente](/incapacidad-permanente)**: 3 guías con la Ley 2/2025 y la foto de la ventana que tanto nos gusta de tu web.
