@@ -9,6 +9,7 @@ import Pie from '@/components/Pie';
 import BarraMovil from '@/components/BarraMovil';
 import AvisoCookies from '@/components/AvisoCookies';
 import Medicion from '@/components/Medicion';
+import LupaWeb from '@/components/LupaWeb';
 import Diferidos from '@/components/Diferidos';
 import SalidaRapida from '@/components/SalidaRapida';
 import { CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WhatsappQR />
         <IdiomaHtml />
         <Medicion />
+        <LupaWeb />
       </body>
     </html>
   );

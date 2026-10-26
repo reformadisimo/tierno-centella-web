@@ -62,14 +62,18 @@ export default function LecturaPanel({ indice }: { indice: ApartadoGuia[] }) {
   }, [filas, conPropios]);
 
   const sesiones = useMemo(() => {
-    const m = new Map<string, { sesion: string; inicio: string; fin: string; segundos: number; scroll: number; pantallas: Set<string>; ciudad: string; dispositivo: string; navegador: string }>();
-    for (const f of visibles) {
-      const s = m.get(f.sesion) || { sesion: f.sesion, inicio: f.creado, fin: f.creado, segundos: 0, scroll: 0, pantallas: new Set<string>(), ciudad: f.ciudad || '', dispositivo: f.dispositivo || '', navegador: f.navegador || '' };
+    const m = new Map<string, { sesion: string; inicio: string; fin: string; segundos: number; scroll: number; pantallas: Set<string>; ciudad: string; dispositivo: string; navegador: string; web: string[] }>();
+    for (const f of [...visibles].sort((a, b) => a.creado.localeCompare(b.creado))) {
+      const s = m.get(f.sesion) || { sesion: f.sesion, inicio: f.creado, fin: f.creado, segundos: 0, scroll: 0, pantallas: new Set<string>(), ciudad: f.ciudad || '', dispositivo: f.dispositivo || '', navegador: f.navegador || '', web: [] };
+      if (f.pantalla === 'web' && f.seccion_id) {
+        const nombre = f.seccion_titulo || f.seccion_id;
+        if (s.web[s.web.length - 1] !== nombre) s.web.push(nombre);
+      }
       if (f.creado < s.inicio) s.inicio = f.creado;
       if (f.creado > s.fin) s.fin = f.creado;
       if (f.seccion_id === null) {
         s.segundos += f.segundos;
-        s.scroll = Math.max(s.scroll, f.max_scroll || 0);
+        if (f.pantalla !== 'web') s.scroll = Math.max(s.scroll, f.max_scroll || 0);
         s.pantallas.add(f.pantalla);
       }
       m.set(f.sesion, s);
@@ -84,10 +88,23 @@ export default function LecturaPanel({ indice }: { indice: ApartadoGuia[] }) {
   }, [visibles]);
   const otras = useMemo(() => {
     const m = new Map<string, number>();
-    for (const f of visibles) if (f.pantalla !== 'guia' && f.seccion_id === null) m.set(f.pantalla, (m.get(f.pantalla) || 0) + f.segundos);
+    for (const f of visibles) if (f.pantalla !== 'guia' && f.pantalla !== 'web' && f.seccion_id === null) m.set(f.pantalla, (m.get(f.pantalla) || 0) + f.segundos);
     return [...m.entries()];
   }, [visibles]);
 
+  const webPaginas = useMemo(() => {
+    const m = new Map<string, { titulo: string; segundos: number; visitas: Set<string> }>();
+    for (const f of visibles) {
+      if (f.pantalla !== 'web' || !f.seccion_id) continue;
+      const v = m.get(f.seccion_id) || { titulo: f.seccion_titulo || f.seccion_id, segundos: 0, visitas: new Set<string>() };
+      v.segundos += f.segundos;
+      v.visitas.add(f.sesion);
+      m.set(f.seccion_id, v);
+    }
+    return [...m.entries()].sort((a, b) => b[1].segundos - a[1].segundos);
+  }, [visibles]);
+  const webT = webPaginas.reduce((a, [, v]) => a + v.segundos, 0);
+  const maxW = Math.max(1, ...webPaginas.map(([, v]) => v.segundos));
   const maxT = Math.max(1, ...porApartado.values());
   const totalT = sesiones.reduce((a, s) => a + s.segundos, 0);
   const vistos = indice.filter((i) => (porApartado.get(i.id) || 0) >= 3);
@@ -107,7 +124,7 @@ export default function LecturaPanel({ indice }: { indice: ApartadoGuia[] }) {
     <div className="lp">
       <header className="lp-cabeza">
         <h1>La lupa: qué ha visto el cliente</h1>
-        <p>Tiempo real con la guía delante (pestaña visible y sin estar parado), por apartado. Se actualiza solo cada 30 segundos.</p>
+        <p>En la guía y en la web nueva: tiempo real con la página delante (pestaña visible y sin estar parado), por apartado y por página. Se actualiza solo cada 30 segundos.</p>
         <div className="lp-filtros">
           <label>
             Visitante
@@ -130,7 +147,8 @@ export default function LecturaPanel({ indice }: { indice: ApartadoGuia[] }) {
 
       <ul className="lp-cifras">
         <li><strong>{sesiones.length}</strong><span>visitas</span></li>
-        <li><strong>{dur(totalT)}</strong><span>tiempo total leyendo</span></li>
+        <li><strong>{dur(Math.max(0, totalT - webT))}</strong><span>leyendo la guía</span></li>
+        <li><strong>{dur(webT)}</strong><span>navegando por la web</span></li>
         <li><strong>{vistos.length} de {indice.length}</strong><span>apartados con más de 3 s</span></li>
         <li><strong>{evVis.length}</strong><span>reacciones, dudas y respuestas</span></li>
       </ul>
@@ -166,10 +184,25 @@ export default function LecturaPanel({ indice }: { indice: ApartadoGuia[] }) {
       </section>
 
       <section className="lp-bloque">
+        <h2>La web nueva: dónde han estado</h2>
+        {webPaginas.length === 0 ? <p>Todavía nadie ha navegado por la web (sin contar tus visitas, si no marcas la casilla).</p> : (
+          <ul className="lp-barras">
+            {webPaginas.map(([ruta, v]) => (
+              <li key={ruta}>
+                <span className="lp-nombre">{v.titulo} <small>{ruta}</small></span>
+                <span className="lp-barra"><i style={{ width: `${(v.segundos / maxW) * 100}%` }} /></span>
+                <span className="lp-valor">{dur(v.segundos)}{v.visitas.size > 1 ? ` · ${v.visitas.size} visitas` : ''}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      <section className="lp-bloque">
         <h2>Visitas</h2>
         {sesiones.length === 0 ? <p>Todavía no hay visitas registradas.</p> : (
           <table className="lp-tabla">
-            <thead><tr><th>Cuándo</th><th>Dónde</th><th>Aparato</th><th>Leyendo</th><th>Hasta dónde</th><th>Pantallas</th></tr></thead>
+            <thead><tr><th>Cuándo</th><th>Dónde</th><th>Aparato</th><th>Leyendo</th><th>Hasta dónde (guía)</th><th>Qué ha visto</th><th>Recorrido por la web</th></tr></thead>
             <tbody>
               {sesiones.map((s) => (
                 <tr key={s.sesion}>
@@ -177,8 +210,9 @@ export default function LecturaPanel({ indice }: { indice: ApartadoGuia[] }) {
                   <td>{s.ciudad || '-'}</td>
                   <td>{s.dispositivo} {s.navegador && `(${s.navegador})`}</td>
                   <td>{dur(s.segundos)}</td>
-                  <td>{s.scroll} %</td>
-                  <td>{[...s.pantallas].join(', ')}</td>
+                  <td>{s.pantallas.has('guia') ? `${s.scroll} %` : '-'}</td>
+                  <td>{[...s.pantallas].map((p) => (p === 'guia' ? 'guía' : p)).join(', ')}</td>
+                  <td>{s.web.length ? s.web.join(' → ') : '-'}</td>
                 </tr>
               ))}
             </tbody>

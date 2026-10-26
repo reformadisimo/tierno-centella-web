@@ -8333,3 +8333,5 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 .rs2-clave .rs2-ver{margin-top:0}
 .rs2-ver-2{background:#eef2f6;color:var(--tinta)}
 #rs2-14{scroll-margin-top:90px}
+.lp-barras li{grid-template-columns:minmax(120px,38%) 1fr minmax(90px,auto)}
+.lp-nombre small{color:#7b8b9a;margin-left:6px}
