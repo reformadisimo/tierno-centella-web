@@ -146,6 +146,8 @@ export async function POST(req: Request) {
   const pais = req.headers.get('x-vercel-ip-country') ?? '';
   const robot = pais && pais !== 'ES' ? ' [fuera de España: probablemente un robot]' : '';
   const conLugar = ['visita', 'tiempo', 'web', 'web-tiempo'].includes(aviso.tipo);
+  // Las entradas desde fuera de España (robots de seguridad del correo) no se avisan por correo: quedan solo en la lupa.
+  if (robot && conLugar) return Response.json({ ok: true, omitido: 'fuera-de-espana' });
   const { asunto, html, texto } = preparar(aviso, conLugar ? donde : '', conLugar ? robot : '');
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',
