@@ -5,15 +5,16 @@ import Cuestionario, { type Paso, marcas, texto } from './Cuestionario';
 const PASOS: Paso[] = [
   {
     id: 'que',
+    animo: 'No tienes por qué aguantarlo todo. Vamos a ver si puedes irte sin perder tus derechos.',
     pregunta: '¿Qué está haciendo la empresa?',
     ayuda: 'Marca todas las que te pasen.',
     multiple: true,
     opciones: [
-      { texto: 'Me paga tarde o no me paga la nómina, varios meses', marca: 'impago' },
-      { texto: 'Sufro acoso o un trato humillante', marca: 'acoso' },
-      { texto: 'Me han dejado sin funciones o me tienen sin hacer nada', marca: 'ocupacion' },
-      { texto: 'Me han cambiado horario, sueldo o funciones de forma grave y sin causa', marca: 'modificacion' },
-      { texto: 'No me da de alta, no cotiza por mí o incumple la seguridad en el trabajo', marca: 'grave' },
+      { texto: 'Me paga tarde o no me paga la nómina, varios meses', marca: 'impago', icono: 'euro' },
+      { texto: 'Sufro acoso o un trato humillante', marca: 'acoso', icono: 'personas' },
+      { texto: 'Me han dejado sin funciones o me tienen sin hacer nada', marca: 'ocupacion', icono: 'caja' },
+      { texto: 'Me han cambiado horario, sueldo o funciones de forma grave y sin causa', marca: 'modificacion', icono: 'reloj' },
+      { texto: 'No me da de alta, no cotiza por mí o incumple la seguridad en el trabajo', marca: 'grave', icono: 'escudo' },
     ],
   },
   {
@@ -38,6 +39,7 @@ const PASOS: Paso[] = [
   },
   {
     id: 'escrito',
+    animo: 'Última pregunta. Gracias por llegar hasta aquí.',
     pregunta: '¿Lo has reclamado a la empresa por escrito?',
     si: (r) => (r.que ?? []).length > 0,
     opciones: [{ texto: 'Sí', marca: 'escrito' }, { texto: 'No' }],

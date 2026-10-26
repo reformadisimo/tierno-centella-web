@@ -5,22 +5,23 @@ import Cuestionario, { type Paso, marcas, texto } from './Cuestionario';
 const PASOS: Paso[] = [
   {
     id: 'motivo',
+    animo: 'Primero, cuídate. Esto solo te lleva un minuto y nadie más ve tus respuestas.',
     pregunta: '¿Por qué estás de baja, o crees que vas a estarlo?',
     opciones: [
-      { texto: 'Ansiedad, depresión o estrés', marca: 'psico' },
-      { texto: 'Una lesión física', marca: 'fisica' },
-      { texto: 'Otra enfermedad', marca: 'otra' },
+      { texto: 'Ansiedad, depresión o estrés', marca: 'psico', icono: 'corazon' },
+      { texto: 'Una lesión física', marca: 'fisica', icono: 'mano' },
+      { texto: 'Otra enfermedad', marca: 'otra', icono: 'documento' },
     ],
   },
   {
     id: 'causa',
     pregunta: '¿Tiene que ver con el trabajo?',
     opciones: [
-      { texto: 'Sí, por acoso o un trato hostil', marca: 'acoso' },
-      { texto: 'Sí, por la carga o la presión de trabajo', marca: 'carga' },
-      { texto: 'Sí, fue un accidente trabajando o yendo al trabajo', marca: 'accidente' },
-      { texto: 'No lo sé', marca: 'duda' },
-      { texto: 'No', marca: 'no' },
+      { texto: 'Sí, por acoso o un trato hostil', marca: 'acoso', icono: 'personas' },
+      { texto: 'Sí, por la carga o la presión de trabajo', marca: 'carga', icono: 'reloj' },
+      { texto: 'Sí, fue un accidente trabajando o yendo al trabajo', marca: 'accidente', icono: 'campana' },
+      { texto: 'No lo sé', marca: 'duda', icono: 'lupa' },
+      { texto: 'No', marca: 'no', icono: 'check' },
     ],
   },
   {
@@ -31,6 +32,7 @@ const PASOS: Paso[] = [
   },
   {
     id: 'antes',
+    animo: 'Última pregunta. Lo estás haciendo muy bien.',
     pregunta: '¿Habías tenido antes ese mismo problema de salud?',
     si: (r) => !marcas(r).has('no'),
     opciones: [{ texto: 'No, empezó con lo del trabajo', marca: 'nuevo' }, { texto: 'Sí, ya lo tenía', marca: 'previo' }],

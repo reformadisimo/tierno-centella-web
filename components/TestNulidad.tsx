@@ -5,12 +5,13 @@ import Cuestionario, { type Paso, marcas, texto } from './Cuestionario';
 const PASOS: Paso[] = [
   {
     id: 'tipo',
+    animo: 'Respira. Con unas pocas preguntas te decimos si tu despido puede tener una protección especial.',
     pregunta: '¿Qué dice tu carta de despido?',
     opciones: [
-      { texto: 'Despido disciplinario', ayuda: 'Te acusan de una falta' },
-      { texto: 'Despido objetivo', ayuda: 'Causas económicas, técnicas, organizativas o de producción' },
-      { texto: 'No me dieron carta o no lo dice claro' },
-      { texto: 'Fin de contrato o no superé el periodo de prueba' },
+      { texto: 'Despido disciplinario', ayuda: 'Te acusan de una falta', icono: 'balanza' },
+      { texto: 'Despido objetivo', ayuda: 'Causas económicas, técnicas, organizativas o de producción', icono: 'grafico' },
+      { texto: 'No me dieron carta o no lo dice claro', icono: 'documento' },
+      { texto: 'Fin de contrato o no superé el periodo de prueba', icono: 'calendario' },
     ],
   },
   {
@@ -19,11 +20,11 @@ const PASOS: Paso[] = [
     ayuda: 'Marca todas las que se apliquen.',
     multiple: true,
     opciones: [
-      { texto: 'Embarazada', marca: 'objetiva' },
-      { texto: 'De permiso por nacimiento, adopción o acogida, o habías vuelto hace menos de 12 meses', marca: 'objetiva' },
-      { texto: 'Con permiso de lactancia o reducción de jornada por cuidado de hijos o familiares', marca: 'objetiva' },
-      { texto: 'Habías pedido o disfrutabas una excedencia por cuidado de hijos o familiares', marca: 'objetiva' },
-      { texto: 'Víctima de violencia de género o sexual, ejerciendo tus derechos laborales', marca: 'objetiva' },
+      { texto: 'Embarazada', marca: 'objetiva', icono: 'embarazo' },
+      { texto: 'De permiso por nacimiento, adopción o acogida, o habías vuelto hace menos de 12 meses', marca: 'objetiva', icono: 'corazon' },
+      { texto: 'Con permiso de lactancia o reducción de jornada por cuidado de hijos o familiares', marca: 'objetiva', icono: 'reloj' },
+      { texto: 'Habías pedido o disfrutabas una excedencia por cuidado de hijos o familiares', marca: 'objetiva', icono: 'casa' },
+      { texto: 'Víctima de violencia de género o sexual, ejerciendo tus derechos laborales', marca: 'objetiva', icono: 'escudo' },
     ],
   },
   {
@@ -31,24 +32,25 @@ const PASOS: Paso[] = [
     pregunta: '¿Y alguna de estas otras?',
     multiple: true,
     opciones: [
-      { texto: 'Había reclamado algo a la empresa, ido a Inspección o a juicio, o denunciado acoso', marca: 'indemnidad' },
-      { texto: 'Estaba de baja médica o tengo una enfermedad que la empresa conocía', marca: 'enfermedad' },
-      { texto: 'Soy representante de los trabajadores o estoy afiliado y era activo en el sindicato', marca: 'sindical' },
-      { texto: 'Creo que me despiden por mi edad, origen, sexo, orientación, religión o una discapacidad', marca: 'discriminacion' },
-      { texto: 'Había hecho huelga', marca: 'sindical' },
+      { texto: 'Había reclamado algo a la empresa, ido a Inspección o a juicio, o denunciado acoso', marca: 'indemnidad', icono: 'balanza' },
+      { texto: 'Estaba de baja médica o tengo una enfermedad que la empresa conocía', marca: 'enfermedad', icono: 'corazon' },
+      { texto: 'Soy representante de los trabajadores o estoy afiliado y era activo en el sindicato', marca: 'sindical', icono: 'personas' },
+      { texto: 'Creo que me despiden por mi edad, origen, sexo, orientación, religión o una discapacidad', marca: 'discriminacion', icono: 'mano' },
+      { texto: 'Había hecho huelga', marca: 'sindical', icono: 'campana' },
     ],
   },
   {
     id: 'cerca',
+    animo: 'Última pregunta. Gracias por contarlo.',
     pregunta: '¿Cuánto tiempo pasó entre eso y el despido?',
     si: (r) => {
       const m = marcas(r);
       return m.has('indemnidad') || m.has('enfermedad') || m.has('sindical') || m.has('discriminacion');
     },
     opciones: [
-      { texto: 'Días o pocas semanas', valor: 2 },
-      { texto: 'Unos meses', valor: 1 },
-      { texto: 'Más de medio año', valor: 0 },
+      { texto: 'Días o pocas semanas', valor: 2, icono: 'calendario' },
+      { texto: 'Unos meses', valor: 1, icono: 'calendario' },
+      { texto: 'Más de medio año', valor: 0, icono: 'calendario' },
     ],
   },
 ];
