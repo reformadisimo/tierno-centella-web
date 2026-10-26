@@ -4,7 +4,7 @@
 
 Jesús, qué ilusión enseñarte esto. En cinco minutos vas a ver **dónde estás hoy, lo que ya te hemos hecho y adónde te podemos llevar**. Cada apartado empieza con una foto y una frase; si quieres más, pulsa "Ver el detalle".
 
-> **Si solo tienes un minuto.** **Uno:** la web nueva ya está hecha y es tuya; verla no te compromete a nada. **Dos:** no cambias tu forma de trabajar ni la de tu equipo; cambia lo de alrededor: que Google te encuentre, que quien te busca se sienta acompañado y que sepamos de dónde viene cada consulta. **Tres:** prometemos método y constancia, no resultados, y te lo iremos enseñando mes a mes con tus propios datos.
+> **Si solo tienes un minuto.** **Uno:** la web nueva ya está hecha y es tuya; verla no te compromete a nada. **Dos:** no cambias tu forma de trabajar ni la de tu equipo; cambia lo de alrededor: que Google te encuentre, que quien te busca se sienta acompañado y que sepamos de dónde viene cada consulta. **Tres:** prometemos método y constancia, no resultados, y te lo iremos enseñando mes a mes con tus propios datos. Y si te da respeto cambiar, **lo probamos antes**: la web nueva solo para una parte pequeña de las visitas, y decides con los números (apartado 21 bis). Y si te da respeto cambiar, **lo probamos antes**: la web nueva solo para una parte pequeña de las visitas, y decidimos con los números (apartado 21 bis).
 
 > **Lo que creemos que puedes llegar a ser.** Hay despachos que se anuncian mucho; y hay personas a las que se acude porque son **la referencia**. Tú tienes lo segundo, y no se compra: la primera condena en España a empresa y acosador (2005), más de 25 años en derecho laboral (la mayor parte en acoso), un libro y la formación de futuros abogados. Lo que falta es que **cuando alguien pregunte a Google o a una inteligencia artificial "quién es el abogado de acoso laboral en Madrid", salga tu nombre**, con tu cara, tus palabras y tus casos. Esa es la ambición de este proyecto: no vender más ruido, sino que se te encuentre, se te reconozca y se te cite como lo que eres. Es un objetivo, no una promesa; lo iremos midiendo contigo.
 
@@ -607,7 +607,7 @@ Hay algo que para nosotros no es negociable: **tú tienes el control de todo**. 
 
 - **Ves todo lo que hacemos**, cuando quieras, sin tener que pedírnoslo.
 - **Nada depende de nosotros para funcionar.** Ni una clave, ni una cuenta, ni un historial.
-- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. Pedimos un compromiso mínimo de 6 meses, porque la web va regalada; después, te vas cuando quieras y te lo llevas todo a tu nombre.
+- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. Pedimos un compromiso mínimo de 6 meses, porque la web va regalada; pero si a los tres meses no te hemos demostrado con tus números que lo hacemos mejor, puedes dejarlo desde el cuarto (apartado 21 bis). Te vas cuando quieras y te lo llevas todo a tu nombre.
 
 No queremos trabajar de otra manera con ningún cliente. Nos parece la única forma honesta de hacerlo: que sigas con nosotros porque te compensa, no porque no puedas irte.
 
@@ -1121,7 +1121,7 @@ Si decides ofrecer la llamada corta sin coste (apartado 7 bis), "gratis" deja de
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
-**Tu panel de control, siempre a mano.** Además de los informes, tendrás una página privada, con tu usuario y contraseña, para ver desde el móvil o el ordenador cómo va todo, prácticamente en tiempo real. Va incluido en la cuota. Tiene ocho pestañas:
+**Tu panel de control, siempre a mano.** Además de los informes, tendrás una página privada, con tu usuario y contraseña, para ver desde el móvil o el ordenador cómo va todo, prácticamente en tiempo real. **Se actualiza cada día**, así que ves la evolución de todo: las consultas, cada campaña, las posiciones en Google, las redes y lo que gastas. Va incluido en la cuota. Tiene ocho pestañas:
 
 - **Resumen**: las consultas y visitas de hoy, lo que está pasando en tu web en ese momento, de dónde vienen las consultas, lo que llevas gastado este mes y si la web está bien.
 - **Clientes**: el camino desde la visita hasta el cliente, las últimas consultas con su origen, cuántas personas abren los correos de seguimiento, qué preguntan en el chat y qué herramientas se usan más.
@@ -1231,6 +1231,16 @@ Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y s
 > **Una cosa que conviene mirar antes**: si con algún proveedor firmaste permanencia o un preaviso, lo respetamos y planificamos el cambio para esa fecha. Si no lo sabes, te ayudamos a revisarlo.
 
 **Y una cosa más, con todo el cariño.** Sabemos que llevas años trabajando con personas de confianza, y que han hecho su trabajo con esfuerzo y buena fe. Nada de esto es una crítica a nadie: cada uno ha hecho lo que podía con lo que tenía. Y tampoco hay prisa ni nada que decidir hoy. Mira la web, pruébala con calma, enséñasela a quien quieras, y quédate con lo que te guste. Si un día decides dar el paso, lo hacemos con el mismo cuidado con el que cuidamos a quienes ya trabajan contigo.
+
+## 21 bis. ¿Miedo al cambio? Lo probamos antes, con datos
+
+Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** Podemos hacer una **prueba A/B**: durante unos días o unas semanas, la mayoría de las visitas siguen viendo **tu web actual** (por ejemplo, el 90 %) y una pequeña parte ve **la nueva** (el 10 %). Las dos conviven en tu misma dirección, sin que nadie note nada raro.
+
+Al cabo de ese tiempo sabremos, **con tus propios números**, cuál consigue más llamadas, más WhatsApp y más consultas. Si la nueva gana, vamos subiendo su parte poco a poco. Si no, no se cambia nada y no has perdido nada.
+
+> **Lo mismo hacemos con las landings y los anuncios**: probamos dos versiones a la vez y nos quedamos con la que mejor funciona. Decidimos con datos, no con gustos.
+
+**Y una salida fácil, por si acaso.** Pedimos un compromiso de seis meses porque la web va regalada. Pero sabemos que con tres meses basta para ver si funciona. Por eso, **si a los tres meses no te hemos demostrado con tus propios números que lo hacemos mejor, dejas de pagar desde el cuarto mes**, sin dar explicaciones. No queremos que nadie siga con nosotros sin estar convencido: siempre te ponemos fácil la salida, y todo sigue a tu nombre. Es como trabajamos con todos nuestros clientes.
 
 ## 22. Plan de 30 días y cuánto tarda en notarse
 
