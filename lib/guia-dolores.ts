@@ -44,9 +44,9 @@ export const DOLORES: Dolor[] = [
     hoy: 'gris en Google, en lugar de tu logo, junto a tu nombre',
     luegoDato: 'Tu logo',
     luego: 'junto a tu nombre en cada resultado de Google',
-    visto: 'Al buscarte en Google, al lado de tu web sale un globo gris y no tu logo. Lo hemos revisado: tu web sí tiene el logo preparado, pero una línea del archivo que da instrucciones a Google (robots.txt) le prohíbe entrar en la carpeta donde están el logo, las fotos y los archivos de diseño.',
+    visto: 'Al buscarte en Google, al lado de tu web sale un globo gris y no tu logo. Lo hemos revisado: tu web sí tiene el logo, pero una línea de su configuración le dice a Google que no entre donde están guardados el logo y las fotos.',
     cuesta: 'Sin logo, tu resultado se ve menos profesional y se reconoce peor entre los demás despachos. Y como Google tampoco puede ver tus fotos ni el diseño completo, no las enseña en sus imágenes y entiende peor tu web.',
-    ayudamos: 'La web nueva deja a Google ver el logo, las fotos y todo lo necesario. Es un cambio pequeño con un efecto visible: tu logo junto a tu nombre cada vez que alguien te busque.',
+    ayudamos: 'La web nueva deja a Google ver el logo, las fotos y todo lo necesario. Es un cambio pequeño con un efecto visible: tu logo junto a tu nombre cada vez que alguien te busque. Y si al final no trabajas con nosotros, díselo a quien te lleve la web: se arregla en cinco minutos.',
     ancla: '4 bis',
   },
   {
