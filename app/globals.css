@@ -8315,3 +8315,12 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 @media (prefers-reduced-motion:no-preference){.paso-multiple .paso-opcion:has(input:checked){animation:fl-pop .3s ease}}
 .cq-cuenta{margin:10px 0 0;padding:10px 14px;border-radius:12px;background:#f4f1ec;color:var(--tinta-media);font-size:.95rem;transition:background .2s,color .2s}
 .cq-cuenta.activa{background:#e6f4ee;color:#1f6b4b;font-weight:700}
+
+/* Resumen de la guía: enlaces para ampliar y el índice completo */
+.rs2-intro{color:var(--tinta-media);margin:-4px 0 14px}
+.rs2-ver{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-weight:800;color:#a8442c;text-decoration:none;padding:6px 12px;border-radius:999px;background:#fcebe4}
+.rs2-ver:hover{background:#d9694d;color:#fff}
+.rs2-indice{list-style:none;padding:0;margin:0;display:grid;gap:6px;columns:2 280px;column-gap:24px}
+.rs2-indice li{break-inside:avoid;margin:0 0 6px}
+.rs2-indice a{color:var(--tinta);text-decoration:none;border-bottom:1px solid var(--linea)}
+.rs2-indice a:hover{color:#a8442c;border-color:#a8442c}

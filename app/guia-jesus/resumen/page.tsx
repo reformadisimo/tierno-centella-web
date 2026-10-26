@@ -13,29 +13,29 @@ export const metadata: Metadata = {
 type Estado = 'hecho' | 'marcha' | 'preparado' | 'tu';
 const ESTADOS: Record<Estado, string> = { hecho: 'Ya hecho', marcha: 'En marcha', preparado: 'Preparado', tu: 'Te necesitamos' };
 // Estado de cada punto, en el mismo orden que los puntos de la guía.
-const ESTADO: Estado[] = ['hecho', 'hecho', 'marcha', 'marcha', 'tu', 'tu', 'hecho', 'tu', 'hecho', 'preparado', 'preparado', 'tu', 'marcha', 'tu'];
+const ESTADO: Estado[] = ['hecho', 'hecho', 'marcha', 'marcha', 'tu', 'tu', 'hecho', 'tu', 'hecho', 'preparado', 'preparado', 'tu', 'marcha', 'tu', 'hecho'];
 
 const RECORRIDO = [
   {
-    n: '1',
+    n: '1', ancla: '4 bis',
     t: 'Te buscan',
     hoy: '239 visitas al mes desde Google, un 38 % menos que en julio. En las IA, 14 sobre 100.',
     luego: '47 guías nuevas, tres artículos a la semana y textos que las IA pueden citar.',
   },
   {
-    n: '2',
+    n: '2', ancla: '12',
     t: 'Entran en tu web',
     hoy: 'Tarda 18,3 s en el móvil. Dice "consulta gratuita" y la cita cuesta 150 € más IVA.',
     luego: '3,2 s en el móvil, precio claro antes de reservar y reserva en cuatro pasos, sin carrito.',
   },
   {
-    n: '3',
+    n: '3', ancla: '5',
     t: 'Confían en ti',
     hoy: '59 reseñas y 11 de una estrella, ninguna respondida. Redes que parecen de 2017.',
     luego: 'Todas las reseñas respondidas (tú apruebas), reseñas nuevas de clientes contentos y redes al día.',
   },
   {
-    n: '4',
+    n: '4', ancla: '17',
     t: 'Te llaman, y lo sabes',
     hoy: 'Nadie les vuelve a escribir si no contratan, y no se sabe de dónde viene cada cliente.',
     luego: 'Siete correos según su caso y cada llamada, WhatsApp y formulario con su origen.',
@@ -78,13 +78,15 @@ export default function Resumen() {
               <h3>{r.t}</h3>
               <p className="rs2-hoy"><b>Hoy</b> {r.hoy}</p>
               <p className="rs2-luego"><b>Con nosotros</b> {r.luego}</p>
+              {claves[r.ancla] && <Link className="rs2-ver" href={`/guia-jesus#${claves[r.ancla]}`}>Ampliar en la guía &rarr;</Link>}
             </article>
           ))}
         </div>
       </section>
 
-      <details className="rs2-mas">
-        <summary>Ver los {DOLORES.length} puntos, uno por uno</summary>
+      <section aria-labelledby="rs2-14">
+        <h2 id="rs2-14">Los {DOLORES.length} puntos, uno por uno</h2>
+        <p className="rs2-intro">Cada punto en dos líneas: cómo está hoy y cómo queda con nosotros. Pulsa &quot;Ampliar en la guía&quot; si quieres el detalle.</p>
         <div className="rs2-lista">
           {DOLORES.map((d, i) => {
             const e = ESTADO[i];
@@ -101,12 +103,12 @@ export default function Resumen() {
                   <span aria-hidden="true" className="rs2-flecha">&darr;</span>
                   <p className="rs2-luego"><strong>{d.luegoDato}</strong> {d.luego}</p>
                 </div>
-                {id && <Link className="rs2-ver" href={`/guia-jesus#${id}`}>Ver el detalle</Link>}
+                {id && <Link className="rs2-ver" href={`/guia-jesus#${id}`}>Ampliar en la guía &rarr;</Link>}
               </article>
             );
           })}
         </div>
-      </details>
+      </section>
 
       <section aria-labelledby="rs2-cobro" className="rs2-nota" hidden>
         <h2 id="rs2-cobro">Y una cosa más: el cobro de la reserva</h2>
@@ -127,6 +129,15 @@ export default function Resumen() {
           <li>¿Te da respeto cambiar? Lo probamos antes: la web nueva solo para el 10 % de las visitas durante unas semanas, y decides con los números.</li>
         </ol>
         <p className="rs2-cierre">Nada de esto es grave y todo tiene arreglo. Todo queda a tu nombre, y tú puedes marcharte cuando quieras sin pedirnos nada. Y lo ves todo tú, en tu panel de control: se actualiza cada día y puedes comparar días, semanas y meses.</p>
+      </section>
+
+      <section aria-labelledby="rs2-todo">
+        <h2 id="rs2-todo">Ir a cualquier apartado de la guía</h2>
+        <ul className="rs2-indice">
+          {indiceGuia().filter((a) => a.clave !== 'inicio').map((a) => (
+            <li key={a.id}><Link href={`/guia-jesus#${a.id}`}>{a.titulo}</Link></li>
+          ))}
+        </ul>
       </section>
 
       <nav className="rs2-nav" aria-label="Pie">
