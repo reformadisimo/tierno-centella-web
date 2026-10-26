@@ -597,7 +597,7 @@ Una web como la tuya, y todo lo que la rodea, no lo hace una persona. Si lo enca
 
 Esto es, de verdad, **pasar a otro nivel**. No tener un proveedor para el SEO, otro para los anuncios, otro para el diseño, otro para las redes y otros veinte más, cada uno con su factura y su versión de los hechos. **Tienes uno solo: nosotros.** Y con nosotros:
 
-- **Todo controlado**: la web, el SEO, las campañas, las redes, las reseñas y el asistente, en un mismo sitio y con informes claros.
+- **Todo controlado, y lo ves tú**: la web, el SEO, las campañas, las redes, las reseñas y el asistente, en tu panel de control, actualizado cada día, para comparar días, semanas y meses cuando quieras.
 - **Actuación inmediata** en cualquiera de esos frentes, el mismo día.
 - **Resultados que se notan**: el posicionamiento lleva su tiempo (en el apartado 22 te contamos cuánto, sin promesas vacías), pero cada mes podrás ver con datos hacia dónde va.
 
@@ -1121,7 +1121,9 @@ Si decides ofrecer la llamada corta sin coste (apartado 7 bis), "gratis" deja de
 
 ## 19. Lo tenemos todo controlado: qué pasa en la web cada día
 
-**Tu panel de control, siempre a mano.** Además de los informes, tendrás una página privada, con tu usuario y contraseña, para ver desde el móvil o el ordenador cómo va todo, prácticamente en tiempo real. **Se actualiza cada día**, así que ves la evolución de todo: las consultas, cada campaña, las posiciones en Google, las redes y lo que gastas. Va incluido en la cuota. Tiene ocho pestañas:
+> **Tú tienes el control absoluto, sin esperar a nadie.** No tienes que esperar a que te llegue un informe a final de mes: **lo ves tú, en directo, cuando quieras**. Tu panel de control se actualiza cada día y en él puedes **comparar días, semanas y meses**: cuántas consultas han llegado, de dónde, qué tal va cada campaña, tus posiciones en Google, tus redes y lo que gastas. Es uno de los puntos fuertes de trabajar con nosotros.
+
+**Tu panel de control, siempre a mano.** Es una página privada, con tu usuario y contraseña, para verlo todo desde el móvil o el ordenador. Va incluido en la cuota. Tiene ocho pestañas:
 
 - **Resumen**: las consultas y visitas de hoy, lo que está pasando en tu web en ese momento, de dónde vienen las consultas, lo que llevas gastado este mes y si la web está bien.
 - **Clientes**: el camino desde la visita hasta el cliente, las últimas consultas con su origen, cuántas personas abren los correos de seguimiento, qué preguntan en el chat y qué herramientas se usan más.
@@ -1367,7 +1369,7 @@ Te contamos en qué estamos: **hemos montado una agencia de marketing, Casiopea 
 | Ficha de Google y reseñas | Responder todas las reseñas (siempre con tu aprobación: te mandamos cada respuesta antes de publicarla) y tener la ficha al día, con el objetivo de subir de 4,2 hacia 4,8 (apartado 5) |
 | Campañas de WhatsApp | Pedir la reseña a cada cliente al cerrar su asunto, con el enlace directo a tu ficha y un recordatorio; medido cada mes (apartado 5) |
 | Seguimiento por correo | El acompañamiento del apartado 17, escrito y medido |
-| Medición e informes | Informes diarios, semanales y mensuales, sencillos y en tu móvil: visitas, consultas, de dónde vienen, lo que cuesta cada cliente y qué cambiamos |
+| Medición e informes | Tu panel de control en directo, actualizado cada día, y además informes diarios, semanales y mensuales, sencillos y en tu móvil: visitas, consultas, de dónde vienen, lo que cuesta cada cliente y qué cambiamos |
 
 **Un solo proveedor para todo**: lo normal es trabajar con un SEO, alguien para los anuncios, un diseñador, un programador y otra persona para las redes, y así hasta 25 oficios (apartado 8 bis). Con nosotros tienes a un solo equipo, de forma sencilla: lo hacemos todo para darte el menor trabajo posible, con todo controlado, informes claros y actuación inmediata. Es pasar a otro nivel.
 

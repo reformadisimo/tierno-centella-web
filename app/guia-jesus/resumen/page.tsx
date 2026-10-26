@@ -126,7 +126,7 @@ export default function Resumen() {
           <li>¿Te da respeto cambiar? Lo probamos antes con el 10 % de las visitas. Y si a los tres meses no te hemos demostrado que funciona mejor, dejas de pagar desde el cuarto.</li>
           <li>¿Te da respeto cambiar? Lo probamos antes: la web nueva solo para el 10 % de las visitas durante unas semanas, y decides con los números.</li>
         </ol>
-        <p className="rs2-cierre">Nada de esto es grave y todo tiene arreglo. Todo queda a tu nombre, y tú puedes marcharte cuando quieras sin pedirnos nada.</p>
+        <p className="rs2-cierre">Nada de esto es grave y todo tiene arreglo. Todo queda a tu nombre, y tú puedes marcharte cuando quieras sin pedirnos nada. Y lo ves todo tú, en tu panel de control: se actualiza cada día y puedes comparar días, semanas y meses.</p>
       </section>
 
       <nav className="rs2-nav" aria-label="Pie">
