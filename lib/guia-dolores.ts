@@ -38,6 +38,18 @@ export const DOLORES: Dolor[] = [
     ancla: '4 bis',
   },
   {
+    titulo: 'Google no ve tu logo ni tus imágenes',
+    icono: 'M3 5h18v14H3zM8.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM21 15l-5-5L5 19',
+    hoyDato: 'Un globo',
+    hoy: 'gris en Google, en lugar de tu logo, junto a tu nombre',
+    luegoDato: 'Tu logo',
+    luego: 'junto a tu nombre en cada resultado de Google',
+    visto: 'Al buscarte en Google, al lado de tu web sale un globo gris y no tu logo. Lo hemos revisado: tu web sí tiene el logo preparado, pero una línea del archivo que da instrucciones a Google (robots.txt) le prohíbe entrar en la carpeta donde están el logo, las fotos y los archivos de diseño.',
+    cuesta: 'Sin logo, tu resultado se ve menos profesional y se reconoce peor entre los demás despachos. Y como Google tampoco puede ver tus fotos ni el diseño completo, no las enseña en sus imágenes y entiende peor tu web.',
+    ayudamos: 'La web nueva deja a Google ver el logo, las fotos y todo lo necesario. Es un cambio pequeño con un efecto visible: tu logo junto a tu nombre cada vez que alguien te busque.',
+    ancla: '4 bis',
+  },
+  {
     titulo: 'Las IA no te recomiendan',
     icono: 'M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4zM4 22a8 8 0 0 1 16 0',
     hoyDato: '14',

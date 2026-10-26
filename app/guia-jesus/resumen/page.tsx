@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 type Estado = 'hecho' | 'marcha' | 'preparado' | 'tu';
 const ESTADOS: Record<Estado, string> = { hecho: 'Ya hecho', marcha: 'En marcha', preparado: 'Preparado', tu: 'Te necesitamos' };
 // Estado de cada punto, en el mismo orden que los puntos de la guía.
-const ESTADO: Estado[] = ['hecho', 'hecho', 'marcha', 'marcha', 'tu', 'tu', 'hecho', 'tu', 'hecho', 'preparado', 'preparado', 'tu', 'marcha', 'tu', 'hecho'];
+const ESTADO: Estado[] = ['hecho', 'hecho', 'marcha', 'hecho', 'marcha', 'tu', 'tu', 'hecho', 'tu', 'hecho', 'preparado', 'preparado', 'tu', 'marcha', 'tu', 'hecho'];
 
 const RECORRIDO = [
   {
@@ -44,7 +44,7 @@ const RECORRIDO = [
 
 type Clave = { t: string; d: string; icono: string; color: string; ancla?: string; href?: string; boton?: string; extra?: { href: string; texto: string } };
 const CLAVES: Clave[] = [
-  { t: 'Cómo estás hoy y cómo vas a estar', d: 'Quince puntos que hoy te hacen perder clientes, y cómo quedan con nosotros. Cada uno en dos líneas.', icono: 'M3 12h4l3-9 4 18 3-9h4', color: '#d9694d', href: '#rs2-14', boton: 'Ver los 15 puntos' },
+  { t: 'Cómo estás hoy y cómo vas a estar', d: 'Dieciséis puntos que hoy te hacen perder clientes, y cómo quedan con nosotros. Cada uno en dos líneas.', icono: 'M3 12h4l3-9 4 18 3-9h4', color: '#d9694d', href: '#rs2-14', boton: 'Ver los 16 puntos' },
   { t: 'Tu web nueva ya está hecha', d: 'Rápida, clara en el móvil, con chat, tests y calculadoras. Es tuya y verla no te compromete a nada.', icono: 'M3 5h18v12H3zM8 21h8M12 17v4', color: '#1b6fd1', href: '/', boton: 'Ver la web', extra: { href: 'guia:8', texto: 'Qué tiene' } },
   { t: 'Lo ves todo tú, en directo', d: 'Un panel de control que se actualiza cada día: consultas, campañas, Google, redes y gasto. Comparas días, semanas y meses cuando quieras.', icono: 'M3 3v18h18M7 15l4-4 4 3 5-6', color: '#7a4fb3', ancla: '19', extra: { href: '/guia-jesus/panel', texto: 'Ver el panel de ejemplo' } },
   { t: 'Ninguna consulta se pierde', d: 'Una agenda de clientes con memoria, ya hecha e incluida en tu cuota. Cada consulta de la web, el chat, WhatsApp o el formulario entra sola, con su tema y de dónde vino. Y te cuenta los plazos de un despido.', icono: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8', color: '#2c7a5b', ancla: '25 bis', extra: { href: '/guia-jesus/crm', texto: 'Ver el CRM' } },
@@ -156,7 +156,6 @@ export default function Resumen() {
           <li>Si te convence: que revises los textos y nos des los accesos (Google, ficha, anuncios).</li>
           <li>Tu tiempo: unas 3 o 4 horas en dos semanas y, después, unos 30 minutos a la semana.</li>
           <li>¿Te da respeto cambiar? Lo probamos antes con el 10 % de las visitas. Y si a los tres meses no te hemos demostrado que funciona mejor, dejas de pagar desde el cuarto.</li>
-          <li>¿Te da respeto cambiar? Lo probamos antes: la web nueva solo para el 10 % de las visitas durante unas semanas, y decides con los números.</li>
         </ol>
         <p className="rs2-cierre">Nada de esto es grave y todo tiene arreglo. Todo queda a tu nombre, y tú puedes marcharte cuando quieras sin pedirnos nada. Y lo ves todo tú, en tu panel de control: se actualiza cada día y puedes comparar días, semanas y meses.</p>
       </section>
