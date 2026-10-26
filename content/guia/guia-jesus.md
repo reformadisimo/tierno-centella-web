@@ -975,6 +975,8 @@ Ataca de raíz la queja de algunas reseñas ("después se desentienden") y aprov
 
 ## 18. Campañas: para el cliente final y para instituciones
 
+> **Google Ads es lo que mejor sabemos hacer.** Tenemos muchísima experiencia: hemos llevado campañas de **más de 60.000 € al mes para una sola empresa**, y cuando hay tanto dinero en juego se aprende a no tirar ni un euro. Sabemos montar cada campaña, elegir las búsquedas que traen clientes y no curiosos, escribir los anuncios, probar, medir y **optimizarlo todo al máximo, semana a semana**. No te prometemos cifras: te las enseñamos cada día en tu panel, con lo que cuesta cada consulta.
+
 **Para la persona que lo está viviendo**:
 
 - **Google Ads** en búsquedas de alta intención: "abogado acoso laboral Madrid", "me han despedido estando embarazada", "incapacidad denegada abogado". Pagas solo si hacen clic, y llevan a la guía o la herramienta exacta.

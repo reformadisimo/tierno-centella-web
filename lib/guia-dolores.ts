@@ -106,7 +106,7 @@ export const DOLORES: Dolor[] = [
     luego: 'páginas por tema, pensadas para que llamen',
     visto: 'Tus anuncios casi no se ven: en 12 meses, Semrush solo los ha detectado en 7 búsquedas y en meses sueltos. Y cuando salen, llevan a una página de acoso aunque la persona busque incapacidad, y no se sabe qué anuncio trae cada cliente.',
     cuesta: 'Pagas cada clic, y una parte se va sin llamar porque no encuentra lo que buscaba.',
-    ayudamos: 'Ya tienes tres páginas nuevas: incapacidad, acoso y despido. Con acceso a tu cuenta, medimos cuánto cuesta cada consulta y quitamos lo que no funciona.',
+    ayudamos: 'Ya tienes tres páginas nuevas: incapacidad, acoso y despido. Y Google Ads es lo que mejor sabemos hacer: hemos llevado campañas de más de 60.000 € al mes para una sola empresa. Con acceso a tu cuenta, medimos cuánto cuesta cada consulta, quitamos lo que no funciona y optimizamos cada campaña al máximo.',
     ancla: '18 bis',
   },
   {
