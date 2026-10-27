@@ -1,4 +1,4 @@
-import { detalleDemo } from '@/lib/mesa/demo';
+import { detalleDemo } from '@/lib/mesaDemo';
 
 /* Detalle inventado de la mesa de DEMOSTRACIÓN (páginas, búsquedas, lupa, CRM por fechas). No lee ningún dato real. */
 export async function GET(req: Request) {

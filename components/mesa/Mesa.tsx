@@ -1,9 +1,12 @@
 "use client";
-import type { Modulo, Reloj, Tarea, Resumen } from "@/lib/mesa/tipos";
-import { LUZ, TEMAS_RESUMEN, primeraFrase, frasesDe, fechaEnPalabras, type Luz } from "@/lib/mesa/textos";
+import type { Modulo, Reloj, Tarea, Resumen } from "@/lib/mesaTipos";
+import { LUZ, TEMAS_RESUMEN, primeraFrase, frasesDe, fechaEnPalabras, type Luz } from "@/lib/mesaTextos";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { Loseta, Icono, ICONO_AREA, ICONO_CIFRA, ICONO_BARRA, FranjaConectado, Despedida, useSaludo, elige, CHISPA_TODO_BIEN, CHISPA_HECHO, CHISPA_SIN_TAREAS, CHISPA_TODO_REVISADO } from "@/components/mesa/Alegria";
+/** Tierno Centella: la mesa no lee en voz alta (decisión de Ig, 27-oct-2026). */
+const SIN_VOZ = true;
 
-/* ── MESA DE CONTROL de Tierno Centella: copia adaptada de la de Reformadísimo, el modelo (misma pantalla y mismo lenguaje) ──
+/* ── MESA DE CONTROL: copia de la de Reformadísimo, la referencia (scripts/copiar-mesa.py). Solo cambian textos de un despacho. ──
    Todo se calcula aquí, en el navegador, a partir de las series diarias que manda el
    servidor: eliges el periodo (un día concreto, una semana, un mes, tres meses, un año o
    fechas a mano) y contra qué comparar (periodo anterior o el mismo del año pasado), y
@@ -347,7 +350,7 @@ function Tabla<T>({ filas, cols, inicial, vacio = "Sin datos en este periodo." }
           <tr>
             {cols.map((c) => (
               <th key={c.k} className={`border-b border-line px-2 py-2 text-[12px] font-bold uppercase tracking-[0.08em] text-ink/55 ${c.num ? "text-right" : "text-left"}`}>
-                <button type="button" onClick={() => (orden === c.k ? setAsc(!asc) : (setOrden(c.k), setAsc(false)))} className={`inline-flex items-center gap-1 hover:text-ink ${orden === c.k ? "text-ink" : ""}`}>
+                <button type="button" onClick={() => (orden === c.k ? setAsc(!asc) : (setOrden(c.k), setAsc(false)))} className={`inline-flex min-h-[44px] items-center gap-1 hover:text-ink ${orden === c.k ? "text-ink" : ""}`}>
                   {c.t}
                   {orden === c.k ? <span aria-hidden="true">{asc ? "▲" : "▼"}</span> : null}
                 </button>
@@ -572,30 +575,30 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
           </>)}
 
           {sencillaPosible && vista === "sencilla" ? (
-            <Sencilla temas={temas!} resumen={resumenHoy} tareas={tareas ?? []} relojes={relojes ?? []} clave={datos.clave} irCompleta={() => cambiaVista("completa")} herramientas={<Accesos sinId irA={(p) => { cambiaVista("completa"); setPestana(p); setTimeout(() => document.querySelector('[role="tablist"]')?.scrollIntoView({ behavior: suave(), block: "start" }), 80); }} />} />
+            <Sencilla temas={temas!} resumen={resumenHoy} tareas={tareas ?? []} relojes={relojes ?? []} clave={datos.clave} irCompleta={() => cambiaVista("completa")} herramientas={<Accesos sinId demo={datos.clave === "demo"} irA={(p) => { cambiaVista("completa"); setPestana(p); setTimeout(() => document.querySelector('[role="tablist"]')?.scrollIntoView({ behavior: suave(), block: "start" }), 80); }} />} />
           ) : (<>
           {/* Periodo */}
           <div className="mt-5 flex flex-wrap items-center gap-2">
             {PRESETS.map(([p, t]) => (
-              <button key={p} type="button" onClick={() => elige(p)} className={`rounded-full border px-3.5 py-1.5 text-[13.5px] font-semibold transition-colors ${preset === p ? "border-ink bg-ink text-white" : "border-line bg-white text-ink hover:border-ink"}`}>
+              <button key={p} type="button" onClick={() => elige(p)} className={`min-h-[44px] rounded-full border px-3.5 py-1.5 text-[14px] font-semibold transition-colors ${preset === p ? "border-ink bg-ink text-white" : "border-line bg-white text-ink hover:border-ink"}`}>
                 {t}
               </button>
             ))}
-            <label className={`flex items-center gap-2 rounded-full border px-3 py-1 text-[13.5px] font-semibold ${preset === "dia" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
+            <label className={`flex min-h-[44px] items-center gap-2 rounded-full border px-3 py-0 text-[13.5px] font-semibold ${preset === "dia" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
               Un día
-              <input type="date" max={datos.hoy} value={preset === "dia" ? a : ""} onChange={(e) => { if (e.target.value) { setPreset("dia"); setRango([e.target.value, e.target.value]); } }} className="bg-transparent text-[13px] outline-none [color-scheme:light]" />
+              <input type="date" max={datos.hoy} value={preset === "dia" ? a : ""} onChange={(e) => { if (e.target.value) { setPreset("dia"); setRango([e.target.value, e.target.value]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none [color-scheme:light]" />
             </label>
-            <span className={`flex flex-wrap items-center gap-1.5 rounded-full border px-3 py-1 text-[13.5px] font-semibold ${preset === "libre" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
+            <span className={`flex min-h-[44px] flex-wrap items-center gap-1.5 rounded-full border px-3 py-0 text-[13.5px] font-semibold ${preset === "libre" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
               Desde
-              <input type="date" max={b} value={a} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([e.target.value, b < e.target.value ? e.target.value : b]); } }} className="bg-transparent text-[13px] outline-none" />
+              <input type="date" max={b} value={a} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([e.target.value, b < e.target.value ? e.target.value : b]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none" />
               hasta
-              <input type="date" max={datos.hoy} min={a} value={b} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([a, e.target.value]); } }} className="bg-transparent text-[13px] outline-none" />
+              <input type="date" max={datos.hoy} min={a} value={b} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([a, e.target.value]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none" />
             </span>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2 text-[13.5px]">
             <span className="font-semibold text-ink/55">Comparar con:</span>
             {([["anterior", "el periodo anterior"], ["anio", "el mismo periodo del año pasado"], ["no", "nada"]] as [Compara, string][]).map(([k, t]) => (
-              <button key={k} type="button" onClick={() => setCompara(k)} className={`rounded-full border px-3 py-1 font-semibold transition-colors ${compara === k ? "bg-[#f7efe0] text-[#7c5e27]" : "border-line bg-white text-ink/70 hover:border-ink"}`} style={compara === k ? { borderColor: COLOR.ambar } : undefined}>
+              <button key={k} type="button" onClick={() => setCompara(k)} className={`min-h-[44px] rounded-full border px-3.5 py-1 font-semibold transition-colors ${compara === k ? "bg-[#f7efe0] text-[#7c5e27]" : "border-line bg-white text-ink/70 hover:border-ink"}`} style={compara === k ? { borderColor: COLOR.ambar } : undefined}>
                 {t}
               </button>
             ))}
@@ -604,8 +607,8 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
           <div className="mt-4 rounded-[16px] border border-[#e8d9b8] bg-[#fbf6ea] px-4 py-3 text-[15px] leading-relaxed text-ink">
             Estás viendo <b>del {textoRango(a, b)}</b> ({largo} {largo === 1 ? "día" : "días"}).{" "}
             {compara === "no" ? "No lo estás comparando con nada." : <>Cada flecha lo compara con <b>{compara === "anio" ? "las mismas fechas del año pasado" : `los ${largo} días justo anteriores`}</b>: del {textoRango(ca, cb)}.</>}
-            <details className="mt-1 text-[14px] text-ink/75">
-              <summary className="cursor-pointer font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>
+            <details className="text-[14px] text-ink/75">
+              <summary className="cursor-pointer py-3 font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 <li><b>Arriba eliges las fechas</b> (7 días, 28 días, un mes, un día concreto…) y <b>con qué comparar</b>.</li>
                 <li>La cifra grande es la de las fechas elegidas. Debajo, <b>"antes"</b> es la cifra de las fechas con las que comparas.</li>
@@ -618,7 +621,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
 
           {temas && temas.length > 0 && <Temas temas={temas} resumen={resumenHoy} />}
           {tareas && tareas.length > 0 && <QueHagoHoy tareas={tareas} />}
-          {<Accesos irA={(p) => { setPestana(p); setTimeout(() => document.querySelector('[role="tablist"]')?.scrollIntoView({ behavior: suave(), block: "start" }), 50); }} />}
+          {<Accesos demo={datos.clave === "demo"} irA={(p) => { setPestana(p); setTimeout(() => document.querySelector('[role="tablist"]')?.scrollIntoView({ behavior: suave(), block: "start" }), 50); }} />}
           <Pregunta clave={datos.clave} />
           <Resumenes clave={datos.clave} />
 
@@ -678,7 +681,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
               accion={
                 <div className="flex flex-wrap gap-1">
                   {(["auto", "dia", "semana", "mes"] as const).map((g) => (
-                    <button key={g} type="button" onClick={() => setAgrupa(g)} className={`rounded-full px-2.5 py-1 text-[12.5px] font-semibold ${agrupa === g ? "bg-ink text-white" : "bg-cream text-ink/70 hover:text-ink"}`}>
+                    <button key={g} type="button" onClick={() => setAgrupa(g)} className={`min-h-[44px] rounded-full px-3.5 py-1 text-[14px] font-semibold ${agrupa === g ? "bg-ink text-white" : "bg-cream text-ink/70 hover:text-ink"}`}>
                       {g === "auto" ? "Automático" : g === "dia" ? "Días" : g === "semana" ? "Semanas" : "Meses"}
                     </button>
                   ))}
@@ -687,7 +690,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
             >
               <div className="mb-3 flex flex-wrap gap-1.5">
                 {METRICAS.map((m) => (
-                  <button key={m.id} type="button" onClick={() => setMetrica(m.id)} className={`rounded-full border px-3 py-1 text-[13px] font-semibold transition-colors ${metrica === m.id ? "border-teal bg-[#e7f2f5] text-teal-deep" : "border-line text-ink/70 hover:border-ink"}`}>
+                  <button key={m.id} type="button" onClick={() => setMetrica(m.id)} className={`min-h-[44px] rounded-full border px-3.5 py-1 text-[14px] font-semibold transition-colors ${metrica === m.id ? "border-teal bg-[#e7f2f5] text-teal-deep" : "border-line text-ink/70 hover:border-ink"}`}>
                     {m.nombre}
                   </button>
                 ))}
@@ -1173,7 +1176,7 @@ function intencionDe(q: string): "Marca" | "Comercial" | "Informativa" {
   const t = q.toLowerCase();
   if (/tierno|centella/.test(t)) return "Marca";
   // Un despacho: quien busca abogado o su problema laboral concreto puede ser cliente; las definiciones, rara vez.
-  if (/(abogad|despacho|bufete|despid|acoso|mobbing|incapacidad|indemnizaci|finiquito|demanda|denuncia|reclamar|cu[aá]nto cuesta|precio|consulta|calcular|madrid)/.test(t)) return "Comercial";
+  if (/(abogad|despacho|bufete|despid|acoso|mobbing|incapacidad|indemnizaci|finiquito|demanda|reclamar|cu[aá]nto cuesta|precio|calcular|contratar)/.test(t)) return "Comercial";
   return "Informativa";
 }
 function Intencion({ busquedas, cargando }: { busquedas: { busqueda: string; clics: number; impresiones: number }[]; cargando: boolean }) {
@@ -1398,7 +1401,7 @@ function BloqueRedes({ r, a, b, ca, cb, compara }: { r: Redes | null; a: string;
             );
           })}
         </div>
-        <p className="mt-3 text-[13px] leading-relaxed text-ink/60">Las reseñas de Google son la prueba de confianza del despacho. Contestar todas, también las de una estrella, mejora la nota y la confianza de quien las lee.</p>
+        <p className="mt-3 text-[13px] leading-relaxed text-ink/60">Las reseñas de Google son la prueba de confianza del despacho. Contestar todas, también las de una estrella, mejora la confianza de quien las lee.</p>
       </Caja>
 
       <Caja titulo="Ficha de Google (Google Maps y búsqueda)" fuente={`Supermetrics · datos hasta el ${ultF ? fechaLarga(ultF) : "(sin datos)"} · Google los da con unos 3 días de retraso`}>
@@ -1424,32 +1427,32 @@ function BloqueRedes({ r, a, b, ca, cb, compara }: { r: Redes | null; a: string;
 }
 
 /* Accesos (27-oct, cl·v882; Ig: "unas casillas con colores con los links del cuadro de mandos"):
-   las herramientas privadas de marketing, a un toque. No sale en la demo (son direcciones privadas).
+   las herramientas privadas de marketing, a un toque. En la demo salen igual, pero sin abrir las direcciones privadas.
    Las que aún no existen salen apagadas con "Próximamente". */
-type Acceso = { t: string; d: string; fondo: string; borde: string; href?: string; pestana?: Pestana; tema?: string; fuera?: boolean };
+type Acceso = { t: string; d: string; fondo: string; borde: string; icono: string; color: string; href?: string; pestana?: Pestana; tema?: string; fuera?: boolean };
 /** Abre una parte (batería) de la mesa desde cualquier sitio: lo escuchan la vista sencilla y la completa. */
 const abrirParte = (id: string) => window.dispatchEvent(new CustomEvent("mesa-tema", { detail: id }));
 const ACCESOS: Acceso[] = [
-  { t: "La lupa", d: "La web con lo que hace la gente encima: dónde tocan, hasta dónde bajan, conclusiones", fondo: "#e2f1f5", borde: "#1c8caa", href: "/guia-jesus/mapa-calor" },
-  { t: "Coste por cliente", d: "Lo invertido frente a consultas, primeras consultas y casos", fondo: "#fbf3df", borde: "#b8924a", pestana: "ventas" },
-  { t: "CRM", d: "Consultas, primeras consultas, casos y plazos, de cada persona", fondo: "#e7efe6", borde: "#5d7a57", href: "/guia-jesus/crm" },
-  { t: "Tu guía", d: "La guía viva del plan, con lo hecho y lo pendiente", fondo: "#f3e6e2", borde: "#a8574a", href: "/guia-jesus" },
-  { t: "Clarity", d: "Grabaciones de visitas y mapas de Microsoft, en cuanto nos des acceso", fondo: "#e8e6f3", borde: "#5b569c" },
-  { t: "Espejo de la IA", d: "Qué dicen de ti ChatGPT, Gemini y Claude", fondo: "#f6eedc", borde: "#b8924a", tema: "dicen" },
-  { t: "Vigía de la competencia", d: "Sus webs, reseñas y puestos en Google, cada semana", fondo: "#e8efe5", borde: "#5d7a57", tema: "mercado" },
+  { t: "La lupa", icono: "lupa", color: "#2a6f86", d: "La web con lo que hace la gente encima: dónde tocan, hasta dónde bajan, conclusiones", fondo: "#e2f1f5", borde: "#1c8caa", href: "/guia-jesus/mapa-calor" },
+  { t: "Coste por cliente", icono: "moneda", color: "#c79a00", d: "Lo invertido frente a consultas, primeras consultas y casos", fondo: "#fbf3df", borde: "#b8924a", pestana: "ventas" },
+  { t: "CRM", icono: "persona", color: "#2f6fd0", d: "Consultas, primeras consultas, casos y plazos, de cada persona", fondo: "#e7efe6", borde: "#5d7a57", href: "/guia-jesus/crm" },
+  { t: "Tu guía", icono: "documento", color: "#7a4fd0", d: "La guía viva del plan, con lo hecho y lo pendiente", fondo: "#f3e6e2", borde: "#a8574a", href: "/guia-jesus" },
+  { t: "Clarity", icono: "mapa", color: "#1a3d47", d: "Grabaciones de visitas y mapas de Microsoft", fondo: "#e8e6f3", borde: "#5b569c", href: "https://clarity.microsoft.com/", fuera: true },
+  { t: "Espejo de la IA", icono: "espejo", color: "#d9822b", d: "Qué dicen del despacho ChatGPT, Gemini y Claude", fondo: "#f6eedc", borde: "#b8924a", tema: "dicen" },
+  { t: "Vigía de la competencia", icono: "catalejo", color: "#1d6b3a", d: "Sus webs, reseñas y puestos en Google, cada semana", fondo: "#e8efe5", borde: "#5d7a57", tema: "mercado" },
 ];
 
-function Accesos({ irA, sinId }: { irA: (p: Pestana) => void; sinId?: boolean }) {
+function Accesos({ irA, sinId, demo }: { irA: (p: Pestana) => void; sinId?: boolean; demo?: boolean }) {
   return (
     <div className="mt-5 scroll-mt-4" id={sinId ? undefined : "mesa-herramientas"}>
       <p className="text-[11.5px] font-bold uppercase tracking-[0.16em] text-ink/55">Herramientas</p>
-      <ul className="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      <ul className="mt-2 grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
         {ACCESOS.map((x) => {
           const listo = !!(x.href || x.pestana || x.tema);
           const dentro = (
             <>
               <span className="flex items-start justify-between gap-2">
-                <span className="text-[16px] font-semibold leading-tight text-ink">{x.t}</span>
+                <span className="flex min-w-0 items-center gap-2.5"><Loseta n={x.icono} color={x.color} tam={40} /><span className="text-[16px] font-semibold leading-tight text-ink">{x.t}</span></span>
                 <span className="text-[15px] text-ink/50" aria-hidden="true">{listo ? (x.fuera ? "↗" : "→") : ""}</span>
               </span>
               <span className="mt-1 block text-[13px] leading-snug text-ink/60">{x.d}</span>
@@ -1460,8 +1463,10 @@ function Accesos({ irA, sinId }: { irA: (p: Pestana) => void; sinId?: boolean })
           const estilo = { backgroundColor: x.fondo, borderColor: x.borde };
           return (
             <li key={x.t}>
-              {x.href ? (
-                <a href={x.href} {...(x.fuera || x.href.startsWith("/guia-jesus") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className={clase} style={estilo}>{dentro}</a>
+              {x.href && demo ? (
+                <div className={clase} style={estilo}>{dentro}<span className="mt-2 inline-block whitespace-nowrap rounded-full bg-white px-2.5 py-0.5 text-[12px] font-semibold text-ink/55">Ejemplo: aquí se abriría</span></div>
+              ) : x.href ? (
+                <a href={x.href} {...(x.fuera || /^\/(crm|plan)-/.test(x.href) ? { target: "_blank", rel: "noopener noreferrer" } : {})} className={clase} style={estilo}>{dentro}</a>
               ) : x.pestana ? (
                 <button type="button" onClick={() => irA(x.pestana!)} className={`${clase} w-full`} style={estilo}>{dentro}</button>
               ) : x.tema ? (
@@ -1511,7 +1516,7 @@ function Temas({ temas, resumen }: { temas: Modulo[]; resumen?: Resumen }) {
         <section className="mt-3 rounded-[20px] border border-line bg-white px-5 py-4" aria-label={m.titulo}>
           <div className="flex items-start justify-between gap-3">
             <p className="flex flex-wrap items-baseline gap-x-2"><span className="font-serif text-[21px] italic text-ink">{m.titulo}</span><span className="text-[13px] text-ink/50">{m.que} · últimos 28 días</span></p>
-            <button type="button" onClick={() => setAbierto(null)} className="min-h-[40px] shrink-0 rounded-full border border-line px-4 text-[14px] font-semibold text-ink hover:border-ink">Cerrar</button>
+            <button type="button" onClick={() => setAbierto(null)} className="min-h-[44px] shrink-0 rounded-full border border-line px-4 text-[15px] font-semibold text-ink hover:border-ink">Cerrar</button>
           </div>
           <p className="mt-1 text-[15px] leading-snug text-ink/80">{m.conclusion}</p>
           <ul className="mt-3 divide-y divide-line">
@@ -1524,7 +1529,7 @@ function Temas({ temas, resumen }: { temas: Modulo[]; resumen?: Resumen }) {
           </ul>
           {m.enlaces.length > 0 && (
             <p className="mt-3 flex flex-wrap gap-2">
-              {m.enlaces.filter((e) => !e.href.startsWith("/mesa-")).map((e) => <a key={e.href} href={e.href} {...(e.href.startsWith("/guia-jesus") ? { target: "_blank", rel: "noopener" } : {})} className="inline-flex min-h-[40px] items-center rounded-full bg-yellow px-5 text-[14px] font-semibold text-ink">{e.t} →</a>)}
+              {m.enlaces.filter((e) => !e.href.startsWith("/mesa-")).map((e) => <a key={e.href} href={e.href} {...(/^\/(crm|plan)-/.test(e.href) ? { target: "_blank", rel: "noopener" } : {})} className="inline-flex min-h-[40px] items-center rounded-full bg-yellow px-5 text-[14px] font-semibold text-ink">{e.t} →</a>)}
             </p>
           )}
         </section>
@@ -1542,7 +1547,7 @@ function Ayudas({ vista, cambiaVista, abreGuia, resumen, tareas }: { vista: "sen
     <div className="mt-4 flex flex-wrap items-center gap-2">
       <span className="inline-flex rounded-full border border-line bg-white p-0.5 text-[14px]">
         {(["sencilla", "completa"] as const).map((v) => (
-          <button key={v} type="button" onClick={() => cambiaVista(v)} aria-pressed={vista === v} className={`min-h-[38px] rounded-full px-4 font-semibold transition-colors ${vista === v ? "bg-ink text-white" : "text-ink/70 hover:text-ink"}`}>
+          <button key={v} type="button" onClick={() => cambiaVista(v)} aria-pressed={vista === v} className={`min-h-[44px] rounded-full px-4 font-semibold transition-colors ${vista === v ? "bg-ink text-white" : "text-ink/70 hover:text-ink"}`}>
             {v === "sencilla" ? "Resumen" : "Todas las cifras"}
           </button>
         ))}
@@ -1591,7 +1596,7 @@ function QueHagoHoy({ tareas }: { tareas: Tarea[] }) {
                   <span className={`block text-[16px] font-semibold leading-snug ${ok ? "text-ink/45 line-through" : "text-ink"}`}>{t.texto}</span>
                   <span className="block text-[14px] leading-snug text-ink/65">{t.porque}{t.donde ? <span className="text-ink/45"> · Está en «{t.donde}»</span> : null}</span>
                 </span>
-                <button type="button" onClick={() => marca(t.id)} className={`shrink-0 rounded-full border px-3 py-1.5 text-[13px] font-semibold ${ok ? "border-[#2f9a62] bg-[#e7f4ec] text-[#1d6a42]" : "border-line text-ink/70 hover:border-ink"}`}>{ok ? "Revisado" : "Ya lo he revisado"}</button>
+                <button type="button" onClick={() => marca(t.id)} className={`min-h-[44px] shrink-0 rounded-full border px-3 py-1.5 text-[14px] font-semibold ${ok ? "border-[#2f9a62] bg-[#e7f4ec] text-[#1d6a42]" : "border-line text-ink/70 hover:border-ink"}`}>{ok ? "Revisado" : "Ya lo he revisado"}</button>
               </li>
             );
           })}
@@ -1615,6 +1620,10 @@ function Pregunta({ clave }: { clave: string }) {
     const t = texto.trim();
     if (!t || cargando) return;
     setCargando(true); setError("");
+    if (clave === "demo") {
+      setR((x) => [{ q: t, a: "Esto es una demostración: aquí Claude te contestaría en dos o tres frases con los datos reales de tu mesa. Por ejemplo: «Lo primero, los dos plazos de despido que vencen esta semana. Después, contestar las reseñas de una estrella.»" }, ...x].slice(0, 5));
+      setQ(""); setCargando(false); return;
+    }
     try {
       const res = await fetch("/api/mesa/pregunta", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ k: clave, pregunta: t }) });
       const j = await res.json();
@@ -1680,12 +1689,14 @@ function Sencilla({ temas, resumen, tareas, relojes, clave, irCompleta, herramie
       <TareaPrincipal tareas={tareas} temas={temas} abreTema={abreTema} />
       <EstadoLista temas={temas} abierto={abierto} setAbierto={setAbierto} />
       {relojes.length > 0 && <CifrasFrase relojes={relojes} />}
+      <FranjaConectado nombres={["Google Analytics", "Search Console", "Google Ads", "Ficha de Google", "Instagram", "LinkedIn", "WhatsApp", "Semrush", "ChatGPT", "Gemini", "Claude"]} />
       <Pregunta clave={clave} />
       <p className="mt-6 text-center">
         <button type="button" onClick={irCompleta} className="min-h-[48px] rounded-full border-2 border-ink px-6 text-[15px] font-semibold text-ink">Ver todas las cifras y gráficas</button>
       </p>
       <p className="mt-2 text-center text-[14px] text-ink/60">Ahí están los canales, las campañas, los recorridos paso a paso y las fechas a elegir.</p>
       <MasHerramientas clave={clave} herramientas={herramientas} />
+      <Despedida demo={clave === "demo"} />
     </div>
   );
 }
@@ -1714,8 +1725,10 @@ function MasHerramientas({ clave, herramientas }: { clave: string; herramientas:
    En diez segundos sé cómo va; en treinta sé qué hacer; solo después profundizo. */
 function CabeceraSencilla({ resumen, tareas, abreGuia, cambiarPeriodo, actualizado, hoy }: { resumen?: Resumen; tareas: Tarea[]; abreGuia: () => void; cambiarPeriodo: () => void; actualizado?: string; hoy: string }) {
   const alDia = !!actualizado && entre(actualizado, hoy) <= 2;
+  const saludo = useSaludo();
   return (
     <div>
+      <p className="min-h-[26px] font-serif text-[20px] italic leading-tight text-teal-deep">{saludo}</p>
       <p className="text-[11.5px] font-bold uppercase tracking-[0.16em] text-teal-deep">Tierno Centella · mesa de control</p>
       <h1 className="mt-1 font-serif text-[clamp(30px,5vw,42px)] font-medium italic leading-tight text-ink">Cómo va el despacho</h1>
       <p className="mt-1 text-[15px] text-ink/65">Últimos 28 días, comparado con los 28 anteriores · {alDia ? "actualizado hoy" : actualizado ? `anuncios actualizados el ${fechaEnPalabras(actualizado)}` : "anuncios sin actualizar"}</p>
@@ -1729,8 +1742,8 @@ function CabeceraSencilla({ resumen, tareas, abreGuia, cambiarPeriodo, actualiza
 }
 
 function BotonOir({ resumen, tareas }: { resumen?: Resumen; tareas: Tarea[] }) {
-  // Sin leer en voz alta en la mesa de Tierno Centella (decisión de Ig, 27-oct-2026).
-  if (resumen || tareas || true) return null;
+  // Tierno Centella: sin leer en voz alta (decisión de Ig, 27-oct-2026). Para activarlo, quitar la línea siguiente.
+  if (SIN_VOZ) return null;
   const [hablando, setHablando] = useState(false);
   const [puede, setPuede] = useState(true);
   useEffect(() => {
@@ -1775,6 +1788,7 @@ function Conclusion({ resumen, hayTarea }: { resumen?: Resumen; hayTarea: boolea
           {puntos.map((p, i) => <li key={i} className="flex gap-2.5 text-[17px] leading-snug text-ink/85"><span className="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-ink/40" />{p}</li>)}
         </ul>
       ) : <p className="mt-2 text-[17px] leading-snug text-ink/85">{puntos[0]}</p>}
+      {!urgente && !/^Para mirar/.test(resumen.texto) && <p className="mt-2 text-[15px] italic leading-snug text-ink/60">{elige(CHISPA_TODO_BIEN, resumen.titulo + resumen.texto)}</p>}
       {hayTarea && (
         <button type="button" onClick={() => document.getElementById("mesa-hoy")?.scrollIntoView({ behavior: suave(), block: "start" })} className="mt-4 min-h-[48px] rounded-full bg-yellow px-6 text-[15.5px] font-semibold text-ink">{urgente ? "Ver lo más importante" : "Ver qué tengo que hacer"}</button>
       )}
@@ -1799,13 +1813,16 @@ function TareaPrincipal({ tareas, temas, abreTema }: { tareas: Tarea[]; temas: M
           {tema && <button type="button" onClick={() => abreTema(tema.id)} className="min-h-[44px] rounded-full bg-yellow px-5 text-[15px] font-semibold text-ink">{t.boton ?? `Abrir ${tema.titulo}`}</button>}
           <button type="button" onClick={() => marca(t.id)} className={`min-h-[44px] rounded-full border px-5 text-[15px] font-semibold ${ok ? "border-[#2f9a62] bg-[#e7f4ec] text-[#1d6a42]" : "border-line text-ink hover:border-ink"}`}>{ok ? "Revisado" : "Ya lo he revisado"}</button>
         </div>
+        {ok && <p className="mt-2 flex items-center gap-2 text-[14.5px] font-semibold text-[#1d6a42]"><span aria-hidden="true" className="grid h-6 w-6 place-items-center rounded-full bg-[#2f9a62] text-white"><Icono n="check" className="h-4 w-4" /></span>{elige(CHISPA_HECHO, t.id)}</p>}
       </div>
     );
   };
   return (
     <section id="mesa-hoy" className="mt-4 scroll-mt-4 rounded-[22px] border-2 border-yellow bg-white px-5 py-4">
       <h2 className="text-[13px] font-bold uppercase tracking-[0.12em] text-ink/55">Lo primero que haría hoy</h2>
-      {principal ? <div className="mt-2"><Fila t={principal} grande /></div> : <p className="mt-2 text-[17px] text-ink/80">{tareas.length ? "Ya has revisado todo lo de hoy. Bien hecho." : "Hoy no hay nada pendiente."}</p>}
+      {principal ? <div className="mt-2"><Fila t={principal} grande /></div> : (
+        <p className="mt-2 flex items-center gap-3 text-[17px] text-ink/80"><Loseta n="estrella" color="#c79a00" tam={44} />{tareas.length ? CHISPA_TODO_REVISADO : CHISPA_SIN_TAREAS}</p>
+      )}
       {resto.length > 0 && (
         <div className="mt-4">
           <button type="button" onClick={() => setVerMas(!verMas)} aria-expanded={verMas} className="inline-flex min-h-[44px] items-center text-[15.5px] font-semibold text-ink underline underline-offset-4">{verMas ? "Ocultar" : `Hay ${resto.length === 1 ? "1 acción más" : `${resto.length} acciones más`}`}</button>
@@ -1840,13 +1857,13 @@ function EstadoLista({ temas, abierto, setAbierto }: { temas: Modulo[]; abierto:
           const ab = abierto === m.id;
           return (
             <li key={m.id} id={`tema-${m.id}`} className={`scroll-mt-4 rounded-[20px] border bg-white ${ab ? "border-ink" : "border-line"}`}>
-              <button type="button" onClick={() => setAbierto(ab ? null : m.id)} aria-expanded={ab} className="grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 gap-y-3 px-4 py-4 text-left sm:grid-cols-[auto_minmax(0,1fr)_auto]">
-                <Bateria luz={m.luz} />
+              <button type="button" onClick={() => setAbierto(ab ? null : m.id)} aria-expanded={ab} className="grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-x-3.5 gap-y-3 px-4 py-4 text-left sm:grid-cols-[auto_minmax(0,1fr)_auto]">
+                <Loseta n={(m.icono ?? ICONO_AREA[m.id]?.[0]) || "estrella"} color={m.color ?? ICONO_AREA[m.id]?.[1] ?? "#1a3d47"} tam={52} />
                 <span className="min-w-0 flex-1">
-                  <span className="flex flex-wrap items-baseline gap-x-2"><span className="text-[18px] font-semibold text-ink">{m.titulo}</span><span className="text-[14px] font-semibold" style={{ color: LUZ[m.luz].c }}>{m.estado ?? LUZ[m.luz].t}</span></span>
+                  <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1"><span className="text-[18px] font-semibold text-ink">{m.titulo}</span><Bateria luz={m.luz} /><span className="text-[14px] font-semibold" style={{ color: LUZ[m.luz].c }}>{m.estado ?? LUZ[m.luz].t}</span></span>
                   <span className="mt-0.5 block text-[15px] leading-snug text-ink/70">{primeraFrase(m.conclusion)}</span>
                 </span>
-                <span className="col-start-2 justify-self-start rounded-full bg-yellow px-4 py-2 text-[14px] font-semibold text-ink sm:col-start-3 sm:justify-self-end">{ab ? "Cerrar" : m.ver ?? "Ver"}</span>
+                <span className="col-start-2 inline-flex min-h-[44px] items-center justify-self-start rounded-full bg-yellow px-4 text-[14px] font-semibold text-ink sm:col-start-3 sm:justify-self-end">{ab ? "Cerrar" : m.ver ?? "Ver"}</span>
               </button>
               {ab && (
                 <div className="border-t border-line px-4 pb-4 pt-2">
@@ -1861,7 +1878,7 @@ function EstadoLista({ temas, abierto, setAbierto }: { temas: Modulo[]; abierto:
                   </ul>
                   {m.enlaces.filter((e) => !e.href.startsWith("/mesa-")).length > 0 && (
                     <p className="mt-3 flex flex-wrap gap-2">
-                      {m.enlaces.filter((e) => !e.href.startsWith("/mesa-")).map((e) => <a key={e.href} href={e.href} {...(e.href.startsWith("/guia-jesus") ? { target: "_blank", rel: "noopener" } : {})} className="inline-flex min-h-[44px] items-center rounded-full bg-yellow px-5 text-[15px] font-semibold text-ink">{e.t} →</a>)}
+                      {m.enlaces.filter((e) => !e.href.startsWith("/mesa-")).map((e) => <a key={e.href} href={e.href} {...(/^\/(crm|plan)-/.test(e.href) ? { target: "_blank", rel: "noopener" } : {})} className="inline-flex min-h-[44px] items-center rounded-full bg-yellow px-5 text-[15px] font-semibold text-ink">{e.t} →</a>)}
                     </p>
                   )}
                 </div>
@@ -1880,16 +1897,16 @@ function CifrasFrase({ relojes }: { relojes: Reloj[] }) {
     <section className="mt-6">
       <h2 className="font-serif text-[24px] italic text-ink">Las cuatro cifras que importan</h2>
       <ul className="mt-3 grid gap-3 sm:grid-cols-2">
-        {relojes.map((r) => {
+        {relojes.map((r, ri) => {
           const ab = info === r.t;
           return (
             <li key={r.t} className="rounded-[20px] border border-line bg-white px-4 py-4">
               <div className="flex items-start gap-3">
-                <span className="mt-1.5"><LuzTema luz={r.luz} g /></span>
+                <Loseta n={r.icono ?? ICONO_CIFRA[ri % ICONO_CIFRA.length][0]} color={r.color ?? ICONO_CIFRA[ri % ICONO_CIFRA.length][1]} tam={48} />
                 <div className="min-w-0 flex-1">
                   <p className="text-[18px] font-semibold leading-snug text-ink">{r.frase ?? `${r.t}: ${r.v}`}</p>
                   {r.detalle && <p className="mt-0.5 text-[15px] text-ink/65">{r.detalle}</p>}
-                  <p className="mt-1 text-[14px] font-semibold" style={{ color: LUZ[r.luz].c }}>{r.luz === "azul" ? "Dato" : r.luz === "gris" ? "Sin comparación todavía" : LUZ[r.luz].t}</p>
+                  <p className="mt-1 flex items-center gap-2 text-[14px] font-semibold" style={{ color: LUZ[r.luz].c }}><LuzTema luz={r.luz} />{r.luz === "azul" ? "Dato" : r.luz === "gris" ? "Sin comparación todavía" : LUZ[r.luz].t}</p>
                 </div>
                 {r.ayuda && <button type="button" aria-label={`Qué significa: ${r.t}`} aria-expanded={ab} onClick={() => setInfo(ab ? null : r.t)} className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line text-[17px] font-bold text-ink/60 hover:border-ink">?</button>}
               </div>
@@ -1909,7 +1926,7 @@ function BarraMovil({ vista }: { vista: "sencilla" | "completa" }) {
     <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-2 pb-[max(8px,env(safe-area-inset-bottom))] pt-2 backdrop-blur sm:hidden" aria-label="Ir a">
       <ul className="grid grid-cols-4 gap-1">
         {botones.map(([id, t]) => (
-          <li key={id}><button type="button" onClick={() => { if (id === "mesa-herramientas") window.dispatchEvent(new Event("mesa-mas")); if (id === "mesa-hoy" && vista === "completa") window.scrollTo({ top: 0, behavior: suave() }); else setTimeout(() => ir(id), 30); }} className="min-h-[48px] w-full rounded-[12px] text-[15px] font-semibold text-ink active:bg-cream">{t}</button></li>
+          <li key={id}><button type="button" onClick={() => { if (id === "mesa-herramientas") window.dispatchEvent(new Event("mesa-mas")); if (id === "mesa-hoy" && vista === "completa") window.scrollTo({ top: 0, behavior: suave() }); else setTimeout(() => ir(id), 30); }} className="flex min-h-[56px] w-full flex-col items-center justify-center gap-0.5 rounded-[12px] text-[13px] font-semibold text-ink active:bg-cream"><span aria-hidden="true" className="grid h-7 w-7 place-items-center rounded-[9px] text-white" style={{ background: ICONO_BARRA[id][1] }}><Icono n={ICONO_BARRA[id][0]} className="h-4 w-4" /></span>{t}</button></li>
         ))}
       </ul>
     </nav>
@@ -1923,9 +1940,9 @@ function Guia({ cerrar }: { cerrar: () => void }) {
       <div className="max-h-[90vh] w-full max-w-[460px] overflow-y-auto rounded-[22px] bg-white p-6 shadow-2xl">
         <h2 className="font-serif text-[27px] italic leading-tight text-ink">Esta mesa te cuenta tres cosas</h2>
         <ol className="mt-3 space-y-2 text-[17px] text-ink">
-          <li className="flex gap-3"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-[14px] font-bold">1</span>Cómo va todo.</li>
-          <li className="flex gap-3"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-[14px] font-bold">2</span>Qué necesita atención.</li>
-          <li className="flex gap-3"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-[14px] font-bold">3</span>Qué haría hoy.</li>
+          <li className="flex items-center gap-3"><Loseta n="mando" color="#2a6f86" tam={34} />Cómo va todo.</li>
+          <li className="flex items-center gap-3"><Loseta n="campana" color="#d93f3f" tam={34} />Qué necesita atención.</li>
+          <li className="flex items-center gap-3"><Loseta n="estrella" color="#c79a00" tam={34} />Qué haría hoy.</li>
         </ol>
         <p className="mt-4 text-[16px] leading-relaxed text-ink/80">No necesitas entender de marketing. Pulsa cualquier apartado y te lo explicamos.</p>
         {mas && (
@@ -1981,7 +1998,11 @@ function Resumenes({ clave }: { clave: string }) {
   const alterna = (k: string) => setTemas((t) => (t.includes(k) ? t.filter((x) => x !== k) : [...t, k]));
   const enviarlo = async () => {
     setEstado(null);
-    if (demo) { setEstado({ ok: true, t: "Esto es una demostración: en la mesa de verdad, el resumen te llegaría a ese correo." }); return; }
+    if (demo) {
+      if (frec !== "ahora") setLista((l) => [...l, { id: Date.now(), email, frecuencia: frec, temas, ultimo: null }]);
+      setEstado({ ok: true, t: frec === "ahora" ? `Esto es un ejemplo: en tu mesa, el resumen llegaría ahora a ${email}.` : `Esto es un ejemplo: en tu mesa, te llegaría ${frec === "diario" ? "cada mañana" : frec === "semanal" ? "cada lunes por la mañana" : "el día 1 de cada mes"} a ${email}.` });
+      return;
+    }
     setEnviando(true);
     try { localStorage.setItem("rd-mesa-correo", email); } catch {}
     try {
@@ -1994,6 +2015,7 @@ function Resumenes({ clave }: { clave: string }) {
     finally { setEnviando(false); }
   };
   const quitar = async (id: number) => {
+    if (demo) { setLista((l) => l.filter((x) => x.id !== id)); return; }
     await fetch("/api/mesa/resumenes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ k: clave, accion: "borrar", id }) }).catch(() => {});
     cargar();
   };
@@ -2022,7 +2044,7 @@ function Resumenes({ clave }: { clave: string }) {
       {!temas.length && <p className="mt-2 text-[14px] text-[#a3505a]">Elige al menos un tema para poder programarlo.</p>}
       <p className="mt-4 text-[13.5px] font-semibold uppercase tracking-[0.1em] text-ink/60">3. A qué correo</p>
       <form className="mt-1.5 flex flex-wrap gap-2" onSubmit={(e) => { e.preventDefault(); enviarlo(); }}>
-        <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@correo.es" className="min-h-[46px] min-w-0 flex-1 rounded-full border border-line bg-cream px-4 text-[16px] outline-none focus:border-ink" />
+        <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@correo.es" className="min-h-[46px] min-w-[200px] flex-1 rounded-full border border-line bg-cream px-4 text-[16px] outline-none focus:border-ink" />
         <button type="submit" disabled={enviando || !temas.length || !email} className="min-h-[46px] rounded-full bg-yellow px-5 text-[15px] font-semibold text-ink disabled:opacity-50">{enviando ? "Un momento…" : frec === "ahora" ? "Enviármelo ahora" : "Programarlo"}</button>
       </form>
       {estado && <p className={`mt-2 text-[14px] ${estado.ok ? "text-[#1d6a42]" : "text-[#a3505a]"}`}>{estado.t}</p>}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Mesa from '@/components/mesa/Mesa';
-import { datosDemo } from '@/lib/mesa/demo';
-import { panelDemo, hoyMadrid } from '@/lib/mesa/panel';
+import { datosDemo } from '@/lib/mesaDemo';
+import { panelDemo, hoyMadrid } from '@/lib/panelDemo';
 import '@fontsource/lora/latin-400-italic.css';
 import '@fontsource/lora/latin-500-italic.css';
 import '@fontsource/lora/latin-500.css';

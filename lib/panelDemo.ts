@@ -1,5 +1,5 @@
-import { datosDemo, detalleDemo } from "@/lib/mesa/demo";
-import type { Modulo, Reloj, Tarea, Resumen, Luz } from "@/lib/mesa/tipos";
+import { datosDemo, detalleDemo } from "@/lib/mesaDemo";
+import type { Modulo, Reloj, Tarea, Resumen, Luz } from "@/lib/mesaTipos";
 
 /* El cerebro de la mesa de DEMOSTRACIÓN de Tierno Centella (sobre lib/panelCliente.ts de Reformadísimo, el modelo):
    convierte los datos de ejemplo de los últimos 28 días en las cinco partes, las cuatro cifras, las tareas y la

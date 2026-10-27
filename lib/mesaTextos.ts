@@ -1,6 +1,6 @@
 /* ── Textos y colores compartidos de la mesa de control (27-oct, cl·v904) ──
    Un solo sitio para las palabras que ven las socias, de modo que la mesa, el panel y los correos
-   digan siempre lo mismo. Copia adaptada de la mesa de Reformadísimo, el modelo. Sin importaciones de servidor: lo usa también el navegador. */
+   digan siempre lo mismo. Sin importaciones de servidor: lo usa también el navegador. */
 
 export type Luz = "verde" | "ambar" | "rojo" | "gris" | "azul";
 
