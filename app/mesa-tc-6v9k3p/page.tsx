@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Mesa from '@/components/mesa/Mesa';
+import ChivatoMesa from '@/components/mesa/ChivatoMesa';
 import { datosDemo } from '@/lib/mesaDemo';
 import { panelDemo, hoyMadrid } from '@/lib/panelDemo';
 import '@fontsource/lora/latin-400-italic.css';
@@ -25,6 +26,7 @@ export default function Page() {
     <>
       <style>{'body > *:not(main){display:none!important} main#contenido{padding:0!important;margin:0!important;max-width:none!important} main#contenido > *:not(#mesa-rd):not(style){display:none!important}'}</style>
       <div id="mesa-rd">
+        <ChivatoMesa />
         <div style={{ background: "#1a3d47", color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 14 }}>
           Demostración de tu mesa de control con <b>cifras de ejemplo</b>. Lo público del despacho es real.
         </div>

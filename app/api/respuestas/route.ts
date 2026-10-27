@@ -16,7 +16,7 @@ function caja(titulo: string, cuerpo: string, enlace: string, boton = 'Abrir la 
   );
 }
 
-type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas' | 'tiempo' | 'web' | 'web-tiempo' | 'nota'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
+type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas' | 'tiempo' | 'web' | 'web-tiempo' | 'nota' | 'mesa' | 'mesa-tiempo'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
 
 const WEB = 'https://tierno-centella-web.vercel.app';
 
@@ -33,6 +33,37 @@ function preparar(a: Aviso, donde = '', robot = '') {
         'Abrir la lupa',
       ),
       texto: `Nota de ${a.reaccion} sobre ${pagina}: ${a.texto}`,
+    };
+  }
+  if (a.tipo === 'mesa') {
+    const quien = a.reaccion === 'guia' ? 'Jesús (o alguien del despacho)' : 'Alguien';
+    const nota = a.reaccion === 'guia' ? '<p>Es el mismo navegador que ya abrió la guía, así que casi seguro es Jesús o alguien de su despacho.</p>' : '<p>Este navegador no ha abierto la guía: puede ser alguien del despacho al que se la han pasado, o Jesús desde otro aparato.</p>';
+    return {
+      asunto: `Tierno Centella: ${quien} ha abierto la mesa de control (${a.dispositivo ?? 'dispositivo'}${donde ? `, ${donde.split(' · ')[0]}` : ''}, ${hora})${robot}`,
+      html: caja(
+        `${quien} ha abierto la mesa de control`,
+        `<p>Desde el <b>${esc(a.dispositivo ?? '')}</b>, el ${hora}, <b>${esc(a.texto ?? '')}</b>.</p>${donde ? `<p>Desde: <b>${esc(donde)}</b></p>` : ''}<p>${a.seccion === 'primera' ? 'Es la <b>primera vez</b> que abre la mesa en este navegador: le sale la guía amarilla de 9 pasos.' : 'Ya había abierto la mesa antes en este navegador.'}</p>${nota}<p style="color:#3b5168">Cuando se vaya llegará otro correo con el tiempo que ha estado y, en orden, todo lo que ha pulsado. Avisa una vez cada 30 minutos por navegador; si has sido tú, abre la mesa una vez con <b>?yo=1</b> al final de la dirección.</p>`,
+        `${WEB}/mesa-tc-6v9k3p`,
+        'Abrir la mesa',
+      ),
+      texto: `${quien} ha abierto la mesa de control (${a.dispositivo}), ${hora}, ${a.texto}.${donde ? ` Desde: ${donde}.` : ''}`,
+    };
+  }
+  if (a.tipo === 'mesa-tiempo') {
+    const seg = Number(a.reaccion) || 0;
+    const dura = seg >= 60 ? `${Math.floor(seg / 60)} min ${seg % 60} s` : `${seg} s`;
+    const filas = (a.texto ?? '').split('\n').filter(Boolean);
+    return {
+      asunto: `Tierno Centella: han estado ${dura} en la mesa de control (${filas.length} ${filas.length === 1 ? 'acción' : 'acciones'}${donde ? `, ${donde.split(' · ')[0]}` : ''})${robot}`,
+      html: caja(
+        `Han estado ${dura} en la mesa de control`,
+        `<p>Desde el <b>${esc(a.dispositivo ?? '')}</b>, hasta las ${hora}. Ha bajado hasta el <b>${esc(a.seccion ?? '0')} %</b> de la página.</p>${donde ? `<p>Desde: <b>${esc(donde)}</b></p>` : ''}` +
+          `<p style="margin-bottom:6px"><b>Qué ha hecho, en orden</b> (el minuto es el tiempo que llevaba con la mesa delante):</p><ol style="margin-top:0">${filas.map((f) => `<li>${esc(f)}</li>`).join('')}</ol>` +
+          `<p style="color:#3b5168;font-size:13px">Solo cuenta el tiempo con la mesa delante. Si sigue, llegará otro resumen con el total.</p>`,
+        `${WEB}/guia-jesus/lectura`,
+        'Ver la lupa',
+      ),
+      texto: `Han estado ${dura} en la mesa de control, hasta el ${a.seccion} %. ${filas.join('; ')}`,
     };
   }
   if (a.tipo === 'web') {
@@ -142,7 +173,7 @@ export async function POST(req: Request) {
   let aviso: Aviso;
   try {
     const cuerpo = await req.json();
-    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario', 'tiempo', 'web', 'web-tiempo', 'nota'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
+    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario', 'tiempo', 'web', 'web-tiempo', 'nota', 'mesa', 'mesa-tiempo'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
     for (const k of ['dispositivo', 'seccion', 'id', 'reaccion', 'texto'] as const) if (aviso[k] != null) aviso[k] = String(aviso[k]).slice(0, k === 'texto' ? 20000 : 200);
   } catch {
     return Response.json({ ok: false }, { status: 400 });
@@ -158,7 +189,7 @@ export async function POST(req: Request) {
   // Fuera de España casi siempre es un sistema de seguridad del correo que abre el enlace para revisarlo.
   const pais = req.headers.get('x-vercel-ip-country') ?? '';
   const robot = pais && pais !== 'ES' ? ' [fuera de España: probablemente un robot]' : '';
-  const conLugar = ['visita', 'tiempo', 'web', 'web-tiempo'].includes(aviso.tipo);
+  const conLugar = ['visita', 'tiempo', 'web', 'web-tiempo', 'mesa', 'mesa-tiempo'].includes(aviso.tipo);
   // Las entradas desde fuera de España (robots de seguridad del correo) no se avisan por correo: quedan solo en la lupa.
   if (robot && conLugar) return Response.json({ ok: true, omitido: 'fuera-de-espana' });
   const { asunto, html, texto } = preparar(aviso, conLugar ? donde : '', conLugar ? robot : '');
@@ -166,7 +197,7 @@ export async function POST(req: Request) {
     method: 'POST',
     headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: aviso.tipo.startsWith('web') || aviso.tipo === 'nota' ? 'Web de Jesús (Tierno Centella) <guia@send.miestela.app>' : process.env.RESPUESTAS_DE || 'Guía de Jesús (Tierno Centella) <guia@send.miestela.app>',
+      from: aviso.tipo.startsWith('mesa') ? 'Mesa de Jesús (Tierno Centella) <guia@send.miestela.app>' : aviso.tipo.startsWith('web') || aviso.tipo === 'nota' ? 'Web de Jesús (Tierno Centella) <guia@send.miestela.app>' : process.env.RESPUESTAS_DE || 'Guía de Jesús (Tierno Centella) <guia@send.miestela.app>',
       to: [para],
       subject: asunto,
       html,
