@@ -16,12 +16,25 @@ function caja(titulo: string, cuerpo: string, enlace: string, boton = 'Abrir la 
   );
 }
 
-type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas' | 'tiempo' | 'web' | 'web-tiempo'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
+type Aviso = { tipo: 'visita' | 'reaccion' | 'comentario' | 'respuestas' | 'tiempo' | 'web' | 'web-tiempo' | 'nota'; dispositivo?: string; seccion?: string; id?: string; reaccion?: string; texto?: string };
 
 const WEB = 'https://tierno-centella-web.vercel.app';
 
 function preparar(a: Aviso, donde = '', robot = '') {
   const hora = new Intl.DateTimeFormat('es-ES', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(new Date());
+  if (a.tipo === 'nota') {
+    const pagina = a.seccion || '/';
+    return {
+      asunto: `Nota para Claude (lupa de Tierno Centella): ${pagina}`,
+      html: caja(
+        `Nota de ${esc(a.reaccion || 'Jesús')} sobre la web`,
+        `<p>Página: <b>${esc(pagina)}</b> (${esc(a.id === 'ordenador' ? 'viendo la versión de ordenador' : 'viendo la versión de móvil')}), el ${hora}.</p><p style="font-size:16px;background:#fdf5e1;border-left:4px solid #f2c14e;padding:12px 14px;white-space:pre-wrap">${esc(a.texto ?? '')}</p><p style="color:#3b5168;font-size:13px">Para trabajarla, en el chat del proyecto: "mira las notas de la lupa".</p>`,
+        `${WEB}/guia-jesus/mapa-calor`,
+        'Abrir la lupa',
+      ),
+      texto: `Nota de ${a.reaccion} sobre ${pagina}: ${a.texto}`,
+    };
+  }
   if (a.tipo === 'web') {
     const quien = a.reaccion === 'guia' ? 'Jesús (o alguien del despacho)' : 'Alguien';
     const nota = a.reaccion === 'guia' ? '<p>Es el mismo navegador que ya abrió la guía, así que casi seguro es Jesús o alguien de su despacho.</p>' : '<p>Este navegador no ha abierto la guía: puede ser alguien del despacho al que se la han pasado, o cualquier otra persona.</p>';
@@ -129,12 +142,12 @@ export async function POST(req: Request) {
   let aviso: Aviso;
   try {
     const cuerpo = await req.json();
-    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario', 'tiempo', 'web', 'web-tiempo'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
+    aviso = { ...cuerpo, tipo: ['visita', 'reaccion', 'comentario', 'tiempo', 'web', 'web-tiempo', 'nota'].includes(cuerpo?.tipo) ? cuerpo.tipo : 'respuestas' };
     for (const k of ['dispositivo', 'seccion', 'id', 'reaccion', 'texto'] as const) if (aviso[k] != null) aviso[k] = String(aviso[k]).slice(0, k === 'texto' ? 20000 : 200);
   } catch {
     return Response.json({ ok: false }, { status: 400 });
   }
-  if (['respuestas', 'comentario'].includes(aviso.tipo) && (aviso.texto ?? '').trim().length < 2) return Response.json({ ok: false }, { status: 400 });
+  if (['respuestas', 'comentario', 'nota'].includes(aviso.tipo) && (aviso.texto ?? '').trim().length < 2) return Response.json({ ok: false }, { status: 400 });
   // Ciudad aproximada (la da Vercel) y aparato, para distinguir si quien abre es Jesús o Ignacio.
   const ciudad = decodeURIComponent(req.headers.get('x-vercel-ip-city') ?? '');
   const region = decodeURIComponent(req.headers.get('x-vercel-ip-country-region') ?? '');
@@ -153,7 +166,7 @@ export async function POST(req: Request) {
     method: 'POST',
     headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: aviso.tipo.startsWith('web') ? 'Web de Jesús (Tierno Centella) <guia@send.miestela.app>' : process.env.RESPUESTAS_DE || 'Guía de Jesús (Tierno Centella) <guia@send.miestela.app>',
+      from: aviso.tipo.startsWith('web') || aviso.tipo === 'nota' ? 'Web de Jesús (Tierno Centella) <guia@send.miestela.app>' : process.env.RESPUESTAS_DE || 'Guía de Jesús (Tierno Centella) <guia@send.miestela.app>',
       to: [para],
       subject: asunto,
       html,

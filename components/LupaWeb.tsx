@@ -13,7 +13,16 @@ import { usePathname } from 'next/navigation';
 import { enviarLupa } from './Lupa';
 
 const FUERA = /^\/(guia-jesus|crm|consulta)(\/|$)/;
+// Dentro de la lupa (la web metida en un iframe propio) no se graba ni se avisa: quien mira el visor no ensucia los datos.
+const enMarco = () => {
+  try {
+    return window.self !== window.top;
+  } catch {
+    return true;
+  }
+};
 const esYo = () => {
+  if (enMarco()) return true;
   try {
     return !!localStorage.getItem('tc-guia-yo');
   } catch {
@@ -54,7 +63,7 @@ export default function LupaWeb() {
 
   // Tiempo en cada página.
   useEffect(() => {
-    if (FUERA.test(ruta)) return;
+    if (FUERA.test(ruta) || enMarco()) return;
     let ultimaAccion = Date.now();
     let segundos = 0;
     let pendiente = 0;

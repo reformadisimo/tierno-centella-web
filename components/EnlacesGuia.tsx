@@ -120,6 +120,21 @@ export function BloquePanelEnlace() {
   );
 }
 
+export function BloqueLupaEnlace() {
+  return (
+    <div className="ew">
+      <a className="ew-grande" href="/guia-jesus/mapa-calor" target="_blank" rel="noopener">
+        <span>
+          <small>Demostración · datos de ejemplo sobre tu propia web</small>
+          <strong>Abrir la lupa de tu web</strong>
+          <em>Dónde toca la gente, lo que toca y no funciona, hasta dónde baja y las conclusiones. Prueba también a dejarnos una nota. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
+    </div>
+  );
+}
+
 export function BloqueCrmEnlace() {
   return (
     <div className="ew">

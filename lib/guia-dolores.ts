@@ -158,6 +158,18 @@ export const DOLORES: Dolor[] = [
     ancla: '19',
   },
   {
+    titulo: 'No sabes qué hace la gente en tu web',
+    icono: 'M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',
+    hoyDato: 'A ciegas',
+    hoy: 'no sabes dónde tocan, hasta dónde bajan ni dónde se van',
+    luegoDato: 'La lupa',
+    luego: 'ves cada toque y cada abandono, y la web mejora cada mes',
+    visto: 'Hoy no hay ninguna herramienta que te diga qué hace la gente dentro de tu web: si encuentra el botón de llamar, si toca algo que no funciona o si se va a los diez segundos.',
+    cuesta: 'Sin verlo, cualquier cambio en la web es una apuesta. Y los fallos que hacen perder clientes (un botón que nadie ve, una foto que parece un enlace) siguen ahí meses sin que nadie se entere.',
+    ayudamos: 'Ya tienes preparada tu lupa: un mapa de calor sobre tu propia web, con conclusiones escritas y la opción de dejarnos notas en el sitio exacto. Miramos, cambiamos una cosa y volvemos a medir.',
+    ancla: '19 ter',
+  },
+  {
     titulo: 'No sabes dónde va cada euro que inviertes',
     icono: 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6',
     hoyDato: 'A ciegas',

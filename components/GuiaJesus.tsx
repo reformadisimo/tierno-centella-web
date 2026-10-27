@@ -3,7 +3,7 @@
 import FotoVideo from './FotoVideo';
 import ProgresoGuia from './ProgresoGuia';
 import { DOLORES } from '@/lib/guia-dolores';
-import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace } from './EnlacesGuia';
+import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace, BloqueLupaEnlace } from './EnlacesGuia';
 import RedesHoyLuego, { GoogleNombre } from './RedesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
@@ -335,6 +335,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'mock-correos': MockupCorreos,
   'correos-enlace': BloqueCorreosEnlace,
   'panel-enlace': BloquePanelEnlace,
+  'lupa-enlace': BloqueLupaEnlace,
   'crm-enlace': BloqueCrmEnlace,
   'redes-hoy-luego': RedesHoyLuego,
   'google-nombre': GoogleNombre,
@@ -377,9 +378,12 @@ function Contenido({ html }: { html: string }) {
 }
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
-// Vacía hasta que Jesús entre por primera vez: su primera visita le enseña la bienvenida, no novedades.
-const VERSION = 12;
-const NOVEDADES: { texto: string; clave: string }[] = [];
+// Jesús entró por primera vez el 26 de octubre de 2026 (versión 12): desde entonces, cada novedad se le cuenta al entrar.
+const VERSION = 13;
+const NOVEDADES: { texto: string; clave: string }[] = [
+  { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter' },
+  { texto: 'Tu cuenta de X lleva parada desde 2020: qué ve quien la abre y cómo la pondríamos al día.', clave: '6' },
+];
 
 function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
   const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades'>('');

@@ -20,7 +20,7 @@ Y además va a menos: en dos meses has perdido el 38 % de esas visitas (de 384 
 
 ### Lo que hemos visto, y cómo te ayudamos
 
-Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son dieciséis cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
+Te lo contamos con cariño y con datos, como lo haríamos con un amigo: **nada de esto es grave y todo tiene arreglo**. Son diecisiete cosas que hoy te están costando clientes o dinero sin que se note, y en las que podemos ayudarte mucho. Algunas ya las hemos resuelto en la web nueva.
 
 [[dolor]]
 
@@ -1198,6 +1198,37 @@ Lo normal es que una agencia haga una web o una página para anuncios, la entreg
 **Todo conectado, también lo que se habla**: además de los mapas de calor, las campañas y el SEO, tenemos **cada conversación del chat** guardada en tu base de datos. Sabemos qué preocupa a la gente con sus propias palabras, y lo usamos para mejorar la web, los anuncios y el seguimiento. No semana a semana: **cada día**. Es un servicio que no hemos visto en ninguna otra agencia, y te lo ofrecemos con cariño, porque es la única forma que conocemos de avanzar de verdad.
 
 **Una visión 360 y al momento**: todo conectado, todo medido y cada cambio hecho el mismo día. No hemos encontrado ninguna agencia, ni en Madrid ni en España, que ofrezca un servicio así a un despacho como el tuyo.
+
+## 19 ter. La lupa: vemos lo que hace la gente en tu web
+
+> **No vamos a ciegas.** Hoy, cuando alguien entra en tu web, no sabes qué hace: si baja, si encuentra el botón de llamar, si toca algo que no funciona o si se va a los diez segundos. Con la lupa **lo vemos todo**, página a página, y cambiamos la web según lo que hace la gente de verdad, no según lo que nos imaginamos.
+
+**Qué es.** Un mapa de calor propio, hecho por nosotros, que se pinta encima de tu propia web. Lo hemos montado ya para ti y puedes probarlo ahora, con datos de ejemplo:
+
+[[lupa-enlace]]
+
+**Qué ves en él**:
+
+- **Dónde toca la gente**: las zonas más tocadas se ven en rojo y las menos, en azul. Ves de un vistazo qué botones funcionan y cuáles nadie pulsa.
+- **Lo que tocan y no hace nada**: un punto rojo cada vez que alguien pulsa algo creyendo que es un botón y no pasa nada. Es de lo más útil que hay, porque te dice qué espera la gente.
+- **Hasta dónde baja**: la página se oscurece según se va quedando gente por el camino, con el porcentaje que llega a cada parte. "Solo el 13 % llega aquí" se entiende sin explicaciones.
+- **De dónde vienen y adónde van**: desde Google, desde un anuncio o desde tus redes, y qué página ven después.
+- **Las conclusiones, ya escritas**: arriba, en una línea, cuántas hay y lo fiables que son. Con menos de 100 visitas son **pistas**; hasta 1.000, **tendencias**; y desde 1.000, **firmes**. Se abren con el botón amarillo "Ver" y cada una dice qué pasa, qué haríamos y te lleva al sitio exacto de la web.
+
+**Ejemplos de cómo nos ayuda a mejorar**:
+
+- **¿Para qué una página que no se acaba nunca, si casi nadie llega al final?** En el ejemplo del blog, solo el 2 % baja hasta abajo. Lo que haya al final no lo ve nadie, así que subimos lo importante y acortamos.
+- **Una foto que todos tocan creyendo que es un enlace.** La convertimos en enlace, y la gente llega a donde quería.
+- **El botón de llamar, demasiado abajo en el móvil.** Si la mayoría no llega hasta él, lo subimos. Y medimos si ahora llaman más.
+- **Una página por la que entra mucha gente desde Google y se va sin ver nada más.** Le ponemos un siguiente paso claro: el test, la calculadora o el chat.
+
+**El ciclo es siempre el mismo**: mirar, cambiar una sola cosa y volver a medir. Así la web mejora cada mes con datos, y lo ves tú en la lupa y en tu panel.
+
+**Y nos puedes dejar notas en el sitio exacto.** A la derecha de la lupa hay un recuadro amarillo, "Notas para nosotros". Escribes lo que quieres cambiar, pulsas "Señalar un sitio en la página", tocas el sitio exacto en la web y queda una chincheta amarilla. **Nos llega al momento**, con la página y el sitio, y lo hacemos. Cuando esté hecho, la tachas.
+
+**Respetando la privacidad**: solo se mide a quien acepta las cookies de medición, **nunca se guarda lo que la gente escribe** (solo qué toca), no hay datos personales y todo se borra solo a los 90 días.
+
+**Cuándo lo tendrás con datos de verdad**: en cuanto publiquemos la web nueva y empiecen a llegar visitas. Lo completamos con Microsoft Clarity (grabaciones anónimas de las visitas y los clics de rabia), que se activa con tus accesos. Va incluido en la cuota.
 
 ## 20. El logo, refinado (no sustituido)
 

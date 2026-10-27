@@ -62,6 +62,8 @@ function cargarClarity() {
 export default function Medicion() {
   useEffect(() => {
     const revisar = () => {
+      // Dentro de la lupa (iframe propio) no se carga Clarity ni Tag Manager: no ensuciar los datos.
+      if (window.self !== window.top) return;
       const e = leerEleccion();
       if (e?.analitica) cargarClarity();
       if (e?.analitica || e?.publicidad) cargarGtm(!!e.analitica, !!e.publicidad);
