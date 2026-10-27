@@ -1,6 +1,7 @@
 // Mockups en móvil para la guía de Jesús: "hoy" frente a "con nosotros", para verlo de un vistazo sin leer.
 // Las reseñas y los mensajes son ejemplos (lo dice cada pie); las cifras son las de la guía.
 import { Logo } from './LogosGuia';
+import { OpinionTarjeta } from './OpinionGoogle';
 
 function Movil({ titulo, children, tono }: { titulo: string; children: React.ReactNode; tono: 'mal' | 'bien' }) {
   return (
@@ -239,7 +240,7 @@ export function MockupInforme() {
 export function MockupResenaWhatsApp() {
   return (
     <div className="gm-rejilla">
-      <Movil tono="bien" titulo="Al cerrar el asunto le llega esto, desde el número del despacho. Un toque en el enlace y ya está escribiendo. (Mensaje de ejemplo.)">
+      <Movil tono="bien" titulo="1. El WhatsApp, desde el número del despacho y con tu aprobación. El enlace es vuestro y se ve con vuestro logo. (Cliente de ejemplo.)">
         <div className="mk-whatsapp">
           <p className="mk-wa-barra">
             <b className="lg-barra">
@@ -247,39 +248,55 @@ export function MockupResenaWhatsApp() {
             </b>
             <small>cuenta de empresa</small>
           </p>
-          <p className="mk-burbuja mk-wa-yo">
-            Hola, María. Soy Jesús Tierno. Gracias por confiar en nosotros estos meses. Si tienes un minuto, tu opinión en Google ayuda mucho a otras
-            personas que están pasando por lo mismo. Te dejo el enlace directo:
-          </p>
-          <div className="mk-wa-enlace">
-            <Logo nombre="Ficha de Google" tam={28} />
-            <span>
-              <b>Tierno Centella Abogados</b>
-              <small>Escribe una reseña en Google</small>
-            </span>
-          </div>
-          <p className="mk-burbuja mk-wa-ella">¡Claro que sí! Ahora mismo.</p>
-        </div>
-      </Movil>
-      <Movil tono="bien" titulo="Y en tu ficha: su reseña, contestada con tu visto bueno. Así se ve un despacho que cuida a sus clientes. (Ejemplo.)">
-        <>
-          <p className="mk-ficha-nombre lg-barra">
-            <Logo nombre="Ficha de Google" tam={22} /> Tierno Centella Abogados
-          </p>
-          <p className="mk-ficha-nota">
-            <b>4,5</b> <Estrellas n={5} /> <small>(90)</small>
-          </p>
-          <div className="mk-resena">
-            <p className="mk-resena-cabeza">
-              <b>María · hace 2 horas</b> <Estrellas n={5} />
-            </p>
-            <p className="mk-resena-texto">&quot;Me sentí escuchada desde el primer día y me explicaron cada paso. Muy agradecida.&quot;</p>
-            <div className="mk-respuesta">
-              <b>Respuesta del propietario</b>
-              <p>Muchas gracias, María. Nos alegra mucho haberte acompañado. Un abrazo de todo el equipo.</p>
+          <div className="mk-wa-vista">
+            <div className="mk-wa-vista-tarjeta">
+              <img src="/img/opinion-og.png" alt="" width={58} height={30} />
+              <span>
+                <b>¿Nos ayuda con su opinión?</b>
+                <small>Tierno Centella Abogados · Le lleva un minuto.</small>
+                <i>tiernocentella.es/opinion</i>
+              </span>
             </div>
           </div>
-        </>
+          <p className="mk-burbuja mk-wa-yo">
+            Hola, María. Le escribe Jesús Tierno, de Tierno Centella Abogados. Gracias por confiar en nosotros. Si lo considera oportuno, nos ayudaría mucho una
+            breve opinión sobre la atención recibida. Le lleva un minuto y es con este enlace: <u>tiernocentella.es/opinion</u>. Muchas gracias de antemano.
+          </p>
+          <p className="mk-burbuja mk-wa-ella">Claro, ahora mismo.</p>
+        </div>
+      </Movil>
+      <Movil tono="bien" titulo="2. O el correo, el mismo día que se cierra el asunto: un botón verde y tres pasos. (Cliente de ejemplo.)">
+        <div className="mk-correo">
+          <p className="mk-correo-cabeza">
+            De: <b>Tierno Centella Abogados</b>
+            <br />
+            Asunto: <b>Una petición breve, si le parece bien</b>
+          </p>
+          <div className="mk-correo-cuerpo">
+            <img src="/img/logo-tc.webp" alt="" width={112} height={27} />
+            <p className="mk-c-gracias">Gracias por confiar en nosotros</p>
+            <h4>
+              ¿Nos ayuda con su <span>opinión</span>?
+            </h4>
+            <p>Hola, María. Si lo considera oportuno, una breve opinión sobre la atención recibida nos ayudaría mucho. Le lleva un minuto.</p>
+            <span className="mk-c-boton">Dejar mi opinión</span>
+            <p className="mk-c-enlace">Si el botón no funciona: tiernocentella.es/opinion</p>
+            <ol className="mk-c-pasos">
+              <li>Pulse el botón verde.</li>
+              <li>Marque las estrellas.</li>
+              <li>Escriba una frase y pulse «Publicar».</li>
+            </ol>
+            <p className="mk-c-estrellas" aria-hidden="true">
+              ★★★★★
+            </p>
+            <p>Hace falta tener abierta su cuenta de Google en el móvil (la de Gmail). Si no sabe cómo, responda a este correo o llámenos al 913 24 97 97 y le ayudamos.</p>
+          </div>
+        </div>
+      </Movil>
+      <Movil tono="bien" titulo="3. Y la página a la que llegan: una sola cosa que hacer, con el botón directo a la reseña de tu ficha. (Ábrela abajo.)">
+        <div className="mk-op">
+          <OpinionTarjeta ejemplo />
+        </div>
       </Movil>
     </div>
   );

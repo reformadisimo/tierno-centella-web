@@ -8424,3 +8424,53 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 .as-voz.activo{background:var(--tinta);color:#fff;border-color:var(--tinta)}
 .as-voz:focus-visible{outline:3px solid #f2c14e;outline-offset:2px}
 
+
+/* ── Página /opinion y ejemplos de la guía para pedir reseñas (27-oct-2026) ── */
+.op-fondo { min-height: 100vh; background: var(--papel); padding: 24px 16px 40px; display: flex; justify-content: center; align-items: flex-start; }
+.op-tarjeta { width: 100%; max-width: 440px; background: #fff; border: 1px solid var(--linea); border-radius: 20px; padding: 26px 22px 24px; text-align: center; color: var(--tinta); box-shadow: 0 10px 30px -22px rgba(13, 44, 72, 0.5); }
+.op-logo { display: block; margin: 0 auto 18px; width: 168px; height: auto; }
+.op-gracias { margin: 0 0 4px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1e7b3c; }
+.op-titulo { margin: 0 0 10px; font-weight: 700; font-size: clamp(1.55rem, 6vw, 1.9rem); line-height: 1.15; color: var(--tinta); }
+.op-titulo span { color: #c98a00; }
+.op-texto { margin: 0 auto 12px; max-width: 32ch; font-size: 1.02rem; line-height: 1.5; color: var(--tinta-media); }
+.op-estrellas { margin: 0 0 16px; font-size: 1.9rem; letter-spacing: 0.12em; color: #f2b400; line-height: 1; }
+.op-boton { display: flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 20px; border-radius: 12px; background: #1e8e3e; color: #fff !important; font-size: 1.08rem; font-weight: 700; text-decoration: none; }
+.op-boton:hover { background: #18773a; }
+.op-pendiente { margin: 10px 0 0; padding: 8px 10px; border-radius: 10px; background: var(--marcador-suave); font-size: 0.82rem; line-height: 1.4; color: var(--tinta-media); }
+.op-pasos { list-style: none; counter-reset: paso; margin: 18px 0 0; padding: 0; text-align: left; }
+.op-pasos li { counter-increment: paso; display: flex; align-items: center; gap: 12px; padding: 9px 0; border-top: 1px solid #eef2f6; font-size: 0.98rem; }
+.op-pasos li::before { content: counter(paso); flex: 0 0 auto; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #e8f5ec; color: #1e7b3c; font-weight: 700; font-size: 0.9rem; }
+.op-nota { margin: 14px 0 0; font-size: 0.86rem; line-height: 1.45; color: var(--tinta-suave); }
+.op-nota a { color: var(--marca); font-weight: 700; white-space: nowrap; }
+.op-llamar { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 8px; padding: 0 18px; border: 1.5px solid var(--linea); border-radius: 999px; color: var(--marca); font-weight: 700; text-decoration: none; }
+.mk-op .op-llamar { min-height: 30px; font-size: 0.66rem; padding: 0 10px; }
+.op-firma { margin: 12px 0 0; font-size: 0.95rem; color: var(--tinta); }
+
+/* Ejemplos en la guía: la página dentro del móvil, el correo y la vista previa de WhatsApp */
+.mk-op .op-tarjeta { border: 0; box-shadow: none; padding: 14px 6px 10px; border-radius: 0; }
+.mk-op .op-logo { width: 118px; margin-bottom: 10px; }
+.mk-op .op-titulo { font-size: 1.15rem; }
+.mk-op .op-texto, .mk-op .op-pasos li { font-size: 0.74rem; }
+.mk-op .op-estrellas { font-size: 1.2rem; margin-bottom: 10px; }
+.mk-op .op-boton { min-height: 40px; font-size: 0.82rem; }
+.mk-op .op-gracias, .mk-op .op-pendiente, .mk-op .op-nota, .mk-op .op-firma { font-size: 0.66rem; }
+.mk-op .op-pasos li::before { width: 20px; height: 20px; font-size: 0.68rem; }
+.mk-wa-vista { margin: -2px 0 8px auto; max-width: 88%; background: #dcf8c6; border-radius: 12px; padding: 4px; }
+.mk-wa-vista-tarjeta { display: flex; gap: 8px; align-items: center; background: #fff; border-radius: 9px; padding: 8px; }
+.mk-wa-vista-tarjeta img { width: 58px; height: auto; flex: 0 0 auto; }
+.mk-wa-vista-tarjeta b { display: block; font-size: 0.74rem; color: #0d2c48; line-height: 1.2; }
+.mk-wa-vista-tarjeta small { display: block; font-size: 0.64rem; color: #667781; }
+.mk-wa-vista-tarjeta i { display: block; font-style: normal; font-size: 0.62rem; color: #1a73e8; margin-top: 2px; }
+.mk-correo { background: #fff; margin: -30px -12px -12px; padding: 34px 12px 14px; min-height: 470px; color: #0d2c48; font-family: Arial, Helvetica, sans-serif; }
+.mk-correo-cabeza { font-size: 0.66rem; color: #5c6f82; border-bottom: 1px solid #eef2f6; padding-bottom: 6px; margin: 0 0 10px; line-height: 1.4; }
+.mk-correo-cabeza b { color: #0d2c48; }
+.mk-correo-cuerpo { text-align: center; }
+.mk-correo-cuerpo img { width: 112px; height: auto; margin: 0 auto 8px; display: block; }
+.mk-correo-cuerpo .mk-c-gracias { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1e7b3c; margin: 0 0 2px; }
+.mk-correo-cuerpo h4 { font-size: 1rem; margin: 0 0 6px; line-height: 1.2; }
+.mk-correo-cuerpo h4 span { color: #c98a00; }
+.mk-correo-cuerpo p { font-size: 0.7rem; line-height: 1.45; margin: 0 0 8px; color: #3b5168; }
+.mk-c-boton { display: block; background: #1e8e3e; color: #fff; font-weight: 700; font-size: 0.78rem; border-radius: 9px; padding: 9px; margin: 4px 0 4px; }
+.mk-c-enlace { font-size: 0.6rem !important; color: #1a73e8 !important; }
+.mk-c-pasos { text-align: left; margin: 8px 0; padding: 0 0 0 18px; font-size: 0.68rem; line-height: 1.6; }
+.mk-correo-cuerpo .mk-c-estrellas { color: #f2b400; font-size: 1rem; letter-spacing: 0.1em; margin: 2px 0 6px !important; }

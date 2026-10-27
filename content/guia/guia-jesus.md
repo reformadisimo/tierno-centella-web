@@ -381,28 +381,49 @@ Hoy **ninguna de tus 59 reseñas tiene respuesta**, ni las buenas ni las malas. 
   - Preguntas y respuestas frecuentes (precio, videollamada, plazos).
   - El enlace a la web y a reservar cita, medido para saber cuántas consultas llegan desde la ficha.
 
-### Campañas de WhatsApp para pedir reseñas
+### Lo único que necesitamos: acceso a tu ficha
 
-La forma más sencilla de pasar de 59 a 100 reseñas es **pedirlas en el momento bueno, por el canal que todo el mundo usa**. Un WhatsApp corto, con el enlace directo a tu ficha: un toque y la persona ya está escribiendo su opinión, sin buscar nada.
+Tu ficha de Google (lo que Google llama **Perfil de Empresa**) es lo primero que ve quien te busca, y hoy está quieta: **ninguna de las 59 reseñas tiene respuesta**, la categoría es "Bufete" en vez de "Abogado laboralista" y se le puede sacar mucho más partido. No es culpa de nadie: es trabajo de cada semana, y en un despacho nunca hay tiempo.
+
+Con un acceso de administrador (**tú sigues siendo el propietario** y lo puedes quitar cuando quieras), lo hacemos nosotros, y **va incluido en la cuota, sin coste aparte**:
+
+- **Responder cada reseña en 48 horas**, también las 11 de una estrella, siempre con tu visto bueno antes de publicar.
+- **Publicar novedades cada semana**: un vídeo tuyo, un artículo nuevo, un cambio en la ley que afecta a los trabajadores. Google enseña más las fichas que se mueven.
+- **Fotos nuevas cada mes** del equipo, la recepción y la fachada.
+- **Preguntas y respuestas** con lo que más os preguntan (precio de la consulta, videollamada, plazos).
+- **Ponerla al día**: categoría, servicios, descripción, horario de verano y de agosto.
+- **Pedir reseñas a los clientes**, como ves justo debajo.
+- **Y medirlo**: cada mes, en tu mesa de control, cuántas personas ven la ficha, cuántas llaman y cuántas piden cómo llegar.
+
+Dar el acceso lleva dos minutos; te lo explicamos paso a paso en el apartado 23.
+
+### Cómo te pedimos las reseñas
+
+La ficha es tuya: nosotros preparamos cada mensaje y **tú lo apruebas antes de que salga**. Nada se envía solo, y nunca sin tu visto bueno. Así se vería con un cliente de ejemplo:
 
 [[mock-resena]]
 
+[[opinion-enlace]]
+
 **Cómo funciona**:
 
-1. **Al cerrar cada asunto** (o unos días después de la consulta), sale un WhatsApp desde el número del despacho con el enlace directo para dejar la opinión en Google. Lo preparamos nosotros; tú solo nos dices qué asuntos se han cerrado.
-2. **Un solo recordatorio**, a la semana, a quien no la haya dejado. Ni uno más: no queremos agobiar a nadie.
-3. **Una campaña de arranque** con los clientes de los últimos meses que ya han terminado, para coger ritmo desde el primer mes.
-4. **Un código QR en la recepción** y en el correo después de la consulta (apartado 17), para quien prefiera hacerlo en el momento.
-5. **Medido**: cada mes te decimos cuántos mensajes salieron, cuántas reseñas nuevas llegaron y cómo va la nota.
+1. **Un enlace vuestro**: tiernocentella.es/opinion, en vez del enlace largo de Google. Abre una página con vuestro logo, una pregunta y un botón grande que lleva directo a la ventana para escribir la reseña.
+2. **Por WhatsApp**, desde el número del despacho: un mensaje corto con el saludo, quién escribe, el agradecimiento, el favor y el enlace, que se ve con vuestro logo.
+3. **O por correo**, con el asunto "Una petición breve, si le parece bien": un botón verde, "Dejar mi opinión", y tres pasos por si la persona no está acostumbrada.
+4. **Una tarjeta con código QR** en la recepción y en el correo de cierre del asunto, para quien prefiera hacerlo en el momento.
+5. **Cuándo**: el mismo día que se cierra el asunto, o cuando el cliente os dice que está contento con la atención. Un solo recordatorio, a la semana, y ni uno más.
+6. **Medido**: cada mes te decimos cuántos mensajes salieron, cuántas reseñas nuevas llegaron y cómo va la nota.
 
 **Con cuidado, porque es tu despacho**:
 
-- **A todos los clientes, sin filtrar.** Google prohíbe pedir reseñas solo a los contentos y puede castigar la ficha si lo detecta. La campaña va a todos los que terminan su asunto; como la gran mayoría acaba contenta (44 de cada 59 reseñas ya son de cinco estrellas), la nota sube sola.
-- **Nunca a cambio de nada** (ni descuentos ni regalos): también lo prohíbe Google.
-- **Solo a quien ha aceptado que le escribáis por WhatsApp**, y el mensaje no menciona nunca su asunto, por el secreto profesional.
-- **Desde el número del despacho**, con WhatsApp Business, para que la persona reconozca quién le escribe.
+- **Se pide opinión sobre la atención recibida, nunca sobre el resultado del caso.** Nada de "el mejor despacho" ni nada que suene a promesa.
+- **A todos los clientes, sin filtrar.** Google prohíbe pedir reseñas solo a los contentos y puede castigar la ficha. Por eso las estrellas de la página son solo un adorno: la nota se pone en Google. Como la gran mayoría acaba contenta (44 de cada 59 reseñas ya son de cinco estrellas), la nota sube sola.
+- **Nunca a cambio de nada**: ni descuentos, ni regalos, ni sorteos.
+- **Solo a quien ha aceptado que le escribáis**, nunca con un asunto en curso o con un conflicto abierto, y sin mencionar su asunto, por el secreto profesional. Si alguien prefiere no decir en público que es vuestro cliente, perfecto: se ofrece, no se insiste.
+- **Con usted** en los mensajes, salvo que nos digas lo contrario.
+- **Las reseñas son de quien las escribe.** Si un día queréis usar una en la web o en un anuncio con el nombre de la persona, hace falta su autorización por escrito (artículo 6 del Código Deontológico).
 
-**Lo que puede dar**: si de cada diez clientes que terminan su asunto, tres dejan la reseña, con unos cuatro asuntos cerrados a la semana son unas cinco reseñas nuevas al mes. A ese ritmo, el **4,5 llega en unos seis meses**, la mitad que pidiéndolas de palabra. Son cuentas orientativas: dependen de cuántos asuntos cerréis.
+**Lo que puede dar**: si de cada diez clientes que terminan su asunto, tres dejan la reseña, con unos cuatro asuntos cerrados a la semana son unas cinco reseñas nuevas al mes. A ese ritmo, si las nuevas son de cinco estrellas y no llega ninguna mala, Google enseñará el **4,5 en unos seis meses** (son las cuentas de más arriba), la mitad que pidiéndolas de palabra. Son cuentas orientativas: dependen de cuántos asuntos cerréis.
 
 ### Respuestas listas para copiar y pegar
 

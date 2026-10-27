@@ -172,3 +172,18 @@ export function BloqueRedesEnlace() {
     </div>
   );
 }
+
+export function BloqueOpinionEnlace() {
+  return (
+    <div className="ew">
+      <a className="ew-grande" href="/opinion" target="_blank" rel="noopener">
+        <span>
+          <small>Página de ejemplo · el botón irá a tu ficha cuando nos des acceso</small>
+          <strong>Ver la página que reciben tus clientes</strong>
+          <em>tiernocentella.es/opinion: vuestro logo, una pregunta y un botón grande. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
+    </div>
+  );
+}

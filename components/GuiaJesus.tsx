@@ -3,7 +3,7 @@
 import FotoVideo from './FotoVideo';
 import ProgresoGuia from './ProgresoGuia';
 import { DOLORES } from '@/lib/guia-dolores';
-import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace, BloqueLupaEnlace } from './EnlacesGuia';
+import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace, BloqueLupaEnlace, BloqueOpinionEnlace } from './EnlacesGuia';
 import RedesHoyLuego, { GoogleNombre } from './RedesGuia';
 import ResenasGuia from './ResenasGuia';
 import ProveedoresGuia from './ProveedoresGuia';
@@ -336,6 +336,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   'correos-enlace': BloqueCorreosEnlace,
   'panel-enlace': BloquePanelEnlace,
   'lupa-enlace': BloqueLupaEnlace,
+  'opinion-enlace': BloqueOpinionEnlace,
   'crm-enlace': BloqueCrmEnlace,
   'redes-hoy-luego': RedesHoyLuego,
   'google-nombre': GoogleNombre,
@@ -377,22 +378,30 @@ function Contenido({ html }: { html: string }) {
   );
 }
 
-// Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
-// Jesús entró por primera vez el 26 de octubre de 2026 (versión 12): desde entonces, cada novedad se le cuenta al entrar.
-const VERSION = 15;
-const NOVEDADES: { texto: string; clave: string }[] = [
-  { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19' },
-  { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter' },
-  { texto: 'Tu cuenta de X lleva parada desde 2020: qué ve quien la abre y cómo la pondríamos al día.', clave: '6' },
+// Novedades de la guía: al añadir algo, se sube VERSION y se añade aquí con su versión (v). Cada aviso sale una sola vez:
+// quien entra solo ve las novedades posteriores a su última visita, nunca las que ya vio (petición de Ig, 27-oct-2026).
+// Jesús entró por primera vez el 26 de octubre de 2026 (versión 12). Cuando llegue el aviso de que ha vuelto a entrar,
+// se borran de aquí las que ya ha visto.
+const VERSION = 16;
+const NOVEDADES: { texto: string; clave: string; v: number }[] = [
+  { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 16 },
+  { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19', v: 15 },
+  { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter', v: 14 },
+  { texto: 'Tu cuenta de X lleva parada desde 2020: qué ve quien la abre y cómo la pondríamos al día.', clave: '6', v: 13 },
 ];
 
 function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
   const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades'>('');
+  const [nuevas, setNuevas] = useState<typeof NOVEDADES>([]);
   useEffect(() => {
     try {
       const vista = Number(localStorage.getItem('tc-guia-version') || 0);
+      const pendientes = NOVEDADES.filter((n) => n.v > vista);
       if (vista === 0) setModo('bienvenida');
-      else if (vista < VERSION && NOVEDADES.length) setModo('novedades');
+      else if (pendientes.length) {
+        setNuevas(pendientes);
+        setModo('novedades');
+      }
       localStorage.setItem('tc-guia-version', String(VERSION));
     } catch {}
   }, []);
@@ -446,7 +455,7 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
               Esto es lo último que hemos añadido (pulsa en cada punto para ir directo):
             </p>
             <ul className="gj-novedades">
-              {NOVEDADES.map((n) => (
+              {nuevas.map((n) => (
                 <li key={n.clave}>
                   <a href={`#${idDe(n.clave) ?? ''}`} onClick={cerrar}>
                     {n.texto}
