@@ -125,26 +125,26 @@ export function YSi({ base, demo }: { base: CifrasBase; demo?: boolean }) {
         <Desliza etiqueta="Y el SEO sube en 3 a 6 meses" valor={seo} min={0} max={150} paso={10} texto={seo ? `+${pct(seo)} visitas` : "igual que hoy"} onChange={setSeo} color={C.mercado} />
       </div>
       <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
-        <Cifra t="Consultas al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unas ${num(r.totalHoy)} al mes`} />
-        <Cifra t="Piden cita" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de las consultas`} />
-        <Cifra t="Asuntos" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 encargan`} />
-        <Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por asunto`} />
+        <Cifra t="Contactos al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unos ${num(r.totalHoy)} al mes`} />
+        <Cifra t="Piden primera consulta" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de los contactos`} />
+        <Cifra t="Casos" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 contactos`} />
+        <Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por caso`} />
       </div>
       <p className="mt-3 text-[14.5px] leading-snug text-ink/80">
-        {gasto > 0 ? <>Con <strong>{eur(gasto)}</strong> al mes, cada consulta de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con las consultas que llegan solas: unas <strong>{num(r.organicos)}</strong> al mes. </>}
+        {gasto > 0 ? <>Con <strong>{eur(gasto)}</strong> al mes, cada contacto de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con los contactos que llegan solos: unos <strong>{num(r.organicos)}</strong> al mes. </>}
         {gasto > costeMes * 1.5 && "Ojo: cuanto más inviertes, menos rinde cada euro de más (por eso no sube en línea recta). "}
-        {seo > 0 && (r.ahorro > 50 ? <>Si el SEO sube un {pct(seo)}, podrías bajar los anuncios hasta <strong>{eur(r.gastoNecesario)}</strong> al mes y mantener las consultas de hoy: <strong>{eur(r.ahorro)}</strong> al mes que te ahorras.</> : <>Con el SEO un {pct(seo)} arriba tendrías unas {num(r.organicos)} consultas al mes sin pagar anuncios.</>)}
+        {seo > 0 && (r.ahorro > 50 ? <>Si el SEO sube un {pct(seo)}, podrías bajar los anuncios hasta <strong>{eur(r.gastoNecesario)}</strong> al mes y mantener los contactos de hoy: <strong>{eur(r.ahorro)}</strong> al mes que te ahorras.</> : <>Con el SEO un {pct(seo)} arriba tendrías unos {num(r.organicos)} contactos al mes sin pagar anuncios.</>)}
       </p>
       {base.medicionIncompleta && <p className="mt-2 text-[13.5px] text-[#9a6b00]">La medición de los anuncios está incompleta: estas cifras valen para pensar, no para quitar campañas.</p>}
-      {sinAnuncios && <p className="mt-2 text-[13.5px] text-ink/65">No hay anuncios medidos en estos 28 días, así que uso un supuesto de {eur(cpl)} por consulta (cámbialo abajo).</p>}
+      {sinAnuncios && <p className="mt-2 text-[13.5px] text-ink/65">No hay anuncios medidos en estos 28 días, así que uso un supuesto de {eur(cpl)} por contacto (cámbialo abajo).</p>}
       <button type="button" onClick={() => setVerSupuestos(!verSupuestos)} aria-expanded={verSupuestos} className="mt-3 min-h-[44px] rounded-full border border-line bg-cream px-4 text-[14px] font-semibold text-ink">{verSupuestos ? "Ocultar cómo lo calculo" : "Cómo lo calculo (y cambiar los supuestos)"}</button>
       {verSupuestos && (
         <div className="mt-2 rounded-[14px] bg-cream px-3 py-3 text-[14px] leading-snug text-ink/80">
-          <p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} consultas de anuncios, {num(base.contactos)} consultas en total y {num(base.visitasPedidas)} citas pedidas. Por encima del gasto de hoy, cada euro de más rinde menos (doblar la inversión trae un 57 % más, no el doble). Es una regla general, no una medición tuya.</p>
+          <p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} contactos de anuncios, {num(base.contactos)} contactos en total y {num(base.visitasPedidas)} primeras consultas pedidas. Por encima del gasto de hoy, cada euro de más rinde menos (doblar la inversión trae un 57 % más, no el doble). Es una regla general, no una medición tuya.</p>
           <div className="mt-3 grid gap-3 sm:grid-cols-3">
-            <label className="block text-[13px] font-semibold">De cada 100 consultas, encargan el asunto<input type="number" min={1} max={60} value={tasa} onChange={(e) => setTasa(Math.max(1, Math.min(60, Number(e.target.value) || 1)))} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-white px-3 text-[15px] font-normal" />{tasaReal > 0 ? <span className="font-normal text-ink/55">Tu CRM dice {Math.round(tasaReal * 100)}.</span> : <span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene asuntos de este periodo.</span>}</label>
-            <label className="block text-[13px] font-semibold">Honorarios medios por asunto (€)<input type="number" min={500} step={500} value={ticket} onChange={(e) => setTicket(Math.max(500, Number(e.target.value) || 500))} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-white px-3 text-[15px] font-normal" />{base.ticket ? <span className="font-normal text-ink/55">Media de tu CRM.</span> : <span className="font-normal text-ink/55">Supuesto.</span>}</label>
-            {sinAnuncios && <label className="block text-[13px] font-semibold">Coste por consulta supuesto (€)<input type="number" min={5} step={5} value={cpl} onChange={(e) => setCpl(Math.max(5, Number(e.target.value) || 5))} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-white px-3 text-[15px] font-normal" /></label>}
+            <label className="block text-[13px] font-semibold">De cada 100 contactos, acaban en caso<input type="number" min={1} max={60} value={tasa} onChange={(e) => setTasa(Math.max(1, Math.min(60, Number(e.target.value) || 1)))} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-white px-3 text-[15px] font-normal" />{tasaReal > 0 ? <span className="font-normal text-ink/55">Tu CRM dice {Math.round(tasaReal * 100)}.</span> : <span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene casos de este periodo.</span>}</label>
+            <label className="block text-[13px] font-semibold">Honorarios medios por caso (€)<input type="number" min={500} step={500} value={ticket} onChange={(e) => setTicket(Math.max(500, Number(e.target.value) || 500))} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-white px-3 text-[15px] font-normal" />{base.ticket ? <span className="font-normal text-ink/55">Media de tu CRM.</span> : <span className="font-normal text-ink/55">Supuesto.</span>}</label>
+            {sinAnuncios && <label className="block text-[13px] font-semibold">Coste por contacto supuesto (€)<input type="number" min={5} step={5} value={cpl} onChange={(e) => setCpl(Math.max(5, Number(e.target.value) || 5))} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-white px-3 text-[15px] font-normal" /></label>}
           </div>
         </div>
       )}
@@ -170,7 +170,7 @@ function Retrovisor({ base, cpl }: { base: CifrasBase; cpl: number }) {
         const gasto = sinAnuncios ? 1000 * (1 + mas / 100) : base.coste * (1 + mas / 100);
         const c = contactosCon(gasto, base, cpl);
         const extra = c - (sinAnuncios ? 0 : base.contactosAnuncios);
-        return <p className="mt-2 text-[14.5px] leading-snug text-ink/80">Habrías gastado <strong>{eur(gasto)}</strong> (en vez de {eur(base.coste)}) y, según la regla, habrían llegado unas <strong>{num(extra)} consultas más</strong> ({num(c)} en total de anuncios). Cada una de esas consultas extra te habría costado unos {eur(extra > 0 ? (gasto - base.coste) / extra : 0)}: más caro que las de ahora, porque los primeros euros son siempre los que mejor rinden.</p>;
+        return <p className="mt-2 text-[14.5px] leading-snug text-ink/80">Habrías gastado <strong>{eur(gasto)}</strong> (en vez de {eur(base.coste)}) y, según la regla, habrían llegado unos <strong>{num(extra)} contactos más</strong> ({num(c)} en total de anuncios). Cada uno de esos contactos extra te habría costado unos {eur(extra > 0 ? (gasto - base.coste) / extra : 0)}: más caro que los de ahora, porque los primeros euros son siempre los que mejor rinden.</p>;
       })()}
     </div>
   );
@@ -179,14 +179,14 @@ function Retrovisor({ base, cpl }: { base: CifrasBase; cpl: number }) {
 /* ───────────────────────── 2) Tu meta, tu sueño ───────────────────────── */
 type Meta = { id: string; tipo: string; cifra: number; plazo: number; texto: string; creada: string; linea?: string };
 const TIPOS: Record<string, { t: string; unidad: string; icono: string; color: string }> = {
-  obras: { t: "Asuntos nuevos al año", unidad: "asuntos", icono: "documento", color: C.ventas },
+  obras: { t: "Casos nuevos al año", unidad: "casos", icono: "documento", color: C.ventas },
   factura: { t: "Facturación al año", unidad: "€", icono: "moneda", color: C.dinero },
-  contactos: { t: "Consultas al mes", unidad: "consultas", icono: "persona", color: C.web },
-  ticket: { t: "Honorarios medios por asunto", unidad: "€ por asunto", icono: "estrella", color: C.camino },
+  contactos: { t: "Contactos al mes", unidad: "contactos", icono: "persona", color: C.web },
+  ticket: { t: "Honorarios medios por caso", unidad: "€ por caso", icono: "estrella", color: C.camino },
   otro: { t: "Otra cosa", unidad: "", icono: "rayo", color: C.ia },
 };
 
-export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPublico, lineas = [], capacidadTexto = "¿Cuántos asuntos puedes llevar al mes?" }: { base: CifrasBase; demo?: boolean; nombreEmpresa?: string; notaPublico?: string; lineas?: string[]; capacidadTexto?: string }) {
+export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPublico, lineas = [], capacidadTexto = "¿Cuántos casos puedes llevar al mes?" }: { base: CifrasBase; demo?: boolean; nombreEmpresa?: string; notaPublico?: string; lineas?: string[]; capacidadTexto?: string }) {
   const [metas, setMetas] = useState<Meta[]>([]);
   const [tipo, setTipo] = useState("obras");
   const [cifra, setCifra] = useState("");
@@ -216,8 +216,8 @@ export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPubl
       return {
         titulo: esSueno ? "Hoy es un sueño. Vamos a darle forma." : veces <= 1.2 ? "Objetivo a mano" : veces <= 3 ? "Objetivo ambicioso: se consigue cambiando de público" : "Un sueño grande: otro despacho dentro del tuyo",
         lineas: [
-          `Hoy cada asunto deja de media ${eur(hoy)} de honorarios${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene asuntos de este periodo)" : " (según tu CRM)"}. Quieres asuntos de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`,
-          "Esto no se consigue con más anuncios: se consigue hablando a otro cliente. Haría falta una página pensada para empresas o asuntos de más cuantía (otro tono, casos tipo inventados, el equipo y el método), presencia en Google y en las IA para esas búsquedas, artículos que demuestren criterio y una prueba A/B que mida si responde.",
+          `Hoy cada caso deja de media ${eur(hoy)} de honorarios${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene casos de este periodo)" : " (según tu CRM)"}. Quieres casos de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`,
+          "Esto no se consigue con más anuncios: se consigue hablando a otro cliente. Haría falta una página pensada para empresas o casos de más cuantía (otro tono, casos tipo inventados, el equipo y el método), presencia en Google y en las IA para esas búsquedas, artículos que demuestren criterio y una prueba A/B que mida si responde.",
           "Puedes tener las dos cosas a la vez: seguir atendiendo a quien te consulta hoy y dirigirte también a ese otro cliente. Dinos qué reparto quieres (por ejemplo, 80 y 20) y lo montamos por separado para que cada público vea lo suyo.",
           veces > 3 ? "Con una diferencia tan grande, lo honesto es decirte que es casi otro despacho: se puede intentar, pero lleva meses y un presupuesto propio. Mejor empezar con un escalón intermedio." : "En 3 a 6 meses se puede saber si ese público responde; con un escalón intermedio el camino es más corto.",
           ...(notaPublico ? [notaPublico] : []),
@@ -231,7 +231,7 @@ export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPubl
         titulo: "Hoy es un sueño. Vamos a convertirlo en objetivo.",
         lineas: [
           "Un objetivo tiene cifra y plazo; un sueño todavía no. Ponle los dos y te decimos cuánto costaría llegar.",
-          m.tipo !== "otro" ? `Para que te sitúes: al ritmo de hoy vas a ${u(hoyAno)}${m.tipo === "contactos" ? "" : " al año"}${ritmo.supuestoTasa && m.tipo !== "contactos" ? " (suponiendo que 8 de cada 100 consultas acaban en asunto, porque tu CRM aún no tiene asuntos de este periodo)" : ""}.` : "Cuéntanoslo con tus palabras y lo convertimos juntos en algo medible.",
+          m.tipo !== "otro" ? `Para que te sitúes: al ritmo de hoy vas a ${u(hoyAno)}${m.tipo === "contactos" ? "" : " al año"}${ritmo.supuestoTasa && m.tipo !== "contactos" ? " (suponiendo que 8 de cada 100 contactos acaban en caso, porque tu CRM aún no tiene casos de este periodo)" : ""}.` : "Cuéntanoslo con tus palabras y lo convertimos juntos en algo medible.",
         ],
       };
     }
@@ -242,14 +242,14 @@ export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPubl
     const extraAnuncios = base.coste > 0 && base.contactosAnuncios > 0 ? gastoPara(base.contactosAnuncios * veces, base, 80) * (30 / base.dias) : contactosNecesarios * 80;
     const cap = Number(capacidad) || 0;
     const obrasMesMeta = m.tipo === "obras" ? m.cifra / 12 : m.tipo === "factura" ? m.cifra / 12 / ritmo.ticket : m.tipo === "contactos" ? m.cifra * ritmo.tasa : 0;
-    const topeCap = cap > 0 && obrasMesMeta > cap ? `Con tu equipo de hoy caben ${num(cap)} asuntos al mes; para llegar a ${num(obrasMesMeta)} habría que crecer el equipo o derivar. Antes de traer más consultas hay que resolver eso: no te traeremos más de lo que puedes atender bien.` : "";
+    const topeCap = cap > 0 && obrasMesMeta > cap ? `Con tu equipo de hoy caben ${num(cap)} casos al mes; para llegar a ${num(obrasMesMeta)} habría que crecer el equipo o derivar. Antes de traer más contactos hay que resolver eso: no te traeremos más de lo que puedes atender bien.` : "";
     return {
       titulo: topeCap ? "Objetivo que supera tu capacidad de hoy" : veces <= 1.05 ? "Ya vas camino: es cuestión de mantenerlo" : veces <= 1.6 ? "Objetivo realista con un empujón" : veces <= 3 ? "Objetivo ambicioso: hay que cambiar cosas" : "Hoy es más sueño que objetivo (y está bien soñar)",
       lineas: [
         `Al ritmo de hoy vas a ${u(hoyAno)}${m.tipo === "contactos" ? "" : " al año"}. Quieres ${u(m.cifra)} en ${m.plazo} ${m.plazo === 1 ? "mes" : "meses"}: ${veces.toFixed(1).replace(".", ",")} veces lo de ahora.`,
         mesesAlRitmo && m.tipo !== "contactos" ? `Sin cambiar nada, esa cifra acumulada llegaría en unos ${mesesAlRitmo} meses (${mesesAlRitmo <= m.plazo ? "dentro de plazo" : "fuera de plazo"}).` : "",
-        veces > 1.05 ? `Haría falta pasar de ${num(ritmo.contactosMes)} a unas ${num(contactosNecesarios)} consultas al mes. Solo con anuncios (y cada euro de más rinde menos) serían unos ${eur(extraAnuncios)} al mes en vez de ${eur(gastoHoyMes)}: ${veces <= 1.6 ? "asumible" : veces <= 3 ? "mucho; mejor combinarlo con SEO, reseñas y una web que convierta más" : "demasiado; por aquí no se llega solo con anuncios. Haría falta otro público, otra área u otra zona"}.` : "Lo importante aquí es no bajar la guardia: mantener los anuncios que funcionan y contestar las reseñas.",
-        ritmo.supuestoTasa && m.tipo !== "contactos" ? "Cuenta con que 8 de cada 100 consultas acaban en asunto (supuesto), porque tu CRM aún no tiene asuntos de este periodo. Con datos reales el cálculo se afina solo." : "",
+        veces > 1.05 ? `Haría falta pasar de ${num(ritmo.contactosMes)} a unos ${num(contactosNecesarios)} contactos al mes. Solo con anuncios (y cada euro de más rinde menos) serían unos ${eur(extraAnuncios)} al mes en vez de ${eur(gastoHoyMes)}: ${veces <= 1.6 ? "asumible" : veces <= 3 ? "mucho; mejor combinarlo con SEO, reseñas y una web que convierta más" : "demasiado; por aquí no se llega solo con anuncios. Haría falta otro público, otra área u otra zona"}.` : "Lo importante aquí es no bajar la guardia: mantener los anuncios que funcionan y contestar las reseñas.",
+        ritmo.supuestoTasa && m.tipo !== "contactos" ? "Cuenta con que 8 de cada 100 contactos acaban en caso (supuesto), porque tu CRM aún no tiene casos de este periodo. Con datos reales el cálculo se afina solo." : "",
         topeCap,
         m.linea ? `Para «${m.linea}» hace falta su propia página, sus búsquedas en Google, su campaña y artículos de criterio sobre ese tema: cada área se explica con sus palabras.` : "",
       ].filter(Boolean),
@@ -265,7 +265,7 @@ export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPubl
   const quita = (id: string) => { const l = metas.filter((m) => m.id !== id); setMetas(l); guarda("rd-mesa-metas", l); if (resultado?.id === id) setResultado(null); };
   const an = resultado ? analiza(resultado) : null;
   const T = TIPOS[tipo];
-  const mailto = (m: Meta) => `mailto:${CORREO_ERRORES}?subject=${encodeURIComponent("Mi meta para " + nombreEmpresa)}&body=${encodeURIComponent(`Hola. Esta es mi meta:\n\n${TIPOS[m.tipo].t}: ${m.cifra ? num(m.cifra) + " " + TIPOS[m.tipo].unidad : "(sin cifra)"}\nPlazo: ${m.plazo ? m.plazo + " meses" : "(sin plazo)"}\n${m.linea ? "Tipo de asunto: " + m.linea + "\n" : ""}${m.texto ? "Con mis palabras: " + m.texto + "\n" : ""}\n¿Qué haría falta para llegar?`)}`;
+  const mailto = (m: Meta) => `mailto:${CORREO_ERRORES}?subject=${encodeURIComponent("Mi meta para " + nombreEmpresa)}&body=${encodeURIComponent(`Hola. Esta es mi meta:\n\n${TIPOS[m.tipo].t}: ${m.cifra ? num(m.cifra) + " " + TIPOS[m.tipo].unidad : "(sin cifra)"}\nPlazo: ${m.plazo ? m.plazo + " meses" : "(sin plazo)"}\n${m.linea ? "Tipo de caso: " + m.linea + "\n" : ""}${m.texto ? "Con mis palabras: " + m.texto + "\n" : ""}\n¿Qué haría falta para llegar?`)}`;
 
   return (
     <article className="rounded-[20px] border border-line bg-white px-4 py-4" aria-label="Tu meta">
@@ -284,11 +284,11 @@ export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPubl
         </fieldset>
         {tipo !== "otro" && <label className="block text-[13px] font-semibold text-ink">Cifra ({T.unidad})<input inputMode="numeric" value={cifra} onChange={(e) => setCifra(e.target.value.replace(/[^\d]/g, ""))} placeholder={tipo === "factura" ? "600000" : tipo === "ticket" ? "4000" : "20"} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-cream px-3 text-[16px] font-normal" /></label>}
         {tipo !== "otro" && tipo !== "ticket" && <label className="block text-[13px] font-semibold text-ink">En cuántos meses<input inputMode="numeric" value={plazo} onChange={(e) => setPlazo(e.target.value.replace(/[^\d]/g, ""))} placeholder="12" className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-cream px-3 text-[16px] font-normal" /></label>}
-        {lineas.length > 0 && tipo !== "otro" && <fieldset className="block text-[13px] font-semibold text-ink sm:col-span-2"><legend>¿De qué tipo de asunto? (opcional)</legend>
+        {lineas.length > 0 && tipo !== "otro" && <fieldset className="block text-[13px] font-semibold text-ink sm:col-span-2"><legend>¿De qué tipo de caso? (opcional)</legend>
           <span className="mt-1.5 flex flex-wrap gap-2">{lineas.map((l) => <button key={l} type="button" aria-pressed={linea === l} onClick={() => setLinea(linea === l ? "" : l)} className={`min-h-[44px] rounded-full border px-3.5 text-[14px] font-semibold ${linea === l ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>{l}</button>)}</span>
         </fieldset>}
         <label className="block text-[13px] font-semibold text-ink">{capacidadTexto}<input inputMode="numeric" value={capacidad} onChange={(e) => guardaCapacidad(e.target.value.replace(/[^\d]/g, ""))} placeholder="Por ejemplo, 20" className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-cream px-3 text-[16px] font-normal" /><span className="font-normal text-ink/55">Se guarda; con él te avisamos si una meta pide más de lo que cabe.</span></label>
-        <label className="block text-[13px] font-semibold text-ink">Con tus palabras (opcional)<input value={texto} onChange={(e) => setTexto(e.target.value)} placeholder={tipo === "ticket" ? "Quiero asuntos de empresa, sin dejar de atender a los particulares" : "Por ejemplo: ser referencia en acoso laboral en Madrid"} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-cream px-3 text-[16px] font-normal" /></label>
+        <label className="block text-[13px] font-semibold text-ink">Con tus palabras (opcional)<input value={texto} onChange={(e) => setTexto(e.target.value)} placeholder={tipo === "ticket" ? "Quiero casos de empresa, sin dejar de atender a los particulares" : "Por ejemplo: ser referencia en acoso laboral en Madrid"} className="mt-1 min-h-[44px] w-full rounded-[10px] border border-line bg-cream px-3 text-[16px] font-normal" /></label>
         <p className="sm:col-span-2"><button type="submit" className="min-h-[48px] rounded-full bg-yellow px-6 text-[15px] font-semibold text-ink">¿Es sueño u objetivo? Dímelo</button></p>
       </form>
       {an && resultado && (
@@ -325,7 +325,7 @@ export function TuMeta({ base, demo, nombreEmpresa = "nuestra empresa", notaPubl
           </ul>
         </div>
       )}
-      <Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (consultas que acaban en asunto, honorarios por asunto). Es una orientación para hablarlo, no una promesa." />
+      <Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (contactos que acaban en caso, honorarios por caso). Es una orientación para hablarlo, no una promesa." />
     </article>
   );
 }
@@ -365,7 +365,7 @@ export function PonnosAPrueba({ base, hoy, realEntre, demo }: { base: CifrasBase
       </div>
       {!ap && (
         <div className="mt-3 rounded-[14px] bg-cream px-3 py-3">
-          <p className="text-[15px] text-ink">La mesa dice: <strong>{num(prevision)} consultas</strong> del {fecha(hoy)} al {fecha(suma(hoy, 6))} (es la media de tus últimos 28 días; una semana puede variar mucho).</p>
+          <p className="text-[15px] text-ink">La mesa dice: <strong>{num(prevision)} contactos</strong> del {fecha(hoy)} al {fecha(suma(hoy, 6))} (es la media de tus últimos 28 días; una semana puede variar mucho).</p>
           <div className="mt-2 flex flex-wrap items-end gap-2">
             <label className="block text-[13px] font-semibold text-ink">Tu apuesta (opcional)<input inputMode="numeric" value={tuya} onChange={(e) => setTuya(e.target.value.replace(/[^\d]/g, ""))} placeholder={String(prevision)} className="mt-1 min-h-[44px] w-32 rounded-[10px] border border-line bg-white px-3 text-[16px] font-normal" /></label>
             <button type="button" onClick={demo ? undefined : apostar} className="min-h-[44px] rounded-full bg-yellow px-5 text-[14.5px] font-semibold text-ink">Apostado</button>
@@ -383,7 +383,7 @@ export function PonnosAPrueba({ base, hoy, realEntre, demo }: { base: CifrasBase
         <div className="mt-3 rounded-[14px] bg-cream px-3 py-3 text-[15px] text-ink">
           {real === null ? <p>Ya pasó la semana, pero no tengo los días completos para contarla. Hacemos otra.</p> : (() => {
             const dMesa = Math.abs(real - ap.mesa), dTu = ap.tuya !== null ? Math.abs(real - ap.tuya) : null;
-            return <p>Del {fecha(ap.desde)} al {fecha(ap.hasta)} llegaron <strong>{num(real)} consultas</strong>. La mesa dijo {num(ap.mesa)} ({dMesa === 0 ? "clavado" : `se fue por ${num(dMesa)}`}){dTu !== null && <>; tú dijiste {num(ap.tuya!)} ({dTu === 0 ? "clavado" : `por ${num(dTu)}`})</>}. {dTu !== null ? (dTu < dMesa ? "Has ganado tú. Conoces tu despacho mejor que la media." : dTu === dMesa ? "Empate." : "Esta vez la mesa se acercó más.") : dMesa > ap.mesa * 0.35 ? "La mesa falló bastante: una semana suelta no se parece a la media. Por eso no decidimos con una semana." : "La mesa se acercó."}</p>;
+            return <p>Del {fecha(ap.desde)} al {fecha(ap.hasta)} llegaron <strong>{num(real)} contactos</strong>. La mesa dijo {num(ap.mesa)} ({dMesa === 0 ? "clavado" : `se fue por ${num(dMesa)}`}){dTu !== null && <>; tú dijiste {num(ap.tuya!)} ({dTu === 0 ? "clavado" : `por ${num(dTu)}`})</>}. {dTu !== null ? (dTu < dMesa ? "Has ganado tú. Conoces tu despacho mejor que la media." : dTu === dMesa ? "Empate." : "Esta vez la mesa se acercó más.") : dMesa > ap.mesa * 0.35 ? "La mesa falló bastante: una semana suelta no se parece a la media. Por eso no decidimos con una semana." : "La mesa se acercó."}</p>;
           })()}
           <button type="button" onClick={cerrar} className="mt-2 min-h-[44px] rounded-full bg-yellow px-5 text-[14.5px] font-semibold text-ink">Otra apuesta</button>
         </div>
@@ -436,7 +436,7 @@ export function Ludoteca({ base, hoy, realEntre, demo, nombreEmpresa, notaPublic
       { id: "prueba", t: "Ponnos a prueba", sub: "La mesa contra ti, a 7 días", icono: "rayo", color: C.anuncios, nodo: <PonnosAPrueba base={base} hoy={hoy} realEntre={realEntre} demo={demo} /> },
     ] : []),
     { id: "falta", t: "¿Qué echas de menos?", sub: "Pide una herramienta o avisa de un fallo", icono: "chat", color: C.noche, nodo: <QueEchasDeMenos demo={demo} /> },
-    ...(contactos !== undefined ? [{ id: "meta", t: "Ponte una meta", sub: "Consultas cada 28 días", icono: "check", color: C.ventas, nodo: <MetaDelMes actual={contactos} /> }] : []),
+    ...(contactos !== undefined ? [{ id: "meta", t: "Ponte una meta", sub: "Contactos cada 28 días", icono: "check", color: C.ventas, nodo: <MetaDelMes actual={contactos} /> }] : []),
     ...(preguntas.length ? [{ id: "adivina", t: "Adivina la cifra", sub: "¿Cuánto crees que ha sido?", icono: "lupa", color: C.ia, nodo: <Adivina preguntas={preguntas} /> }] : []),
     { id: "insignias", t: "Tus insignias", sub: "Las que llevas conseguidas", icono: "estrella", color: C.dinero, nodo: <Insignias /> },
   ];

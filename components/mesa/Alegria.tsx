@@ -214,10 +214,10 @@ export function MetaDelMes({ actual }: { actual: number }) {
   const pct = Math.min(100, Math.round((actual / Math.max(1, v)) * 100));
   const hecho = actual >= v;
   return (
-    <section className="rounded-[20px] border border-line p-4" style={{ background: tinte(C.mercado) }} aria-label="Tu meta de consultas">
-      <div className="flex items-center gap-3"><Loseta n="estrella" color={C.mercado} tam={44} /><div><h3 className="font-serif text-[19px] italic leading-tight text-ink">Ponte una meta</h3><p className="text-[14px] text-ink/65">¿Cuántas consultas quieres cada 28 días?</p></div></div>
-      <label className="mt-3 block text-[15px] font-semibold text-ink" htmlFor="mesa-meta">Mi meta: {num0(v)} consultas</label>
-      <input id="mesa-meta" type="range" min={5} max={tope} step={1} value={Math.min(v, tope)} onChange={(e) => { const n = Number(e.target.value); setMeta(n); guardar("rd-mesa-meta", String(n)); logro(); }} className="mt-1 h-11 w-full cursor-pointer accent-[#1d6b3a]" aria-valuetext={`${v} consultas`} />
+    <section className="rounded-[20px] border border-line p-4" style={{ background: tinte(C.mercado) }} aria-label="Tu meta de contactos">
+      <div className="flex items-center gap-3"><Loseta n="estrella" color={C.mercado} tam={44} /><div><h3 className="font-serif text-[19px] italic leading-tight text-ink">Ponte una meta</h3><p className="text-[14px] text-ink/65">¿Cuántos contactos quieres cada 28 días?</p></div></div>
+      <label className="mt-3 block text-[15px] font-semibold text-ink" htmlFor="mesa-meta">Mi meta: {num0(v)} contactos</label>
+      <input id="mesa-meta" type="range" min={5} max={tope} step={1} value={Math.min(v, tope)} onChange={(e) => { const n = Number(e.target.value); setMeta(n); guardar("rd-mesa-meta", String(n)); logro(); }} className="mt-1 h-11 w-full cursor-pointer accent-[#1d6b3a]" aria-valuetext={`${v} contactos`} />
       <div className="mt-1 h-4 overflow-hidden rounded-full bg-white" role="img" aria-label={`Vas al ${pct} por ciento de tu meta`}><div className="h-full rounded-full" style={{ width: `${pct}%`, background: hecho ? C.aviso : C.mercado }} /></div>
       <p className="mt-2 text-[15px] leading-snug text-ink/80">{hecho ? `Meta cumplida: ${num0(actual)} de ${num0(v)}. Esto se celebra (con un café).` : `Vas al ${pct} %: ${num0(actual)} de ${num0(v)}. Te faltan ${num0(v - actual)}.`}</p>
     </section>
@@ -276,7 +276,7 @@ export function Insignias() {
     { t: "Constante", como: "Entrar 3 días distintos", n: "camino", color: C.camino, ok: d.dias >= 3 },
     { t: "De la casa", como: "Entrar 7 días distintos", n: "escudo", color: C.noche, ok: d.dias >= 7 },
     { t: "Ojo de lince", como: "Marcar una tarea como revisada", n: "lupa", color: C.ia, ok: d.revisada },
-    { t: "Con meta", como: "Ponerte una meta de consultas", n: "estrella", color: C.mercado, ok: d.meta },
+    { t: "Con meta", como: "Ponerte una meta de contactos", n: "estrella", color: C.mercado, ok: d.meta },
     { t: "Buen olfato", como: "Acertar una cifra", n: "mando", color: C.anuncios, ok: d.aciertos >= 1 },
   ];
   const ganadas = lista.filter((x) => x.ok).length;
@@ -364,14 +364,14 @@ export function Apartados({ items }: { items: Apartado[] }) {
 /* ───────────────────────── Guía de uso (cl·v928) ───────────────────────── */
 /** Pasos para alguien que no sabe nada. Para otro negocio se cambian aquí los textos y nada más. */
 export const GUIA_PASOS: { icono: string; color: string; t: string; d: string; ancla?: string }[] = [
-  { icono: "campana", color: "#a3505a", t: "Mira la primera línea", d: "Si es roja, hay algo que atender; si es verde, todo va bien. Pulsa el + para ver por qué.", ancla: "pl-conclusion" },
-  { icono: "check", color: "#c79a00", t: "Haz lo primero de hoy", d: "En «Lo primero que haría hoy» tienes una sola cosa que hacer. Cuando la revises, pulsa «Ya lo he revisado».", ancla: "pl-hoy" },
-  { icono: "grid", color: "#2a6f86", t: "Mira las baterías", d: "Cada parte del despacho tiene una batería: llena y verde, bien; naranja, mira esto; roja, importante. Pulsa una y verás el detalle.", ancla: "pl-temas" },
-  { icono: "moneda", color: "#7a4fd0", t: "Lee las cuatro cifras", d: "Cuántas personas dejaron sus datos, cuántas piden primera consulta, qué cuesta cada consulta de los anuncios y tu nota en Google. Si una no se entiende, pulsa el ?.", ancla: "pl-cifras" },
-  { icono: "mando", color: "#7a4fd0", t: "Sueña y haz cuentas", d: "Arriba, en «Tus sueños y tus cuentas»: mueve la inversión, marca tu meta y ponnos a prueba. Son estimaciones, para pensar.", ancla: "mesa-suenos" },
-  { icono: "catalejo", color: "#1d6b3a", t: "Baja a todas las cifras", d: "Las pestañas separan los temas: Consultas, Anuncios, La web, Google, Ficha y redes. En cada gráfica, la estrella es el mejor día.", ancla: "mesa-cifras-todas" },
-  { icono: "chat", color: "#d9822b", t: "Pregunta lo que quieras", d: "Escribe o dicta una pregunta como se la harías a una persona. Contesta con tus cifras de 28 días.", ancla: "pl-pregunta" },
-  { icono: "sobre", color: "#2f6fd0", t: "Recíbelo por correo", d: "En «Más herramientas» puedes pedir el resumen cada día, cada lunes o cada mes, sin tener que entrar.", ancla: "pl-mas" },
+  { icono: "campana", color: "#a3505a", t: "Mira la primera línea", d: "Roja: hay algo que atender. Verde: todo va bien. El + te dice por qué.", ancla: "pl-conclusion" },
+  { icono: "check", color: "#c79a00", t: "Haz lo primero de hoy", d: "Una sola tarea al día. Cuando la mires, pulsa «Ya lo he revisado».", ancla: "pl-hoy" },
+  { icono: "grid", color: "#2a6f86", t: "Mira las baterías", d: "Una por cada parte del despacho. Verde, bien; naranja, mírala; roja, importante.", ancla: "pl-temas" },
+  { icono: "moneda", color: "#7a4fd0", t: "Lee las cuatro cifras", d: "Lo esencial del mes en cuatro números. Si uno no se entiende, pulsa el ?.", ancla: "pl-cifras" },
+  { icono: "mando", color: "#7a4fd0", t: "Sueña y haz cuentas", d: "En «Tus sueños y tus cuentas» pruebas metas y cifras. Son estimaciones, para pensar.", ancla: "mesa-suenos" },
+  { icono: "catalejo", color: "#1d6b3a", t: "Baja a todas las cifras", d: "Más abajo está el detalle, separado por temas. Solo si te apetece.", ancla: "mesa-cifras-todas" },
+  { icono: "chat", color: "#d9822b", t: "Pregunta lo que quieras", d: "Escribe tu pregunta como se la harías a una persona.", ancla: "pl-pregunta" },
+  { icono: "sobre", color: "#2f6fd0", t: "Recíbelo por correo", d: "En «Más herramientas» pides un resumen por correo y ya no tienes que entrar.", ancla: "pl-mas" },
   { icono: "escudo", color: "#25a244", t: "Si ves algo raro, avísanos", d: "Abajo del todo está «Avisar de un error». Lo miramos y lo arreglamos." },
 ];
 
@@ -422,7 +422,7 @@ export function GuiaDeUso({ pasos = GUIA_PASOS, nombre = "la mesa", modo = "late
       {activa && (
         <div className="sticky top-0 z-30 -mx-4 mb-2 flex items-center gap-2 border-b-2 border-yellow bg-[#fffbe6] px-4 py-2 xl:hidden sm:-mx-6 sm:px-6" role="status">
           <Loseta n={pasos[paso!].icono} color={pasos[paso!].color} tam={32} />
-          <span className="min-w-0 flex-1"><span className="block text-[12px] font-bold uppercase tracking-wide text-ink/55">Guía · paso {paso! + 1} de {pasos.length}</span><span className="block truncate text-[14px] font-semibold leading-tight text-ink">{pasos[paso!].t}</span></span>
+          <span className="min-w-0 flex-1"><span className="block text-[12px] font-bold uppercase tracking-wide text-ink/55">Guía · paso {paso! + 1} de {pasos.length}</span><span className="block text-[14px] font-semibold leading-tight text-ink">{pasos[paso!].t}</span><span className="mt-0.5 block text-[13px] leading-snug text-ink/75">{pasos[paso!].d}</span></span>
           <button type="button" onClick={siguiente} className="min-h-[44px] shrink-0 rounded-full bg-yellow px-3.5 text-[13.5px] font-semibold text-ink">{paso === pasos.length - 1 ? "Terminar" : "Siguiente"}</button>
           <button type="button" onClick={() => guardaPaso(-1)} aria-label="Saltar la guía" className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line bg-white text-[16px] text-ink/60">×</button>
         </div>
@@ -498,7 +498,7 @@ export const EXPLICA: Record<string, string> = {
   "Qué hace la gente en cada página": "La lupa mira, página a página, si bajan, si se quedan y si se van enseguida.",
   "Dónde pulsan WhatsApp y llamar": "En qué páginas la gente pulsa el botón de WhatsApp o de llamar.",
   "Páginas de entrada": "La primera página que ve cada visita al llegar.",
-  "De dónde vienen las peticiones": "De cada persona que deja sus datos, por qué canal llegó: Google Ads, Google sin pagar, asistentes de IA, directo…",
+  "De dónde vienen los contactos": "De cada persona que deja sus datos, por qué canal llegó: Google Ads, Google sin pagar, asistentes de IA, directo…",
   "Lo más destacado": "Las tres o cuatro cosas que más han cambiado o más pesan en estas fechas, en una frase cada una.",
   "Recorrido de la web": "De todas las visitas, cuántas dejan sus datos y cuántas piden la primera consulta. Cada paso dice el % sobre el anterior.",
   "Recorrido comercial total": "Del CRM: consultas, primeras consultas, hojas de encargo y casos aceptados de la gente que entró en estas fechas.",

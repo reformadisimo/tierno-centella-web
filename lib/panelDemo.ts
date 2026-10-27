@@ -73,8 +73,8 @@ export function panelDemo(hoy = hoyMadrid()) {
       enlaces: [{ t: "Ver con la lupa", href: "/guia-jesus/mapa-calor" }],
     },
     {
-      id: "dicen", titulo: "Reputación e IA", ver: "Ver las consultas", que: "Tus reseñas y qué dicen de ti las inteligencias artificiales", luz: "rojo",
-      conclusion: "Las reseñas se pueden mejorar (Google 4,2 con 59), y esta semana las IAs solo te nombran en 1 de las 8 consultas revisadas.",
+      id: "dicen", titulo: "Reputación e IA", ver: "Ver las preguntas", que: "Tus reseñas y qué dicen de ti las inteligencias artificiales", luz: "rojo",
+      conclusion: "Las reseñas se pueden mejorar (Google 4,2 con 59), y esta semana las IAs solo te nombran en 1 de las 8 preguntas revisadas.",
       filas: [
         { t: "Google", v: "4,2 de 5 · 59 opiniones (dato real)" },
         { t: "Reseñas de una estrella sin contestar", v: "11 (dato real). Te dejamos preparada una respuesta para cada una", luz: "ambar" },
@@ -100,22 +100,22 @@ export function panelDemo(hoy = hoyMadrid()) {
       enlaces: [],
     },
     {
-      id: "anuncios", titulo: "Anuncios", que: "Cuántas consultas llegan por anuncios y cuánto cuestan",
+      id: "anuncios", titulo: "Anuncios", que: "Cuántos contactos llegan por anuncios y cuánto cuestan",
       luz: medicionIncompleta ? "ambar" : "verde", estado: medicionIncompleta ? "Medición incompleta" : undefined, ver: medicionIncompleta ? "Revisar medición" : "Ver campañas",
       conclusion: medicionIncompleta
-        ? `Se han invertido ${eur(A.coste)}, pero todavía no podemos asignar con seguridad todas las consultas a sus campañas.`
-        : `${num(A.conv)} consultas por anuncios en 28 días; cada una ha costado ${eur(cpl)}.`,
+        ? `Se han invertido ${eur(A.coste)}, pero todavía no podemos asignar con seguridad todos los contactos a sus campañas.`
+        : `${num(A.conv)} contactos por anuncios en 28 días; cada uno ha costado ${eur(cpl)}.`,
       filas: [
         ...(medicionIncompleta ? [
           { t: "Qué falta", v: "Que cada llamada y cada formulario guarden de qué anuncio vienen. Hasta entonces, no pausar campañas solo por estas cifras.", luz: "ambar" as Luz },
-          { t: "Coste por consulta según Google", v: eur(cpl) },
-          { t: "Coste por consulta según la web", v: cplWeb ? `${eur(cplWeb)} (la web solo ve parte de las consultas de los anuncios)` : "La web no ve consultas de anuncios todavía" },
+          { t: "Coste por contacto según Google", v: eur(cpl) },
+          { t: "Coste por contacto según la web", v: cplWeb ? `${eur(cplWeb)} (la web solo ve parte de los contactos de los anuncios)` : "La web no ve contactos de anuncios todavía" },
         ] : []),
         { t: "Consultas en la web", v: `${num(A.contactos)} (${conSigno(vC)})` },
-        { t: "Piden la primera consulta", v: `${num(A.visitas)} (${A.contactos ? Math.round((A.visitas / A.contactos) * 100) : 0} % de las consultas)` },
+        { t: "Piden la primera consulta", v: `${num(A.visitas)} (${A.contactos ? Math.round((A.visitas / A.contactos) * 100) : 0} % de los contactos)` },
         { t: "Invertido en anuncios", v: eur(A.coste) },
         ...[...campanas.entries()].sort((x, y) => y[1].coste - x[1].coste).map(([k, c]) => ({
-          t: `Google · ${k}`, v: `${eur(c.coste)} · ${pl(c.conv, "consulta", "consultas")} · ${c.conv ? `${eur(c.coste / c.conv)} cada una` : "sin consultas medidas"}`,
+          t: `Google · ${k}`, v: `${eur(c.coste)} · ${pl(c.conv, "contacto", "contactos")} · ${c.conv ? `${eur(c.coste / c.conv)} cada uno` : "sin contactos medidos"}`,
           luz: (c.conv === 0 && c.coste > 100 ? "ambar" : cpl && c.conv && c.coste / c.conv > cpl * 1.5 ? "ambar" : "verde") as Luz,
         })),
       ],
@@ -129,7 +129,7 @@ export function panelDemo(hoy = hoyMadrid()) {
         { t: "Plazo que vence", v: `Despido: 20 días hábiles, vence el ${enPalabras(p1)}`, luz: "rojo" },
         { t: "Plazo que vence", v: `Despido: 20 días hábiles, vence el ${enPalabras(p2)}`, luz: "ambar" },
         ...(C.venc ? [{ t: "Seguimientos atrasados", v: `${num(C.venc)} ${C.venc === 1 ? "consulta tiene" : "consultas tienen"} la fecha de seguimiento pasada en el CRM`, luz: "azul" as Luz }] : []),
-        ...crm.slice().sort((x, y) => y.leads - x.leads).map((r) => ({ t: `Llegan por ${r.origen === "Calculadora web" ? "la calculadora de la web" : r.origen === "Asistente (chat)" ? "el chat de la web" : r.origen === "Recomendado" ? "recomendación" : r.origen}`, v: `${pl(r.leads, "consulta", "consultas")}, ${pl(r.visitas, "primera consulta", "primeras consultas")} y ${pl(r.firmados, "caso", "casos")}` })),
+        ...crm.slice().sort((x, y) => y.leads - x.leads).map((r) => ({ t: `Llegan por ${r.origen === "Calculadora web" ? "la calculadora de la web" : r.origen === "Asistente (chat)" ? "el chat de la web" : r.origen === "Recomendado" ? "recomendación" : r.origen === "Teléfono" ? "teléfono" : r.origen}`, v: `${pl(r.leads, "consulta", "consultas")}, ${pl(r.visitas, "primera consulta", "primeras consultas")} y ${pl(r.firmados, "caso", "casos")}` })),
         { t: "Coste por caso", v: C.casos ? eur(A.coste / C.casos) : "Se activa cuando el CRM tenga casos aceptados", luz: "azul" },
       ],
       enlaces: [{ t: "Abrir el CRM", href: "/guia-jesus/crm" }],
@@ -139,15 +139,15 @@ export function panelDemo(hoy = hoyMadrid()) {
   const relojes: Reloj[] = [
     { n: A.contactos, frase: `${num(A.contactos)} personas te dejaron sus datos`, detalle: vC === null ? "Es el primer periodo que medimos." : vC === 0 ? "Igual que antes." : `${Math.abs(vC)} % ${vC > 0 ? "más" : "menos"} que antes.`, ayuda: "Personas distintas que han enviado un formulario o dejado su teléfono en la web o en el chat. Una misma persona solo cuenta una vez al día.", t: "Consultas", v: num(A.contactos), sub: conSigno(vC), lleno: Math.min(1, B.contactos ? A.contactos / (B.contactos * 1.5) : 0.5), luz: vC === null ? "gris" : vC >= 0 ? "verde" : vC > -20 ? "ambar" : "rojo" },
     { n: A.visitas, frase: `${num(A.visitas)} pidieron una primera consulta`, detalle: `Son ${A.contactos ? Math.round((A.visitas / A.contactos) * 100) : 0} de cada 100 personas que dejaron sus datos.`, ayuda: "De cada 100 personas que te dejan sus datos, cuántas reservan la primera consulta de una hora. Más de 30 de cada 100 está bien.", t: "Piden la primera consulta", v: `${A.contactos ? Math.round((A.visitas / A.contactos) * 100) : 0} %`, sub: "de las consultas", lleno: A.contactos ? A.visitas / A.contactos : 0, luz: A.contactos && A.visitas / A.contactos >= 0.3 ? "verde" : "ambar" },
-    { n: Math.round(cpl), frase: medicionIncompleta ? `${eur(cpl)} por consulta de anuncio` : `Cada consulta costó ${eur(cpl)}`, detalle: `${cplB ? `Antes eran ${eur(cplB)}` : "Antes no lo medíamos"}${medicionIncompleta ? ", pero la medición todavía está incompleta." : "."}`, ayuda: "El dinero gastado en anuncios dividido entre las consultas que han traído esos anuncios. Cuanto más bajo, mejor.", t: "Coste por consulta", v: eur(cpl), sub: conSigno(cpl && cplB ? variacion(cpl, cplB) : null), lleno: cplB ? Math.min(1, cpl / (cplB * 2)) : 0.5, luz: medicionIncompleta ? "ambar" : "verde" },
+    { n: Math.round(cpl), frase: medicionIncompleta ? `${eur(cpl)} por contacto de anuncio` : `Cada contacto costó ${eur(cpl)}`, detalle: `${cplB ? `Antes eran ${eur(cplB)}` : "Antes no lo medíamos"}${medicionIncompleta ? ", pero la medición todavía está incompleta." : "."}`, ayuda: "El dinero gastado en anuncios dividido entre las consultas que han traído esos anuncios. Cuanto más bajo, mejor.", t: "Coste por consulta", v: eur(cpl), sub: conSigno(cpl && cplB ? variacion(cpl, cplB) : null), lleno: cplB ? Math.min(1, cpl / (cplB * 2)) : 0.5, luz: medicionIncompleta ? "ambar" : "verde" },
     { frase: "Tus clientes te valoran con un 4,2", detalle: "Sobre 5, con 59 reseñas de Google.", ayuda: "La valoración media que han dejado tus clientes en Google, sobre 5. Por encima de 4,5 es muy buena.", t: "Nota en Google", v: "4,2", sub: "59 reseñas", lleno: 4.2 / 5, luz: "ambar" },
   ];
 
   const tareas: Tarea[] = [
     { id: "plazos", titular: `Dos plazos de despido vencen esta semana: el ${enPalabras(p1)} y el ${enPalabras(p2)}.`, texto: "Revisa los 2 plazos de despido que vencen esta semana", porque: `En el CRM hay dos consultas de despido con el plazo de 20 días hábiles a punto de cumplirse: el ${enPalabras(p1)} y el ${enPalabras(p2)}.`, donde: "Consultas y plazos", ir: "tuyo", boton: "Ver los plazos" },
-    ...(medicionIncompleta ? [{ id: "medicion", texto: "Completar la medición de los anuncios", porque: "Las cifras de Google y las de la web no coinciden: muchas consultas llegan sin un origen identificado. Hasta tenerlo, no conviene pausar ninguna campaña.", donde: "Anuncios", ir: "anuncios", boton: "Ver qué falta conectar" }] : []),
+    ...(medicionIncompleta ? [{ id: "medicion", texto: "Completar la medición de los anuncios", porque: "Las cifras de Google y las de la web no coinciden: muchos contactos llegan sin un origen identificado. Hasta tenerlo, no conviene pausar ninguna campaña.", donde: "Anuncios", ir: "anuncios", boton: "Ver qué falta conectar" }] : []),
     { id: "resenas", texto: "Contesta las reseñas de una estrella", porque: "Hay 11 sin contestar. Te dejamos preparada una respuesta para cada una: solo tienes que revisarla.", donde: "Reputación e IA", ir: "dicen", boton: "Ver las reseñas" },
-    { id: "espejo", titular: "Las inteligencias artificiales solo te nombran en 1 de las 8 consultas revisadas esta semana.", texto: "Revisar la presencia en las IAs", porque: "Te nombran en 1 de 8 consultas revisadas esta semana.", donde: "Reputación e IA", ir: "dicen", boton: "Ver las consultas" },
+    { id: "espejo", titular: "Las inteligencias artificiales solo te nombran en 1 de las 8 preguntas revisadas esta semana.", texto: "Revisar la presencia en las IAs", porque: "Te nombran en 1 de 8 preguntas revisadas esta semana.", donde: "Reputación e IA", ir: "dicen", boton: "Ver las consultas" },
     { id: "marca", texto: "Proteger tu nombre en Google", porque: "Otro despacho sale anunciado cuando alguien busca \"jesus tierno centella\".", donde: "Competencia", ir: "mercado", boton: "Ver el cambio" },
   ];
 
@@ -155,7 +155,7 @@ export function panelDemo(hoy = hoyMadrid()) {
   const resumen: Resumen = { titulo: "Hay dos cosas que requieren atención", texto: puntos[0], puntos };
 
   /* Cifras base de 28 días para "Tus sueños y tus cuentas", de los MISMOS datos que las cuatro cifras y la vista completa
-     (una sola fuente de números: si la mesa dice 38 consultas, el simulador parte de 38). */
+     (una sola fuente de números: si la mesa dice 38 contactos, el simulador parte de 38). */
   const base: CifrasBase = {
     dias: 28, coste: Math.round(A.coste), contactosAnuncios: Math.round(A.conv), contactos: A.contactos, visitasPedidas: A.visitas,
     leadsCrm: C.leads, firmas: C.casos, ticket: C.casos ? Math.round(C.imp / C.casos) : undefined, medicionIncompleta,

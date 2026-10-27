@@ -81,8 +81,6 @@ const delta = (a: number, b: number) => (b > 0 ? ((a - b) / b) * 100 : a > 0 ? n
 const COLOR = { teal: "#2C7C98", ink: "#1a3d47", ambar: "#b8924a", rosa: "#b5646e", salvia: "#5f8458", pizarra: "#4b6c8f", terracota: "#b5643f", linea: "#e9e2d4" };
 const PLATAFORMA: Record<string, { nombre: string; color: string }> = {
   google: { nombre: "Google Ads", color: COLOR.teal },
-  meta: { nombre: "Meta (Facebook e Instagram)", color: COLOR.rosa },
-  chatgpt: { nombre: "ChatGPT Ads", color: COLOR.salvia },
 };
 const PALETA = [COLOR.teal, COLOR.rosa, COLOR.ambar, COLOR.salvia, COLOR.pizarra, COLOR.terracota, "#8a96a3", "#7a5c99"];
 const CANALES_PAGO: Record<string, string> = { "Google Ads": "google", "Meta / Instagram": "meta", "ChatGPT Ads": "chatgpt" };
@@ -157,7 +155,7 @@ const peticionesPago = (t: Totales) => Object.entries(t.porCanal).filter(([k]) =
 /* ── métricas para el gráfico ── */
 type Metrica = { id: string; nombre: string; f: (t: Totales) => number; formato: (n: number) => string; menosEsMejor?: boolean; fuente: string; ayuda: string };
 const METRICAS: Metrica[] = [
-  { id: "peticiones", nombre: "Consultas", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web o en el chat." },
+  { id: "peticiones", nombre: "Contactos", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web o en el chat." },
   { id: "visitas", nombre: "Piden primera consulta", f: (t) => t.visitas, formato: num, fuente: "Web", ayuda: "De ellas, las que reservan la primera consulta de una hora." },
   { id: "pulsaciones", nombre: "WhatsApp y llamar", f: (t) => t.whatsapp + t.llamadas, formato: num, fuente: "Web", ayuda: "Veces que pulsan el botón de WhatsApp o de llamar." },
   { id: "inversion", nombre: "Inversión en anuncios", f: (t) => t.ads.coste, formato: eur, fuente: "Anuncios (Google Ads)", ayuda: "Lo gastado en anuncios de Google." },
@@ -549,10 +547,10 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
     const o: string[] = [];
     if (C) {
       const dp = delta(T.peticiones, C.peticiones);
-      if (dp !== null && Math.abs(dp) >= 5) o.push(`${dp > 0 ? "Suben" : "Bajan"} las peticiones un ${num(Math.abs(dp))} % (${num(T.peticiones)} frente a ${num(C.peticiones)}).`);
+      if (dp !== null && Math.abs(dp) >= 5) o.push(`${dp > 0 ? "Suben" : "Bajan"} los contactos un ${num(Math.abs(dp))} % (${num(T.peticiones)} frente a ${num(C.peticiones)}).`);
     }
     const canales = Object.entries(T.porCanal).sort((x, y) => y[1] - x[1]);
-    if (canales[0]) o.push(`El canal que más peticiones trae es ${canales[0][0]}: ${num(canales[0][1])} de ${num(T.peticiones)}.`);
+    if (canales[0]) o.push(`El canal que más contactos trae es ${canales[0][0]}: ${num(canales[0][1])} de ${num(T.peticiones)}.`);
     const plat = Object.entries(T.ads.porPlat).sort((x, y) => y[1].coste - x[1].coste)[0];
     if (plat) o.push(`Donde más se invierte: ${PLATAFORMA[plat[0]]?.nombre ?? plat[0]}, ${eur(plat[1].coste)} (${num((plat[1].coste / Math.max(1, T.ads.coste)) * 100)} % del total).`);
     if (T.whatsapp + T.llamadas) o.push(`${num(T.whatsapp)} pulsaciones en WhatsApp y ${num(T.llamadas)} en llamar.`);
@@ -624,7 +622,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
           )}
           {/* cl·v922: las cifras completas salen siempre debajo del resumen, sin botón; lo que ya está arriba no se repite */}
           {(() => { const soloCifras = sencillaPosible && vista === "sencilla"; return (<>
-          {!soloCifras && <Ludoteca {...dolorYBien(relojes ?? [], temas ?? [])} contactos={relojes?.[0]?.n} preguntas={juegos(relojes ?? [])} base={base} hoy={datos.hoy} realEntre={(x, y) => { const ds = listaDias(x, y); if (ds.some((q) => !datos.web[q])) return null; return ds.reduce((t, q) => t + datos.web[q].peticiones, 0); }} demo={datos.clave === "demo"} nombreEmpresa="Tierno Centella Abogados" lineas={["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]} capacidadTexto="¿Cuántos asuntos puedes llevar al mes?" notaPublico="Podemos preparar la versión B de la web, orientada a empresas y asuntos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos." />}
+          {!soloCifras && <Ludoteca {...dolorYBien(relojes ?? [], temas ?? [])} contactos={relojes?.[0]?.n} preguntas={juegos(relojes ?? [])} base={base} hoy={datos.hoy} realEntre={(x, y) => { const ds = listaDias(x, y); if (ds.some((q) => !datos.web[q])) return null; return ds.reduce((t, q) => t + datos.web[q].peticiones, 0); }} demo={datos.clave === "demo"} nombreEmpresa="Tierno Centella Abogados" lineas={["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]} capacidadTexto="¿Cuántos casos puedes llevar al mes?" notaPublico="Podemos preparar la versión B de la web, orientada a empresas y casos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos." />}
           {!soloCifras && <GuiaDeUso modo="plegada" />}
           {/* cl·v921: todo plegado en una línea; se abre lo que se quiera y las cifras quedan a un vistazo */}
           <Plegable id="pl-fechas" icono="historia" color={PALETA_ALEGRIA.camino} titulo="Fechas y comparación" pista={`${textoRango(a, b)} · ${compara === "no" ? "sin comparar" : compara === "anio" ? "frente al año pasado" : "frente al periodo anterior"}`}>
@@ -784,9 +782,9 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
             </Caja>
 
             <div className="grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-              <Caja titulo="De dónde vienen las peticiones" fuente="Web · canal de llegada de cada persona">
+              <Caja titulo="De dónde vienen los contactos" fuente="Web · canal de llegada de cada persona">
                 <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
-                  <Rosco datos={canalesRosco} centro={num(T.peticiones)} sub="peticiones" />
+                  <Rosco datos={canalesRosco} centro={num(T.peticiones)} sub="contactos" />
                   <div className="w-full"><Barras filas={canalesRosco.map(([k, v, c]) => [k, v, c])} compara={C?.porCanal} /></div>
                 </div>
               </Caja>
@@ -852,14 +850,14 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
                 return (
                   <section key={k} className="rounded-[22px] border p-5" style={{ borderColor: `${p.color}55`, background: tinte(p.color) }}>
                     <p className="flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.1em]" style={{ color: p.color }}><span className="grid h-9 w-9 place-items-center rounded-[10px] border border-line bg-white"><LogoMarca nombre={k === "google" ? "Google Ads" : k === "meta" ? "Meta" : "ChatGPT"} tam={24} /></span>{p.nombre}</p>
-                    <p className="mt-2 flex items-center gap-2 font-serif text-[32px] leading-none text-ink">{eur(x.coste)}{x.coste > 0 && (() => { const mediaPet = T.ads.coste && T.peticiones ? T.ads.coste / Math.max(1, Object.entries(CANALES_PAGO).reduce((t, [c]) => t + (T.porCanal[c] ?? 0), 0)) : 0; const cpp = pet ? x.coste / pet : 0; if (!cpp || !mediaPet) return null; const bueno = cpp <= mediaPet; return <span className="rounded-full px-2.5 py-1 text-[12px] font-bold text-white" style={{ background: bueno ? "#2f9a62" : "#a3505a" }}>{bueno ? "Rinde mejor que la media" : "Rinde peor que la media"}</span>; })()}</p>
+                    <p className="mt-2 flex items-center gap-2 font-serif text-[32px] leading-none text-ink">{eur(x.coste)}{x.coste > 0 && (() => { const mediaPet = T.ads.coste && T.peticiones ? T.ads.coste / Math.max(1, Object.entries(CANALES_PAGO).reduce((t, [c]) => t + (T.porCanal[c] ?? 0), 0)) : 0; const cpp = pet ? x.coste / pet : 0; if (!cpp || !mediaPet || Object.keys(PLATAFORMA).length < 2) return null; const bueno = cpp <= mediaPet; return <span className="rounded-full px-2.5 py-1 text-[12px] font-bold text-white" style={{ background: bueno ? "#2f9a62" : "#a3505a" }}>{bueno ? "Rinde mejor que la media" : "Rinde peor que la media"}</span>; })()}</p>
                     <div className="mt-1.5 flex items-center gap-2 text-[12.5px] text-ink/55">{y ? <><Delta a={x.coste} b={y.coste} /> antes {eur(y.coste)}</> : null}</div>
                     <dl className="mt-4 grid grid-cols-2 gap-x-3 gap-y-2 text-[13.5px]">
                       <dt className="text-ink/55">Clics</dt><dd className="text-right font-semibold">{num(x.clics)}</dd>
                       <dt className="text-ink/55">Coste por clic</dt><dd className="text-right font-semibold">{x.clics ? eur2(x.coste / x.clics) : "-"}</dd>
                       <dt className="text-ink/55">Contactos (según la plataforma)</dt><dd className="text-right font-semibold">{nf1.format(x.conv)}</dd>
-                      <dt className="text-ink/55">Peticiones que llegan a la web</dt><dd className="text-right font-semibold">{num(pet)}</dd>
-                      <dt className="font-semibold text-ink">Coste por petición</dt><dd className="text-right font-bold text-ink">{pet ? eur(x.coste / pet) : "-"}</dd>
+                      <dt className="text-ink/55">Contactos que llegan a la web</dt><dd className="text-right font-semibold">{num(pet)}</dd>
+                      <dt className="font-semibold text-ink">Coste por contacto en la web</dt><dd className="text-right font-bold text-ink">{pet ? eur(x.coste / pet) : "-"}</dd>
                     </dl>
                   </section>
                 );
@@ -884,7 +882,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
                   { k: "cpa", t: "Por contacto", v: (r) => (r.conv ? r.coste / r.conv : 0), num: true, f: (r) => (r.conv ? eur(r.coste / r.conv) : "-") },
                 ]}
               />
-              <p className="mt-3 text-[12.5px] text-ink/50">"Contactos" es lo que cuenta cada plataforma. Las peticiones reales, por canal, están arriba y en el Resumen.</p>
+              <p className="mt-3 text-[12.5px] text-ink/50">"Contactos" es lo que cuenta cada plataforma. Los contactos reales, por canal, están arriba y en el Resumen.</p>
             </Caja>
 
             <Caja titulo="Inversión mes a mes" fuente="Toda la historia guardada" plegada="Cuánto se ha invertido cada mes desde el principio, por plataforma">
@@ -1054,8 +1052,8 @@ function TresPreguntas({ T, C, crm, cargando, largo }: { T: Totales; C: Totales 
     const bajaProp = pvC !== null && pvC - pv >= 8, subeProp = pvC !== null && pv - pvC >= 8;
     if (bajaProp) { c1 = "ambar"; f1 = `Llegan ${dp !== null && dp > 0 ? "más contactos" : "contactos"}, pero piden menos la primera consulta (${num(pv)} %, antes ${num(pvC ?? 0)} %).`; }
     else if (dp !== null && dp <= -20) { c1 = "rojo"; f1 = `Llegan menos contactos: ${num(T.peticiones)}, antes ${num(C!.peticiones)}.`; }
-    else if (subeProp || (dp !== null && dp >= 10)) { c1 = "verde"; f1 = `Bien: ${num(T.peticiones)} consultas y el ${num(pv)} % pide la primera consulta.`; }
-    else { c1 = "verde"; f1 = `Estable: ${num(T.peticiones)} consultas y el ${num(pv)} % pide la primera consulta.`; }
+    else if (subeProp || (dp !== null && dp >= 10)) { c1 = "verde"; f1 = `Bien: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la primera consulta.`; }
+    else { c1 = "verde"; f1 = `Estable: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la primera consulta.`; }
   }
   const t = (crm ?? []).reduce((a, r) => ({ leads: a.leads + r.leads, visitas: a.visitas + r.visitas, pres: a.pres + r.presupuestos, firm: a.firm + r.firmados, imp: a.imp + r.firmado }), { leads: 0, visitas: 0, pres: 0, firm: 0, imp: 0 });
   let c2: Resp["color"] = "gris", f2 = cargando ? "Cargando el CRM…" : "Sin datos del CRM en este periodo: se llenará cuando el equipo lo use.";
@@ -1077,7 +1075,7 @@ function TresPreguntas({ T, C, crm, cargando, largo }: { T: Totales; C: Totales 
     f3 = `${mejor.origen} es el que más casos trae: ${num(mejor.firmados)} ${mejor.firmados === 1 ? "caso" : "casos"}.${pagos.length ? ` En anuncios: ${pagos.join("; ")}.` : ""}`;
   }
   const filas: Resp[] = [
-    { pregunta: "¿Nos llegan buenas consultas?", color: c1, frase: f1, dato: `${num(T.peticiones)} consultas · ${num(T.visitas)} piden primera consulta` },
+    { pregunta: "¿Nos llegan buenos contactos?", color: c1, frase: f1, dato: `${num(T.peticiones)} contactos · ${num(T.visitas)} piden primera consulta` },
     { pregunta: "¿Las convertimos en casos?", color: c2, frase: f2, dato: t.leads ? `${num(t.leads ? (t.firm / t.leads) * 100 : 0)} % de consulta a caso` : "" },
     { pregunta: "¿Qué canal nos trae más casos?", color: c3, frase: f3, dato: "" },
   ];
@@ -1804,7 +1802,7 @@ function Sencilla({ temas, resumen, tareas, relojes, base, hoy, realEntre, clave
   }, [abreTema]);
   return (
     <div className="pb-6">
-      <Ludoteca {...dolorYBien(relojes, temas)} contactos={relojes[0]?.n} preguntas={juegos(relojes)} base={base} hoy={hoy} realEntre={realEntre} demo={clave === "demo"} nombreEmpresa="Tierno Centella Abogados" lineas={["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]} capacidadTexto="¿Cuántos asuntos puedes llevar al mes?" notaPublico="Podemos preparar la versión B de la web, orientada a empresas y asuntos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos." />
+      <Ludoteca {...dolorYBien(relojes, temas)} contactos={relojes[0]?.n} preguntas={juegos(relojes)} base={base} hoy={hoy} realEntre={realEntre} demo={clave === "demo"} nombreEmpresa="Tierno Centella Abogados" lineas={["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]} capacidadTexto="¿Cuántos casos puedes llevar al mes?" notaPublico="Podemos preparar la versión B de la web, orientada a empresas y casos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos." />
       <GuiaDeUso modo="plegada" />
       <Conclusion resumen={resumen} hayTarea={tareas.length > 0} />
       {/* cl·v925: apartados en rejilla compacta; el que se abre se despliega debajo. Las cifras completas vienen después, ya abiertas */}
@@ -1824,7 +1822,7 @@ function Sencilla({ temas, resumen, tareas, relojes, base, hoy, realEntre, clave
 /* "Más": lo que no hace falta para saber cómo va (herramientas y resumen por correo), plegado.
    El botón "Más" de la barra de abajo lo abre y baja hasta aquí. */
 function MasHerramientas({ clave, herramientas }: { clave: string; herramientas: React.ReactNode }) {
-  const [ab, setAb] = useState(false);
+  const [ab, setAb] = useState(true);
   useEffect(() => {
     const abre = () => setAb(true);
     window.addEventListener("mesa-mas", abre);
@@ -1992,7 +1990,7 @@ function juegos(r: Reloj[]) {
   const o: { texto: string; real: number; unidad: string; max: number }[] = [];
   if (r[0]?.n) o.push({ texto: "¿Cuántas personas crees que han dejado sus datos en los últimos 28 días?", real: r[0].n, unidad: "personas", max: techo(r[0].n) });
   if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una primera consulta?", real: r[1].n, unidad: "personas", max: techo(r[1].n) });
-  if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada consulta de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });
+  if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada contacto de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });
   return o;
 }
 function CifrasFrase({ relojes }: { relojes: Reloj[] }) {
@@ -2049,7 +2047,7 @@ function Guia({ cerrar }: { cerrar: () => void }) {
           <li className="flex items-center gap-3"><Loseta n="campana" color="#d93f3f" tam={34} />Qué necesita atención.</li>
           <li className="flex items-center gap-3"><Loseta n="estrella" color="#c79a00" tam={34} />Qué haría hoy.</li>
         </ol>
-        <p className="mt-4 text-[16px] leading-relaxed text-ink/80">No necesitas entender de marketing. Pulsa cualquier apartado y te lo explicamos.</p>
+        <p className="mt-4 text-[16px] leading-relaxed text-ink/80">No necesitas entender de marketing. Al entrar, una tira amarilla te enseña la mesa en 9 pasos cortos; si prefieres verla a tu aire, pulsa la ×.</p>
         {mas && (
           <div className="mt-4 space-y-2 rounded-[14px] bg-[#fbf6ea] px-4 py-3 text-[15px] leading-relaxed text-ink/85">
             <p><b>Los colores</b> siempre dicen lo mismo: verde, todo bien; naranja, mira esto; rojo, importante; gris, sin datos aún; azul, datos de tu negocio.</p>

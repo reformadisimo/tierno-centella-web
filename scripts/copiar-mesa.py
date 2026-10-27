@@ -28,7 +28,7 @@ def cambia(texto, pares, nombre):
 
 MESA = [
     ('/* ── MESA DE CONTROL (26-oct, cl·v811) ──', '/* ── MESA DE CONTROL: copia de la de Reformadísimo, la referencia (scripts/copiar-mesa.py). Solo cambian textos de un despacho. ──'),
-    ('{ id: "peticiones", nombre: "Peticiones", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web." }', '{ id: "peticiones", nombre: "Consultas", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web o en el chat." }'),
+    ('{ id: "peticiones", nombre: "Peticiones", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web." }', '{ id: "peticiones", nombre: "Contactos", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web o en el chat." }'),
     ('{ id: "visitas", nombre: "Piden visita", f: (t) => t.visitas, formato: num, fuente: "Web", ayuda: "De ellas, las que piden la visita técnica gratis." }', '{ id: "visitas", nombre: "Piden primera consulta", f: (t) => t.visitas, formato: num, fuente: "Web", ayuda: "De ellas, las que reservan la primera consulta de una hora." }'),
     ('ayuda: "Lo gastado en Google, Meta y ChatGPT." }', 'ayuda: "Lo gastado en anuncios de Google." }'),
     ('{ id: "calculos", nombre: "Reformímetro", f: (t) => t.calculos, formato: num, fuente: "Web", ayuda: "Personas que calculan su reforma y reciben el informe." }', '{ id: "calculos", nombre: "Calculadora", f: (t) => t.calculos, formato: num, fuente: "Web", ayuda: "Personas que calculan su indemnización con la calculadora de la web." }'),
@@ -54,14 +54,14 @@ MESA = [
     (' · Ficha de Google e Instagram (Supermetrics), ', ' · Ficha de Google e Instagram, '),
     (' · eKomi y Trustpilot, a mano. Las pruebas del equipo no cuentan.', ' · Las pruebas del equipo no cuentan.'),
     ('pero piden menos la visita (${num(pv)} %, antes ${num(pvC ?? 0)} %).', 'pero piden menos la primera consulta (${num(pv)} %, antes ${num(pvC ?? 0)} %).'),
-    ('f1 = `Bien: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la visita.`;', 'f1 = `Bien: ${num(T.peticiones)} consultas y el ${num(pv)} % pide la primera consulta.`;'),
-    ('f1 = `Estable: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la visita.`;', 'f1 = `Estable: ${num(T.peticiones)} consultas y el ${num(pv)} % pide la primera consulta.`;'),
+    ('f1 = `Bien: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la visita.`;', 'f1 = `Bien: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la primera consulta.`;'),
+    ('f1 = `Estable: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la visita.`;', 'f1 = `Estable: ${num(T.peticiones)} contactos y el ${num(pv)} % pide la primera consulta.`;'),
     ('f2 = `De ${num(t.leads)} contactos: ${num(t.visitas)} visitas y ${num(t.pres)} presupuestos. Aún no hay firmas: una reforma tarda semanas en decidirse, la tasa de cierre se mira con 3 a 6 meses.`;', 'f2 = `De ${num(t.leads)} consultas: ${num(t.visitas)} primeras consultas y ${num(t.pres)} hojas de encargo. Aún no hay casos aceptados: un caso puede tardar semanas en decidirse.`;'),
     ('f2 = `De ${num(t.leads)} contactos: ${num(t.visitas)} visitas, ${num(t.pres)} presupuestos y ${num(t.firm)} obras firmadas (${eur(t.imp)}).`;', 'f2 = `De ${num(t.leads)} consultas: ${num(t.visitas)} primeras consultas, ${num(t.pres)} hojas de encargo y ${num(t.firm)} casos aceptados.`;'),
     ('f3 = "Hará falta que el CRM tenga obras firmadas en este periodo.";', 'f3 = "Hará falta que el CRM tenga casos aceptados en este periodo.";'),
     ('`${r.origen}: ${eur(r.coste / r.firmados)} por obra`', '`${r.origen}: ${eur(r.coste / r.firmados)} por caso`'),
     ('f3 = `${mejor.origen} es el que más factura: ${num(mejor.firmados)} ${mejor.firmados === 1 ? "obra" : "obras"}, ${eur(mejor.firmado)}.${pagos.length ? ` En anuncios: ${pagos.join("; ")}.` : ""}`;', 'f3 = `${mejor.origen} es el que más casos trae: ${num(mejor.firmados)} ${mejor.firmados === 1 ? "caso" : "casos"}.${pagos.length ? ` En anuncios: ${pagos.join("; ")}.` : ""}`;'),
-    ('{ pregunta: "¿Nos llegan buenos contactos?", color: c1, frase: f1, dato: `${num(T.peticiones)} contactos · ${num(T.visitas)} piden visita` },', '{ pregunta: "¿Nos llegan buenas consultas?", color: c1, frase: f1, dato: `${num(T.peticiones)} consultas · ${num(T.visitas)} piden primera consulta` },'),
+    ('{ pregunta: "¿Nos llegan buenos contactos?", color: c1, frase: f1, dato: `${num(T.peticiones)} contactos · ${num(T.visitas)} piden visita` },', '{ pregunta: "¿Nos llegan buenos contactos?", color: c1, frase: f1, dato: `${num(T.peticiones)} contactos · ${num(T.visitas)} piden primera consulta` },'),
     ('{ pregunta: "¿Los convertimos en obras?", color: c2, frase: f2, dato: t.leads ? `${num(t.leads ? (t.firm / t.leads) * 100 : 0)} % de contacto a obra` : "" },', '{ pregunta: "¿Las convertimos en casos?", color: c2, frase: f2, dato: t.leads ? `${num(t.leads ? (t.firm / t.leads) * 100 : 0)} % de consulta a caso` : "" },'),
     ('{ pregunta: "¿Qué canal nos hace ganar más?", color: c3, frase: f3, dato: "" },', '{ pregunta: "¿Qué canal nos trae más casos?", color: c3, frase: f3, dato: "" },'),
     ('<Caja titulo="De la petición a la obra" fuente={cargando ? "Cargando…" : "CRM · contactos que entraron en el periodo y hasta dónde han llegado"}>', '<Caja titulo="De la consulta al caso" fuente={cargando ? "Cargando…" : "CRM · consultas que entraron en el periodo y hasta dónde han llegado"}>'),
@@ -103,7 +103,7 @@ MESA = [
     ('<details className="mt-1 text-[14px] text-ink/75">\n              <summary className="cursor-pointer font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>', '<details className="text-[14px] text-ink/75">\n              <summary className="cursor-pointer py-3 font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>'),
     # v915: juego "Adivina la cifra" con las cifras de un despacho
     ('if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una visita?", real: r[1].n, unidad: "visitas", max: techo(r[1].n) });', 'if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una primera consulta?", real: r[1].n, unidad: "personas", max: techo(r[1].n) });'),
-    ('if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada contacto de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });', 'if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada consulta de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });'),
+    ('if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada contacto de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });', 'if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada contacto de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });'),
 ]
 
 ALEGRIA = [
@@ -119,12 +119,12 @@ ALEGRIA = [
     ('comerciales: ["casa", C.ventas], firmados: ["documento", C.mercado], margen: ["escudo", C.noche],', 'comerciales: ["persona", C.ventas], firmados: ["documento", C.mercado], margen: ["moneda", C.noche],'),
     ('peticiones: ["persona", C.mercado], visitas: ["casa", C.web],', 'peticiones: ["persona", C.mercado], visitas: ["documento", C.web],'),
     ('[/Recorrido|petición a la obra/i, { n: "camino", color: C.camino }],', '[/Recorrido|consulta al caso/i, { n: "camino", color: C.camino }],'),
-    ('<p className="text-[14px] text-ink/65">¿Cuántos contactos quieres cada 28 días?</p>', '<p className="text-[14px] text-ink/65">¿Cuántas consultas quieres cada 28 días?</p>'),
-    ('Mi meta: {num0(v)} contactos</label>', 'Mi meta: {num0(v)} consultas</label>'),
-    ('aria-valuetext={`${v} contactos`}', 'aria-valuetext={`${v} consultas`}'),
-    ('aria-label="Tu meta de contactos"', 'aria-label="Tu meta de consultas"'),
+    ('<p className="text-[14px] text-ink/65">¿Cuántos contactos quieres cada 28 días?</p>', '<p className="text-[14px] text-ink/65">¿Cuántos contactos quieres cada 28 días?</p>'),
+    ('Mi meta: {num0(v)} contactos</label>', 'Mi meta: {num0(v)} contactos</label>'),
+    ('aria-valuetext={`${v} contactos`}', 'aria-valuetext={`${v} contactos`}'),
+    ('aria-label="Tu meta de contactos"', 'aria-label="Tu meta de contactos"'),
     ('"Casi clavado. Conoces tu negocio como la palma de tu mano."', '"Casi clavado. Conoces tu despacho como la palma de tu mano."'),
-    ('{ t: "Con meta", como: "Ponerte una meta de contactos",', '{ t: "Con meta", como: "Ponerte una meta de consultas",'),
+    ('{ t: "Con meta", como: "Ponerte una meta de contactos",', '{ t: "Con meta", como: "Ponerte una meta de contactos",'),
 ]
 
 TEXTOS = [
@@ -166,49 +166,49 @@ def bloque(texto, empieza, nuevo, nombre):
 
 SUENOS = [
     # Las cuatro cifras del simulador: consultas al mes, piden cita, asuntos, facturación
-    ('<Cifra t="Contactos al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unos ${num(r.totalHoy)} al mes`} />', '<Cifra t="Consultas al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unas ${num(r.totalHoy)} al mes`} />'),
-    ('<Cifra t="Piden visita" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de los contactos`} />', '<Cifra t="Piden cita" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de las consultas`} />'),
-    ('<Cifra t="Obras" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 firman`} />', '<Cifra t="Asuntos" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 encargan`} />'),
-    ('<Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por obra`} />', '<Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por asunto`} />'),
-    ('<>Con <strong>{eur(gasto)}</strong> al mes, cada contacto de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con los contactos que llegan solos: unos <strong>{num(r.organicos)}</strong> al mes. </>}', '<>Con <strong>{eur(gasto)}</strong> al mes, cada consulta de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con las consultas que llegan solas: unas <strong>{num(r.organicos)}</strong> al mes. </>}'),
-    ('al mes y mantener los contactos de hoy: <strong>', 'al mes y mantener las consultas de hoy: <strong>'),
-    ('<>Con el SEO un {pct(seo)} arriba tendrías unos {num(r.organicos)} contactos al mes sin pagar anuncios.</>', '<>Con el SEO un {pct(seo)} arriba tendrías unas {num(r.organicos)} consultas al mes sin pagar anuncios.</>'),
+    ('<Cifra t="Contactos al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unos ${num(r.totalHoy)} al mes`} />', '<Cifra t="Contactos al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unos ${num(r.totalHoy)} al mes`} />'),
+    ('<Cifra t="Piden visita" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de los contactos`} />', '<Cifra t="Piden primera consulta" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de los contactos`} />'),
+    ('<Cifra t="Obras" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 firman`} />', '<Cifra t="Casos" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 contactos`} />'),
+    ('<Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por obra`} />', '<Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por caso`} />'),
+    ('<>Con <strong>{eur(gasto)}</strong> al mes, cada contacto de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con los contactos que llegan solos: unos <strong>{num(r.organicos)}</strong> al mes. </>}', '<>Con <strong>{eur(gasto)}</strong> al mes, cada contacto de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con los contactos que llegan solos: unos <strong>{num(r.organicos)}</strong> al mes. </>}'),
+    ('al mes y mantener los contactos de hoy: <strong>', 'al mes y mantener los contactos de hoy: <strong>'),
+    ('<>Con el SEO un {pct(seo)} arriba tendrías unos {num(r.organicos)} contactos al mes sin pagar anuncios.</>', '<>Con el SEO un {pct(seo)} arriba tendrías unos {num(r.organicos)} contactos al mes sin pagar anuncios.</>'),
     ('La medición de los anuncios está incompleta: estas cifras valen para jugar, no para quitar campañas.', 'La medición de los anuncios está incompleta: estas cifras valen para pensar, no para quitar campañas.'),
-    ('así que uso un supuesto de {eur(cpl)} por contacto (cámbialo abajo).', 'así que uso un supuesto de {eur(cpl)} por consulta (cámbialo abajo).'),
-    ('<p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} contactos de anuncios, {num(base.contactos)} contactos en total y {num(base.visitasPedidas)} visitas pedidas.', '<p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} consultas de anuncios, {num(base.contactos)} consultas en total y {num(base.visitasPedidas)} citas pedidas.'),
-    ('De cada 100 contactos, firman<input', 'De cada 100 consultas, encargan el asunto<input'),
-    ('<span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene firmas de este periodo.</span>', '<span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene asuntos de este periodo.</span>'),
-    ('Cada obra, de media (€)<input', 'Honorarios medios por asunto (€)<input'),
-    ('Coste por contacto supuesto (€)<input', 'Coste por consulta supuesto (€)<input'),
-    ('habrían llegado unos <strong>{num(extra)} contactos más</strong> ({num(c)} en total de anuncios). Cada uno de esos contactos extra te habría costado unos', 'habrían llegado unas <strong>{num(extra)} consultas más</strong> ({num(c)} en total de anuncios). Cada una de esas consultas extra te habría costado unos'),
-    ('más caro que los de ahora, porque los primeros euros son siempre los que mejor rinden.', 'más caro que las de ahora, porque los primeros euros son siempre los que mejor rinden.'),
+    ('así que uso un supuesto de {eur(cpl)} por contacto (cámbialo abajo).', 'así que uso un supuesto de {eur(cpl)} por contacto (cámbialo abajo).'),
+    ('<p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} contactos de anuncios, {num(base.contactos)} contactos en total y {num(base.visitasPedidas)} visitas pedidas.', '<p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} contactos de anuncios, {num(base.contactos)} contactos en total y {num(base.visitasPedidas)} primeras consultas pedidas.'),
+    ('De cada 100 contactos, firman<input', 'De cada 100 contactos, acaban en caso<input'),
+    ('<span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene firmas de este periodo.</span>', '<span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene casos de este periodo.</span>'),
+    ('Cada obra, de media (€)<input', 'Honorarios medios por caso (€)<input'),
+    ('Coste por contacto supuesto (€)<input', 'Coste por contacto supuesto (€)<input'),
+    ('habrían llegado unos <strong>{num(extra)} contactos más</strong> ({num(c)} en total de anuncios). Cada uno de esos contactos extra te habría costado unos', 'habrían llegado unos <strong>{num(extra)} contactos más</strong> ({num(c)} en total de anuncios). Cada uno de esos contactos extra te habría costado unos'),
+    ('más caro que los de ahora, porque los primeros euros son siempre los que mejor rinden.', 'más caro que los de ahora, porque los primeros euros son siempre los que mejor rinden.'),
     # Tipos de meta de un despacho (las claves no cambian: las usa la lógica)
-    ('obras: { t: "Obras al año", unidad: "obras", icono: "casa", color: C.ventas },', 'obras: { t: "Asuntos nuevos al año", unidad: "asuntos", icono: "documento", color: C.ventas },'),
-    ('contactos: { t: "Contactos al mes", unidad: "contactos", icono: "persona", color: C.web },', 'contactos: { t: "Consultas al mes", unidad: "consultas", icono: "persona", color: C.web },'),
-    ('ticket: { t: "Lo que gasta cada cliente", unidad: "€ por obra", icono: "estrella", color: C.camino },', 'ticket: { t: "Honorarios medios por asunto", unidad: "€ por asunto", icono: "estrella", color: C.camino },'),
+    ('obras: { t: "Obras al año", unidad: "obras", icono: "casa", color: C.ventas },', 'obras: { t: "Casos nuevos al año", unidad: "casos", icono: "documento", color: C.ventas },'),
+    ('contactos: { t: "Contactos al mes", unidad: "contactos", icono: "persona", color: C.web },', 'contactos: { t: "Contactos al mes", unidad: "contactos", icono: "persona", color: C.web },'),
+    ('ticket: { t: "Lo que gasta cada cliente", unidad: "€ por obra", icono: "estrella", color: C.camino },', 'ticket: { t: "Honorarios medios por caso", unidad: "€ por caso", icono: "estrella", color: C.camino },'),
     ('capacidadTexto = "¿Cuántas obras puedes llevar al mes?"', 'capacidadTexto = "' + T.CAPACIDAD + '"'),
     ('"Un sueño grande: otra empresa dentro de la tuya"', '"Un sueño grande: otro despacho dentro del tuyo"'),
-    ('`Hoy cada cliente gasta de media ${eur(hoy)}${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene firmas de este periodo)" : " (según tu CRM)"}. Quieres clientes de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`', '`Hoy cada asunto deja de media ${eur(hoy)} de honorarios${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene asuntos de este periodo)" : " (según tu CRM)"}. Quieres asuntos de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`'),
-    ('"Esto no se consigue invirtiendo más en los mismos anuncios: se consigue hablando a otra gente. Haría falta una página distinta para ese cliente (otras fotos, otros precios, otro tono), campañas dirigidas a ese público y una prueba A/B para medir si responde."', '"Esto no se consigue con más anuncios: se consigue hablando a otro cliente. Haría falta una página pensada para empresas o asuntos de más cuantía (otro tono, casos tipo inventados, el equipo y el método), presencia en Google y en las IA para esas búsquedas, artículos que demuestren criterio y una prueba A/B que mida si responde."'),
+    ('`Hoy cada cliente gasta de media ${eur(hoy)}${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene firmas de este periodo)" : " (según tu CRM)"}. Quieres clientes de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`', '`Hoy cada caso deja de media ${eur(hoy)} de honorarios${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene casos de este periodo)" : " (según tu CRM)"}. Quieres casos de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`'),
+    ('"Esto no se consigue invirtiendo más en los mismos anuncios: se consigue hablando a otra gente. Haría falta una página distinta para ese cliente (otras fotos, otros precios, otro tono), campañas dirigidas a ese público y una prueba A/B para medir si responde."', '"Esto no se consigue con más anuncios: se consigue hablando a otro cliente. Haría falta una página pensada para empresas o casos de más cuantía (otro tono, casos tipo inventados, el equipo y el método), presencia en Google y en las IA para esas búsquedas, artículos que demuestren criterio y una prueba A/B que mida si responde."'),
     ('"Puedes tener las dos cosas a la vez: la mayoría de clientes de hoy y una parte de clientes de más nivel. Dinos qué reparto quieres (por ejemplo, 80 y 20) y lo montamos por separado para que cada público vea lo suyo."', '"Puedes tener las dos cosas a la vez: seguir atendiendo a quien te consulta hoy y dirigirte también a ese otro cliente. Dinos qué reparto quieres (por ejemplo, 80 y 20) y lo montamos por separado para que cada público vea lo suyo."'),
     ('"Con una diferencia tan grande, lo honesto es decirte que es casi otra marca: se puede, pero lleva meses y un presupuesto propio. Mejor empezar con un escalón intermedio."', '"Con una diferencia tan grande, lo honesto es decirte que es casi otro despacho: se puede intentar, pero lleva meses y un presupuesto propio. Mejor empezar con un escalón intermedio."'),
-    ('" (con una tasa de firma supuesta del 8 %, tu CRM aún no tiene firmas de este periodo)"', '" (suponiendo que 8 de cada 100 consultas acaban en asunto, porque tu CRM aún no tiene asuntos de este periodo)"'),
-    ('`Haría falta pasar de ${num(ritmo.contactosMes)} a unos ${num(contactosNecesarios)} contactos al mes.', '`Haría falta pasar de ${num(ritmo.contactosMes)} a unas ${num(contactosNecesarios)} consultas al mes.'),
+    ('" (con una tasa de firma supuesta del 8 %, tu CRM aún no tiene firmas de este periodo)"', '" (suponiendo que 8 de cada 100 contactos acaban en caso, porque tu CRM aún no tiene casos de este periodo)"'),
+    ('`Haría falta pasar de ${num(ritmo.contactosMes)} a unos ${num(contactosNecesarios)} contactos al mes.', '`Haría falta pasar de ${num(ritmo.contactosMes)} a unos ${num(contactosNecesarios)} contactos al mes.'),
     ('"mucho; mejor combinarlo con SEO, reseñas y una web que convierta más" : "demasiado; por aquí no se llega solo con anuncios. Haría falta otro público, otra oferta u otra zona"', '"mucho; mejor combinarlo con SEO, reseñas y una web que convierta más" : "demasiado; por aquí no se llega solo con anuncios. Haría falta otro público, otra área u otra zona"'),
     ('"Lo importante aquí es no bajar la guardia: mantener los anuncios que funcionan y cuidar las reseñas."', '"Lo importante aquí es no bajar la guardia: mantener los anuncios que funcionan y contestar las reseñas."'),
-    ('"Cuenta con una tasa de firma supuesta del 8 %, porque tu CRM aún no tiene firmas de este periodo. Con firmas reales el cálculo se afina solo."', '"Cuenta con que 8 de cada 100 consultas acaban en asunto (supuesto), porque tu CRM aún no tiene asuntos de este periodo. Con datos reales el cálculo se afina solo."'),
-    ('`Tope de capacidad: hoy puedes llevar ${num(cap)} obras al mes y esta meta pide unas ${num(obrasMesMeta)}. Antes de traer más contactos habría que crecer el equipo o escalonar la meta; no te traeremos más de lo que puedes atender bien.`', '`Con tu equipo de hoy caben ${num(cap)} asuntos al mes; para llegar a ${num(obrasMesMeta)} habría que crecer el equipo o derivar. Antes de traer más consultas hay que resolver eso: no te traeremos más de lo que puedes atender bien.`'),
+    ('"Cuenta con una tasa de firma supuesta del 8 %, porque tu CRM aún no tiene firmas de este periodo. Con firmas reales el cálculo se afina solo."', '"Cuenta con que 8 de cada 100 contactos acaban en caso (supuesto), porque tu CRM aún no tiene casos de este periodo. Con datos reales el cálculo se afina solo."'),
+    ('`Tope de capacidad: hoy puedes llevar ${num(cap)} obras al mes y esta meta pide unas ${num(obrasMesMeta)}. Antes de traer más contactos habría que crecer el equipo o escalonar la meta; no te traeremos más de lo que puedes atender bien.`', '`Con tu equipo de hoy caben ${num(cap)} casos al mes; para llegar a ${num(obrasMesMeta)} habría que crecer el equipo o derivar. Antes de traer más contactos hay que resolver eso: no te traeremos más de lo que puedes atender bien.`'),
     ('`Para «${m.linea}» hace falta su propia página y su propia campaña: cada tipo de obra se vende con sus fotos y sus palabras.`', '`Para «${m.linea}» hace falta su propia página, sus búsquedas en Google, su campaña y artículos de criterio sobre ese tema: cada área se explica con sus palabras.`'),
-    ('${m.linea ? "Tipo de obra: " + m.linea + "\\n" : ""}', '${m.linea ? "Tipo de asunto: " + m.linea + "\\n" : ""}'),
+    ('${m.linea ? "Tipo de obra: " + m.linea + "\\n" : ""}', '${m.linea ? "Tipo de caso: " + m.linea + "\\n" : ""}'),
     ('placeholder={tipo === "factura" ? "3000000" : tipo === "ticket" ? "100000" : "50"}', 'placeholder={tipo === "factura" ? "600000" : tipo === "ticket" ? "4000" : "20"}'),
-    ('<legend>¿De qué tipo de obra? (opcional)</legend>', '<legend>¿De qué tipo de asunto? (opcional)</legend>'),
+    ('<legend>¿De qué tipo de obra? (opcional)</legend>', '<legend>¿De qué tipo de caso? (opcional)</legend>'),
     ('placeholder="Por ejemplo, 8"', 'placeholder="Por ejemplo, 20"'),
-    ('placeholder={tipo === "ticket" ? "Quiero clientes que gasten más, pero sin perder a los de ahora" : "Por ejemplo: abrir en otra ciudad, salir en una revista…"}', 'placeholder={tipo === "ticket" ? "Quiero asuntos de empresa, sin dejar de atender a los particulares" : "Por ejemplo: ser referencia en acoso laboral en Madrid"}'),
-    ('<Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (tasa de firma, importe por obra). Es una orientación para hablarlo, no una promesa." />', '<Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (consultas que acaban en asunto, honorarios por asunto). Es una orientación para hablarlo, no una promesa." />'),
-    ('La mesa dice: <strong>{num(prevision)} contactos</strong>', 'La mesa dice: <strong>{num(prevision)} consultas</strong>'),
-    ('llegaron <strong>{num(real)} contactos</strong>', 'llegaron <strong>{num(real)} consultas</strong>'),
+    ('placeholder={tipo === "ticket" ? "Quiero clientes que gasten más, pero sin perder a los de ahora" : "Por ejemplo: abrir en otra ciudad, salir en una revista…"}', 'placeholder={tipo === "ticket" ? "Quiero casos de empresa, sin dejar de atender a los particulares" : "Por ejemplo: ser referencia en acoso laboral en Madrid"}'),
+    ('<Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (tasa de firma, importe por obra). Es una orientación para hablarlo, no una promesa." />', '<Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (contactos que acaban en caso, honorarios por caso). Es una orientación para hablarlo, no una promesa." />'),
+    ('La mesa dice: <strong>{num(prevision)} contactos</strong>', 'La mesa dice: <strong>{num(prevision)} contactos</strong>'),
+    ('llegaron <strong>{num(real)} contactos</strong>', 'llegaron <strong>{num(real)} contactos</strong>'),
     ('"Has ganado tú. Conoces tu negocio mejor que la media."', '"Has ganado tú. Conoces tu despacho mejor que la media."'),
-    ('{ id: "meta", t: "Ponte una meta", sub: "Contactos cada 28 días",', '{ id: "meta", t: "Ponte una meta", sub: "Consultas cada 28 días",'),
+    ('{ id: "meta", t: "Ponte una meta", sub: "Contactos cada 28 días",', '{ id: "meta", t: "Ponte una meta", sub: "Contactos cada 28 días",'),
 ]
 
 # 44 px mínimo (robot de aceptación, 27-oct-2026). Fallo del ORIGINAL de Reformadísimo, avisado a Ig para corregirlo allí:
@@ -219,6 +219,34 @@ SUENOS += [('ml-2 inline-flex min-h-[32px] items-center rounded-full', 'ml-2 inl
 MESA += [('className="inline-flex min-h-[40px] it', 'className="inline-flex min-h-[44px] it'),
          # Tarjetas de cifras: a 320 px no caben dos por fila ("CONSULTAS" se salía 1 px). Trampa 23 del prompt: una columna. También del original.
          ('<div className="grid grid-cols-2 gap-3 lg:grid-cols-4">', '<div className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 lg:grid-cols-4">')]
+
+# ── Revisión antes de enseñarlo a Jesús (27-oct-2026): una palabra para cada cosa ──
+# visita (entra en la web) · contacto (deja sus datos en la web o el chat) · primera consulta (reunión) · consulta (CRM) · caso
+MESA += [
+    ('${dp > 0 ? "Suben" : "Bajan"} las peticiones un', '${dp > 0 ? "Suben" : "Bajan"} los contactos un'),
+    ("`El canal que más peticiones trae es ${canales[0][0]}", "`El canal que más contactos trae es ${canales[0][0]}"),
+    ('<Caja titulo="De dónde vienen las peticiones"', '<Caja titulo="De dónde vienen los contactos"'),
+    ('sub="peticiones" />', 'sub="contactos" />'),
+    ('<dt className="text-ink/55">Peticiones que llegan a la web</dt>', '<dt className="text-ink/55">Contactos que llegan a la web</dt>'),
+    ('<dt className="font-semibold text-ink">Coste por petición</dt>', '<dt className="font-semibold text-ink">Coste por contacto en la web</dt>'),
+    ('Las peticiones reales, por canal, están arriba y en el Resumen.', 'Los contactos reales, por canal, están arriba y en el Resumen.'),
+    # El despacho solo anuncia en Google: sin tarjetas de Meta ni ChatGPT a 0 € (un cero parece un fallo)
+    ('  meta: { nombre: "Meta (Facebook e Instagram)", color: COLOR.rosa },\n  chatgpt: { nombre: "ChatGPT Ads", color: COLOR.salvia },\n', ''),
+    # Con una sola plataforma, "rinde mejor/peor que la media" se compara consigo misma: no se enseña
+    ('if (!cpp || !mediaPet) return null;', 'if (!cpp || !mediaPet || Object.keys(PLATAFORMA).length < 2) return null;'),
+]
+
+# ── Guía comprensible (27-oct-2026, antes de enseñarla a Jesús). Propuesto a Ig para llevarlo también a Reformadísimo ──
+MESA += [
+    # "Más herramientas" ya es una casilla que se abre: dentro no hace falta otro "Abrir" (había que abrir dos veces)
+    # Que la guía amarilla no llegue por sorpresa: se avisa al entrar, con la salida a la vista
+    ('<p className="mt-4 text-[16px] leading-relaxed text-ink/80">No necesitas entender de marketing. Pulsa cualquier apartado y te lo explicamos.</p>', '<p className="mt-4 text-[16px] leading-relaxed text-ink/80">No necesitas entender de marketing. Al entrar, una tira amarilla te enseña la mesa en 9 pasos cortos; si prefieres verla a tu aire, pulsa la ×.</p>'),
+    ('function MasHerramientas({ clave, herramientas }: { clave: string; herramientas: React.ReactNode }) {\n  const [ab, setAb] = useState(false);', 'function MasHerramientas({ clave, herramientas }: { clave: string; herramientas: React.ReactNode }) {\n  const [ab, setAb] = useState(true);'),
+]
+ALEGRIA += [
+    # En el móvil, la tira de la guía enseñaba solo el título del paso: ahora también qué hacer, en una frase
+    ('<span className="block truncate text-[14px] font-semibold leading-tight text-ink">{pasos[paso!].t}</span></span>', '<span className="block text-[14px] font-semibold leading-tight text-ink">{pasos[paso!].t}</span><span className="mt-0.5 block text-[13px] leading-snug text-ink/75">{pasos[paso!].d}</span></span>'),
+]
 
 mesa = cambia((REF / "components/mesa/Mesa.tsx").read_text(encoding="utf-8"), MESA, "Mesa.tsx")
 (AQUI / "components/mesa/Mesa.tsx").write_text(mesa, encoding="utf-8")

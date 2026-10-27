@@ -6,14 +6,14 @@ Despacho: consultas, primeras consultas, hojas de encargo y casos. Secreto profe
 """
 
 GUIA_PASOS = '''export const GUIA_PASOS: { icono: string; color: string; t: string; d: string; ancla?: string }[] = [
-  { icono: "campana", color: "#a3505a", t: "Mira la primera línea", d: "Si es roja, hay algo que atender; si es verde, todo va bien. Pulsa el + para ver por qué.", ancla: "pl-conclusion" },
-  { icono: "check", color: "#c79a00", t: "Haz lo primero de hoy", d: "En «Lo primero que haría hoy» tienes una sola cosa que hacer. Cuando la revises, pulsa «Ya lo he revisado».", ancla: "pl-hoy" },
-  { icono: "grid", color: "#2a6f86", t: "Mira las baterías", d: "Cada parte del despacho tiene una batería: llena y verde, bien; naranja, mira esto; roja, importante. Pulsa una y verás el detalle.", ancla: "pl-temas" },
-  { icono: "moneda", color: "#7a4fd0", t: "Lee las cuatro cifras", d: "Cuántas personas dejaron sus datos, cuántas piden primera consulta, qué cuesta cada consulta de los anuncios y tu nota en Google. Si una no se entiende, pulsa el ?.", ancla: "pl-cifras" },
-  { icono: "mando", color: "#7a4fd0", t: "Sueña y haz cuentas", d: "Arriba, en «Tus sueños y tus cuentas»: mueve la inversión, marca tu meta y ponnos a prueba. Son estimaciones, para pensar.", ancla: "mesa-suenos" },
-  { icono: "catalejo", color: "#1d6b3a", t: "Baja a todas las cifras", d: "Las pestañas separan los temas: Consultas, Anuncios, La web, Google, Ficha y redes. En cada gráfica, la estrella es el mejor día.", ancla: "mesa-cifras-todas" },
-  { icono: "chat", color: "#d9822b", t: "Pregunta lo que quieras", d: "Escribe o dicta una pregunta como se la harías a una persona. Contesta con tus cifras de 28 días.", ancla: "pl-pregunta" },
-  { icono: "sobre", color: "#2f6fd0", t: "Recíbelo por correo", d: "En «Más herramientas» puedes pedir el resumen cada día, cada lunes o cada mes, sin tener que entrar.", ancla: "pl-mas" },
+  { icono: "campana", color: "#a3505a", t: "Mira la primera línea", d: "Roja: hay algo que atender. Verde: todo va bien. El + te dice por qué.", ancla: "pl-conclusion" },
+  { icono: "check", color: "#c79a00", t: "Haz lo primero de hoy", d: "Una sola tarea al día. Cuando la mires, pulsa «Ya lo he revisado».", ancla: "pl-hoy" },
+  { icono: "grid", color: "#2a6f86", t: "Mira las baterías", d: "Una por cada parte del despacho. Verde, bien; naranja, mírala; roja, importante.", ancla: "pl-temas" },
+  { icono: "moneda", color: "#7a4fd0", t: "Lee las cuatro cifras", d: "Lo esencial del mes en cuatro números. Si uno no se entiende, pulsa el ?.", ancla: "pl-cifras" },
+  { icono: "mando", color: "#7a4fd0", t: "Sueña y haz cuentas", d: "En «Tus sueños y tus cuentas» pruebas metas y cifras. Son estimaciones, para pensar.", ancla: "mesa-suenos" },
+  { icono: "catalejo", color: "#1d6b3a", t: "Baja a todas las cifras", d: "Más abajo está el detalle, separado por temas. Solo si te apetece.", ancla: "mesa-cifras-todas" },
+  { icono: "chat", color: "#d9822b", t: "Pregunta lo que quieras", d: "Escribe tu pregunta como se la harías a una persona.", ancla: "pl-pregunta" },
+  { icono: "sobre", color: "#2f6fd0", t: "Recíbelo por correo", d: "En «Más herramientas» pides un resumen por correo y ya no tienes que entrar.", ancla: "pl-mas" },
   { icono: "escudo", color: "#25a244", t: "Si ves algo raro, avísanos", d: "Abajo del todo está «Avisar de un error». Lo miramos y lo arreglamos." },
 ];'''
 
@@ -57,7 +57,7 @@ EXPLICA = '''export const EXPLICA: Record<string, string> = {
   "Qué hace la gente en cada página": "La lupa mira, página a página, si bajan, si se quedan y si se van enseguida.",
   "Dónde pulsan WhatsApp y llamar": "En qué páginas la gente pulsa el botón de WhatsApp o de llamar.",
   "Páginas de entrada": "La primera página que ve cada visita al llegar.",
-  "De dónde vienen las peticiones": "De cada persona que deja sus datos, por qué canal llegó: Google Ads, Google sin pagar, asistentes de IA, directo…",
+  "De dónde vienen los contactos": "De cada persona que deja sus datos, por qué canal llegó: Google Ads, Google sin pagar, asistentes de IA, directo…",
   "Lo más destacado": "Las tres o cuatro cosas que más han cambiado o más pesan en estas fechas, en una frase cada una.",
   "Recorrido de la web": "De todas las visitas, cuántas dejan sus datos y cuántas piden la primera consulta. Cada paso dice el % sobre el anterior.",
   "Recorrido comercial total": "Del CRM: consultas, primeras consultas, hojas de encargo y casos aceptados de la gente que entró en estas fechas.",
@@ -101,6 +101,6 @@ GLOSARIO = '''export const GLOSARIO: Record<string, string> = {
   "Posición": "El puesto en Google: 1 es el primero. Por debajo de 10 ya no sales en la primera página.",
 };'''
 
-NOTA_PUBLICO = "Podemos preparar la versión B de la web, orientada a empresas y asuntos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos."
+NOTA_PUBLICO = "Podemos preparar la versión B de la web, orientada a empresas y casos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos."
 LINEAS = ["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]
-CAPACIDAD = "¿Cuántos asuntos puedes llevar al mes?"
+CAPACIDAD = "¿Cuántos casos puedes llevar al mes?"

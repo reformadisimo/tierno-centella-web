@@ -36,7 +36,8 @@ export function datosDemo(hoy: string) {
       ga.push({ dia: d, canal, sesiones: s, usuarios: Math.round(s * 0.85), interes: Math.round(s * (0.45 + 0.2 * r())), clave: poisson(r, s * 0.02) });
     }
     const imp = Math.round(1500 * k * (0.8 + 0.4 * r()));
-    gsc.push({ dia: d, clics: Math.round(imp * (0.0045 + 0.002 * r())), impresiones: imp, posicion: Math.round((19 - 0.004 * dias(desde, d).length + 2 * r()) * 10) / 10 });
+    // Search Console va unos 3 días por detrás: los últimos días aún no tienen datos (como en la realidad)
+    if (dias(d, hoy).length > 3) gsc.push({ dia: d, clics: Math.round(imp * (0.0045 + 0.002 * r())), impresiones: imp, posicion: Math.round((19 - 0.004 * dias(desde, d).length + 2 * r()) * 10) / 10 });
     if (d >= hoy.slice(0, 8) + "01" || dias(d, hoy).length <= 60) {
       const fila = (plat: string, camp: string, base: number, cpc: number, conv: number) => { const coste = Math.round(base * k * (0.7 + 0.6 * r()) * 100) / 100; const clics = Math.round(coste / cpc); diario.push([d, plat, camp, coste, clics, clics * (12 + Math.round(r() * 10)), poisson(r, conv * k)]); };
       fila("google", "Acoso laboral", 13, 1.6, 0.4); fila("google", "Despido", 9, 1.4, 0.15);
@@ -79,8 +80,10 @@ export function detalleDemo(desde: string, hasta: string) {
   const gscPag = PAGINAS.slice(0, 8).map((p, i) => ({ pagina: `https://tiernocentella.es${p}`, clics: Math.round(n * 3 * 0.7 ** i), impresiones: Math.round(n * 450 * 0.7 ** i), posicion: Math.round((8 + 15 * r()) * 10) / 10 }));
   const tc = gscPag.reduce((a, x) => a + x.clics, 0), ti = gscPag.reduce((a, x) => a + x.impresiones, 0);
   const entradas = PAGINAS.slice(0, 10).map((p, i) => ({ pagina: p, sesiones: Math.round(n * 12 * 0.8 ** i), interes_pct: Math.round(40 + 30 * r()), clave: Math.round(n * 0.25 * 0.8 ** i) }));
-  const orig: [string, number][] = [["Calculadora web", 0.3], ["Google (sin pagar)", 0.24], ["Asistente (chat)", 0.2], ["Google Ads", 0.16], ["Recomendado", 0.1]];
-  const crm = orig.map(([o, p]) => { const leads = Math.max(1, Math.round(n * 1.25 * p * (0.8 + 0.4 * r()))); const visitas = Math.round(leads * (o === "Recomendado" ? 0.7 : 0.33)); const presupuestos = Math.round(visitas * 0.6); const firmados = Math.round(presupuestos * (o === "Recomendado" ? 0.8 : 0.6)); return { origen: o, leads, visitas, presupuestos, firmados, firmado: firmados * Math.round(1800 + 1400 * r()), facturado: Math.round(firmados * 900 * r()), descartados: Math.round(leads * 0.3), respondidos: leads, horas_resp: leads * (2 + 6 * r()), vencidas: Math.round(r() * 3) }; });
+  // El CRM junta todos los canales: los contactos de la web (unos 1,2 al día) más quien llama o escribe por WhatsApp.
+  // Por eso tiene más consultas que contactos la web, como dice la propia mesa ("por eso pueden ser más").
+  const orig: [string, number][] = [["Calculadora web", 0.22], ["Teléfono", 0.22], ["Google (sin pagar)", 0.16], ["Asistente (chat)", 0.12], ["Google Ads", 0.12], ["WhatsApp", 0.08], ["Recomendado", 0.08]];
+  const crm = orig.map(([o, p]) => { const leads = Math.max(1, Math.round(n * 1.9 * p * (0.8 + 0.4 * r()))); const visitas = Math.round(leads * (o === "Recomendado" ? 0.7 : 0.33)); const presupuestos = Math.round(visitas * 0.6); const firmados = Math.round(presupuestos * (o === "Recomendado" ? 0.8 : 0.6)); return { origen: o, leads, visitas, presupuestos, firmados, firmado: firmados * Math.round(1800 + 1400 * r()), facturado: Math.round(firmados * 900 * r()), descartados: Math.round(leads * 0.3), respondidos: leads, horas_resp: leads * (2 + 6 * r()), vencidas: Math.round(r() * 3) }; });
   const fr = (clave: string, ses: number, ip: number, ev: number) => ({ clave, sesiones: Math.round(ses), interes: Math.round(ses * ip), eventos: Math.round(ev), segundos: Math.round(ses * ip * (40 + 50 * r())) });
   const rebote = {
     dispositivo: [fr("mobile", n * 20, 0.48 + 0.08 * r(), n * 0.6), fr("desktop", n * 9, 0.62 + 0.08 * r(), n * 0.4), fr("tablet", n * 1, 0.55, n * 0.03)],
