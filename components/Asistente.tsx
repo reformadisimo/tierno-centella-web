@@ -26,6 +26,9 @@ const TEXTOS = {
     bienvenida:
       'Hola. Soy el asistente del despacho, una inteligencia artificial. Te oriento en despidos, acoso laboral, incapacidad, embarazo y conciliación: cuéntame qué te pasa y te digo qué plazos corren y cuál es el siguiente paso. Puedo equivocarme, así que lo que te diga conviene que lo revise un abogado.',
     escribiendo: 'Escribiendo...',
+    escuchar: 'Escúchalo',
+    pausar: 'Parar',
+    cargandoVoz: 'Cargando...',
     llamar: 'Llamar',
     teLlamamos: 'Que te llamemos',
     herramientas: 'Herramientas',
@@ -69,6 +72,9 @@ const TEXTOS = {
     bienvenida:
       "Hello. I'm the firm's assistant, an artificial intelligence. I can guide you on dismissals, workplace harassment, permanent disability, pregnancy and work-life balance: tell me what's happening and I'll tell you which deadlines apply and what to do next. I can make mistakes, so a lawyer should review what I tell you.",
     escribiendo: 'Typing...',
+    escuchar: 'Listen',
+    pausar: 'Stop',
+    cargandoVoz: 'Loading...',
     llamar: 'Call',
     teLlamamos: 'Call me back',
     herramientas: 'Tools',
@@ -180,6 +186,111 @@ function leerGuardado(): Guardado | null {
   }
 }
 
+// Texto para la voz: sin formato, sin enlaces y con los símbolos dichos en palabras.
+function textoParaVoz(texto: string, idioma: Idioma) {
+  const en = idioma === 'en';
+  return texto
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/(^|\s)\/[a-z0-9/-]+/gi, '$1')
+    .replace(/^\s*[-*]\s+/gm, '')
+    .replace(/\+\s*IVA/g, en ? 'plus VAT' : 'más IVA')
+    .replace(/\s*€/g, en ? ' euros' : ' euros')
+    .replace(/%/g, en ? ' percent' : ' por ciento')
+    .replace(/(\d)\s*[–-]\s*(\d)/g, en ? '$1 to $2' : '$1 a $2')
+    .replace(/\s+([,.;:!?])/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 1500);
+}
+
+// Reproducción con Web Audio (en iPhone, un <audio> deja el micro inservible después); si falla, <audio>.
+let ctxAudio: AudioContext | null = null;
+let sonando: { parar: () => void } | null = null;
+function contexto() {
+  if (ctxAudio) return ctxAudio;
+  const AC = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+  if (!AC) return null;
+  try {
+    ctxAudio = new AC();
+  } catch {
+    ctxAudio = null;
+  }
+  return ctxAudio;
+}
+
+function BotonVoz({ texto, idioma, etiquetas }: { texto: string; idioma: Idioma; etiquetas: { escuchar: string; pausar: string; cargandoVoz: string } }) {
+  const [estado, setEstado] = useState<'' | 'cargando' | 'sonando'>('');
+  const parar = useRef<() => void>(() => {});
+  const pulsar = async () => {
+    if (estado) {
+      parar.current();
+      return;
+    }
+    sonando?.parar();
+    const limpio = textoParaVoz(texto, idioma);
+    if (!limpio) return;
+    setEstado('cargando');
+    const url = `/api/voz?text=${encodeURIComponent(limpio)}`;
+    let cancelado = false;
+    const terminar = () => {
+      setEstado('');
+      if (sonando?.parar === parar.current) sonando = null;
+    };
+    const ctx = contexto();
+    try {
+      if (!ctx) throw new Error('sin web audio');
+      if (ctx.state === 'suspended') await ctx.resume();
+      parar.current = () => {
+        cancelado = true;
+        terminar();
+      };
+      sonando = { parar: parar.current };
+      const buf = await fetch(url).then((r) => {
+        if (!r.ok) throw new Error('voz');
+        return r.arrayBuffer();
+      });
+      const audio = await ctx.decodeAudioData(buf);
+      if (cancelado) return;
+      const src = ctx.createBufferSource();
+      src.buffer = audio;
+      src.connect(ctx.destination);
+      src.onended = terminar;
+      parar.current = () => {
+        try {
+          src.onended = null;
+          src.stop();
+        } catch {}
+        terminar();
+      };
+      sonando = { parar: parar.current };
+      src.start(0);
+      setEstado('sonando');
+    } catch {
+      if (cancelado) return;
+      const a = new Audio(url);
+      parar.current = () => {
+        a.pause();
+        terminar();
+      };
+      sonando = { parar: parar.current };
+      a.onplaying = () => setEstado('sonando');
+      a.onended = terminar;
+      a.onerror = terminar;
+      a.play().catch(terminar);
+    }
+  };
+  return (
+    <button type="button" className={`as-voz${estado ? ' activo' : ''}`} onClick={pulsar} aria-pressed={estado === 'sonando'}>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        {estado === 'sonando' ? <path d="M7 5h3v14H7zM14 5h3v14h-3z" /> : <path d="M11 5 6 9H3v6h3l5 4V5zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
+      </svg>
+      {estado === 'cargando' ? etiquetas.cargandoVoz : estado === 'sonando' ? etiquetas.pausar : etiquetas.escuchar}
+    </button>
+  );
+}
+
 export default function Asistente() {
   const ruta = usePathname() || '/';
   const idioma = idiomaDe(ruta);
@@ -190,6 +301,7 @@ export default function Asistente() {
   const [escribiendo, setEscribiendo] = useState(false);
   const [oyendo, setOyendo] = useState(false);
   const [avisoVoz, setAvisoVoz] = useState('');
+  const [conVoz, setConVoz] = useState(false);
   const reconocedor = useRef<any>(null);
   const textoBase = useRef('');
   function hablar() {
@@ -243,6 +355,14 @@ export default function Asistente() {
   const campo = useRef<HTMLTextAreaElement>(null);
 
   // Recupera la conversación de esta visita.
+  // La voz es un extra opcional: el botón solo sale si está configurada.
+  useEffect(() => {
+    if (!abierto || conVoz) return;
+    fetch('/api/voz?estado=1')
+      .then((r) => r.json())
+      .then((d) => setConVoz(!!d.disponible))
+      .catch(() => {});
+  }, [abierto, conVoz]);
   useEffect(() => {
     const g = leerGuardado();
     setConversacion(g?.id || nuevoId());
@@ -406,6 +526,7 @@ export default function Asistente() {
             </figure>
             <div className="burbuja burbuja-asistente">
               <p>{t.bienvenida}</p>
+              {conVoz && <BotonVoz texto={t.bienvenida} idioma={idioma} etiquetas={t} />}
             </div>
             {mensajes.length === 0 && (
               <div className="asistente-sugerencias">
@@ -422,11 +543,10 @@ export default function Asistente() {
                   {m.content}
                 </div>
               ) : (
-                <div
-                  key={i}
-                  className="burbuja burbuja-asistente"
-                  dangerouslySetInnerHTML={{ __html: m.content ? formatear(m.content) : `<p>${t.escribiendo}</p>` }}
-                />
+                <div key={i} className="burbuja burbuja-asistente">
+                  <div dangerouslySetInnerHTML={{ __html: m.content ? formatear(m.content) : `<p>${t.escribiendo}</p>` }} />
+                  {conVoz && m.content && !(escribiendo && i === mensajes.length - 1) && <BotonVoz texto={m.content} idioma={idioma} etiquetas={t} />}
+                </div>
               ),
             )}
             {llamada && (

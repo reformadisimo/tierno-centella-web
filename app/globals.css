@@ -8420,3 +8420,6 @@ dl:hover .gl-picto{transform:rotate(-6deg) scale(1.06)}
 .mc-top li b,.mc-flujo li b{flex:none}
 .mc-clarity,.mc-flujo,.mc-top,.mc-paginas,.mc-lista-notas{grid-template-columns:minmax(0,1fr)}
 @media (max-width:1099px){.mc-centro{order:-1}}
+.as-voz{display:inline-flex;align-items:center;gap:6px;margin-top:8px;border:1px solid #c9d6e2;background:#fff;color:var(--tinta);font:inherit;font-size:.82rem;font-weight:700;padding:5px 12px;border-radius:999px;cursor:pointer}
+.as-voz.activo{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.as-voz:focus-visible{outline:3px solid #f2c14e;outline-offset:2px}
