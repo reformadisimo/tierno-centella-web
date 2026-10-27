@@ -2,7 +2,7 @@
 import type { Modulo, Reloj, Tarea, Resumen } from "@/lib/mesaTipos";
 import { LUZ, TEMAS_RESUMEN, primeraFrase, frasesDe, fechaEnPalabras, type Luz } from "@/lib/mesaTextos";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Loseta, Icono, ICONO_AREA, ICONO_CIFRA, ICONO_BARRA, FranjaConectado, Despedida, useSaludo, elige, CHISPA_TODO_BIEN, CHISPA_HECHO, CHISPA_SIN_TAREAS, CHISPA_TODO_REVISADO } from "@/components/mesa/Alegria";
+import { Loseta, Icono, ICONO_AREA, ICONO_CIFRA, ICONO_BARRA, FranjaConectado, Despedida, JuegaConTusCifras, MarcaTitulo, ICONO_MEDIDA, tinte, LogoCanal, LogoFila, useSaludo, elige, CHISPA_TODO_BIEN, CHISPA_HECHO, CHISPA_SIN_TAREAS, CHISPA_TODO_REVISADO } from "@/components/mesa/Alegria";
 /** Tierno Centella: la mesa no lee en voz alta (decisión de Ig, 27-oct-2026). */
 const SIN_VOZ = true;
 
@@ -321,9 +321,12 @@ function Caja({ titulo, fuente, children, className = "", accion }: { titulo: st
   return (
     <section className={`min-w-0 rounded-[22px] border border-line bg-white p-5 shadow-[0_22px_50px_-42px_rgba(17,52,61,0.55)] sm:p-6 ${className}`}>
       <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
-        <div>
-          <h2 className="font-serif text-[21px] font-medium italic leading-tight text-ink">{titulo}</h2>
-          {fuente ? <p className="mt-0.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink/40">{fuente}</p> : null}
+        <div className="flex min-w-0 items-center gap-3">
+          <MarcaTitulo titulo={titulo} tam={40} />
+          <div className="min-w-0">
+            <h2 className="font-serif text-[21px] font-medium italic leading-tight text-ink [overflow-wrap:anywhere]">{titulo}</h2>
+            {fuente ? <p className="mt-0.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink/40">{fuente}</p> : null}
+          </div>
         </div>
         {accion}
       </div>
@@ -392,6 +395,7 @@ function rangoDe(p: Preset, hoy: string): [string, string] {
 type Compara = "anterior" | "anio" | "no";
 
 type Pestana = "resumen" | "ventas" | "anuncios" | "web" | "google" | "redes";
+const ICONO_PESTANA: Record<Pestana, [string, string]> = { resumen: ["estrella", "#c79a00"], ventas: ["persona", "#2f6fd0"], anuncios: ["megafono", "#d93f3f"], web: ["globo", "#2a6f86"], google: ["lupa", "#1d6b3a"], redes: ["chat", "#d9822b"] };
 const PESTANAS: [Pestana, string][] = [["resumen", "Resumen"], ["ventas", "Consultas (CRM)"], ["anuncios", "Anuncios"], ["web", "La web"], ["google", "Google sin pagar"], ["redes", "Ficha de Google y redes"]];
 
 export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { datos: DatosMesa; temas?: Modulo[]; resumenHoy?: Resumen; tareas?: Tarea[]; relojes?: Reloj[] }) {
@@ -628,7 +632,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
           <nav className="relative mt-5 flex gap-1 overflow-x-auto pr-8 [mask-image:linear-gradient(to_right,black_calc(100%_-_36px),transparent)] sm:pr-0 sm:[mask-image:none]" role="tablist">
             {PESTANAS.map(([p, t]) => (
               <button key={p} role="tab" aria-selected={pestana === p} type="button" onClick={() => setPestana(p)} className={`whitespace-nowrap rounded-t-[14px] border-b-[3px] px-4 py-2.5 text-[15px] font-semibold transition-colors ${pestana === p ? "border-yellow text-ink" : "border-transparent text-ink/50 hover:text-ink"}`}>
-                {t}
+                <span className="inline-flex items-center gap-2"><span aria-hidden="true" className="grid h-6 w-6 place-items-center rounded-[8px] text-white" style={{ background: ICONO_PESTANA[p][1], opacity: pestana === p ? 1 : 0.55 }}><Icono n={ICONO_PESTANA[p][0]} className="h-4 w-4" /></span>{t}</span>
               </button>
             ))}
           </nav>
@@ -654,8 +658,8 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
               {kpis.map(({ m, extra }) => {
                 const v = m.f(T);
                 return (
-                  <button key={m.id} type="button" onClick={() => setMetrica(m.id)} className={`rounded-[20px] border bg-white p-4 text-left transition-colors ${metrica === m.id ? "border-teal shadow-[0_18px_40px_-30px_rgba(28,140,170,0.9)]" : "border-line hover:border-ink/30"}`}>
-                    <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-ink/50">{m.nombre}</p>
+                  <button key={m.id} type="button" onClick={() => setMetrica(m.id)} style={{ background: tinte((ICONO_MEDIDA[m.id] ?? ["estrella", "#1a3d47"])[1]) }} className={`rounded-[20px] border p-4 text-left transition-colors ${metrica === m.id ? "border-teal shadow-[0_18px_40px_-30px_rgba(28,140,170,0.9)]" : "border-line hover:border-ink/30"}`}>
+                    <span className="flex items-center gap-2.5"><Loseta n={(ICONO_MEDIDA[m.id] ?? ["estrella", "#1a3d47"])[0]} color={(ICONO_MEDIDA[m.id] ?? ["estrella", "#1a3d47"])[1]} tam={36} /><span className="text-[12px] font-bold uppercase tracking-[0.1em] text-ink/60">{m.nombre}</span></span>
                     <p className="mt-0.5 text-[12.5px] leading-snug text-ink/55">{m.ayuda}</p>
                     <p className="mt-1.5 font-serif text-[clamp(26px,3.4vw,34px)] font-medium leading-none text-ink">{Number.isFinite(v) ? m.formato(v) : "-"}</p>
                     <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[12px] text-ink/55">
@@ -667,10 +671,10 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes }: { da
                   </button>
                 );
               })}
-              <CifraFija nombre="Primeras consultas" ayuda="Primeras consultas hechas a quienes entraron en estas fechas, del CRM." v={detalle ? num(crmT.visitas) : errorDetalle ? "-" : "…"} antes={crmA ? num(crmA.visitas) : undefined} a={crmT.visitas} b={crmA?.visitas} />
-              <CifraFija nombre="Casos aceptados" ayuda="Casos con la hoja de encargo firmada, de quienes entraron en estas fechas (CRM)." v={detalle ? num(crmT.firm) : errorDetalle ? "-" : "…"} antes={crmA && crmT.firm ? num(crmA.firm) : undefined} a={crmT.firm} b={crmT.firm ? crmA?.firm : undefined} extra={crmT.imp ? eur(crmT.imp) : crmT.leads ? "Un caso puede tardar semanas en decidirse: las consultas de estas fechas aún están en marcha" : "Los casos antiguos llegarán con la base de clientes"} />
-              {(() => { const m = M("cpl"); const v = m.f(T); return <CifraFija nombre="Coste por contacto" ayuda={m.ayuda} v={T.ads.conv ? m.formato(v) : T.ads.coste ? "Sin contactos medidos" : "-"} antes={C && C.ads.conv ? m.formato(m.f(C)) : undefined} a={v} b={C ? m.f(C) : undefined} menosEsMejor extra={`${nf1.format(T.ads.conv)} contactos según las plataformas · ${eur(T.ads.coste)} invertidos`} />; })()}
-              <CifraFija nombre="Honorarios de los casos" ayuda="Honorarios previstos de los casos aceptados." v="Pendiente" extra="Falta apuntar los honorarios de cada caso" pendiente />
+              <CifraFija icono="comerciales" nombre="Primeras consultas" ayuda="Primeras consultas hechas a quienes entraron en estas fechas, del CRM." v={detalle ? num(crmT.visitas) : errorDetalle ? "-" : "…"} antes={crmA ? num(crmA.visitas) : undefined} a={crmT.visitas} b={crmA?.visitas} />
+              <CifraFija icono="firmados" nombre="Casos aceptados" ayuda="Casos con la hoja de encargo firmada, de quienes entraron en estas fechas (CRM)." v={detalle ? num(crmT.firm) : errorDetalle ? "-" : "…"} antes={crmA && crmT.firm ? num(crmA.firm) : undefined} a={crmT.firm} b={crmT.firm ? crmA?.firm : undefined} extra={crmT.imp ? eur(crmT.imp) : crmT.leads ? "Un caso puede tardar semanas en decidirse: las consultas de estas fechas aún están en marcha" : "Los casos antiguos llegarán con la base de clientes"} />
+              {(() => { const m = M("cpl"); const v = m.f(T); return <CifraFija icono="cpl" nombre="Coste por contacto" ayuda={m.ayuda} v={T.ads.conv ? m.formato(v) : T.ads.coste ? "Sin contactos medidos" : "-"} antes={C && C.ads.conv ? m.formato(m.f(C)) : undefined} a={v} b={C ? m.f(C) : undefined} menosEsMejor extra={`${nf1.format(T.ads.conv)} contactos según las plataformas · ${eur(T.ads.coste)} invertidos`} />; })()}
+              <CifraFija icono="margen" nombre="Honorarios de los casos" ayuda="Honorarios previstos de los casos aceptados." v="Pendiente" extra="Falta apuntar los honorarios de cada caso" pendiente />
             </div>
 
               <PorCanal T={T} C={C} />
@@ -1114,10 +1118,10 @@ function Ventas({ crm, cargando, inversion }: { crm: Detalle["crm"]; cargando: b
 /* ══ cl·v832: portada de dirección, rebote, canales, intención de búsqueda y alertas con criterio ══ */
 
 /** Tarjeta de cifra sin serie diaria (CRM, coste, pendientes). */
-function CifraFija({ nombre, ayuda, v, antes, a, b, extra, menosEsMejor = false, pendiente = false }: { nombre: string; ayuda: string; v: string; antes?: string; a?: number; b?: number; extra?: string; menosEsMejor?: boolean; pendiente?: boolean }) {
+function CifraFija({ icono, nombre, ayuda, v, antes, a, b, extra, menosEsMejor = false, pendiente = false }: { icono?: string; nombre: string; ayuda: string; v: string; antes?: string; a?: number; b?: number; extra?: string; menosEsMejor?: boolean; pendiente?: boolean }) {
   return (
-    <div className={`rounded-[20px] border p-4 ${pendiente ? "border-dashed border-ink/25 bg-cream/60" : "border-line bg-white"}`}>
-      <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-ink/50">{nombre}</p>
+    <div className={`rounded-[20px] border p-4 ${pendiente ? "border-dashed border-ink/25 bg-cream/60" : "border-line"}`} style={pendiente || !icono ? undefined : { background: tinte(ICONO_MEDIDA[icono][1]) }}>
+      <span className="flex items-center gap-2.5">{icono && <Loseta n={ICONO_MEDIDA[icono][0]} color={pendiente ? "#a7a39a" : ICONO_MEDIDA[icono][1]} tam={36} />}<span className="text-[12px] font-bold uppercase tracking-[0.1em] text-ink/60">{nombre}</span></span>
       <p className="mt-0.5 text-[12.5px] leading-snug text-ink/55">{ayuda}</p>
       <p className={`mt-1.5 font-serif leading-none ${pendiente ? "text-[24px] italic text-ink/45" : "text-[clamp(26px,3.4vw,34px)] font-medium text-ink"}`}>{v}</p>
       {antes !== undefined && a !== undefined && b !== undefined ? <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[12px] text-ink/55"><Delta a={a} b={b} menosEsMejor={menosEsMejor} /><span>antes {antes}</span></div> : null}
@@ -1156,7 +1160,7 @@ function PorCanal({ T, C }: { T: Totales; C: Totales | null }) {
         filas={filas}
         inicial="sesiones"
         cols={[
-          { k: "canal", t: "Canal", v: (r) => r.canal, f: (r) => <span className="font-semibold">{r.canal}</span> },
+          { k: "canal", t: "Canal", v: (r) => r.canal, f: (r) => <span className="inline-flex items-center font-semibold"><LogoCanal canal={r.canal} />{r.canal}</span> },
           { k: "sesiones", t: "Visitas", v: (r) => r.sesiones, num: true, f: (r) => (r.sesiones ? num(r.sesiones) : "-") },
           { k: "rebote", t: "Rebote", v: (r) => r.rebote ?? -1, num: true, f: (r) => (r.rebote === null ? "-" : <span>{pct(r.rebote)}{antes[r.canal]?.rebote != null ? <span className="ml-1 text-[12px] text-ink/45">(antes {pct(antes[r.canal].rebote!)})</span> : null}</span>) },
           { k: "contactos", t: "Contactos", v: (r) => r.contactos, num: true, f: (r) => <span>{num(r.contactos)}{antes[r.canal] ? <span className="ml-1 text-[12px] text-ink/45">(antes {num(antes[r.canal].contactos)})</span> : null}</span> },
@@ -1506,8 +1510,8 @@ function Temas({ temas, resumen }: { temas: Modulo[]; resumen?: Resumen }) {
         {temas.map((t) => (
           <li key={t.id} className="shrink-0">
             <button type="button" aria-expanded={abierto === t.id} onClick={() => setAbierto(abierto === t.id ? null : t.id)} className={`flex h-full w-full min-w-[150px] flex-col gap-1.5 rounded-[16px] border px-4 py-3 text-left transition-colors ${abierto === t.id ? "border-ink bg-[#fbf6ea]" : "border-line bg-white hover:border-ink/40"}`}>
-              <span className="flex items-center gap-2.5"><LuzTema luz={t.luz} g /><span className="text-[15.5px] font-semibold text-ink">{t.titulo}</span></span>
-              <span className="text-[13px] leading-snug text-ink/55">{t.estado ?? LUZ[t.luz].t} · {abierto === t.id ? "cerrar" : "ver"}</span>
+              <span className="flex items-center gap-2.5"><Loseta n={(t.icono ?? ICONO_AREA[t.id]?.[0]) || "estrella"} color={t.color ?? ICONO_AREA[t.id]?.[1] ?? "#1a3d47"} tam={36} /><span className="text-[15.5px] font-semibold text-ink">{t.titulo}</span></span>
+              <span className="flex items-center gap-1.5 text-[13px] leading-snug text-ink/65"><LuzTema luz={t.luz} />{t.estado ?? LUZ[t.luz].t} · {abierto === t.id ? "cerrar" : "ver"}</span>
             </button>
           </li>
         ))}
@@ -1515,14 +1519,14 @@ function Temas({ temas, resumen }: { temas: Modulo[]; resumen?: Resumen }) {
       {m && (
         <section className="mt-3 rounded-[20px] border border-line bg-white px-5 py-4" aria-label={m.titulo}>
           <div className="flex items-start justify-between gap-3">
-            <p className="flex flex-wrap items-baseline gap-x-2"><span className="font-serif text-[21px] italic text-ink">{m.titulo}</span><span className="text-[13px] text-ink/50">{m.que} · últimos 28 días</span></p>
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1"><Loseta n={(m.icono ?? ICONO_AREA[m.id]?.[0]) || "estrella"} color={m.color ?? ICONO_AREA[m.id]?.[1] ?? "#1a3d47"} tam={40} /><span className="font-serif text-[21px] italic text-ink">{m.titulo}</span><span className="text-[13px] text-ink/50">{m.que} · últimos 28 días</span></p>
             <button type="button" onClick={() => setAbierto(null)} className="min-h-[44px] shrink-0 rounded-full border border-line px-4 text-[15px] font-semibold text-ink hover:border-ink">Cerrar</button>
           </div>
           <p className="mt-1 text-[15px] leading-snug text-ink/80">{m.conclusion}</p>
           <ul className="mt-3 divide-y divide-line">
             {m.filas.map((f, i) => (
               <li key={i} className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1 py-2.5 text-[14.5px]">
-                <span className="flex items-center gap-2 text-ink/70">{f.luz ? <LuzTema luz={f.luz} /> : null}{f.t}</span>
+                <span className="flex items-center gap-2 text-ink/70">{f.luz ? <LuzTema luz={f.luz} /> : null}<LogoFila texto={f.t} />{f.t}</span>
                 <span className="max-w-[640px] text-right font-semibold text-ink">{f.v}</span>
               </li>
             ))}
@@ -1574,7 +1578,8 @@ function useHechas() {
   }, []);
   const marca = (id: string) => setHechas((h) => {
     const n = { ...h }; if (n[id]) delete n[id]; else n[id] = new Date().toISOString().slice(0, 10);
-    try { localStorage.setItem("rd-mesa-hechas", JSON.stringify(n)); } catch {}
+    try { localStorage.setItem("rd-mesa-hechas", JSON.stringify(n)); if (n[id]) localStorage.setItem("rd-mesa-logro-revisar", "1"); } catch {}
+    queueMicrotask(() => window.dispatchEvent(new Event("mesa-logro")));
     return n;
   });
   return { hechas, marca };
@@ -1591,7 +1596,7 @@ function QueHagoHoy({ tareas }: { tareas: Tarea[] }) {
             const ok = !!hechas[t.id];
             return (
               <li key={t.id} className="flex items-start gap-3">
-                <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-[14px] font-bold text-ink">{i + 1}</span>
+                <span className="mt-0.5 shrink-0"><Loseta n={ok ? "check" : (ICONO_AREA[t.ir ?? ""]?.[0] ?? "estrella")} color={ok ? "#2f9a62" : (ICONO_AREA[t.ir ?? ""]?.[1] ?? "#c79a00")} tam={34} /></span>
                 <span className="min-w-0 flex-1">
                   <span className={`block text-[16px] font-semibold leading-snug ${ok ? "text-ink/45 line-through" : "text-ink"}`}>{t.texto}</span>
                   <span className="block text-[14px] leading-snug text-ink/65">{t.porque}{t.donde ? <span className="text-ink/45"> · Está en «{t.donde}»</span> : null}</span>
@@ -1689,6 +1694,7 @@ function Sencilla({ temas, resumen, tareas, relojes, clave, irCompleta, herramie
       <TareaPrincipal tareas={tareas} temas={temas} abreTema={abreTema} />
       <EstadoLista temas={temas} abierto={abierto} setAbierto={setAbierto} />
       {relojes.length > 0 && <CifrasFrase relojes={relojes} />}
+      <JuegaConTusCifras contactos={relojes[0]?.n} preguntas={juegos(relojes)} />
       <FranjaConectado nombres={["Google Analytics", "Search Console", "Google Ads", "Ficha de Google", "Instagram", "LinkedIn", "WhatsApp", "Semrush", "ChatGPT", "Gemini", "Claude"]} />
       <Pregunta clave={clave} />
       <p className="mt-6 text-center">
@@ -1871,7 +1877,7 @@ function EstadoLista({ temas, abierto, setAbierto }: { temas: Modulo[]; abierto:
                   <ul className="mt-2 divide-y divide-line">
                     {m.filas.map((f, i) => (
                       <li key={i} className="flex flex-col gap-0.5 py-2.5 text-[15px] sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                        <span className="flex items-center gap-2 text-ink/70">{f.luz ? <LuzTema luz={f.luz} /> : null}{f.t}</span>
+                        <span className="flex items-center gap-2 text-ink/70">{f.luz ? <LuzTema luz={f.luz} /> : null}<LogoFila texto={f.t} />{f.t}</span>
                         <span className="font-semibold text-ink sm:max-w-[60%] sm:text-right">{f.v}</span>
                       </li>
                     ))}
@@ -1891,6 +1897,15 @@ function EstadoLista({ temas, abierto, setAbierto }: { temas: Modulo[]; abierto:
   );
 }
 
+/** Las preguntas de "Adivina la cifra", hechas con las cifras de hoy (solo las que hay). */
+const techo = (n: number) => Math.max(10, Math.ceil((n * 3) / 10) * 10);
+function juegos(r: Reloj[]) {
+  const o: { texto: string; real: number; unidad: string; max: number }[] = [];
+  if (r[0]?.n) o.push({ texto: "¿Cuántas personas crees que han dejado sus datos en los últimos 28 días?", real: r[0].n, unidad: "personas", max: techo(r[0].n) });
+  if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una primera consulta?", real: r[1].n, unidad: "personas", max: techo(r[1].n) });
+  if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada consulta de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });
+  return o;
+}
 function CifrasFrase({ relojes }: { relojes: Reloj[] }) {
   const [info, setInfo] = useState<string | null>(null);
   return (

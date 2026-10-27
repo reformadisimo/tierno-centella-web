@@ -138,3 +138,172 @@ export function Despedida({ demo }: { demo?: boolean }) {
     </section>
   );
 }
+
+/* ───────────────────────── Alegría en toda la mesa (cl·v915) ───────────────────────── */
+/** Icono y color de cada caja de la vista completa, según su título. Si el título lleva el nombre de una plataforma, sale su logo. */
+export function iconoDeTitulo(t: string): { n?: string; color: string; logo?: string } | null {
+  const r: [RegExp, { n?: string; color: string; logo?: string }][] = [
+    [/Ficha de Google/i, { color: "#2a6f86", logo: "Ficha de Google" }],
+    [/Instagram/i, { color: "#d9822b", logo: "Instagram" }],
+    [/Clarity/i, { n: "mapa", color: "#5b569c" }],
+    [/Google/i, { color: "#2a6f86", logo: "Google" }],
+    [/Rese/i, { n: "estrella", color: "#d9822b" }],
+    [/WhatsApp/i, { n: "telefono", color: C.aviso }],
+    [/De dónde vienen|Por origen/i, { n: "mapa", color: C.web }],
+    [/destacado/i, { n: "estrella", color: C.dinero }],
+    [/Recorrido|consulta al caso/i, { n: "camino", color: C.camino }],
+    [/Inversión/i, { n: "moneda", color: C.dinero }],
+    [/Campañas/i, { n: "megafono", color: C.anuncios }],
+    [/canal/i, { n: "red", color: C.ventas }],
+    [/buscan/i, { n: "lupa", color: C.web }],
+    [/Rebote/i, { n: "rayo", color: C.ia }],
+    [/perdiendo clientes/i, { n: "campana", color: C.anuncios }],
+    [/Por dónde entran|entrada|más vistas|cada página|Páginas/i, { n: "globo", color: C.web }],
+  ];
+  return r.find(([re]) => re.test(t))?.[1] ?? null;
+}
+/** Marca pequeña para el título de una caja: loseta de color o logo de la plataforma sobre blanco. */
+export function MarcaTitulo({ titulo, tam = 40 }: { titulo: string; tam?: number }) {
+  const i = iconoDeTitulo(titulo);
+  if (!i) return null;
+  if (i.logo) return <span aria-hidden="true" className="inline-grid shrink-0 place-items-center rounded-[14px] border border-line bg-white" style={{ width: tam, height: tam, boxShadow: "0 3px 0 #e9e2d4" }}><LogoMarca nombre={i.logo} tam={Math.round(tam * 0.62)} /></span>;
+  return <Loseta n={i.n ?? "estrella"} color={i.color} tam={tam} />;
+}
+/** Icono y color de las tarjetas de cifras de la vista completa, por identificador de la medida. */
+export const ICONO_MEDIDA: Record<string, [string, string]> = {
+  peticiones: ["persona", C.mercado], visitas: ["documento", C.web], pulsaciones: ["telefono", C.aviso], inversion: ["moneda", C.dinero], cpl: ["moneda", C.dinero],
+  sesiones: ["globo", C.web], organico: ["lupa", C.web], rebote: ["rayo", C.ia], conversion: ["embudo", C.camino], calculos: ["mando", C.ventas],
+  comerciales: ["persona", C.ventas], firmados: ["documento", C.mercado], margen: ["moneda", C.noche],
+};
+/** Tinte suave del color de una tarjeta (para que no sea todo blanco). */
+export const tinte = (color: string) => `${color}12`;
+
+/** Logo de un canal de la tabla "Cada canal". */
+export function LogoCanal({ canal }: { canal: string }) {
+  const m: [RegExp, string | [string, string]][] = [
+    [/Google Ads/i, "Google Ads"], [/Google/i, "Google"], [/Meta/i, "Meta"], [/ChatGPT|Asistentes de IA/i, "ChatGPT"], [/Redes/i, "Instagram"],
+    [/Directo/i, ["casa", C.web]], [/Referidos|otros/i, ["red", C.ventas]],
+  ];
+  const x = m.find(([re]) => re.test(canal))?.[1];
+  if (!x) return null;
+  if (typeof x === "string") return <span aria-hidden="true" className="mr-2 inline-grid h-[26px] w-[26px] shrink-0 place-items-center rounded-[8px] border border-line bg-white align-middle"><LogoMarca nombre={x} tam={18} /></span>;
+  return <span className="mr-2 inline-block align-middle"><Loseta n={x[0]} color={x[1]} tam={26} /></span>;
+}
+const MARCAS_FILA = /^(Google Ads|Ficha de Google|Instagram|Google|Meta|WhatsApp|ChatGPT|Gemini|Claude|Semrush)\b/;
+/** Logo al principio de una fila de detalle si empieza por el nombre de una plataforma. */
+export function LogoFila({ texto }: { texto: string }) {
+  const m = texto.match(MARCAS_FILA);
+  return m ? <LogoMarca nombre={m[1]} tam={20} /> : null;
+}
+
+/* ── Juegos: la mesa no solo se mira, también se juega. Todo se guarda solo en este navegador. ── */
+const leer = (k: string): string | null => { try { return localStorage.getItem(k); } catch { return null; } };
+const guardar = (k: string, v: string) => { try { localStorage.setItem(k, v); } catch {} };
+const logro = () => { try { window.dispatchEvent(new Event("mesa-logro")); } catch {} };
+const num0 = (n: number) => new Intl.NumberFormat("es-ES", { maximumFractionDigits: 0, useGrouping: "always" } as Intl.NumberFormatOptions).format(Math.round(n));
+
+/** Meta de contactos: la fijas tú con un deslizador y la mesa te dice cómo vas. Pintura pura, sin movimiento. */
+export function MetaDelMes({ actual }: { actual: number }) {
+  const tope = Math.max(60, Math.ceil((actual * 2) / 10) * 10);
+  const [meta, setMeta] = useState<number | null>(null);
+  useEffect(() => { const g = Number(leer("rd-mesa-meta")); if (g > 0) setMeta(Math.min(g, 10000)); }, []);
+  const v = meta ?? Math.max(10, Math.round(actual * 1.2));
+  const pct = Math.min(100, Math.round((actual / Math.max(1, v)) * 100));
+  const hecho = actual >= v;
+  return (
+    <section className="rounded-[20px] border border-line p-4" style={{ background: tinte(C.mercado) }} aria-label="Tu meta de consultas">
+      <div className="flex items-center gap-3"><Loseta n="estrella" color={C.mercado} tam={44} /><div><h3 className="font-serif text-[19px] italic leading-tight text-ink">Ponte una meta</h3><p className="text-[14px] text-ink/65">¿Cuántas consultas quieres cada 28 días?</p></div></div>
+      <label className="mt-3 block text-[15px] font-semibold text-ink" htmlFor="mesa-meta">Mi meta: {num0(v)} consultas</label>
+      <input id="mesa-meta" type="range" min={5} max={tope} step={1} value={Math.min(v, tope)} onChange={(e) => { const n = Number(e.target.value); setMeta(n); guardar("rd-mesa-meta", String(n)); logro(); }} className="mt-1 h-11 w-full cursor-pointer accent-[#1d6b3a]" aria-valuetext={`${v} consultas`} />
+      <div className="mt-1 h-4 overflow-hidden rounded-full bg-white" role="img" aria-label={`Vas al ${pct} por ciento de tu meta`}><div className="h-full rounded-full" style={{ width: `${pct}%`, background: hecho ? C.aviso : C.mercado }} /></div>
+      <p className="mt-2 text-[15px] leading-snug text-ink/80">{hecho ? `Meta cumplida: ${num0(actual)} de ${num0(v)}. Esto se celebra (con un café).` : `Vas al ${pct} %: ${num0(actual)} de ${num0(v)}. Te faltan ${num0(v - actual)}.`}</p>
+    </section>
+  );
+}
+
+/** Adivina la cifra: apuestas un número y la mesa te dice cuánto te has acercado. */
+export type Pregunta = { texto: string; real: number; unidad: string; max: number };
+export function Adivina({ preguntas }: { preguntas: Pregunta[] }) {
+  const [i, setI] = useState(0);
+  const [apuesta, setApuesta] = useState<number | null>(null);
+  const [visto, setVisto] = useState(false);
+  const [aciertos, setAciertos] = useState(0);
+  useEffect(() => { setAciertos(Number(leer("rd-mesa-aciertos")) || 0); }, []);
+  if (!preguntas.length) return null;
+  const p = preguntas[i % preguntas.length];
+  const v = apuesta ?? Math.round(p.max / 3);
+  const dif = Math.abs(v - p.real) / Math.max(1, p.real);
+  const clavado = dif <= 0.1;
+  const comprobar = () => { setVisto(true); if (clavado) { const n = aciertos + 1; setAciertos(n); guardar("rd-mesa-aciertos", String(n)); logro(); } };
+  const otra = () => { setI(i + 1); setApuesta(null); setVisto(false); };
+  return (
+    <section className="rounded-[20px] border border-line p-4" style={{ background: tinte(C.camino) }} aria-label="Adivina la cifra">
+      <div className="flex items-center gap-3"><Loseta n="mando" color={C.camino} tam={44} /><div><h3 className="font-serif text-[19px] italic leading-tight text-ink">Adivina la cifra</h3><p className="text-[14px] text-ink/65">Aciertos: {aciertos}. Se acierta con un margen del 10 %.</p></div></div>
+      <p className="mt-3 text-[16px] font-semibold leading-snug text-ink">{p.texto}</p>
+      <label className="mt-1 block text-[15px] text-ink/80" htmlFor="mesa-adivina">Mi apuesta: <b>{num0(v)} {p.unidad}</b></label>
+      <input id="mesa-adivina" type="range" min={0} max={p.max} step={1} value={Math.min(v, p.max)} disabled={visto} onChange={(e) => setApuesta(Number(e.target.value))} className="h-11 w-full cursor-pointer accent-[#7a4fd0]" aria-valuetext={`${v} ${p.unidad}`} />
+      {!visto ? (
+        <button type="button" onClick={comprobar} className="min-h-[44px] rounded-full bg-yellow px-5 text-[15px] font-semibold text-ink">Comprobar</button>
+      ) : (
+        <div>
+          <p className="text-[15.5px] leading-snug text-ink"><b>Eran {num0(p.real)} {p.unidad}.</b> {clavado ? "Casi clavado. Conoces tu despacho como la palma de tu mano." : v < p.real ? `Te has quedado corto por ${num0(p.real - v)}. Hay más movimiento del que creías.` : `Te has pasado por ${num0(v - p.real)}. Menos de lo que pensabas, pero con los datos en la mano.`}</p>
+          <button type="button" onClick={otra} className="mt-2 min-h-[44px] rounded-full border border-line bg-white px-5 text-[15px] font-semibold text-ink hover:border-ink">Otra cifra</button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/** Insignias que se ganan usando la mesa. Sin presión: solo por gusto. */
+export function Insignias() {
+  const [d, setD] = useState({ dias: 0, aciertos: 0, meta: false, revisada: false });
+  useEffect(() => {
+    const hoy = new Date().toISOString().slice(0, 10);
+    let dias: string[] = [];
+    try { dias = JSON.parse(leer("rd-mesa-dias") || "[]"); } catch {}
+    if (!Array.isArray(dias)) dias = [];
+    if (!dias.includes(hoy)) { dias = [...dias, hoy].slice(-60); guardar("rd-mesa-dias", JSON.stringify(dias)); }
+    const leerTodo = () => setD({ dias: dias.length, aciertos: Number(leer("rd-mesa-aciertos")) || 0, meta: Number(leer("rd-mesa-meta")) > 0, revisada: leer("rd-mesa-logro-revisar") === "1" });
+    leerTodo();
+    window.addEventListener("mesa-logro", leerTodo);
+    return () => window.removeEventListener("mesa-logro", leerTodo);
+  }, []);
+  const lista: { t: string; como: string; n: string; color: string; ok: boolean }[] = [
+    { t: "Primera visita", como: "Entrar en la mesa", n: "casa", color: C.web, ok: d.dias >= 1 },
+    { t: "Constante", como: "Entrar 3 días distintos", n: "camino", color: C.camino, ok: d.dias >= 3 },
+    { t: "De la casa", como: "Entrar 7 días distintos", n: "escudo", color: C.noche, ok: d.dias >= 7 },
+    { t: "Ojo de lince", como: "Marcar una tarea como revisada", n: "lupa", color: C.ia, ok: d.revisada },
+    { t: "Con meta", como: "Ponerte una meta de consultas", n: "estrella", color: C.mercado, ok: d.meta },
+    { t: "Buen olfato", como: "Acertar una cifra", n: "mando", color: C.anuncios, ok: d.aciertos >= 1 },
+  ];
+  const ganadas = lista.filter((x) => x.ok).length;
+  return (
+    <section className="rounded-[20px] border border-line bg-white p-4" aria-label="Tus insignias">
+      <div className="flex items-center gap-3"><Loseta n="estrella" color={C.dinero} tam={44} /><div><h3 className="font-serif text-[19px] italic leading-tight text-ink">Tus insignias</h3><p className="text-[14px] text-ink/65">{ganadas} de {lista.length} conseguidas. Se guardan en este dispositivo.</p></div></div>
+      <ul className="mt-3 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+        {lista.map((x) => (
+          <li key={x.t} className={`flex items-center gap-2.5 rounded-[14px] border px-2.5 py-2 ${x.ok ? "border-line bg-[#fbf6ea]" : "border-dashed border-line bg-white"}`}>
+            <Loseta n={x.n} color={x.ok ? x.color : "#c9c2b3"} tam={40} />
+            <span className="min-w-0"><span className={`block text-[14.5px] font-semibold leading-tight ${x.ok ? "text-ink" : "text-ink/55"}`}>{x.t}</span><span className="block text-[12.5px] leading-snug text-ink/55">{x.ok ? "Conseguida" : x.como}</span></span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+/** Bloque de juegos de la vista sencilla. */
+export function JuegaConTusCifras({ contactos, preguntas }: { contactos?: number; preguntas: Pregunta[] }) {
+  if (contactos === undefined && !preguntas.length) return null;
+  return (
+    <section className="mt-6" aria-label="Juega con tus cifras">
+      <h2 className="font-serif text-[24px] italic text-ink">Juega con tus cifras</h2>
+      <p className="mt-1 text-[14px] text-ink/60">Porque mirar números no tiene por qué ser un rollo.</p>
+      <div className="mt-3 grid gap-3 lg:grid-cols-2">
+        {contactos !== undefined && <MetaDelMes actual={contactos} />}
+        <Adivina preguntas={preguntas} />
+        <div className="lg:col-span-2"><Insignias /></div>
+      </div>
+    </section>
+  );
+}

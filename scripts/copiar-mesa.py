@@ -35,10 +35,10 @@ MESA = [
     ('Cómo va Reformadísimo', 'Cómo va el despacho'),
     ('<b>Ventas</b> (del CRM, la libreta de clientes)', '<b>Consultas</b> (del CRM, la libreta de clientes)'),
     ('Difieren porque casi todos los anuncios llevan a la página de la agencia, no a la web.', 'Difieren porque parte de las consultas de los anuncios llegan por teléfono y todavía no sabemos de qué anuncio vienen.'),
-    ('<CifraFija nombre="Visitas comerciales" ayuda="Visitas técnicas a casas de clientes, del CRM (clientes que entraron en estas fechas)."', '<CifraFija nombre="Primeras consultas" ayuda="Primeras consultas hechas a quienes entraron en estas fechas, del CRM."'),
-    ('<CifraFija nombre="Contratos firmados" ayuda="Obras firmadas de los clientes que entraron en estas fechas (CRM)."', '<CifraFija nombre="Casos aceptados" ayuda="Casos con la hoja de encargo firmada, de quienes entraron en estas fechas (CRM)."'),
+    ('<CifraFija icono="comerciales" nombre="Visitas comerciales" ayuda="Visitas técnicas a casas de clientes, del CRM (clientes que entraron en estas fechas)."', '<CifraFija icono="comerciales" nombre="Primeras consultas" ayuda="Primeras consultas hechas a quienes entraron en estas fechas, del CRM."'),
+    ('<CifraFija icono="firmados" nombre="Contratos firmados" ayuda="Obras firmadas de los clientes que entraron en estas fechas (CRM)."', '<CifraFija icono="firmados" nombre="Casos aceptados" ayuda="Casos con la hoja de encargo firmada, de quienes entraron en estas fechas (CRM)."'),
     ('"Una reforma tarda semanas en firmarse: los contactos de estas fechas aún están en marcha" : "Las firmas antiguas llegarán con la base de clientes"', '"Un caso puede tardar semanas en decidirse: las consultas de estas fechas aún están en marcha" : "Los casos antiguos llegarán con la base de clientes"'),
-    ('<CifraFija nombre="Margen de las obras" ayuda="Margen previsto de las obras captadas." v="Pendiente" extra="Falta apuntar el coste previsto y real de cada obra" pendiente />', '<CifraFija nombre="Honorarios de los casos" ayuda="Honorarios previstos de los casos aceptados." v="Pendiente" extra="Falta apuntar los honorarios de cada caso" pendiente />'),
+    ('<CifraFija icono="margen" nombre="Margen de las obras" ayuda="Margen previsto de las obras captadas." v="Pendiente" extra="Falta apuntar el coste previsto y real de cada obra" pendiente />', '<CifraFija icono="margen" nombre="Honorarios de los casos" ayuda="Honorarios previstos de los casos aceptados." v="Pendiente" extra="Falta apuntar los honorarios de cada caso" pendiente />'),
     ('["Solicitaron visita en la web", T.visitas, C?.visitas],', '["Pidieron primera consulta en la web", T.visitas, C?.visitas],'),
     ('fuente="CRM · contactos que entraron en estas fechas por cualquier canal, y hasta dónde han llegado"', 'fuente="CRM · consultas que entraron en estas fechas por cualquier canal, y hasta dónde han llegado"'),
     ('["Contactos registrados", crmT.leads, crmA?.leads],', '["Consultas registradas", crmT.leads, crmA?.leads],'),
@@ -101,6 +101,11 @@ MESA = [
     ('setRango([e.target.value, b < e.target.value ? e.target.value : b]); } }} className="bg-transparent text-[13px] outline-none" />', 'setRango([e.target.value, b < e.target.value ? e.target.value : b]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none" />'),
     ('setRango([a, e.target.value]); } }} className="bg-transparent text-[13px] outline-none" />', 'setRango([a, e.target.value]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none" />'),
     ('<details className="mt-1 text-[14px] text-ink/75">\n              <summary className="cursor-pointer font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>', '<details className="text-[14px] text-ink/75">\n              <summary className="cursor-pointer py-3 font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>'),
+    # v915: juego "Adivina la cifra" con las cifras de un despacho
+    ('if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una visita?", real: r[1].n, unidad: "visitas", max: techo(r[1].n) });', 'if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una primera consulta?", real: r[1].n, unidad: "personas", max: techo(r[1].n) });'),
+    ('if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada contacto de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });', 'if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada consulta de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });'),
+    # Títulos con palabras muy largas (@tiernocentella_abogados) junto al logo: que partan en vez de salirse a 320 px
+    ('<h2 className="font-serif text-[21px] font-medium italic leading-tight text-ink">{titulo}</h2>', '<h2 className="font-serif text-[21px] font-medium italic leading-tight text-ink [overflow-wrap:anywhere]">{titulo}</h2>'),
     # Sin "Oír resumen" en la mesa de Tierno Centella (decisión de Ig, 27-oct-2026). Se reactiva quitando esta línea.
     ('function BotonOir({ resumen, tareas }: { resumen?: Resumen; tareas: Tarea[] }) {', 'function BotonOir({ resumen, tareas }: { resumen?: Resumen; tareas: Tarea[] }) {\n  // Tierno Centella: sin leer en voz alta (decisión de Ig, 27-oct-2026). Para activarlo, quitar la línea siguiente.\n  if (SIN_VOZ) return null;'),
 ]
@@ -114,6 +119,16 @@ ALEGRIA = [
     ('export const CHISPA_TODO_BIEN = ["Disfrútalo, que no pasa todos los días.", "Puedes volver a tu vida (la mesa vigila por ti).", "Hoy tu única tarea es sonreír un poco."];', 'export const CHISPA_TODO_BIEN = ["Buen día para centrarte en tus clientes (la mesa vigila por ti).", "Todo en orden. Puedes volver a tus asuntos.", "Sin novedades que atender (que no es poco)."];'),
     ('export const CHISPA_HECHO = ["Hecho. Una menos.", "Revisado. Qué buen ojo tienes.", "Listo. Y sin sudar.", "Apuntado. Gracias por ocuparte."];', 'export const CHISPA_HECHO = ["Hecho. Una menos.", "Revisado. Gracias por ocuparte.", "Listo. Queda apuntado.", "Anotado. Una cosa menos en la mesa."];'),
     ('export const CHISPA_SIN_TAREAS = "Hoy no hay nada pendiente. Aprovecha para tomarte un café (los datos se vigilan solos).";', 'export const CHISPA_SIN_TAREAS = "Hoy no hay nada pendiente. Aprovecha para tomarte un café (los datos se vigilan solos).";'),
+    # v915: iconos de las cifras y juegos, con palabras de despacho
+    ('comerciales: ["casa", C.ventas], firmados: ["documento", C.mercado], margen: ["escudo", C.noche],', 'comerciales: ["persona", C.ventas], firmados: ["documento", C.mercado], margen: ["moneda", C.noche],'),
+    ('peticiones: ["persona", C.mercado], visitas: ["casa", C.web],', 'peticiones: ["persona", C.mercado], visitas: ["documento", C.web],'),
+    ('[/Recorrido|petición a la obra/i, { n: "camino", color: C.camino }],', '[/Recorrido|consulta al caso/i, { n: "camino", color: C.camino }],'),
+    ('<p className="text-[14px] text-ink/65">¿Cuántos contactos quieres cada 28 días?</p>', '<p className="text-[14px] text-ink/65">¿Cuántas consultas quieres cada 28 días?</p>'),
+    ('Mi meta: {num0(v)} contactos</label>', 'Mi meta: {num0(v)} consultas</label>'),
+    ('aria-valuetext={`${v} contactos`}', 'aria-valuetext={`${v} consultas`}'),
+    ('aria-label="Tu meta de contactos"', 'aria-label="Tu meta de consultas"'),
+    ('"Casi clavado. Conoces tu negocio como la palma de tu mano."', '"Casi clavado. Conoces tu despacho como la palma de tu mano."'),
+    ('{ t: "Con meta", como: "Ponerte una meta de contactos",', '{ t: "Con meta", como: "Ponerte una meta de consultas",'),
 ]
 
 TEXTOS = [

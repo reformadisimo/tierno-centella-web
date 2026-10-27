@@ -11,6 +11,6 @@ export type Modulo = {
   filas: { t: string; v: string; luz?: Luz }[];
   enlaces: { t: string; href: string }[];
 };
-export type Reloj = { icono?: string; color?: string; t: string; v: string; sub: string; lleno: number; luz: Luz; ayuda?: string; frase?: string; detalle?: string };
+export type Reloj = { n?: number; icono?: string; color?: string; t: string; v: string; sub: string; lleno: number; luz: Luz; ayuda?: string; frase?: string; detalle?: string };
 export type Tarea = { id: string; texto: string; porque: string; donde?: string; ir?: string; titular?: string; boton?: string };
 export type Resumen = { titulo: string; texto: string; puntos?: string[] };
