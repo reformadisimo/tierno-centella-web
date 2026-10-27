@@ -112,7 +112,7 @@ export function BloquePanelEnlace() {
         <span>
           <small>Demostración · cifras de ejemplo y tus datos públicos</small>
           <strong>Ver tu mesa de control</strong>
-          <em>Cómo va el despacho en diez segundos: qué requiere atención, qué harías hoy, las cinco baterías y las cuatro cifras. Pensada para el móvil. Se abre en otra pestaña.</em>
+          <em>Cómo va el despacho en diez segundos. La primera vez te la enseña una guía de 9 pasos cortos. Pensada para el móvil. Se abre en otra pestaña.</em>
         </span>
         <Flecha />
       </a>

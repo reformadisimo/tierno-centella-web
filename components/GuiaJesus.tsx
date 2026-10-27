@@ -379,9 +379,9 @@ function Contenido({ html }: { html: string }) {
 
 // Novedades de la guía: al añadir algo, se sube VERSION y se describe aquí. Quien ya la había visto recibe el aviso.
 // Jesús entró por primera vez el 26 de octubre de 2026 (versión 12): desde entonces, cada novedad se le cuenta al entrar.
-const VERSION = 14;
+const VERSION = 15;
 const NOVEDADES: { texto: string; clave: string }[] = [
-  { texto: 'Nuevo: tu mesa de control. En diez segundos sabes cómo va el despacho, qué requiere atención y qué harías hoy, con los plazos de despido a la vista.', clave: '19' },
+  { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19' },
   { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter' },
   { texto: 'Tu cuenta de X lleva parada desde 2020: qué ve quien la abre y cómo la pondríamos al día.', clave: '6' },
 ];
