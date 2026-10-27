@@ -1695,7 +1695,7 @@ function Sencilla({ temas, resumen, tareas, relojes, clave, irCompleta, herramie
       <EstadoLista temas={temas} abierto={abierto} setAbierto={setAbierto} />
       {relojes.length > 0 && <CifrasFrase relojes={relojes} />}
       <JuegaConTusCifras contactos={relojes[0]?.n} preguntas={juegos(relojes)} />
-      <FranjaConectado nombres={["Google Analytics", "Search Console", "Google Ads", "Ficha de Google", "Instagram", "LinkedIn", "WhatsApp", "Semrush", "ChatGPT", "Gemini", "Claude"]} />
+      <FranjaConectado nombres={["Google Analytics", "Search Console", "Google Ads", "Ficha de Google", "Instagram", "WhatsApp", "Semrush", "ChatGPT", "Gemini", "Claude"]} />
       <Pregunta clave={clave} />
       <p className="mt-6 text-center">
         <button type="button" onClick={irCompleta} className="min-h-[48px] rounded-full border-2 border-ink px-6 text-[15px] font-semibold text-ink">Ver todas las cifras y gráficas</button>
