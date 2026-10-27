@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 type Estado = 'hecho' | 'marcha' | 'preparado' | 'tu';
 const ESTADOS: Record<Estado, string> = { hecho: 'Ya hecho', marcha: 'En marcha', preparado: 'Preparado', tu: 'Te necesitamos' };
 // Estado de cada punto, en el mismo orden que los puntos de la guía.
-const ESTADO: Estado[] = ['hecho', 'hecho', 'marcha', 'hecho', 'marcha', 'tu', 'tu', 'hecho', 'tu', 'hecho', 'preparado', 'preparado', 'tu', 'marcha', 'tu', 'hecho'];
+const ESTADO: Estado[] = ['hecho', 'hecho', 'marcha', 'hecho', 'marcha', 'tu', 'tu', 'tu', 'hecho', 'tu', 'hecho', 'preparado', 'preparado', 'tu', 'marcha', 'tu'];
 
 const RECORRIDO = [
   {

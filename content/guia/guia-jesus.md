@@ -444,7 +444,7 @@ Responder a las reseñas, también a las malas, es lo que más confianza da a qu
 
 **Instagram** (4.007 seguidores, 265 publicaciones). Tres etapas: 2019-2021 con mucho contenido genérico y de otras áreas; **tres años de silencio** (2021-2024); y desde 2024, reels en el despacho con Jesús e Irene, que es lo mejor que tenéis. Los que más gustan: qué es el acoso (85 me gusta), cómo saber si lo sufro con Piñuel (76), "el andamio sin arnés" (75). En 2026 el ritmo ha bajado a uno al mes. Seguís usando #ertecoronavirus y #abogadosbilbao.
 
-**X**: dos cuentas abandonadas; o se reactivan o se dejan de enlazar.
+**X (antes Twitter): tu web enlaza a una cuenta parada desde 2020.** Tu web actual lleva a @TiernoCentella1, con 414 seguidores y 175 publicaciones, pero la última es del **7 de octubre de 2020** (visto el 27 de octubre de 2026). Quien pulsa ese enlace ve un despacho que dejó de hablar hace seis años, y puede pensar que ya no estáis. Hay además otra cuenta de X, también abandonada. **En la web nueva todavía no la hemos enlazado**, a propósito: preferimos no enseñar una cuenta parada. **Si quieres, te la llevamos nosotros**: la ponemos al día con lo que ya publicamos para la web (artículos, sentencias, vídeos, jornadas) y también con lo mejor de lo que ya tienes de estos años, y la mantenemos viva cada semana. Va incluido en la cuota. Entonces sí, la enlazamos desde la web. Y la segunda cuenta, la cerramos o la redirigimos.
 
 ### Facebook y LinkedIn: dos escaparates que hoy juegan en tu contra
 

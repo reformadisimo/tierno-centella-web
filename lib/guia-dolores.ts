@@ -86,6 +86,18 @@ export const DOLORES: Dolor[] = [
     ancla: '6',
   },
   {
+    titulo: 'Tu web enlaza a una cuenta de X parada desde 2020',
+    icono: 'M4 4l16 16M20 4L4 20',
+    hoyDato: '2020',
+    hoy: 'última publicación de la cuenta de X a la que lleva tu web',
+    luegoDato: 'Cada semana',
+    luego: 'X al día con lo que publicamos y con lo mejor de estos años',
+    visto: 'Tu web actual enlaza a @TiernoCentella1 (414 seguidores). Su última publicación es del 7 de octubre de 2020 (visto el 27 de octubre de 2026). Y hay otra cuenta de X, también parada.',
+    cuesta: 'Quien pulsa el enlace ve un despacho que dejó de hablar hace seis años y puede pensar que ya no estáis. Una red parada resta más confianza que no tenerla.',
+    ayudamos: 'En la web nueva no la hemos enlazado todavía, a propósito. Si quieres, te la llevamos: la ponemos al día con los artículos, las sentencias y los vídeos que ya preparamos para la web, y con lo mejor de estos años. Entonces sí, la enlazamos. Va incluido en la cuota.',
+    ancla: '6',
+  },
+  {
     titulo: '"Consulta gratuita" que no lo es',
     icono: 'M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z',
     hoyDato: '3',
