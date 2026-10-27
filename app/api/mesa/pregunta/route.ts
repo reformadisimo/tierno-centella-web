@@ -1,4 +1,4 @@
-import { mesaDemo, datosParaPreguntar } from '@/lib/mesa-tierno';
+import { panelDemo } from '@/lib/mesa/panel';
 
 /* Pregúntale a la mesa (demostración): una pregunta en lenguaje normal y Claude contesta en dos a cuatro frases
    SOLO con los datos de la mesa de ejemplo. Nunca inventa: si el dato no está, lo dice y dice dónde mirarlo. */
@@ -27,7 +27,15 @@ Si Anuncios tiene la medición incompleta, no recomiendes pausar ninguna campañ
 Es un despacho de abogados: nunca prometas resultados ni sugieras publicidad que no pueda hacer un abogado. No critiques a otros despachos ni los nombres.
 Son datos de demostración: si te preguntan, explica que lo público del despacho es real y el resto, de ejemplo.`;
 
-  const datos = datosParaPreguntar(mesaDemo());
+  const p = panelDemo();
+  const datos = {
+    periodo: 'Últimos 28 días, comparado con los 28 anteriores',
+    aviso: 'Demostración: lo público del despacho es real (nota y reseñas de Google, Instagram, posiciones en Google, visibilidad en IAs, el anuncio de otro despacho con su nombre); el resto son cifras de ejemplo.',
+    resumen_de_hoy: p.resumen,
+    que_hacer_hoy: p.tareas.map((t) => ({ tarea: t.texto, porque: t.porque, donde: t.donde })),
+    cifras: p.relojes.map((r) => ({ cifra: r.t, valor: r.v, comparacion: r.sub, en_palabras: [r.frase, r.detalle].filter(Boolean).join(' ') })),
+    partes: p.modulos.map((m) => ({ parte: m.titulo, estado: m.estado ?? m.luz, conclusion: m.conclusion, detalle: m.filas.map((f) => `${f.t}: ${f.v}`) })),
+  };
   const modelos = [process.env.ASISTENTE_MODELO || 'claude-sonnet-5-5', 'claude-sonnet-4-5'];
   for (const modelo of modelos) {
     try {
