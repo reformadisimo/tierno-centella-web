@@ -12,7 +12,7 @@ import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { enviarLupa } from './Lupa';
 
-const FUERA = /^\/(guia-jesus|crm|consulta)(\/|$)/;
+const FUERA = /^\/(guia-jesus|crm|consulta|mesa-[a-z0-9-]+)(\/|$)/;
 // Dentro de la lupa (la web metida en un iframe propio) no se graba ni se avisa: quien mira el visor no ensucia los datos.
 const enMarco = () => {
   try {

@@ -108,11 +108,19 @@ export function BloqueCorreosEnlace() {
 export function BloquePanelEnlace() {
   return (
     <div className="ew">
+      <a className="ew-grande" href="/mesa-tc-6v9k3p" target="_blank" rel="noopener">
+        <span>
+          <small>Demostración · cifras de ejemplo y tus datos públicos</small>
+          <strong>Ver tu mesa de control</strong>
+          <em>Cómo va el despacho en diez segundos: qué requiere atención, qué harías hoy, las cinco baterías y las cuatro cifras. Pensada para el móvil. Se abre en otra pestaña.</em>
+        </span>
+        <Flecha />
+      </a>
       <a className="ew-grande" href="/guia-jesus/panel" target="_blank" rel="noopener">
         <span>
           <small>Demostración · datos de ejemplo</small>
-          <strong>Ver tu panel de control</strong>
-          <em>Consultas, anuncios, Google, IA y reseñas en una sola pantalla, también en el móvil. Se abre en otra pestaña.</em>
+          <strong>Ver todas las cifras, en ocho pestañas</strong>
+          <em>Consultas, anuncios, Google, IA, redes, tu web, gastos y nuestro trabajo, con todo el detalle. Se abre en otra pestaña.</em>
         </span>
         <Flecha />
       </a>
