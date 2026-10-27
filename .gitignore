@@ -8,3 +8,4 @@ next-env.d.ts
 
 # Copias de trabajo de agentes
 .claude/worktrees/
+__pycache__/
