@@ -14,7 +14,7 @@ import './mesa.css';
 // y los datos públicos reales del despacho. Privada: dirección difícil de adivinar, sin enlaces desde la web, noindex
 // y sin la cabecera ni el pie de la web.
 export const dynamic = 'force-dynamic';
-export const metadata: Metadata = { title: 'Mesa de control (demostración) | Tierno Centella', robots: { index: false, follow: false, nocache: true } };
+export const metadata: Metadata = { title: 'Mesa de control (demostración)', robots: { index: false, follow: false, nocache: true } };
 
 
 export default function Page() {
