@@ -1,5 +1,5 @@
 import { datosDemo, detalleDemo } from "@/lib/mesaDemo";
-import type { Modulo, Reloj, Tarea, Resumen, Luz } from "@/lib/mesaTipos";
+import type { Modulo, Reloj, Tarea, Resumen, Luz, CifrasBase } from "@/lib/mesaTipos";
 
 /* El cerebro de la mesa de DEMOSTRACIÓN de Tierno Centella (sobre lib/panelCliente.ts de Reformadísimo, el modelo):
    convierte los datos de ejemplo de los últimos 28 días en las cinco partes, las cuatro cifras, las tareas y la
@@ -50,7 +50,7 @@ export function panelDemo(hoy = hoyMadrid()) {
   const campanas = new Map<string, { coste: number; conv: number }>();
   for (const f of d.anuncios.diario) if (f[0] >= a[0] && f[0] <= a[1]) { const c = campanas.get(f[2]) ?? { coste: 0, conv: 0 }; c.coste += f[3]; c.conv += f[6]; campanas.set(f[2], c); }
   const crm = detalleDemo(a[0], a[1]).crm;
-  const C = crm.reduce((s, r) => ({ leads: s.leads + r.leads, pc: s.pc + r.visitas, hoja: s.hoja + r.presupuestos, casos: s.casos + r.firmados, venc: s.venc + (r.vencidas ?? 0) }), { leads: 0, pc: 0, hoja: 0, casos: 0, venc: 0 });
+  const C = crm.reduce((s, r) => ({ leads: s.leads + r.leads, pc: s.pc + r.visitas, hoja: s.hoja + r.presupuestos, casos: s.casos + r.firmados, imp: s.imp + r.firmado, venc: s.venc + (r.vencidas ?? 0) }), { leads: 0, pc: 0, hoja: 0, casos: 0, imp: 0, venc: 0 });
   const cpl = A.conv ? A.coste / A.conv : 0, cplB = B.conv ? B.coste / B.conv : 0;
   const cplWeb = A.deAnuncio ? A.coste / A.deAnuncio : 0;
   // En la demo, la medición sale incompleta a propósito, como hoy en la realidad: sin acceso a sus anuncios no sabemos de qué campaña viene cada consulta.
@@ -154,5 +154,12 @@ export function panelDemo(hoy = hoyMadrid()) {
   const puntos = [tareas[0].titular!, tareas.find((t) => t.id === "espejo")!.titular!];
   const resumen: Resumen = { titulo: "Hay dos cosas que requieren atención", texto: puntos[0], puntos };
 
-  return { hoy, periodo: a, resumen, relojes, modulos, tareas };
+  /* Cifras base de 28 días para "Tus sueños y tus cuentas", de los MISMOS datos que las cuatro cifras y la vista completa
+     (una sola fuente de números: si la mesa dice 38 consultas, el simulador parte de 38). */
+  const base: CifrasBase = {
+    dias: 28, coste: Math.round(A.coste), contactosAnuncios: Math.round(A.conv), contactos: A.contactos, visitasPedidas: A.visitas,
+    leadsCrm: C.leads, firmas: C.casos, ticket: C.casos ? Math.round(C.imp / C.casos) : undefined, medicionIncompleta,
+  };
+
+  return { hoy, periodo: a, resumen, relojes, modulos, tareas, base };
 }

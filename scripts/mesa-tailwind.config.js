@@ -2,7 +2,7 @@
 //   npx tailwindcss@3.4.17 -c scripts/mesa-tailwind.config.js -i <(printf "@tailwind base;@tailwind components;@tailwind utilities;") -o /tmp/out.css --minify
 // y pegar /tmp/out.css debajo de las 19 primeras líneas (el reset) de app/mesa-tc-6v9k3p/mesa.css.
 module.exports = {
-  content: ["./components/mesa/Mesa.tsx", "./components/mesa/Alegria.tsx"],
+  content: ["./components/mesa/Mesa.tsx", "./components/mesa/Alegria.tsx", "./components/mesa/Suenos.tsx"],
   important: "#mesa-rd",
   corePlugins: { preflight: false },
   theme: { extend: {

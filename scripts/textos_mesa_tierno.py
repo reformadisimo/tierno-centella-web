@@ -1,0 +1,106 @@
+"""Textos de Tierno Centella Abogados para la mesa de control (los usa copiar-mesa.py).
+
+Son los bloques que el prompt de la mesa permite cambiar en components/mesa/Alegria.tsx: los pasos de la guía de uso,
+las explicaciones del "?" (EXPLICA) y el glosario. Mismo tono que la referencia: una frase, en llano, sin promesas.
+Despacho: consultas, primeras consultas, hojas de encargo y casos. Secreto profesional: la mesa solo da recuentos.
+"""
+
+GUIA_PASOS = '''export const GUIA_PASOS: { icono: string; color: string; t: string; d: string; ancla?: string }[] = [
+  { icono: "campana", color: "#a3505a", t: "Mira la primera línea", d: "Si es roja, hay algo que atender; si es verde, todo va bien. Pulsa el + para ver por qué.", ancla: "pl-conclusion" },
+  { icono: "check", color: "#c79a00", t: "Haz lo primero de hoy", d: "En «Lo primero que haría hoy» tienes una sola cosa que hacer. Cuando la revises, pulsa «Ya lo he revisado».", ancla: "pl-hoy" },
+  { icono: "grid", color: "#2a6f86", t: "Mira las baterías", d: "Cada parte del despacho tiene una batería: llena y verde, bien; naranja, mira esto; roja, importante. Pulsa una y verás el detalle.", ancla: "pl-temas" },
+  { icono: "moneda", color: "#7a4fd0", t: "Lee las cuatro cifras", d: "Cuántas personas dejaron sus datos, cuántas piden primera consulta, qué cuesta cada consulta de los anuncios y tu nota en Google. Si una no se entiende, pulsa el ?.", ancla: "pl-cifras" },
+  { icono: "mando", color: "#7a4fd0", t: "Sueña y haz cuentas", d: "Arriba, en «Tus sueños y tus cuentas»: mueve la inversión, marca tu meta y ponnos a prueba. Son estimaciones, para pensar.", ancla: "mesa-suenos" },
+  { icono: "catalejo", color: "#1d6b3a", t: "Baja a todas las cifras", d: "Las pestañas separan los temas: Consultas, Anuncios, La web, Google, Ficha y redes. En cada gráfica, la estrella es el mejor día.", ancla: "mesa-cifras-todas" },
+  { icono: "chat", color: "#d9822b", t: "Pregunta lo que quieras", d: "Escribe o dicta una pregunta como se la harías a una persona. Contesta con tus cifras de 28 días.", ancla: "pl-pregunta" },
+  { icono: "sobre", color: "#2f6fd0", t: "Recíbelo por correo", d: "En «Más herramientas» puedes pedir el resumen cada día, cada lunes o cada mes, sin tener que entrar.", ancla: "pl-mas" },
+  { icono: "escudo", color: "#25a244", t: "Si ves algo raro, avísanos", d: "Abajo del todo está «Avisar de un error». Lo miramos y lo arreglamos." },
+];'''
+
+EXPLICA = '''export const EXPLICA: Record<string, string> = {
+  // columnas
+  "Clics": "Veces que alguien pulsa y entra. Un clic es una visita que llega.",
+  "Veces que sale": "Cuántas veces ha aparecido el anuncio o la página en pantalla, aunque no pulsen.",
+  "Por clic": "Lo que cuesta cada visita que llega del anuncio. Cuanto más bajo, mejor.",
+  "Por contacto": "Lo que cuesta cada persona que deja sus datos. Es la cifra que manda en anuncios.",
+  "Inversión": "Dinero gastado en anuncios en estas fechas.",
+  "Contactos": "Personas que han dejado sus datos (formulario, chat, WhatsApp o llamada).",
+  "Consultas": "Personas que han entrado en el CRM en estas fechas, por cualquier canal (web, teléfono, WhatsApp, recomendación).",
+  "Visitas": "Veces que alguien entra. Una misma persona puede entrar varias veces.",
+  "Con interés": "De cada 100 visitas, cuántas hacen algo (bajan, pulsan, se quedan más de 10 segundos) en vez de irse.",
+  "Acciones clave": "Lo que de verdad queremos: pedir la primera consulta, enviar un formulario, pulsar WhatsApp o llamar.",
+  "Posición": "El puesto medio en Google: 1 es el primero. Por debajo de 10 ya no sales en la primera página.",
+  "Canal": "Por dónde ha llegado la visita: Google sin pagar, anuncios, asistentes de IA, directo…",
+  "Origen": "Por dónde nos conoció esa persona, según se apuntó en el CRM.",
+  "Página": "La página concreta de la web.",
+  "Campaña": "Cada campaña de anuncios, con el logo de su plataforma.",
+  "Primeras consultas": "Consultas en las que ya se ha tenido la primera reunión con el abogado.",
+  "Hojas de encargo": "Consultas a las que se ha enviado la hoja de encargo, con los honorarios.",
+  "Casos": "Casos aceptados (hoja de encargo firmada) de quienes consultaron en estas fechas.",
+  "De consulta a caso": "De cada 100 consultas, cuántas acaban en un caso aceptado.",
+  "Honorarios previstos": "Suma de los honorarios previstos de los casos aceptados.",
+  "Facturado": "Lo que ya se ha facturado de esos casos.",
+  "En móvil": "De cada 100 visitas a esa página, cuántas son desde el móvil.",
+  "Bajan (mediana)": "Hasta qué parte de la página baja la mitad de la gente. Si pone 25 %, la mitad no pasa del primer cuarto.",
+  "Llegan al final": "De cada 100, cuántos llegan al final de la página.",
+  "Segundos activos": "Segundos que la persona está de verdad mirando o tocando (no con la pestaña abierta sin más).",
+  "Se van en menos de 10 s": "De cada 100, cuántos se van casi nada más entrar. Si pasa de 50, la página no convence.",
+  "Clics de rabia": "Cuando alguien pulsa varias veces seguidas en el mismo sitio porque no responde. Señal de algo roto o confuso.",
+  "Clics sin respuesta": "Pulsan en algo que parece un botón y no lo es.",
+  "Búsqueda": "Lo que la persona escribió en Google.",
+  // cajas
+  "Campañas": "Cada campaña de anuncios: cuánto gasta, cuántos clics y consultas trae y a qué precio. Toca una columna para ordenar; la primera fila lleva estrella.",
+  "Inversión por día": "Cuánto se ha gastado en anuncios cada día, con la línea de puntos del periodo anterior para comparar.",
+  "Inversión mes a mes": "Toda la historia de inversión en anuncios, mes a mes.",
+  "Por dónde entran": "Por qué camino llega cada visita a la web, según Analytics.",
+  "Páginas más vistas": "Las páginas de la web que más gente abre.",
+  "Qué hace la gente en cada página": "La lupa mira, página a página, si bajan, si se quedan y si se van enseguida.",
+  "Dónde pulsan WhatsApp y llamar": "En qué páginas la gente pulsa el botón de WhatsApp o de llamar.",
+  "Páginas de entrada": "La primera página que ve cada visita al llegar.",
+  "De dónde vienen las peticiones": "De cada persona que deja sus datos, por qué canal llegó: Google Ads, Google sin pagar, asistentes de IA, directo…",
+  "Lo más destacado": "Las tres o cuatro cosas que más han cambiado o más pesan en estas fechas, en una frase cada una.",
+  "Recorrido de la web": "De todas las visitas, cuántas dejan sus datos y cuántas piden la primera consulta. Cada paso dice el % sobre el anterior.",
+  "Recorrido comercial total": "Del CRM: consultas, primeras consultas, hojas de encargo y casos aceptados de la gente que entró en estas fechas.",
+  "De la consulta al caso": "El camino de una consulta hasta el caso: cuántas llegan a cada paso.",
+  "Por origen": "Lo mismo, separado por cómo nos conoció cada persona.",
+  "Cada canal, de un vistazo": "Cada camino por el que llega la gente (Google Ads, Google sin pagar, asistentes de IA…) con sus visitas, contactos e inversión juntos.",
+  "Clics desde Google, sin pagar": "Cuánta gente entra desde Google sin que paguemos anuncios. Es el SEO.",
+  "Qué buscan cuando nos encuentran": "Las palabras que escriben en Google cuando sale el despacho.",
+  "Páginas que traen visitas desde Google": "Qué páginas de la web aparecen en Google y cuántos clics traen.",
+  "¿Nos buscan para contratar o para informarse?": "Separa las búsquedas de quien busca abogado («abogado laboralista Madrid») de quien solo quiere información («cuántos días de vacaciones me corresponden»).",
+  "Rebote: quién se va sin hacer nada": "De cada 100 visitas, cuántas se van sin tocar nada. Cuanto más bajo, mejor.",
+  "Páginas que pueden estar perdiendo clientes": "Páginas de un servicio del despacho donde la gente se va más de lo normal y casi nadie consulta.",
+  "Dónde se atasca la gente (Clarity)": "Microsoft Clarity graba lo que hace la gente: aquí salen las páginas con clics de rabia o sin respuesta.",
+  "Reseñas: lo que dicen de nosotros": "La nota del despacho en Google y cuántas opiniones nuevas hay.",
+  "Instagram (sin anuncios)": "La cuenta de Instagram sin pagar: a cuánta gente llega cada día, cuántas veces ven lo que se publica y cuántos seguidores nuevos hay.",
+  "Ficha de Google (Google Maps y búsqueda)": "La ficha que sale a la derecha en Google y en el mapa: cuántos la ven y cuántos llaman o entran desde ahí.",
+};'''
+
+GLOSARIO = '''export const GLOSARIO: Record<string, string> = {
+  "Google Analytics": "El contador de Google: cuenta las visitas a la web, por dónde llegan y qué hacen. Solo cuenta a quien acepta las cookies.",
+  "Analytics": "Google Analytics, el contador de visitas de Google.",
+  "Search Console": "El informe de Google sobre las búsquedas sin pagar: qué escriben, cuántas veces sale el despacho y en qué puesto. Va 2-3 días por detrás.",
+  "Google Ads": "Los anuncios de pago en Google (los que salen arriba con la etiqueta «Patrocinado»).",
+  "Ficha de Google": "La tarjeta del despacho que sale a la derecha en Google y en Google Maps, con reseñas, teléfono y fotos.",
+  "Instagram": "La cuenta de Instagram del despacho, sin pagar anuncios.",
+  "WhatsApp": "Los toques al botón de WhatsApp de la web.",
+  "Semrush": "Una herramienta que vigila a la competencia: su tráfico y sus puestos en Google.",
+  "ChatGPT": "Comprobamos si ChatGPT nombra al despacho cuando alguien le pregunta por un abogado laboralista en Madrid.",
+  "Gemini": "La IA de Google. Comprobamos si nombra al despacho.",
+  "Claude": "Otra IA. Comprobamos si nombra al despacho.",
+  "Supermetrics": "El puente que cada mañana trae los datos de Google Ads, la ficha de Google e Instagram a esta mesa.",
+  "Clarity": "Microsoft Clarity: graba cómo se mueve la gente por la web (sin saber quién es) y avisa de dónde se atasca.",
+  "CRM": "La libreta de clientes: cada consulta, su primera consulta, su hoja de encargo y si aceptó. La mesa solo enseña recuentos, nunca nombres ni asuntos.",
+  "La lupa": "Nuestro propio medidor: mira, página a página, hasta dónde baja la gente y si se va enseguida.",
+  "SEO": "Salir en Google sin pagar anuncios. Cuanto mejor el SEO, menos anuncios hacen falta.",
+  "Rebote": "De cada 100 visitas, cuántas se van sin hacer nada (menos de 10 segundos, una sola página). Cuanto más bajo, mejor.",
+  "Acciones clave": "Lo que de verdad queremos que haga una visita: pedir la primera consulta, enviar un formulario, pulsar WhatsApp o llamar.",
+  "Remarketing": "Anuncios que se enseñan solo a quien ya visitó la web, para que vuelva.",
+  "Cookies": "El aviso de la web que pide permiso para medir. Quien no acepta no se cuenta en Analytics ni en la lupa (sí en nuestro contador propio).",
+  "Mediana": "El valor del medio: la mitad de la gente está por encima y la otra mitad por debajo. Se usa para que un caso raro no lo cambie todo.",
+  "Posición": "El puesto en Google: 1 es el primero. Por debajo de 10 ya no sales en la primera página.",
+};'''
+
+NOTA_PUBLICO = "Podemos preparar la versión B de la web, orientada a empresas y asuntos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos."
+LINEAS = ["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]
+CAPACIDAD = "¿Cuántos asuntos puedes llevar al mes?"

@@ -14,3 +14,5 @@ export type Modulo = {
 export type Reloj = { n?: number; icono?: string; color?: string; t: string; v: string; sub: string; lleno: number; luz: Luz; ayuda?: string; frase?: string; detalle?: string };
 export type Tarea = { id: string; texto: string; porque: string; donde?: string; ir?: string; titular?: string; boton?: string };
 export type Resumen = { titulo: string; texto: string; puntos?: string[] };
+/** Cifras base de 28 días para los juegos de "Aquí mandas tú" (cl·v916); la forma completa está en components/mesa/Suenos.tsx. */
+export type { CifrasBase } from "@/components/mesa/Suenos";

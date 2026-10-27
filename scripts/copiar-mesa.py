@@ -9,7 +9,9 @@ lib/panelDemo.ts y lib/mesaDemo.ts. Si un cambio deja de encontrarse en la refer
 Uso: python3 scripts/copiar-mesa.py /ruta/a/reformadisimo-web
 Después, regenerar el CSS de la mesa (app/mesa-tc-6v9k3p/mesa.css) con Tailwind 3.4, important "#mesa-rd" y sin preflight.
 """
-import sys, pathlib
+import sys, pathlib, json
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import textos_mesa_tierno as T
 
 REF = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "../reformadisimo-web")
 AQUI = pathlib.Path(__file__).resolve().parent.parent
@@ -48,7 +50,6 @@ MESA = [
     ('Todavía no hay firmas de los contactos que entraron en este periodo: hay {num(crmT.visitas)} visitas y {num(crmT.pres)} presupuestos en curso. Una reforma tarda semanas en decidirse; la tasa de cierre se mira con contactos de hace 3 a 6 meses.', 'Todavía no hay casos aceptados de las consultas que entraron en este periodo: hay {num(crmT.visitas)} primeras consultas y {num(crmT.pres)} hojas de encargo en curso. Un caso puede tardar semanas en decidirse.'),
     ('Los del CRM incluyen también a quien llega por teléfono, WhatsApp, Instagram o recomendación (por eso pueden ser más).', 'Los del CRM incluyen también a quien llega por teléfono, WhatsApp o recomendación (por eso pueden ser más).'),
     ('las conversaciones reales las apunta Sonia en el CRM.', 'las conversaciones reales las apunta el despacho en el CRM.'),
-    ('fuente="Supermetrics · Google Ads, Meta y ChatGPT Ads"', 'fuente="Google Ads"'),
     (' · Google Ads, Meta y ChatGPT Ads (Supermetrics), ', ' · Google Ads, '),
     (' · Ficha de Google e Instagram (Supermetrics), ', ' · Ficha de Google e Instagram, '),
     (' · eKomi y Trustpilot, a mano. Las pruebas del equipo no cuentan.', ' · Las pruebas del equipo no cuentan.'),
@@ -63,7 +64,6 @@ MESA = [
     ('{ pregunta: "¿Nos llegan buenos contactos?", color: c1, frase: f1, dato: `${num(T.peticiones)} contactos · ${num(T.visitas)} piden visita` },', '{ pregunta: "¿Nos llegan buenas consultas?", color: c1, frase: f1, dato: `${num(T.peticiones)} consultas · ${num(T.visitas)} piden primera consulta` },'),
     ('{ pregunta: "¿Los convertimos en obras?", color: c2, frase: f2, dato: t.leads ? `${num(t.leads ? (t.firm / t.leads) * 100 : 0)} % de contacto a obra` : "" },', '{ pregunta: "¿Las convertimos en casos?", color: c2, frase: f2, dato: t.leads ? `${num(t.leads ? (t.firm / t.leads) * 100 : 0)} % de consulta a caso` : "" },'),
     ('{ pregunta: "¿Qué canal nos hace ganar más?", color: c3, frase: f3, dato: "" },', '{ pregunta: "¿Qué canal nos trae más casos?", color: c3, frase: f3, dato: "" },'),
-    ('["Contactos", num(t.leads)],\n          ["Visitas", num(t.visitas)],\n          ["Presupuestos", num(t.presupuestos)],\n          ["Obras firmadas", num(t.firmados)],\n          ["Importe firmado", eur(t.firmado)],\n          ["Coste en anuncios por obra firmada", pago ? eur(inversion / pago) : "-"],', '["Consultas", num(t.leads)],\n          ["Primeras consultas", num(t.visitas)],\n          ["Hojas de encargo", num(t.presupuestos)],\n          ["Casos aceptados", num(t.firmados)],\n          ["Honorarios previstos", eur(t.firmado)],\n          ["Coste en anuncios por caso", pago ? eur(inversion / pago) : "-"],'),
     ('<Caja titulo="De la petición a la obra" fuente={cargando ? "Cargando…" : "CRM · contactos que entraron en el periodo y hasta dónde han llegado"}>', '<Caja titulo="De la consulta al caso" fuente={cargando ? "Cargando…" : "CRM · consultas que entraron en el periodo y hasta dónde han llegado"}>'),
     ('[["Contactos", t.leads, undefined], ["Visita técnica", t.visitas, undefined], ["Presupuesto entregado", t.presupuestos, undefined], ["Firman la obra", t.firmados, undefined]]', '[["Consultas", t.leads, undefined], ["Primera consulta", t.visitas, undefined], ["Hoja de encargo enviada", t.presupuestos, undefined], ["Caso aceptado", t.firmados, undefined]]'),
     ('vacio="El CRM aún no tiene contactos en este periodo."', 'vacio="El CRM aún no tiene consultas en este periodo."'),
@@ -104,10 +104,6 @@ MESA = [
     # v915: juego "Adivina la cifra" con las cifras de un despacho
     ('if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una visita?", real: r[1].n, unidad: "visitas", max: techo(r[1].n) });', 'if (r[1]?.n) o.push({ texto: "¿Y cuántas han pedido una primera consulta?", real: r[1].n, unidad: "personas", max: techo(r[1].n) });'),
     ('if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada contacto de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });', 'if (r[2]?.n) o.push({ texto: "¿Cuánto crees que ha costado cada consulta de los anuncios?", real: r[2].n, unidad: "€", max: techo(r[2].n) });'),
-    # Títulos con palabras muy largas (@tiernocentella_abogados) junto al logo: que partan en vez de salirse a 320 px
-    ('<h2 className="font-serif text-[21px] font-medium italic leading-tight text-ink">{titulo}</h2>', '<h2 className="font-serif text-[21px] font-medium italic leading-tight text-ink [overflow-wrap:anywhere]">{titulo}</h2>'),
-    # Sin "Oír resumen" en la mesa de Tierno Centella (decisión de Ig, 27-oct-2026). Se reactiva quitando esta línea.
-    ('function BotonOir({ resumen, tareas }: { resumen?: Resumen; tareas: Tarea[] }) {', 'function BotonOir({ resumen, tareas }: { resumen?: Resumen; tareas: Tarea[] }) {\n  // Tierno Centella: sin leer en voz alta (decisión de Ig, 27-oct-2026). Para activarlo, quitar la línea siguiente.\n  if (SIN_VOZ) return null;'),
 ]
 
 ALEGRIA = [
@@ -136,16 +132,108 @@ TEXTOS = [
     ('tuyo: "las ventas" }', 'tuyo: "las consultas y los plazos" }'),
 ]
 
+# ── v935: "Tus sueños y tus cuentas", tarjetas de Consultas con su "?" y fuentes sin Meta ──
+MESA += [
+    ('nombreEmpresa="Reformadísimo" lineas={["Reforma integral", "Cocina", "Baño", "Vivienda para alquilar", "Local u oficina"]} capacidadTexto="¿Cuántas obras puedes empezar al mes?" notaPublico="En Reformadísimo ya está en marcha la prueba A/B: la versión B habla a quien busca arquitectura y decoración (el cliente que quiere gastar mucho más) sin renunciar al de siempre. Aquí se verá si responde."',
+     'nombreEmpresa="Tierno Centella Abogados" lineas={' + json.dumps(T.LINEAS, ensure_ascii=False).replace('","', '", "') + '} capacidadTexto="' + T.CAPACIDAD + '" notaPublico="' + T.NOTA_PUBLICO + '"'),
+    ('["Contactos", num(t.leads), "persona", PALETA_ALEGRIA.ventas],', '["Consultas", num(t.leads), "persona", PALETA_ALEGRIA.ventas],'),
+    ('["Visitas", num(t.visitas), "casa", PALETA_ALEGRIA.web],', '["Primeras consultas", num(t.visitas), "persona", PALETA_ALEGRIA.web],'),
+    ('["Presupuestos", num(t.presupuestos), "documento", PALETA_ALEGRIA.camino],', '["Hojas de encargo", num(t.presupuestos), "documento", PALETA_ALEGRIA.camino],'),
+    ('["Obras firmadas", num(t.firmados), "check", PALETA_ALEGRIA.mercado],', '["Casos aceptados", num(t.firmados), "check", PALETA_ALEGRIA.mercado],'),
+    ('["Importe firmado", eur(t.firmado), "moneda", PALETA_ALEGRIA.dinero],', '["Honorarios previstos", eur(t.firmado), "moneda", PALETA_ALEGRIA.dinero],'),
+    ('["Coste en anuncios por obra firmada", pago ? eur(inversion / pago) : "-", "megafono", PALETA_ALEGRIA.anuncios],', '["Coste en anuncios por caso", pago ? eur(inversion / pago) : "-", "megafono", PALETA_ALEGRIA.anuncios],'),
+    ('Contactos: "Personas que han entrado en el CRM en estas fechas, por cualquier canal (web, teléfono, WhatsApp, Instagram, recomendación).",', 'Consultas: "Personas que han entrado en el CRM en estas fechas, por cualquier canal (web, teléfono, WhatsApp, recomendación).",'),
+    ('Visitas: "De esos contactos, a cuántos se les ha hecho ya la visita técnica en casa.",', '"Primeras consultas": "De esas consultas, cuántas han tenido ya la primera reunión con el abogado.",'),
+    ('Presupuestos: "A cuántos se les ha entregado presupuesto.",', '"Hojas de encargo": "A cuántas se les ha enviado la hoja de encargo, con los honorarios.",'),
+    ('"Obras firmadas": "Cuántos han firmado contrato. Una reforma tarda semanas en decidirse: los contactos de estas fechas todavía pueden firmar.",', '"Casos aceptados": "Cuántas han firmado la hoja de encargo. Un caso puede tardar semanas en decidirse: las consultas de estas fechas todavía pueden aceptar.",'),
+    ('"Importe firmado": "Suma de los contratos firmados por contactos de estas fechas.",', '"Honorarios previstos": "Suma de los honorarios de los casos aceptados de estas fechas.",'),
+    ('"Coste en anuncios por obra firmada": "Lo invertido en anuncios dividido entre las obras firmadas que vinieron de anuncios. Cuanto más bajo, mejor.",', '"Coste en anuncios por caso": "Lo invertido en anuncios dividido entre los casos aceptados que vinieron de anuncios. Cuanto más bajo, mejor.",'),
+    ('"Tiempo medio hasta la primera llamada": "Cuánto tardamos, de media, en llamar a un contacto nuevo. Cuanto antes, más probable que firme.",', '"Tiempo medio hasta la primera llamada": "Cuánto se tarda, de media, en llamar a una consulta nueva. Cuanto antes, mejor la atiendes.",'),
+    ('"Seguimientos atrasados": "Contactos con la fecha de seguimiento ya pasada en el CRM: alguien tiene que llamarlos.",', '"Seguimientos atrasados": "Consultas con la fecha de seguimiento ya pasada en el CRM: alguien tiene que llamarlas.",'),
+    ('fuente: "Anuncios (Google Ads, Meta y ChatGPT)"', 'fuente: "Anuncios (Google Ads)"'),
+    ('<Caja titulo="Inversión por día" fuente="Google Ads, Meta y ChatGPT Ads · se actualiza cada mañana">', '<Caja titulo="Inversión por día" fuente="Google Ads · se actualiza cada mañana">'),
+    ('pista: "Analytics, Ads, Meta, WhatsApp…"', 'pista: "Analytics, Ads, ficha de Google, WhatsApp…"'),
+]
+
+# Bloques enteros de Alegria.tsx que el prompt deja cambiar: guía de uso, "?" y glosario
+def bloque(texto, empieza, nuevo, nombre):
+    i = texto.find(empieza)
+    if i < 0:
+        fallos.append(f"{nombre}: no encontrado el bloque {empieza}")
+        return texto
+    j = texto.index("\n};" if nuevo.rstrip().endswith("};") else "\n];", i) + 3
+    return texto[:i] + nuevo + texto[j:]
+
+SUENOS = [
+    # Las cuatro cifras del simulador: consultas al mes, piden cita, asuntos, facturación
+    ('<Cifra t="Contactos al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unos ${num(r.totalHoy)} al mes`} />', '<Cifra t="Consultas al mes" v={num(r.total)} color={C.ventas} sub={`hoy, unas ${num(r.totalHoy)} al mes`} />'),
+    ('<Cifra t="Piden visita" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de los contactos`} />', '<Cifra t="Piden cita" v={num(r.total * r.pide)} color={C.web} sub={`${pct(r.pide * 100)} de las consultas`} />'),
+    ('<Cifra t="Obras" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 firman`} />', '<Cifra t="Asuntos" v={num(r.obras)} color={C.camino} sub={`${tasa} de cada 100 encargan`} />'),
+    ('<Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por obra`} />', '<Cifra t="Facturación" v={eur(r.factura)} color={C.dinero} sub={`a ${eur(ticket)} por asunto`} />'),
+    ('<>Con <strong>{eur(gasto)}</strong> al mes, cada contacto de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con los contactos que llegan solos: unos <strong>{num(r.organicos)}</strong> al mes. </>}', '<>Con <strong>{eur(gasto)}</strong> al mes, cada consulta de anuncios saldría a unos <strong>{eur(r.cplAhora)}</strong>. </> : <>Sin anuncios, te quedarías con las consultas que llegan solas: unas <strong>{num(r.organicos)}</strong> al mes. </>}'),
+    ('al mes y mantener los contactos de hoy: <strong>', 'al mes y mantener las consultas de hoy: <strong>'),
+    ('<>Con el SEO un {pct(seo)} arriba tendrías unos {num(r.organicos)} contactos al mes sin pagar anuncios.</>', '<>Con el SEO un {pct(seo)} arriba tendrías unas {num(r.organicos)} consultas al mes sin pagar anuncios.</>'),
+    ('La medición de los anuncios está incompleta: estas cifras valen para jugar, no para quitar campañas.', 'La medición de los anuncios está incompleta: estas cifras valen para pensar, no para quitar campañas.'),
+    ('así que uso un supuesto de {eur(cpl)} por contacto (cámbialo abajo).', 'así que uso un supuesto de {eur(cpl)} por consulta (cámbialo abajo).'),
+    ('<p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} contactos de anuncios, {num(base.contactos)} contactos en total y {num(base.visitasPedidas)} visitas pedidas.', '<p>Parto de tus 28 días: {eur(base.coste)} en anuncios, {num(base.contactosAnuncios)} consultas de anuncios, {num(base.contactos)} consultas en total y {num(base.visitasPedidas)} citas pedidas.'),
+    ('De cada 100 contactos, firman<input', 'De cada 100 consultas, encargan el asunto<input'),
+    ('<span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene firmas de este periodo.</span>', '<span className="font-normal text-ink/55">Supuesto: tu CRM aún no tiene asuntos de este periodo.</span>'),
+    ('Cada obra, de media (€)<input', 'Honorarios medios por asunto (€)<input'),
+    ('Coste por contacto supuesto (€)<input', 'Coste por consulta supuesto (€)<input'),
+    ('habrían llegado unos <strong>{num(extra)} contactos más</strong> ({num(c)} en total de anuncios). Cada uno de esos contactos extra te habría costado unos', 'habrían llegado unas <strong>{num(extra)} consultas más</strong> ({num(c)} en total de anuncios). Cada una de esas consultas extra te habría costado unos'),
+    ('más caro que los de ahora, porque los primeros euros son siempre los que mejor rinden.', 'más caro que las de ahora, porque los primeros euros son siempre los que mejor rinden.'),
+    # Tipos de meta de un despacho (las claves no cambian: las usa la lógica)
+    ('obras: { t: "Obras al año", unidad: "obras", icono: "casa", color: C.ventas },', 'obras: { t: "Asuntos nuevos al año", unidad: "asuntos", icono: "documento", color: C.ventas },'),
+    ('contactos: { t: "Contactos al mes", unidad: "contactos", icono: "persona", color: C.web },', 'contactos: { t: "Consultas al mes", unidad: "consultas", icono: "persona", color: C.web },'),
+    ('ticket: { t: "Lo que gasta cada cliente", unidad: "€ por obra", icono: "estrella", color: C.camino },', 'ticket: { t: "Honorarios medios por asunto", unidad: "€ por asunto", icono: "estrella", color: C.camino },'),
+    ('capacidadTexto = "¿Cuántas obras puedes llevar al mes?"', 'capacidadTexto = "' + T.CAPACIDAD + '"'),
+    ('"Un sueño grande: otra empresa dentro de la tuya"', '"Un sueño grande: otro despacho dentro del tuyo"'),
+    ('`Hoy cada cliente gasta de media ${eur(hoy)}${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene firmas de este periodo)" : " (según tu CRM)"}. Quieres clientes de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`', '`Hoy cada asunto deja de media ${eur(hoy)} de honorarios${ritmo.supuestoTicket ? " (supuesto; el CRM aún no tiene asuntos de este periodo)" : " (según tu CRM)"}. Quieres asuntos de ${eur(m.cifra)}: ${veces.toFixed(1).replace(".", ",")} veces más.`'),
+    ('"Esto no se consigue invirtiendo más en los mismos anuncios: se consigue hablando a otra gente. Haría falta una página distinta para ese cliente (otras fotos, otros precios, otro tono), campañas dirigidas a ese público y una prueba A/B para medir si responde."', '"Esto no se consigue con más anuncios: se consigue hablando a otro cliente. Haría falta una página pensada para empresas o asuntos de más cuantía (otro tono, casos tipo inventados, el equipo y el método), presencia en Google y en las IA para esas búsquedas, artículos que demuestren criterio y una prueba A/B que mida si responde."'),
+    ('"Puedes tener las dos cosas a la vez: la mayoría de clientes de hoy y una parte de clientes de más nivel. Dinos qué reparto quieres (por ejemplo, 80 y 20) y lo montamos por separado para que cada público vea lo suyo."', '"Puedes tener las dos cosas a la vez: seguir atendiendo a quien te consulta hoy y dirigirte también a ese otro cliente. Dinos qué reparto quieres (por ejemplo, 80 y 20) y lo montamos por separado para que cada público vea lo suyo."'),
+    ('"Con una diferencia tan grande, lo honesto es decirte que es casi otra marca: se puede, pero lleva meses y un presupuesto propio. Mejor empezar con un escalón intermedio."', '"Con una diferencia tan grande, lo honesto es decirte que es casi otro despacho: se puede intentar, pero lleva meses y un presupuesto propio. Mejor empezar con un escalón intermedio."'),
+    ('" (con una tasa de firma supuesta del 8 %, tu CRM aún no tiene firmas de este periodo)"', '" (suponiendo que 8 de cada 100 consultas acaban en asunto, porque tu CRM aún no tiene asuntos de este periodo)"'),
+    ('`Haría falta pasar de ${num(ritmo.contactosMes)} a unos ${num(contactosNecesarios)} contactos al mes.', '`Haría falta pasar de ${num(ritmo.contactosMes)} a unas ${num(contactosNecesarios)} consultas al mes.'),
+    ('"mucho; mejor combinarlo con SEO, reseñas y una web que convierta más" : "demasiado; por aquí no se llega solo con anuncios. Haría falta otro público, otra oferta u otra zona"', '"mucho; mejor combinarlo con SEO, reseñas y una web que convierta más" : "demasiado; por aquí no se llega solo con anuncios. Haría falta otro público, otra área u otra zona"'),
+    ('"Lo importante aquí es no bajar la guardia: mantener los anuncios que funcionan y cuidar las reseñas."', '"Lo importante aquí es no bajar la guardia: mantener los anuncios que funcionan y contestar las reseñas."'),
+    ('"Cuenta con una tasa de firma supuesta del 8 %, porque tu CRM aún no tiene firmas de este periodo. Con firmas reales el cálculo se afina solo."', '"Cuenta con que 8 de cada 100 consultas acaban en asunto (supuesto), porque tu CRM aún no tiene asuntos de este periodo. Con datos reales el cálculo se afina solo."'),
+    ('`Tope de capacidad: hoy puedes llevar ${num(cap)} obras al mes y esta meta pide unas ${num(obrasMesMeta)}. Antes de traer más contactos habría que crecer el equipo o escalonar la meta; no te traeremos más de lo que puedes atender bien.`', '`Con tu equipo de hoy caben ${num(cap)} asuntos al mes; para llegar a ${num(obrasMesMeta)} habría que crecer el equipo o derivar. Antes de traer más consultas hay que resolver eso: no te traeremos más de lo que puedes atender bien.`'),
+    ('`Para «${m.linea}» hace falta su propia página y su propia campaña: cada tipo de obra se vende con sus fotos y sus palabras.`', '`Para «${m.linea}» hace falta su propia página, sus búsquedas en Google, su campaña y artículos de criterio sobre ese tema: cada área se explica con sus palabras.`'),
+    ('${m.linea ? "Tipo de obra: " + m.linea + "\\n" : ""}', '${m.linea ? "Tipo de asunto: " + m.linea + "\\n" : ""}'),
+    ('placeholder={tipo === "factura" ? "3000000" : tipo === "ticket" ? "100000" : "50"}', 'placeholder={tipo === "factura" ? "600000" : tipo === "ticket" ? "4000" : "20"}'),
+    ('<legend>¿De qué tipo de obra? (opcional)</legend>', '<legend>¿De qué tipo de asunto? (opcional)</legend>'),
+    ('placeholder="Por ejemplo, 8"', 'placeholder="Por ejemplo, 20"'),
+    ('placeholder={tipo === "ticket" ? "Quiero clientes que gasten más, pero sin perder a los de ahora" : "Por ejemplo: abrir en otra ciudad, salir en una revista…"}', 'placeholder={tipo === "ticket" ? "Quiero asuntos de empresa, sin dejar de atender a los particulares" : "Por ejemplo: ser referencia en acoso laboral en Madrid"}'),
+    ('<Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (tasa de firma, importe por obra). Es una orientación para hablarlo, no una promesa." />', '<Aviso texto="Lo que te decimos sale de tus cifras de 28 días y de supuestos a la vista (consultas que acaban en asunto, honorarios por asunto). Es una orientación para hablarlo, no una promesa." />'),
+    ('La mesa dice: <strong>{num(prevision)} contactos</strong>', 'La mesa dice: <strong>{num(prevision)} consultas</strong>'),
+    ('llegaron <strong>{num(real)} contactos</strong>', 'llegaron <strong>{num(real)} consultas</strong>'),
+    ('"Has ganado tú. Conoces tu negocio mejor que la media."', '"Has ganado tú. Conoces tu despacho mejor que la media."'),
+    ('{ id: "meta", t: "Ponte una meta", sub: "Contactos cada 28 días",', '{ id: "meta", t: "Ponte una meta", sub: "Consultas cada 28 días",'),
+]
+
+# 44 px mínimo (robot de aceptación, 27-oct-2026). Fallo del ORIGINAL de Reformadísimo, avisado a Ig para corregirlo allí:
+# la guía de uso (Lo he visto / Saltar / Volver a hacer / Siguiente / ×), "Qué hago con esto" y los enlaces de cada parte.
+# Cuando se corrija en la referencia, estas líneas dejarán de encontrarse (el script lo dirá) y se pueden quitar.
+ALEGRIA += [('min-h-[40px]', 'min-h-[44px]'), ('grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line bg-white text-[16px] text-ink/60">×', 'grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line bg-white text-[16px] text-ink/60">×')]
+SUENOS += [('ml-2 inline-flex min-h-[32px] items-center rounded-full', 'ml-2 inline-flex min-h-[44px] items-center rounded-full')]
+MESA += [('className="inline-flex min-h-[40px] it', 'className="inline-flex min-h-[44px] it'),
+         # Tarjetas de cifras: a 320 px no caben dos por fila ("CONSULTAS" se salía 1 px). Trampa 23 del prompt: una columna. También del original.
+         ('<div className="grid grid-cols-2 gap-3 lg:grid-cols-4">', '<div className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 lg:grid-cols-4">')]
+
 mesa = cambia((REF / "components/mesa/Mesa.tsx").read_text(encoding="utf-8"), MESA, "Mesa.tsx")
-i = mesa.index("\n", mesa.index('from "@/components/mesa/Alegria";')) + 1
-mesa = mesa[:i] + '/** Tierno Centella: la mesa no lee en voz alta (decisión de Ig, 27-oct-2026). */\nconst SIN_VOZ = true;\n' + mesa[i:]
 (AQUI / "components/mesa/Mesa.tsx").write_text(mesa, encoding="utf-8")
-(AQUI / "components/mesa/Alegria.tsx").write_text(cambia((REF / "components/mesa/Alegria.tsx").read_text(encoding="utf-8"), ALEGRIA, "Alegria.tsx"), encoding="utf-8")
+alegria = cambia((REF / "components/mesa/Alegria.tsx").read_text(encoding="utf-8"), ALEGRIA, "Alegria.tsx")
+alegria = bloque(alegria, "export const GUIA_PASOS", T.GUIA_PASOS, "Alegria.tsx")
+alegria = bloque(alegria, "export const EXPLICA", T.EXPLICA, "Alegria.tsx")
+alegria = bloque(alegria, "export const GLOSARIO", T.GLOSARIO, "Alegria.tsx")
+(AQUI / "components/mesa/Alegria.tsx").write_text(alegria, encoding="utf-8")
+(AQUI / "components/mesa/Suenos.tsx").write_text(cambia((REF / "components/mesa/Suenos.tsx").read_text(encoding="utf-8"), SUENOS, "Suenos.tsx"), encoding="utf-8")
 (AQUI / "lib/mesaTextos.ts").write_text(cambia((REF / "lib/mesaTextos.ts").read_text(encoding="utf-8"), TEXTOS, "mesaTextos.ts"), encoding="utf-8")
 (AQUI / "lib/mesaTipos.ts").write_text((REF / "lib/mesaTipos.ts").read_text(encoding="utf-8"), encoding="utf-8")
 
 # Lo que no debe quedar en la copia
 import re
+# Suenos.tsx no entra: sus variables se llaman "obras" (la lógica no se toca); su texto lo revisa el robot en pantalla.
 for nombre in ["components/mesa/Mesa.tsx", "components/mesa/Alegria.tsx"]:
     t = (AQUI / nombre).read_text(encoding="utf-8")
     for m in re.finditer(r"Reformad[ií]simo|Sonia|eKomi|Trustpilot|Reformímetro|\bobras?\b|presupuesto|visita técnica|reforma\b", t):

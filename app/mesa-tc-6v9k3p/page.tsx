@@ -26,9 +26,9 @@ export default function Page() {
       <style>{'body > *:not(main){display:none!important} main#contenido{padding:0!important;margin:0!important;max-width:none!important} main#contenido > *:not(#mesa-rd):not(style){display:none!important}'}</style>
       <div id="mesa-rd">
         <div style={{ background: "#1a3d47", color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 14 }}>
-          Demostración de tu mesa de control con <b>cifras de ejemplo</b>. Lo público de tu despacho es real: nota y reseñas de Google, Instagram y tu puesto en Google.
+          Demostración de tu mesa de control con <b>cifras de ejemplo</b>. Lo público del despacho es real.
         </div>
-        <Mesa datos={{ ...(d as unknown as Parameters<typeof Mesa>[0]['datos']), hoy, clave: 'demo' }} temas={p.modulos} resumenHoy={p.resumen} tareas={p.tareas} relojes={p.relojes} />
+        <Mesa datos={{ ...(d as unknown as Parameters<typeof Mesa>[0]['datos']), hoy, clave: 'demo' }} temas={p.modulos} resumenHoy={p.resumen} tareas={p.tareas} relojes={p.relojes} base={p.base} />
       </div>
     </>
   );
