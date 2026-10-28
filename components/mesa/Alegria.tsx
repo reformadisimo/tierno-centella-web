@@ -313,18 +313,21 @@ export function JuegaConTusCifras({ contactos, preguntas }: { contactos?: number
 
 /** Apartado plegado en una línea (cl·v921): icono, título y una pista; se abre al pulsar. Cerrado al entrar,
     para que la mesa se recorra en un vistazo y cada cosa se despliegue solo si se quiere. */
-export function Plegable({ id, icono, color, titulo, pista, abiertoAlPrincipio, children }: { id: string; icono: string; color: string; titulo: string; pista?: string; abiertoAlPrincipio?: boolean; children: React.ReactNode }) {
+export function Plegable({ id, icono, color, titulo, pista, abiertoAlPrincipio, destacado, accion, children }: { id: string; icono: string; color: string; titulo: string; pista?: string; abiertoAlPrincipio?: boolean; destacado?: boolean; accion?: string; children: React.ReactNode }) {
   const [abierto, setAbierto] = useState(!!abiertoAlPrincipio);
   useEffect(() => {
     const f = () => { if (window.location.hash === "#" + id) setAbierto(true); };
     f(); window.addEventListener("hashchange", f); return () => window.removeEventListener("hashchange", f);
   }, [id]);
   return (
-    <section id={id} className="mt-3 scroll-mt-4 rounded-[18px] border border-line bg-white">
-      <button type="button" aria-expanded={abierto} aria-controls={id + "-dentro"} onClick={() => setAbierto(!abierto)} className="flex min-h-[56px] w-full items-center gap-3 px-3 py-2 text-left">
-        <Loseta n={icono} color={color} tam={36} />
-        <span className="min-w-0 flex-1"><span className="block text-[16px] font-semibold leading-tight text-ink">{titulo}</span>{pista && <span className="block truncate text-[13px] leading-tight text-ink/60">{pista}</span>}</span>
-        <span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-line text-[15px] text-ink/70">{abierto ? "–" : "+"}</span>
+    /* cl·v939: "destacado" (como en AMS): borde y fondo de color, título grande y botón amarillo con la acción */
+    <section id={id} className={`mt-3 scroll-mt-4 rounded-[18px] ${destacado ? "border-2" : "border border-line bg-white"}`} style={destacado ? { borderColor: color, background: `${color}14` } : undefined}>
+      <button type="button" aria-expanded={abierto} aria-controls={id + "-dentro"} onClick={() => setAbierto(!abierto)} className={`flex w-full items-center gap-3 px-3 text-left ${destacado ? "min-h-[72px] py-3" : "min-h-[56px] py-2"}`}>
+        <Loseta n={icono} color={color} tam={destacado ? 44 : 36} />
+        <span className="min-w-0 flex-1"><span className={destacado ? "block font-serif text-[22px] italic leading-tight text-ink" : "block text-[16px] font-semibold leading-tight text-ink"}>{titulo}</span>{pista && <span className={`block leading-tight ${destacado ? "mt-0.5 text-[14.5px] text-ink/75" : "truncate text-[13px] text-ink/60"}`}>{pista}</span>}</span>
+        {destacado && accion && !abierto
+          ? <span aria-hidden="true" className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-yellow px-5 text-[15px] font-semibold text-ink">{accion}</span>
+          : <span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-line bg-white text-[15px] text-ink/70">{abierto ? "–" : "+"}</span>}
       </button>
       <div id={id + "-dentro"} hidden={!abierto} className="px-3 pb-3 [&>section]:mt-0 [&>section]:border-0 [&>section]:px-0 [&>section]:pt-0 [&>div]:mt-0">{children}<CerrarYVolver onClose={() => setAbierto(false)} a={id} /></div>
     </section>

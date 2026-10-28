@@ -27,6 +27,8 @@ def cambia(texto, pares, nombre):
 
 
 MESA = [
+    # v939: el resumen por correo ya está siempre arriba; en «Más herramientas» de la vista sencilla sobraba (id duplicado)
+    ('{herramientas}<Resumenes clave={clave} /></div>}', '{herramientas}</div>}'),
     ('/* ── MESA DE CONTROL (26-oct, cl·v811) ──', '/* ── MESA DE CONTROL: copia de la de Reformadísimo, la referencia (scripts/copiar-mesa.py). Solo cambian textos de un despacho. ──'),
     ('{ id: "peticiones", nombre: "Peticiones", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web." }', '{ id: "peticiones", nombre: "Contactos", f: (t) => t.peticiones, formato: num, fuente: "Web", ayuda: "Personas que nos han dejado sus datos en la web o en el chat." }'),
     ('{ id: "visitas", nombre: "Piden visita", f: (t) => t.visitas, formato: num, fuente: "Web", ayuda: "De ellas, las que piden la visita técnica gratis." }', '{ id: "visitas", nombre: "Piden primera consulta", f: (t) => t.visitas, formato: num, fuente: "Web", ayuda: "De ellas, las que reservan la primera consulta de una hora." }'),
