@@ -1,6 +1,6 @@
 ---
 titulo: Faltas laborales leves, graves y muy graves: quién las define y cuándo prescriben
-descripcion: Qué son las faltas leves, graves y muy graves en el trabajo, quién las define, en qué plazos prescriben (10, 20 y 60 días) y qué sanciones puede poner la empresa.
+descripcion: Qué son las faltas leves, graves y muy graves en el trabajo, quién las define, cuándo prescriben (10, 20 y 60 días) y qué sanciones puede poner la empresa.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: despido
@@ -48,7 +48,7 @@ De nuevo, depende del convenio. Las más comunes son:
 - Faltas graves: suspensión de empleo y sueldo durante unos días.
 - Faltas muy graves: suspensión de empleo y sueldo más larga y, en los casos más serios, despido disciplinario.
 
-Algunos convenios recogen otras sanciones, como la pérdida temporal del derecho a ascender. Lo explicamos con detalle en las guías sobre [la amonestación por escrito](/blog/amonestacion-por-escrito-como-responder) y [la suspensión de empleo y sueldo](/blog/suspension-de-empleo-y-sueldo).
+Algunos convenios recogen otras sanciones, como la pérdida temporal del derecho a ascender.
 
 Hay sanciones que la ley prohíbe siempre (art. 58.3 ET):
 

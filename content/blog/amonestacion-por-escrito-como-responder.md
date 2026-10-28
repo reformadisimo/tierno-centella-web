@@ -51,7 +51,7 @@ Suele merecer la pena cuando:
 
 - Los hechos no son ciertos o están exagerados.
 - La carta no dice qué hiciste ni cuándo.
-- La falta ya había prescrito cuando te sancionaron. Lo explicamos en [la guía sobre faltas leves, graves y muy graves](/blog/faltas-leves-graves-muy-graves).
+- La falta ya había prescrito cuando te sancionaron: la empresa tiene 10, 20 o 60 días desde que conoce los hechos, según la falta sea leve, grave o muy grave, y nunca más de 6 meses desde que ocurrieron (art. 60.2 del Estatuto).
 - Notas que la amonestación llega justo después de pedir un derecho (una reducción de jornada, una baja, una queja por acoso). Puede ser una represalia.
 - Ya tienes otras sanciones y una más te acerca a un despido.
 

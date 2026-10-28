@@ -56,7 +56,7 @@ Si falta este trámite, la sanción es nula (art. 115.2 de la Ley Reguladora de 
 1. Firma como "recibí, no conforme" y apunta la fecha. Tienes un modelo en el [generador de cartas](/herramientas/genera-tu-carta).
 2. Guarda la carta original y haz copias.
 3. Comprueba en tu convenio si la falta y la sanción encajan.
-4. Revisa si la falta pudo haber prescrito: la empresa tiene 10, 20 o 60 días desde que conoce los hechos, según sea leve, grave o muy grave, y nunca más de 6 meses desde que ocurrieron. Lo explicamos en [la guía sobre faltas laborales](/blog/faltas-leves-graves-muy-graves).
+4. Revisa si la falta pudo haber prescrito: la empresa tiene 10, 20 o 60 días desde que conoce los hechos, según sea leve, grave o muy grave, y nunca más de 6 meses desde que ocurrieron (art. 60.2 ET).
 5. Reúne pruebas de tu versión: correos, mensajes, testigos, registros de jornada.
 6. Cumple la suspensión en las fechas que te digan, aunque vayas a impugnarla. Faltar al trabajo fuera de esas fechas podría dar pie a una nueva sanción.
 
