@@ -1303,10 +1303,11 @@ Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** P
 
 **Qué es un test A/B.** Imagina que tu despacho tuviera dos puertas a la calle: la de siempre (la A) y una nueva (la B). Cada persona que llega entra por una de las dos, al azar, sin saber que existe la otra. Al cabo de unas semanas cuentas cuántas personas acabaron sentadas contigo después de entrar por cada puerta. La que más clientes trae, se queda. En la web es igual: **tu web actual es la A, la nueva es la B**, las dos viven en tu misma dirección (tiernocentella.es) y cada visita ve una u otra sin notar nada raro.
 
-**Tú decides el reparto.** Puede ser:
+**Tú decides el reparto.** Puede ser cualquiera de estos:
 
 | Reparto | Para quién |
 | --- | --- |
+| 100 % la nueva | **Nuestro consejo**: todo el mundo ve ya la web nueva y los resultados se notan antes |
 | 50 % y 50 % | El más rápido: en dos o tres semanas ya hay datos claros |
 | 60 % la actual y 40 % la nueva | Si prefieres ir con un poco más de calma |
 | 90 % la actual y 10 % la nueva | Si te da mucho respeto: es el más prudente, pero tarda más en dar datos fiables |
@@ -1315,7 +1316,7 @@ Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** P
 
 **Y después, poco a poco.** Si la nueva gana, vamos subiendo su parte: por ejemplo, de 50 a 70 % y luego al 100 %. Si no gana, no se cambia nada y no has perdido nada: tu web actual ha seguido funcionando todo el tiempo.
 
-> **Nuestro consejo, con sinceridad: empezar al 50 % y, cuando los datos lo confirmen, ir al 100 %.** La web nueva ya está lista y es la que trae las herramientas, el asistente y la velocidad. Cuanto antes la vea todo el mundo, antes se notan los resultados. Pero el test está para que no tengas que fiarte de nuestra palabra: lo decides tú, con datos.
+> **Nuestro consejo: empezar directamente al 100 % con la web nueva.** Ya está lista y es la que trae las herramientas, el asistente y la velocidad. Cuanto antes la vea todo el mundo, antes se notan los resultados. El test A/B está ahí por si prefieres ir con calma: es tu decisión.
 
 **Lo mismo hacemos siempre con las landings y los anuncios**: probamos dos versiones a la vez y nos quedamos con la que mejor funciona. Es nuestra forma de trabajar: decidir con datos, no con gustos.
 

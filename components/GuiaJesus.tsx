@@ -384,7 +384,7 @@ function Contenido({ html }: { html: string }) {
 // se borran de aquí las que ya ha visto.
 const VERSION = 19;
 const NOVEDADES: { texto: string; clave: string; v: number }[] = [
-  { texto: '¿Miedo al cambio? Te explicamos el test A/B: tu web actual y la nueva a la vez, al 50 % o con el reparto que prefieras, y decides con tus números.', clave: '21 bis', v: 19 },
+  { texto: '¿Miedo al cambio? Te explicamos el test A/B: tu web actual y la nueva a la vez, con el reparto que prefieras. Nuestro consejo: ir directamente al 100 % con la nueva.', clave: '21 bis', v: 19 },
   { texto: 'Tres herramientas nuevas en tu web: cuánto se cobra de baja, los salarios que debe la empresa con sus intereses y lo que cubre el FOGASA.', clave: '11', v: 18 },
   { texto: 'No te pedimos tu facturación: te pedimos dos números, cuántos contactos acaban siendo clientes y lo que deja cada uno.', clave: '23 bis', v: 17 },
   { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 16 },
