@@ -382,20 +382,20 @@ function Contenido({ html }: { html: string }) {
 // quien entra solo ve las novedades posteriores a su última visita, nunca las que ya vio (petición de Ig, 27-oct-2026).
 // Jesús entró por primera vez el 26 de octubre de 2026 (versión 12). Cuando llegue el aviso de que ha vuelto a entrar,
 // se borran de aquí las que ya ha visto.
-const VERSION = 20;
+const VERSION = 21;
 // Novedades que se le enseñan ahora (Ig, 28-oct-2026: de una en una, para no abrumar ni adelantar temas de cuando ya esté decidido).
 const NOVEDADES: { texto: string; clave: string; v: number }[] = [
+  { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 21 },
+  { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter', v: 21 },
   { texto: 'Tres herramientas nuevas en tu web: cuánto se cobra de baja, los salarios que debe la empresa con sus intereses y lo que cubre el FOGASA.', clave: '11', v: 18 },
 ];
 // Guardadas para ir enseñándolas más adelante. Al sacarlas, ponerles un v mayor que VERSION y subir VERSION.
-// (Las de 21 bis, 21 ter y 23 bis, mejor cuando ya se esté planteando el cambio.)
+// Plan (Ig, 28-oct): segundo correo, la forma de trabajar (21 ter); tercero, cuando se plantee el cambio: 23 bis, 21 bis y cómo decírselo a su proveedor.
 export const NOVEDADES_PENDIENTES: { texto: string; clave: string }[] = [
   { texto: 'Nuestro objetivo y nuestra forma de trabajar: conseguirte el mayor número de clientes dándote la menor guerra posible. Sin reuniones ni llamadas, por correo y WhatsApp, y cada vez robándote menos tiempo.', clave: '21 ter' },
   { texto: '¿Miedo al cambio? Te explicamos el test A/B: tu web actual y la nueva a la vez, con el reparto que prefieras. Nuestro consejo: ir directamente al 100 % con la nueva.', clave: '21 bis' },
   { texto: 'No te pedimos tu facturación: te pedimos dos números, cuántos contactos acaban siendo clientes y lo que deja cada uno.', clave: '23 bis' },
-  { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5' },
   { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19' },
-  { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter' },
   { texto: 'Tu cuenta de X lleva parada desde 2020: qué ve quien la abre y cómo la pondríamos al día.', clave: '6' },
 ];
 
