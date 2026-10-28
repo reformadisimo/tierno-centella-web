@@ -121,7 +121,7 @@ export default function ComprobadorIncapacidad() {
               {grado && (
                 <div className="veredicto">
                   <h3>Por lo que cuentas, podrías encajar en una {grado.nombre}</h3>
-                  <p style={{ margin: 0 }}>Se cobra {grado.cuantia}. El grado lo decide el tribunal médico o el juez con tus informes.</p>
+                  <p style={{ margin: 0 }}>Se cobra {grado.cuantia}. El grado lo decide el tribunal médico o el juez con tus informes. <Link href="/herramientas/calculadora-pension-incapacidad">Calcula cuánto cobrarías tú</Link>.</p>
                 </div>
               )}
               {origen === 'Ansiedad o depresión por acoso laboral' && (

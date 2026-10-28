@@ -15,6 +15,7 @@ export const HERRAMIENTAS = [
   { href: '/herramientas/calculadora-finiquito', titulo: 'Calculadora de finiquito', texto: 'Los días del último mes, las vacaciones pendientes y la parte de las pagas extra.' },
   { href: '/herramientas/calculadora-baja-laboral', titulo: 'Calculadora de la baja', texto: 'Cuánto cobras estando de baja, día a día, y quién te lo paga.' },
   { href: '/herramientas/calculadora-salarios-impagados', titulo: 'Calculadora de salarios impagados', texto: 'Lo que te debe la empresa, con el 10 % de interés, y el último día para reclamar cada mes.' },
+  { href: '/herramientas/calculadora-pension-incapacidad', titulo: 'Calculadora de la pensión de incapacidad', texto: 'Cuánto cobrarías con una incapacidad total, absoluta o gran incapacidad, paso a paso.' },
   { href: '/herramientas/calculadora-fogasa', titulo: 'Calculadora del FOGASA', texto: 'Si la empresa no paga o ha cerrado: cuánto te cubre de salarios e indemnización.' },
   { href: '/herramientas/calculadora-paro', titulo: 'Calculadora del paro', texto: 'Cuánto cobrarás y durante cuántos meses, con los topes de 2026.' },
   { href: '/herramientas/calculadora-reduccion-jornada', titulo: 'Calculadora de reducción de jornada', texto: 'Cuánto cobrarás si reduces tu jornada para cuidar y qué derechos conservas.' },

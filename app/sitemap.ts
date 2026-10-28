@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/herramientas/calculadora-baja-laboral',
     '/herramientas/calculadora-salarios-impagados',
     '/herramientas/calculadora-fogasa',
+    '/herramientas/calculadora-pension-incapacidad',
     '/herramientas/calculadora-reduccion-jornada',
     '/herramientas/autodiagnostico-acoso-empresas',
     '/calculadora-indemnizacion',

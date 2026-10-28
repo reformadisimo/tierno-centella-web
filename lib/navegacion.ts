@@ -63,7 +63,7 @@ export const MENU: Grupo[] = [
   {
     titulo: 'Herramientas',
     foto: 'calculadora-papeles',
-    sub: '21 calculadoras y tests para tu caso',
+    sub: '22 calculadoras y tests para tu caso',
     href: '/herramientas',
     enlaces: [
       { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },
@@ -76,6 +76,7 @@ export const MENU: Grupo[] = [
       { href: '/herramientas/calculadora-paro', texto: 'Calculadora del paro' },
       { href: '/herramientas/calculadora-baja-laboral', texto: 'Calculadora de la baja' },
       { href: '/herramientas/calculadora-salarios-impagados', texto: 'Calculadora de salarios impagados' },
+      { href: '/herramientas/calculadora-pension-incapacidad', texto: 'Calculadora de la pensión de incapacidad' },
       { href: '/herramientas/calculadora-fogasa', texto: 'Calculadora del FOGASA' },
       { href: '/herramientas/revisa-tu-carta-de-despido', texto: 'Revisa tu carta de despido' },
       { href: '/herramientas/plazos', texto: 'Plazos para reclamar' },

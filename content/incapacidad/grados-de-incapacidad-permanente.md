@@ -81,7 +81,7 @@ La incapacidad permanente puede revisarse si empeoras, mejoras o hubo un error d
 
 Si quieres que revisemos tu caso, llámanos al 913 24 97 97 o escríbenos desde [el formulario de contacto](/contacto).
 
-Si tienes más dudas, las hemos ordenado por fases en [las 50 preguntas frecuentes sobre la incapacidad permanente](/incapacidad-permanente/preguntas-frecuentes-incapacidad-permanente). Y si ya te han reconocido un grado, mira [qué trabajos puedes hacer con cada uno](/incapacidad-permanente/trabajar-con-incapacidad-permanente).
+Para saber cuánto cobrarías tú, usa [la calculadora de la pensión de incapacidad](/herramientas/calculadora-pension-incapacidad). Si tienes más dudas, las hemos ordenado por fases en [las 50 preguntas frecuentes sobre la incapacidad permanente](/incapacidad-permanente/preguntas-frecuentes-incapacidad-permanente). Y si ya te han reconocido un grado, mira [qué trabajos puedes hacer con cada uno](/incapacidad-permanente/trabajar-con-incapacidad-permanente).
 
 ## Preguntas frecuentes
 

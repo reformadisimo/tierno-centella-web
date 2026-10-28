@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { CLAVE_PLAZO } from './MiPlazo';
 import AvisoCorreo from './AvisoCorreo';
 import Link from 'next/link';
-import { sumarHabiles, sumarAnios, diasHabilesRestantes } from '@/lib/calculos';
+import { sumarHabiles, sumarAnios, sumarDias, diasHabilesRestantes } from '@/lib/calculos';
 import { hoyMadrid } from '@/lib/hoy';
 import { DESPACHO, fechaLarga } from '@/lib/despacho';
 
@@ -14,7 +14,7 @@ type Situacion = {
   id: string;
   nombre: string;
   fechaDe: string;
-  tipo: 'habiles' | 'anio';
+  tipo: 'habiles' | 'anio' | 'naturales';
   n: number;
   explicacion: string;
   enlace?: { href: string; texto: string };
@@ -58,6 +58,16 @@ const SITUACIONES: Situacion[] = [
     enlace: { href: '/herramientas/comprobador-incapacidad', texto: 'Comprobador de incapacidad' },
   },
   {
+    id: 'alta',
+    nombre: 'Me han dado el alta médica y no estoy bien',
+    fechaDe: 'Fecha en que te notificaron el alta',
+    tipo: 'naturales',
+    n: 4,
+    explicacion:
+      'Si el alta te la da el INSS tras 365 días de baja, tienes 4 días naturales (cuentan sábados, domingos y festivos) para mostrar tu disconformidad ante la inspección médica. Si te la da tu médico o el INSS antes del año, el plazo para la reclamación previa es de 11 días.',
+    enlace: { href: '/incapacidad-permanente/recurrir-alta-medica', texto: 'Cómo recurrir el alta' },
+  },
+  {
     id: 'cantidad',
     nombre: 'Me deben dinero: nóminas, horas extra, vacaciones',
     fechaDe: 'Fecha en que debieron pagártelo',
@@ -89,7 +99,11 @@ export default function Plazos() {
   if (fecha && fecha <= hoy) {
     // Agosto es hábil para despidos y modificaciones (art. 43.4 LRJS) y en la vía administrativa del INSS; no para las sanciones.
     const agostoHabil = s.id !== 'sancion';
-    ultimo = s.tipo === 'habiles' ? sumarHabiles(fecha, s.n, agostoHabil, madrid) : sumarAnios(fecha, s.n);
+    ultimo = s.tipo === 'habiles' ? sumarHabiles(fecha, s.n, agostoHabil, madrid) : s.tipo === 'naturales' ? sumarDias(fecha, s.n) : sumarAnios(fecha, s.n);
+    if (s.tipo === 'naturales') {
+      const desde = hoy > fecha ? hoy : sumarDias(fecha, 1);
+      quedan = Math.max(0, Math.round((Date.parse(ultimo) - Date.parse(desde)) / 86400000) + 1);
+    }
     if (s.tipo === 'habiles') quedan = diasHabilesRestantes(hoy > fecha ? hoy : sumarHabiles(fecha, 1, agostoHabil, madrid), ultimo, agostoHabil, madrid);
   }
   const vencido = ultimo !== '' && ultimo < hoy;
@@ -140,7 +154,7 @@ export default function Plazos() {
               <h3>Último día aproximado: {fechaLarga(ultimo)}</h3>
               {quedan !== null && (
                 <p style={{ margin: 0 }}>
-                  Te {quedan === 1 ? 'queda 1 día hábil' : `quedan ${quedan} días hábiles`}, contando hoy si es hábil.
+                  {s.tipo === 'naturales' ? `Te ${quedan === 1 ? 'queda 1 día natural' : `quedan ${quedan} días naturales`}, el último incluido.` : `Te ${quedan === 1 ? 'queda 1 día hábil' : `quedan ${quedan} días hábiles`}, contando hoy si es hábil.`}
                 </p>
               )}
               {s.tipo === 'habiles' && (

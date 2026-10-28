@@ -51,7 +51,7 @@ const ELLOS: AnuncioGoogle[] = [
     url: 'bufetetoro.com',
     titulo: 'Calculadora Indemnización Despido Objetivo',
     texto: 'Calcula tu indemnización por despido objetivo de manera sencilla y precisa. Conoce tus derechos laborales de manera instantánea. Clientes en toda España. +40 Años De Experiencia.',
-    nota: 'Lo que hacen bien: anuncian una herramienta útil, no un despacho. Quien calcula, se queda y acaba llamando. Tú ya tienes 21 herramientas así.',
+    nota: 'Lo que hacen bien: anuncian una herramienta útil, no un despacho. Quien calcula, se queda y acaba llamando. Tú ya tienes 22 herramientas así.',
     tono: 'bien',
   },
 ];

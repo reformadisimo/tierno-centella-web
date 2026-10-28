@@ -163,6 +163,8 @@ Sí. Si empeoras o aparecen informes nuevos, puedes presentar una nueva solicitu
 
 ## 7. Los grados y cuánto se cobra
 
+> Haz la cuenta con tus datos en [la calculadora de la pensión de incapacidad](/herramientas/calculadora-pension-incapacidad): te enseña el cálculo paso a paso.
+
 ### ¿Qué grados de incapacidad permanente hay?
 
 Cuatro. La parcial, si rindes al menos un 33 % menos en tu profesión pero puedes hacer sus tareas principales; la total, si no puedes hacer tu profesión habitual pero sí otra; la absoluta, si no puedes trabajar en ninguna; y la gran incapacidad, si además necesitas ayuda de otra persona para actos básicos como vestirte o comer. Las diferencias están en [la guía de los grados de incapacidad](/incapacidad-permanente/grados-de-incapacidad-permanente).

@@ -71,7 +71,7 @@ const FRANJAS: Record<string, { hoy: string; luego: string }> = {
   '7': { hoy: 'García de la Santa recibe 38 veces más visitas que tú', luego: 'Ser el despacho de referencia en acoso laboral en Madrid' },
   '7 bis': { hoy: 'Casi todos tus competidores dicen "gratis" y tu precio no se explica', luego: 'Qué incluye tu consulta, contado mejor que nadie' },
   '10': { hoy: 'Fuera de horario nadie contesta a quien te escribe', luego: 'Un asistente 24 horas que guarda cada conversación y te pasa las llamadas' },
-  '11': { hoy: '3 tests que piden el teléfono antes de ayudar', luego: '21 herramientas que ayudan primero y llevan a llamarte' },
+  '11': { hoy: '3 tests que piden el teléfono antes de ayudar', luego: '22 herramientas que ayudan primero y llevan a llamarte' },
   '12': { hoy: '49 de velocidad en el móvil, y WordPress con plugins que actualizar', luego: '94 de velocidad, 100 en accesibilidad y cada versión de la web guardada' },
   '13': { hoy: 'Segunda página para "abogado laboralista madrid"', luego: 'Primera página, con constancia y datos' },
   '14': { hoy: 'Blog parado desde 2022 y 104 artículos fuera de tu especialidad', luego: 'Tres artículos a la semana sobre lo que de verdad busca la gente' },

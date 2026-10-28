@@ -501,3 +501,77 @@ export function calcularImpagados(meses: MesImpagado[], hoyIso: string): Resulta
     proximoLimite: futuras[0] ?? null,
   };
 }
+
+// ---------- Pensión de incapacidad permanente ----------
+// Arts. 196 y 197 LGSS y disposición transitoria novena (escala 2023-2026). Cifras de 2026: pensión máxima 3.359,60 euros
+// en 14 pagas; base mínima de cotización 1.424,50 euros al mes (para el complemento de gran incapacidad).
+// Simplificación declarada: suponemos que tu base de cotización ha sido parecida en los últimos 8 años y no aplicamos
+// la actualización por IPC ni las lagunas; por eso el resultado es orientativo.
+export const PENSION_MAXIMA_2026 = 3359.6;
+export const BASE_MINIMA_2026 = 1424.5;
+export type GradoIP = 'parcial' | 'total' | 'absoluta' | 'gran';
+export type OrigenIP = 'comun' | 'no-laboral' | 'trabajo';
+export type ResultadoPensionIP = {
+  baseReguladora: number;
+  porcentajeAnios: number; // 100 si no se aplica la escala
+  aniosComputados: number;
+  edadJubilacion: number;
+  porcentajeGrado: number;
+  pagas: 12 | 14;
+  porPaga: number;
+  anual: number;
+  complementoGran: number;
+  pagoUnico: number; // solo parcial
+  topeAplicado: boolean;
+};
+
+/** Porcentaje de la base reguladora según los años cotizados (escala de 2023 a 2026). */
+export function porcentajePorAnios(anios: number): number {
+  if (anios < 15) return 50;
+  const m = Math.floor((anios - 15) * 12 + 1e-9);
+  return Math.min(100, Math.round((50 + Math.min(m, 49) * 0.21 + Math.min(Math.max(m - 49, 0), 209) * 0.19) * 100) / 100);
+}
+
+export function calcularPensionIP(d: { grado: GradoIP; origen: OrigenIP; salarioAnual: number; edad: number; aniosCotizados: number; cualificada: boolean }): ResultadoPensionIP {
+  const baseMes = Math.min(d.salarioAnual / 12, BASE_MAXIMA_2026);
+  // Edad de jubilación en 2026: 65 años con 38 años y 3 meses cotizados; si no, 66 años y 10 meses.
+  const aniosA65 = d.aniosCotizados + Math.max(0, 65 - d.edad);
+  const edadJubilacion = aniosA65 >= 38.25 ? 65 : 66 + 10 / 12;
+  let baseReguladora: number;
+  let porcentajeAnios = 100;
+  let aniosComputados = d.aniosCotizados;
+  let pagas: 12 | 14 = 14;
+  if (d.origen === 'comun') {
+    baseReguladora = (baseMes * 96) / 112; // bases de 96 meses entre 112
+    aniosComputados = d.aniosCotizados + Math.max(0, edadJubilacion - d.edad);
+    porcentajeAnios = porcentajePorAnios(aniosComputados);
+    baseReguladora = (baseReguladora * porcentajeAnios) / 100;
+  } else if (d.origen === 'no-laboral') {
+    baseReguladora = (baseMes * 24) / 28; // 24 meses elegidos de los últimos 7 años, entre 28
+  } else {
+    baseReguladora = d.salarioAnual / 12; // salario real del último año, repartido en 12
+    pagas = 12;
+  }
+  const porcentajeGrado = d.grado === 'total' ? (d.cualificada && d.edad >= 55 ? 75 : 55) : d.grado === 'parcial' ? 0 : 100;
+  let porPaga = (baseReguladora * porcentajeGrado) / 100;
+  // En accidente de trabajo la pensión anual se reparte en 12 pagas (BR x 12 x %)
+  const tope = pagas === 14 ? PENSION_MAXIMA_2026 : (PENSION_MAXIMA_2026 * 14) / 12;
+  const topeAplicado = porPaga > tope;
+  porPaga = Math.min(porPaga, tope);
+  let complementoGran = 0;
+  if (d.grado === 'gran') complementoGran = Math.max(0.45 * BASE_MINIMA_2026 + 0.3 * baseMes, 0.45 * porPaga);
+  const pagoUnico = d.grado === 'parcial' ? 24 * (d.origen === 'trabajo' ? d.salarioAnual / 12 : baseMes) : 0;
+  return {
+    baseReguladora: redondea(baseReguladora),
+    porcentajeAnios,
+    aniosComputados: Math.round(aniosComputados * 10) / 10,
+    edadJubilacion,
+    porcentajeGrado,
+    pagas,
+    porPaga: redondea(porPaga),
+    anual: redondea(porPaga * pagas + complementoGran * pagas),
+    complementoGran: redondea(complementoGran),
+    pagoUnico: redondea(pagoUnico),
+    topeAplicado,
+  };
+}

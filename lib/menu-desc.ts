@@ -35,6 +35,7 @@ export const MENU_DESC: Record<string, string> = {
   '/herramientas/calculadora-paro': 'Cuánto y durante cuánto tiempo',
   '/herramientas/calculadora-baja-laboral': 'Lo que cobras, día a día',
   '/herramientas/calculadora-salarios-impagados': 'Lo que te deben, con intereses',
+  '/herramientas/calculadora-pension-incapacidad': 'Cuánto cobrarías con cada grado',
   '/herramientas/calculadora-fogasa': 'Si la empresa no paga o cierra',
   '/herramientas/revisa-tu-carta-de-despido': 'Fallos frecuentes en la carta',
   '/herramientas/plazos': 'Tu último día para reclamar',
