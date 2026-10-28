@@ -399,6 +399,10 @@ export const NOVEDADES_PENDIENTES: { texto: string; clave: string }[] = [
   { texto: 'No te pedimos tu facturación: te pedimos dos números, cuántos contactos acaban siendo clientes y lo que deja cada uno.', clave: '23 bis' },
   { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19' },
   { texto: 'Tu cuenta de X lleva parada desde 2020: qué ve quien la abre y cómo la pondríamos al día.', clave: '6' },
+  // Aparcadas el 28-oct (Ig: "guárdatelo, ya se lo iremos contando poco a poco"). Una o dos por correo, nunca todas juntas.
+  { texto: 'Nuevo en tu web: «Tu caso en 2 minutos». Quien entra dice qué le pasa y recibe su plan: su plazo con fecha, lo que le puede corresponder y la carta para el primer paso. Y te lo manda por WhatsApp.', clave: '11' },
+  { texto: 'Tres herramientas más para tus clientes: cuánto cobrarían con una incapacidad permanente, la lista para ir preparado al tribunal médico y si una sanción llega tarde. Ya son 25.', clave: '11' },
+  { texto: 'Tu web ha crecido: 23 guías nuevas (tribunal médico, alta médica, enfermedades concretas, sanciones, FOGASA, permisos...), 50 preguntas frecuentes de incapacidad ordenadas por fases y 16 modelos de cartas.', clave: '8' },
 ];
 
 function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
