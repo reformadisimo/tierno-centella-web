@@ -401,7 +401,9 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
     try {
       const vista = Number(localStorage.getItem('tc-guia-version') || 0);
       const pendientes = NOVEDADES.filter((n) => n.v > vista);
-      if (vista === 0) setModo('bienvenida');
+      // Si llega desde nuestro correo de novedades en un aparato nuevo (sin nada guardado), ve las novedades, no la bienvenida.
+      const desdeCorreo = /[?&]de=correo/.test(location.search);
+      if (vista === 0 && !(desdeCorreo && pendientes.length)) setModo('bienvenida');
       else if (pendientes.length) {
         setNuevas(pendientes);
         setModo('novedades');
