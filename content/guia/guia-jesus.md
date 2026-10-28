@@ -1322,6 +1322,18 @@ Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** P
 
 **Y una salida fácil, por si acaso.** Pedimos un compromiso de seis meses porque la web va regalada. Pero sabemos que con tres meses basta para ver si funciona. Por eso, **si a los tres meses no te hemos demostrado con tus propios números que lo hacemos mejor, dejas de pagar desde el cuarto mes**, sin dar explicaciones. No queremos que nadie siga con nosotros sin estar convencido: siempre te ponemos fácil la salida, y todo sigue a tu nombre. Es como trabajamos con todos nuestros clientes.
 
+## 21 ter. Nuestra forma de trabajar: rápida, eficaz y robándote el menor tiempo posible
+
+> **Nuestro objetivo es muy concreto: conseguirte el mayor número de clientes posible, dentro de lo que podáis atender, dándote la menor guerra posible.**
+>
+> **Sin reuniones y sin llamadas.** Trabajamos sin reuniones presenciales, sin reuniones online y sin llamadas, salvo que sean imprescindibles, y casi nunca lo son. Nos comunicamos por **correo y WhatsApp**, a diario si hace falta, con mensajes breves y rápidos. Tú escribes cuando te viene bien, desde donde estés, y nosotros respondemos enseguida.
+>
+> **Al principio, un pequeño esfuerzo por las dos partes.** Las primeras semanas te pediremos algunas cosas: los accesos, algunos datos del despacho, alguna foto. Nosotros también nos volcamos al principio, porque es cuando más trabajo hay. Pero después, en **velocidad de crucero**, tú te puedes dedicar prácticamente al 100 % a tu trabajo, y cada mes te robamos menos tiempo.
+>
+> **Lo que pasa normalmente.** Con una agencia de marketing, y más aún con varios proveedores a la vez, acabas perdiendo muchísimo tiempo en reuniones, desplazamientos, llamadas y correos cruzados entre unos y otros. Al final estás más dedicado al marketing que a tu propio trabajo. Con nosotros eso no ocurre, y es uno de nuestros puntos fuertes: tú llevas tu despacho y nosotros nos ocupamos de lo demás.
+>
+> **Un consejo**: repasad esta guía con calma en los días previos al lanzamiento. Para nosotros es muy importante que sepáis cómo trabajamos, porque así todo irá más rápido y con menos idas y venidas.
+
 ## 22. Plan de 30 días y cuánto tarda en notarse
 
 | Semana | Qué |

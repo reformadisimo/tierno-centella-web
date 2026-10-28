@@ -77,6 +77,7 @@ const FRANJAS: Record<string, { hoy: string; luego: string }> = {
   '18 bis': { hoy: 'Tus anuncios salen en 7 búsquedas al año; Bufete Toro, en 100', luego: 'Una campaña constante en acoso e incapacidad, con cada euro medido' },
   '8 bis': { hoy: '¿Tienes tú las claves de la web, el dominio y tus cuentas? Muchas veces las tiene el proveedor', luego: 'Todo a tu nombre y con tu acceso total: si un día te vas, no nos pides nada' },
   '19': { hoy: 'Sin informes: no sabes dónde va cada euro', luego: 'Informes diarios, semanales y mensuales de todo' },
+  '21 ter': { hoy: 'Reuniones, desplazamientos, llamadas y correos cruzados con cada proveedor', luego: 'Correo y WhatsApp, breves y rápidos; tú te dedicas a tu despacho' },
   '23 bis': { hoy: 'Muchos piden la facturación y las cuentas antes de empezar', luego: 'Solo dos números: cuántos contactos acaban en cliente y lo que deja cada uno' },
 };
 const GRUPOS: Record<string, string> = {
@@ -117,6 +118,7 @@ const EXTRA: Record<string, Extra> = {
   '19 bis': { foto: 'jesus-camisa', frase: 'Tu web nunca se queda quieta: cada semana, un poco mejor.', grupo: 'clientes' },
   '20': { foto: 'empresas-firma', frase: 'Tu logo de siempre, un poco más fino.', grupo: 'clientes' },
   '21': { foto: 'documento-pluma', frase: 'Un cambio sin sustos: lo llevamos nosotros y tú mantienes el control de todo.', grupo: 'seguir' },
+  '21 ter': { foto: 'portatil-manos', frase: 'Sin reuniones ni llamadas: correo y WhatsApp, y cada mes te robamos menos tiempo.', grupo: 'seguir' },
   '22': { foto: 'manos-unidas', frase: 'Lo que pasará en los próximos meses, sin promesas vacías.', grupo: 'seguir' },
   '22 bis': { foto: 'jesus-con-abogada', frase: 'Lo que creemos que se puede conseguir, con cifras honestas y sin promesas.', grupo: 'seguir' },
   '22 ter': { foto: 'biblioteca', frase: 'Lo que hacen los mejores despachos del mundo, y lo que hemos traído para ti.', grupo: 'seguir' },
