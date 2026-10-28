@@ -1,7 +1,7 @@
 'use client';
 
 // Cartas sencillas para empezar a defenderte. Se escriben en el navegador: no enviamos ni guardamos nada.
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { BotonImprimir } from './Utiles';
 import { DESPACHO, enlaceWhatsapp } from '@/lib/despacho';
 import { hoyMadrid } from '@/lib/hoy';
@@ -143,10 +143,79 @@ const MODELOS: Modelo[] = [
     texto: (x, f) =>
       `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Disconformidad con el alta médica emitida por el INSS\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, manifiesto mi disconformidad con el alta médica emitida el ${v(x['fecha-alta'], 'fecha del alta')}, por los siguientes motivos:\n\n${v(x.motivos, 'motivos e informes')}\n\nPor ello, solicito que se tramite el procedimiento de disconformidad previsto en el artículo 170.2 de la Ley General de la Seguridad Social y que se valore mi situación.\n\nAdjunto los informes médicos que acreditan mi estado.\n\nAtentamente,\n${f.yo}`,
   },
+  {
+    id: 'sancion',
+    nombre: 'Responder a una amonestación o sanción',
+    intro: 'Si no estás de acuerdo con lo que te imputan, contéstalo por escrito y con fecha. Deja constancia de tu versión por si más adelante la empresa la usa para despedirte.',
+    campos: [
+      { id: 'fecha-carta', etiqueta: 'Fecha de la carta de amonestación o sanción' },
+      { id: 'version', etiqueta: 'Tu versión de los hechos', area: true, ayuda: 'Hechos concretos, con fechas, testigos o documentos que lo prueban' },
+    ],
+    aviso: 'Una sanción se puede impugnar en 20 días hábiles desde que te la comunican. Firma la carta como "recibí, no conforme" y llámanos antes de que pase el plazo.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Respuesta a la comunicación de fecha ${v(x['fecha-carta'], 'fecha de la carta')}\n\nYo, ${f.yo}, en relación con la carta de esa fecha, manifiesto mi total desacuerdo con los hechos que se me atribuyen, por los siguientes motivos:\n\n${v(x.version, 'tu versión de los hechos')}\n\nPor ello, solicito que se deje sin efecto la medida y que esta respuesta se incorpore a mi expediente. Me reservo el ejercicio de las acciones que me correspondan.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'vacaciones',
+    nombre: 'Pedir mis vacaciones por escrito',
+    intro: 'Las fechas se acuerdan con la empresa, y tienes derecho a conocerlas al menos dos meses antes. Pedirlas por escrito evita malentendidos.',
+    campos: [
+      { id: 'fechas', etiqueta: 'Qué días pides', ayuda: 'Por ejemplo: del 3 al 21 de agosto de 2026' },
+      { id: 'pendientes', etiqueta: 'Días que te quedan este año (opcional)' },
+    ],
+    aviso: 'Si la empresa no contesta o te las niega sin motivo, hay un procedimiento rápido en el juzgado con un plazo de 20 días hábiles. Guarda la copia sellada.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de vacaciones\n\nYo, ${f.yo}, solicito disfrutar mis vacaciones anuales ${v(x.fechas, 'fechas')}${x.pendientes ? `, a cuenta de los ${x.pendientes} días que tengo pendientes este año` : ''}.\n\nLes ruego que me confirmen las fechas por escrito.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'contingencia',
+    nombre: 'Pedir que mi baja se considere accidente de trabajo',
+    intro: 'Si tu baja viene del trabajo pero te la han dado como enfermedad común, puedes pedir al INSS que determine la contingencia. Cobrarías más y desde antes. Escribe en "Empresa" la dirección provincial del INSS.',
+    campos: [
+      { id: 'dni', etiqueta: 'Tu DNI' },
+      { id: 'inicio', etiqueta: 'Fecha de inicio de la baja' },
+      { id: 'causa', etiqueta: 'Por qué crees que viene del trabajo', area: true, ayuda: 'Qué pasó, cuándo y dónde, y los informes que lo relacionan con tu trabajo' },
+    ],
+    aviso: 'Adjunta los partes de baja y todos los informes que relacionen la lesión o la enfermedad con tu trabajo. Pide antes el test de la baja laboral de esta web y, mejor, que un abogado lo revise.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de determinación de la contingencia de mi incapacidad temporal\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, me encuentro en situación de incapacidad temporal desde el ${v(x.inicio, 'fecha de inicio')}, calificada como derivada de contingencia común.\n\nConsidero que deriva de contingencia profesional por los siguientes motivos:\n\n${v(x.causa, 'motivos')}\n\nPor ello, solicito que se inicie el procedimiento de determinación de la contingencia y que se declare que mi incapacidad temporal deriva de accidente de trabajo o enfermedad profesional.\n\nAdjunto los partes de baja y los informes médicos.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'pago-directo',
+    nombre: 'Pedir al INSS que me pague la baja si la empresa no lo hace',
+    intro: 'Normalmente la empresa te adelanta la prestación de la baja en la nómina. Si no lo hace, puedes pedir el pago directo. Escribe en "Empresa" la dirección provincial del INSS (o tu mutua, si es ella quien gestiona tu baja).',
+    campos: [
+      { id: 'dni', etiqueta: 'Tu DNI' },
+      { id: 'inicio', etiqueta: 'Fecha de inicio de la baja' },
+      { id: 'meses', etiqueta: 'Meses que la empresa no te ha pagado' },
+    ],
+    aviso: 'Adjunta los partes de baja y las nóminas en las que no aparece el pago. Si la empresa además te debe salario, reclámalo aparte.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de pago directo de la prestación de incapacidad temporal\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, en situación de incapacidad temporal desde el ${v(x.inicio, 'fecha de inicio')}, les comunico que mi empresa no me ha abonado la prestación correspondiente a ${v(x.meses, 'meses')} en régimen de pago delegado.\n\nPor ello, solicito el pago directo de la prestación por parte de esa entidad.\n\nAdjunto los partes de baja y las nóminas.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'incremento',
+    nombre: 'Pedir el 20 % más de la incapacidad total (a partir de 55 años)',
+    intro: 'Si tienes reconocida una incapacidad permanente total y 55 años o más, puedes pedir que tu pensión pase del 55 % al 75 % de la base reguladora. Escribe en "Empresa" la dirección provincial del INSS.',
+    campos: [
+      { id: 'dni', etiqueta: 'Tu DNI' },
+      { id: 'resolucion', etiqueta: 'Fecha de la resolución que te reconoció la total' },
+    ],
+    aviso: 'Se exige que, por tu edad, formación y entorno, sea difícil encontrar otro trabajo. El incremento se suspende mientras trabajes. Si te lo niegan, hay 30 días hábiles para reclamar.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud del incremento del 20 % de la pensión de incapacidad permanente total\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, tengo reconocida una incapacidad permanente total para mi profesión habitual por resolución de ${v(x.resolucion, 'fecha de la resolución')} y he cumplido 55 años.\n\nDadas mi edad, mi formación y las circunstancias de mi entorno, me resulta muy difícil encontrar un empleo en una actividad distinta. Por ello, solicito el incremento del 20 % de la base reguladora previsto en el artículo 196.2 de la Ley General de la Seguridad Social.\n\nAtentamente,\n${f.yo}`,
+  },
 ];
 
 export default function GeneraCarta() {
   const [id, setId] = useState(MODELOS[0].id);
+  useEffect(() => {
+    const c = new URLSearchParams(location.search).get('carta');
+    if (c && MODELOS.some((m) => m.id === c)) {
+      setId(c);
+      setTimeout(() => document.getElementById('carta-' + c)?.scrollIntoView({ block: 'center' }), 80);
+    }
+  }, []);
   const [yo, setYo] = useState('');
   const [empresa, setEmpresa] = useState('');
   const [ciudad, setCiudad] = useState('Madrid');
@@ -180,7 +249,7 @@ export default function GeneraCarta() {
         <div className="opciones">
           {MODELOS.map((x) => (
             <label key={x.id} className="opcion">
-              <input type="radio" name="carta" checked={id === x.id} onChange={() => setId(x.id)} />
+              <input type="radio" name="carta" id={`carta-${x.id}`} checked={id === x.id} onChange={() => setId(x.id)} />
               <span>{x.nombre}</span>
             </label>
           ))}

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import GeneraCarta from '@/components/GeneraCarta';
 
 const TITULO = 'Genera tu carta para empezar a defenderte';
-const DESC = 'Cartas listas para copiar: recibí no conforme, certificado de empresa, reclamación de salarios, copia de documentos y queja por acoso.';
+const DESC = '16 cartas listas para rellenar y descargar: despido, salarios, baja y alta médica, incapacidad, sanciones, permisos, excedencias y acoso.';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descripcion: DESC, ruta: '/herramientas/genera-tu-carta' });
 

@@ -8,7 +8,7 @@ export const HERRAMIENTAS = [
   { href: '/calculadora-indemnizacion', titulo: 'Calculadora de indemnización', texto: 'Cuánto te corresponde por despido objetivo o improcedente, al momento.' },
   { href: '/herramientas/revisa-tu-carta-de-despido', titulo: 'Revisa tu carta de despido', texto: 'Los defectos de forma que pueden hacer improcedente tu despido.' },
   { href: '/herramientas/con-cuanto-me-quedo', titulo: '¿Con cuánto me quedo de la indemnización?', texto: 'Cuánto de tu indemnización por despido está exenta de IRPF y con cuánto te quedas, de forma orientativa.' },
-  { href: '/herramientas/genera-tu-carta', titulo: 'Genera tu carta', texto: 'Cartas listas para copiar o descargar: recibí no conforme, certificado de empresa, reclamar salarios, pedir reducción de jornada o comunicar un acoso.' },
+  { href: '/herramientas/genera-tu-carta', titulo: 'Genera tu carta', texto: '16 cartas listas para copiar o descargar: despido, salarios, baja y alta médica, incapacidad, sanciones, permisos y acoso.' },
   { href: '/herramientas/calculadora-oferta-acuerdo', titulo: '¿Es buena la oferta de la empresa?', texto: 'Compara lo que te ofrecen por tu despido con la indemnización legal, antes de firmar.' },
   { href: '/herramientas/que-guardar', titulo: '¿Qué tengo que guardar?', texto: 'La lista de documentos y pruebas de tu caso, para marcar lo que ya tienes e imprimirla.' },
   { href: '/herramientas/plazos', titulo: 'Plazos para reclamar', texto: 'El último día para reclamar un despido, una sanción, una deuda o una incapacidad.' },

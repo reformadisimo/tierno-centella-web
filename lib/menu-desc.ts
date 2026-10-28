@@ -45,6 +45,7 @@ export const MENU_DESC: Record<string, string> = {
   '/mi-caso': 'Busca la frase que te describe',
   '/plazos-para-reclamar': 'Todos los plazos en una tabla',
   '/tramites': 'Paro, conciliación, Inspección',
+  '/modelos': '16 cartas para descargar',
   '/primera-consulta': 'Cómo es y cuánto cuesta',
   '/donde-ir': 'SMAC, juzgados, INSS',
   '/acompanar': 'Para quien está al lado',

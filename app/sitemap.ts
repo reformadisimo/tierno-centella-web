@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/herramientas/plazos',
     '/herramientas/que-guardar',
     '/herramientas/genera-tu-carta',
+    '/modelos',
     '/herramientas/con-cuanto-me-quedo',
     '/herramientas/calculadora-oferta-acuerdo',
     '/herramientas/revisa-tu-carta-de-despido',

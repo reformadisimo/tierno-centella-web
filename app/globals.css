@@ -8611,3 +8611,5 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
 .seg-acepto{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.88rem;color:var(--tinta-media)}
 .seg-acepto input{margin-top:3px;min-width:18px;min-height:18px}
 .seg-ok{margin:0;font-weight:600;color:#1f6b4b}
+.modelos-grupo{margin-bottom:34px}
+.modelos-grupo h2{margin-bottom:14px}

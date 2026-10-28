@@ -94,6 +94,7 @@ export const MENU: Grupo[] = [
       { href: '/mi-caso', texto: 'Mi caso es...' },
       { href: '/plazos-para-reclamar', texto: 'Plazos para reclamar' },
       { href: '/tramites', texto: 'Trámites que puedes hacer tú' },
+      { href: '/modelos', texto: 'Modelos de cartas' },
       { href: '/primera-consulta', texto: 'Tu primera consulta' },
       { href: '/donde-ir', texto: 'Dónde ir en Madrid' },
       { href: '/acompanar', texto: 'Acompaño a alguien' },

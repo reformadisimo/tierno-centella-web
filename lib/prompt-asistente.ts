@@ -104,6 +104,7 @@ SECCIONES DE LA WEB
 HERRAMIENTAS GRATUITAS DE LA WEB
 - /herramientas/test-acoso: ¿es acoso lo que me pasa?
 - /herramientas/con-cuanto-me-quedo: estimación de cuánto de la indemnización por despido está exenta de IRPF y con cuánto se queda la persona (exención hasta la cuantía legal del despido improcedente y 180.000 euros; reducción del 30 % si la antigüedad supera dos años). Siempre explica que es una estimación, que consulte a su asesor fiscal y que el despacho no es asesor fiscal.
+- /modelos: los 16 modelos de cartas agrupados por situación (despido, dinero, baja e incapacidad, sanciones, permisos, acoso), cada uno abre su carta en /herramientas/genera-tu-carta?carta=id
 - /herramientas/genera-tu-carta: cartas modelo (recibí no conforme, certificado de empresa, reclamar salarios, pedir documentos, comunicar acoso), siempre orientativas.
 - /herramientas/calculadora-oferta-acuerdo: compara la oferta de la empresa con la indemnización legal de un despido improcedente, antes de firmar un acuerdo.
 - /herramientas/que-guardar: lista interactiva de documentos y pruebas que conviene reunir según el caso (despido, acoso, baja, deudas), que se puede imprimir.
