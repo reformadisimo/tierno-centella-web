@@ -1295,7 +1295,31 @@ Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y s
 
 > **Una cosa que conviene mirar antes**: si con algún proveedor firmaste permanencia o un preaviso, lo respetamos y planificamos el cambio para esa fecha. Si no lo sabes, te ayudamos a revisarlo.
 
-**Y una cosa más, con todo el cariño.** Sabemos que llevas años trabajando con personas de confianza, y que han hecho su trabajo con esfuerzo y buena fe. Nada de esto es una crítica a nadie: cada uno ha hecho lo que podía con lo que tenía. Y tampoco hay prisa ni nada que decidir hoy. Mira la web, pruébala con calma, enséñasela a quien quieras, y quédate con lo que te guste. Si un día decides dar el paso, lo hacemos con el mismo cuidado con el que cuidamos a quienes ya trabajan contigo.
+### ¿Y cómo se lo digo a quien ya trabaja conmigo?
+
+Esta es, muchas veces, la parte más difícil, y no tiene nada que ver con la web. Llevas años con personas de confianza. Han trabajado con esfuerzo y buena fe, y puede que alguna sea amiga tuya. Decirle que vas a probar otra cosa da apuro. Es normal, y dice mucho de ti: la lealtad es una virtud.
+
+> **Pero piensa en esto: tu primera responsabilidad es tu despacho.** Tus clientes, tu equipo y la gente que todavía no te ha encontrado y te está buscando hoy en Google. Un buen proveedor, y más si es amigo, lo entiende. Es lo mismo que le dirías tú a un cliente que no se atreve a cambiar de abogado por no quedar mal: lo importante es tu caso.
+
+**Quedarse como estás también tiene un coste, aunque no se vea.** No llega ninguna factura que diga "clientes que esta semana se fueron a otro despacho". Por eso parece que no cambiar no cuesta nada. Pero cada mes que pasa con una web lenta, sin chat y sin seguimiento, son consultas que se quedan por el camino. Una pregunta que ayuda: **dentro de un año, ¿qué te pesaría más, haberlo probado o no haberlo probado?**
+
+**Lo que ganas tú, en concreto:**
+
+- **Menos trabajo para ti.** Un solo interlocutor, por correo y WhatsApp, en lugar de coordinar a varios. Sin reuniones ni llamadas cruzadas.
+- **Mejores resultados, y medidos.** Sabrás cada semana cuántas consultas llegan y de dónde, con tus propios números.
+- **Normalmente, gastas menos.** Una sola cuota con todo incluido y sin comisiones sobre tus anuncios suele salir por bastante menos que sumar varios proveedores (lo ves en el apartado 25 bis).
+- **Todo sigue a tu nombre.** La web, el dominio, Google y las redes son tuyos. Si un día quieres volver atrás, puedes.
+
+**Cuatro cosas que lo hacen mucho más fácil:**
+
+1. **No tiene que ser todo o nada.** Si alguien hace muy bien una parte (las redes, la gestoría, el informático de siempre), puede seguir con esa parte y nosotros nos coordinamos con él. Muchas veces el cambio es parcial y nadie sale perdiendo.
+2. **El test A/B te da una razón sin conflicto.** "Voy a probar una web nueva unas semanas para ver cuál trae más clientes" no ofende a nadie. Si al final te quedas con la nueva, lo habrán decidido los números, no tú.
+3. **La parte incómoda la hacemos nosotros.** Pedir los accesos, mover el dominio, la web o los anuncios: hablamos nosotros con cada proveedor, con educación y por escrito. Tú solo tienes que avisar.
+4. **Te damos el mensaje escrito.** Puedes mandarlo tal cual o cambiarlo a tu gusto:
+
+> "Hola, [nombre]. Quería contarte que voy a probar una forma distinta de llevar la web y la publicidad del despacho. Te agradezco de verdad todos estos años y lo bien que me has atendido. Si te parece, el equipo que me va a ayudar te escribirá para coordinar el paso de los accesos, sin prisas y respetando lo que tengamos acordado. Un abrazo."
+
+Respetamos cualquier preaviso o permanencia que tengas firmado, y nada de esto es una crítica a nadie: cada uno ha hecho lo que podía con lo que tenía. Tampoco hay prisa ni nada que decidir hoy. Mira la web, pruébala con calma, enséñasela a quien quieras. **Tú decides; nosotros te lo ponemos fácil.**
 
 ## 21 bis. ¿Miedo al cambio? Lo probamos antes, con un test A/B
 
