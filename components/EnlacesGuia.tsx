@@ -9,7 +9,7 @@ const WEB: Tarjeta[] = [
   { ruta: '/despido', titulo: 'Despido', texto: '4 guías y la calculadora', foto: 'despido-caja-640' },
   { ruta: '/incapacidad-permanente', titulo: 'Incapacidad permanente', texto: '3 guías con la Ley 2/2025', foto: 'incapacidad-ventana-640' },
   { ruta: '/mujer-y-trabajo', titulo: 'Mujer y trabajo', texto: 'Embarazo, permisos y conciliación', foto: 'madre-hijo-640' },
-  { ruta: '/herramientas', titulo: 'Herramientas', texto: '18 calculadoras y tests', foto: 'portatil-manos-640' },
+  { ruta: '/herramientas', titulo: 'Herramientas', texto: '21 calculadoras y tests', foto: 'portatil-manos-640' },
   { ruta: '/sentencias', titulo: 'Sentencias', texto: 'Una página por cada caso', foto: 'mazo-640' },
   { ruta: '/jesus-tierno', titulo: 'Jesús Tierno', texto: 'Tu trayectoria, el libro y la prensa', foto: 'jesus-retrato-640' },
   { ruta: '/blog', titulo: 'Blog', texto: '26 artículos con buscador', foto: 'abogada-lee-640' },

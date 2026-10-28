@@ -283,7 +283,7 @@ const SEMAFORO: { area: string; color: 'rojo' | 'ambar' | 'verde'; hoy: string; 
   { area: 'Google', color: 'rojo', hoy: '239 visitas al mes, un 38 % menos que en julio (384). Puesto 18 en "abogado laboralista madrid".', haremos: '47 guías y artículos nuevos, 39 artículos en 13 semanas y las 220 direcciones antiguas redirigidas.' },
   { area: 'Inteligencia artificial', color: 'rojo', hoy: '14 sobre 100. ChatGPT y Gemini casi nunca te nombran.', haremos: 'Respuestas que las IA puedan citar, datos iguales en todas partes, alta en Bing y medición mensual.' },
   { area: 'Autoridad (quién te enlaza)', color: 'rojo', hoy: '8 sobre 100. García de la Santa tiene 30 y Bufete Toro, 37.', haremos: 'Enlaces de medios, universidades y colegios profesionales, donde ya tienes relación.' },
-  { area: 'Tu web', color: 'rojo', hoy: '18 segundos en cargar en el móvil, 49 sobre 100 de velocidad, "consulta gratuita" que no lo es.', haremos: 'Hecho: 94 de velocidad, 18 herramientas, asistente, precio claro.' },
+  { area: 'Tu web', color: 'rojo', hoy: '18 segundos en cargar en el móvil, 49 sobre 100 de velocidad, "consulta gratuita" que no lo es.', haremos: 'Hecho: 94 de velocidad, 21 herramientas, asistente, precio claro.' },
   { area: 'Anuncios de Google', color: 'rojo', hoy: 'Activos, pero llevan a una página genérica y no se sabe qué consulta trae cada anuncio.', haremos: 'Hecho: tres páginas por tema. Falta medir cada consulta y ajustar las campañas.' },
   { area: 'Reseñas', color: 'ambar', hoy: '4,2 con 59 reseñas: 44 de cinco estrellas, pero 11 de una sin contestar.', haremos: 'Responderlas todas con tu aprobación, pedirlas por WhatsApp al cerrar cada caso y llegar a 4,5.' },
   { area: 'Blog', color: 'rojo', hoy: 'Parado desde 2022, con temas que no son tuyos.', haremos: 'Tres artículos a la semana sobre lo que de verdad busca la gente.' },
@@ -382,8 +382,9 @@ function Contenido({ html }: { html: string }) {
 // quien entra solo ve las novedades posteriores a su última visita, nunca las que ya vio (petición de Ig, 27-oct-2026).
 // Jesús entró por primera vez el 26 de octubre de 2026 (versión 12). Cuando llegue el aviso de que ha vuelto a entrar,
 // se borran de aquí las que ya ha visto.
-const VERSION = 17;
+const VERSION = 18;
 const NOVEDADES: { texto: string; clave: string; v: number }[] = [
+  { texto: 'Tres herramientas nuevas en tu web: cuánto se cobra de baja, los salarios que debe la empresa con sus intereses y lo que cubre el FOGASA.', clave: '11', v: 18 },
   { texto: 'No te pedimos tu facturación: te pedimos dos números, cuántos contactos acaban siendo clientes y lo que deja cada uno.', clave: '23 bis', v: 17 },
   { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 16 },
   { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19', v: 15 },

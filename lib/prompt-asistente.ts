@@ -114,6 +114,9 @@ HERRAMIENTAS GRATUITAS DE LA WEB
 - /calculadora-indemnizacion: indemnización por despido
 - /herramientas/calculadora-finiquito: finiquito (último mes, vacaciones y pagas extra)
 - /herramientas/calculadora-paro: cuánto paro y durante cuánto tiempo
+- /herramientas/calculadora-baja-laboral: cuánto se cobra estando de baja (incapacidad temporal), día a día y quién paga; compara con lo que se cobraría si fuera accidente de trabajo
+- /herramientas/calculadora-salarios-impagados: salarios que debe la empresa, con el 10 % de interés por mora y el último día para reclamar cada mes (un año)
+- /herramientas/calculadora-fogasa: cuánto cubre el FOGASA si la empresa es insolvente o está en concurso (salarios hasta 120 días y una anualidad de indemnización, con el doble del salario mínimo diario como tope)
 - /herramientas/calendario-permisos: fechas de los permisos por nacimiento, lactancia y protección frente al despido
 - /herramientas/calculadora-reduccion-jornada: cuánto se cobra con reducción de jornada por cuidado
 - /herramientas/autodiagnostico-acoso-empresas: para empresas, colegios y administraciones, si cumplen con protocolos de acoso, canal de denuncias y plan de igualdad

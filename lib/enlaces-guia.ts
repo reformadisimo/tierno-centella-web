@@ -13,6 +13,9 @@ const WEB: [string, string][] = [
   ['calculadora de despido', '/calculadora-indemnizacion'],
   ['Calculadora de finiquito', '/herramientas/calculadora-finiquito'],
   ['Calculadora del paro', '/herramientas/calculadora-paro'],
+  ['Calculadora de la baja', '/herramientas/calculadora-baja-laboral'],
+  ['Calculadora de salarios impagados', '/herramientas/calculadora-salarios-impagados'],
+  ['Calculadora del FOGASA', '/herramientas/calculadora-fogasa'],
   ['Calendario de permisos por nacimiento', '/herramientas/calendario-permisos'],
   ['Calculadora de reducción de jornada', '/herramientas/calculadora-reduccion-jornada'],
   ['Revisa tu carta de despido', '/herramientas/revisa-tu-carta-de-despido'],
@@ -21,7 +24,7 @@ const WEB: [string, string][] = [
   ['comprobador de incapacidad', '/herramientas/comprobador-incapacidad'],
   ['Autodiagnóstico para empresas y colegios', '/herramientas/autodiagnostico-acoso-empresas'],
   ['test de acoso', '/herramientas/test-acoso'],
-  ['18 herramientas', '/herramientas'],
+  ['21 herramientas', '/herramientas'],
   // Secciones de la web
   ['Mujer y trabajo', '/mujer-y-trabajo'],
   ['Redes y medios', '/redes-y-medios'],

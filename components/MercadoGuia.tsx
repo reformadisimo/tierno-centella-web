@@ -13,7 +13,7 @@ const MES: Fila[] = [
 ];
 
 const UNA_VEZ: Fila[] = [
-  { que: 'Una web a medida como la tuya', rango: '10.000 a 15.000 €', tipico: 12500, nota: 'Una web corporativa sencilla cuesta de 1.200 a 6.000 €. La tuya tiene 18 herramientas, chat con IA, versión en inglés, tres landings y más de 40 páginas: eso es otra liga.', fuente: 'Cronoshare (web corporativa) y estimación nuestra' },
+  { que: 'Una web a medida como la tuya', rango: '10.000 a 15.000 €', tipico: 12500, nota: 'Una web corporativa sencilla cuesta de 1.200 a 6.000 €. La tuya tiene 21 herramientas, chat con IA, versión en inglés, tres landings y más de 40 páginas: eso es otra liga.', fuente: 'Cronoshare (web corporativa) y estimación nuestra' },
   { que: 'Montar un CRM a medida', rango: 'desde 5.000 €', tipico: 5000, nota: 'Conectado a tus formularios, con plazos de laboral e informes. Fuera de España, uno básico a medida parte de unos 24.000 dólares.', fuente: 'RaftLabs, 2026, y estimación nuestra' },
 ];
 

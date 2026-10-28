@@ -10,8 +10,6 @@ const DESCRIPCION = 'Calcula lo que te debe tu empresa con el 10 % de interés p
 const RUTA = '/herramientas/calculadora-salarios-impagados';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descripcion: DESCRIPCION, ruta: RUTA, imagen: '/img/calculadora-papeles.webp' });
-// Pendiente de visto bueno: sin indexar ni enlazar desde el menú hasta que se apruebe.
-metadata.robots = { index: false, follow: false };
 
 export default function Pagina() {
   return (

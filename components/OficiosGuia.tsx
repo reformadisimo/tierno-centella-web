@@ -33,7 +33,7 @@ const OFICIOS: [string, string, string][] = [
   ['diseno', 'Diseño gráfico', 'La imagen, los colores, las fotos y el logo refinado'],
   ['ux', 'Experiencia de usuario', 'Que quien llega angustiado encuentre en dos toques qué hacer'],
   ['codigo', 'Programación web', 'Una web rápida, segura y que funciona en cualquier móvil'],
-  ['calculadora', 'Herramientas a medida', 'Las 18 calculadoras y tests'],
+  ['calculadora', 'Herramientas a medida', 'Las 21 calculadoras y tests'],
   ['ia', 'Inteligencia artificial', 'El asistente que conoce toda tu web y atiende a cualquier hora'],
   ['pluma', 'Redacción jurídica', 'Guías y artículos claros, con plazos y fuentes, sin jerga'],
   ['lupa', 'SEO de contenidos', 'Qué busca la gente, para escribir lo que de verdad se lee'],

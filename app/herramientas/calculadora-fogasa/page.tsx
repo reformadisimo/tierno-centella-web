@@ -10,8 +10,6 @@ const DESCRIPCION = 'Si tu empresa no paga o ha cerrado, calcula cuánto te cubr
 const RUTA = '/herramientas/calculadora-fogasa';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descripcion: DESCRIPCION, ruta: RUTA, imagen: '/img/jubilado-papeles.webp' });
-// Pendiente de visto bueno: sin indexar ni enlazar desde el menú hasta que se apruebe.
-metadata.robots = { index: false, follow: false };
 
 export default function Pagina() {
   return (

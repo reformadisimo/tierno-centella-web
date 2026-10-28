@@ -652,7 +652,7 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 **Lo que sabe**:
 
-- **Toda tu web**: el texto completo de las 47 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 18 herramientas, para enlazar la que encaja con cada persona.
+- **Toda tu web**: el texto completo de las 47 guías y artículos, tus casos, las preguntas frecuentes, el glosario y las 21 herramientas, para enlazar la que encaja con cada persona.
 - **Tu despacho**: quién eres, tu equipo, tu dirección, teléfono, WhatsApp y correo, cuánto cuesta la consulta y cómo se reserva.
 - **El derecho laboral vigente en octubre de 2026**: plazos, indemnizaciones, despido nulo, permisos, incapacidad, paro.
 
@@ -689,7 +689,7 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 ## 11. Las herramientas: lo que casi nadie del sector tiene
 
-**Antes y ahora**: tu web actual tiene 3 tests, el más conocido el de viabilidad del acoso. La nueva tiene **18 herramientas**, además del asistente que contesta a cualquier hora y las tres páginas para tus anuncios. Ninguna pide datos personales para dar el resultado, y todas terminan invitando a hablar contigo.
+**Antes y ahora**: tu web actual tiene 3 tests, el más conocido el de viabilidad del acoso. La nueva tiene **21 herramientas**, además del asistente que contesta a cualquier hora y las tres páginas para tus anuncios. Ninguna pide datos personales para dar el resultado, y todas terminan invitando a hablar contigo.
 
 | Herramienta | Para qué |
 | --- | --- |
@@ -701,6 +701,9 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 | Calculadora de indemnización | Con el tramo anterior a 2012 |
 | Calculadora de finiquito | Mes, vacaciones y pagas extra |
 | Calculadora del paro | Con los topes de 2026 |
+| Calculadora de la baja | Cuánto cobra estando de baja, quién le paga cada día y cuánto más cobraría si fuera accidente de trabajo |
+| Calculadora de salarios impagados | Lo que le debe la empresa con el 10 % de interés, y el último día para reclamar cada mes |
+| Calculadora del FOGASA | Si la empresa no paga o ha cerrado: cuánto le cubre de salarios e indemnización |
 | Calendario de permisos por nacimiento | Las fechas exactas de cada permiso |
 | Calculadora de reducción de jornada | Cuánto cobrará y qué no pierde |
 | Revisa tu carta de despido | Los defectos que la hacen improcedente |
@@ -710,7 +713,9 @@ Abajo a la derecha, "¿Hablamos? Pregunta tu caso". **No es el típico chatbot**
 
 Todas las cifras de las calculadoras están comprobadas a mano con casos de ejemplo. Al final, cada una ofrece enviar el resultado por WhatsApp: ese mensaje es un cliente que ya llega sabiendo qué le pasa.
 
-**Y siempre se pueden crear nuevas**: si en el despacho os preguntan mucho por algo (cuánto se cobra de baja por ansiedad, qué pasa con las vacaciones durante una baja, cuánto tiempo puede durar un ERTE...), lo convertimos en una herramienta. Dinos cuál echas de menos.
+**Las tres últimas, recién añadidas**: la de la baja, la de salarios impagados y la del FOGASA. Las hemos elegido porque las busca justo quien acaba necesitando un abogado: quien está de baja y cobra menos de lo que podría, o quien lleva meses sin cobrar. Las cifras son las de 2026 y están comprobadas a mano.
+
+**Y siempre se pueden crear nuevas**: si en el despacho os preguntan mucho por algo (qué pasa con las vacaciones durante una baja, cuánto tiempo puede durar un ERTE...), lo convertimos en una herramienta. Dinos cuál echas de menos.
 
 ## 12. Velocidad, seguridad y notas de Google
 
@@ -1055,7 +1060,7 @@ Para que lo veas con tus ojos: así se ven hoy tus anuncios, los de quienes comp
 - **Constancia.** Campmany sale con su nombre casi todos los meses del año; tú, en meses sueltos. Quien busca "Tierno Centella" y no ve tu anuncio arriba puede ver el de otro.
 - **Una especialidad clara en el anuncio.** Campmany es "incapacidad"; R. Sánchez, "abogado laboral en Madrid". Tus anuncios no dicen que eres el despacho del acoso laboral, que es lo que te diferencia de todos.
 - **Confianza antes del clic.** R. Sánchez pone "733 reseñas en Google" en el título. Tú aún no puedes (4,2 con 59); por eso es tan importante el trabajo de reseñas del apartado 5.
-- **Una herramienta como gancho.** Bufete Toro anuncia una calculadora; Campmany, en Instagram, otra. Tú tienes 18 herramientas gratuitas en la web nueva y ninguna anunciada.
+- **Una herramienta como gancho.** Bufete Toro anuncia una calculadora; Campmany, en Instagram, otra. Tú tienes 21 herramientas gratuitas en la web nueva y ninguna anunciada.
 - **Están en Instagram y Facebook.** Campmany tiene 24.400 seguidores en Facebook y anuncios activos; tú, 285 y ningún anuncio.
 
 **Lo que no copiaríamos**: "primera visita gratuita" y "95 % de tasa de éxito". Lo primero atrae a quien no va a pagar y acaba en reseñas malas (ya lo has vivido). Lo segundo choca con el Código Deontológico, que no permite prometer resultados. Tu ventaja es otra: **una historia real** (2005, la Universidad Rey Juan Carlos, más de 25 años) que nadie más puede contar.
