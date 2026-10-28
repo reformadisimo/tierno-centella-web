@@ -35,7 +35,7 @@ export default function NoEncontrada() {
           ))}
         </div>
         <p style={{ marginTop: 24 }}>
-          O usa una de nuestras <Link href="/herramientas">18 herramientas</Link>, o vuelve al <Link href="/">inicio</Link>.
+          O usa una de nuestras <Link href="/herramientas">21 herramientas</Link>, o vuelve al <Link href="/">inicio</Link>.
         </p>
       </div>
     </section>
