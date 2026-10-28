@@ -382,8 +382,9 @@ function Contenido({ html }: { html: string }) {
 // quien entra solo ve las novedades posteriores a su última visita, nunca las que ya vio (petición de Ig, 27-oct-2026).
 // Jesús entró por primera vez el 26 de octubre de 2026 (versión 12). Cuando llegue el aviso de que ha vuelto a entrar,
 // se borran de aquí las que ya ha visto.
-const VERSION = 16;
+const VERSION = 17;
 const NOVEDADES: { texto: string; clave: string; v: number }[] = [
+  { texto: 'No te pedimos tu facturación: solo una cifra aproximada, lo que os deja de media un asunto, y siempre bajo tu control.', clave: '23 bis', v: 17 },
   { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 16 },
   { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19', v: 15 },
   { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter', v: 14 },

@@ -155,6 +155,7 @@ export default function Resumen() {
         <ol className="rs2-nec">
           <li>Que veas la web y nos digas qué te parece.</li>
           <li>Si te convence: que revises los textos y nos des los accesos (Google, ficha, anuncios).</li>
+          <li>Y una sola cifra, si quieres: lo que os deja de media un asunto. No te pedimos tu facturación ni tus cuentas.</li>
           <li>Tu tiempo: unas 3 o 4 horas en dos semanas y, después, unos 30 minutos a la semana.</li>
           <li>¿Te da respeto cambiar? Lo probamos antes con el 10 % de las visitas. Y si a los tres meses no te hemos demostrado que funciona mejor, dejas de pagar desde el cuarto.</li>
         </ol>

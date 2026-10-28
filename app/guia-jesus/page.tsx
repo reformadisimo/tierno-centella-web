@@ -77,6 +77,7 @@ const FRANJAS: Record<string, { hoy: string; luego: string }> = {
   '18 bis': { hoy: 'Tus anuncios salen en 7 búsquedas al año; Bufete Toro, en 100', luego: 'Una campaña constante en acoso e incapacidad, con cada euro medido' },
   '8 bis': { hoy: '¿Tienes tú las claves de la web, el dominio y tus cuentas? Muchas veces las tiene el proveedor', luego: 'Todo a tu nombre y con tu acceso total: si un día te vas, no nos pides nada' },
   '19': { hoy: 'Sin informes: no sabes dónde va cada euro', luego: 'Informes diarios, semanales y mensuales de todo' },
+  '23 bis': { hoy: 'Muchos piden la facturación y las cuentas antes de empezar', luego: 'Solo una cifra aproximada: lo que os deja de media un asunto' },
 };
 const GRUPOS: Record<string, string> = {
   empezar: 'Para empezar',
@@ -120,6 +121,7 @@ const EXTRA: Record<string, Extra> = {
   '22 bis': { foto: 'jesus-con-abogada', frase: 'Lo que creemos que se puede conseguir, con cifras honestas y sin promesas.', grupo: 'seguir' },
   '22 ter': { foto: 'biblioteca', frase: 'Lo que hacen los mejores despachos del mundo, y lo que hemos traído para ti.', grupo: 'seguir' },
   '23': { foto: 'reunion-cliente', frase: 'Un cuarto de hora tuyo, y nosotros hacemos el resto.', grupo: 'seguir' },
+  '23 bis': { foto: 'calculadora-papeles', frase: 'Ni facturación ni cuentas: solo una cifra, y siempre bajo tu control.', grupo: 'seguir' },
   '24': { foto: 'abogada-escucha', frase: 'Unas preguntas cortas para afinar. Contesta solo las que quieras.', grupo: 'seguir', abierta: true },
   '24 bis': { foto: 'abogada-sonrie', frase: 'Tus preguntas y nuestras respuestas, todo en un mismo sitio.', grupo: 'seguir', abierta: true },
   '25': { foto: 'jesus-retrato', frase: 'La web es tuya. Lo demás, cuando quieras.', grupo: 'seguir', abierta: true },

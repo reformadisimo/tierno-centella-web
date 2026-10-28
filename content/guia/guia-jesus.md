@@ -1385,6 +1385,20 @@ Y algo que nos ha llamado la atención: **la rapidez de respuesta pesa más que 
 
 Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, las fichas de Google y de Bing y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras. **Las cuentas siguen siendo tuyas**: tú eres el propietario y nosotros, invitados. Si alguna hoy no está a tu nombre, lo primero que hacemos es ponerla a tu nombre.
 
+## 23 bis. No te pedimos tu facturación. Solo una cifra.
+
+> **Ni facturación, ni balances, ni cuentas.** Muchos piden la facturación antes de empezar; nosotros no la necesitamos. No tienes que enseñarnos ningún papel ni contarnos cuánto ganas.
+
+**Lo que no te pedimos**: ni la facturación del despacho, ni balances, ni cuentas, ni márgenes. Nada de papeles.
+
+**Lo único que nos ayuda: una cifra aproximada.** Lo que os deja de media un asunto, es decir, los honorarios medios por cliente. Vale una estimación ("más o menos unos 2.000 euros por asunto") y la puedes cambiar cuando quieras. No hay que acertar.
+
+**Por qué nos importa.** No es lo mismo que una consulta acabe en un asunto de 1.000 euros que en uno de 6.000. Si cada asunto deja más, se puede pagar más por cada consulta que llega de los anuncios y llegar a más gente. Si deja menos, hay que cuidar mucho más cada euro. Con esa cifra vamos ajustando las campañas a lo que de verdad te conviene.
+
+**Para qué la usamos, y nada más**: para decidir cuánto puede costar como mucho una consulta de los anuncios sin dejar de compensarte, y qué campañas van primero (acoso, despidos, incapacidad). Es una estimación para ajustar, no una promesa de resultados.
+
+**Siempre bajo tu control.** Es una cifra que solo vosotros conocéis. En tu mesa de control, dentro de «Tus sueños y tus cuentas», puedes ponerla tú mismo y ver al momento qué cambia. Y si un día prefieres no dárnosla, trabajamos con una cifra prudente y te lo decimos.
+
 ## 24. Preguntas para ti
 
 CUESTIONARIO
