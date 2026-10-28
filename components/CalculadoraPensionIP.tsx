@@ -224,8 +224,8 @@ export default function CalculadoraPensionIP() {
 
           {origen !== 'trabajo' && (
             <p className="recuadro">
-              <strong>Si tu incapacidad viniera del trabajo, podría ser bastante más:</strong> se calcula con tu salario real, sin la reducción por años
-              cotizados, y además se puede pedir un recargo si la empresa falló en prevención. Pasa mucho con lesiones de espalda o con la ansiedad por acoso.{' '}
+              <strong>Si tu incapacidad viniera del trabajo, podrías cobrar más:</strong> se calcula con tu salario real del último año (horas extra
+              incluidas), sin la reducción por años cotizados, y se puede pedir un recargo del 30 % al 50 % si la empresa falló en prevención. Pasa mucho con lesiones de espalda o con la ansiedad por acoso.{' '}
               <Link href="/herramientas/genera-tu-carta?carta=contingencia">Carta para pedir que se revise el origen</Link>
             </p>
           )}
