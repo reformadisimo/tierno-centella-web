@@ -1,6 +1,6 @@
 ---
 titulo: Revisión de la incapacidad permanente por agravación o mejoría
-descripcion: Cuándo puede revisarse una incapacidad permanente, quién la pide, qué riesgos tiene pedir un grado mayor y qué pasa con tu pensión y tu trabajo tras la revisión.
+descripcion: Cuándo se revisa una incapacidad permanente, quién puede pedirla, qué riesgos tiene pedir un grado mayor y qué pasa con tu pensión y tu trabajo después.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad

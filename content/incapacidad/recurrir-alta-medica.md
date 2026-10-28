@@ -1,6 +1,6 @@
 ---
 titulo: Cómo recurrir el alta médica del INSS o de la mutua y en qué plazo
-descripcion: Si te dan el alta y no puedes trabajar: plazos para recurrir según la dé el médico, el INSS o la mutua, cómo se impugna en el juzgado y qué hacer con tu trabajo.
+descripcion: Si te dan el alta y no puedes trabajar: plazos para recurrirla según la dé el médico, el INSS o la mutua, el juicio y qué hacer con tu trabajo mientras.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad
@@ -53,7 +53,7 @@ Si es una baja por enfermedad común y te da el alta tu médico de atención pri
 2. **Presenta la reclamación previa ante el INSS** en 11 días desde la notificación (art. 71 de la Ley Reguladora de la Jurisdicción Social, LRJS). El INSS tiene 7 días para contestar; si no lo hace, se entiende rechazada.
 3. **Demanda ante el Juzgado de lo Social** en 20 días desde la respuesta o el silencio.
 
-Si vuelves a encontrarte mal después de reincorporarte, habla con tu médico. Ten en cuenta que, si el alta la dio el INSS al cumplirse el año, durante los 180 días siguientes solo el INSS puede darte una nueva baja por la misma dolencia.
+Ten en cuenta que, si el alta la dio el INSS al cumplirse el año, durante los 180 días siguientes solo el INSS puede darte una nueva baja por la misma dolencia.
 
 ## Si la mutua quiere darte el alta en una baja por enfermedad común
 
@@ -69,7 +69,7 @@ La demanda contra un alta médica sigue un procedimiento urgente (art. 140 LRJS)
 - Una descripción de tu puesto y de las tareas que no puedes hacer.
 - Si es posible, un informe pericial médico.
 
-Si ganas, se anula el alta y te reponen la prestación de incapacidad temporal desde esa fecha. Si te faltan informes, pide tu historial con [el generador de cartas para el historial clínico](/herramientas/genera-tu-carta?carta=historial).
+Si ganas, se anula el alta y te reponen la prestación de incapacidad temporal desde esa fecha.
 
 ## Qué pasa con tu trabajo mientras tanto
 
@@ -97,7 +97,3 @@ Si el alta la dio tu médico, puedes volver a consulta si empeoras. Si la dio el
 ### ¿Y si el INSS me da el alta con propuesta de incapacidad permanente?
 
 Es distinto: el INSS considera que tus lesiones pueden ser definitivas y abre el expediente de incapacidad. Lo explicamos en [la guía sobre el tribunal médico](/incapacidad-permanente/tribunal-medico-evi).
-
-### ¿Necesito abogado para recurrir el alta?
-
-Para la disconformidad o la revisión no es obligatorio. Para el juicio tampoco, pero un alta mal recurrida no suele tener segunda oportunidad, porque la sentencia normalmente no admite recurso.

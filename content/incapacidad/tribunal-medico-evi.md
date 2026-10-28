@@ -1,6 +1,6 @@
 ---
 titulo: Tribunal médico del INSS (EVI): cómo prepararlo y qué pasa después
-descripcion: Qué es el tribunal médico del INSS, qué llevar a la cita, qué suelen preguntar, cómo funciona el dictamen-propuesta y qué plazos tienes si no estás de acuerdo.
+descripcion: Qué es el tribunal médico del INSS, qué llevar, qué suelen preguntarte, cómo funciona el dictamen-propuesta y qué plazos tienes si no estás de acuerdo.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad

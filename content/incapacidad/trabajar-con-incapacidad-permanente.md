@@ -1,6 +1,6 @@
 ---
 titulo: ¿Se puede trabajar con una incapacidad permanente? Reglas por grado
-descripcion: Qué trabajos son compatibles con la incapacidad parcial, total, absoluta y gran incapacidad, qué pasa con el 20 % de la total cualificada y qué comunicar al INSS.
+descripcion: Qué trabajos son compatibles con la incapacidad parcial, total, absoluta y gran incapacidad, qué pasa con el 20 % de la cualificada y qué avisar al INSS.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad
@@ -72,13 +72,6 @@ Ten en cuenta dos riesgos. Si trabajas sin comunicarlo y el trabajo era incompat
 
 Repasa lo que cobras en cada grado en [la guía de grados de incapacidad permanente](/incapacidad-permanente/grados-de-incapacidad-permanente).
 
-## Lo que conviene hacer antes de aceptar un trabajo
-
-- Compara las tareas del nuevo puesto con las que ya no puedes hacer según tu resolución.
-- Pide por escrito una descripción del puesto.
-- Consulta si afecta al 20 % de la cualificada o a tu pensión de absoluta.
-- Comunícalo al INSS y guarda la prueba.
-
 Si te han ofrecido un trabajo y no sabes si es compatible con tu pensión, puedes revisarlo con el despacho en [una primera consulta](/primera-consulta).
 
 ## Preguntas frecuentes
@@ -98,7 +91,3 @@ Si pierdes un trabajo compatible con tu incapacidad total, puedes cobrar el paro
 ### ¿Me pueden quitar la incapacidad por ponerme a trabajar?
 
 Trabajar no la quita por sí solo, pero permite al INSS revisar tu grado en cualquier momento. Si el trabajo muestra que tu capacidad ha mejorado, podría bajarlo.
-
-### ¿Tengo que decírselo a mi nueva empresa?
-
-No estás obligado a contar tu diagnóstico. Sí conviene que el puesto respete tus limitaciones, y la empresa puede necesitar saberlas para adaptar tu puesto de forma segura.
