@@ -384,7 +384,7 @@ function Contenido({ html }: { html: string }) {
 // se borran de aquí las que ya ha visto.
 const VERSION = 17;
 const NOVEDADES: { texto: string; clave: string; v: number }[] = [
-  { texto: 'No te pedimos tu facturación: solo una cifra aproximada, lo que os deja de media un asunto, y siempre bajo tu control.', clave: '23 bis', v: 17 },
+  { texto: 'No te pedimos tu facturación: te pedimos dos números, cuántos contactos acaban siendo clientes y lo que deja cada uno.', clave: '23 bis', v: 17 },
   { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 16 },
   { texto: 'Tu mesa de control, renovada: te la enseña una guía de 9 pasos cortos, y en «Tus sueños y tus cuentas» nos dices hasta dónde quieres llegar.', clave: '19', v: 15 },
   { texto: 'Nuevo: la lupa de tu web. Ves dónde toca la gente, hasta dónde baja y dónde se va, y puedes dejarnos notas en el sitio exacto.', clave: '19 ter', v: 14 },

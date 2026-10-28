@@ -1385,19 +1385,19 @@ Y algo que nos ha llamado la atención: **la rapidez de respuesta pesa más que 
 
 Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, las fichas de Google y de Bing y el dominio necesitan permiso para hacer cambios, porque son justo lo que vamos a tocar. Ninguno nos da acceso a tu dinero ni a los datos de tus clientes, y los puedes retirar cuando quieras. **Las cuentas siguen siendo tuyas**: tú eres el propietario y nosotros, invitados. Si alguna hoy no está a tu nombre, lo primero que hacemos es ponerla a tu nombre.
 
-## 23 bis. No te pedimos tu facturación. Solo una cifra.
+## 23 bis. No te pedimos tu facturación. Te pedimos dos números.
 
-> **Ni facturación, ni balances, ni cuentas.** Muchos piden la facturación antes de empezar; nosotros no la necesitamos. No tienes que enseñarnos ningún papel ni contarnos cuánto ganas.
-
-**Lo que no te pedimos**: ni la facturación del despacho, ni balances, ni cuentas, ni márgenes. Nada de papeles.
-
-**Lo único que nos ayuda: una cifra aproximada.** Lo que os deja de media un asunto, es decir, los honorarios medios por cliente. Vale una estimación ("más o menos unos 2.000 euros por asunto") y la puedes cambiar cuando quieras. No hay que acertar.
-
-**Por qué nos importa.** No es lo mismo que una consulta acabe en un asunto de 1.000 euros que en uno de 6.000. Si cada asunto deja más, se puede pagar más por cada consulta que llega de los anuncios y llegar a más gente. Si deja menos, hay que cuidar mucho más cada euro. Con esa cifra vamos ajustando las campañas a lo que de verdad te conviene.
-
-**Para qué la usamos, y nada más**: para decidir cuánto puede costar como mucho una consulta de los anuncios sin dejar de compensarte, y qué campañas van primero (acoso, despidos, incapacidad). Es una estimación para ajustar, no una promesa de resultados.
-
-**Siempre bajo tu control.** Es una cifra que solo vosotros conocéis. En tu mesa de control, dentro de «Tus sueños y tus cuentas», puedes ponerla tú mismo y ver al momento qué cambia. Y si un día prefieres no dárnosla, trabajamos con una cifra prudente y te lo decimos.
+> **No te pedimos tu facturación, ni balances, ni cuentas, ni ningún documento del despacho.** Muchos los piden; nosotros no los necesitamos.
+>
+> Lo que sí necesitamos son **dos números tuyos**. Son poca cosa, pero importantísimos: con ellos sabemos si las campañas funcionan de verdad.
+>
+> **1. Cuántos de los contactos que llegan acaban siendo clientes.** Solo el número, o un porcentaje aproximado, sin importes. Basta un mensaje corto cada semana o cada mes: "de los 10 contactos, han encargado su asunto 2".
+>
+> Un ejemplo: invertimos 1.000 euros en anuncios y llegan 10 contactos. Desde fuera sabemos que cada contacto ha costado 100 euros, pero no vemos si esas personas acabaron siendo clientes. Si encargan su asunto 2, cada cliente ha costado 500 euros; si son 5, 200 euros. Ese dato solo lo tienes tú, y cambia por completo cómo se montan las campañas.
+>
+> **2. Lo que deja de media cada cliente.** Una cifra aproximada de los honorarios medios por asunto. Vale una estimación ("más o menos unos 2.000 euros") y la puedes cambiar cuando quieras. No es lo mismo que los contactos traigan asuntos de 1.500 euros que de 6.000: eso decide cuánto podemos pagar por cada contacto sin dejar de compensarte. Y si vemos que los asuntos que llegan dejan cada vez más (de empresas, o de más cuantía), podemos orientar las campañas hacia ellos.
+>
+> **Para qué sirven, y nada más**: para ajustar las campañas. No son una promesa de resultados. Son datos que solo conoces tú y siguen siendo tuyos: en tu mesa de control, dentro de «Tus sueños y tus cuentas», puedes ponerlos tú mismo y ver al momento qué cambia.
 
 ## 24. Preguntas para ti
 
