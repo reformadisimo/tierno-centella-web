@@ -382,8 +382,9 @@ function Contenido({ html }: { html: string }) {
 // quien entra solo ve las novedades posteriores a su última visita, nunca las que ya vio (petición de Ig, 27-oct-2026).
 // Jesús entró por primera vez el 26 de octubre de 2026 (versión 12). Cuando llegue el aviso de que ha vuelto a entrar,
 // se borran de aquí las que ya ha visto.
-const VERSION = 18;
+const VERSION = 19;
 const NOVEDADES: { texto: string; clave: string; v: number }[] = [
+  { texto: '¿Miedo al cambio? Te explicamos el test A/B: tu web actual y la nueva a la vez, al 50 % o con el reparto que prefieras, y decides con tus números.', clave: '21 bis', v: 19 },
   { texto: 'Tres herramientas nuevas en tu web: cuánto se cobra de baja, los salarios que debe la empresa con sus intereses y lo que cubre el FOGASA.', clave: '11', v: 18 },
   { texto: 'No te pedimos tu facturación: te pedimos dos números, cuántos contactos acaban siendo clientes y lo que deja cada uno.', clave: '23 bis', v: 17 },
   { texto: 'Tu ficha de Google, en nuestras manos: cómo pediríamos las reseñas a tus clientes por WhatsApp y por correo (con ejemplos), y todo lo que haríamos en tu ficha.', clave: '5', v: 16 },

@@ -1297,13 +1297,27 @@ Sabemos que cambiar de proveedores da pereza: "¿y si me quedo sin web?", "¿y s
 
 **Y una cosa más, con todo el cariño.** Sabemos que llevas años trabajando con personas de confianza, y que han hecho su trabajo con esfuerzo y buena fe. Nada de esto es una crítica a nadie: cada uno ha hecho lo que podía con lo que tenía. Y tampoco hay prisa ni nada que decidir hoy. Mira la web, pruébala con calma, enséñasela a quien quieras, y quédate con lo que te guste. Si un día decides dar el paso, lo hacemos con el mismo cuidado con el que cuidamos a quienes ya trabajan contigo.
 
-## 21 bis. ¿Miedo al cambio? Lo probamos antes, con datos
+## 21 bis. ¿Miedo al cambio? Lo probamos antes, con un test A/B
 
-Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** Podemos hacer una **prueba A/B**: durante unos días o unas semanas, la mayoría de las visitas siguen viendo **tu web actual** (por ejemplo, el 90 %) y una pequeña parte ve **la nueva** (el 10 %). Las dos conviven en tu misma dirección, sin que nadie note nada raro.
+Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** Para eso existe el **test A/B**, y es más sencillo de lo que suena.
 
-Al cabo de ese tiempo sabremos, **con tus propios números**, cuál consigue más llamadas, más WhatsApp y más consultas. Si la nueva gana, vamos subiendo su parte poco a poco. Si no, no se cambia nada y no has perdido nada.
+**Qué es un test A/B.** Imagina que tu despacho tuviera dos puertas a la calle: la de siempre (la A) y una nueva (la B). Cada persona que llega entra por una de las dos, al azar, sin saber que existe la otra. Al cabo de unas semanas cuentas cuántas personas acabaron sentadas contigo después de entrar por cada puerta. La que más clientes trae, se queda. En la web es igual: **tu web actual es la A, la nueva es la B**, las dos viven en tu misma dirección (tiernocentella.es) y cada visita ve una u otra sin notar nada raro.
 
-> **Lo mismo hacemos con las landings y los anuncios**: probamos dos versiones a la vez y nos quedamos con la que mejor funciona. Decidimos con datos, no con gustos.
+**Tú decides el reparto.** Puede ser:
+
+| Reparto | Para quién |
+| --- | --- |
+| 50 % y 50 % | El más rápido: en dos o tres semanas ya hay datos claros |
+| 60 % la actual y 40 % la nueva | Si prefieres ir con un poco más de calma |
+| 90 % la actual y 10 % la nueva | Si te da mucho respeto: es el más prudente, pero tarda más en dar datos fiables |
+
+**Lo que medimos**, en las dos a la vez y con tus propios números: llamadas, WhatsApp, consultas reservadas y personas que dejan sus datos. No gustos ni opiniones: quién trae más clientes.
+
+**Y después, poco a poco.** Si la nueva gana, vamos subiendo su parte: por ejemplo, de 50 a 70 % y luego al 100 %. Si no gana, no se cambia nada y no has perdido nada: tu web actual ha seguido funcionando todo el tiempo.
+
+> **Nuestro consejo, con sinceridad: empezar al 50 % y, cuando los datos lo confirmen, ir al 100 %.** La web nueva ya está lista y es la que trae las herramientas, el asistente y la velocidad. Cuanto antes la vea todo el mundo, antes se notan los resultados. Pero el test está para que no tengas que fiarte de nuestra palabra: lo decides tú, con datos.
+
+**Lo mismo hacemos siempre con las landings y los anuncios**: probamos dos versiones a la vez y nos quedamos con la que mejor funciona. Es nuestra forma de trabajar: decidir con datos, no con gustos.
 
 **Y una salida fácil, por si acaso.** Pedimos un compromiso de seis meses porque la web va regalada. Pero sabemos que con tres meses basta para ver si funciona. Por eso, **si a los tres meses no te hemos demostrado con tus propios números que lo hacemos mejor, dejas de pagar desde el cuarto mes**, sin dar explicaciones. No queremos que nadie siga con nosotros sin estar convencido: siempre te ponemos fácil la salida, y todo sigue a tu nombre. Es como trabajamos con todos nuestros clientes.
 
