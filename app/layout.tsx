@@ -29,7 +29,8 @@ const fuente = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE),
+  // Las imágenes de las tarjetas (WhatsApp, redes) se sirven desde el dominio donde está publicada la web hoy; el canónico sigue siendo BASE.
+  metadataBase: new URL(process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : BASE),
   applicationName: 'Tierno Centella Abogados',
   authors: [{ name: 'Jesús Tierno Centella', url: `${BASE}/jesus-tierno` }],
   creator: 'Tierno Centella Abogados',
