@@ -1324,15 +1324,17 @@ Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** P
 
 ## 21 ter. Nuestra forma de trabajar: rápida, eficaz y robándote el menor tiempo posible
 
-> **Nuestro objetivo es muy concreto: conseguirte el mayor número de clientes posible, dentro de lo que podáis atender, dándote la menor guerra posible.**
+> **Nuestro objetivo es muy concreto: conseguirte el mayor número de clientes posible, dentro de lo que podáis atender, dándote la menor guerra posible.** Sin prometerte cifras: con trabajo constante y medido.
 >
-> **Sin reuniones y sin llamadas.** Trabajamos sin reuniones presenciales, sin reuniones online y sin llamadas, salvo que sean imprescindibles, y casi nunca lo son. Nos comunicamos por **correo y WhatsApp**, a diario si hace falta, con mensajes breves y rápidos. Tú escribes cuando te viene bien, desde donde estés, y nosotros respondemos enseguida.
+> **Sin reuniones y sin llamadas.** Trabajamos sin reuniones presenciales, sin reuniones online y sin llamadas, salvo que sean imprescindibles, y casi nunca lo son. Nos comunicamos por **correo y WhatsApp**, a diario si hace falta, con mensajes breves y rápidos, y con todas las herramientas que tenemos. Tú escribes cuando te viene bien, entre consulta y consulta, y nosotros respondemos enseguida.
 >
-> **Al principio, un pequeño esfuerzo por las dos partes.** Las primeras semanas te pediremos algunas cosas: los accesos, algunos datos del despacho, alguna foto. Nosotros también nos volcamos al principio, porque es cuando más trabajo hay. Pero después, en **velocidad de crucero**, tú te puedes dedicar prácticamente al 100 % a tu trabajo, y cada mes te robamos menos tiempo.
+> **El principio cuesta un poco más.** Las primeras semanas te pediremos algunas cosas: los accesos, algunos datos del despacho y alguna foto. Nosotros también nos volcamos al principio, porque es cuando más trabajo hay.
 >
-> **Lo que pasa normalmente.** Con una agencia de marketing, y más aún con varios proveedores a la vez, acabas perdiendo muchísimo tiempo en reuniones, desplazamientos, llamadas y correos cruzados entre unos y otros. Al final estás más dedicado al marketing que a tu propio trabajo. Con nosotros eso no ocurre, y es uno de nuestros puntos fuertes: tú llevas tu despacho y nosotros nos ocupamos de lo demás.
+> **Después, velocidad de crucero.** Con todo en marcha, puedes dedicar casi todo tu tiempo a lo tuyo: atender a tus clientes y llevar sus asuntos. Y cada mes te robamos menos tiempo.
 >
-> **Un consejo**: repasad esta guía con calma en los días previos al lanzamiento. Para nosotros es muy importante que sepáis cómo trabajamos, porque así todo irá más rápido y con menos idas y venidas.
+> **Lo que suele pasar.** Con una agencia de marketing, y más aún con varios proveedores a la vez, acabas perdiendo muchísimo tiempo en reuniones, desplazamientos, llamadas y correos cruzados. Al final estás más dedicado al marketing que a tu propio despacho. Con nosotros eso no ocurre, y es uno de nuestros puntos fuertes. Es también uno de los valores de Casiopea 360: sabemos que se pierde mucho tiempo en reuniones y con varios proveedores, y nosotros lo evitamos.
+>
+> **Un consejo**: repasa esta guía con calma en los días previos al lanzamiento. Para nosotros es muy importante que sepas cómo trabajamos, porque así todo irá más rápido y con menos idas y venidas.
 
 ## 22. Plan de 30 días y cuánto tarda en notarse
 

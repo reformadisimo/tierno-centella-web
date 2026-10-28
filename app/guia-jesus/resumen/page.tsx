@@ -157,6 +157,7 @@ export default function Resumen() {
           <li>Si te convence: que revises los textos y nos des los accesos (Google, ficha, anuncios).</li>
           <li>Y dos números, nada de facturación ni cuentas: cuántos contactos acaban siendo clientes y lo que os deja de media un asunto.</li>
           <li>Tu tiempo: unas 3 o 4 horas en dos semanas y, después, unos 30 minutos a la semana.</li>
+          <li>Así trabajamos: sin reuniones ni llamadas, por correo y WhatsApp, y cada mes te robamos menos tiempo para que te dediques a tus clientes.</li>
           <li>¿Te da respeto cambiar? Te aconsejamos ir al 100 % con la nueva; si prefieres calma, lo probamos antes con un test A/B. Y si a los tres meses no te hemos demostrado que funciona mejor, dejas de pagar desde el cuarto.</li>
         </ol>
         <p className="rs2-cierre">Nada de esto es grave y todo tiene arreglo. Todo queda a tu nombre, y tú puedes marcharte cuando quieras sin pedirnos nada. Y lo ves todo tú, en tu panel de control: se actualiza cada día y puedes comparar días, semanas y meses.</p>
