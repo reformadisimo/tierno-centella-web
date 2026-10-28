@@ -5,8 +5,8 @@ fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad
 orden: 21
-imagen: silla-ruedas
-imagenAlt: Un trabajador en silla de ruedas durante una reunión
+imagen: trabajador-portatil
+imagenAlt: Un trabajador toma notas junto a su portátil
 ---
 
 Una hernia discal o una lumbalgia crónica pueden dar lugar a una incapacidad permanente cuando, después del tratamiento, te quedan limitaciones graves y duraderas para tu trabajo. Tener una hernia en la resonancia no basta: se valora si comprime un nervio, cuánto dolor y pérdida de movilidad te deja y si tu profesión exige esfuerzos que ya no puedes hacer. Por eso la misma lesión puede dar una incapacidad a un albañil y no a una administrativa.
