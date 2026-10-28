@@ -8563,3 +8563,22 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
 .gj-seccion h2 .chip-vivo{width:46px;height:46px;border-radius:14px}
 @media (max-width:520px){.chip-vivo{width:34px;height:34px;border-radius:10px}.gj-seccion h2 .chip-vivo{width:38px;height:38px}.prosa > ul > li{padding-left:46px}.prosa > ol > li{padding-left:56px}}
 @media (max-width:360px){.pasando-chips a{min-width:0;font-size:.82rem;padding:10px 4px;gap:4px}.pasando-chips{gap:6px}}
+
+/* Dar vida (2): listas y pasos de las páginas de cada área, losetas en las guías y tarjetas más cortas a la vista */
+.texto > ul{list-style:none;padding-left:0;display:grid;gap:8px}
+.texto > ul > li{position:relative;margin:0;padding:11px 14px 11px 50px;background:#f3f7fb;border-radius:14px;line-height:1.55}
+.texto > ul > li::before{content:"";position:absolute;left:12px;top:11px;width:26px;height:26px;border-radius:50%;background:var(--vf,var(--v0))}
+.texto > ul > li::after{content:"";position:absolute;left:19px;top:18px;width:12px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 12.5 5 5L20 6'/%3E%3C/svg%3E") center/contain no-repeat}
+.texto > ul > li:nth-child(6n+1){--vf:var(--v0)} .texto > ul > li:nth-child(6n+2){--vf:var(--v1)} .texto > ul > li:nth-child(6n+3){--vf:var(--v2)}
+.texto > ul > li:nth-child(6n+4){--vf:var(--v3)} .texto > ul > li:nth-child(6n+5){--vf:var(--v4)} .texto > ul > li:nth-child(6n+6){--vf:var(--v5)}
+.rejilla-guias.con-icono .icono-guia{position:relative;display:grid!important;place-items:center;width:56px;height:56px;color:#fff!important;border-radius:16px;transform:rotate(-6deg);box-shadow:0 12px 22px -12px var(--vs,var(--v0s))}
+.rejilla-guias.con-icono .icono-guia::after{content:"";position:absolute;right:-7px;top:-7px;width:16px;height:16px;background:var(--estrellita) center/contain no-repeat}
+.rejilla-guias.con-icono a:nth-child(6n+1) .icono-guia{background:var(--v0);--vs:var(--v0s)}
+.rejilla-guias.con-icono a:nth-child(6n+2) .icono-guia{background:var(--v2);--vs:var(--v2s);transform:rotate(6deg)}
+.rejilla-guias.con-icono a:nth-child(6n+3) .icono-guia{background:var(--v3);--vs:var(--v3s)}
+.rejilla-guias.con-icono a:nth-child(6n+4) .icono-guia{background:var(--v1);--vs:var(--v1s);transform:rotate(6deg)}
+.rejilla-guias.con-icono a:nth-child(6n+5) .icono-guia{background:var(--v4);--vs:var(--v4s)}
+.rejilla-guias.con-icono a:nth-child(6n+6) .icono-guia{background:var(--v5);--vs:var(--v5s);transform:rotate(6deg)}
+.rejilla-guias.con-icono a{background:#fff;border-color:var(--linea,#e3e8ee)}
+.rejilla-guias.con-icono a:hover{border-color:#c9d7e4;box-shadow:0 14px 28px rgba(13,44,72,.12)}
+.rejilla-guias span,.tarjetas-foto a span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}

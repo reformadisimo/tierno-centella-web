@@ -31,8 +31,8 @@ export default function MujerYTrabajo() {
             <Etiqueta icono="corazon" tono="rosa">Mujer y trabajo</Etiqueta>
             <h1>Embarazo, conciliación, acoso sexual: tus derechos no se negocian.</h1>
             <p className="entradilla">
-              Muchas de las consultas que llegan al despacho tienen que ver con ser madre, con cuidar o con un trato distinto por ser mujer. Aquí tienes
-              lo que dice la ley, explicado sin rodeos, y un equipo de abogadas y abogados que lo defiende cada día.
+              Ser madre, cuidar a alguien o recibir un trato distinto por ser mujer: aquí tienes lo que dice la ley, sin rodeos, y un equipo que
+              lo defiende cada día.
             </p>
             <div className="acciones">
               <Link className="boton boton-marcador" href="/herramientas/calendario-permisos">
