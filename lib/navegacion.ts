@@ -27,6 +27,7 @@ export const MENU: Grupo[] = [
       { href: '/despido/tipos-de-despido', texto: 'Tipos de despido' },
       { href: '/despido/despido-nulo-cuando', texto: 'Cuándo es nulo' },
       { href: '/despido/plazo-para-reclamar-despido', texto: 'Plazo para reclamar' },
+      { href: '/blog/suspension-de-empleo-y-sueldo', texto: 'Sanciones y suspensiones' },
     ],
   },
   {
@@ -36,7 +37,9 @@ export const MENU: Grupo[] = [
     href: '/incapacidad-permanente',
     enlaces: [
       { href: '/incapacidad-permanente', texto: 'Incapacidad permanente' },
+      { href: '/incapacidad-permanente/preguntas-frecuentes-incapacidad-permanente', texto: '50 preguntas frecuentes' },
       { href: '/incapacidad-permanente/grados-de-incapacidad-permanente', texto: 'Grados y cuánto se cobra' },
+      { href: '/incapacidad-permanente/tribunal-medico-evi', texto: 'El tribunal médico' },
       { href: '/incapacidad-permanente/reclamacion-previa-y-demanda', texto: 'Si te la deniegan' },
       { href: '/incapacidad-permanente/incapacidad-y-contrato-ley-2-2025', texto: 'Tu contrato tras la incapacidad' },
     ],
@@ -51,6 +54,7 @@ export const MENU: Grupo[] = [
       { href: '/mujer-y-trabajo/despido-embarazada', texto: 'Despido y embarazo' },
       { href: '/mujer-y-trabajo/reduccion-y-adaptacion-de-jornada', texto: 'Reducción y adaptación de jornada' },
       { href: '/mujer-y-trabajo/permisos-por-nacimiento-y-lactancia', texto: 'Permisos por nacimiento' },
+      { href: '/mujer-y-trabajo/permisos-retribuidos', texto: 'Permisos retribuidos y excedencias' },
       { href: '/mujer-y-trabajo/acoso-sexual-y-por-razon-de-sexo', texto: 'Acoso sexual' },
       { href: '/mujer-y-trabajo/brecha-salarial-registro-retributivo', texto: 'Brecha salarial' },
       { href: '/herramientas/calculadora-reduccion-jornada', texto: 'Calculadora de reducción de jornada' },
