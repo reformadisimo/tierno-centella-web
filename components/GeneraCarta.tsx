@@ -93,6 +93,56 @@ const MODELOS: Modelo[] = [
     texto: (x, f) =>
       `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa} (departamento de recursos humanos / canal de denuncias)\n\nAsunto: Comunicación de una situación de acoso en el trabajo\n\nYo, ${f.yo}, les comunico que estoy sufriendo la siguiente situación en mi puesto de trabajo:\n\n${v(x.hechos, 'hechos con fechas y personas')}\n${x.quien ? `\nPersona/s implicada/s: ${x.quien}\n` : ''}\nLes solicito que, de acuerdo con su obligación de proteger mi salud y mi dignidad en el trabajo:\n1. Activen el protocolo de acoso o investiguen estos hechos de forma imparcial.\n2. Adopten medidas para evitar que la situación continúe mientras se investiga.\n3. Conserven las pruebas relacionadas con estos hechos.\n4. Me informen por escrito de las actuaciones que se lleven a cabo.\n\nEsta comunicación no me impide ejercer otras acciones.\n\nAtentamente,\n${f.yo}`,
   },
+  {
+    id: 'baja-voluntaria',
+    nombre: 'Comunicar que me voy de la empresa (baja voluntaria)',
+    intro: 'Si decides irte, avisa por escrito con la antelación que marque tu convenio (suele ser de 15 días). Así no te pueden descontar días de preaviso del finiquito.',
+    campos: [
+      { id: 'ultimo', etiqueta: 'Tu último día de trabajo' },
+      { id: 'preaviso', etiqueta: 'Días de preaviso de tu convenio', ayuda: 'Míralo en tu convenio o contrato. Si no lo sabes, suele ser 15' },
+    ],
+    aviso: 'Ojo: si te vas por tu cuenta, no tienes derecho a paro ni a indemnización. Si te vas porque la empresa no paga, te acosa o te cambia las condiciones, puede haber otra salida con indemnización: compruébalo antes de enviarla.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Comunicación de baja voluntaria\n\nYo, ${f.yo}, les comunico mi decisión de causar baja voluntaria en la empresa, respetando el preaviso de ${v(x.preaviso, 'días')} días. Mi último día de trabajo será el ${v(x.ultimo, 'fecha')}.\n\nLes ruego que preparen para esa fecha la liquidación de las cantidades que me correspondan (salario de los días trabajados, vacaciones no disfrutadas y parte proporcional de las pagas extra) y que me entreguen el certificado de empresa.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'excedencia',
+    nombre: 'Pedir una excedencia',
+    intro: 'Voluntaria, o para cuidar de un hijo o de un familiar. Pedirla por escrito y con fecha es lo que te protege.',
+    campos: [
+      { id: 'tipo', etiqueta: 'Qué excedencia pides', ayuda: 'Por ejemplo: voluntaria, o por cuidado de mi hijo de 2 años' },
+      { id: 'desde', etiqueta: 'Desde qué fecha' },
+      { id: 'hasta', etiqueta: 'Hasta qué fecha (o cuánto tiempo)' },
+    ],
+    aviso: 'La voluntaria exige al menos un año en la empresa y solo te da preferencia para volver cuando haya una vacante; la de cuidado reserva tu puesto el primer año. Pide que te firmen una copia.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Solicitud de excedencia\n\nYo, ${f.yo}, trabajador/a de su empresa, les solicito una excedencia ${v(x.tipo, 'tipo de excedencia')}, al amparo del artículo 46 del Estatuto de los Trabajadores, desde el ${v(x.desde, 'fecha de inicio')} hasta el ${v(x.hasta, 'fecha de fin')}.\n\nLes ruego que me confirmen por escrito su concesión y las condiciones de mi reincorporación.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'historial',
+    nombre: 'Pedir mi historial médico (para la baja o la incapacidad)',
+    intro: 'Tienes derecho a una copia de tu historia clínica. Es la base de cualquier reclamación por incapacidad. Escribe en "Empresa" el nombre de tu centro de salud u hospital.',
+    campos: [
+      { id: 'dni', etiqueta: 'Tu DNI' },
+      { id: 'que', etiqueta: 'Qué informes necesitas', area: true, ayuda: 'Por ejemplo: informes de traumatología y rehabilitación de 2024 a 2026, y resultados de resonancias' },
+    ],
+    aviso: 'En muchas comunidades también puedes descargarla desde la web o la app de tu servicio de salud. Pide siempre los informes de los especialistas, no solo los del médico de cabecera.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención del servicio de atención al paciente de ${f.empresa}\n\nAsunto: Solicitud de copia de mi historia clínica\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, al amparo del artículo 18 de la Ley 41/2002, de autonomía del paciente, solicito copia de la siguiente documentación de mi historia clínica:\n\n${v(x.que, 'informes que necesitas')}\n\nLes ruego que me la faciliten en el plazo legal.\n\nAtentamente,\n${f.yo}`,
+  },
+  {
+    id: 'alta',
+    nombre: 'No estoy de acuerdo con el alta médica',
+    intro: 'Si el INSS te da el alta y no puedes trabajar, puedes mostrar tu disconformidad. El plazo es muy corto: 4 días naturales. Escribe en "Empresa" la inspección médica de tu servicio de salud (en Madrid, la Inspección Médica de la Comunidad de Madrid).',
+    campos: [
+      { id: 'dni', etiqueta: 'Tu DNI' },
+      { id: 'fecha-alta', etiqueta: 'Fecha del alta' },
+      { id: 'motivos', etiqueta: 'Por qué no estás de acuerdo', area: true, ayuda: 'Tus limitaciones de hoy y los informes que las prueban' },
+    ],
+    aviso: 'Mientras se resuelve, tienes que volver al trabajo al día siguiente del alta, o te arriesgas a un despido por faltas. Si el alta la da la mutua por un accidente de trabajo, el procedimiento es otro. Llámanos antes de enviarla.',
+    texto: (x, f) =>
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Disconformidad con el alta médica emitida por el INSS\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, manifiesto mi disconformidad con el alta médica emitida el ${v(x['fecha-alta'], 'fecha del alta')}, por los siguientes motivos:\n\n${v(x.motivos, 'motivos e informes')}\n\nPor ello, solicito que se tramite el procedimiento de disconformidad previsto en el artículo 170.2 de la Ley General de la Seguridad Social y que se valore mi situación.\n\nAdjunto los informes médicos que acreditan mi estado.\n\nAtentamente,\n${f.yo}`,
+  },
 ];
 
 export default function GeneraCarta() {

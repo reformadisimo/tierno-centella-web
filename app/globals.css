@@ -8598,3 +8598,16 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
 .th-comprobador .th-chip svg{background:var(--v3)}
 .th-plazo .th-chip svg,.th-calendario .th-chip svg{background:var(--v4)}
 .th-carta .th-chip svg,.th-mapa .th-chip svg{background:var(--v5)}
+
+/* Seguimiento opcional por tema, al final de cada guía */
+.seguimiento{margin:36px 0 8px;padding:22px 22px 18px;border-radius:20px;background:linear-gradient(135deg,var(--cielo),#fff 70%);border:1px solid #d6e4f0;position:relative}
+.seg-gratis{margin:0 0 10px;font-size:.85rem;font-weight:700;color:var(--v3s,#1f6b4b);color:#1f6b4b}
+.seg-titulo{margin:0 0 6px;font-size:1.25rem;font-weight:800;color:var(--tinta)}
+.seg-texto{margin:0 0 12px;color:var(--tinta-media)}
+.seg-fila{display:flex;gap:10px;flex-wrap:wrap}
+.seg-fila input[type=email]{flex:1 1 220px;min-width:0}
+.seg-fila .boton{min-height:52px}
+.seg-trampa{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.seg-acepto{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.88rem;color:var(--tinta-media)}
+.seg-acepto input{margin-top:3px;min-width:18px;min-height:18px}
+.seg-ok{margin:0;font-weight:600;color:#1f6b4b}

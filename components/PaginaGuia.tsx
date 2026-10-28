@@ -10,6 +10,16 @@ import { Escuchar } from './Utiles';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
 import { fotosParaTexto, temaDe } from '@/lib/fotos-texto';
 import { darVida } from '@/lib/vida';
+import Seguimiento from './Seguimiento';
+
+// Tema del seguimiento opcional según la guía
+function temaSeguimiento(p: Pieza): string {
+  const s = p.slug;
+  if (/baja|alta-medica|estres/.test(s)) return 'baja';
+  if (/amonestacion|suspension-de-empleo|faltas-/.test(s)) return 'sanciones';
+  if (/nomina|fogasa|salarios|cantidad/.test(s)) return 'cantidad';
+  return ['incapacidad', 'despido', 'acoso', 'mujer'].includes(p.categoria ?? '') ? (p.categoria as string) : 'general';
+}
 
 const escapar = (t: string) => t.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
@@ -183,6 +193,7 @@ export default function PaginaGuia({
               </nav>
             )}
             <div className="prosa" dangerouslySetInnerHTML={{ __html: htmlConFotos }} />
+            {!en && <Seguimiento tema={temaSeguimiento(pieza)} />}
             <Compartir titulo={pieza.titulo} />
           </article>
           <div className="guia-lateral">
