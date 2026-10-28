@@ -3724,6 +3724,16 @@ body:has(.landing) .pie {
     padding: 10px 16px;
     margin-bottom: 6px;
   }
+  .prosa table.tabla-fichas {
+    display: block;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  .prosa .tabla-fichas td {
+    min-width: 0;
+  }
   .tabla-fichas td:not(:first-child)::before {
     content: attr(data-label);
     display: block;

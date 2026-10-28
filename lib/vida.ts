@@ -76,11 +76,29 @@ export const svgIcono = (nombre: string, tam = 20, grosor = 2.1) =>
  */
 export function darVida(html: string, semilla = 0): string {
   let n = semilla;
-  return html.replace(/<(h2|h3)([^>]*)>([\s\S]*?)<\/\1>/g, (todo, h: string, attrs: string, dentro: string) => {
+  return fichasMovil(html).replace(/<(h2|h3)([^>]*)>([\s\S]*?)<\/\1>/g, (todo, h: string, attrs: string, dentro: string) => {
     if (/chip-vivo|glosario-letra/.test(todo)) return todo;
     const texto = dentro.replace(/<[^>]+>/g, '');
     const i = n++;
     const clase = /class="/.test(attrs) ? attrs.replace(/class="/, 'class="tv ') : `${attrs} class="tv"`;
     return `<${h}${clase}><span class="chip-vivo cv-${i % 6}" aria-hidden="true">${svgIcono(iconoPorTexto(texto, i), h === 'h2' ? 20 : 17)}</span><span class="tv-texto">${dentro}</span></${h}>`;
+  });
+}
+
+/**
+ * Tablas de 3 o más columnas: en el móvil se leen como fichas (una por fila), con el nombre de cada columna encima del dato.
+ * Solo añade la clase tabla-fichas y un data-label a cada celda; en el ordenador la tabla se ve igual.
+ */
+export function fichasMovil(html: string): string {
+  return html.replace(/<table([^>]*)>([\s\S]*?)<\/table>/g, (todo, attrs: string, dentro: string) => {
+    const cab = [...(dentro.match(/<thead>[\s\S]*?<\/thead>/)?.[0] ?? '').matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((m) => m[1].replace(/<[^>]+>/g, '').replace(/"/g, '&quot;').trim());
+    if (cab.length < 3 || /tabla-fichas/.test(attrs)) return todo;
+    const cuerpo = dentro.replace(/<tr>([\s\S]*?)<\/tr>/g, (fila, celdas: string) => {
+      if (/<th/.test(celdas)) return fila;
+      let i = 0;
+      return `<tr>${celdas.replace(/<td([^>]*)>/g, (_t, a: string) => `<td${a} data-label="${cab[i++] ?? ''}">`)}</tr>`;
+    });
+    const clase = /class="/.test(attrs) ? attrs.replace(/class="/, 'class="tabla-fichas ') : `${attrs} class="tabla-fichas"`;
+    return `<table${clase}>${cuerpo}</table>`;
   });
 }
