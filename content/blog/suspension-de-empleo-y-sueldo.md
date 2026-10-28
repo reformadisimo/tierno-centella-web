@@ -86,6 +86,8 @@ Una suspensión que no impugnas queda firme. Muchos convenios tienen en cuenta l
 
 Si quieres que revisemos la carta y tu convenio antes de que venza el plazo, puedes pedir [una primera consulta](/primera-consulta) con el despacho.
 
+Comprueba si la empresa te ha sancionado a tiempo con [el comprobador de prescripción de faltas](/herramientas/prescripcion-faltas).
+
 ## Preguntas frecuentes
 
 ### ¿Cobro el paro mientras estoy suspendido?

@@ -1,5 +1,6 @@
 import { ChipVivo } from '@/components/Vida';
 import { HERRAMIENTAS } from '@/lib/herramientas';
+import DestacadoTuCaso from '@/components/DestacadoTuCaso';
 import { Bocadillo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import FotoVideo from '@/components/FotoVideo';
@@ -297,6 +298,7 @@ export default function Inicio() {
         <div className="contenedor">
           <Etiqueta icono="calculadora">Herramientas</Etiqueta>
           <h2 className="tv"><ChipVivo texto="Resuelve tus dudas ahora, sin dejar tu teléfono" i={4} /><span className="tv-texto">Resuelve tus dudas ahora, sin dejar tu teléfono</span></h2>
+          <DestacadoTuCaso />
           <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <ul className="herr-tarjetas">
             <li className="ht-c0">

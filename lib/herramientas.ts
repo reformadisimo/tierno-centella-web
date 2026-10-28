@@ -1,5 +1,6 @@
 // Las herramientas de la web (también las usa el buscador).
 export const HERRAMIENTAS = [
+  { href: '/herramientas/tu-caso', titulo: 'Tu caso en 2 minutos', texto: 'Empieza por aquí: tu plazo con fecha, lo que te puede corresponder y la carta para el primer paso.' },
   { href: '/herramientas/test-acoso', titulo: '¿Es acoso lo que me pasa?', texto: 'Siete preguntas para saber si lo que vives tiene los rasgos del acoso laboral.' },
   { href: '/herramientas/test-nulidad', titulo: '¿Mi despido puede ser nulo?', texto: 'Embarazo, permisos, represalias, enfermedad: cuándo la empresa tiene que readmitirte.' },
   { href: '/herramientas/test-extincion', titulo: '¿Puedo irme con indemnización?', texto: 'Si la empresa no paga, te acosa o te deja sin funciones, puedes pedir al juez que extinga tu contrato.' },
@@ -15,7 +16,9 @@ export const HERRAMIENTAS = [
   { href: '/herramientas/calculadora-finiquito', titulo: 'Calculadora de finiquito', texto: 'Los días del último mes, las vacaciones pendientes y la parte de las pagas extra.' },
   { href: '/herramientas/calculadora-baja-laboral', titulo: 'Calculadora de la baja', texto: 'Cuánto cobras estando de baja, día a día, y quién te lo paga.' },
   { href: '/herramientas/calculadora-salarios-impagados', titulo: 'Calculadora de salarios impagados', texto: 'Lo que te debe la empresa, con el 10 % de interés, y el último día para reclamar cada mes.' },
+  { href: '/herramientas/tribunal-medico', titulo: '¿Llevas preparado el tribunal médico?', texto: 'La lista de lo que más pesa en la cita del INSS, para ir marcando mientras lo reúnes.' },
   { href: '/herramientas/calculadora-pension-incapacidad', titulo: 'Calculadora de la pensión de incapacidad', texto: 'Cuánto cobrarías con una incapacidad total, absoluta o gran incapacidad, paso a paso.' },
+  { href: '/herramientas/prescripcion-faltas', titulo: '¿Ha prescrito la falta?', texto: 'Si la empresa tarda demasiado en sancionarte, la sanción no vale. Compruébalo con tres fechas.' },
   { href: '/herramientas/calculadora-fogasa', titulo: 'Calculadora del FOGASA', texto: 'Si la empresa no paga o ha cerrado: cuánto te cubre de salarios e indemnización.' },
   { href: '/herramientas/calculadora-paro', titulo: 'Calculadora del paro', texto: 'Cuánto cobrarás y durante cuántos meses, con los topes de 2026.' },
   { href: '/herramientas/calculadora-reduccion-jornada', titulo: 'Calculadora de reducción de jornada', texto: 'Cuánto cobrarás si reduces tu jornada para cuidar y qué derechos conservas.' },

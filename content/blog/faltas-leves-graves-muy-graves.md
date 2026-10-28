@@ -87,6 +87,8 @@ En el juicio, la empresa tiene que probar los hechos y su gravedad, y solo puede
 
 Si quieres que revisemos tu sanción y tu convenio, puedes pedir [una primera consulta](/primera-consulta) con el despacho.
 
+Comprueba si la empresa te ha sancionado a tiempo con [el comprobador de prescripción de faltas](/herramientas/prescripcion-faltas).
+
 ## Preguntas frecuentes
 
 ### ¿Una falta leve puede acabar en despido?

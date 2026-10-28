@@ -75,6 +75,8 @@ También juega a tu favor una regla: la empresa no puede sancionarte dos veces p
 
 Si quieres que revisemos la amonestación antes de que pase el plazo, puedes pedir [una primera consulta](/primera-consulta) con el despacho.
 
+Comprueba si la empresa te ha sancionado a tiempo con [el comprobador de prescripción de faltas](/herramientas/prescripcion-faltas).
+
 ## Preguntas frecuentes
 
 ### ¿Me pueden despedir por una sola amonestación?

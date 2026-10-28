@@ -13,6 +13,8 @@ El tribunal médico es el Equipo de Valoración de Incapacidades (EVI) del INSS:
 
 > El INSS tiene 135 días para resolver. Si no contesta en ese plazo, la solicitud se entiende denegada. Y si la resolución no te convence, tienes 30 días hábiles para presentar la reclamación previa. Calcula la fecha en [la calculadora de plazos](/herramientas/plazos).
 
+> Ve marcando lo que tienes en [la lista para el tribunal médico](/herramientas/tribunal-medico): al final te dice qué te falta.
+
 ## Qué es el EVI y quién decide
 
 El EVI es un equipo del propio INSS (Instituto Nacional de la Seguridad Social) formado por personal médico y técnico. Lo regula el Real Decreto 1300/1995. Es importante entender el reparto de papeles:

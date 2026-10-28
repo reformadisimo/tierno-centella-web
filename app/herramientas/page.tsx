@@ -3,6 +3,7 @@ import Buzon from '@/components/Buzon';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import { HERRAMIENTAS } from '@/lib/herramientas';
+import DestacadoTuCaso from '@/components/DestacadoTuCaso';
 import FotoCabeza from '@/components/FotoCabeza';
 import { meta } from '@/lib/seo';
 import Link from 'next/link';
@@ -35,8 +36,9 @@ export default function Herramientas() {
       </header>
       <section className="seccion">
         <div className="contenedor">
+          <DestacadoTuCaso />
           <div className="tarjetas-foto tf-lista">
-            {HERRAMIENTAS.map((h) => {
+            {HERRAMIENTAS.filter((h) => h.href !== '/herramientas/tu-caso').map((h) => {
               const f = FOTOS_PAGINA[h.href];
               const tipo = tipoIcono(h.href, h.titulo);
               return (

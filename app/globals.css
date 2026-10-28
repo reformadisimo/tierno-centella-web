@@ -8623,3 +8623,172 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
 .seg-ok{margin:0;font-weight:600;color:#1f6b4b}
 .modelos-grupo{margin-bottom:34px}
 .modelos-grupo h2{margin-bottom:14px}
+
+/* Tu caso en 2 minutos: el plan en tres pasos numerados */
+.plan-pasos {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  gap: 14px;
+}
+.plan-pasos > li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  padding: 18px 18px 14px;
+}
+.plan-pasos h4 {
+  margin: 4px 0 8px;
+  font-size: 1.15rem;
+}
+.plan-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--blanco);
+  background: var(--v0, var(--tinta));
+  box-shadow: 0 6px 14px var(--v0s, transparent);
+  transform: rotate(-4deg);
+}
+.plan-pasos > li:nth-child(2) .plan-num { background: var(--v3, #2c7a5b); box-shadow: 0 6px 14px var(--v3s, transparent); transform: rotate(3deg); }
+.plan-pasos > li:nth-child(3) .plan-num { background: var(--v2, #d9694d); box-shadow: 0 6px 14px var(--v2s, transparent); transform: rotate(-2deg); }
+.plan-dato { font-size: 1.05rem; }
+.plan-quedan {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--marcador-suave, #fdf4dc);
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.plan-quedan.urgente { background: var(--coral-suave); color: var(--coral-texto); }
+.plan-sub {
+  margin: 14px 0 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--tinta-suave);
+}
+.plan-cifras { margin: 6px 0 10px; }
+@media (max-width: 480px) {
+  .plan-pasos > li { grid-template-columns: 1fr; gap: 6px; padding: 16px; }
+}
+@media print {
+  .plan-pasos > li { break-inside: avoid; }
+}
+
+/* Tribunal médico: lista para llevar preparado */
+.tribunal-barra {
+  position: relative;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--marcador-suave);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.tribunal-barra span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--v3, #2c7a5b);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+.tribunal-barra b {
+  position: relative;
+  display: block;
+  line-height: 34px;
+  padding: 0 14px;
+  color: var(--tinta);
+  mix-blend-mode: normal;
+  text-shadow: 0 0 6px var(--blanco);
+}
+.tribunal-grupo {
+  border: 0;
+  padding: 0;
+  margin: 22px 0 6px;
+  display: grid;
+  gap: 10px;
+}
+.tribunal-grupo legend {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.tribunal-punto.hecho {
+  border-color: #2c7a5b;
+  background: #eef7f2;
+}
+.tribunal-clave {
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--coral-suave);
+  color: var(--coral-texto);
+  border-radius: 999px;
+  padding: 1px 8px;
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+/* Destacado "Tu caso en 2 minutos" */
+.destacado-tu-caso {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 26px;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: var(--tinta);
+  color: var(--blanco);
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(13, 44, 72, 0.18);
+  transition: transform 0.2s ease;
+}
+.destacado-tu-caso:hover { transform: translateY(-2px); }
+.dtc-icono {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--v1, var(--marcador));
+  color: var(--tinta);
+  transform: rotate(-5deg);
+}
+.dtc-texto { display: grid; gap: 4px; }
+.dtc-texto strong { font-size: 1.35rem; line-height: 1.2; }
+.dtc-texto > span:last-child { color: #d7e3ee; }
+.dtc-chip {
+  justify-self: start;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--marcador);
+}
+.dtc-boton {
+  background: var(--marcador);
+  color: var(--tinta);
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 12px 22px;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .destacado-tu-caso { grid-template-columns: auto 1fr; padding: 18px; }
+  .dtc-boton { grid-column: 1 / -1; justify-self: start; }
+}

@@ -63,9 +63,10 @@ export const MENU: Grupo[] = [
   {
     titulo: 'Herramientas',
     foto: 'calculadora-papeles',
-    sub: '22 calculadoras y tests para tu caso',
+    sub: '25 calculadoras y tests para tu caso',
     href: '/herramientas',
     enlaces: [
+      { href: '/herramientas/tu-caso', texto: 'Tu caso en 2 minutos' },
       { href: '/herramientas/test-acoso', texto: '¿Es acoso lo que me pasa?' },
       { href: '/herramientas/mapa-de-pruebas', texto: 'Mapa de pruebas del acoso' },
       { href: '/herramientas/test-nulidad', texto: '¿Mi despido puede ser nulo?' },

@@ -118,6 +118,9 @@ HERRAMIENTAS GRATUITAS DE LA WEB
 - /herramientas/calculadora-baja-laboral: cuánto se cobra estando de baja (incapacidad temporal), día a día y quién paga; compara con lo que se cobraría si fuera accidente de trabajo
 - /herramientas/calculadora-salarios-impagados: salarios que debe la empresa, con el 10 % de interés por mora y el último día para reclamar cada mes (un año)
 - /herramientas/calculadora-pension-incapacidad: cuánto se cobraría con una incapacidad permanente parcial, total, absoluta o gran incapacidad (base reguladora, porcentaje por años cotizados en enfermedad común, porcentaje del grado, complemento de gran incapacidad, tope de pensión máxima de 2026)
+- /herramientas/tu-caso: Tu caso en 2 minutos, la puerta de entrada: la persona elige su situación (despido, sanción, impago, baja, incapacidad, acoso, familia, irse) y recibe su plan con plazo y fecha, cifra orientativa, carta y guías. Recomiéndala cuando alguien no sepa por dónde empezar
+- /herramientas/prescripcion-faltas: comprueba si una falta ha prescrito (leves 10 días, graves 20, muy graves 60 desde que la empresa la conoce, y siempre 6 meses desde los hechos)
+- /herramientas/tribunal-medico: lista para preparar el tribunal médico del INSS (informes, limitaciones, descripción del puesto, qué hacer después)
 - /herramientas/calculadora-fogasa: cuánto cubre el FOGASA si la empresa es insolvente o está en concurso (salarios hasta 120 días y una anualidad de indemnización, con el doble del salario mínimo diario como tope)
 - /herramientas/calendario-permisos: fechas de los permisos por nacimiento, lactancia y protección frente al despido
 - /herramientas/calculadora-reduccion-jornada: cuánto se cobra con reducción de jornada por cuidado
