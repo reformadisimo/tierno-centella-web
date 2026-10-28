@@ -8583,3 +8583,18 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
 .rejilla-guias.con-icono a:hover{border-color:#c9d7e4;box-shadow:0 14px 28px rgba(13,44,72,.12)}
 .rejilla-guias span,.tarjetas-foto a span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 @media (max-width:360px){.precios-cita{grid-template-columns:minmax(0,1fr)}.precios-cita li{grid-template-columns:36px minmax(0,1fr) auto;gap:8px;padding:10px}}
+
+/* Dar vida (4): preguntas frecuentes con número en cuadradito de color girado, y etiquetas de las herramientas con su icono en color */
+.faq-lista .pregunta-faq .faq-num{flex:0 0 38px;height:38px;border-radius:12px;color:#fff;background:var(--vf,var(--v0));box-shadow:0 8px 14px -8px var(--vs,var(--v0s));transform:rotate(-6deg);font-size:1rem}
+.faq-lista .pregunta-faq:nth-child(even) .faq-num{transform:rotate(6deg)}
+.faq-lista .pregunta-faq:nth-child(6n+1){--vf:var(--v0);--vs:var(--v0s)} .faq-lista .pregunta-faq:nth-child(6n+2){--vf:var(--v2);--vs:var(--v2s)}
+.faq-lista .pregunta-faq:nth-child(6n+3){--vf:var(--v3);--vs:var(--v3s)} .faq-lista .pregunta-faq:nth-child(6n+4){--vf:var(--v1);--vs:var(--v1s)}
+.faq-lista .pregunta-faq:nth-child(6n+5){--vf:var(--v4);--vs:var(--v4s)} .faq-lista .pregunta-faq:nth-child(6n+6){--vf:var(--v5);--vs:var(--v5s)}
+@media (max-width:560px){.faq-lista .pregunta-faq .faq-num{display:flex;flex-basis:32px;height:32px;border-radius:10px;font-size:.9rem}}
+.th-chip{padding:4px 12px 4px 4px;gap:7px;line-height:1}
+.th-chip svg{box-sizing:content-box;padding:3px;border-radius:6px;flex:none;color:#fff!important;background:var(--v2);transform:rotate(-6deg)}
+.th-calc .th-chip svg{background:var(--v0)}
+.th-test .th-chip svg{background:rgba(255,255,255,.22)}
+.th-comprobador .th-chip svg{background:var(--v3)}
+.th-plazo .th-chip svg,.th-calendario .th-chip svg{background:var(--v4)}
+.th-carta .th-chip svg,.th-mapa .th-chip svg{background:var(--v5)}
