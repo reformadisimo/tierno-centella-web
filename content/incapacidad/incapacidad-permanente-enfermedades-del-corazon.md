@@ -1,6 +1,6 @@
 ---
 titulo: Incapacidad permanente por enfermedades del corazón
-descripcion: Insuficiencia cardiaca, infarto o arritmias pueden dar la incapacidad permanente según tu trabajo. Qué se valora, qué pruebas ayudan y qué hacer si te la deniegan.
+descripcion: Insuficiencia cardiaca, infarto o arritmias pueden dar la incapacidad permanente según tu trabajo. Qué se valora, qué pruebas ayudan y cómo puedes reclamar.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad

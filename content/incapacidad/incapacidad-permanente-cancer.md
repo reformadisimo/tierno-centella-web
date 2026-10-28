@@ -1,6 +1,6 @@
 ---
 titulo: Incapacidad permanente por cáncer: cómo se valora
-descripcion: El cáncer puede dar la incapacidad permanente por la enfermedad o por las secuelas del tratamiento. Qué valora el INSS, qué informes ayudan y qué hacer si la deniega.
+descripcion: El cáncer puede dar la incapacidad permanente por la enfermedad o por las secuelas del tratamiento. Qué se valora, qué informes ayudan y cómo reclamar.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad

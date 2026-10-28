@@ -1,6 +1,6 @@
 ---
 titulo: Incapacidad permanente por fibromialgia: cómo se valora
-descripcion: La fibromialgia puede dar una incapacidad permanente si limita de forma grave tu trabajo. Qué valora el INSS, qué informes ayudan y qué hacer si te la deniegan.
+descripcion: La fibromialgia puede dar una incapacidad permanente si limita de forma grave tu trabajo. Qué valora el INSS, qué informes ayudan y qué hacer si la deniega.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad

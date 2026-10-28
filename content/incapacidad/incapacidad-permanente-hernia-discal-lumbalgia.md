@@ -1,6 +1,6 @@
 ---
 titulo: Incapacidad permanente por hernia discal o lumbalgia
-descripcion: Una hernia discal o una lumbalgia crónica pueden dar la incapacidad permanente según cómo limiten tu trabajo. Qué se valora, qué pruebas ayudan y cómo reclamar.
+descripcion: Una hernia discal o una lumbalgia crónica pueden dar la incapacidad permanente si limitan tu trabajo. Qué se valora, qué pruebas ayudan y cómo reclamar.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad
