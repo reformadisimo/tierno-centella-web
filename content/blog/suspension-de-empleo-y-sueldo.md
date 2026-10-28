@@ -1,6 +1,6 @@
 ---
 titulo: Suspensión de empleo y sueldo: qué es, cuántos días y cómo impugnarla
-descripcion: Qué significa una suspensión de empleo y sueldo, qué límites marca tu convenio, cómo debe comunicártela la empresa y cómo impugnarla en 20 días hábiles.
+descripcion: Qué es la suspensión de empleo y sueldo, qué límites marca tu convenio, cómo debe comunicártela la empresa y cómo impugnarla en 20 días hábiles.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: despido

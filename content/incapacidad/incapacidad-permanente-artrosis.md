@@ -1,6 +1,6 @@
 ---
 titulo: Incapacidad permanente por artrosis: rodilla, cadera y manos
-descripcion: La artrosis puede dar una incapacidad permanente si te impide las tareas de tu profesión. Qué se valora, qué grado se discute según el trabajo y cómo reclamar.
+descripcion: La artrosis puede dar una incapacidad permanente si te impide las tareas de tu profesión. Qué se valora, qué grado se discute y cómo reclamar.
 fecha: 2026-10-28
 actualizado: 2026-10-28
 categoria: incapacidad
