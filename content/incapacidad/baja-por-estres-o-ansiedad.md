@@ -56,6 +56,8 @@ Si el INSS dice que es común y no estás de acuerdo, puedes presentar reclamaci
 
 ## Si el problema es el trabajo o el acoso
 
+Si crees que es acoso, tienes una guía específica sobre [la baja por ansiedad por acoso](/acoso-laboral/baja-por-ansiedad-por-acoso).
+
 La baja te da tiempo para recuperarte, pero no resuelve la causa. Mientras estás de baja, puedes ir preparando lo que necesitarás:
 
 - **Guarda las pruebas**: correos, mensajes, cuadrantes, cambios de funciones, nombres de testigos. Anota fechas y hechos.

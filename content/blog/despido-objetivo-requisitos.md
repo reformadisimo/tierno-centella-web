@@ -80,6 +80,8 @@ Un caso que se ve a menudo: el despido por ineptitud de alguien con una enfermed
 
 Tienes más información en nuestra página de [despido](/despido) y puedes calcular tu fecha límite en la [herramienta de plazos](/herramientas/plazos). Si quieres que revisemos tu carta, llámanos al 913 24 97 97 o escríbenos desde [contacto](/contacto).
 
+Si la empresa alega números rojos o una reorganización, lo explicamos en [despido por causas económicas](/blog/despido-objetivo-causas-economicas); si alega que ya no puedes hacer tu trabajo, en [despido por ineptitud sobrevenida](/blog/despido-por-ineptitud-sobrevenida).
+
 ## Preguntas frecuentes
 
 ### ¿Cobrar la indemnización del despido objetivo me impide reclamar?

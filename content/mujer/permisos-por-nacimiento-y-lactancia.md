@@ -46,6 +46,8 @@ Hasta que el menor cumpla 8 años puedes pedir hasta **8 semanas** de permiso pa
 
 Mientras disfrutas de estos permisos, y durante los 12 meses siguientes al nacimiento tras tu vuelta, un despido es nulo salvo que la empresa demuestre una causa real y ajena. Lo explicamos en [despido durante el embarazo, la baja por nacimiento o la lactancia](/mujer-y-trabajo/despido-embarazada).
 
+Para el resto de días que te corresponden (boda, hospitalización de un familiar, mudanza), mira [los permisos retribuidos](/mujer-y-trabajo/permisos-retribuidos), y si necesitas parar más tiempo, [las excedencias](/mujer-y-trabajo/excedencias).
+
 ## Preguntas frecuentes
 
 ### ¿Las 19 semanas son también para el padre?

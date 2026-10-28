@@ -141,7 +141,7 @@ const MODELOS: Modelo[] = [
     ],
     aviso: 'Mientras se resuelve, tienes que volver al trabajo al día siguiente del alta, o te arriesgas a un despido por faltas. Si el alta la da la mutua por un accidente de trabajo, el procedimiento es otro. Llámanos antes de enviarla.',
     texto: (x, f) =>
-      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Disconformidad con el alta médica emitida por el INSS\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, manifiesto mi disconformidad con el alta médica emitida el ${v(x['fecha-alta'], 'fecha del alta')}, por los siguientes motivos:\n\n${v(x.motivos, 'motivos e informes')}\n\nPor ello, solicito que se tramite el procedimiento de disconformidad previsto en el artículo 170.2 de la Ley General de la Seguridad Social y que se valore mi situación.\n\nAdjunto los informes médicos que acreditan mi estado.\n\nAtentamente,\n${f.yo}`,
+      `${f.ciudad}, a ${f.fecha}\n\nA la atención de ${f.empresa}\n\nAsunto: Disconformidad con el alta médica emitida por el INSS\n\nYo, ${f.yo}, con DNI ${v(x.dni, 'DNI')}, manifiesto mi disconformidad con el alta médica emitida el ${v(x['fecha-alta'], 'fecha del alta')}, por los siguientes motivos:\n\n${v(x.motivos, 'motivos e informes')}\n\nPor ello, solicito que se tramite el procedimiento de disconformidad previsto en el artículo 170.3 de la Ley General de la Seguridad Social y que se valore mi situación.\n\nAdjunto los informes médicos que acreditan mi estado.\n\nAtentamente,\n${f.yo}`,
   },
   {
     id: 'sancion',

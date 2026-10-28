@@ -95,6 +95,8 @@ Tú también puedes aportar pruebas: mensajes, testigos, nóminas, evaluaciones 
 
 Si quieres que revisemos tu carta de despido, llámanos al 913 24 97 97 o escríbenos desde [el formulario de contacto](/contacto).
 
+Tenemos guías de cada caso: [despido por causas económicas](/blog/despido-objetivo-causas-economicas), [por ineptitud sobrevenida](/blog/despido-por-ineptitud-sobrevenida), [por cierre de empresa](/blog/despido-por-cierre-de-empresa) y [los salarios de tramitación](/blog/salarios-de-tramitacion). Y si lo que te han puesto es una sanción, mira [faltas leves, graves y muy graves](/blog/faltas-leves-graves-muy-graves).
+
 ## Preguntas frecuentes
 
 ### ¿Me pueden despedir sin carta?

@@ -89,6 +89,8 @@ Ocurre más de lo que parece. Un despido de alguien que está de baja no es auto
 
 Tienes 20 días hábiles para impugnar el despido, y agosto cuenta. No esperes a recibir el alta para moverte. Más información en [despido](/despido).
 
+Para todo lo general de la baja (cómo se pide, cuánto se cobra, controles), mira [la baja por estrés o ansiedad](/incapacidad-permanente/baja-por-estres-o-ansiedad).
+
 ## Preguntas frecuentes
 
 ### ¿Mi empresa puede saber por qué estoy de baja?

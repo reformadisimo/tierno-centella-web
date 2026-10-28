@@ -3,7 +3,7 @@ titulo: Irte de la empresa con indemnización - el artículo 50 del Estatuto
 tituloSeo: Artículo 50: irte con indemnización
 descripcion: Cuándo puedes pedir al juez que extinga tu contrato por incumplimientos graves de la empresa y cobrar como en un despido improcedente - impagos, cambios de condiciones que te humillan y acoso.
 fecha: 2026-10-23
-actualizado: 2026-10-23
+actualizado: 2026-10-28
 categoria: despido
 imagen: acuerdo
 imagenAlt: Dos personas se dan la mano tras un acuerdo
@@ -15,7 +15,7 @@ El artículo 50 del Estatuto de los Trabajadores te permite pedir al juez que te
 
 ## Cuándo se puede pedir
 
-- **Te pagan tarde o no te pagan**, de forma continuada.
+- **Te pagan tarde o no te pagan**, de forma continuada: por ejemplo, tres mensualidades sin cobrar en un año o seis meses de retrasos de más de 15 días.
 - **Te cambian las condiciones** (funciones, horario, sueldo) de un modo que perjudica tu formación profesional o tu dignidad.
 - **Cualquier otro incumplimiento grave** de la empresa, como el **acoso laboral** o no protegerte frente a él, o negarse a reincorporarte tras una sentencia.
 
@@ -39,7 +39,7 @@ Este punto es delicado: dejar de ir por tu cuenta sin autorización puede acabar
 
 ### ¿Cuántos retrasos en la nómina hacen falta?
 
-No hay un número exacto. Los jueces valoran si los retrasos son continuados y relevantes, no un retraso puntual.
+Desde abril de 2025 la ley lo concreta (Ley Orgánica 1/2025): hay retraso cuando la empresa paga más de 15 días tarde, y el incumplimiento es grave si te debe tres mensualidades completas en un año o si se retrasa seis meses, aunque no sean seguidos. Si no llegas a esas cifras, el juez puede valorarlo igualmente según tu caso. Lo explicamos en [qué hacer si la empresa no te paga la nómina](/blog/la-empresa-no-me-paga-la-nomina).
 
 ### ¿Puedo pedirlo si estoy de baja?
 

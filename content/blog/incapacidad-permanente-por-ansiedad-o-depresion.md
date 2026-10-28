@@ -71,6 +71,8 @@ Es frecuente que la primera respuesta sea negativa. Tienes 30 días hábiles des
 
 Más información en nuestra página de [incapacidad permanente](/incapacidad-permanente). Si quieres que estudiemos tus informes, llámanos al 913 24 97 97 o escríbenos desde [contacto](/contacto).
 
+Si todavía estás en la baja, te puede servir [la guía sobre la baja por estrés o ansiedad](/incapacidad-permanente/baja-por-estres-o-ansiedad).
+
 ## Preguntas frecuentes
 
 ### ¿Cuántos años de tratamiento hacen falta?

@@ -79,6 +79,8 @@ Si tu enfermedad se debe a un acoso en el trabajo, o es una depresión o ansieda
 
 Si quieres que revisemos tu resolución y tus informes, llámanos al 913 24 97 97 o escríbenos desde [contacto](/contacto). Cuanto antes nos llames, más margen tendremos para preparar la reclamación.
 
+Antes de la resolución está el tribunal médico: te contamos [cómo prepararlo](/incapacidad-permanente/tribunal-medico-evi). Y tienes el resto de dudas en [las 50 preguntas frecuentes](/incapacidad-permanente/preguntas-frecuentes-incapacidad-permanente).
+
 ## Preguntas frecuentes
 
 ### ¿Puedo ir directamente al juzgado sin reclamar al INSS?

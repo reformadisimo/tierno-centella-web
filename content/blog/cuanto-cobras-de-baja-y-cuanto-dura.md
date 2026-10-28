@@ -38,6 +38,8 @@ Si al terminar la baja no puedes volver a tu trabajo, mira [los grados de incapa
 
 Pueden despedirte, pero si el motivo real es tu enfermedad, el despido puede ser nulo desde la Ley 15/2022. Lo explicamos en [despido durante la baja médica](/blog/despido-durante-la-baja-medica).
 
+Lo explicamos con más detalle en [la baja por enfermedad común](/incapacidad-permanente/baja-por-enfermedad-comun), y si te dan el alta antes de estar bien, en [cómo recurrir el alta médica](/incapacidad-permanente/recurrir-alta-medica).
+
 ## Preguntas frecuentes
 
 ### ¿Se cobra el 100 % estando de baja por enfermedad común?
