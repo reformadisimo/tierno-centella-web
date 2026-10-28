@@ -9,6 +9,7 @@ import { Compartir } from './BotonesAccion';
 import { Escuchar } from './Utiles';
 import { BASE, ID_DESPACHO, ID_JESUS, esquemaFaq, esquemaMigas } from '@/lib/seo';
 import { fotosParaTexto, temaDe } from '@/lib/fotos-texto';
+import { darVida } from '@/lib/vida';
 
 const escapar = (t: string) => t.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
@@ -104,7 +105,7 @@ export default function PaginaGuia({
       ? 'Jesús Tierno and his team have been defending workers for more than 25 years. Tell us what is happening and we will tell you which deadlines apply.'
       : 'Jesús Tierno y su equipo llevan más de 25 años defendiendo a trabajadoras y trabajadores. Cuéntanos qué te pasa y te decimos qué plazos corren.'
   }</p><div class="prosa-jesus-botones"><a class="boton" href="${escapar(wa)}">${en ? 'Write on WhatsApp' : 'Escribir por WhatsApp'}</a><a class="boton boton-claro" href="${DESPACHO.telefonoHref}">${DESPACHO.telefono}</a></div></div></div>`;
-  const htmlConFotos = conImagenes(pieza.html, fotosParaTexto(temaDe(ruta, pieza.categoria), pieza.slug, foto.src + (video ? '' : '')), en, tarjeta);
+  const htmlConFotos = conImagenes(darVida(pieza.html), fotosParaTexto(temaDe(ruta, pieza.categoria), pieza.slug, foto.src + (video ? '' : '')), en, tarjeta);
   const datos = {
     '@context': 'https://schema.org',
     '@type': 'Article',

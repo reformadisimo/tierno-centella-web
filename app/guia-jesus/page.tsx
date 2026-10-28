@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import { videoDeFoto } from '@/lib/video-foto';
 import path from 'node:path';
 import { marked } from 'marked';
+import { darVida } from '@/lib/vida';
+import { Bocadillo } from '@/components/Vida';
 import BotonPdfPortada from '@/components/BotonPdfPortada';
 import GuiaJesus, { type SeccionGuia } from '@/components/GuiaJesus';
 
@@ -158,11 +160,11 @@ function secciones(): SeccionGuia[] {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
-      const html = enlazarGuia(
+      const html = darVida(enlazarGuia(
         (marked.parse(cuerpo, { async: false }) as string).replace(/<a href="(http|\/)/g, '<a target="_blank" rel="noopener" href="$1'),
         claves,
         id,
-      );
+      ));
       const clave = titulo.match(/^(\d+(?: bis| ter)?)\./)?.[1] ?? 'inicio';
       const extra = EXTRA[clave] ?? { foto: 'biblioteca', frase: '', grupo: 'seguir' };
       return {
@@ -200,6 +202,7 @@ export default function Pagina() {
             Hoy te encuentran en Google <strong>239 personas al mes</strong>. A García de la Santa, <strong>9.164</strong>. Te contamos por qué, lo
             que ya hemos hecho y todo lo que podemos mejorar juntos.
           </p>
+          <Bocadillo claro>Cada apartado empieza con una foto y una frase. Si quieres más, pulsa «Ver el detalle».</Bocadillo>
           <p>Para Jesús Tierno Centella, con cariño. Octubre de 2026.</p>
           <div className="gj-portada-botones">
             <a className="boton boton-marcador" href="#indice">
@@ -215,7 +218,7 @@ export default function Pagina() {
               <strong>94</strong> de velocidad en móvil (antes 49)
             </li>
             <li>
-              <strong>14</strong> herramientas para tus clientes
+              <strong>21</strong> herramientas para tus clientes
             </li>
             <li>
               <strong>3</strong> páginas nuevas para tus anuncios

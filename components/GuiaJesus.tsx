@@ -1,5 +1,6 @@
 'use client';
 
+import { ChipVivo } from './Vida';
 import FotoVideo from './FotoVideo';
 import ProgresoGuia from './ProgresoGuia';
 import { DOLORES } from '@/lib/guia-dolores';
@@ -914,10 +915,13 @@ export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: 
             </div>
           </section>
         )}
-        {visibles.map((s) => (
+        {visibles.map((s, n) => (
           <section key={s.id} id={s.id} className={`gj-seccion gj-g-${s.claveGrupo}`}>
             <span className="gj-etiqueta">{s.grupo}</span>
-            <h2>{s.titulo}</h2>
+            <h2 className="tv">
+              <ChipVivo texto={s.titulo.replace(/^[\d\s]+(bis|ter)?\.\s*/, '')} i={n} />
+              <span className="tv-texto">{s.titulo}</span>
+            </h2>
             <figure className="gj-banner">
               {s.video ? (
                 <FotoVideo foto={s.foto} alt="" video={s.video} sizes="(max-width: 900px) 100vw, 760px" />

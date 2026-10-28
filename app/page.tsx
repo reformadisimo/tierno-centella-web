@@ -1,4 +1,5 @@
 import { HERRAMIENTAS } from '@/lib/herramientas';
+import { Bocadillo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import FotoVideo from '@/components/FotoVideo';
 import { videoDeFoto } from '@/lib/video-foto';
@@ -76,6 +77,7 @@ export default function Inicio() {
           <Etiqueta icono="corazon">Empieza por aquí</Etiqueta>
           <h2>¿Qué te está pasando?</h2>
           <p className="intro-seccion">Elige tu situación y te decimos, sin dejar datos, cuál es tu siguiente paso.</p>
+          <Bocadillo>En laboral los plazos son cortos: cuanto antes lo mires, más opciones tienes.</Bocadillo>
           <nav className="pasando-chips" aria-label="Elige tu situación">
             <a href="#pt-despido" className="pc-despido"><Icono nombre="caja" tam={16} /> Despido</a>
             <a href="#pt-acoso" className="pc-acoso"><Icono nombre="personas" tam={16} /> Acoso</a>
