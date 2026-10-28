@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import LineaIncapacidad from '@/components/LineaIncapacidad';
 import { Etiqueta } from '@/components/Etiqueta';
@@ -84,7 +85,7 @@ export default function Incapacidad() {
 
           <LineaIncapacidad />
 
-          <h2>Los cuatro grados y lo que se cobra</h2>
+          <h2 className="tv"><ChipVivo texto="Los cuatro grados y lo que se cobra" i={0} /><span className="tv-texto">Los cuatro grados y lo que se cobra</span></h2>
           <table className="tabla tabla-fichas">
             <thead>
               <tr>
@@ -124,7 +125,7 @@ export default function Incapacidad() {
               <img src="/img/incapacidad-640.webp" srcSet="/img/incapacidad-640.webp 640w, /img/incapacidad.webp 1600w" sizes="(max-width: 1000px) 100vw, 720px" alt="Un trabajador en silla de ruedas en su puesto de trabajo" width={1200} height={800} loading="lazy" decoding="async" />
             )}
           </figure>
-          <h2>Cómo trabajamos un caso de incapacidad</h2>
+          <h2 className="tv"><ChipVivo texto="Cómo trabajamos un caso de incapacidad" i={1} /><span className="tv-texto">Cómo trabajamos un caso de incapacidad</span></h2>
           <ol className="pasos-numerados">
             <li>Estudiamos la resolución del INSS y tus informes médicos.</li>
             <li>Te decimos qué grado es realista pedir y qué informes faltan.</li>
@@ -137,7 +138,7 @@ export default function Incapacidad() {
       </section>
       <section className="seccion seccion-blanca">
         <div className="contenedor">
-          <h2>Guías para tu caso</h2>
+          <h2 className="tv"><ChipVivo texto="Guías para tu caso" i={2} /><span className="tv-texto">Guías para tu caso</span></h2>
           <div className="rejilla-guias con-icono">
             {leerColeccion('incapacidad').map((g) => (
               <Link key={g.slug} href={`/incapacidad-permanente/${g.slug}`}>

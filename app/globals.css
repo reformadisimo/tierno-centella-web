@@ -8582,3 +8582,4 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
 .rejilla-guias.con-icono a{background:#fff;border-color:var(--linea,#e3e8ee)}
 .rejilla-guias.con-icono a:hover{border-color:#c9d7e4;box-shadow:0 14px 28px rgba(13,44,72,.12)}
 .rejilla-guias span,.tarjetas-foto a span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:360px){.precios-cita{grid-template-columns:minmax(0,1fr)}.precios-cita li{grid-template-columns:36px minmax(0,1fr) auto;gap:8px;padding:10px}}

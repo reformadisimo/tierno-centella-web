@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FotoCabeza from '@/components/FotoCabeza';
@@ -43,7 +44,7 @@ export default function PrimeraConsulta() {
 
       <section className="seccion">
         <div className="contenedor prosa">
-          <h2>Cómo es, minuto a minuto</h2>
+          <h2 className="tv"><ChipVivo texto="Cómo es, minuto a minuto" i={0} /><span className="tv-texto">Cómo es, minuto a minuto</span></h2>
           <ol className="pc-pasos">
             {PASOS.map((p, n) => (
               <li key={p.t}>
@@ -57,7 +58,7 @@ export default function PrimeraConsulta() {
             ))}
           </ol>
 
-          <h2>Cuánto cuesta</h2>
+          <h2 className="tv"><ChipVivo texto="Cuánto cuesta" i={1} /><span className="tv-texto">Cuánto cuesta</span></h2>
           <div className="pc-precios">
             <div className="pc-precio">
               <span className="pc-euro" aria-hidden="true">€</span>
@@ -74,14 +75,14 @@ export default function PrimeraConsulta() {
           </div>
           <p>Antes de reservar te decimos si tu caso la necesita, y si seguís adelante, te explicamos cómo se trabaja y cuánto costaría.</p>
 
-          <h2>Si después decides seguir</h2>
+          <h2 className="tv"><ChipVivo texto="Si después decides seguir" i={2} /><span className="tv-texto">Si después decides seguir</span></h2>
           <ul className="pc-despues">
             <li><strong>Antes de empezar, todo por escrito:</strong> qué vamos a hacer, cómo se calculan los honorarios y qué opciones tienes. Sin letra pequeña.</li>
             <li><strong>Nada empieza sin tu firma.</strong> Si prefieres pensártelo o buscar otra opinión, también está bien.</li>
             <li><strong>Sabrás en qué punto está tu caso</strong> sin tener que preguntar, y con quién hablar en cada momento.</li>
           </ul>
 
-          <h2>Lo que NO tienes que hacer</h2>
+          <h2 className="tv"><ChipVivo texto="Lo que NO tienes que hacer" i={3} /><span className="tv-texto">Lo que NO tienes que hacer</span></h2>
           <ul className="pc-no">
             <li><strong>No tienes que traerlo todo ordenado.</strong> Con lo que tengas, empezamos.</li>
             <li><strong>No tienes que saber derecho</strong> ni usar palabras técnicas.</li>
@@ -89,7 +90,7 @@ export default function PrimeraConsulta() {
             <li><strong>No tienes que firmar nada como conforme</strong> (carta, finiquito, acuerdo) antes de hablar con un abogado.</li>
           </ul>
 
-          <h2>Si vienes acompañando a otra persona</h2>
+          <h2 className="tv"><ChipVivo texto="Si vienes acompañando a otra persona" i={4} /><span className="tv-texto">Si vienes acompañando a otra persona</span></h2>
           <p>
             Puedes venir con ella o con él, o conectarte a la videollamada. Si la persona está pasando un mal momento, ayuda mucho que alguien de confianza tome notas. Más en{' '}
             <Link href="/blog/acompanas-a-alguien-que-ha-sido-despedido">cómo acompañar a quien ha sido despedido</Link>.

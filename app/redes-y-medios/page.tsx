@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -46,7 +47,7 @@ export default function RedesYMedios() {
 
       <section className="seccion">
         <div className="contenedor">
-          <h2>Un minuto para entender tus derechos</h2>
+          <h2 className="tv"><ChipVivo texto="Un minuto para entender tus derechos" i={0} /><span className="tv-texto">Un minuto para entender tus derechos</span></h2>
           <p>Los vídeos más vistos del Instagram del despacho. Pulsa en cualquiera para verlo aquí mismo.</p>
           <div className="rejilla-reels">
             {REELS.map((r) => (
@@ -59,7 +60,7 @@ export default function RedesYMedios() {
       <section className="seccion seccion-arena">
         <div className="contenedor dos-columnas">
           <div>
-            <h2>En los medios y en las aulas</h2>
+            <h2 className="tv"><ChipVivo texto="En los medios y en las aulas" i={1} /><span className="tv-texto">En los medios y en las aulas</span></h2>
             <ul className="lista-medios">
               {MEDIOS.map((m) => (
                 <li key={m.titulo}>
@@ -81,7 +82,7 @@ export default function RedesYMedios() {
 
       <section className="seccion">
         <div className="contenedor">
-          <h2>Dónde encontrarnos</h2>
+          <h2 className="tv"><ChipVivo texto="Dónde encontrarnos" i={2} /><span className="tv-texto">Dónde encontrarnos</span></h2>
           <div className="redes-grandes">
             <a href={REDES.instagram} target="_blank" rel="noopener">
               <strong>Instagram</strong>

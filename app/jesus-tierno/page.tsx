@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
@@ -54,7 +55,7 @@ export default function Jesus() {
             <p>
               El despacho colabora con el Prácticum del Grado en Derecho de la Universidad Carlos III de Madrid, formando a futuros abogados.
             </p>
-            <h2>Un libro sobre el trabajo digno</h2>
+            <h2 className="tv"><ChipVivo texto="Un libro sobre el trabajo digno" i={0} /><span className="tv-texto">Un libro sobre el trabajo digno</span></h2>
             <p>
               Es coautor, con el psicólogo Bernabé Tierno, de <em>Valores en el trabajo: estrategias para afrontar y superar los nuevos retos
               laborales</em> (La Esfera de los Libros, 2002), sobre cómo el trabajo puede enriquecer a quien lo hace en lugar de destruirle.
@@ -76,7 +77,7 @@ export default function Jesus() {
 
       <section className="seccion seccion-blanca">
         <div className="contenedor">
-          <h2>Jesús Tierno e Iñaki Piñuel hablan de acoso laboral</h2>
+          <h2 className="tv"><ChipVivo texto="Jesús Tierno e Iñaki Piñuel hablan de acoso laboral" i={1} /><span className="tv-texto">Jesús Tierno e Iñaki Piñuel hablan de acoso laboral</span></h2>
           <p>Dos conversaciones con uno de los psicólogos que más ha estudiado el mobbing en España.</p>
           <div className="rejilla-videos">
             <VideoYoutube id="TwKRGi1LISY" titulo="Si te acosan en tu trabajo: Iñaki Piñuel entrevista a Jesús Tierno (2022)" />

@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import LineaAcoso from '@/components/LineaAcoso';
 import { Etiqueta } from '@/components/Etiqueta';
@@ -63,7 +64,7 @@ export default function Acoso() {
 
       <section className="seccion">
         <div className="contenedor">
-          <h2>Tres sentencias que marcaron el camino</h2>
+          <h2 className="tv"><ChipVivo texto="Tres sentencias que marcaron el camino" i={0} /><span className="tv-texto">Tres sentencias que marcaron el camino</span></h2>
           <ul className="hitos">
             {casosAcoso.map((c) => (
               <li key={c.slug}>
@@ -95,7 +96,7 @@ export default function Acoso() {
 
       <section className="seccion seccion-blanca">
         <div className="contenedor">
-          <h2>Todo lo que necesitas saber</h2>
+          <h2 className="tv"><ChipVivo texto="Todo lo que necesitas saber" i={1} /><span className="tv-texto">Todo lo que necesitas saber</span></h2>
           <p>Guías escritas para quien lo está viviendo, con la experiencia de más de 25 años del despacho.</p>
           <div className="rejilla-guias con-icono">
             {guias.map((g) => (
@@ -112,7 +113,7 @@ export default function Acoso() {
       <section className="seccion">
         <div className="contenedor dos-columnas">
           <div>
-            <h2>Lo que hacemos cuando nos llamas</h2>
+            <h2 className="tv"><ChipVivo texto="Lo que hacemos cuando nos llamas" i={2} /><span className="tv-texto">Lo que hacemos cuando nos llamas</span></h2>
             <ol className="pasos-numerados">
               <li>Te escuchamos y vemos si lo que vives es acoso o un conflicto de otro tipo. Las dos cosas tienen salida, pero distinta.</li>
               <li>Te decimos qué pruebas conviene reunir desde hoy y cómo hacerlo sin ponerte en riesgo.</li>
@@ -130,7 +131,7 @@ export default function Acoso() {
       <section className="seccion seccion-blanca">
         <div className="contenedor dos-columnas">
           <div>
-            <h2>¿Trabajas en la Administración o en un centro educativo?</h2>
+            <h2 className="tv"><ChipVivo texto="¿Trabajas en la Administración o en un centro educativo?" i={3} /><span className="tv-texto">¿Trabajas en la Administración o en un centro educativo?</span></h2>
             <p>
               El acoso en la función pública se reclama por otra vía y con otros plazos. En 2011 defendimos ante el Tribunal Superior de Justicia de
               Castilla y León a una profesora acosada frente a la Consejería de Educación, y conocemos bien cómo responden las
@@ -139,7 +140,7 @@ export default function Acoso() {
             <Link href="/acoso-laboral/acoso-en-la-administracion-publica-y-educacion">Acoso en la Administración y la educación</Link>
           </div>
           <div>
-            <h2>¿Eres una empresa o un colegio?</h2>
+            <h2 className="tv"><ChipVivo texto="¿Eres una empresa o un colegio?" i={4} /><span className="tv-texto">¿Eres una empresa o un colegio?</span></h2>
             <p>
               Diseñamos protocolos de acoso, investigamos denuncias internas con imparcialidad y formamos a los equipos directivos para
               prevenir antes de que haya víctimas.

@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FotoCabeza from '@/components/FotoCabeza';
@@ -65,7 +66,7 @@ export default function Recursos() {
           ))}
 
           <div id="como-buscar-cendoj" className="recursos-grupo">
-            <h2>Cómo buscar una sentencia en el CENDOJ</h2>
+            <h2 className="tv"><ChipVivo texto="Cómo buscar una sentencia en el CENDOJ" i={0} /><span className="tv-texto">Cómo buscar una sentencia en el CENDOJ</span></h2>
             <ol className="pasos-numerados">
               <li>Entra en el buscador de jurisprudencia y elige la jurisdicción <b>Social</b>.</li>
               <li>Escribe una o dos palabras clave: &quot;acoso laboral&quot;, &quot;despido nulo&quot; o &quot;incapacidad permanente&quot;.</li>
@@ -79,7 +80,7 @@ export default function Recursos() {
           </div>
 
           <div className="recursos-grupo" id="telefonos">
-            <h2>Teléfonos que conviene tener a mano</h2>
+            <h2 className="tv"><ChipVivo texto="Teléfonos que conviene tener a mano" i={1} /><span className="tv-texto">Teléfonos que conviene tener a mano</span></h2>
             <ul className="recursos-lista recursos-telefonos">
               {TELEFONOS_AYUDA.map((t) => (
                 <li key={t.numero} className="recurso-tarjeta">

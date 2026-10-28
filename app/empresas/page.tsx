@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
@@ -66,7 +67,7 @@ export default function Empresas() {
       </header>
       <section className="seccion">
         <div className="contenedor">
-          <h2>Qué hacemos por tu organización</h2>
+          <h2 className="tv"><ChipVivo texto="Qué hacemos por tu organización" i={0} /><span className="tv-texto">Qué hacemos por tu organización</span></h2>
           <ul className="hitos">
             {SERVICIOS.map((s) => (
               <li key={s.t}>
@@ -80,7 +81,7 @@ export default function Empresas() {
       <section className="seccion seccion-blanca">
         <div className="contenedor dos-columnas">
           <div>
-            <h2>Colegios, universidades y tercer sector</h2>
+            <h2 className="tv"><ChipVivo texto="Colegios, universidades y tercer sector" i={1} /><span className="tv-texto">Colegios, universidades y tercer sector</span></h2>
             <p>
               Hemos defendido a docentes frente a la propia administración educativa y sabemos cómo se vive el conflicto en un claustro.
               Ayudamos a centros concertados, privados y entidades sin ánimo de lucro a tener protocolos que funcionen de verdad.

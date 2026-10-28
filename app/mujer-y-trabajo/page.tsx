@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
@@ -49,7 +50,7 @@ export default function MujerYTrabajo() {
 
       <section className="seccion">
         <div className="contenedor">
-          <h2>Las guías</h2>
+          <h2 className="tv"><ChipVivo texto="Las guías" i={0} /><span className="tv-texto">Las guías</span></h2>
           <div className="tarjetas-foto tf-lista">
             {guias.map((g) => {
               const f = fotoDePieza(g);
@@ -78,7 +79,7 @@ export default function MujerYTrabajo() {
         <div className="contenedor bloque-foto">
           <img src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Jesús Tierno con el equipo del despacho" loading="lazy" />
           <div>
-            <h2>Cinco cosas que conviene saber hoy</h2>
+            <h2 className="tv"><ChipVivo texto="Cinco cosas que conviene saber hoy" i={1} /><span className="tv-texto">Cinco cosas que conviene saber hoy</span></h2>
             <ol className="pasos-numerados">
               <li>
                 Si te despiden embarazada, el despido es nulo salvo causa real y ajena, <strong>aunque la empresa no supiera</strong> que lo estabas.

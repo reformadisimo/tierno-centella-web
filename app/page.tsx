@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import { HERRAMIENTAS } from '@/lib/herramientas';
 import { Bocadillo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
@@ -75,7 +76,7 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor">
           <Etiqueta icono="corazon">Empieza por aquí</Etiqueta>
-          <h2>¿Qué te está pasando?</h2>
+          <h2 className="tv"><ChipVivo texto="¿Qué te está pasando?" i={0} /><span className="tv-texto">¿Qué te está pasando?</span></h2>
           <p className="intro-seccion">Elige tu situación y te decimos, sin dejar datos, cuál es tu siguiente paso.</p>
           <Bocadillo>En laboral los plazos son cortos: cuanto antes lo mires, más opciones tienes.</Bocadillo>
           <nav className="pasando-chips" aria-label="Elige tu situación">
@@ -171,7 +172,7 @@ export default function Inicio() {
       <section className="seccion seccion-blanca">
         <div className="contenedor">
           <Etiqueta icono="balanza">Sentencias</Etiqueta>
-          <h2>Casos que han abierto camino</h2>
+          <h2 className="tv"><ChipVivo texto="Casos que han abierto camino" i={1} /><span className="tv-texto">Casos que han abierto camino</span></h2>
           <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <ul className="hitos">
             {hitos.map((c) => (
@@ -200,7 +201,7 @@ export default function Inicio() {
           </div>
           <div>
             <Etiqueta icono="personas">El despacho</Etiqueta>
-            <h2>Te atiende un equipo especialista, no una centralita</h2>
+            <h2 className="tv"><ChipVivo texto="Te atiende un equipo especialista, no una centralita" i={2} /><span className="tv-texto">Te atiende un equipo especialista, no una centralita</span></h2>
             <p>
               Jesús Tierno dirige el despacho y lleva personalmente los casos más complejos. Es coautor, con el psicólogo Bernabé Tierno, de{' '}
               <em>Valores en el trabajo</em>, y ha conversado en dos entrevistas con Iñaki Piñuel, uno de los mayores expertos en mobbing.
@@ -248,7 +249,7 @@ export default function Inicio() {
       <section className="seccion seccion-cielo">
         <div className="contenedor">
           <Etiqueta icono="corazon">El equipo</Etiqueta>
-          <h2>Las personas que van a llevar tu caso</h2>
+          <h2 className="tv"><ChipVivo texto="Las personas que van a llevar tu caso" i={3} /><span className="tv-texto">Las personas que van a llevar tu caso</span></h2>
           <p className="intro-seccion">En la calle Jorge Juan, en el barrio de Salamanca. Un equipo de abogadas y abogados que conoce cada caso por su nombre y te cuenta en qué punto está sin que tengas que preguntar.</p>
           <div className="equipo">
             <figure className="equipo-grupo">
@@ -295,7 +296,7 @@ export default function Inicio() {
       <section className="seccion">
         <div className="contenedor">
           <Etiqueta icono="calculadora">Herramientas</Etiqueta>
-          <h2>Resuelve tus dudas ahora, sin dejar tu teléfono</h2>
+          <h2 className="tv"><ChipVivo texto="Resuelve tus dudas ahora, sin dejar tu teléfono" i={4} /><span className="tv-texto">Resuelve tus dudas ahora, sin dejar tu teléfono</span></h2>
           <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <ul className="herr-tarjetas">
             <li className="ht-c0">
@@ -372,7 +373,7 @@ export default function Inicio() {
       <section className="seccion seccion-arena">
         <div className="contenedor">
           <Etiqueta icono="video">Vídeos</Etiqueta>
-          <h2>Un minuto para entender tus derechos</h2>
+          <h2 className="tv"><ChipVivo texto="Un minuto para entender tus derechos" i={5} /><span className="tv-texto">Un minuto para entender tus derechos</span></h2>
           <p>Jesús Tierno y el equipo resuelven en Instagram las dudas que más llegan al despacho.</p>
           <div className="rejilla-reels">
             {REELS.slice(0, 4).map((r) => (
@@ -389,7 +390,7 @@ export default function Inicio() {
         <section className="seccion">
           <div className="contenedor">
             <Etiqueta icono="documento">Blog</Etiqueta>
-            <h2>Para leer con calma: lo último del blog</h2>
+            <h2 className="tv"><ChipVivo texto="Para leer con calma: lo último del blog" i={6} /><span className="tv-texto">Para leer con calma: lo último del blog</span></h2>
             <p className="desliza-pista" aria-hidden="true">Desliza para ver más &rarr;</p>
           <div className="tarjetas-foto">
               {ultimos.map((p) => {
@@ -417,7 +418,7 @@ export default function Inicio() {
         <div className="contenedor">
           <div className="llamada-banda" style={{ alignItems: 'flex-start' }}>
             <div className="llamada-texto">
-              <h2>¿Diriges una empresa o un colegio?</h2>
+              <h2 className="tv"><ChipVivo texto="¿Diriges una empresa o un colegio?" i={7} /><span className="tv-texto">¿Diriges una empresa o un colegio?</span></h2>
               <p>Un acoso mal gestionado cuesta mucho: personas, ambiente y dinero. En unos minutos puedes ver si tu protocolo, tu canal de denuncias y tu plan de igualdad están al día.</p>
               <div className="acciones">
                 <Link className="boton boton-marcador" href="/herramientas/autodiagnostico-acoso-empresas">Hacer el autodiagnóstico</Link>
@@ -432,7 +433,7 @@ export default function Inicio() {
         <div className="contenedor dos-columnas">
           <div>
             <Etiqueta icono="pin">Contacto</Etiqueta>
-            <h2>En Jorge Juan, en el centro de Madrid</h2>
+            <h2 className="tv"><ChipVivo texto="En Jorge Juan, en el centro de Madrid" i={8} /><span className="tv-texto">En Jorge Juan, en el centro de Madrid</span></h2>
             <p>
               Consulta de una hora con documentos, presencial o por videollamada: {DESPACHO.precioCita} €{DESPACHO.iva} con un abogado del despacho o{' '}
               {DESPACHO.precioCitaJesus} €{DESPACHO.iva} con Jesús Tierno. Antes de reservar te decimos por teléfono o WhatsApp si tu caso la necesita.

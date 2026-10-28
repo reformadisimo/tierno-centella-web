@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
@@ -111,7 +112,7 @@ export default function Sentencias() {
       </section>
       <section className="seccion seccion-blanca">
         <div className="contenedor">
-          <h2>Jurisprudencia que conviene conocer</h2>
+          <h2 className="tv"><ChipVivo texto="Jurisprudencia que conviene conocer" i={0} /><span className="tv-texto">Jurisprudencia que conviene conocer</span></h2>
           <p>Sentencias de otros tribunales que explican bien cómo funciona la ley. No son casos del despacho.</p>
           <div className="rejilla-guias">
             {JURISPRUDENCIA.map((j) => (

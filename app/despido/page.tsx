@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import EsquemaPagina from '@/components/EsquemaPagina';
 import LineaDespido from '@/components/LineaDespido';
 import FotoVideo from '@/components/FotoVideo';
@@ -59,7 +60,7 @@ export default function Despido() {
 
           <LineaDespido />
 
-          <h2>Los dos tipos de despido</h2>
+          <h2 className="tv"><ChipVivo texto="Los dos tipos de despido" i={0} /><span className="tv-texto">Los dos tipos de despido</span></h2>
           <h3>Despido objetivo</h3>
           <p>
             Se basa en causas económicas, técnicas, organizativas o de producción. Para que sea válido, la empresa tiene que cumplir
@@ -86,7 +87,7 @@ export default function Despido() {
               <img src="/img/firma-contrato-640.webp" srcSet="/img/firma-contrato-640.webp 640w, /img/firma-contrato.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona firma un documento" width={1200} height={800} loading="lazy" decoding="async" />
             )}
           </figure>
-          <h2>Qué puede decidir el juez</h2>
+          <h2 className="tv"><ChipVivo texto="Qué puede decidir el juez" i={1} /><span className="tv-texto">Qué puede decidir el juez</span></h2>
           <table className="tabla">
             <thead>
               <tr>
@@ -123,7 +124,7 @@ export default function Despido() {
               <img src="/img/despido-caja-640.webp" srcSet="/img/despido-caja-640.webp 640w, /img/despido-caja.webp 1200w" sizes="(max-width: 1000px) 100vw, 720px" alt="Una persona recoge sus cosas en una caja tras un despido" width={1200} height={800} loading="lazy" decoding="async" />
             )}
           </figure>
-          <h2>Cuándo un despido puede ser nulo</h2>
+          <h2 className="tv"><ChipVivo texto="Cuándo un despido puede ser nulo" i={2} /><span className="tv-texto">Cuándo un despido puede ser nulo</span></h2>
           <p>La ley protege especialmente a quien estaba en alguna de estas situaciones al ser despedido:</p>
           <ul>
             <li>Embarazo, o haber tenido un hijo en los 12 meses anteriores.</li>
@@ -133,7 +134,7 @@ export default function Despido() {
             <li>Sufrir acoso o discriminación antes del despido.</li>
           </ul>
 
-          <h2>Qué hacer hoy</h2>
+          <h2 className="tv"><ChipVivo texto="Qué hacer hoy" i={3} /><span className="tv-texto">Qué hacer hoy</span></h2>
           <ol className="pasos-numerados">
             <li>Firma la carta como “recibido, no conforme”. Firmar no significa aceptar el despido.</li>
             <li>Guarda la carta, tus últimas nóminas y el contrato.</li>
@@ -146,7 +147,7 @@ export default function Despido() {
       </section>
       <section className="seccion seccion-blanca">
         <div className="contenedor">
-          <h2>Guías para tu caso</h2>
+          <h2 className="tv"><ChipVivo texto="Guías para tu caso" i={4} /><span className="tv-texto">Guías para tu caso</span></h2>
           <div className="rejilla-guias con-icono">
             {leerColeccion('despido').map((g) => (
               <Link key={g.slug} href={`/despido/${g.slug}`}>
@@ -166,7 +167,7 @@ export default function Despido() {
               ))}
           </div>
           <div style={{ marginTop: 40 }}>
-            <h2>Un caso del despacho en vídeo</h2>
+            <h2 className="tv"><ChipVivo texto="Un caso del despacho en vídeo" i={5} /><span className="tv-texto">Un caso del despacho en vídeo</span></h2>
             <VideoYoutube id="IoBEF41_SCI" titulo="Sentencia ganada: la prueba del GPS en un despido" />
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { ChipVivo } from '@/components/Vida';
 import Icono from '@/components/Iconos';
 import { Etiqueta } from '@/components/Etiqueta';
 import type { Metadata } from 'next';
@@ -115,7 +116,7 @@ export default function Contacto() {
         <div className="contenedor dos-columnas">
           <div>
             <Etiqueta icono="pin" tono="oro">Dónde estamos</Etiqueta>
-            <h2>En Jorge Juan, en el barrio de Salamanca</h2>
+            <h2 className="tv"><ChipVivo texto="En Jorge Juan, en el barrio de Salamanca" i={0} /><span className="tv-texto">En Jorge Juan, en el barrio de Salamanca</span></h2>
             <ul className="donde-lista">
               <li><Icono nombre="pin" tam={18} /><span>{DESPACHO.direccion}, {DESPACHO.ciudad}</span></li>
               <li><Icono nombre="telefono" tam={18} /><a href={DESPACHO.telefonoHref}>{DESPACHO.telefono}</a></li>
