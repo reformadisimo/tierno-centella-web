@@ -359,6 +359,7 @@ body {
 }
 
 input[type='date'],
+input[type='month'],
 input[type='number'],
 input[type='text'],
 input[type='tel'],
@@ -7328,7 +7329,7 @@ body{padding-bottom:58px}
 /* Calculadoras y demás herramientas: tarjeta más viva, campos y resultados con cuerpo */
 .herramienta:not(.cq):not(.fl){border-radius:24px;border-color:#dbe6f0;box-shadow:0 14px 36px rgba(13,44,72,.08);background:linear-gradient(180deg,#fff 60%,#f3f8fc)}
 .herramienta:not(.cq):not(.fl) .boton{border-radius:999px}
-.herramienta input[type='date'],.herramienta input[type='number'],.herramienta input[type='text'],.herramienta input[type='tel'],.herramienta input[type='email'],.herramienta select{border-radius:14px}
+.herramienta input[type='date'],.herramienta input[type='month'],.herramienta input[type='number'],.herramienta input[type='text'],.herramienta input[type='tel'],.herramienta input[type='email'],.herramienta select{border-radius:14px}
 .herramienta input:focus,.herramienta select:focus{border-color:#d9694d;outline:0;box-shadow:0 0 0 4px rgba(217,105,77,.18)}
 .herramienta .resultado{border-top:0;background:#fff6dc;border-radius:20px;padding:22px;margin-top:24px}
 .herramienta .escala label{border-radius:999px;font-weight:600}
@@ -8135,7 +8136,7 @@ html.a11y-quieto video { display: none !important; }
   .tarjetas-foto.tf-lista img{aspect-ratio:16/9}
 }
 /* Fechas en iPhone: el campo no se sale de su caja */
-input[type='date']{min-width:0;max-width:100%;width:100%;display:block;-webkit-appearance:none;appearance:none;min-height:48px;background:#fff}
+input[type='date'],input[type='month']{min-width:0;max-width:100%;width:100%;display:block;-webkit-appearance:none;appearance:none;min-height:48px;background:#fff}
 input[type='date']::-webkit-date-and-time-value{text-align:left}
 
 /* Opciones de los tests y calculadoras con vida */

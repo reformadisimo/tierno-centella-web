@@ -356,3 +356,148 @@ export function calcularReduccion(salarioAnual: number, horasActuales: number, h
   const nuevo = redondea(salarioAnual * (horasNuevas / horasActuales));
   return { porcentaje, valida, salarioAnual: nuevo, salarioMensual12: redondea(nuevo / 12), horasDiarias: Math.round((horasNuevas / diasSemana) * 100) / 100 };
 }
+
+// ---------- Baja médica (incapacidad temporal) ----------
+// Cifras de 2026. Base reguladora diaria = base de cotización del mes anterior / 30; aquí, salario bruto anual / 12 / 30,
+// con el tope de la base máxima de cotización de 2026 (5.101,20 euros al mes, Orden PJC/297/2026).
+// Enfermedad común o accidente no laboral: días 1 a 3 sin prestación (salvo convenio), del 4 al 20 el 60 %, desde el 21 el 75 %.
+//   Paga la empresa del día 4 al 15; desde el 16, el INSS o la mutua (normalmente la empresa lo adelanta en la nómina).
+// Accidente de trabajo o enfermedad profesional: el día de la baja, salario completo a cargo de la empresa; desde el día siguiente, el 75 %.
+export const BASE_MAXIMA_2026 = 5101.2;
+export type TipoBaja = 'comun' | 'no-laboral' | 'trabajo';
+export type TramoBaja = { desde: number; hasta: number; porcentaje: number; diario: number; importe: number; paga: string };
+export type ResultadoBaja = {
+  baseDiaria: number;
+  topeAplicado: boolean;
+  tramos: TramoBaja[];
+  total: number;
+  mesCompleto75: number; // un mes de 30 días al 75 %
+  totalSiTrabajo: number; // lo mismo si fuera accidente de trabajo (para comparar)
+};
+
+function tramosBaja(tipo: TipoBaja, dias: number, baseDiaria: number): TramoBaja[] {
+  const plan: [number, number, number, string][] =
+    tipo === 'trabajo'
+      ? [
+          [1, 1, 100, 'La empresa (es tu salario de ese día)'],
+          [2, Infinity, 75, 'La mutua o el INSS (normalmente te lo adelanta la empresa en la nómina)'],
+        ]
+      : [
+          [1, 3, 0, 'Nadie, salvo que tu convenio lo pague'],
+          [4, 15, 60, 'La empresa'],
+          [16, 20, 60, 'El INSS o la mutua (normalmente te lo adelanta la empresa en la nómina)'],
+          [21, Infinity, 75, 'El INSS o la mutua (normalmente te lo adelanta la empresa en la nómina)'],
+        ];
+  return plan
+    .filter(([desde]) => desde <= dias)
+    .map(([desde, hasta, porcentaje, paga]) => {
+      const fin = Math.min(hasta, dias);
+      const diario = redondea((baseDiaria * porcentaje) / 100);
+      return { desde, hasta: fin, porcentaje, diario, importe: redondea(diario * (fin - desde + 1)), paga };
+    });
+}
+
+export function calcularBaja(tipo: TipoBaja, salarioAnual: number, dias: number): ResultadoBaja {
+  const mensual = salarioAnual / 12;
+  const topeAplicado = mensual > BASE_MAXIMA_2026;
+  const baseDiaria = Math.min(mensual, BASE_MAXIMA_2026) / 30;
+  const tramos = tramosBaja(tipo, dias, baseDiaria);
+  const total = redondea(tramos.reduce((s, t) => s + t.importe, 0));
+  const totalSiTrabajo = redondea(tramosBaja('trabajo', dias, baseDiaria).reduce((s, t) => s + t.importe, 0));
+  return { baseDiaria: redondea(baseDiaria), topeAplicado, tramos, total, mesCompleto75: redondea(baseDiaria * 0.75 * 30), totalSiTrabajo };
+}
+
+// ---------- FOGASA ----------
+// Art. 33 del Estatuto de los Trabajadores. Salario mínimo de 2026: 1.221 euros en 14 pagas (17.094 al año, Real Decreto 126/2026).
+// Tope diario: el doble del salario mínimo diario con la parte de las pagas extra (17.094 x 2 / 365, unos 93,67 euros).
+// Salarios: como mucho 120 días a ese tope. Indemnizaciones: como mucho una anualidad (365 días a ese tope);
+// en despido (improcedente) y en la extinción del art. 50 se calcula a 30 días por año; en el objetivo, sobre lo reconocido (20 días por año).
+export const SMI_ANUAL_2026 = 17094;
+export const TOPE_DIARIO_FOGASA = (SMI_ANUAL_2026 * 2) / 365;
+export type TipoIndemnizacionFogasa = 'ninguna' | 'objetivo' | 'improcedente';
+export type ResultadoFogasa = {
+  salarioDiario: number;
+  salarioDiarioComputado: number;
+  topeDiarioAplicado: boolean;
+  salariosDebidos: number;
+  salariosFogasa: number;
+  diasSalarioComputados: number;
+  indemnizacionDebida: number;
+  indemnizacionFogasa: number;
+  diasIndemnizacion: number;
+  total: number;
+  resto: number; // lo que el FOGASA no cubre y se sigue reclamando a la empresa
+};
+
+export function calcularFogasa(d: {
+  salarioAnual: number;
+  salariosDebidos: number;
+  diasSalarios: number;
+  tipo: TipoIndemnizacionFogasa;
+  alta?: string;
+  despido?: string;
+  indemnizacionReconocida?: number; // si la sentencia o el acta dicen una cifra concreta
+}): ResultadoFogasa {
+  const salarioDiario = d.salarioAnual / 365;
+  const computado = Math.min(salarioDiario, TOPE_DIARIO_FOGASA);
+  const diasSalarioComputados = Math.min(Math.max(d.diasSalarios, 0), 120);
+  const salariosFogasa = redondea(Math.min(d.salariosDebidos, diasSalarioComputados * computado));
+
+  let indemnizacionDebida = 0;
+  let indemnizacionFogasa = 0;
+  let diasIndemnizacion = 0;
+  if (d.tipo !== 'ninguna' && d.alta && d.despido) {
+    const legal = calcularIndemnizacion(d.alta, d.despido, d.salarioAnual);
+    const meses = mesesTrabajados(d.alta, d.despido);
+    indemnizacionDebida = d.indemnizacionReconocida && d.indemnizacionReconocida > 0 ? d.indemnizacionReconocida : d.tipo === 'objetivo' ? legal.importeObjetivo : legal.importeImprocedente;
+    diasIndemnizacion = Math.min(d.tipo === 'objetivo' ? legal.diasObjetivo : (30 * meses) / 12, 365);
+    indemnizacionFogasa = redondea(Math.min(indemnizacionDebida, diasIndemnizacion * computado));
+  }
+  const total = redondea(salariosFogasa + indemnizacionFogasa);
+  return {
+    salarioDiario: redondea(salarioDiario),
+    salarioDiarioComputado: redondea(computado),
+    topeDiarioAplicado: salarioDiario > TOPE_DIARIO_FOGASA,
+    salariosDebidos: redondea(d.salariosDebidos),
+    salariosFogasa,
+    diasSalarioComputados,
+    indemnizacionDebida: redondea(indemnizacionDebida),
+    indemnizacionFogasa,
+    diasIndemnizacion: Math.round(diasIndemnizacion * 100) / 100,
+    total,
+    resto: redondea(Math.max(0, d.salariosDebidos + indemnizacionDebida - total)),
+  };
+}
+
+// ---------- Salarios impagados con intereses ----------
+// Art. 29.3 del Estatuto: lo que se debe de salario genera un 10 % de interés al año por mora.
+// Art. 59.2: cada mes se puede reclamar durante un año desde que debió cobrarse (aquí, el último día de ese mes).
+export type MesImpagado = { mes: string; importe: number }; // mes en formato AAAA-MM
+export type LineaImpagado = { mes: string; importe: number; vence: string; dias: number; interes: number; limite: string; caducado: boolean };
+export type ResultadoImpagados = { lineas: LineaImpagado[]; principal: number; intereses: number; total: number; caducadoImporte: number; proximoLimite: string | null };
+
+export function calcularImpagados(meses: MesImpagado[], hoyIso: string): ResultadoImpagados {
+  const hoy = aFecha(hoyIso);
+  const lineas = meses
+    .filter((m) => /^\d{4}-\d{2}$/.test(m.mes) && m.importe > 0)
+    .sort((a, b) => a.mes.localeCompare(b.mes))
+    .map((m) => {
+      const [a, mm] = m.mes.split('-').map(Number);
+      const vence = new Date(Date.UTC(a, mm, 0)); // último día del mes
+      const dias = Math.max(0, Math.round((hoy.getTime() - vence.getTime()) / 86400000));
+      const limite = sumarAnios(aIso(vence), 1);
+      return { mes: m.mes, importe: redondea(m.importe), vence: aIso(vence), dias, interes: redondea((m.importe * 0.1 * dias) / 365), limite, caducado: limite < hoyIso };
+    });
+  const vivas = lineas.filter((l) => !l.caducado);
+  const principal = redondea(vivas.reduce((s, l) => s + l.importe, 0));
+  const intereses = redondea(vivas.reduce((s, l) => s + l.interes, 0));
+  const futuras = vivas.map((l) => l.limite).sort();
+  return {
+    lineas,
+    principal,
+    intereses,
+    total: redondea(principal + intereses),
+    caducadoImporte: redondea(lineas.filter((l) => l.caducado).reduce((s, l) => s + l.importe, 0)),
+    proximoLimite: futuras[0] ?? null,
+  };
+}
