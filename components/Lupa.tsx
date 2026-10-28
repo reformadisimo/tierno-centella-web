@@ -3,6 +3,7 @@
 // La lupa: mide, sin saber quién es, qué apartado tiene delante cada visitante y cuánto tiempo, y lo manda
 // al servidor cada 20 segundos y al salir. Cuenta solo el tiempo con la página visible y sin estar parado
 // más de 3 minutos. Si quien mira es Ignacio (?yo=1 en ese navegador), lo marca como propio para poder filtrarlo.
+import { esYo } from '@/lib/propios';
 import { useEffect } from 'react';
 
 const uid = () => (typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
@@ -19,7 +20,7 @@ export function idVisitante() {
       s = uid();
       sessionStorage.setItem('tc-lupa-sesion', s);
     }
-    return { visitante: v, sesion: s, propio: !!localStorage.getItem('tc-guia-yo') };
+    return { visitante: v, sesion: s, propio: esYo() };
   } catch {
     return null;
   }

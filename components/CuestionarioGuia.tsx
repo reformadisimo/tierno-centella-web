@@ -1,5 +1,6 @@
 'use client';
 
+import { esYo } from '@/lib/propios';
 import { useEffect, useState } from 'react';
 import { PREGUNTAS_GUIA } from '@/lib/preguntas-guia';
 
@@ -33,7 +34,7 @@ export default function CuestionarioGuia() {
   async function enviar() {
     setMsg('Enviando...');
     try {
-      if (localStorage.getItem('tc-guia-yo')) {
+      if (esYo()) {
         setMsg('Modo prueba (?yo=1): no se envía nada. Jesús sí te las mandará.');
         return;
       }

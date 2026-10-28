@@ -1,5 +1,6 @@
 'use client';
 
+import { esYo as esIgnacio } from '@/lib/propios';
 import { ChipVivo } from './Vida';
 import FotoVideo from './FotoVideo';
 import ProgresoGuia from './ProgresoGuia';
@@ -494,7 +495,7 @@ const normal = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLower
 // Si quien prueba la guía es Ignacio (?yo=1), no se envía nada: así sus pruebas no llegan como si fueran de Jesús.
 const esYo = () => {
   try {
-    return !!localStorage.getItem('tc-guia-yo');
+    return esIgnacio();
   } catch {
     return false;
   }
@@ -520,7 +521,7 @@ function useAvisoVisita() {
       const q = location.search;
       if (/[?&]yo=1/.test(q)) return localStorage.setItem('tc-guia-yo', '1');
       if (/[?&]yo=0/.test(q)) localStorage.removeItem('tc-guia-yo');
-      if (localStorage.getItem('tc-guia-yo')) return;
+      if (esYo()) return;
       const ultima = Number(localStorage.getItem('tc-guia-visita') || 0);
       if (Date.now() - ultima < 4 * 3600000) return;
       localStorage.setItem('tc-guia-visita', String(Date.now()));

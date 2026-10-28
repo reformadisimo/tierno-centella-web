@@ -7,6 +7,7 @@
 //   hasta dónde ha bajado y, en orden, qué ha pulsado (pasos de la guía, casillas, pestañas, sueños, "?").
 // - Todo queda también en la base de datos (pantalla "mesa"), junto a las visitas de la guía y de la web.
 // - Si quien entra es Ignacio (?yo=1 una vez en ese navegador), no avisa. Sin datos personales: un identificador anónimo.
+import { esYo as esIgnacio } from '@/lib/propios';
 import { useEffect } from 'react';
 import { enviarLupa } from '@/components/Lupa';
 
@@ -20,7 +21,7 @@ const enMarco = () => {
 const esYo = () => {
   if (enMarco()) return true;
   try {
-    return !!localStorage.getItem('tc-guia-yo');
+    return esIgnacio();
   } catch {
     return true;
   }

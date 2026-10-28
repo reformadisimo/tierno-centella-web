@@ -8,6 +8,7 @@
 // - No guarda quién es: un identificador anónimo del navegador, el aparato y la ciudad aproximada.
 //   Si ese mismo navegador ya abrió la guía, el aviso lo dice (casi seguro es Jesús o alguien del despacho).
 // - Si quien navega es Ignacio (?yo=1 una vez en ese navegador), no avisa y sus visitas quedan marcadas como propias.
+import { esYo as esIgnacio } from '@/lib/propios';
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { enviarLupa } from './Lupa';
@@ -24,7 +25,7 @@ const enMarco = () => {
 const esYo = () => {
   if (enMarco()) return true;
   try {
-    return !!localStorage.getItem('tc-guia-yo');
+    return esIgnacio();
   } catch {
     return true;
   }
