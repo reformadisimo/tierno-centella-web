@@ -95,5 +95,9 @@ export function detalleDemo(desde: string, hasta: string) {
       fr("/contacto", n * 1.5, 0.8, n * 0.25), fr("/incapacidad-permanente", n * 1.5, 0.5, n * 0.05), fr("/sentencias", n * 1, 0.6, n * 0.02),
     ],
   };
-  return { rebote, paginas, clicsPagina, lupa, gsc: { totales: { clics: tc, impresiones: ti, ctr_pct: Math.round((tc / ti) * 1000) / 10, posicion: 12.4 }, busquedas, paginas: gscPag }, entradas, crm };
+  // 30-oct: «De dónde vienen (todas las visitas)», del contador propio sin cookies (cuenta también a quien rechaza las cookies).
+  const totalVistas = paginas.reduce((t, p) => t + p.n, 0);
+  const reparto: [string, number, number][] = [["Google (búsqueda)", 0.46, 0.7], ["Directo", 0.2, 0.55], ["Google Ads", 0.14, 0.78], ["Asistentes de IA", 0.07, 0.45], ["Ficha de Google", 0.06, 0.85], ["Redes sociales", 0.04, 0.9], ["Otras webs", 0.03, 0.4]];
+  const origenes = reparto.map(([origen, p, m]) => { const v = Math.round(totalVistas * p * (0.85 + 0.3 * r())); return { origen, n: v, movil: Math.round(v * m) }; }).sort((x, y) => y.n - x.n);
+  return { rebote, paginas, clicsPagina, lupa, origenes, gsc: { totales: { clics: tc, impresiones: ti, ctr_pct: Math.round((tc / ti) * 1000) / 10, posicion: 12.4 }, busquedas, paginas: gscPag }, entradas, crm };
 }
