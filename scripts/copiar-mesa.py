@@ -27,6 +27,8 @@ def cambia(texto, pares, nombre):
 
 
 MESA = [
+    # 31-oct: la mesa de Tierno va con cifras de ejemplo: sin aviso de «se cuentan desde el 31 de octubre» ni de robots
+    ('const INICIO_VISITAS = "2026-10-31"; // primer día entero con personas y visitas contadas y sin robots', 'const INICIO_VISITAS = "2000-01-01"; // Tierno: cifras de ejemplo, sin fecha de inicio del contador (cuando haya contador propio, poner aquí su primer día)'),
     # v939: el resumen por correo ya está siempre arriba; en «Más herramientas» de la vista sencilla sobraba (id duplicado)
     ('{herramientas}<Resumenes clave={clave} /></div>}', '{herramientas}</div>}'),
     ('/* ── MESA DE CONTROL (26-oct, cl·v811) ──', '/* ── MESA DE CONTROL: copia de la de Reformadísimo, la referencia (scripts/copiar-mesa.py). Solo cambian textos de un despacho. ──'),
