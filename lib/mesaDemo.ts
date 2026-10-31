@@ -32,7 +32,7 @@ export function datosDemo(hoy: string) {
     const whatsapp = poisson(r, 1.4 * k), llamadas = poisson(r, 2.1 * k);
     const vistasDia = Math.round(70 * k * (0.8 + 0.4 * r()));
     const personasDia = Math.round(vistasDia / (2.4 + 0.6 * r()));
-    web[d] = { peticiones, visitas: Math.min(peticiones, poisson(r, 0.62 * k)), calculos: poisson(r, 3.2 * k), porCanal, whatsapp, llamadas, clicsPorFuente: reparte(r, whatsapp + llamadas, CANALES_WEB), vistas: vistasDia, personas: personasDia, entradas: Math.round(personasDia * (1.1 + 0.15 * r())) }; // 31-oct: personas y visitas del contador propio (ejemplo)
+    web[d] = { peticiones, visitas: Math.min(peticiones, poisson(r, 0.62 * k)), calculos: poisson(r, 3.2 * k), porCanal, whatsapp, llamadas, clicsPorFuente: reparte(r, whatsapp + llamadas, CANALES_WEB), vistas: vistasDia, personas: personasDia, entradas: Math.round(personasDia * (1.1 + 0.15 * r())), segundos: Math.round(personasDia * (95 + 50 * r())) }; // 31-oct: personas y visitas del contador propio (ejemplo)
     for (const [canal, p] of CANALES_GA) {
       const s = Math.round(30 * k * p * (0.75 + 0.5 * r()));
       ga.push({ dia: d, canal, sesiones: s, usuarios: Math.round(s * 0.85), interes: Math.round(s * (0.45 + 0.2 * r())), clave: poisson(r, s * 0.02) });
@@ -100,6 +100,6 @@ export function detalleDemo(desde: string, hasta: string) {
   // 30-oct: «De dónde vienen (todas las visitas)», del contador propio sin cookies (cuenta también a quien rechaza las cookies).
   const totalVistas = paginas.reduce((t, p) => t + p.n, 0);
   const reparto: [string, number, number][] = [["Google (búsqueda)", 0.46, 0.7], ["Directo", 0.2, 0.55], ["Google Ads", 0.14, 0.78], ["Asistentes de IA", 0.07, 0.45], ["Ficha de Google", 0.06, 0.85], ["Redes sociales", 0.04, 0.9], ["Otras webs", 0.03, 0.4]];
-  const origenes = reparto.map(([origen, p, m]) => { const v = Math.round(totalVistas * p * (0.85 + 0.3 * r())); const personas = Math.max(1, Math.round(v / (2.2 + 0.8 * r()))); return { origen, n: v, movil: Math.round(v * m), personas, visitas: Math.round(personas * (1.1 + 0.15 * r())) }; }).sort((x, y) => y.n - x.n);
+  const origenes = reparto.map(([origen, p, m]) => { const v = Math.round(totalVistas * p * (0.85 + 0.3 * r())); const personas = Math.max(1, Math.round(v / (2.2 + 0.8 * r()))); const visitas = Math.round(personas * (1.1 + 0.15 * r())); return { origen, n: v, movil: Math.round(v * m), personas, visitas, segundos: Math.round(personas * (80 + 70 * r())), rebotes: Math.round(visitas * (0.25 + 0.3 * r())) }; }).sort((x, y) => y.n - x.n);
   return { rebote, paginas, clicsPagina, lupa, origenes, gsc: { totales: { clics: tc, impresiones: ti, ctr_pct: Math.round((tc / ti) * 1000) / 10, posicion: 12.4 }, busquedas, paginas: gscPag }, entradas, crm };
 }

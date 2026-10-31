@@ -6,14 +6,17 @@ lib/mesaTipos.ts tal cual, y aquí solo se cambian textos de marca y de negocio 
 consultas, hojas de encargo y casos, en lugar de visitas, presupuestos y obras). Los datos de ejemplo van aparte, en
 lib/panelDemo.ts y lib/mesaDemo.ts. Si un cambio deja de encontrarse en la referencia, el script lo dice.
 
-Uso: python3 scripts/copiar-mesa.py /ruta/a/reformadisimo-web
+Uso: python3 scripts/copiar-mesa.py /ruta/a/reformadisimo-web /ruta/a/casiopea360
 Después, regenerar el CSS de la mesa (app/mesa-tc-6v9k3p/mesa.css) con Tailwind 3.4, important "#mesa-rd" y sin preflight.
 """
 import sys, pathlib, json
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import textos_mesa_tierno as T
+import parches_casiopea as P
 
 REF = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "../reformadisimo-web")
+# 31-oct-2026: la mesa de Casiopea va por delante (fechas en recuadro, arranque en «Hoy», ayuda corta): ver parches_casiopea.py
+CAS = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else "../casiopea360")
 AQUI = pathlib.Path(__file__).resolve().parent.parent
 fallos = []
 
@@ -27,8 +30,6 @@ def cambia(texto, pares, nombre):
 
 
 MESA = [
-    # 31-oct: la mesa de Tierno va con cifras de ejemplo: sin aviso de «se cuentan desde el 31 de octubre» ni de robots
-    ('const INICIO_VISITAS = "2026-10-31"; // primer día entero con personas y visitas contadas y sin robots', 'const INICIO_VISITAS = "2000-01-01"; // Tierno: cifras de ejemplo, sin fecha de inicio del contador (cuando haya contador propio, poner aquí su primer día)'),
     # v939: el resumen por correo ya está siempre arriba; en «Más herramientas» de la vista sencilla sobraba (id duplicado)
     ('{herramientas}<Resumenes clave={clave} /></div>}', '{herramientas}</div>}'),
     ('/* ── MESA DE CONTROL (26-oct, cl·v811) ──', '/* ── MESA DE CONTROL: copia de la de Reformadísimo, la referencia (scripts/copiar-mesa.py). Solo cambian textos de un despacho. ──'),
@@ -253,6 +254,7 @@ ALEGRIA += [
 ]
 
 mesa = cambia((REF / "components/mesa/Mesa.tsx").read_text(encoding="utf-8"), MESA, "Mesa.tsx")
+mesa = P.aplica(mesa, (CAS / "components/mesa/Mesa.tsx").read_text(encoding="utf-8"), fallos)
 (AQUI / "components/mesa/Mesa.tsx").write_text(mesa, encoding="utf-8")
 alegria = cambia((REF / "components/mesa/Alegria.tsx").read_text(encoding="utf-8"), ALEGRIA, "Alegria.tsx")
 alegria = bloque(alegria, "export const GUIA_PASOS", T.GUIA_PASOS, "Alegria.tsx")

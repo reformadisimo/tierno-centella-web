@@ -10,6 +10,7 @@ import BarraMovil from '@/components/BarraMovil';
 import AvisoCookies from '@/components/AvisoCookies';
 import Medicion from '@/components/Medicion';
 import LupaWeb from '@/components/LupaWeb';
+import ContadorVistas from '@/components/ContadorVistas';
 import Diferidos from '@/components/Diferidos';
 import SalidaRapida from '@/components/SalidaRapida';
 import { CabeceraImpresion, IdiomaHtml, WhatsappQR } from '@/components/Utiles';
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <IdiomaHtml />
         <Medicion />
         <LupaWeb />
+        <ContadorVistas />
       </body>
     </html>
   );

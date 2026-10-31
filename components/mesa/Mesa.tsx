@@ -1,7 +1,7 @@
 "use client";
 import type { Modulo, Reloj, Tarea, Resumen } from "@/lib/mesaTipos";
 import { LUZ, TEMAS_RESUMEN, primeraFrase, frasesDe, fechaEnPalabras, type Luz } from "@/lib/mesaTextos";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import { Ludoteca } from "@/components/mesa/Suenos";
 import type { CifrasBase } from "@/components/mesa/Suenos";
 import { Plegable, Apartados, GuiaDeUso, LogoMarca, iconoDeTitulo, Que, QueTexto, EXPLICA, GLOSARIO, terminosEn, C as PALETA_ALEGRIA, Loseta, Icono, ICONO_AREA, ICONO_CIFRA, ICONO_BARRA, FranjaConectado, Despedida, MarcaTitulo, ICONO_MEDIDA, tinte, LogoCanal, LogoFila, useSaludo, elige, CHISPA_TODO_BIEN, CHISPA_HECHO, CHISPA_SIN_TAREAS, CHISPA_TODO_REVISADO } from "@/components/mesa/Alegria";
@@ -14,7 +14,7 @@ import { Plegable, Apartados, GuiaDeUso, LogoMarca, iconoDeTitulo, Que, QueTexto
    sumar día a día (páginas, búsquedas, mapas de calor) se piden a /api/mesa.
    Solo pintura en las animaciones (opacidad y color): nada se mueve. */
 
-type DiaWeb = { peticiones: number; visitas: number; calculos: number; porCanal: Record<string, number>; whatsapp: number; llamadas: number; clicsPorFuente: Record<string, number>; vistas: number; entradas?: number; personas?: number };
+type DiaWeb = { peticiones: number; visitas: number; calculos: number; porCanal: Record<string, number>; whatsapp: number; llamadas: number; clicsPorFuente: Record<string, number>; vistas: number; entradas?: number; personas?: number; segundos?: number };
 type FilaAds = [string, string, string, number, number, number, number];
 type Ga = { dia: string; canal: string; sesiones: number; usuarios: number; interes: number; clave: number };
 type GaTotal = { dia: string; sesiones: number; usuarios: number; interes: number; clave: number };
@@ -30,6 +30,9 @@ export type DatosMesa = {
   google: boolean;
   fallos?: string[]; // fuentes que no se han podido leer en esta carga (cl·v904): "web", "analytics", "search console"
   clave: string;
+  nombre?: string; // nombre del negocio en la cabecera
+  inicioVisitas?: string; // primer día con personas y visitas contadas; en la demostración no hay
+  presetInicial?: "hoy" | "28"; // arranca en «Hoy» mientras no hay días anteriores con datos
 };
 type Redes = {
   actualizado: string;
@@ -49,7 +52,7 @@ type Detalle = {
   clarity?: { dias: number; desde: string | null; paginas: FilaClarity[]; dispositivos: FilaClarity[] } | null;
   rebote?: { dispositivo: FilaRebote[]; zona: FilaRebote[]; tipo: FilaRebote[]; paginas: FilaRebote[] } | null;
   personas?: number | null;
-  origenes?: { origen: string; n: number; movil: number; visitas: number; personas: number }[];
+  origenes?: { origen: string; n: number; movil: number; visitas: number; personas: number; segundos: number; rebotes: number }[];
   crm: { origen: string; leads: number; visitas: number; presupuestos: number; firmados: number; firmado: number; facturado: number; descartados: number; respondidos?: number; horas_resp?: number; vencidas?: number }[];
 };
 
@@ -89,7 +92,7 @@ const CANALES_PAGO: Record<string, string> = { "Google Ads": "google", "Meta / I
 /* ── agregados de un periodo ── */
 type Totales = {
   dias: number;
-  peticiones: number; visitas: number; calculos: number; whatsapp: number; llamadas: number; vistas: number; entradas: number; personasReales: number;
+  peticiones: number; visitas: number; calculos: number; whatsapp: number; llamadas: number; vistas: number; entradas: number; personasReales: number; segundos: number;
   porCanal: Record<string, number>; clicsPorFuente: Record<string, number>;
   ads: { coste: number; clics: number; impr: number; conv: number; porPlat: Record<string, { coste: number; clics: number; impr: number; conv: number }>; porCamp: Record<string, { plat: string; coste: number; clics: number; impr: number; conv: number }>; parcial: boolean };
   ga: { sesiones: number; usuarios: number; interes: number; clave: number; porCanal: Record<string, { sesiones: number; interes: number; clave: number }> };
@@ -98,7 +101,7 @@ type Totales = {
 
 function calcula(d: DatosMesa, a: string, b: string, recGsc = 0): Totales {
   const t: Totales = {
-    dias: entre(a, b), peticiones: 0, visitas: 0, calculos: 0, whatsapp: 0, llamadas: 0, vistas: 0, entradas: 0, personasReales: 0, porCanal: {}, clicsPorFuente: {},
+    dias: entre(a, b), peticiones: 0, visitas: 0, calculos: 0, whatsapp: 0, llamadas: 0, vistas: 0, entradas: 0, personasReales: 0, segundos: 0, porCanal: {}, clicsPorFuente: {},
     ads: { coste: 0, clics: 0, impr: 0, conv: 0, porPlat: {}, porCamp: {}, parcial: false },
     ga: { sesiones: 0, usuarios: 0, interes: 0, clave: 0, porCanal: {} },
     gsc: { clics: 0, impresiones: 0, posicion: 0 },
@@ -106,7 +109,7 @@ function calcula(d: DatosMesa, a: string, b: string, recGsc = 0): Totales {
   for (const dia of listaDias(a, b)) {
     const w = d.web[dia];
     if (!w) continue;
-    t.peticiones += w.peticiones; t.visitas += w.visitas; t.calculos += w.calculos; t.whatsapp += w.whatsapp; t.llamadas += w.llamadas; t.vistas += w.vistas; t.entradas += w.entradas ?? 0; t.personasReales += w.personas ?? 0;
+    t.peticiones += w.peticiones; t.visitas += w.visitas; t.calculos += w.calculos; t.whatsapp += w.whatsapp; t.llamadas += w.llamadas; t.vistas += w.vistas; t.entradas += w.entradas ?? 0; t.personasReales += w.personas ?? 0; t.segundos += w.segundos ?? 0;
     for (const [k, v] of Object.entries(w.porCanal)) t.porCanal[k] = (t.porCanal[k] ?? 0) + v;
     for (const [k, v] of Object.entries(w.clicsPorFuente)) t.clicsPorFuente[k] = (t.clicsPorFuente[k] ?? 0) + v;
   }
@@ -414,19 +417,25 @@ function Tabla<T>({ filas, cols, inicial, vacio = "Sin datos en este periodo.", 
   );
 }
 
-/* ── Visitas reales (30-oct, chat de Ig): lo primero del resumen, en claro: cuánta gente entra de verdad,
-   cuántas páginas ve y de dónde viene, con el contador propio sin cookies y frente a los clics que cobra cada anuncio. ── */
-const INICIO_VISITAS = "2000-01-01"; // Tierno: cifras de ejemplo, sin fecha de inicio del contador (cuando haya contador propio, poner aquí su primer día)
-function VisitasReales({ T, C, origenes, cargando, a, b, ultimoAds }: { T: Totales; C: Totales | null; origenes: Detalle["origenes"] | null; cargando: boolean; a: string; b: string; ultimoAds: string }) {
-  const clics = (o: string) => (b > ultimoAds ? undefined : o === "Google Ads" ? T.ads.porPlat["google"]?.clics : o === "Meta / Instagram" ? T.ads.porPlat["meta"]?.clics : o === "ChatGPT Ads" ? T.ads.porPlat["chatgpt"]?.clics : undefined);
+/* «Quién entra de verdad en la web»: el mismo panel que la mesa de Reformadísimo (cl·v970-974 y 31-oct, tiempo y rebote propios).
+   Las cifras de arriba salen de la misma consulta que la tabla (en vivo). En el ejemplo, todo inventado y sin fecha de inicio. */
+function VisitasReales({ T: T0, C, origenes, cargando, a, b, adsHasta, inicio }: { T: Totales; C: Totales | null; origenes: Detalle["origenes"] | null; cargando: boolean; a: string; b: string; adsHasta?: string | null; inicio?: string }) {
+  const INICIO_VISITAS = inicio ?? "";
+  let T = T0;
+  const ultimoAds = adsHasta ?? "";
+  const clics = (o: string) => (!ultimoAds || b > ultimoAds ? undefined : o === "Google Ads" ? T.ads.porPlat["google"]?.clics : o === "Meta / Instagram" ? T.ads.porPlat["meta"]?.clics : o === "ChatGPT Ads" ? T.ads.porPlat["chatgpt"]?.clics : undefined);
   const esAnuncio = (o: string) => o === "Google Ads" || o === "Meta / Instagram" || o === "ChatGPT Ads";
-  const sinVisitasAun = b < INICIO_VISITAS && T.entradas === 0;
-  const sinPersonasAun = T.personasReales === 0 && b < "2026-11-01";
+  const hayAds = Object.keys(T.ads.porPlat).length > 0 || !!ultimoAds;
+  const vivo = (origenes ?? []).reduce((x, r) => ({ personas: x.personas + r.personas, visitas: x.visitas + r.visitas, vistas: x.vistas + r.n, segundos: x.segundos + (r.segundos ?? 0), rebotes: x.rebotes + (r.rebotes ?? 0) }), { personas: 0, visitas: 0, vistas: 0, segundos: 0, rebotes: 0 });
+  if (origenes && origenes.length) T = { ...T, personasReales: vivo.personas, entradas: vivo.visitas, vistas: vivo.vistas, segundos: vivo.segundos };
+  const sinVisitasAun = !!INICIO_VISITAS && b < INICIO_VISITAS && T.entradas === 0;
+  const sinPersonasAun = !!INICIO_VISITAS && T.personasReales === 0 && b < INICIO_VISITAS;
   const varios = a !== b;
-  const parcial = a < INICIO_VISITAS && b >= INICIO_VISITAS;
+  const fechaIni = INICIO_VISITAS ? fechaLarga(INICIO_VISITAS) : "";
+  const mmss = (s: number) => { const t = Math.round(s), m = Math.floor(t / 60), r = t % 60; return m ? `${m} min ${String(r).padStart(2, "0")} s` : `${r} s`; };
   const filas = (origenes ?? []).filter((r) => r.n > 0);
-  const Cifra = ({ n, t, sub }: { n: string; t: string; sub?: React.ReactNode }) => (
-    <div className="min-w-[120px] flex-1 rounded-[14px] border border-line bg-white px-4 py-3">
+  const Cifra = ({ n, t, sub, grande }: { n: string; t: string; sub?: React.ReactNode; grande?: boolean }) => (
+    <div className={`min-w-[120px] flex-1 rounded-[14px] border bg-white px-4 py-3 ${grande ? "border-[#2b6c80]" : "border-line"}`}>
       <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-ink/55">{t}</p>
       <p className="mt-1 font-serif text-[34px] leading-none text-ink">{n}</p>
       {sub ? <div className="mt-1.5 text-[13px] text-ink/60">{sub}</div> : null}
@@ -439,28 +448,32 @@ function VisitasReales({ T, C, origenes, cargando, a, b, ultimoAds }: { T: Total
         <p className="text-[13px] text-ink/60">Contador propio, sin cookies: cuenta también a quien rechaza las cookies. Sin robots.</p>
       </div>
       <div className="mt-3 flex flex-wrap gap-3">
-        <Cifra t={varios ? "Personas distintas (suma de cada día)" : "Personas distintas"} n={sinPersonasAun ? "-" : num(T.personasReales)} sub={sinPersonasAun ? "Se cuentan desde el 31 de octubre" : C && C.personasReales ? <Delta a={T.personasReales} b={C.personasReales} antes={num(C.personasReales)} /> : varios ? "Quien vuelve otro día cuenta otra vez" : null} />
-        <Cifra t="Visitas" n={sinVisitasAun ? "-" : num(T.entradas)} sub={sinVisitasAun ? "Se cuentan desde el 31 de octubre" : C && C.entradas ? <Delta a={T.entradas} b={C.entradas} antes={num(C.entradas)} /> : parcial ? "Contadas desde el 31 de octubre" : null} />
-        <Cifra t="Páginas vistas" n={num(T.vistas)} sub={a < INICIO_VISITAS ? "Antes del 31 de octubre incluyen robots" : null} />
+        <Cifra grande t={varios ? "Personas distintas (suma de cada día)" : "Personas distintas"} n={sinPersonasAun ? "-" : num(T.personasReales)} sub={sinPersonasAun ? `Se cuentan desde el ${fechaIni}` : C && C.personasReales ? <Delta a={T.personasReales} b={C.personasReales} antes={num(C.personasReales)} /> : varios ? "Quien vuelve otro día cuenta otra vez" : null} />
+        <Cifra t="Visitas" n={sinVisitasAun ? "-" : num(T.entradas)} sub={sinVisitasAun ? `Se cuentan desde el ${fechaIni}` : C && C.entradas ? <Delta a={T.entradas} b={C.entradas} antes={num(C.entradas)} /> : null} />
+        <Cifra t="Páginas vistas" n={num(T.vistas)} sub={C && C.vistas ? <Delta a={T.vistas} b={C.vistas} antes={num(C.vistas)} /> : null} />
+        <Cifra t="Tiempo medio por persona" n={T.personasReales && T.segundos ? mmss(T.segundos / T.personasReales) : "-"} sub={T.segundos ? (T.entradas ? `${mmss(T.segundos / T.entradas)} por visita` : null) : INICIO_VISITAS ? `Se cuenta desde el ${fechaIni}` : null} />
+        <Cifra t="Rebote" n={T.entradas && vivo.rebotes ? `${nf1.format((vivo.rebotes / T.entradas) * 100)} %` : "-"} sub={vivo.rebotes ? "Se van en menos de 10 s sin ver otra página" : INICIO_VISITAS ? `Se cuenta desde el ${fechaIni}` : null} />
         <Cifra t="Páginas por persona" n={T.personasReales ? nf1.format(T.vistas / T.personasReales) : "-"} />
         <Cifra t="Analytics ve" n={num(T.ga.sesiones)} sub="Solo quien acepta cookies" />
       </div>
       <div className="mt-4 overflow-x-auto rounded-[14px] border border-line bg-white">
-        <table className="w-full min-w-[600px] text-[14.5px]">
+        <table className="w-full min-w-[780px] text-[14.5px]">
           <thead>
             <tr className="border-b border-line text-left text-[12px] font-bold uppercase tracking-[0.08em] text-ink/55">
               <th className="px-3 py-2">De dónde vienen</th>
               <th className="px-3 py-2 text-right">Personas</th>
               <th className="px-3 py-2 text-right">Visitas</th>
               <th className="px-3 py-2 text-right">Páginas vistas</th>
-              <th className="px-3 py-2 text-right">Clics que cobra el anuncio</th>
+              <th className="px-3 py-2 text-right">Tiempo por persona</th>
+              <th className="px-3 py-2 text-right">Rebote</th>
+              {hayAds && <th className="px-3 py-2 text-right">Clics que cobra el anuncio</th>}
             </tr>
           </thead>
           <tbody>
             {cargando && !filas.length ? (
-              <tr><td colSpan={5} className="px-3 py-3 text-ink/50">Cargando…</td></tr>
+              <tr><td colSpan={7} className="px-3 py-3 text-ink/50">Cargando…</td></tr>
             ) : !filas.length ? (
-              <tr><td colSpan={5} className="px-3 py-3 text-ink/50">Sin visitas en estas fechas.</td></tr>
+              <tr><td colSpan={7} className="px-3 py-3 text-ink/50">Sin visitas en estas fechas.</td></tr>
             ) : filas.map((r) => {
               const c = clics(r.origen);
               return (
@@ -469,7 +482,9 @@ function VisitasReales({ T, C, origenes, cargando, a, b, ultimoAds }: { T: Total
                   <td className="px-3 py-2 text-right font-semibold tabular-nums">{sinPersonasAun ? "-" : num(r.personas)}</td>
                   <td className="px-3 py-2 text-right tabular-nums">{sinVisitasAun ? "-" : num(r.visitas)}</td>
                   <td className="px-3 py-2 text-right tabular-nums">{num(r.n)}</td>
-                  <td className="px-3 py-2 text-right tabular-nums text-ink/70">{esAnuncio(r.origen) ? (c === undefined ? "llega mañana" : num(c)) : ""}</td>
+                  <td className="px-3 py-2 text-right tabular-nums">{r.personas && r.segundos ? mmss(r.segundos / r.personas) : "-"}</td>
+                  <td className="px-3 py-2 text-right tabular-nums">{r.visitas && vivo.rebotes ? `${nf.format(((r.rebotes ?? 0) / r.visitas) * 100)} %` : "-"}</td>
+                  {hayAds && <td className="px-3 py-2 text-right tabular-nums text-ink/70">{esAnuncio(r.origen) ? (c === undefined ? "llega mañana" : num(c)) : ""}</td>}
                 </tr>
               );
             })}
@@ -477,7 +492,7 @@ function VisitasReales({ T, C, origenes, cargando, a, b, ultimoAds }: { T: Total
         </table>
       </div>
       <p className="mt-2 text-[12.5px] leading-snug text-ink/55">
-        Personas: gente distinta cada día (si alguien entra tres veces el mismo día, cuenta una; desde el móvil y el ordenador, dos). Visitas: cada vez que alguien abre la web. Páginas vistas: todas las páginas que ven. Si un anuncio cobra muchos más clics que visitas llegan, esos clics se pierden por el camino.
+        <b className="text-ink/70">Personas:</b> gente distinta cada día. <b className="text-ink/70">Visitas:</b> cada vez que alguien abre la web. <b className="text-ink/70">Tiempo:</b> el rato con la web a la vista. <b className="text-ink/70">Rebote:</b> de cada 100 visitas, cuántas se van en menos de 10 segundos sin ver otra página.
       </p>
     </section>
   );
@@ -506,6 +521,16 @@ type Pestana = "resumen" | "ventas" | "anuncios" | "web" | "google" | "redes";
 const ICONO_PESTANA: Record<Pestana, [string, string]> = { resumen: ["estrella", "#c79a00"], ventas: ["persona", "#2f6fd0"], anuncios: ["megafono", "#d93f3f"], web: ["globo", "#2a6f86"], google: ["lupa", "#1d6b3a"], redes: ["chat", "#d9822b"] };
 const PESTANAS: [Pestana, string][] = [["resumen", "Resumen"], ["ventas", "Consultas (CRM)"], ["anuncios", "Anuncios"], ["web", "La web"], ["google", "Google sin pagar"], ["redes", "Ficha de Google y redes"]];
 
+/** Texto de ayuda de una línea y, plegado detrás de "Ver más", el detalle (30-oct-2026). */
+function VerMas({ corto, children, className = "text-[13px] text-ink/60" }: { corto: ReactNode; children: ReactNode; className?: string }) {
+  return (
+    <details className={`group mt-3 leading-relaxed ${className}`}>
+      <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">{corto} <span className="font-semibold text-ink/70 underline group-open:hidden">Ver más</span></summary>
+      <p className="mt-1">{children}</p>
+    </details>
+  );
+}
+
 export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }: { datos: DatosMesa; temas?: Modulo[]; resumenHoy?: Resumen; tareas?: Tarea[]; relojes?: Reloj[]; base?: CifrasBase }) {
   /* Vista sencilla o completa (27-oct, cl·v890; Ig: "que lo entienda quien no sabe nada"). Se recuerda en este navegador. */
   const [vista, setVista] = useState<"sencilla" | "completa">("sencilla");
@@ -520,8 +545,8 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
   const cambiaVista = (v: "sencilla" | "completa") => { setVista(v); try { localStorage.setItem("rd-mesa-vista", v); } catch {} };
   const cierraGuia = () => { setGuia(false); try { localStorage.setItem("rd-mesa-guia-vista", "1"); } catch {} };
   const sencillaPosible = !!temas?.length;
-  const [preset, setPreset] = useState<Preset>("28");
-  const [rango, setRango] = useState<[string, string]>(() => rangoDe("28", datos.hoy));
+  const [preset, setPreset] = useState<Preset>(datos.presetInicial ?? "28");
+  const [rango, setRango] = useState<[string, string]>(() => rangoDe(datos.presetInicial ?? "28", datos.hoy));
   const [compara, setCompara] = useState<Compara>("anterior");
   const [pestana, setPestana] = useState<Pestana>("resumen");
   const [metrica, setMetrica] = useState("peticiones");
@@ -678,18 +703,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
               <p className="text-[13px] text-ink/55">{compara === "no" ? "sin comparar" : `frente a ${textoRango(ca, cb)}`}</p>
             </div>
           </div>
-          {/* 30-oct (chat de Ig): las fechas, a la vista y a un toque (antes solo dentro de «Fechas y comparación») */}
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            {PRESETS.filter(([p]) => ["hoy", "ayer", "7", "28", "mes", "mespasado"].includes(p)).map(([p, t]) => (
-              <button key={p} type="button" onClick={() => elige(p)} className={`min-h-[44px] rounded-full border px-3.5 py-1.5 text-[14px] font-semibold transition-colors ${preset === p ? "border-ink bg-ink text-white" : "border-line bg-white text-ink hover:border-ink"}`}>
-                {t}
-              </button>
-            ))}
-            <button type="button" onClick={() => document.getElementById("pl-fechas")?.scrollIntoView({ behavior: suave(), block: "start" })} className="min-h-[44px] rounded-full border border-line bg-white px-3.5 py-1.5 text-[14px] font-semibold text-teal-deep hover:border-ink">
-              Otras fechas y comparar
-            </button>
-          </div>
-
+          
           {sencillaPosible ? (
             <Ayudas vista={vista} cambiaVista={cambiaVista} abreGuia={() => setGuia(true)} resumen={resumenHoy} tareas={tareas ?? []} />
           ) : (
@@ -711,22 +725,33 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
           {!soloCifras && <Ludoteca {...dolorYBien(relojes ?? [], temas ?? [])} contactos={relojes?.[0]?.n} preguntas={juegos(relojes ?? [])} base={base} hoy={datos.hoy} realEntre={(x, y) => { const ds = listaDias(x, y); if (ds.some((q) => !datos.web[q])) return null; return ds.reduce((t, q) => t + datos.web[q].peticiones, 0); }} demo={datos.clave === "demo"} nombreEmpresa="Tierno Centella Abogados" lineas={["Despidos y laboral", "Acoso laboral", "Incapacidades", "Reclamaciones de cantidad", "Empresa"]} capacidadTexto="¿Cuántos casos puedes llevar al mes?" notaPublico="Podemos preparar la versión B de la web, orientada a empresas y casos de más cuantía, con su propia campaña. La de hoy sigue igual. Tú decides el reparto y lo medimos." />}
           {!soloCifras && <GuiaDeUso modo="plegada" />}
           {/* cl·v921: todo plegado en una línea; se abre lo que se quiera y las cifras quedan a un vistazo */}
-          <Plegable id="pl-fechas" icono="historia" color={PALETA_ALEGRIA.camino} titulo="Fechas y comparación" pista={`${textoRango(a, b)} · ${compara === "no" ? "sin comparar" : compara === "anio" ? "frente al año pasado" : "frente al periodo anterior"}`}>
+          {/* Fechas siempre a la vista y destacadas (31-oct, Ig: «es muy importante, que no haya que abrirlo»). */}
+          <section id="pl-fechas" aria-label="Elegir fechas" className="mt-3 scroll-mt-4 rounded-[20px] border-2 border-[#6d3fd6] bg-[#f4effd] p-4 sm:p-5">
+            <div className="flex flex-wrap items-center gap-3">
+              <span aria-hidden="true" className="grid h-12 w-12 shrink-0 place-items-center rounded-[14px] bg-[#6d3fd6] text-white shadow-[0_8px_18px_-10px_#6d3fd6]">
+                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4M8 14h2M12 14h2M8 17h2" /></svg>
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[12px] font-bold uppercase tracking-[0.14em] text-[#6d3fd6]">¿Qué días quieres ver?</span>
+                <span className="block font-serif text-[26px] italic leading-tight text-ink">{textoRango(a, b)}</span>
+                <span className="block text-[13.5px] text-ink/60">{compara === "no" ? "Sin comparar" : `Comparado con ${compara === "anio" ? "el año pasado" : "el periodo anterior"}: ${textoRango(ca, cb)}`}</span>
+              </span>
+            </div>
           <div className="mt-5 flex flex-wrap items-center gap-2">
             {PRESETS.map(([p, t]) => (
               <button key={p} type="button" onClick={() => elige(p)} className={`min-h-[44px] rounded-full border px-3.5 py-1.5 text-[14px] font-semibold transition-colors ${preset === p ? "border-ink bg-ink text-white" : "border-line bg-white text-ink hover:border-ink"}`}>
                 {t}
               </button>
             ))}
-            <label className={`flex min-h-[44px] items-center gap-2 rounded-full border px-3 py-0 text-[13.5px] font-semibold ${preset === "dia" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
+            <label className={`flex items-center gap-2 rounded-full border px-3 py-1 text-[13.5px] font-semibold ${preset === "dia" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
               Un día
-              <input type="date" max={datos.hoy} value={preset === "dia" ? a : ""} onChange={(e) => { if (e.target.value) { setPreset("dia"); setRango([e.target.value, e.target.value]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none [color-scheme:light]" />
+              <input type="date" max={datos.hoy} value={preset === "dia" ? a : ""} onChange={(e) => { if (e.target.value) { setPreset("dia"); setRango([e.target.value, e.target.value]); } }} className="bg-transparent text-[13px] outline-none [color-scheme:light]" />
             </label>
-            <span className={`flex min-h-[44px] flex-wrap items-center gap-1.5 rounded-full border px-3 py-0 text-[13.5px] font-semibold ${preset === "libre" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
+            <span className={`flex flex-wrap items-center gap-1.5 rounded-full border px-3 py-1 text-[13.5px] font-semibold ${preset === "libre" ? "border-ink bg-ink text-white" : "border-line bg-white text-ink"}`}>
               Desde
-              <input type="date" max={b} value={a} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([e.target.value, b < e.target.value ? e.target.value : b]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none" />
+              <input type="date" max={b} value={a} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([e.target.value, b < e.target.value ? e.target.value : b]); } }} className="bg-transparent text-[13px] outline-none" />
               hasta
-              <input type="date" max={datos.hoy} min={a} value={b} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([a, e.target.value]); } }} className="min-h-[44px] bg-transparent text-[13px] outline-none" />
+              <input type="date" max={datos.hoy} min={a} value={b} onChange={(e) => { if (e.target.value) { setPreset("libre"); setRango([a, e.target.value]); } }} className="bg-transparent text-[13px] outline-none" />
             </span>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2 text-[13.5px]">
@@ -741,19 +766,19 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
           <div className="mt-4 rounded-[16px] border border-[#e8d9b8] bg-[#fbf6ea] px-4 py-3 text-[15px] leading-relaxed text-ink">
             Estás viendo <b>del {textoRango(a, b)}</b> ({largo} {largo === 1 ? "día" : "días"}).{" "}
             {compara === "no" ? "No lo estás comparando con nada." : <>Cada flecha lo compara con <b>{compara === "anio" ? "las mismas fechas del año pasado" : `los ${largo} días justo anteriores`}</b>: del {textoRango(ca, cb)}.</>}
-            <details className="text-[14px] text-ink/75">
-              <summary className="cursor-pointer py-3 font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>
+            <details className="mt-1 text-[14px] text-ink/75">
+              <summary className="cursor-pointer font-semibold text-teal-deep">Cómo se lee esta pantalla</summary>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 <li><b>Arriba eliges las fechas</b> (7 días, 28 días, un mes, un día concreto…) y <b>con qué comparar</b>.</li>
                 <li>La cifra grande es la de las fechas elegidas. Debajo, <b>"antes"</b> es la cifra de las fechas con las que comparas.</li>
                 <li><b>Verde</b> es que va a mejor y <b>rojo</b> que va a peor. "Sin datos antes" quiere decir que entonces aún no lo medíamos.</li>
-                <li>Las pestañas separan los temas: <b>Resumen</b>, <b>Consultas</b> (del CRM, la libreta de clientes), <b>Anuncios</b>, <b>La web</b>, <b>Google sin pagar</b> y <b>Ficha de Google y redes</b>. En el móvil, desliza la fila de pestañas hacia la izquierda para ver las últimas.</li>
+                <li>Las pestañas separan los temas: <b>Resumen</b>, <b>Ventas</b> (del CRM, la libreta de clientes), <b>Anuncios</b>, <b>La web</b>, <b>Google sin pagar</b> y <b>Ficha de Google y redes</b>. En el móvil, desliza la fila de pestañas hacia la izquierda para ver las últimas.</li>
                 <li>La web y Analytics van al momento; Search Console, 2 o 3 días por detrás; los anuncios, la ficha de Google e Instagram se ponen al día cada mañana (la ficha de Google llega unos 3 días por detrás).</li>
               </ul>
             </details>
           </div>
 
-          </Plegable>
+          </section>
           {!soloCifras && (
           <Plegable id="pl-temas" icono="grid" color={PALETA_ALEGRIA.web} titulo="Cómo está cada parte" pista={temas ? temas.map((m) => `${m.titulo}: ${m.estado ?? LUZ[m.luz].t}`).join(" · ") : undefined}>
           {temas && temas.length > 0 && <Temas temas={temas} resumen={resumenHoy} />}
@@ -806,7 +831,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
           <>
             <TresPreguntas T={T} C={C} crm={detalle?.crm ?? null} cargando={cargando} largo={largo} />
             {!datos.fallos?.length && <Alertas T={T} C={C} datos={datos} largo={largo} b={b} />}
-            <VisitasReales T={T} C={C} origenes={detalle?.origenes ?? null} cargando={cargando} a={a} b={b} ultimoAds={datos.anuncios.diario[datos.anuncios.diario.length - 1]?.[0] ?? ""} />
+            <VisitasReales T={T} C={C} origenes={detalle?.origenes ?? null} cargando={cargando} a={a} b={b} adsHasta={datos.anuncios.actualizado} inicio={datos.inicioVisitas} />
             <div className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 lg:grid-cols-4">
               {kpis.map(({ m, extra }) => {
                 const v = m.f(T);
@@ -907,7 +932,7 @@ export default function Mesa({ datos, temas, resumenHoy, tareas, relojes, base }
                 ["Casos aceptados", crmT.firm, undefined],
               ]} />
               {!crmT.firm && crmT.leads > 0 && <p className="mt-3 text-[13.5px] leading-relaxed text-ink/70">Todavía no hay casos aceptados de las consultas que entraron en este periodo: hay {num(crmT.visitas)} primeras consultas y {num(crmT.pres)} hojas de encargo en curso. Un caso puede tardar semanas en decidirse.</p>}
-              <p className="mt-3 text-[13px] leading-relaxed text-ink/60">Los pasos de la web cuentan solo lo que pasa en la web. Los del CRM incluyen también a quien llega por teléfono, WhatsApp o recomendación (por eso pueden ser más). Además, {num(T.whatsapp)} pulsaciones en WhatsApp y {num(T.llamadas)} en llamar: son pulsaciones del botón, no conversaciones; las conversaciones reales las apunta el despacho en el CRM.</p>
+              <VerMas corto={<><b>El CRM puede sumar más que la web:</b> incluye teléfono, WhatsApp y recomendaciones.</>}>Además, {num(T.whatsapp)} pulsaciones en WhatsApp y {num(T.llamadas)} en llamar. Son toques del botón, no conversaciones: esas las apunta el despacho en el CRM.</VerMas>
             </Caja>
           </>
         )}
@@ -1362,7 +1387,7 @@ function PorCanal({ T, C }: { T: Totales; C: Totales | null }) {
           { k: "cpc", t: "Coste por contacto en la web", v: (r) => r.cpc ?? 0, num: true, f: (r) => (r.cpc ? eur(r.cpc) : "-") },
         ]}
       />
-      <p className="mt-3 text-[12.5px] leading-relaxed text-ink/50">Los contactos son los que llegan a la web. Mientras no esté completa la medición de los anuncios, su coste por contacto aquí sale más alto que el que da Google: parte de las consultas llegan por teléfono y aún no sabemos de qué anuncio vienen.</p>
+      <VerMas corto={<>Contactos que llegan a la web.</>} className="text-[12.5px] text-ink/50">Mientras no esté completa la medición de los anuncios, aquí su coste por contacto sale más alto que en Google: parte de las consultas llegan por teléfono.</VerMas>
     </Caja>
   );
 }
