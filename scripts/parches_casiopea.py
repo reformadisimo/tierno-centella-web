@@ -82,4 +82,24 @@ def aplica(mesa, cas, fallos):
             mesa = mesa.replace(x, y, 1)
         else:
             fallos.append(f"{n}: no encontrado el texto largo: {x[60:130]}")
+
+    # 5. «Cada canal, de un vistazo»: sus visitas y su rebote son de Analytics (solo quien acepta cookies), no del contador propio.
+    #    Reformadísimo ya lo trae en las visitas (12c8c69); aquí también se rotula el rebote y va el aviso corto propio.
+    i = mesa.find('<Caja titulo="Cada canal, de un vistazo"')
+    j = mesa.find("</Caja>", i) if i >= 0 else -1
+    if i < 0 or j < 0:
+        fallos.append(f"{n}: no encontrada la tabla «Cada canal, de un vistazo»")
+    else:
+        t = mesa[i:j]
+        t = t.replace('t: "Visitas", v: (r) => r.sesiones', 't: "Visitas (Analytics)", v: (r) => r.sesiones', 1)
+        t = t.replace('t: "Rebote", v: (r) => r.rebote', 't: "Rebote (Analytics)", v: (r) => r.rebote', 1)
+        aviso = "OJO: las visitas y el rebote de esta tabla son de Analytics, que solo ve a quien acepta cookies (más o menos 1 de cada 10). Las de verdad, en «Quién entra de verdad en la web». Los contactos sí son todos."
+        if aviso not in t:
+            k = t.find("<VerMas corto={<>")
+            if k < 0:
+                fallos.append(f"{n}: «Cada canal» sin texto de ayuda donde poner el aviso de Analytics")
+            else:
+                k2 = t.find("</>}", k)
+                t = t[:k] + "<VerMas corto={<>" + aviso + t[k2:]
+        mesa = mesa[:i] + t + mesa[j:]
     return mesa
