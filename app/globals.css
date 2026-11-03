@@ -8792,3 +8792,56 @@ h3 .chip-vivo,.tv:is(h3) .chip-vivo{width:34px;height:34px;border-radius:10px}
   .destacado-tu-caso { grid-template-columns: auto 1fr; padding: 18px; }
   .dtc-boton { grid-column: 1 / -1; justify-self: start; }
 }
+
+/* Guía de Jesús, 3-nov-2026: «Lo que te toca a ti», «Lo último», atajos flotantes y aviso corto (components/EstadoGuia.tsx).
+   Clases propias (tg-…, gnav, gni, gnt) para no chocar con nada de la guía. */
+.tg-caja{position:relative;z-index:1;margin:18px 0 22px;background:#fff;color:#12202b;border:3px solid #0a8f4e;border-radius:16px;padding:18px 20px 16px;scroll-margin-top:96px;text-align:left;box-shadow:0 14px 34px rgba(0,0,0,.18);max-width:760px}
+.tg-caja h2{margin:0;font-size:clamp(24px,4vw,30px);line-height:1.15;color:#0a7a43;font-weight:800;letter-spacing:0}
+.tg-caja .tg-entradilla{margin:8px 0 12px;font-size:16px;line-height:1.45;color:#33495c!important;opacity:1;max-width:none;text-shadow:none}
+.tg-caja .tg-tarea p{opacity:1;max-width:none;text-shadow:none;color:#12202b!important}
+.tg-lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tg-tarea{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;padding:12px 0 0;border-top:1px solid #e3e9ee}
+.tg-lista > .tg-tarea:first-child{border-top:0;padding-top:0}
+.tg-num{width:30px;height:30px;border-radius:50%;background:#0a8f4e;color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+.tg-tarea p{margin:0;font-size:17px;line-height:1.45;color:#12202b}
+.tg-botones{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tg-boton{display:inline-flex;align-items:center;min-height:42px;padding:9px 16px;border-radius:999px;background:#0a8f4e;color:#fff!important;font-weight:700;font-size:15px;text-decoration:none!important;line-height:1.1}
+.tg-boton + .tg-boton{background:#fff;color:#0a7a43!important;border:2px solid #0a8f4e}
+.tg-prio{display:inline-block;margin:0 0 5px;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.tg-p-hoy{background:#fde2e2;color:#a61b1b}.tg-p-muy{background:#ffe6d5;color:#a3400c}.tg-p-imp{background:#fff3c4;color:#7a5600}.tg-p-luego{background:#e6eef5;color:#33495c}.tg-p-hecha{background:#e3f4ea;color:#0a7a43}
+.tg-hecha .tg-num{background:#c9d3db}
+.tg-hecha p{text-decoration:line-through;color:#6b7a86}
+.tg-resto{margin-top:12px;padding-top:12px;border-top:1px solid #e3e9ee}
+.tg-resto > .tg-tarea:first-child{border-top:0;padding-top:0}
+.tg-mas{margin:14px 0 0;background:#fff;color:#0a7a43;border:2px solid #0a8f4e;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+.tg-ultimo{margin:0 0 22px;background:#fff;border:1px solid var(--linea);border-left:5px solid #1f6fb2;border-radius:14px;padding:16px 18px}
+.tg-ultimo h2{margin:0 0 8px;font-size:1.25rem;color:#1f6fb2}
+.tg-ultimo ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tg-ultimo li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;font-size:15.5px;line-height:1.45}
+.tg-fecha{font-weight:800;color:#33495c;white-space:nowrap}
+.tg-ultimo a{color:#12202b}
+.gnav{position:fixed;left:16px;bottom:16px;z-index:34;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .25s,transform .25s}
+.gnav.on{opacity:1;transform:none;pointer-events:auto}
+.gnav a{margin:0;white-space:nowrap;display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:16px;line-height:1.1;text-decoration:none!important;padding:13px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-transform:none;letter-spacing:0}
+.gnav .gni{background:#1f6fb2;color:#fff!important;border:2px solid #1f6fb2}
+.gnav .gnt{background:#0a8f4e;color:#fff!important;border:2px solid #0a8f4e;font-size:18px;padding:15px 22px}
+.gnav svg{width:20px;height:20px;flex:none}
+.gnav .gnt svg{width:22px;height:22px}
+.gnav .gnt.pulso{animation:gpul 1.6s ease-in-out 3}
+@keyframes gpul{0%,100%{box-shadow:0 6px 18px rgba(0,0,0,.25)}50%{box-shadow:0 0 0 9px rgba(10,143,78,.28),0 6px 18px rgba(0,0,0,.25)}}
+@media (prefers-reduced-motion:reduce){.gnav .gnt.pulso{animation:none}}
+/* Los atajos viejos de la guía se esconden para que no salgan dos juegos */
+body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!important}
+@media (max-width:700px){
+  .gnav{left:0!important;right:0;bottom:0;gap:8px;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);box-shadow:0 -4px 16px rgba(18,32,43,.14)}
+  .gnav a{flex:1;justify-content:center;font-size:15px;padding:12px 8px;gap:7px;box-shadow:none}
+  .gnav .gnt{flex:1.5;font-size:15.5px;padding:12px 8px}
+  .gnav svg,.gnav .gnt svg{width:18px;height:18px}
+  .tg-caja{padding:16px 15px 14px}
+}
+.tg-aviso{position:fixed;left:12px;right:12px;margin:0 auto;top:84px;z-index:36;display:flex;align-items:center;gap:12px;max-width:560px;background:#fff;color:#12202b;border:2px solid #0a8f4e;border-radius:16px;padding:12px 12px 12px 16px;box-shadow:0 16px 40px rgba(13,44,72,.28);animation:tg-entra .4s ease both}
+@keyframes tg-entra{from{opacity:0}to{opacity:1}}
+.tg-aviso p{margin:0;flex:1;font-size:15.5px;line-height:1.4}
+.tg-aviso a{flex:none;background:#0a8f4e;color:#fff!important;font-weight:700;border-radius:999px;padding:9px 16px;text-decoration:none!important}
+.tg-aviso button{flex:none;background:none;border:0;color:#6b7a86;cursor:pointer;padding:6px;display:flex}
+@media print{.gnav,.tg-aviso{display:none!important}.tg-caja{box-shadow:none}}

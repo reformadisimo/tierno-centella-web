@@ -8,6 +8,7 @@ import { darVida } from '@/lib/vida';
 import { Bocadillo } from '@/components/Vida';
 import BotonPdfPortada from '@/components/BotonPdfPortada';
 import GuiaJesus, { type SeccionGuia } from '@/components/GuiaJesus';
+import { TareasGuia } from '@/components/EstadoGuia';
 
 // Página privada: no se indexa, no está en el menú ni en el mapa del sitio.
 export const metadata: Metadata = {
@@ -190,6 +191,7 @@ export default function Pagina() {
         <img className="gj-portada-foto" src="/img/equipo.webp" srcSet="/img/equipo-640.webp 640w, /img/equipo-960.webp 960w, /img/equipo.webp 1600w" sizes="100vw" alt="" />
         <div className="contenedor">
           <img src="/img/logo-tc-blanco.webp" alt="Tierno Centella Abogados" width={260} height={62} />
+          <TareasGuia />
           <a className="gj-ver-web" href="/" target="_blank" rel="noopener">
             <span>
               <strong>Lo primero: tu web nueva, tierno-centella-web.vercel.app</strong>

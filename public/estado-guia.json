@@ -1,0 +1,71 @@
+{
+ "version": "2026-11-03T10:00",
+ "fecha": "3 de noviembre de 2026",
+ "aviso": "Arriba del todo tienes ahora «Lo que te toca a ti»: tres cosas rápidas, sin prisa.",
+ "enlace": "#tareas",
+ "popup": null,
+ "ultimo": [
+  {
+   "f": "28 oct",
+   "t": "Tres herramientas más en tu web: cuánto se cobra de baja, los salarios que debe la empresa con sus intereses y lo que cubre el FOGASA.",
+   "u": "#11-las-herramientas-lo-que-casi-nadie-del-sector-tiene"
+  },
+  {
+   "f": "28 oct",
+   "t": "Tu ficha de Google: cómo pediríamos las reseñas a tus clientes y clientas por WhatsApp y por correo, con ejemplos.",
+   "u": "#5-tu-ficha-de-google-4-2-con-59-resenas"
+  },
+  {
+   "f": "28 oct",
+   "t": "La lupa de tu web: dónde toca la gente, hasta dónde baja y dónde se va.",
+   "u": "#19-ter-la-lupa-vemos-lo-que-hace-la-gente-en-tu-web"
+  },
+  {
+   "f": "27 oct",
+   "t": "Tu mesa de control: cómo va el despacho en diez segundos, desde el móvil.",
+   "u": "/mesa-tc-6v9k3p"
+  },
+  {
+   "f": "26 oct",
+   "t": "El resumen de tu guía: lo más importante en una sola página.",
+   "u": "/guia-jesus/resumen"
+  },
+  {
+   "f": "23 oct",
+   "t": "Tu web nueva y esta guía, preparadas para ti.",
+   "u": "/"
+  }
+ ],
+ "tareas": [
+  {
+   "t": "Abre tu web nueva en el móvil y pregúntale algo al chat, como si fueras un cliente. Es un minuto.",
+   "u": "/",
+   "b": "Abrir mi web"
+  },
+  {
+   "t": "Lee el resumen de esta guía: lo más importante en una sola página. Son cinco minutos.",
+   "u": "/guia-jesus/resumen",
+   "b": "Leer el resumen"
+  },
+  {
+   "t": "Dinos qué cambiarías de tu web: un texto, una foto, lo que no te guste. Con una línea por correo o por WhatsApp nos vale, y lo cambiamos enseguida.",
+   "u": "/",
+   "b": "Ver mi web"
+  },
+  {
+   "t": "Contesta las «Preguntas para ti» de esta guía. Son cortas y puedes saltarte las que quieras.",
+   "u": "#24-preguntas-para-ti",
+   "b": "Ver las preguntas"
+  },
+  {
+   "t": "Abre tu mesa de control en el móvil. La primera vez, una tira amarilla te la enseña en 9 pasos cortos.",
+   "u": "/mesa-tc-6v9k3p",
+   "b": "Ver mi mesa"
+  },
+  {
+   "t": "En la mesa, prueba «Tus sueños y tus cuentas»: nos dices hasta dónde quieres llegar y te dice si hoy es un sueño o un objetivo.",
+   "u": "/mesa-tc-6v9k3p#mesa-suenos",
+   "b": "Probarlo"
+  }
+ ]
+}

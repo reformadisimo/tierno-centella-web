@@ -4,6 +4,7 @@ import { esYo as esIgnacio } from '@/lib/propios';
 import { ChipVivo } from './Vida';
 import FotoVideo from './FotoVideo';
 import ProgresoGuia from './ProgresoGuia';
+import { AtajosGuia, AvisoEstado, LoUltimo, TareasGuia, irATareas, useEstadoGuia } from './EstadoGuia';
 import { DOLORES } from '@/lib/guia-dolores';
 import { BloqueWeb, BloqueLandings, BloqueCorreosEnlace, BloquePanelEnlace, BloqueCrmEnlace, BloqueRedesEnlace, BloqueLupaEnlace, BloqueOpinionEnlace } from './EnlacesGuia';
 import RedesHoyLuego, { GoogleNombre } from './RedesGuia';
@@ -406,32 +407,53 @@ export const NOVEDADES_PENDIENTES: { texto: string; clave: string }[] = [
 ];
 
 function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
-  const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades'>('');
+  // 3-nov-2026: además de la bienvenida y las novedades de siempre, la ventana de novedades grandes puede venir de
+  // public/estado-guia.json (popup). Al cerrar cualquier ventana, la guía lleva a «Lo que te toca a ti» (#tareas).
+  const estado = useEstadoGuia();
+  const [modo, setModo] = useState<'' | 'bienvenida' | 'novedades' | 'estado'>('');
+  const [decidido, setDecidido] = useState(false);
   const [nuevas, setNuevas] = useState<typeof NOVEDADES>([]);
+  const hecho = useRef(false);
   useEffect(() => {
+    if (estado === undefined || hecho.current) return;
+    hecho.current = true;
     try {
       const vista = Number(localStorage.getItem('tc-guia-version') || 0);
       const pendientes = NOVEDADES.filter((n) => n.v > vista);
+      const popup = estado?.popup && estado.version && localStorage.getItem('tc-est-popup') !== estado.version;
       // Si llega desde nuestro correo de novedades en un aparato nuevo (sin nada guardado), ve las novedades, no la bienvenida.
       const desdeCorreo = /[?&]de=correo/.test(location.search);
-      if (vista === 0 && !(desdeCorreo && pendientes.length)) setModo('bienvenida');
+      if (vista === 0 && !(desdeCorreo && (pendientes.length || popup))) setModo('bienvenida');
+      else if (popup) setModo('estado');
       else if (pendientes.length) {
         setNuevas(pendientes);
         setModo('novedades');
       }
       localStorage.setItem('tc-guia-version', String(VERSION));
     } catch {}
-  }, []);
+    setDecidido(true);
+  }, [estado]);
   const caja = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!modo) return;
     caja.current?.focus();
-    const tecla = (e: KeyboardEvent) => e.key === 'Escape' && setModo('');
+    const tecla = (e: KeyboardEvent) => e.key === 'Escape' && caja.current?.querySelector<HTMLButtonElement>('.salida-cerrar')?.click();
     window.addEventListener('keydown', tecla);
     return () => window.removeEventListener('keydown', tecla);
   }, [modo]);
-  if (!modo) return null;
-  const cerrar = () => setModo('');
+  if (!modo) return <AvisoEstado bloqueado={!decidido} />;
+  const cerrar = () => {
+    try {
+      if (estado?.version) {
+        // Quien ya ha visto una ventana (bienvenida o novedades) no necesita la de novedades de esta misma versión.
+        localStorage.setItem('tc-est-popup', estado.version);
+        localStorage.setItem('tc-est-aviso', estado.version);
+      }
+    } catch {}
+    setModo('');
+    setTimeout(irATareas, 60);
+  };
+  const pop = estado?.popup;
   const idDe = (clave: string) => secciones.find((s) => s.titulo.startsWith(clave + '.'))?.id;
   return (
     <div className="salida-fondo" onClick={cerrar}>
@@ -441,7 +463,37 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
             <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
-        {modo === 'bienvenida' ? (
+        {modo === 'estado' && pop ? (
+          <>
+            <p className="etiqueta-calida">{pop.etiqueta || 'Hola de nuevo, Jesús'}</p>
+            <h2 id="gj-aviso-titulo">{pop.titulo}</h2>
+            {pop.intro && <p>{pop.intro}</p>}
+            <ul className="gj-novedades">
+              {pop.items.map((n) => (
+                <li key={n.t}>
+                  <a
+                    href={n.h}
+                    {...(n.h.startsWith('#') ? {} : { target: '_blank', rel: 'noopener' })}
+                    onClick={(ev) => {
+                      try {
+                        if (estado?.version) {
+                          localStorage.setItem('tc-est-popup', estado.version);
+                          localStorage.setItem('tc-est-aviso', estado.version);
+                        }
+                      } catch {}
+                      if (n.h === '#tareas') {
+                        ev.preventDefault();
+                        cerrar();
+                      } else setModo('');
+                    }}
+                  >
+                    {n.t}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : modo === 'bienvenida' ? (
           <>
             <p className="etiqueta-calida">Hola, Jesús</p>
             <h2 id="gj-aviso-titulo">Bienvenido a tu guía</h2>
@@ -474,7 +526,7 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
             <ul className="gj-novedades">
               {nuevas.map((n) => (
                 <li key={n.clave}>
-                  <a href={`#${idDe(n.clave) ?? ''}`} onClick={cerrar}>
+                  <a href={`#${idDe(n.clave) ?? ''}`} onClick={() => setModo('')}>
                     {n.texto}
                   </a>
                 </li>
@@ -487,7 +539,7 @@ function AvisoGuia({ secciones }: { secciones: SeccionGuia[] }) {
           </>
         )}
         <button type="button" className="boton boton-marcador" onClick={cerrar}>
-          {modo === 'bienvenida' ? 'Empezar a leer' : 'Verlo'}
+          {modo === 'bienvenida' ? 'Empezar a leer' : 'Ver lo que te toca a ti'}
         </button>
       </div>
     </div>
@@ -780,6 +832,7 @@ export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: 
       <Lupa pantalla="guia" />
       <AvisoGuia secciones={secciones} />
       <ProgresoGuia />
+      <AtajosGuia />
       <aside className="gj-lateral" id="gj-indice">
         <div className="gj-progreso" aria-label={`Has visto ${hechos} de ${total} apartados`}>
           <div>
@@ -849,6 +902,7 @@ export default function GuiaJesus({ secciones, actualizada = '' }: { secciones: 
         </div>
       </aside>
       <div className="gj-cuerpo">
+        <LoUltimo />
         <div className="gj-buscador-caja">
         <p className="gj-buscador-titulo">¿Buscas algo concreto?</p>
         <p className="gj-buscador-texto">Escribe una palabra y te enseñamos solo los apartados que hablan de ello. Es la forma más rápida de leer la guía.</p>
