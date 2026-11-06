@@ -154,9 +154,12 @@ function preparar(a: Aviso, donde = '', robot = '') {
       return `<p style="margin:0 0 12px"><b>${esc(p)}</b><br><span style="color:${sin ? '#9aa7b2' : '#0d2c48'}">${esc(sin ? 'Sin contestar' : resp)}</span></p>`;
     })
     .join('');
+  const plan = t.startsWith('Plan a medida');
   return {
-    asunto: `Tierno Centella: respuestas de Jesús al cuestionario (${bloques.length - vacias} de ${bloques.length} contestadas)`,
-    html: caja('Respuestas de Jesús', cuerpo, `${GUIA}#24-preguntas-para-ti`),
+    asunto: plan
+      ? `Tierno Centella: Jesús ha contestado el plan a medida (${bloques.length - vacias} de ${bloques.length} contestadas)`
+      : `Tierno Centella: respuestas de Jesús al cuestionario (${bloques.length - vacias} de ${bloques.length} contestadas)`,
+    html: caja(plan ? 'Plan a medida: respuestas de Jesús' : 'Respuestas de Jesús', cuerpo, plan ? `${GUIA}#23-ter-tu-plan-a-medida-en-2-minutos` : `${GUIA}#24-preguntas-para-ti`),
     texto: t,
   };
 }

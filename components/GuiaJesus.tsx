@@ -22,6 +22,7 @@ import SeguridadGuia from './SeguridadGuia';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Lupa, { enviarLupa } from './Lupa';
 import CuestionarioGuia from './CuestionarioGuia';
+import PlanMedidaGuia from './PlanMedidaGuia';
 import AnunciosGuia from './AnunciosGuia';
 import OficiosGuia from './OficiosGuia';
 import { BloqueAccesos, BloqueConexiones, BloquePrompts, BloqueRedes } from './LogosGuia';
@@ -353,6 +354,7 @@ const BLOQUES: Record<string, () => React.ReactElement> = {
   resenas: ResenasGuia,
   proveedores: ProveedoresGuia,
   costes: CostesGuia,
+  plan: PlanMedidaGuia,
   todo: TodoGuia,
   seguridad: SeguridadGuia,
   web: BloqueWeb,

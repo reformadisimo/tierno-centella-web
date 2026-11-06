@@ -8992,3 +8992,7 @@ body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!import
 
 /* Artículos con vídeo propio arriba en vez de foto (tc·v10) */
 .guia-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--tinta); }
+
+/* Guía de Jesús: plan a medida (tc·v11) */
+.plan-medida .pm-varias { margin: 4px 0 0 40px; font-size: 0.88rem; color: var(--tinta-suave); }
+.plan-medida .cg-pregunta textarea { min-height: 0; }

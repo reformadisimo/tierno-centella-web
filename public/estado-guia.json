@@ -1,10 +1,15 @@
 {
- "version": "2026-11-06T09:00",
+ "version": "2026-11-06T09:30",
  "fecha": "6 de noviembre de 2026",
- "aviso": "Nuevo: así verán tus clientes su caso, desde el móvil.",
- "enlace": "/area-cliente",
+ "aviso": "Nuevo: tu plan a medida, en 13 preguntas de pulsar.",
+ "enlace": "#23-ter-tu-plan-a-medida-en-2-minutos",
  "popup": null,
  "ultimo": [
+  {
+   "f": "6 nov",
+   "t": "Tu plan a medida: 13 preguntas de pulsar, en 2 minutos, para prepararte un plan hecho para tu despacho.",
+   "u": "#23-ter-tu-plan-a-medida-en-2-minutos"
+  },
   {
    "f": "6 nov",
    "t": "Tu CRM de prueba, conectado al área de cliente y con permisos por persona: entra como Jesús, como una abogada o como recepción.",
@@ -29,14 +34,15 @@
    "f": "28 oct",
    "t": "La lupa de tu web: dónde toca la gente, hasta dónde baja y dónde se va.",
    "u": "#19-ter-la-lupa-vemos-lo-que-hace-la-gente-en-tu-web"
-  },
-  {
-   "f": "27 oct",
-   "t": "Tu mesa de control: cómo va el despacho en diez segundos, desde el móvil.",
-   "u": "/mesa-tc-6v9k3p"
   }
  ],
  "tareas": [
+  {
+   "t": "Contesta las 13 preguntas de tu plan a medida. Casi todas son de pulsar un botón: 2 minutos.",
+   "prio": "Importante",
+   "u": "#23-ter-tu-plan-a-medida-en-2-minutos",
+   "b": "Contestar ahora"
+  },
   {
    "t": "Abre tu web nueva en el móvil y pregúntale algo al chat, como si fueras un cliente. Es un minuto.",
    "u": "/",

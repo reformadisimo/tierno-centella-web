@@ -1433,6 +1433,14 @@ Analytics, Search Console y Google Ads, de solo lectura. Tag Manager, las fichas
 >
 > **Para qué sirven, y nada más**: para ajustar las campañas. No son una promesa de resultados. Son datos que solo conoces tú y siguen siendo tuyos: en tu mesa de control, dentro de «Tus sueños y tus cuentas», puedes ponerlos tú mismo y ver al momento qué cambia.
 
+## 23 ter. Tu plan a medida, en 2 minutos
+
+Para prepararte **un plan hecho para tu despacho** (qué hacer primero, dónde invertir y cuánto), necesitamos saber cómo estás hoy. Son 13 preguntas y casi todas se contestan pulsando un botón. Ninguna es obligatoria y no te pedimos tu facturación.
+
+[[plan]]
+
+Con tus respuestas te mandamos el plan por escrito: qué haríamos el primer mes, el tercero y el sexto, cuánto costaría y qué esperamos conseguir. Sin compromiso y sin reuniones.
+
 ## 24. Preguntas para ti
 
 CUESTIONARIO
