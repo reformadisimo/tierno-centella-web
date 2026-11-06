@@ -1,10 +1,15 @@
 {
- "version": "2026-11-03T10:00",
- "fecha": "3 de noviembre de 2026",
- "aviso": "Arriba del todo tienes ahora «Lo que te toca a ti»: tres cosas rápidas, sin prisa.",
- "enlace": "#tareas",
+ "version": "2026-11-06T09:00",
+ "fecha": "6 de noviembre de 2026",
+ "aviso": "Nuevo: así verán tus clientes su caso, desde el móvil.",
+ "enlace": "/area-cliente",
  "popup": null,
  "ultimo": [
+  {
+   "f": "6 nov",
+   "t": "Tu área de cliente: así verán tus clientes su caso desde el móvil, con un caso de ejemplo que puedes hacer avanzar.",
+   "u": "/area-cliente"
+  },
   {
    "f": "28 oct",
    "t": "Tres herramientas más en tu web: cuánto se cobra de baja, los salarios que debe la empresa con sus intereses y lo que cubre el FOGASA.",
@@ -29,11 +34,6 @@
    "f": "26 oct",
    "t": "El resumen de tu guía: lo más importante en una sola página.",
    "u": "/guia-jesus/resumen"
-  },
-  {
-   "f": "23 oct",
-   "t": "Tu web nueva y esta guía, preparadas para ti.",
-   "u": "/"
   }
  ],
  "tareas": [

@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/plazos-para-reclamar',
     '/acompanar',
     '/primera-consulta',
+    '/area-cliente',
     '/donde-ir',
     '/contacto',
     '/reservar',

@@ -102,6 +102,7 @@ export const MENU: Grupo[] = [
       { href: '/tramites', texto: 'Trámites que puedes hacer tú' },
       { href: '/modelos', texto: 'Modelos de cartas' },
       { href: '/primera-consulta', texto: 'Tu primera consulta' },
+      { href: '/area-cliente', texto: 'Tu área de cliente' },
       { href: '/donde-ir', texto: 'Dónde ir en Madrid' },
       { href: '/acompanar', texto: 'Acompaño a alguien' },
       { href: '/glosario', texto: 'Glosario laboral' },

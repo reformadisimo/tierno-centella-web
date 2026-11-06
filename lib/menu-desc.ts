@@ -55,6 +55,7 @@ export const MENU_DESC: Record<string, string> = {
   '/tramites': 'Paro, conciliación, Inspección',
   '/modelos': '16 cartas para descargar',
   '/primera-consulta': 'Cómo es y cuánto cuesta',
+  '/area-cliente': 'Tu caso, desde el móvil',
   '/donde-ir': 'SMAC, juzgados, INSS',
   '/acompanar': 'Para quien está al lado',
   '/glosario': '105 palabras sin jerga',
