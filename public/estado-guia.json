@@ -7,6 +7,11 @@
  "ultimo": [
   {
    "f": "6 nov",
+   "t": "Un vídeo de 33 segundos: así ve su caso tu cliente desde el móvil, con el ejemplo de Laura.",
+   "u": "/area-cliente#video"
+  },
+  {
+   "f": "6 nov",
    "t": "Tu plan a medida: 13 preguntas de pulsar, en 2 minutos, para prepararte un plan hecho para tu despacho.",
    "u": "#23-ter-tu-plan-a-medida-en-2-minutos"
   },
@@ -29,11 +34,6 @@
    "f": "28 oct",
    "t": "Tu ficha de Google: cómo pediríamos las reseñas a tus clientes y clientas por WhatsApp y por correo, con ejemplos.",
    "u": "#5-tu-ficha-de-google-4-2-con-59-resenas"
-  },
-  {
-   "f": "28 oct",
-   "t": "La lupa de tu web: dónde toca la gente, hasta dónde baja y dónde se va.",
-   "u": "#19-ter-la-lupa-vemos-lo-que-hace-la-gente-en-tu-web"
   }
  ],
  "tareas": [
@@ -72,6 +72,18 @@
    "t": "En la mesa, prueba «Tus sueños y tus cuentas»: nos dices hasta dónde quieres llegar y te dice si hoy es un sueño o un objetivo.",
    "u": "/mesa-tc-6v9k3p#mesa-suenos",
    "b": "Probarlo"
+  },
+  {
+   "t": "Mira el vídeo de 33 segundos del Acceso clientes y prueba el caso de ejemplo de Laura: pulsa «Avanza el caso» y verás cómo cambia, desde la consulta hasta la sentencia.",
+   "u": "/area-cliente#video",
+   "b": "Ver el vídeo",
+   "u2": "/area-cliente",
+   "b2": "Probar el caso"
+  },
+  {
+   "t": "Entra en tu CRM de prueba. Arriba, en «Entra como», elige Jesús, una abogada o recepción, y mira lo que vería cada uno.",
+   "u": "/guia-jesus/crm",
+   "b": "Ver mi CRM de prueba"
   }
  ]
 }
