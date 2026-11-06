@@ -8977,3 +8977,9 @@ body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!import
 .guia-desp[open] summary::before{content:"−"}
 .guia-desp ol{margin:0;padding:0 18px 14px 40px;font-size:15.5px;line-height:1.5}
 .guia-desp li{margin:0 0 8px}
+
+/* «Acceso clientes» bien visible: en la franja de arriba (todas las pantallas) y en el menú del móvil */
+.barra-sup-clientes{display:inline-flex;align-items:center;gap:7px;background:var(--marcador);color:var(--tinta)!important;font-weight:800;font-size:.86rem;text-decoration:none;border-radius:999px;padding:5px 14px;white-space:nowrap;box-shadow:0 0 0 2px rgba(242,193,78,.25);transition:transform .15s,box-shadow .15s}
+.barra-sup-clientes:hover,.barra-sup-clientes:focus-visible{transform:translateY(-1px);box-shadow:0 0 0 4px rgba(242,193,78,.35)}
+.mm-r-clientes{grid-column:1/-1;flex-direction:row!important;justify-content:center;gap:10px!important;background:#fff;color:var(--tinta);border:2px solid var(--tinta);font-size:1rem!important}
+@media (max-width:640px){.barra-sup-clientes{padding:4px 12px;font-size:.84rem}}

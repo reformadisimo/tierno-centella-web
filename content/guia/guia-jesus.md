@@ -628,7 +628,7 @@ Hay algo que para nosotros no es negociable: **tú tienes el control de todo**. 
 
 - **Ves todo lo que hacemos**, cuando quieras, sin tener que pedírnoslo.
 - **Nada depende de nosotros para funcionar.** Ni una clave, ni una cuenta, ni un historial.
-- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. Pedimos un compromiso mínimo de 6 meses, porque la web va regalada; pero si a los tres meses no te hemos demostrado con tus números que lo hacemos mejor, puedes dejarlo desde el cuarto (apartado 21 bis). Te vas cuando quieras y te lo llevas todo a tu nombre.
+- **Si un día quieres dejar de trabajar con nosotros, no tienes que pedirnos claves ni accesos.** Ya lo tienes todo. **Sin permanencia**: te vas cuando quieras y te lo llevas todo a tu nombre.
 
 No queremos trabajar de otra manera con ningún cliente. Nos parece la única forma honesta de hacerlo: que sigas con nosotros porque te compensa, no porque no puedas irte.
 
@@ -1320,7 +1320,7 @@ Es normal: cambiar de web da respeto. **No hace falta dar el salto a ciegas.** P
 
 **Lo mismo hacemos siempre con las landings y los anuncios**: probamos dos versiones a la vez y nos quedamos con la que mejor funciona. Es nuestra forma de trabajar: decidir con datos, no con gustos.
 
-**Y una salida fácil, por si acaso.** Pedimos un compromiso de seis meses porque la web va regalada. Pero sabemos que con tres meses basta para ver si funciona. Por eso, **si a los tres meses no te hemos demostrado con tus propios números que lo hacemos mejor, dejas de pagar desde el cuarto mes**, sin dar explicaciones. No queremos que nadie siga con nosotros sin estar convencido: siempre te ponemos fácil la salida, y todo sigue a tu nombre. Es como trabajamos con todos nuestros clientes.
+**Y una salida fácil, por si acaso.** **Sin permanencia.** Si en algún momento no te convence, lo dejas cuando quieras, sin dar explicaciones. No queremos que nadie siga con nosotros sin estar convencido: siempre te ponemos fácil la salida, y todo sigue a tu nombre.
 
 ## 21 ter. Nuestra forma de trabajar: rápida, eficaz y robándote el menor tiempo posible
 
@@ -1501,7 +1501,7 @@ Un abrazo,
 
 ## 25 bis. Lo que te cuesta: una sola cuota, todo incluido
 
-Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota fija, la misma para cualquier empresa, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. **Una sola cuota fija, la misma para cualquier empresa y sin comisiones** sobre lo que inviertas en anuncios. El compromiso mínimo es de **6 meses**, porque la web te la regalamos: en ese tiempo ya tienes web, CRM, calculadoras y mucho más, que por separado valdría muchísimo más. Después, te quedas porque quieres, y si te vas, te lo llevas todo a tu nombre. Si un día nos pides rediseñar el logo, una página nueva, una calculadora, **todas las landings de anuncios que hagan falta** o una campaña distinta, entra en la cuota.
+Jesús, este es el punto más importante de todos, y te lo contamos claro: **con nosotros pagas una sola cuota fija, la misma para cualquier empresa, y todo lo demás está incluido.** Los cambios en la web, el SEO, los anuncios, las redes, las reseñas, los correos, los informes, **el CRM**... Sin facturas sueltas ni presupuestos por cada cambio: **no te cobramos luego por cada cosita**. **Una sola cuota fija, la misma para cualquier empresa y sin comisiones** sobre lo que inviertas en anuncios. La web te la regalamos, con el CRM, las calculadoras y mucho más, que por separado valdría muchísimo más. Y **sin permanencia**: te quedas porque quieres, y si te vas, te lo llevas todo a tu nombre. Si un día nos pides rediseñar el logo, una página nueva, una calculadora, **todas las landings de anuncios que hagan falta** o una campaña distinta, entra en la cuota.
 
 Y casi todas las herramientas que usamos para ti son **gratis**: el envío de correos, WhatsApp Business, Google, los mapas de calor. Lo único que pagarías aparte es lo que tú decidas invertir en anuncios (directamente a Google o a Meta, con tu tarjeta, para que lo veas todo) y, si sigue, el asistente de IA, que se paga por uso y son unos pocos euros al mes.
 
