@@ -174,6 +174,12 @@ export default function PaginaGuia({
               <div style={{ marginBottom: 32 }}>
                 <VideoYoutube id={video.id} titulo={video.titulo} prioridad />
               </div>
+            ) : pieza.videoPropio ? (
+              <figure className="guia-foto guia-video">
+                <video controls playsInline preload="none" poster={`/video/${pieza.videoPropio}-poster.jpg`} width={1280} height={720}>
+                  <source src={`/video/${pieza.videoPropio}.mp4`} type="video/mp4" />
+                </video>
+              </figure>
             ) : (
               <figure className="guia-foto">
                 <img src={foto.src} srcSet={foto.srcSet} sizes="(max-width: 1000px) 100vw, 720px" alt={foto.alt} width={1200} height={800} fetchPriority="high" />

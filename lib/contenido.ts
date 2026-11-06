@@ -11,6 +11,7 @@ import { enlazarGlosario } from './enlazar-glosario';
 // actualizado: AAAA-MM-DD      (opcional)
 // categoria: acoso | despido | incapacidad | empresas
 // video: ID de YouTube         (opcional)
+// videoPropio: nombre de un vídeo de public/video (sin .mp4), con su cartel <nombre>-poster.jpg; sustituye a la foto de arriba (opcional)
 // orden: número                (opcional, para ordenar guías)
 // ---
 // Cuerpo en Markdown. Las líneas que empiezan por "> " se pintan como recuadro destacado.
@@ -23,6 +24,7 @@ export type Pieza = {
   actualizado?: string;
   categoria?: string;
   video?: string;
+  videoPropio?: string;
   imagen?: string;
   tituloSeo?: string;
   imagenAlt?: string;
@@ -107,6 +109,7 @@ export function leerPieza(carpeta: string, slug: string): Pieza | null {
     actualizado: datos.actualizado,
     categoria: datos.categoria,
     video: datos.video,
+    videoPropio: datos.videoPropio,
     imagen: datos.imagen,
     tituloSeo: datos.tituloSeo,
     imagenAlt: datos.imagenAlt,

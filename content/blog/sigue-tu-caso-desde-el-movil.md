@@ -7,11 +7,12 @@ actualizado: 2026-11-06
 categoria: despido
 imagen: portatil-manos
 imagenAlt: Unas manos con un portátil, siguiendo un caso desde casa
+videoPropio: acceso-clientes
 ---
 
 Cuando te despiden, o cuando reclamas a tu empresa, lo que más pesa muchas veces no es el juicio. Es no saber. No saber en qué punto está tu caso, si ha llegado algo del juzgado, si te falta algún papel o cuándo es la próxima cita. Por eso, cuando eres cliente de Tierno Centella, tienes tu **área de cliente**: tu caso, siempre a mano, desde el móvil.
 
-Puedes [probarla ahora con un caso de ejemplo](/area-cliente#ejemplo): Laura, una clienta inventada a la que han despedido. Toca «Avanza el caso» y verás cómo cambia todo, de la primera consulta a la sentencia.
+Arriba tienes un vídeo de 33 segundos que lo enseña. Y puedes [probarla ahora con un caso de ejemplo](/area-cliente#ejemplo): Laura, una clienta inventada a la que han despedido. Toca «Avanza el caso» y verás cómo cambia todo, de la primera consulta a la sentencia.
 
 ## Lo que ves al entrar
 
