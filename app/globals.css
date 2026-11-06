@@ -8968,3 +8968,12 @@ body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!import
 .cr-area-mini{margin:8px 0 4px!important;font-weight:700;font-size:14px;color:var(--tinta);background:none;opacity:1}
 .cr-area-act{margin:0 0 6px;padding-left:18px;font-size:14.5px}
 .cr-area-act li{margin:0 0 4px}
+
+/* Guía desplegable «Cómo funciona» (área de cliente y CRM de prueba) */
+.guia-desp{margin:0 0 14px;background:#fff;border:2px solid var(--marca);border-radius:12px;padding:0}
+.guia-desp summary{cursor:pointer;list-style:none;padding:12px 16px;font-weight:800;font-size:16px;color:var(--marca);display:flex;align-items:center;gap:10px}
+.guia-desp summary::-webkit-details-marker{display:none}
+.guia-desp summary::before{content:"+";display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--marca);color:#fff;font-weight:800;flex:none}
+.guia-desp[open] summary::before{content:"−"}
+.guia-desp ol{margin:0;padding:0 18px 14px 40px;font-size:15.5px;line-height:1.5}
+.guia-desp li{margin:0 0 8px}

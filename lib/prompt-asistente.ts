@@ -186,6 +186,7 @@ ${sedes}
 ${tramites}
 - /primera-consulta: cómo es la primera consulta paso a paso, qué llevar, cuánto cuesta y qué no hay que hacer.
 - /acompanar: para quien acompaña a una persona despedida, acosada o de baja.
+- /area-cliente («Acceso clientes», en el menú Te ayudamos): cuando alguien es cliente del despacho, sigue su caso desde el móvil: en qué fase está, sus próximas citas con dirección y qué llevar, lo que le falta por enviar, los documentos de su expediente, subir archivos, un chat y un correo con su abogado (le llega a su correo) y un asistente 24 h. La página tiene un caso de ejemplo inventado (Laura, un despido) para probarlo. Si alguien pregunta cómo entrar en su área, el acceso se lo da el despacho por correo al empezar el caso; si tiene algún problema, que llame al despacho. Lo explica también el artículo /blog/sigue-tu-caso-desde-el-movil.
 - La herramienta /herramientas/plazos descuenta por defecto los festivos de Madrid (calendario de 2026 comprobado; en otros años es aproximado).
 - Al terminar un test se puede dejar una opinión en el buzón de sugerencias, y quien deja un test a medias puede retomarlo en su mismo dispositivo.
 

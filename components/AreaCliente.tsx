@@ -229,6 +229,20 @@ export default function AreaCliente() {
         </div>
       </div>
 
+      <details className="guia-desp">
+        <summary>Cómo funciona este panel, paso a paso</summary>
+        <ol>
+          <li><b>La línea de arriba</b> te dice en qué fase está tu caso. Toca cualquier fase para ver qué significa.</li>
+          <li><b>«Estás aquí»</b> te explica, en palabras normales, lo que acaba de pasar.</li>
+          <li><b>«Tu próximo paso»</b> te da la fecha, la hora, la dirección y qué llevar. Con «Añadir a mi calendario» no se te olvida.</li>
+          <li><b>«Lo que necesitamos de ti»</b> te pide lo que nos falta. Lo subes con una foto desde el móvil.</li>
+          <li><b>«Lo que podrías cobrar»</b> te enseña la indemnización estimada de tu caso.</li>
+          <li><b>«Chat»</b> es para escribir al despacho. <b>«Correo»</b> le llega a tu abogado a su correo, con archivos si quieres. <b>«Pregunta 24 h»</b> te responde a cualquier hora un asistente con IA que conoce tu caso.</li>
+          <li><b>«Tu expediente»</b> guarda todos tus documentos. Con «Añadir un documento» subes lo que quieras, cuando quieras.</li>
+          <li>Para verlo en marcha, pulsa <b>«Avanza el caso»</b> arriba: irás de la consulta a la sentencia.</li>
+        </ol>
+      </details>
+
       <div className="ac-hola">
         <img src="/img/jesus-avatar.webp" alt="" width={56} height={56} />
         <div>

@@ -295,6 +295,22 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
         </div>
       )}
 
+      {almacen.modo === 'prueba' && (
+        <details className="guia-desp">
+          <summary>Cómo funciona tu CRM, paso a paso</summary>
+          <ol>
+            <li><b>Las consultas entran solas</b> desde la web, el chat y los formularios. Las de teléfono o WhatsApp, con «Nueva consulta».</li>
+            <li><b>El embudo</b> te enseña en qué punto está cada persona: nueva, contactada, consulta reservada, hoja de encargo, cliente o no sigue. Arrastra la tarjeta o cámbiala en su ficha.</li>
+            <li><b>La ficha</b> (toca una tarjeta) guarda todo: datos, de dónde vino, plazos, documentos, tareas y lo que ha pasado. Llamar, WhatsApp y correo quedan apuntados solos.</li>
+            <li><b>«Su área de cliente»</b>, en la ficha de cada cliente: cambias la fase que ve, le pides un documento y ves lo que ha subido o te ha escrito.</li>
+            <li><b>Plazos:</b> el CRM calcula cuándo vence cada uno y te avisa en rojo cuando quedan 5 días hábiles o menos.</li>
+            <li><b>Agenda y Tareas:</b> las consultas reservadas y lo que hay que hacer cada día, por persona.</li>
+            <li><b>Informes:</b> qué canal te trae clientes de verdad, no solo consultas. Solo lo ve quien tú decidas.</li>
+            <li><b>«Entra como»</b>, arriba: cada persona del despacho ve lo suyo, con los permisos que tú decidas. Prueba a entrar como abogada o como recepción.</li>
+          </ol>
+        </details>
+      )}
+
       <header className="cr-cabeza">
         <div>
           <p className="cr-marca">Tierno Centella Abogados · CRM</p>
