@@ -7,6 +7,11 @@
  "ultimo": [
   {
    "f": "6 nov",
+   "t": "Tu CRM de prueba, conectado al área de cliente y con permisos por persona: entra como Jesús, como una abogada o como recepción.",
+   "u": "/guia-jesus/crm"
+  },
+  {
+   "f": "6 nov",
    "t": "Tu área de cliente: así verán tus clientes su caso desde el móvil, con un caso de ejemplo que puedes hacer avanzar.",
    "u": "/area-cliente"
   },
@@ -29,11 +34,6 @@
    "f": "27 oct",
    "t": "Tu mesa de control: cómo va el despacho en diez segundos, desde el móvil.",
    "u": "/mesa-tc-6v9k3p"
-  },
-  {
-   "f": "26 oct",
-   "t": "El resumen de tu guía: lo más importante en una sola página.",
-   "u": "/guia-jesus/resumen"
   }
  ],
  "tareas": [

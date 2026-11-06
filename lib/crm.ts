@@ -160,7 +160,7 @@ export interface Almacen {
 const uid = () => (typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
 const ahora = () => new Date().toISOString();
 
-const CLAVE_PRUEBA = 'tc-crm-prueba-v1';
+const CLAVE_PRUEBA = 'tc-crm-prueba-v2'; // v2 (6-nov-2026): casos de Beatriz para probar los permisos
 
 export class AlmacenPrueba implements Almacen {
   modo = 'prueba' as const;
@@ -399,17 +399,17 @@ function datosPrueba(): Datos {
   act(pablo, 11, 17, 'llamada', 'Busca abogado de oficio. No sigue');
 
   const nuria = base({
-    nombre: 'Nuria Fernández (ejemplo)', telefono: '600 000 482', tema: 'Acoso laboral', origen: 'WhatsApp', etapa: 'contactada', creado: haceDias(3, 20), nota: 'Sigue de baja. No quiere que la empresa se entere todavía.',
+    nombre: 'Nuria Fernández (ejemplo)', telefono: '600 000 482', tema: 'Acoso laboral', origen: 'WhatsApp', etapa: 'contactada', responsable: 'Beatriz', creado: haceDias(3, 20), nota: 'Sigue de baja. No quiere que la empresa se entere todavía.',
   });
   marcar(nuria, 1);
   act(nuria, 3, 20, 'whatsapp', 'Escribió por WhatsApp desde la web');
   act(nuria, 2, 10, 'llamada', 'Lo está pensando. Le mandamos el correo con lo que dicen los jueces');
 
-  const carlos = base({ nombre: 'Carlos Ibáñez (ejemplo)', tema: 'Reclamación de cantidad', origen: 'Recomendación', etapa: 'reservada', creado: haceDias(4, 12), consulta_en: dentroDias(1, 17), detalle: 'Le recomendó una antigua clienta', tipo_plazo: 'cantidad', fecha_hecho: iso(new Date(Date.now() - 200 * 86400000)) });
+  const carlos = base({ responsable: 'Beatriz', nombre: 'Carlos Ibáñez (ejemplo)', tema: 'Reclamación de cantidad', origen: 'Recomendación', etapa: 'reservada', creado: haceDias(4, 12), consulta_en: dentroDias(1, 17), detalle: 'Le recomendó una antigua clienta', tipo_plazo: 'cantidad', fecha_hecho: iso(new Date(Date.now() - 200 * 86400000)) });
   carlos.vence = calcularVence('cantidad', carlos.fecha_hecho);
   act(carlos, 4, 12, 'llamada', 'Llamó de parte de una antigua clienta. Le deben tres nóminas');
 
-  const ines = base({ nombre: 'Inés Navarro (ejemplo)', tema: 'Despido', origen: 'Google', etapa: 'cliente', creado: haceDias(26, 10), honorarios: 1200, responsable: 'Jesús' });
+  const ines = base({ nombre: 'Inés Navarro (ejemplo)', tema: 'Despido', origen: 'Google', etapa: 'cliente', creado: haceDias(26, 10), honorarios: 1200, responsable: 'Beatriz' });
   act(ines, 26, 10, 'web', 'Usó la calculadora y escribió', 'Web');
   const ana = base({ nombre: 'Ana Soto (ejemplo)', tema: 'Acoso laboral', origen: 'Google Ads', etapa: 'nosigue', motivo: 'Le parece caro', creado: haceDias(18, 13) });
   act(ana, 18, 13, 'web', 'Formulario desde el anuncio de acoso', 'Web');

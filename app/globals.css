@@ -8953,3 +8953,18 @@ body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!import
 .ac-adjunta input{position:absolute;inset:0;opacity:0;cursor:pointer}
 .ac-enviado{display:flex;flex-direction:column;gap:3px;background:#eafbf3;border:1.5px solid #1f6b4b;border-radius:12px;padding:10px 12px;font-size:15px}
 .ac-subir-doc{margin:2px 0 4px}
+/* CRM, 6-nov-2026: niveles de acceso (modo prueba) y área de cliente en la ficha */
+.cr-roles{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px;padding:10px 14px;background:#fff;border:1px solid var(--linea);border-radius:12px}
+.cr-roles>span{font-weight:700;font-size:14px}
+.cr-roles button{font:inherit;font-size:14px;font-weight:700;min-height:38px;padding:0 12px;border-radius:999px;border:1.5px solid var(--tinta);background:#fff;color:var(--tinta);cursor:pointer}
+.cr-roles button[aria-pressed="true"]{background:var(--tinta);color:#fff}
+.cr-roles small{flex-basis:100%;font-size:13.5px;color:var(--tinta-media)}
+.cr-area{margin:14px 0 4px;padding:12px 14px;border:2px solid var(--marcador);background:var(--marcador-suave);border-radius:12px}
+.cr-area-cabeza{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px}
+.cr-area-cabeza h3{margin:0}
+.cr-area-cabeza a{font-weight:700;font-size:14px}
+.cr-area-pide{display:flex;gap:8px;margin:8px 0}
+.cr-area-pide input{flex:1;min-width:0;font:inherit;font-size:15px;border:1.5px solid var(--linea);border-radius:10px;padding:8px 10px}
+.cr-area-mini{margin:8px 0 4px!important;font-weight:700;font-size:14px;color:var(--tinta);background:none;opacity:1}
+.cr-area-act{margin:0 0 6px;padding-left:18px;font-size:14.5px}
+.cr-area-act li{margin:0 0 4px}

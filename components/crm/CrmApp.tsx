@@ -11,6 +11,22 @@ import {
 
 type Vista = 'embudo' | 'lista' | 'agenda' | 'tareas' | 'plazos' | 'informes';
 
+// Niveles de acceso (6-nov-2026, solo en el modo prueba de momento): cada persona del despacho ve lo que le toca.
+type Rol = 'jesus' | 'abogada' | 'recepcion';
+const ROLES: { id: Rol; nombre: string; quien: string; ve: string }[] = [
+  { id: 'jesus', nombre: 'Jesús', quien: 'Jesús, socio', ve: 'Lo ve todo: todos los casos, los honorarios y los informes.' },
+  { id: 'abogada', nombre: 'Beatriz', quien: 'Beatriz, abogada (ejemplo)', ve: 'Solo sus casos. Sin honorarios ni informes del despacho.' },
+  { id: 'recepcion', nombre: 'Recepción', quien: 'Recepción (ejemplo)', ve: 'Consultas nuevas, agenda y tareas. Sin expedientes de clientes, honorarios ni informes.' },
+];
+function verRol(d: Datos, rol: Rol): Datos {
+  if (rol === 'jesus') return d;
+  const ok = (c: Contacto) => (rol === 'abogada' ? (c.responsable || '').includes('Beatriz') : c.etapa !== 'cliente');
+  const contactos = d.contactos.filter(ok);
+  const ids = new Set(contactos.map((c) => c.id));
+  return { contactos, actividades: d.actividades.filter((a) => ids.has(a.contacto_id)), tareas: d.tareas.filter((t) => !t.contacto_id || ids.has(t.contacto_id)) };
+}
+const FASES_CLIENTE = ['Consulta', 'Papeleta', 'Conciliación', 'Demanda', 'Juicio', 'Sentencia'];
+
 const VISTAS: [Vista, string][] = [
   ['embudo', 'Embudo'],
   ['lista', 'Lista'],
@@ -82,6 +98,7 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
   const [toast, setToast] = useState('');
   const [arrastrando, setArrastrando] = useState<string | null>(null);
   const [sobre, setSobre] = useState<Etapa | null>(null);
+  const [rol, setRol] = useState<Rol>('jesus');
 
   const cargar = useCallback(async () => {
     try {
@@ -210,13 +227,13 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
   const filtrados = useMemo(() => {
     if (!datos) return [];
     const t = q.trim().toLowerCase();
-    return datos.contactos.filter(
+    return verRol(datos, rol).contactos.filter(
       (c) =>
         (!fTema || c.tema === fTema) &&
         (!fOrigen || c.origen === fOrigen) &&
         (!t || [c.nombre, c.telefono, c.email, c.tema, c.origen, c.detalle, c.nota, c.herramienta].filter(Boolean).join(' ').toLowerCase().includes(t)),
     );
-  }, [datos, q, fTema, fOrigen]);
+  }, [datos, rol, q, fTema, fOrigen]);
 
   if (error)
     return (
@@ -227,19 +244,21 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
     );
   if (!datos) return <div className="cr-estado"><p>Cargando tu CRM...</p></div>;
 
-  const contacto = datos.contactos.find((c) => c.id === abierto) || null;
-  const pendientes = datos.tareas.filter((t) => !t.hecha);
+  const D = verRol(datos, rol);
+  const quien = almacen.modo === 'prueba' ? ROLES.find((x) => x.id === rol)!.nombre : usuario;
+  const contacto = D.contactos.find((c) => c.id === abierto) || null;
+  const pendientes = D.tareas.filter((t) => !t.hecha);
   const vencidasHoy = pendientes.filter((t) => t.vence && t.vence <= hoyIso()).length;
-  const urgentes = datos.contactos.filter((c) => c.etapa !== 'nosigue' && c.etapa !== 'cliente' && c.vence && (quedanTexto(c)?.n ?? 99) <= 5 && c.tipo_plazo !== 'cantidad' && c.tipo_plazo !== 'otro');
-  const sinLlamar = datos.contactos.filter((c) => c.etapa === 'nueva');
+  const urgentes = D.contactos.filter((c) => c.etapa !== 'nosigue' && c.etapa !== 'cliente' && c.vence && (quedanTexto(c)?.n ?? 99) <= 5 && c.tipo_plazo !== 'cantidad' && c.tipo_plazo !== 'otro');
+  const sinLlamar = D.contactos.filter((c) => c.etapa === 'nueva');
   const mes = new Date();
-  const esteMes = datos.contactos.filter((c) => {
+  const esteMes = D.contactos.filter((c) => {
     const d = new Date(c.creado);
     return d.getMonth() === mes.getMonth() && d.getFullYear() === mes.getFullYear();
   });
-  const semana = datos.contactos.filter((c) => Date.now() - new Date(c.creado).getTime() < 7 * 86400000);
-  const clientesMes = datos.contactos.filter((c) => c.etapa === 'cliente' && new Date(c.actualizado).getMonth() === mes.getMonth());
-  const proximas = datos.contactos.filter((c) => c.consulta_en && new Date(c.consulta_en).getTime() > Date.now() - 3600000).sort((a, b) => a.consulta_en!.localeCompare(b.consulta_en!));
+  const semana = D.contactos.filter((c) => Date.now() - new Date(c.creado).getTime() < 7 * 86400000);
+  const clientesMes = D.contactos.filter((c) => c.etapa === 'cliente' && new Date(c.actualizado).getMonth() === mes.getMonth());
+  const proximas = D.contactos.filter((c) => c.consulta_en && new Date(c.consulta_en).getTime() > Date.now() - 3600000).sort((a, b) => a.consulta_en!.localeCompare(b.consulta_en!));
 
   return (
     <div className="cr">
@@ -264,10 +283,22 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
         </div>
       )}
 
+      {almacen.modo === 'prueba' && (
+        <div className="cr-roles" role="group" aria-label="Entrar como">
+          <span>Entra como:</span>
+          {ROLES.map((x) => (
+            <button key={x.id} type="button" aria-pressed={rol === x.id} onClick={() => { setRol(x.id); setAbierto(null); setVista('embudo'); }}>
+              {x.quien}
+            </button>
+          ))}
+          <small>{ROLES.find((x) => x.id === rol)!.ve} Los permisos los decide Jesús, persona a persona.</small>
+        </div>
+      )}
+
       <header className="cr-cabeza">
         <div>
           <p className="cr-marca">Tierno Centella Abogados · CRM</p>
-          <h1>Hola, {usuario}</h1>
+          <h1>Hola, {quien}</h1>
           <p className="cr-sub">
             {sinLlamar.length ? <><b>{sinLlamar.length}</b> {sinLlamar.length === 1 ? 'consulta nueva' : 'consultas nuevas'} sin llamar · </> : null}
             {vencidasHoy ? <><b>{vencidasHoy}</b> {vencidasHoy === 1 ? 'tarea para hoy' : 'tareas para hoy'} · </> : null}
@@ -305,7 +336,7 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
 
       <div className="cr-barra">
         <nav className="cr-vistas" role="tablist" aria-label="Vistas">
-          {VISTAS.map(([v, t]) => (
+          {VISTAS.filter(([v]) => v !== 'informes' || rol === 'jesus').map(([v, t]) => (
             <button key={v} type="button" role="tab" aria-selected={vista === v} className={vista === v ? 'activo' : ''} onClick={() => setVista(v)}>
               {t}
               {v === 'tareas' && vencidasHoy > 0 && <i>{vencidasHoy}</i>}
@@ -341,7 +372,7 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
                 onDrop={(ev) => {
                   ev.preventDefault();
                   const id = ev.dataTransfer.getData('text/plain') || arrastrando;
-                  const c = datos.contactos.find((x) => x.id === id);
+                  const c = D.contactos.find((x) => x.id === id);
                   if (c) mover(c, e.id);
                   setArrastrando(null);
                   setSobre(null);
@@ -372,7 +403,7 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
                       <span className="cr-origen"><LogoOrigen origen={c.origen} /> {c.origen}</span>
                       {c.etapa === 'reservada' && c.consulta_en && <span className="cr-cita">Consulta: {fecha(c.consulta_en)}, {hora(c.consulta_en)}</span>}
                       {c.etapa === 'nosigue' && c.motivo && <span className="cr-motivo">{c.motivo}</span>}
-                      {c.etapa === 'cliente' && c.honorarios ? <span className="cr-cita">{euros(c.honorarios)}</span> : null}
+                      {rol === 'jesus' && c.etapa === 'cliente' && c.honorarios ? <span className="cr-cita">{euros(c.honorarios)}</span> : null}
                       <span className="cr-tarjeta-pie">
                         {p && c.etapa !== 'nosigue' && <span className={`cr-plazo cr-${p.tono}`}>{p.texto}</span>}
                         {tareasC > 0 && <span className="cr-ntareas">{tareasC} {tareasC === 1 ? 'tarea' : 'tareas'}</span>}
@@ -388,10 +419,10 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
       )}
 
       {vista === 'lista' && <Lista contactos={filtrados} tareas={pendientes} abrir={setAbierto} />}
-      {vista === 'agenda' && <Agenda proximas={proximas} contactos={datos.contactos} abrir={setAbierto} />}
-      {vista === 'tareas' && <Tareas datos={datos} abrir={setAbierto} crear={crearTarea} cambiar={cambiarTarea} borrar={borrarTarea} usuario={usuario} />}
-      {vista === 'plazos' && <Plazos contactos={datos.contactos} abrir={setAbierto} />}
-      {vista === 'informes' && <Informes datos={datos} />}
+      {vista === 'agenda' && <Agenda proximas={proximas} contactos={D.contactos} abrir={setAbierto} />}
+      {vista === 'tareas' && <Tareas datos={D} abrir={setAbierto} crear={crearTarea} cambiar={cambiarTarea} borrar={borrarTarea} usuario={quien} />}
+      {vista === 'plazos' && <Plazos contactos={D.contactos} abrir={setAbierto} />}
+      {vista === 'informes' && rol === 'jesus' && <Informes datos={D} />}
 
       {nuevo && <Alta cerrar={() => setNuevo(false)} crear={crear} usuario={usuario} />}
 
@@ -399,8 +430,8 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
         <Ficha
           key={contacto.id}
           c={contacto}
-          actividades={datos.actividades.filter((a) => a.contacto_id === contacto.id)}
-          tareas={datos.tareas.filter((t) => t.contacto_id === contacto.id)}
+          actividades={D.actividades.filter((a) => a.contacto_id === contacto.id)}
+          tareas={D.tareas.filter((t) => t.contacto_id === contacto.id)}
           cerrar={() => setAbierto(null)}
           actualizar={(cambio) => actualizar(contacto.id, cambio)}
           mover={(e) => mover(contacto, e)}
@@ -410,7 +441,8 @@ export default function CrmApp({ almacen, usuario, alSalir, alRestablecer }: { a
           borrarTarea={borrarTarea}
           borrar={() => borrar(contacto)}
           prueba={almacen.modo === 'prueba'}
-          usuario={usuario}
+          usuario={quien}
+          verDinero={rol === 'jesus'}
         />
       )}
 
@@ -780,11 +812,11 @@ function Campo({ etq, valor, alGuardar, tipo = 'text', placeholder }: { etq: str
 }
 
 function Ficha({
-  c, actividades, tareas, cerrar, actualizar, mover, registrar, crearTarea, cambiarTarea, borrarTarea, borrar, prueba, usuario,
+  c, actividades, tareas, cerrar, actualizar, mover, registrar, crearTarea, cambiarTarea, borrarTarea, borrar, prueba, usuario, verDinero = true,
 }: {
   c: Contacto; actividades: Actividad[]; tareas: Tarea[]; cerrar: () => void; actualizar: (x: Partial<Contacto>) => void; mover: (e: Etapa) => void;
   registrar: (t: TipoActividad, x: string) => void; crearTarea: (t: Omit<Tarea, 'id' | 'creado'>) => void; cambiarTarea: (id: string, x: Partial<Tarea>) => void;
-  borrarTarea: (id: string) => void; borrar: () => void; prueba: boolean; usuario: string;
+  borrarTarea: (id: string) => void; borrar: () => void; prueba: boolean; usuario: string; verDinero?: boolean;
 }) {
   const [tipo, setTipo] = useState<TipoActividad>('llamada');
   const [texto, setTexto] = useState('');
@@ -839,6 +871,8 @@ function Ficha({
           </div>
         )}
 
+        {prueba && c.etapa === 'cliente' && <AreaClienteFicha c={c} registrar={registrar} />}
+
         <h3>Datos</h3>
         <div className="cr-campos">
           <Campo etq="Nombre" valor={c.nombre} alGuardar={(v) => v.trim() && actualizar({ nombre: v.trim() })} />
@@ -854,7 +888,7 @@ function Ficha({
           <label className="cr-campo"><span>Consulta reservada</span>
             <input type="datetime-local" value={aLocal(c.consulta_en)} onChange={(e) => { const v = e.target.value ? new Date(e.target.value).toISOString() : null; actualizar({ consulta_en: v }); if (v && (c.etapa === 'nueva' || c.etapa === 'contactada')) mover('reservada'); }} />
           </label>
-          <Campo etq="Honorarios (€)" tipo="number" valor={c.honorarios?.toString() || ''} alGuardar={(v) => actualizar({ honorarios: v ? Number(v) : null })} />
+          {verDinero && <Campo etq="Honorarios (€)" tipo="number" valor={c.honorarios?.toString() || ''} alGuardar={(v) => actualizar({ honorarios: v ? Number(v) : null })} />}
           <Campo etq="Detalle del origen" valor={c.detalle || ''} alGuardar={(v) => actualizar({ detalle: v || null })} />
         </div>
         {c.herramienta && <p className="cr-herramienta"><b>En la web:</b> {c.herramienta}</p>}
@@ -942,6 +976,38 @@ function Ficha({
           )}
         </div>
       </aside>
+    </div>
+  );
+}
+
+// Lo que ve el cliente en su área (/area-cliente), conectado a su ficha. De momento, solo en el modo prueba.
+function AreaClienteFicha({ c, registrar }: { c: Contacto; registrar: (t: TipoActividad, x: string) => void }) {
+  const [fase, setFase] = useState(1);
+  const [pide, setPide] = useState('');
+  const nombre = c.nombre.split(' ')[0];
+  return (
+    <div className="cr-area">
+      <div className="cr-area-cabeza">
+        <h3>Su área de cliente</h3>
+        <a href="/area-cliente#ejemplo" target="_blank" rel="noopener">Verla como la ve {nombre}</a>
+      </div>
+      <label className="cr-campo">
+        <span>Fase que ve {nombre}</span>
+        <select value={fase} onChange={(e) => { const f = Number(e.target.value); setFase(f); registrar('nota', `Área de cliente: fase cambiada a «${FASES_CLIENTE[f]}». ${nombre} recibe un aviso.`); }}>
+          {FASES_CLIENTE.map((f, i) => <option key={f} value={i}>{f}</option>)}
+        </select>
+      </label>
+      <form className="cr-area-pide" onSubmit={(e) => { e.preventDefault(); if (!pide.trim()) return; registrar('nota', `Área de cliente: le pedimos «${pide.trim()}». Le llega el aviso y lo sube desde su móvil.`); setPide(''); }}>
+        <input value={pide} onChange={(e) => setPide(e.target.value)} placeholder="Pedirle un documento: por ejemplo, la última nómina" aria-label="Documento que le pedimos" />
+        <button type="submit" className="cr-btn">Pedir</button>
+      </form>
+      <p className="cr-area-mini">Lo que ha hecho {nombre} en su área</p>
+      <ul className="cr-area-act">
+        <li><b>Subió un documento:</b> nómina de octubre · ayer</li>
+        <li><b>Te escribió un correo:</b> «Duda sobre la conciliación» · te llegó a tu Outlook · hace 2 días</li>
+        <li><b>Preguntó al asistente 24 h:</b> «¿Tengo que ir yo al juicio?» · hace 3 días</li>
+      </ul>
+      <p className="cr-mini-nota">Ejemplo: cuando esté conectado de verdad, aquí aparece todo lo que el cliente hace en su área, y lo que tú cambias aquí lo ve él al momento.</p>
     </div>
   );
 }
