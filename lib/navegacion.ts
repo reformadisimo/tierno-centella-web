@@ -97,12 +97,12 @@ export const MENU: Grupo[] = [
     sub: 'Tu situación, tus plazos y lo que puedes hacer tú',
     href: '/mi-caso',
     enlaces: [
+      { href: '/area-cliente', texto: 'Acceso clientes' },
       { href: '/mi-caso', texto: 'Mi caso es...' },
       { href: '/plazos-para-reclamar', texto: 'Plazos para reclamar' },
       { href: '/tramites', texto: 'Trámites que puedes hacer tú' },
       { href: '/modelos', texto: 'Modelos de cartas' },
       { href: '/primera-consulta', texto: 'Tu primera consulta' },
-      { href: '/area-cliente', texto: 'Tu área de cliente' },
       { href: '/donde-ir', texto: 'Dónde ir en Madrid' },
       { href: '/acompanar', texto: 'Acompaño a alguien' },
       { href: '/glosario', texto: 'Glosario laboral' },

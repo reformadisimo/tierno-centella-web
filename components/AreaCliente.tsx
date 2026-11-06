@@ -113,7 +113,11 @@ function ics(p: Fase['proximo']) {
 export default function AreaCliente() {
   const [fase, setFase] = useState(1);
   const [subidos, setSubidos] = useState<string[]>([]);
-  const [pestana, setPestana] = useState<'despacho' | 'asistente'>('despacho');
+  const [pestana, setPestana] = useState<'despacho' | 'correo' | 'asistente'>('despacho');
+  const [extras, setExtras] = useState<string[]>([]);
+  const [correos, setCorreos] = useState<{ asunto: string; cuerpo: string }[]>([]);
+  const [asunto, setAsunto] = useState('');
+  const [cuerpo, setCuerpo] = useState('');
   const [escritos, setEscritos] = useState<Msg[]>([]);
   const [charla, setCharla] = useState<Msg[]>([]);
   const [texto, setTexto] = useState('');
@@ -129,8 +133,11 @@ export default function AreaCliente() {
   const docs = useMemo(() => {
     const d = FASES.slice(0, fase + 1).flatMap((x) => x.docs);
     if (subidos.includes('nomina')) d.push({ t: 'Nómina de octubre', de: 'Tú', f: 'hoy' });
+    if (subidos.includes('testigos')) d.push({ t: 'Lista de compañeros que pueden declarar', de: 'Tú', f: 'hoy' });
+    extras.forEach((x) => d.push({ t: x, de: 'Tú', f: 'hoy' }));
+    correos.forEach((c) => d.push({ t: `Correo a tu abogado: ${c.asunto}`, de: 'Tú', f: 'hoy' }));
     return d.reverse();
-  }, [fase, subidos]);
+  }, [fase, subidos, extras, correos]);
   const pide = F.pide && !subidos.includes(F.pide.id) ? F.pide : null;
 
   useEffect(() => {
@@ -193,7 +200,14 @@ export default function AreaCliente() {
     }
   }
 
-  const lista = pestana === 'despacho' ? hilo : charla;
+  function mandarCorreo() {
+    if (!asunto.trim() || !cuerpo.trim()) return;
+    setCorreos((c) => [...c, { asunto: asunto.trim(), cuerpo: cuerpo.trim() }]);
+    setAsunto('');
+    setCuerpo('');
+  }
+
+  const lista = pestana === 'despacho' ? hilo : pestana === 'asistente' ? charla : [];
   const cal = ics(F.proximo);
 
   return (
@@ -314,12 +328,41 @@ export default function AreaCliente() {
           <section className="ac-tarjeta ac-chat">
             <div className="ac-pestanas" role="tablist">
               <button type="button" role="tab" aria-selected={pestana === 'despacho'} onClick={() => setPestana('despacho')}>
-                Hablar con el despacho
+                Chat
+              </button>
+              <button type="button" role="tab" aria-selected={pestana === 'correo'} onClick={() => setPestana('correo')}>
+                Correo
               </button>
               <button type="button" role="tab" aria-selected={pestana === 'asistente'} onClick={() => setPestana('asistente')}>
                 Pregunta 24 h
               </button>
             </div>
+            {pestana === 'correo' ? (
+              <div className="ac-correo">
+                <p className="ac-mini-nota" style={{ marginTop: 0 }}>
+                  Le llega a Jesús a su correo de siempre (Outlook) y queda guardado en tu expediente.
+                </p>
+                {correos.map((c, i) => (
+                  <div key={i} className="ac-enviado" role="status">
+                    <strong>Enviado: {c.asunto}</strong>
+                    <span>Le ha llegado a Jesús a su correo y está en tus documentos. Te contestará por aquí o por correo.</span>
+                    <span className="ac-mini-nota">Envío de ejemplo: en esta demostración no sale ningún correo.</span>
+                  </div>
+                ))}
+                <label htmlFor="ac-asunto">Asunto</label>
+                <input id="ac-asunto" value={asunto} onChange={(e) => setAsunto(e.target.value)} placeholder="Por ejemplo: cambio de teléfono" autoComplete="off" />
+                <label htmlFor="ac-cuerpo">Tu mensaje</label>
+                <textarea id="ac-cuerpo" rows={4} value={cuerpo} onChange={(e) => setCuerpo(e.target.value)} placeholder="Escribe aquí lo que quieras contarle a tu abogado" />
+                <label className="boton boton-claro ac-adjunta">
+                  Adjuntar un archivo
+                  <input type="file" onChange={(e) => e.target.files?.[0] && setExtras((x) => [...x, e.target.files![0].name])} />
+                </label>
+                <button type="button" className="boton" onClick={mandarCorreo} disabled={!asunto.trim() || !cuerpo.trim()}>
+                  Enviar a mi abogado
+                </button>
+              </div>
+            ) : (
+            <>
             <div className="ac-hilo" ref={fin}>
               {pestana === 'asistente' && charla.length === 0 && (
                 <div className="ac-vacio">
@@ -363,10 +406,17 @@ export default function AreaCliente() {
                 Enviar
               </button>
             </form>
+            </>
+            )}
           </section>
 
           <section className="ac-tarjeta ac-docs">
-            <p className="ac-etiqueta">Tus documentos</p>
+            <p className="ac-etiqueta">Tu expediente: documentos</p>
+            <label className="boton ac-subir ac-subir-doc">
+              Añadir un documento
+              <input type="file" accept="image/*,.pdf,.doc,.docx" onChange={(e) => e.target.files?.[0] && setExtras((x) => [...x, e.target.files![0].name])} />
+            </label>
+            <p className="ac-mini-nota">Fotos, PDF o Word, cuando quieras. En este ejemplo el archivo no sale de tu móvil.</p>
             <ul>
               {docs.map((d) => (
                 <li key={d.t + d.f}>

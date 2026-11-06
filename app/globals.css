@@ -8928,3 +8928,28 @@ body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!import
   .ac-demo{font-size:15px}
 }
 @media print{.ac-demo,.ac-chat{display:none}}
+/* Acceso clientes: explicación (prefijo acp-) */
+.acp-rejilla{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.acp-rejilla li{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:16px 18px}
+.acp-rejilla strong{display:block;font-size:17px;line-height:1.3;margin:10px 0 6px}
+.acp-rejilla p{margin:0;font-size:15.5px;line-height:1.5;color:var(--tinta-media)}
+.acp-icono{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:var(--marcador-suave);color:var(--tinta)}
+.acp-intro{margin:6px 0 18px;font-size:17px;max-width:62ch}
+.acp-pasos{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.acp-pasos li{display:flex;gap:12px;background:#fff;border:1px solid var(--linea);border-radius:14px;padding:16px}
+.acp-pasos strong{display:block;font-size:17px;margin-bottom:4px}
+.acp-pasos p{margin:0;font-size:15.5px;color:var(--tinta-media)}
+.acp-n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--tinta);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.acp-duda{border:1px solid var(--linea);border-radius:12px;background:#fff;padding:12px 16px;margin:0 0 10px}
+.acp-duda summary{font-weight:700;cursor:pointer}
+.acp-duda p{margin:8px 0 0}
+.acp-cierre{margin-top:20px}
+
+.ac-pestanas{grid-template-columns:repeat(3,1fr)!important}
+.ac-correo{padding:14px;display:flex;flex-direction:column;gap:8px}
+.ac-correo label:not(.boton){font-weight:700;font-size:14.5px}
+.ac-correo input:not([type=file]),.ac-correo textarea{font:inherit;font-size:16px;border:1.5px solid var(--linea);border-radius:10px;padding:10px 12px;width:100%}
+.ac-adjunta{position:relative;overflow:hidden;align-self:flex-start}
+.ac-adjunta input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.ac-enviado{display:flex;flex-direction:column;gap:3px;background:#eafbf3;border:1.5px solid #1f6b4b;border-radius:12px;padding:10px 12px;font-size:15px}
+.ac-subir-doc{margin:2px 0 4px}
