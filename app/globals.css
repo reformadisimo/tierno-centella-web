@@ -8983,3 +8983,9 @@ body:has(.gnav) .gj-barra-inferior,body:has(.gnav) .gj-flota{display:none!import
 .barra-sup-clientes:hover,.barra-sup-clientes:focus-visible{transform:translateY(-1px);box-shadow:0 0 0 4px rgba(242,193,78,.35)}
 .mm-r-clientes{grid-column:1/-1;flex-direction:row!important;justify-content:center;gap:10px!important;background:#fff;color:var(--tinta);border:2px solid var(--tinta);font-size:1rem!important}
 @media (max-width:640px){.barra-sup-clientes{padding:4px 12px;font-size:.84rem}}
+
+/* Acceso clientes: vídeo de presentación (tc·v9) */
+.acp-video-sec { padding-top: 8px; }
+.acp-video-tit { font-weight: 800; color: var(--tinta); font-size: 1.15rem; margin: 0 0 10px; }
+.acp-video { display: block; width: 100%; max-width: 960px; height: auto; aspect-ratio: 16 / 9; border-radius: 16px; background: var(--tinta); box-shadow: 0 18px 40px rgba(13, 44, 72, 0.18); }
+.acp-video-nota { font-size: 0.85rem; color: var(--tinta-suave); margin: 8px 0 0; }

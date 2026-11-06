@@ -63,6 +63,16 @@ export default function PaginaAreaCliente() {
         </div>
       </header>
 
+      <section className="seccion acp-video-sec" id="video">
+        <div className="contenedor">
+          <p className="acp-video-tit">Míralo en 33 segundos</p>
+          <video className="acp-video" controls playsInline preload="none" poster="/video/acceso-clientes-poster.jpg" width={1280} height={720}>
+            <source src="/video/acceso-clientes.mp4" type="video/mp4" />
+          </video>
+          <p className="acp-video-nota">Laura es un caso de ejemplo, inventado.</p>
+        </div>
+      </section>
+
       <section className="seccion">
         <div className="contenedor">
           <h2>Lo que puedes hacer en tu área de cliente</h2>
