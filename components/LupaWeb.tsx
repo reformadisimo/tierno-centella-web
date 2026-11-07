@@ -69,8 +69,17 @@ export default function LupaWeb() {
       if (origen) enviarLupa({ pantalla: 'web', evento: { tipo: 'entrada-web', seccion: location.pathname, texto: origen } });
       const ultima = Number(localStorage.getItem('tc-web-visita') || 0);
       if (Date.now() - ultima < 4 * 3600000) return;
-      localStorage.setItem('tc-web-visita', String(Date.now()));
-      avisar({ tipo: 'web', dispositivo: aparato(), seccion: location.pathname, reaccion: yaGuia ? 'guia' : '', texto: origen || 'navegando por la web' });
+      // Los robots abren la portada y se van sin moverse: el aviso espera a que alguien baje, pulse, teclee o toque.
+      const humano = ['scroll', 'click', 'keydown', 'touchstart', 'wheel'];
+      const alHumano = () => {
+        humano.forEach((e) => window.removeEventListener(e, alHumano));
+        try {
+          if (Date.now() - Number(localStorage.getItem('tc-web-visita') || 0) < 4 * 3600000) return;
+          localStorage.setItem('tc-web-visita', String(Date.now()));
+        } catch {}
+        avisar({ tipo: 'web', dispositivo: aparato(), seccion: location.pathname, reaccion: yaGuia ? 'guia' : '', texto: origen || 'navegando por la web' });
+      };
+      humano.forEach((e) => window.addEventListener(e, alHumano, { passive: true }));
     } catch {}
   }, []);
 
@@ -99,7 +108,8 @@ export default function LupaWeb() {
     const nombre = (v: HTMLVideoElement) => (v.currentSrc || v.src || 'vídeo').split('/').pop()?.replace(/\.mp4.*$/, '') || 'vídeo';
     const alPlay = (e: Event) => {
       const v = e.target;
-      if (!(v instanceof HTMLVideoElement) || FUERA.test(location.pathname)) return;
+      // Solo vídeos que se miran a propósito (con controles); el fondo de la portada se reproduce solo.
+      if (!(v instanceof HTMLVideoElement) || !v.controls || FUERA.test(location.pathname)) return;
       const k = nombre(v);
       if (!hitos.has(k)) {
         hitos.set(k, new Set());
