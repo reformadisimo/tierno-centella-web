@@ -7825,6 +7825,10 @@ html.a11y-quieto video { display: none !important; }
 @media (min-width: 560px) { .sx-temas { grid-template-columns: 1fr 1fr; } }
 .sx-temas a { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 12px; border: 1.5px solid var(--linea); font-weight: 700; color: var(--tinta); text-decoration: none; }
 .sx-temas a:hover { border-color: var(--tinta); }
+.sx-o { margin: 18px 0 8px; font-size: .85rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--tinta-suave); }
+.sx-tema-t { display: flex; flex-direction: column; line-height: 1.2; }
+.sx-tema-t small { margin-top: 3px; font-size: .8rem; font-weight: 600; color: var(--tinta-media); }
+.sx-prueba { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--linea); font-size: .88rem; color: var(--tinta-media); line-height: 1.4; }
 .sx-chat { margin: 14px 0 0; font-size: .95rem; color: var(--tinta-media); }
 .sx-chat button { background: none; border: 0; padding: 0; font: inherit; color: var(--tinta); text-decoration: underline; cursor: pointer; font-weight: 700; }
 .sx-no { display: block; margin: 16px auto 0; background: none; border: 0; font: inherit; color: var(--tinta-suave); text-decoration: underline; cursor: pointer; padding: 8px 12px; }

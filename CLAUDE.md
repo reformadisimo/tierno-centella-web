@@ -29,6 +29,8 @@ Lee esto antes de tocar nada. La web es la demostración que Ig le prepara a Jes
 
 - 12-nov-2026 (chat de Ig, tc·v15): imagen al compartir (WhatsApp) con el logo: JPG ligeros `public/og/tierno-centella.jpg` (90 KB, por defecto en `meta()` de `lib/seo.ts` y en el layout) y `public/og/acceso-clientes.jpg` (114 KB, la de `/area-cliente`). Fuera `app/opengraph-image.tsx` (PNG de 529 KB: WhatsApp no lo enseñaba). Las páginas con `imagen` propia (blog) siguen con su foto. WhatsApp guarda la vista previa: para ver la nueva, enlace con un parámetro distinto.
 
+- 12-nov-2026 (chat de Ig, tc·v16): aviso de salida general (`components/AvisoSalida.tsx`, el de «¿Te ayudamos con tu caso?»), más persuasivo: cifra «20 días hábiles para reclamar un despido», titular «Si tu caso tiene plazo, cada día cuenta», botón coral «Que me llamen hoy» (a `/contacto`) con WhatsApp y Llamar, los cuatro temas con su plazo debajo y una línea de prueba (25 años, primera condena a empresa y acosador, 2005). Los avisos por tema, de herramientas y de landings no cambian. Verlo: `?salida=1`.
+
 ## Pendiente para cuando Jesús contrate (junto con crear la base de datos)
 - Prompt de Reformadísimo del 31-oct-2026 (noche), «avisos con origen y clics en WhatsApp y llamar»:
   1. Todos los avisos de contacto con la línea «De dónde viene» (también «directo o sin dato»): `lib/atribucion.ts` apunta `directo` y la página de entrada (`aterrizaje`), guardado en la pestaña (sessionStorage); `/api/contacto` y `/api/reservar` pintan siempre esa línea («sin dato» si falta). Hoy la línea «Origen» del aviso solo dice de qué formulario viene.

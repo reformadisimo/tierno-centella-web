@@ -18,10 +18,10 @@ const DIAS = 7;
 const RUTAS_FUERA = ['/guia-jesus', '/crm', '/contacto', '/privacidad', '/cookies', '/aviso-legal', '/buscar', '/en', '/conversaciones'];
 
 const TEMAS = [
-  { href: '/despido', texto: 'Me han despedido', icono: 'caja', clase: 'vt-azul' },
-  { href: '/acoso-laboral', texto: 'Sufro acoso en el trabajo', icono: 'personas', clase: 'vt-coral' },
-  { href: '/incapacidad-permanente', texto: 'Incapacidad o baja larga', icono: 'sillaRuedas', clase: 'vt-morado' },
-  { href: '/mujer-y-trabajo', texto: 'Embarazo o conciliación', icono: 'corazon', clase: 'vt-rosa' },
+  { href: '/despido', texto: 'Me han despedido', nota: '20 días hábiles para reclamar', icono: 'caja', clase: 'vt-azul' },
+  { href: '/acoso-laboral', texto: 'Sufro acoso en el trabajo', nota: 'Test de 7 preguntas', icono: 'personas', clase: 'vt-coral' },
+  { href: '/incapacidad-permanente', texto: 'Incapacidad o baja larga', nota: '30 días hábiles si te la deniegan', icono: 'sillaRuedas', clase: 'vt-morado' },
+  { href: '/mujer-y-trabajo', texto: 'Embarazo o conciliación', nota: 'Tus derechos, paso a paso', icono: 'corazon', clase: 'vt-rosa' },
 ];
 
 const CALCULOS = [
@@ -59,7 +59,7 @@ const CIFRAS: Record<string, { n: number; mas?: boolean; texto: string }> = {
   mujer: { n: 19, texto: 'semanas de permiso por nacimiento para cada progenitor' },
   sentencias: { n: 25, mas: true, texto: 'años defendiendo a trabajadoras y trabajadores' },
   empresas: { n: 25, mas: true, texto: 'años de experiencia en derecho laboral' },
-  general: { n: 25, mas: true, texto: 'años defendiendo a trabajadoras y trabajadores' },
+  general: { n: 20, texto: 'días hábiles para reclamar un despido. Pasado el plazo, el derecho se pierde' },
 };
 
 function useCuenta(objetivo: number, activo: boolean) {
@@ -199,7 +199,7 @@ export default function AvisoSalida() {
     }
   }
 
-  const tituloLanding = '¿Te ayudamos con tu caso?';
+  const tituloLanding = 'Si tu caso tiene plazo, cada día cuenta';
   return (
     <div className="sx-fondo" onClick={() => setVisible(false)}>
       <div className="sx" role="dialog" aria-modal="true" aria-labelledby="salida-titulo" tabIndex={-1} ref={caja} onClick={(e) => e.stopPropagation()}>
@@ -224,7 +224,7 @@ export default function AvisoSalida() {
               ? 'Un abogado puede decirte hoy si tienes caso y cuánto plazo te queda. Sin compromiso de contratar.'
               : propio
                 ? propio.texto
-                : 'Elige lo que más se parece a lo tuyo y te llevamos directo a lo que necesitas.'}
+                : 'Despido: 20 días hábiles. Incapacidad denegada: 30. Un abogado te dice hoy si tienes caso y cuánto tiempo te queda. Antes de nada, por teléfono, te decimos si de verdad nos necesitas.'}
           </p>
 
           {enLanding ? (
@@ -271,14 +271,32 @@ export default function AvisoSalida() {
               </div>
             </>
           ) : (
-            <div className="sx-temas">
-              {TEMAS.map((t) => (
-                <Link key={t.href} href={t.href} className={t.clase} onClick={() => elegir(t.texto)}>
-                  <span className="st-icono"><Icono nombre={t.icono} tam={18} /></span>
-                  {t.texto}
-                </Link>
-              ))}
-            </div>
+            <>
+              <Link className="boton sx-principal" href="/contacto" onClick={() => elegir('que me llamen')}>
+                Que me llamen hoy
+              </Link>
+              <div className="sx-secundarias">
+                <a href={enlaceWhatsapp('Hola, quiero consultar mi caso.')} className="sx-wa" onClick={() => elegir('whatsapp')}>
+                  <Icono nombre="whatsapp" tam={18} /> WhatsApp
+                </a>
+                <a href={DESPACHO.telefonoHref} onClick={() => elegir('llamar')}>
+                  <Icono nombre="telefono" tam={17} /> Llamar
+                </a>
+              </div>
+              <p className="sx-o">O elige lo que más se parece a lo tuyo</p>
+              <div className="sx-temas">
+                {TEMAS.map((t) => (
+                  <Link key={t.href} href={t.href} className={t.clase} onClick={() => elegir(t.texto)}>
+                    <span className="st-icono"><Icono nombre={t.icono} tam={18} /></span>
+                    <span className="sx-tema-t">
+                      {t.texto}
+                      <small>{t.nota}</small>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+              <p className="sx-prueba">Más de 25 años defendiendo a trabajadoras y trabajadores. Primera condena en España a empresa y acosador a la vez (2005).</p>
+            </>
           )}
 
           <p className="sx-chat">
