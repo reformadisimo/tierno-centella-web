@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   publisher: 'Tierno Centella Abogados',
   formatDetection: { telephone: true, email: true, address: true },
   alternates: { canonical: BASE, types: { 'application/rss+xml': `${BASE}/feed.xml` } },
-  openGraph: { siteName: 'Tierno Centella Abogados', locale: 'es_ES', type: 'website' },
-  twitter: { card: 'summary_large_image', site: '@TiernoCentella1' },
+  openGraph: { siteName: 'Tierno Centella Abogados', locale: 'es_ES', type: 'website', images: [{ url: '/og/tierno-centella.jpg', width: 1200, height: 630, alt: 'Tierno Centella Abogados' }] },
+  twitter: { card: 'summary_large_image', site: '@TiernoCentella1', images: ['/og/tierno-centella.jpg'] },
   title: {
     default: 'Tierno Centella Abogados | Abogados laboralistas en Madrid',
     template: '%s | Tierno Centella Abogados',

@@ -10,6 +10,7 @@ export const metadata: Metadata = meta({
   titulo: 'Acceso clientes: sigue tu caso desde el móvil',
   descripcion: 'En tu área de cliente ves en qué fase está tu caso, tus citas, lo que nos falta y tu expediente. Y desde ahí subes archivos, escribes a tu abogado o le mandas un correo. Pruébalo con un caso de ejemplo.',
   ruta: '/area-cliente',
+  imagen: '/og/acceso-clientes.jpg',
 });
 
 const PUEDES = [

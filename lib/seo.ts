@@ -39,7 +39,8 @@ export function meta({
   const title = corto.length + ' | Tierno Centella'.length <= 60 ? `${corto} | Tierno Centella` : corto;
   const recorta = (t: string, n: number) => (t.length <= n ? t : t.slice(0, t.lastIndexOf(' ', n - 1)).replace(/[,;:.\s-]+$/, '') + '...');
   const description = recorta(descripcion, 158);
-  const images = imagen ? [{ url: imagen, width: 1200, height: 630, alt: titulo }] : undefined;
+  // Imagen al compartir (WhatsApp, LinkedIn...): JPG ligero (WhatsApp no enseña las de más de ~300 KB). Por defecto, la del despacho con el logo.
+  const images = [{ url: imagen ?? '/og/tierno-centella.jpg', width: 1200, height: 630, alt: titulo }];
   return {
     title: { absolute: title },
     description,
@@ -51,10 +52,10 @@ export function meta({
       siteName: DESPACHO.nombre,
       locale: idiomaDe(ruta) === 'en' ? 'en_GB' : 'es_ES',
       type: tipo,
-      ...(images ? { images } : {}),
+      images,
       ...(tipo === 'article' ? { publishedTime: publicado, modifiedTime: modificado ?? publicado, authors: ['Jesús Tierno Centella'] } : {}),
     },
-    twitter: { card: 'summary_large_image', title: titulo, description },
+    twitter: { card: 'summary_large_image', title: titulo, description, images: images.map((i) => i.url) },
   };
 }
 
